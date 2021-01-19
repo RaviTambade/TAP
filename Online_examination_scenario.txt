@@ -1,0 +1,82 @@
+
+Features of Online Exam System
+
+Admin Side (Role)
+
+Admin Can Create New Online Exam with Edit and Delete Feature
+Admin Can Add Question in Exam which has been define at the time of create exam
+Admin Can View All Exam Question with Edit and Delete Operation
+Admin Can view all user data who has register for online examination system
+Admin can view all user who has enroll for particular exam
+Admin can view individual user exam result on web page and in PDF format
+Admin can view combine result of exam with user rank on web page and in PDF format
+
+
+
+User Side (Role)
+
+New User Registration for Online Examination with Confirmation Email Feature
+User can Login into System using Email ID and Password
+User can manage his or her profile details
+User can change his or her password
+User can view available examination list
+User can enroll into examination
+User can attend online examination at the define date and time
+User can view the history of exam which he or she had enroll
+User can view the exam result on Web page and in PDF format also.
+
+
+
+Front end
+
+HTML 5 - For make HTML Web page
+Bootstrap 4 - For make Responsive Online Exam System
+React JS, Angular
+
+
+Back end
+
+Mysql - For store system data
+NodeJS
+Express JS
+
+
+Online Examination System Requirements
+
+
+1.Check Unique Admin Email Address 
+2.Admin Registration
+3.Verify Admin Email Address
+4.Admin Login Form
+5.List All Exam 
+6.Schedule New Exam 
+7.Edit Schedule Exam Details 
+8.Remove Schedule Exam Details 
+9.Make Question Form 
+10.Add Question in Exam 
+11.Display All Question
+12.Edit Question Details 
+13.Delete Question
+14.Check User Unuique Email Address 
+15.User Registration 
+16.User Email Address Verification 
+17.User Login Page
+18.User Profile 
+19.Change User Password
+20.List Pending Exam 
+21.Load Exam Details 
+22.Enroll Online Exam 
+
+ 
+23.List User Enroll Exam  
+24.Load Register User Data at Admin Side  
+25.View User Detail in Pop up Modal at Admin Side  
+26.Load Question on Starting of Exam  
+27.Make Previous & Next Button For Question  
+28.Make Question Number Navigation of Starting Exam  
+29.Make Timer for Running Examination  
+30.Submit Question Answer  
+31.Exam Result at User Side  
+32.Exam Enroll User List - Admin Side  
+33.Single User Exam Result - Admin Side  
+34.Generate Exam Result - Admin Side 
