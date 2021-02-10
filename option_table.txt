@@ -1,0 +1,1446 @@
+                              
+database                       
+create table option_table(option_id int(11) NOT NULL,question_id int(11) NOT NULL,option_number int(2) NOT NULL,option_title varchar(250) NOT NULL);
+
+insert into option_table values(1,1,1,'Virtual machines (with sepcified CPUs, Memory and Disk)');
+insert into option_table values(2,1,2,'Database servers');
+insert into option_table values(3,1,3,'Web server');
+insert into option_table values(4,1,4,'OS and Application Software');
+
+insert into option_table values(5,2,1,'Wireless');
+insert into option_table values(6,2,2,'Hard drives');
+insert into option_table values(7,2,3,'People');
+insert into option_table values(8,2,4,'Internet');
+
+insert into option_table values(9,3,1,'Software As A Service ( SaaS)');
+insert into option_table values(10,3,2,'Enterprise As A Service ( EasS)');
+insert into option_table values(11,3,3,'Infrastructure As A Service (IaaS)');
+insert into option_table values(12,3,4,'Platform As A Service (PaaS)');
+
+insert into option_table values(13,4,1,'Pay per Use');
+insert into option_table values(14,4,2,'Free');
+insert into option_table values(15,4,3,'Ladder');
+insert into option_table values(16,4,4,'Perpetual license');
+
+
+insert into option_table values(17,5,1,'An overhanging threat');
+insert into option_table values(18,5,2,'A career rish for CIO');
+insert into option_table values(19,5,3,'A cloud that sits behind a corporate firewall');
+insert into option_table values(20,5,4,'A cloud that sits behind a corporate firewall');
+
+
+insert into option_table values(21,6,1,'Skype');
+insert into option_table values(22,6,2,'Gmail');
+insert into option_table values(23,6,3,'YouTube');
+insert into option_table values(24,6,4,'All of the above');
+
+insert into option_table values(25,7,1,'Accessibility');
+insert into option_table values(26,7,2,'Scalabilty');
+insert into option_table values(27,7,3,'Reusability');
+insert into option_table values(28,7,4,'Security');
+
+insert into option_table values(29,8,1,'PhP');
+insert into option_table values(30,8,2,'Ada');
+insert into option_table values(31,8,3,'Hadoop');
+insert into option_table values(32,8,4,'Hadoop');
+
+insert into option_table values(33,9,1,'PaaS');
+insert into option_table values(34,9,2,'SaaS');
+insert into option_table values(35,9,3,'Iaas');
+insert into option_table values(36,9,4,'All of the above');
+
+insert into option_table values(37,10,1,' VM Box');
+insert into option_table values(38,10,2,'Guest Operating System');
+insert into option_table values(39,10,3,'Host Operating System');
+insert into option_table values(40,10,4,' Hypervisor');
+
+
+ insert into option_table values(41,11,1,'Infrasture as a Service  (IaaS) provides');
+ insert into option_table values(42,11,2,'Physical Machines with Network');
+ insert into option_table values(43,11,3,'Operating Enviornment with Application');
+ insert into option_table values(44,11,4,'Virtual machine, Operating Systems, Virtual Infrastrure');
+
+insert into option_table values(45,12,1,'PaaS');
+insert into option_table values(46,12,2,'IaaS');
+insert into option_table values(47,12,3,'CaaS');
+insert into option_table values(48,12,4,'SaaS');
+
+insert into option_table values(49,13,1,'Virtual Server');
+insert into option_table values(50,13,2,'Virtual Appliances');
+insert into option_table values(51,13,3,'Virtual Machine');
+insert into option_table values(52,13,4,'Psedudo Server');
+
+
+insert into option_table values(53,14,1,'Quality of Service can not be guaranteed');
+insert into option_table values(54,14,2,'Cloud computing applications are not reliable');
+insert into option_table values(55,14,3,'Cloud applications suffer from inherent latency');
+insert into option_table values(56,14,4,'Utilization is poor');
+
+
+insert into option_table values(57,15,1,'Redundant Network Links');
+insert into option_table values(58,15,2,'Redundant of Data');
+insert into option_table values(59,15,3,'All of the above');
+insert into option_table values(60,15,4,'None of the above');
+
+insert into option_table values(61,16,1,'Data center');
+insert into option_table values(62,16,2,'Private cloud');
+insert into option_table values(63,16,3,'Virtualization'); 
+insert into option_table values(64,16,4,'Public cloud');
+
+insert into option_table values(65,17,1,'VirtualLogix VLX');
+insert into option_table values(66,17,2,'VMware ESX');
+insert into option_table values(67,17,3,'Xen');
+insert into option_table values(68,17,4,'LynxSecure');
+
+
+insert into option_table values(69,18,1,'VirtualLogix VLX');
+insert into option_table values(70,18,2,'Microsoft Hyper-V');
+insert into option_table values(71,18,3,'Xen');
+insert into option_table values(72,18,4,'All of the mentioned');
+
+
+insert into option_table values(73,19,1,'Unmanaged storage is reliable');
+insert into option_table values(74,19,2,'Managed storage is relatively cheap to use');
+insert into option_table values(75,19,3,'Most of the user-based applications that work with cloud storage are of unmanaged type');
+insert into option_table values(76,19,4,'None of the mentioned');
+
+
+ insert into option_table values(77,20,1,'Dropbox');
+ insert into option_table values(78,20,2,'Skype');
+ insert into option_table values(79,20,3,'Drive');
+ insert into option_table values(80,20,4,'All of the mentioned');
+
+
+
+insert into option_table values(81,21,1,'Focusware');
+insert into option_table values(82,21,2,'Collaborative');
+insert into option_table values(83,21,3,'Cooperative');
+insert into option_table values(84,21,4,'IMPS');
+
+
+insert into option_table values(85,22,1,'Office 365');
+insert into option_table values(86,22,2,'Citrix GoToMeeting');
+insert into option_table values(87,22,3,'XAMPP');
+insert into option_table values(88,22,4,'None of the mentioned');
+
+insert into option_table values(89,23,1,'Personal profile');
+insert into option_table values(90,23,2,'Friends');
+insert into option_table values(91,23,3,'Groups');
+insert into option_table values(92,23,4,'All of the mentioned');
+
+insert into option_table values(93,24,1,'Infrastructure');
+insert into option_table values(94,24,2,'Platform');
+insert into option_table values(95,24,3,'Service');
+insert into option_table values(96,24,4,'All of the mentioned');
+
+
+insert into option_table values(97,25,1,'Access control');
+insert into option_table values(98,25,2,'Auditing');
+insert into option_table values(99,25,3,'Authentication');
+insert into option_table values(100,25,4,'All of the mentioned');
+
+
+insert into option_table values(101,26,1,'Amazon Elastic Compute Cloud');
+insert into option_table values(102,26,2,'Amazon Simple Queue Service');
+insert into option_table values(103,26,3,'Amazon Relational Database Service');
+insert into option_table values(104,26,4,'Amazon Simple Storage System');
+
+
+insert into option_table values(105,27,1,'Map files are files that show how the data is distributed in Hadoop cluster.');
+insert into option_table values(106,27,2,'Map files are stored on the namenode and capture the metadata for all blocks on a particular tack . This how Hadoop is rack aware.');
+insert into option_table values(107,27,3,'Map files are sorted sequence files that also have an index. The index allows fase data look up.');
+insert into option_table values(108,27,4,'Map files are generated by Map-reduce after reduce step. Tehy show the task distribution during job executio0n.');
+
+
+insert into option_table values(109,28,1,'WSDL');
+insert into option_table values(110,28,2,'SGML');
+insert into option_table values(111,28,3,'XML');
+insert into option_table values(112,28,4,'None of the mentioned');
+
+
+
+insert into option_table values(113,29,1,'Cloud computing makes that long-held drem of utility computing possible');
+insert into option_table values(114,29,2,'The large scale of cloud computing system. was enabled by the popularization of the internet.');
+insert into option_table values(115,29,3,'Soft computing represents a real paradigm shift in the way in which systems are deployed');
+insert into option_table values(116,29,4,'All of the above');
+
+
+insert into option_table values(117,30,1,'Reduce the capacility by keeping out some nodes');
+insert into option_table values(118,30,2,'Reduce the capacity by replacing nodes with less powerful nodes');
+insert into option_table values(119,30,3,'Increase the capacity by adding more powerful resources');
+insert into option_table values(120,30,4,'Increase the capacity by adding more number individual nodes');
+
+
+insert into option_table values(121,31,1,'Microsoft Azure AppFabric provides'); 
+insert into option_table values(122,31,2,'Application container');
+insert into option_table values(123,31,3,'Application hosting enviornment');
+insert into option_table values(124,31,4,'Store for database');
+
+
+
+insert into option_table values(125,32,1,'PaaS');
+insert into option_table values(126,32,2,'IaaS');
+insert into option_table values(127,32,3,'CaaS');
+insert into option_table values(128,32,4,'SaaS');
+
+insert into option_table values(129,33,1,'Multiple instances of various Google applications are running on different hosts');
+insert into option_table values(130,33,2,'Google uses hardware virtualization');
+insert into option_table values(131,33,3,'Google running on different hosts');
+insert into option_table values(132,33,4,'All of the mentioned');
+
+
+ insert into option_table values(133,34,1,'GotoMetting');
+ insert into option_table values(134,34,2,'Zimbra');
+ insert into option_table values(135,34,3,'OneNote');
+ insert into option_table values(136,34,4,'All of the mentioned');
+
+insert into option_table values(137,35,1,'AWS S3 essentially lets you create your own cloud storage');
+insert into option_table values(138,35,2,'which are sets of systems that are isolated from one another');
+insert into option_table values(139,35,3,'Amazon Web Services (AWS) adds redundancy to its IaaS systems by allowing EC2 virtual machine instances');
+insert into option_table values(140,35,4,'None of the mentioned');
+
+insert into option_table values(141,36,1,'Amazon Relational Database Service');
+insert into option_table values(142,36,2,'Amazon SimpleDB');
+insert into option_table values(143,36,3,'Amazon Cloudfront');
+insert into option_table values(144,36,4,'Amazon Associates Web Services');
+
+insert into option_table values(145,37,1,'Amazon Elastic Cloud is a system for creating virtual disks(volume)');
+insert into option_table values(146,37,2,'SimpleDB interoperates with both Amazon EC2 and Amazon S3');
+insert into option_table values(147,37,3,'EC3 is an Analytics as a Service provider');
+insert into option_table values(148,37,4,'None of the mentioned');
+
+
+insert into option_table values(149,38,1,'CloudWatch');
+insert into option_table values(150,38,2,'Amazon SimpleDB');
+insert into option_table values(151,38,3,'Amazon Cloudfront');
+insert into option_table values(152,38,4,'All of the mentioned');
+
+
+insert into option_table values(153,39,1,'load performing');
+insert into option_table values(154,39,2,'load scheduling');
+insert into option_table values(155,39,3,'load balancing');
+insert into option_table values(156,39,4,'All of the mentioned');
+
+
+insert into option_table values(157,40,1,'Accounting Management');
+insert into option_table values(158,40,2,'Compliance');
+insert into option_table values(159,40,3,'Data Privacy');
+insert into option_table values(160,40,4,'All of the mentioned');
+
+
+insert into option_table values(161,41,1,'Vmachines');
+insert into option_table values(162,41,2,'VirtualBox');
+insert into option_table values(163,41,3,'ThoughtPolice');
+insert into option_table values(164,41,4,'None of the mentioned');
+
+
+insert into option_table values(165,42,1,'Software as a service (SaaS)');
+insert into option_table values(166,42,2,'Platform as a service (PaaS)');
+insert into option_table values(167,42,3,'Infrastructure as a service (IaaS)');
+insert into option_table values(168,42,4,'None of the above');
+
+
+insert into option_table values(169,43,1,'A cloud formation that can be seen across the globe');
+insert into option_table values(170,43,2,'A cloud service that can only be accessed from a publicly shared computerhe internet');
+insert into option_table values(171,43,3,'A multi-tenant cloud environment accessed over the internet');
+insert into option_table values(172,43,4,'A cloud environment owned, operated and controlled by a public company');
+
+
+insert into option_table values(173,44,1,'Jenkins');
+insert into option_table values(174,44,2,'Maven');
+insert into option_table values(175,44,3,' Git');
+insert into option_table values(176,44,4,'Hudson');
+
+insert into option_table values(177,45,1,'A blend of public and private cloud services with orchestration between thems hardware');
+insert into option_table values(178,45,2,'A blend of private cloud and legacy on-premises hardware');
+insert into option_table values(179,45,3,'A cloud service deployed across multiple offices or locations');
+insert into option_table values(180,45,4,'None of the above');
+
+
+insert into option_table values(181,46,1,'chunks');
+insert into option_table values(182,46,2,'instances');
+insert into option_table values(183,46,3,'messages');
+insert into option_table values(184,46,4,'None of the mentioned');
+
+insert into option_table values(185,47,1,'NoSqlDB ');
+insert into option_table values(186,47,2,'SQL Server');
+insert into option_table values(187,47,3,'Oracle');
+insert into option_table values(188,47,4,'RDS');
+
+insert into option_table values(189,48,1,'AWS');
+insert into option_table values(190,48,2,'ASQ');
+insert into option_table values(191,48,3,'Azure');
+insert into option_table values(192,48,4,'Google App Services');
+
+
+insert into option_table values(193,49,1,'Drive');
+insert into option_table values(194,49,2,'SkyDrive');
+insert into option_table values(195,49,3,'Dropbox');
+insert into option_table values(196,49,4,'All of the mentioned');
+
+insert into option_table values(197,50,1,'Infrastructure As A Service');
+insert into option_table values(198,50,2,'Platform As A Service');
+insert into option_table values(199,50,3,'Software As A Service');
+insert into option_table values(200,50,4,'None of the Above');
+
+insert into option_table values(201,51,1,'Security');
+insert into option_table values(202,51,2,'Virtualization');
+insert into option_table values(203,51,3,'Scalability');
+insert into option_table values(204,51,4,'Cost-saving');
+
+insert into option_table values(205,52,1,'Infrastructure Service');
+insert into option_table values(206,52,2,'Platform Service');
+insert into option_table values(207,52,3,'Software Service');
+insert into option_table values(208,52,4,'None of the above');
+
+insert into option_table values(209,53,1,'Platform,Software,Infrastructure');
+insert into option_table values(210,53,2,'Software,Hardware Infrastructure');
+insert into option_table values(211,53,3,'Platform,Hardware');
+insert into option_table values(212,53,4,'Infrastructure');
+
+
+insert into option_table values(213,54,1,'The Internet');
+insert into option_table values(214,54,2,'Cumulus Clouds');
+insert into option_table values(215,54,3,'A Computer');
+insert into option_table values(216,54,4,'Thin Clients');
+
+
+insert into option_table values(217,55,1,'Windows');
+insert into option_table values(218,55,2,'Mac OS');
+insert into option_table values(219,55,3,'Linux');
+insert into option_table values(220,55,4,'All of the above');
+
+insert into option_table values(221,56,1,'Platform as a Service (PaaS)');
+insert into option_table values(222,56,2,'Infrastructure as a Service (IaaS)');
+insert into option_table values(223,56,3,'Software as a Service (SaaS)');
+insert into option_table values(224,56,4,'Data as A Service ( DaaS)');
+
+insert into option_table values(225,57,1,'Too expensive');
+insert into option_table values(226,57,2,'Security concernt');
+insert into option_table values(227,57,3,'Too many platforms');
+insert into option_table values(228,57,4,'Accessibilty');
+
+insert into option_table values(229,58,1,'Subscription based');
+insert into option_table values(230,58,2,'Pay As you Go');
+insert into option_table values(231,58,3,'Ladder');
+insert into option_table values(232,58,4,'Perpetual License');
+
+insert into option_table values(233,59,1,' Yes, there needs to be cultural shift within the organisation across all stakeholders to ensure a successful adoption of a DevOps approach'); 
+insert into option_table values(234,59,2,'Yes, but the most up to date tools and LEAN processes need to be in place to drive an organisational culture shift');
+insert into option_table values(235,59,3,'No, DevOps is all about the tools');
+insert into option_table values(236,59,4,' No, cultural shift will occur when staff are using the most up to date tools and LEAN processes');
+
+insert into option_table values(237,60,1,'One goal of DevOps is to establish an environment where Change Management does bot control application releases');
+insert into option_table values(238,60,2,'One goal of DevOps is to establish an environment where releasing more reliable applications faster and more frequently can occur');
+insert into option_table values(239,60,3,'One goal of DevOps is to establish an environment where application development perform all operations tasks.');
+insert into option_table values(240,60,4,'One goal of DevOps is to establish an environment where releasing applications is valued over the quality of the released application');
+
+insert into option_table values(241,61,1,' Nothing changes as a risk adverse Change Management approach is paramount to IT and business success.');
+insert into option_table values(242,61,2,'The moment an app change is asked for,the request should go to the Developers to authorise. Once authorised it goes to Operations for implementation.');
+insert into option_table values(243,61,3,'The moment an app change is asked for,the request should go out to everyone on the team, no matter which IT discipline they work in');
+insert into option_table values(244,61,4,'DevOps does not need Change Management');
+
+insert into option_table values(245,62,1,' Developers taking over all Operations tasks.');
+insert into option_table values(246,62,2,'Automating the process of software delivery and infrastructure changes');
+insert into option_table values(247,62,3,'The collaboration and communication of both software developers and other information-technology (IT) professional while automating the process of software delivery and infrastructure changes.');
+insert into option_table values(248,62,4,'The collaboration and communication of just software developers and operations staff while automating the process software delivery and infrastructure changes.');
+
+insert into option_table values(249,63,1,'Use of Agile and other development processes and methodologies');
+insert into option_table values(250,63,2,'Demand for an increased rate of production releases from application and business unit stakeholders');
+insert into option_table values(251,63,3,'Wide availability of virtualised and cloud infrastructure from internal and external providers');
+insert into option_table values(252,63,4,'Increased usage of data centre automation and configuration management tools');
+
+
+insert into option_table values(253,64,1,'Clock rate');
+insert into option_table values(254,64,2,'Instruction set');
+insert into option_table values(255,64,3,'Exeuction time');
+insert into option_table values(256,64,4,'Delay Time');
+
+insert into option_table values(257,65,1,'UNIX Service');
+insert into option_table values(258,65,2,'Kernel Service');
+insert into option_table values(259,65,3,'Windows Vista Service');
+insert into option_table values(260,65,4,'Microsoft Windows Service');
+
+insert into option_table values(261,66,1,'Phases');
+insert into option_table values(262,66,2,'Procedures');
+insert into option_table values(263,66,3,'Multiple Threads');
+insert into option_table values(264,66,4,'Steps');
+
+insert into option_table values(265,67,1,'Multiple processor');
+insert into option_table values(266,67,2,'Single processor');
+insert into option_table values(267,67,3,'Corei5');
+insert into option_table values(268,67,4,'Corei5');
+
+insert into option_table values(269,68,1,'Scalability');
+insert into option_table values(270,68,2,'Parallelism');
+insert into option_table values(271,68,3,'Supervision');
+insert into option_table values(272,68,4,'Compatibility');
+
+insert into option_table values(273,69,1,'Execution');
+insert into option_table values(274,69,2,'Wait');
+insert into option_table values(275,69,3,'Stall');
+insert into option_table values(276,69,4,'Branching');
+
+insert into option_table values(277,70,1,'Single instruction stream - single data stream (SISD)');
+insert into option_table values(278,70,2,'Single instruction stream - multiple data steam (SIMD)');
+insert into option_table values(279,70,3,'Multiple instruction stream - single data steam (MISD)');
+insert into option_table values(280,70,4,'Multiple instruction stream - multiple data steam (MIMD).');
+
+insert into option_table values(281,71,1,' Single instruction stream - single data stream (SISD)');
+insert into option_table values(282,71,2,'Single instruction stream - multiple data steam ');
+insert into option_table values(283,71,3,'Multiple instruction stream - single data steam (MISD)');
+insert into option_table values(284,71,4,'Multiple instruction stream - multiple data steam (MIMD)');
+
+insert into option_table values(285,72,1,'The typical license is subscription-based or usage-based and is billed on a recurring basis');********************
+insert into option_table values(286,72,2,'The software is available over the Internet globally through a browser on demand');
+insert into option_table values(287,72,3,' The software and the service are monitored and maintained by the vendor');
+insert into option_table values(288,72,4,'All of the mentioned');
+
+insert into option_table values(289,73,1,'Java (software platform)');
+insert into option_table values(290,73,2,'Perl');
+insert into option_table values(291,73,3,'Java (programming language)');
+insert into option_table values(292,73,4,'Lua (programming language)');
+
+insert into option_table values(293,74,1,'Bare metal');
+insert into option_table values(294,74,2,'Debian');
+insert into option_table values(295,74,3,'Cross-platform');
+insert into option_table values(296,74,4,'Unix-like');
+
+insert into option_table values(297,75,1,'Single instruction stream - single data stream (SISD)');
+insert into option_table values(298,75,2,'Single instruction stream - multiple data steam (SIMD)');
+insert into option_table values(299,75,3,'Multiple instruction stream - single data steam (MISD)');
+insert into option_table values(300,75,4,'Multiple instruction stream - multiple data steam (MIMD)');
+
+
+insert into option_table values(301,76,1,'SQL BI');
+insert into option_table values(302,76,2,'Galcier');
+insert into option_table values(303,76,3,'Tabelue');
+insert into option_table values(304,76,4,'Hadoop');
+
+insert into option_table values(305,77,1,'Velocity');
+insert into option_table values(306,77,2,'Veracity');
+insert into option_table values(307,77,3,'Volume');
+insert into option_table values(308,77,4,'Variety');
+
+insert into option_table values(309,78,1,'Inexperience collecting data from non traditional sources');
+insert into option_table values(310,78,2,'Not accustomed to dealing with such large quantities of data');
+insert into option_table values(311,78,3,'Overly complex with relatively slow systems');
+insert into option_table values(312,78,4,'All of the above');
+
+insert into option_table values(313,79,1,'Cloud services always use High-end hardwares for its data processing');
+insert into option_table values(314,79,2,'Cloud services alway,Artificial Intelligence is the science and engineering of making intelligent machines');
+insert into option_table values(315,79,3,'By year 2020, unstructured data will complement structured data');
+insert into option_table values(316,79,4,'Utility cloud computing services offer virtual storage and server options, where the companies can access it on demand');
+
+insert into option_table values(317,80,1,'Object');
+insert into option_table values(318,80,2,'Block');
+insert into option_table values(319,80,3,'Simple');
+insert into option_table values(320,80,4,'Secure');
+
+insert into option_table values(321,81,1,'CloudFront');
+insert into option_table values(322,81,2,'AWS Import/Export');
+insert into option_table values(323,81,3,'DynamoDB');
+insert into option_table values(324,81,4,'ElastiCache');
+
+insert into option_table values(325,82,1,'Baskets');
+insert into option_table values(326,82,2,'Brackets');
+insert into option_table values(327,82,3,'Clusters');
+insert into option_table values(328,82,4,'Buckets');
+
+insert into option_table values(329,83,1,'Big data');
+insert into option_table values(330,83,2,'Metadata');
+insert into option_table values(331,83,3,'Master data');
+insert into option_table values(332,83,4,'Exif data');
+
+insert into option_table values(333,84,1,'Low scalability and high latency data storage infrastructure at high costs.');
+insert into option_table values(334,84,2,'High scalability and low latency data storage infrastructure at high costs.');
+insert into option_table values(335,84,3,'High scalability and low latency data storage infrastructure at high costs.');
+insert into option_table values(336,84,4,'Low scalability and high latency data storage infrastructure at low costs.');
+
+insert into option_table values(337,85,1,'To allow bucket access to multiple users.');
+insert into option_table values(338,85,2,'To grant or deny accounts to read and upload files in your bucket.');
+insert into option_table values(339,85,3,'To approve or deny users the option to add or remove buckets.','All of the above');
+insert into option_table values(340,85,4,'All of the above');
+
+insert into option_table values(341,86,1,'Virtual Private Network');
+insert into option_table values(342,86,2,'Private Cloud');
+insert into option_table values(343,86,3,'Virtual Private Cloud');
+insert into option_table values(344,86,4,'Hybrid Cloud');
+
+insert into option_table values(345,87,1,'Spot Instances');
+insert into option_table values(346,87,2,'Reserved instances');
+insert into option_table values(347,87,3,'Dedicated instances');
+insert into option_table values(348,87,4,'On-Demand instances');
+
+insert into option_table values(349,88,1,'Amazon DynamoDB');
+insert into option_table values(350,88,2,'Amazon Redshift');
+insert into option_table values(351,88,3,'Amazon Elastic');
+insert into option_table values(352,88,4,'Amazon Elastic');
+
+insert into option_table values(353,89,1,'Amazon RDS ');
+insert into option_table values(354,89,2,'Multi-AZ');
+insert into option_table values(355,89,3,'Amazon ElastiCache');
+insert into option_table values(356,89,4,'Amazon DynamoDB');
+
+insert into option_table values(357,90,1,'Managing web sessions');
+insert into option_table values(358,90,2,'Storing JSON documents');
+insert into option_table values(359,90,3,'Storing metadata for Amazon S3 objects');
+insert into option_table values(360,90,4,'Running relational joins and complex updates');
+
+insert into option_table values(361,91,1,'Amazon Simple Email Service');
+insert into option_table values(362,91,2,'Amazon CloudWatch');
+insert into option_table values(363,91,3,'Amazon Simple Queue Service');
+insert into option_table values(364,91,4,'Amazon Route 53');
+
+insert into option_table values(365,92,1,'Use the Computer Management utility to enable the Hyper-V server role');
+insert into option_table values(366,92,2,'Use the Hyper-V Admin Console to enable the Hyper-V server role');
+insert into option_table values(367,92,3,'Use the Add Roles Wizard in the Server Manager console to add the Hyper-V server role');
+insert into option_table values(368,92,4,'None of the above – Hyper-V is installed and enabled by default in Windows Server 2008');
+
+insert into option_table values(369,93,1,'Docker Swarn');
+insert into option_table values(370,93,2,'Docker Hub');
+insert into option_table values(371,93,3,'Docker Cloud');
+insert into option_table values(372,93,4,'Docker Compose');
+
+insert into option_table values(373,94,1,'Docker Swarn');
+insert into option_table values(374,94,2,'Docker Hub');
+insert into option_table values(375,94,3,'Docker Cloud');
+insert into option_table values(376,94,4,'Docker Compose');
+
+insert into option_table values(377,95,1,'MapReduce, Hive and HBase');
+insert into option_table values(378,95,2,'MapReduce, MySQL and Google Apps');
+insert into option_table values(379,95,3,'MapReduce, Hummer and Iguana');
+insert into option_table values(380,95,4,'MapReduce, Heron and Trumpe');
+
+insert into option_table values(381,96,1,'Hadoop is an ideal environment for extracting and transforming small volumes of data');
+insert into option_table values(382,96,2,'Hadoop stores data in HDFS and supports data compression/decompression');
+insert into option_table values(383,96,3,'The Giraph framework is less useful than a MapReduce job to solve graph and machine learning');
+insert into option_table values(384,96,4,'None of the mentioned');
+
+insert into option_table values(385,97,1,'Lean Manufacturing');
+insert into option_table values(386,97,2,'Agile Software Delivery');
+insert into option_table values(387,97,3,'Waterfall Software Delivery');
+insert into option_table values(388,97,4,'Continuous Software Delivery');
+
+insert into option_table values(389,98,1,'Because they come from different backgrounds');
+insert into option_table values(390,98,2,'Because development team knows more about software products and services');
+insert into option_table values(391,98,3,'Because operations team knows more about test and production environments');
+insert into option_table values(392,98,4,'Because they have conflicting business goals and priorities');
+
+insert into option_table values(393,99,1,'DevOps enables you to organize your teams around your organizational mission');
+insert into option_table values(394,99,2,'DevOps enables you to create your software with built-in quality and monitoring');
+insert into option_table values(395,99,3,'DevOps enables you to quickly identify, fix and learn from errors');
+insert into option_table values(396,99,4,'All above choices');
+
+insert into option_table values(397,100,1,'It finances special projects to serve its clients');
+insert into option_table values(398,100,2,'It finances products and services to serve its clients');
+insert into option_table values(399,100,3,'It finances teams in matrix organizations and these teams are responsible for handling their own budgets');
+insert into option_table values(400,100,4,'It finances development and operations teams separately, so they take care of their own business');
+
+
+insert into option_table values(401,101,1,'Test Automation should give quick and early feedback about your quality of wor');
+insert into option_table values(402,101,2,'Never mix test driven development (TDD) together with your test automation approach');
+insert into option_table values(403,101,3,'Tests should generate consistent,deterministic and repeatable results provided same conditions for different test runs');
+insert into option_table values(404,101,4,'With your test automation, avoid slow and periodic feedback.What you need is fast feedback whenever you or your developer attempts to check-in code to your trunk');
+
+insert into option_table values(405,102,1,'You will be quicker to identify root causes of issues and resolve them.');
+insert into option_table values(406,102,2,'By continuously delivering in production, your team will have the constant pride of contributing your organizational mission.');
+insert into option_table values(407,102,3,'Potentially required rollbacks from your production systems will be less cumbersome.');
+insert into option_table values(408,102,4,'All above choices.');
+
+insert into option_table values(409,103,1,'Data storage systems.');
+insert into option_table values(410,103,2,'Handling the logging of sensitive client information');
+insert into option_table values(411,103,3,'Data transfer between clients and software.');
+insert into option_table values(412,103,4,'All above choices');
+
+insert into option_table values(413,104,1,' Git');
+insert into option_table values(414,104,2,'Jenkins');
+insert into option_table values(415,104,3,'Docker');
+insert into option_table values(416,104,4,'Fiddler');
+
+insert into option_table values(417,105,1,'DevOps tea');
+insert into option_table values(418,105,2,'Stakeholders of downstream work centers.');
+insert into option_table values(419,105,3,'Errors, incidents and fixes.');
+insert into option_table values(420,105,4,'Clients.');
+
+insert into option_table values(421,106,1,'Trunk is a special private branch in a developer workstation.');
+insert into option_table values(422,106,2,'Trunk is the process of merging code in DevOps deliveries.');
+insert into option_table values(423,106,3,' Trunk is a special source code version controlling system which stores mission critical special projects of your DevOps organization.');
+insert into option_table values(424,106,4,'Trunk is a special source code version controlling system which stores mission critical special projects of your DevOps organization.');
+
+insert into option_table values(425,107,1,'Canary Deployment Pattern (The Dark Launch).');
+insert into option_table values(426,107,2,'Blue-Green Deployment Pattern.');
+insert into option_table values(427,107,3,'Cluster Immune System Release Pattern.');
+insert into option_table values(428,107,4,'Big bang code deployments of fully tested and validated releases.');
+
+insert into option_table values(429,108,1,'Use your track record of successful automated deployments with standard changes.');
+insert into option_table values(430,108,2,'Negotiate with release managers.');
+insert into option_table values(431,108,3,'Publicly complain about bureaucracy and make everyone be aware of it.');
+insert into option_table values(432,108,4,'Make sure normal changes are very carefully deployed to your production systems.');
+
+insert into option_table values(433,109,1,'Complexity of your systems will be managed, so problems in designs and operations will be quickly detected.');
+insert into option_table values(434,109,2,'DevOps team does no longer need to be careful and mindful to ensure quality.');
+insert into option_table values(435,109,3,'Problems are quickly resolved while they are small. Resolving problems will result in spontaneous construction of new organizational knowledge and experience.');
+insert into option_table values(436,109,4,'Leaders in your DevOps organization develop other leaders who create and continuously improve safe systems of work.');
+
+insert into option_table values(437,110,1,'Telemetry is a widely known SaaS tool to plan and execute DevOps projects.');
+insert into option_table values(438,110,2,'Telemetry is a communication tool used by DevOps teams at geographically distributed locations.');
+insert into option_table values(439,110,3,'Telemetry is a tool to design, code and execute automated unit tests.');
+insert into option_table values(440,110,4,'Telemetry is a tool to design, code and execute automated unit tests.');
+
+insert into option_table values(441,111,1,'This is easiest way to fix a problem. It doesn’t require an urgent code deployment');
+insert into option_table values(442,111,2,'You don’t have to very urgently correct erroneous pieces in your deployment.');
+insert into option_table values(443,111,3,'Your DevOps team can take time to properly identify root cause of an issue and improve their techniques to ensure such a problem will not likely happen again in the future.');
+insert into option_table values(444,111,4,'All above choices.');
+
+insert into option_table values(445,112,1,'DevOps is only suitable for start-up companies.');
+insert into option_table values(446,112,2,'DevOps is suitable for brownfield software products and services.');
+insert into option_table values(447,112,3,'DevOps is suitable for greenfield software products and services.');
+insert into option_table values(448,112,4,'Some of the most exemplary DevOps initiatives started in companies with giant and mature IT organizations.');
+
+insert into option_table values(449,113,1,'Establish an environment where change management does not control application releases');
+insert into option_table values(450,113,2,'Establish an environment to release more reliable applications faster');
+insert into option_table values(451,113,3,'Establish an environment where application development performs all the operation tasks');
+insert into option_table values(452,113,4,'Estalish an environment where the release of applications is valued more than its quality');
+
+
+insert into option_table values(453,114,1,'Extend the sprint to four weeks to give the team more time');
+insert into option_table values(454,114,2,'Expect that the team will learn from the mistakes and fix the problem in the next cycle');
+insert into option_table values(455,114,3,'Shorten the sprint to achieve smaller targets and find the problem quickly');
+insert into option_table values(456,114,4,'Focus only on few limited changes that are viable to be delivered in two weeks');
+
+insert into option_table values(457,115,1,'From the initiation stage of the software development');
+insert into option_table values(458,115,2,'After the functional acceptance test by the customer representatives');
+insert into option_table values(459,115,3,'Along with the implementation of continuous delivery');
+insert into option_table values(460,115,4,'The non-functional requirements are of no concern to the customers');
+
+insert into option_table values(461,116,1,'checkout');
+insert into option_table values(462,116,2,'commit');
+insert into option_table values(463,116,3,'expor');
+insert into option_table values(464,116,4,'pull');
+
+
+insert into option_table values(465,117,1,'Body element');
+insert into option_table values(466,117,2,'Branch pointer');
+insert into option_table values(467,117,3,'Commit object');
+insert into option_table values(468,117,4,'Head pointer');
+
+
+insert into option_table values(469,118,1,'ignore.git');
+insert into option_table values(470,118,2,'ignore.git');
+insert into option_table values(471,118,3,'gitignore.txt');
+insert into option_table values(472,118,4,'git.ignore');
+
+
+insert into option_table values(473,119,1,'When using a single-character option');
+insert into option_table values(474,119,2,'When using a multi-character option');
+insert into option_table values(475,119,3,'When issuing Git commands with multiple options');
+insert into option_table values(476,119,4,'When referencing a Git alias');
+
+
+insert into option_table values(477,120,1,'Git');
+insert into option_table values(478,120,2,'Subversion');
+insert into option_table values(479,120,3,'Concurrent versions system');
+insert into option_table values(480,120,4,'none of this');
+
+insert into option_table values(481,121,1,'Jenkins');
+insert into option_table values(482,121,2,'Maven');
+insert into option_table values(483,121,3,'Git ');
+insert into option_table values(484,121,4,'Hudson');
+
+
+insert into option_table values(485,122,1,'4JENKINS_ROOT');
+insert into option_table values(486,122,2,'M2_HOME');
+insert into option_table values(487,122,3,'JENKINS_HOME');
+insert into option_table values(488,122,4,'JAVA_HOME');
+
+insert into option_table values(489,123,1,'Continuous delivery is a manual task');
+insert into option_table values(490,123,2,'Continuous delivery has manual releases to production decisions, while continuous deployment has releases automatically pushed to production');
+insert into option_table values(491,123,3,' Continuous delivery includes all steps of software development life cycle, while continuous deployment may skip few steps such as validation and testing');
+insert into option_table values(492,123,4,'Continuous delivery means complete delivery of the application to customer, while continuous deployment includes only deployment of the application in customer environment.');
+
+
+insert into option_table values(493,124,1,'Complex, but less number of releases');
+insert into option_table values(494,124,2,'A focus on cycle time reduction');
+insert into option_table values(495,124,3,'Resource-based management of the procesS');
+insert into option_table values(496,124,4,'Self-managed and responsive teams');
+
+
+insert into option_table values(497,125,1,'ansible- m setup hostname');
+insert into option_table values(498,125,2,'ansible pull');
+insert into option_table values(499,125,3,'ansible-playbook playbook.yml --list-hosts');
+insert into option_table values(500,125,4,'ansible-playbook');
+
+
+insert into option_table values(501,126,1,'Virtual machine');
+insert into option_table values(502,126,2,'Container instance');
+insert into option_table values(503,126,3,'physical server');
+insert into option_table values(504,126,4,'All the above options');
+
+
+
+insert into option_table values(505,127,1,'Unit testing');
+insert into option_table values(506,127,2,'Integration testing');
+insert into option_table values(507,127,3,'functional testing');
+insert into option_table values(508,127,4,'System testing');
+
+insert into option_table values(509,128,1,'String');
+insert into option_table values(510,128,2,'Int');
+insert into option_table values(511,128,3,'Object');
+insert into option_table values(512,128,4,'Void');
+
+insert into option_table values(513,129,1,'String');
+insert into option_table values(514,129,2,'Int');
+insert into option_table values(515,129,3,'Object');
+insert into option_table values(516,129,4,'Void');
+
+insert into option_table values(517,130,1,'Public Methods');
+insert into option_table values(518,130,2,'Private Methods');
+insert into option_table values(519,130,3,'Protected Methods');
+insert into option_table values(520,130,4,'Methods with void return type');
+
+insert into option_table values(521,131,1,'void assert(boolean condition)');
+insert into option_table values(522,131,2,'void assertTrue(boolean condition)');
+insert into option_table values(523,131,3,'void assertCheck(boolean condition)');
+insert into option_table values(524,131,4,'void assertChecks(boolean condition)');
+
+insert into option_table values(525,132,1,' Automated scheduling');
+insert into option_table values(526,132,2,'Self-healing capabilities');
+insert into option_table values(527,132,3,' Automated rollouts and rollbacks');
+insert into option_table values(528,132,4,' All of the above options');
+
+insert into option_table values(529,133,1,'That stability is prioritised over creativity');
+insert into option_table values(530,133,2,' Operational considerations are prioritised over stability');
+insert into option_table values(531,133,3,' Operational considerations are taken into account');
+insert into option_table values(532,133,4,' The resultant designs of the systems will fit nicely into the business as usual environment');
+
+insert into option_table values(533,134,1,' Docker Swarm ');
+insert into option_table values(534,134,2,' Docker Hub');
+insert into option_table values(535,134,3,' Docker Cloud');
+insert into option_table values(536,134,4,' Docker Compose');
+
+insert into option_table values( 537,135,1,' rdir');
+insert into option_table values( 538,135,2,' remove');
+insert into option_table values( 539,135,3,' rm');
+insert into option_table values( 540,135,4,'rmdir ');
+
+insert into option_table values(541,136,1,' Nagios will execute a plugin whenever there is a need to check the status of a host or service');
+insert into option_table values(542,136,2,' Plugins are useful for monitoring services that are asynchronous in nature');
+insert into option_table values(543,136,3,' Both a and b');
+insert into option_table values(544,136,4,' None of the above options');
+
+insert into option_table values(545,137,1,' Grafana');
+insert into option_table values(546,137,2,'Kibana ');
+insert into option_table values(547,137,3,' Nagios');
+insert into option_table values(548,137,4,' None of the above options');
+
+insert into option_table values(549,138,1,' Grafana');
+insert into option_table values(550,138,2,' Nagios');
+insert into option_table values(551,138,3,' Kubernetes');
+insert into option_table values(552,138,4,' Docker');
+
+
+insert into option_table values(553,139,1,' DevOps and ITIL® don’t mix');
+insert into option_table values(554,139,2,' DevOps won’t work in regulated industries');
+insert into option_table values(555,139,3,'DevOps won’t work with Outsourced Development');
+insert into option_table values(556,139,4,'You must use cloud technologies');
+
+insert into option_table values(557,140,1,'DevOps and Continuous Delivery are the same thing.');
+insert into option_table values(558,140,2,'DevOps and Continuous Delivery are not related and are mutually exclusive.');
+insert into option_table values(559,140,3,'DevOps and Continuous Delivery share a background in Agile methods and LEAN thinking.');
+insert into option_table values(560,140,4,'DevOps and Continuous Delivery share common processes');
+
+
+insert into option_table values(561,141,1,'Improved deployment frequency, which can lead to faster time to market');
+insert into option_table values(562,141,2,'Lower failure rate of new releases');
+insert into option_table values(563,141,3,'Shortened lead time between fixes');
+insert into option_table values(564,141,4,'Faster mean time to recovery in the event of a new release crashing or otherwise disabling the current system');
+
+insert into option_table values(565,142,1,'Use of Agile and other development processes and methodologies');
+insert into option_table values(566,142,2,'Demand for an increased rate of production releases from application and business unit stakeholders');
+insert into option_table values(567,142,3,'Wide availability of virtualised and cloud infrastructure from internal and external providers');
+insert into option_table values(568,142,4,'Increased usage of data centre automation and configuration management tools');
+
+
+insert into option_table values(569,143,1,'Improved deployment frequency,which can lead to faster time to market');
+insert into option_table values(570,143,2,'Lower failure rate of new releases');
+insert into option_table values(571,143,3,'Shortened lead time between fixes');
+insert into option_table values(572,143,4,'Faster mean time to recovery in the event of a new release crashing or otherwise disabling the current system');
+
+insert into option_table values(573,144,1,'Developers taking over all Operation tasks');
+insert into option_table values(574,144,2,'Automating the process of software delivery and infrastructure changes'); 
+insert into option_table values(575,144,3,'The collaboration and communication of both software developers and other information-technology (IT) professional while automating the process of software delivery and infrastructure changes.'); 
+insert into option_table values(576,144,4,'The collaboration and communication of just software developers and operations staff while automating the process software delivery and infrastructure changes'); 
+
+insert into option_table values(577,145,1,'Developers taking over all Operations tasks'); 
+insert into option_table values(578,145,2,'Automating the process of software delivery and infrastructure changes'); 
+insert into option_table values(579,145,3,'The collaboration and communication of both software developers and other information-technology (IT) professional while automating the process of software delivery and infrastructure changes'); 
+insert into option_table values(580,145,4,'The collaboration and communication of just software developers and operations staff while automating the process software delivery and infrastructure changes'); 
+
+
+insert into option_table values(581,146,1,'Nothing changes as a risk adverse Change Management approach is paramount to IT and business success');
+insert into option_table values(582,146,2,'The moment an app change is asked for,the request should go to the Developers to authorise.Once authorised it goes to Operations for implementation');
+insert into option_table values(583,146,3,'The moment an app change is asked for, the request should go out to everyone on the team,no matter which IT discipline they work in.');
+insert into option_table values(584,146,4,'DevOps does not need Change Management?');
+
+
+insert into option_table values(585,147,1,'“DevOps is more than just a tool or a process change, it inherently requires an organisational culture shift”'); 
+insert into option_table values(586,147,2,'Yes, there needs to be cultural shift within the organisation across all stakeholders to ensure a successful adoption of a DevOps approach'); 
+insert into option_table values(587,147,3,'Yes, but the most up to date tools and LEAN processes need to be in place to drive an organisational culture shift'); 
+insert into option_table values(588,147,4,'No, cultural shift will occur when staff are using the most up to date tools and LEAN processes'); 
+
+
+insert into option_table values(589,148,1,'One goal of DevOps is to establish an environment where Change Management does bot control application releases');
+insert into option_table values(590,148,2,'One goal of DevOps is to establish an environment where releasing more reliable applications faster and more frequently can occur');
+insert into option_table values(591,148,3,'One goal of DevOps is to establish an environment where application development perform all operations tasks');
+insert into option_table values(592,148,4,'One goal of DevOps is to establish an environment where releasing applications is valued over the quality of the released application');
+
+insert into option_table values(593,149,1,'Use of Agile and other development processes and methodologies');
+insert into option_table values(594,149,2,'Demand for an increased rate of production releases from application and business unit stakeholders');
+insert into option_table values(595,149,3,'Wide availability of virtualised and cloud infrastructure from internal and external providers');
+insert into option_table values(596,149,4,'Increased usage of data centre automation and configuration management tools');
+
+insert into option_table values(597,150,4,'That stability is prioritised over creativity');
+insert into option_table values(598,150,4,'Operational considerations are prioritised over stability');
+insert into option_table values(599,150,4,'Operational considerations are taken into account');
+insert into option_table values(600,150,4,'The resultant designs of the systems will fit nicely into the business as usual environment');
+
+
+select * from option_table;
++-----------+-------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| option_id | question_id | option_number | option_title                                                                                                                                                                                     |
++-----------+-------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|         1 |           1 |             1 | Virtual machines (with sepcified CPUs, Memory and Disk)                                                                                                                                          |
+|         2 |           1 |             2 | Database servers                                                                                                                                                                                 |
+|         3 |           1 |             3 | Web server                                                                                                                                                                                       |
+|         4 |           1 |             4 | OS and Application Software                                                                                                                                                                      |
+|         5 |           2 |             1 | Wireless                                                                                                                                                                                         |
+|         6 |           2 |             2 | Hard drives                                                                                                                                                                                      |
+|         7 |           2 |             3 | People                                                                                                                                                                                           |
+|         8 |           2 |             4 | Internet                                                                                                                                                                                         |
+|         9 |           3 |             1 | Software As A Service ( SaaS)                                                                                                                                                                    |
+|        10 |           3 |             2 | Enterprise As A Service ( EasS)                                                                                                                                                                  |
+|        11 |           3 |             3 | Infrastructure As A Service (IaaS)                                                                                                                                                               |
+|        12 |           3 |             4 | Platform As A Service (PaaS)                                                                                                                                                                     |
+|        13 |           4 |             1 | Pay per Use                                                                                                                                                                                      |
+|        14 |           4 |             2 | Free                                                                                                                                                                                             |
+|        15 |           4 |             3 | Ladder                                                                                                                                                                                           |
+|        16 |           4 |             4 | Perpetual license                                                                                                                                                                                |
+|        17 |           5 |             1 | An overhanging threat                                                                                                                                                                            |
+|        18 |           5 |             2 | A career rish for CIO                                                                                                                                                                            |
+|        19 |           5 |             3 | A cloud that sits behind a corporate firewall                                                                                                                                                    |
+|        20 |           5 |             4 | A cloud that sits behind a corporate firewall                                                                                                                                                    |
+|        21 |           6 |             1 | Skype                                                                                                                                                                                            |
+|        22 |           6 |             2 | Gmail                                                                                                                                                                                            |
+|        23 |           6 |             3 | YouTube                                                                                                                                                                                          |
+|        24 |           6 |             4 | All of the above                                                                                                                                                                                 |
+|        25 |           7 |             1 | Accessibility                                                                                                                                                                                    |
+|        26 |           7 |             2 | Scalabilty                                                                                                                                                                                       |
+|        27 |           7 |             3 | Reusability                                                                                                                                                                                      |
+|        28 |           7 |             4 | Security                                                                                                                                                                                         |
+|        29 |           8 |             1 | PhP                                                                                                                                                                                              |
+|        30 |           8 |             2 | Ada                                                                                                                                                                                              |
+|        31 |           8 |             3 | Hadoop                                                                                                                                                                                           |
+|        32 |           8 |             4 | Hadoop                                                                                                                                                                                           |
+|        33 |           9 |             1 | PaaS                                                                                                                                                                                             |
+|        34 |           9 |             2 | SaaS                                                                                                                                                                                             |
+|        35 |           9 |             3 | Iaas                                                                                                                                                                                             |
+|        36 |           9 |             4 | All of the above                                                                                                                                                                                 |
+|        37 |          10 |             1 |  VM Box                                                                                                                                                                                          |
+|        38 |          10 |             2 | Guest Operating System                                                                                                                                                                           |
+|        39 |          10 |             3 | Host Operating System                                                                                                                                                                            |
+|        40 |          10 |             4 |  Hypervisor                                                                                                                                                                                      |
+|        41 |          11 |             1 | Infrasture as a Service  (IaaS) provides                                                                                                                                                         |
+|        42 |          11 |             2 | Physical Machines with Network                                                                                                                                                                   |
+|        43 |          11 |             3 | Operating Enviornment with Application                                                                                                                                                           |
+|        44 |          11 |             4 | Virtual machine, Operating Systems, Virtual Infrastrure                                                                                                                                          |
+|        45 |          12 |             1 | PaaS                                                                                                                                                                                             |
+|        46 |          12 |             2 | IaaS                                                                                                                                                                                             |
+|        47 |          12 |             3 | CaaS                                                                                                                                                                                             |
+|        48 |          12 |             4 | SaaS                                                                                                                                                                                             |
+|        49 |          13 |             1 | Virtual Server                                                                                                                                                                                   |
+|        50 |          13 |             2 | Virtual Appliances                                                                                                                                                                               |
+|        51 |          13 |             3 | Virtual Machine                                                                                                                                                                                  |
+|        52 |          13 |             4 | Psedudo Server                                                                                                                                                                                   |
+|        53 |          14 |             1 | Quality of Service can not be guaranteed                                                                                                                                                         |
+|        54 |          14 |             2 | Cloud computing applications are not reliable                                                                                                                                                    |
+|        55 |          14 |             3 | Cloud applications suffer from inherent latency                                                                                                                                                  |
+|        56 |          14 |             4 | Utilization is poor                                                                                                                                                                              |
+|        57 |          15 |             1 | Redundant Network Links                                                                                                                                                                          |
+|        58 |          15 |             2 | Redundant of Data                                                                                                                                                                                |
+|        59 |          15 |             3 | All of the above                                                                                                                                                                                 |
+|        60 |          15 |             4 | None of the above                                                                                                                                                                                |
+|        61 |          16 |             1 | Data center                                                                                                                                                                                      |
+|        62 |          16 |             2 | Private cloud                                                                                                                                                                                    |
+|        63 |          16 |             3 | Virtualization                                                                                                                                                                                   |
+|        64 |          16 |             4 | Public cloud                                                                                                                                                                                     |
+|        65 |          17 |             1 | VirtualLogix VLX                                                                                                                                                                                 |
+|        66 |          17 |             2 | VMware ESX                                                                                                                                                                                       |
+|        67 |          17 |             3 | Xen                                                                                                                                                                                              |
+|        68 |          17 |             4 | LynxSecure                                                                                                                                                                                       |
+|        69 |          18 |             1 | VirtualLogix VLX                                                                                                                                                                                 |
+|        70 |          18 |             2 | Microsoft Hyper-V                                                                                                                                                                                |
+|        71 |          18 |             3 | Xen                                                                                                                                                                                              |
+|        72 |          18 |             4 | All of the mentioned                                                                                                                                                                             |
+|        73 |          19 |             1 | Unmanaged storage is reliable                                                                                                                                                                    |
+|        74 |          19 |             2 | Managed storage is relatively cheap to use                                                                                                                                                       |
+|        75 |          19 |             3 | Most of the user-based applications that work with cloud storage are of unmanaged type                                                                                                           |
+|        76 |          19 |             4 | None of the mentioned                                                                                                                                                                            |
+|        77 |          20 |             1 | Dropbox                                                                                                                                                                                          |
+|        78 |          20 |             2 | Skype                                                                                                                                                                                            |
+|        79 |          20 |             3 | Drive                                                                                                                                                                                            |
+|        80 |          20 |             4 | All of the mentioned                                                                                                                                                                             |
+|        81 |          21 |             1 | Focusware                                                                                                                                                                                        |
+|        82 |          21 |             2 | Collaborative                                                                                                                                                                                    |
+|        83 |          21 |             3 | Cooperative                                                                                                                                                                                      |
+|        84 |          21 |             4 | IMPS                                                                                                                                                                                             |
+|        85 |          22 |             1 | Office 365                                                                                                                                                                                       |
+|        86 |          22 |             2 | Citrix GoToMeeting                                                                                                                                                                               |
+|        87 |          22 |             3 | XAMPP                                                                                                                                                                                            |
+|        88 |          22 |             4 | None of the mentioned                                                                                                                                                                            |
+|        89 |          23 |             1 | Personal profile                                                                                                                                                                                 |
+|        90 |          23 |             2 | Friends                                                                                                                                                                                          |
+|        91 |          23 |             3 | Groups                                                                                                                                                                                           |
+|        92 |          23 |             4 | All of the mentioned                                                                                                                                                                             |
+|        93 |          24 |             1 | Infrastructure                                                                                                                                                                                   |
+|        94 |          24 |             2 | Platform                                                                                                                                                                                         |
+|        95 |          24 |             3 | Service                                                                                                                                                                                          |
+|        96 |          24 |             4 | All of the mentioned                                                                                                                                                                             |
+|        97 |          25 |             1 | Access control                                                                                                                                                                                   |
+|        98 |          25 |             2 | Auditing                                                                                                                                                                                         |
+|        99 |          25 |             3 | Authentication                                                                                                                                                                                   |
+|       100 |          25 |             4 | All of the mentioned                                                                                                                                                                             |
+|       101 |          26 |             1 | Amazon Elastic Compute Cloud                                                                                                                                                                     |
+|       102 |          26 |             2 | Amazon Simple Queue Service                                                                                                                                                                      |
+|       103 |          26 |             3 | Amazon Relational Database Service                                                                                                                                                               |
+|       104 |          26 |             4 | Amazon Simple Storage System                                                                                                                                                                     |
+|       105 |          27 |             1 | Map files are files that show how the data is distributed in Hadoop cluster.                                                                                                                     |
+|       106 |          27 |             2 | Map files are stored on the namenode and capture the metadata for all blocks on a particular tack . This how Hadoop is rack aware.                                                               |
+|       107 |          27 |             3 | Map files are sorted sequence files that also have an index. The index allows fase data look up.                                                                                                 |
+|       108 |          27 |             4 | Map files are generated by Map-reduce after reduce step. Tehy show the task distribution during job executio0n.                                                                                  |
+|       109 |          28 |             1 | WSDL                                                                                                                                                                                             |
+|       110 |          28 |             2 | SGML                                                                                                                                                                                             |
+|       111 |          28 |             3 | XML                                                                                                                                                                                              |
+|       112 |          28 |             4 | None of the mentioned                                                                                                                                                                            |
+|       113 |          29 |             1 | Cloud computing makes that long-held drem of utility computing possible                                                                                                                          |
+|       114 |          29 |             2 | The large scale of cloud computing system. was enabled by the popularization of the internet.                                                                                                    |
+|       115 |          29 |             3 | Soft computing represents a real paradigm shift in the way in which systems are deployed                                                                                                         |
+|       116 |          29 |             4 | All of the above                                                                                                                                                                                 |
+|       117 |          30 |             1 | Reduce the capacility by keeping out some nodes                                                                                                                                                  |
+|       118 |          30 |             2 | Reduce the capacity by replacing nodes with less powerful nodes                                                                                                                                  |
+|       119 |          30 |             3 | Increase the capacity by adding more powerful resources                                                                                                                                          |
+|       120 |          30 |             4 | Increase the capacity by adding more number individual nodes                                                                                                                                     |
+|       121 |          31 |             1 | Microsoft Azure AppFabric provides                                                                                                                                                               |
+|       122 |          31 |             2 | Application container                                                                                                                                                                            |
+|       123 |          31 |             3 | Application hosting enviornment                                                                                                                                                                  |
+|       124 |          31 |             4 | Store for database                                                                                                                                                                               |
+|       125 |          32 |             1 | PaaS                                                                                                                                                                                             |
+|       126 |          32 |             2 | IaaS                                                                                                                                                                                             |
+|       127 |          32 |             3 | CaaS                                                                                                                                                                                             |
+|       128 |          32 |             4 | SaaS                                                                                                                                                                                             |
+|       129 |          33 |             1 | Multiple instances of various Google applications are running on different hosts                                                                                                                 |
+|       130 |          33 |             2 | Google uses hardware virtualization                                                                                                                                                              |
+|       131 |          33 |             3 | Google running on different hosts                                                                                                                                                                |
+|       132 |          33 |             4 | All of the mentioned                                                                                                                                                                             |
+|       133 |          34 |             1 | GotoMetting                                                                                                                                                                                      |
+|       134 |          34 |             2 | Zimbra                                                                                                                                                                                           |
+|       135 |          34 |             3 | OneNote                                                                                                                                                                                          |
+|       136 |          34 |             4 | All of the mentioned                                                                                                                                                                             |
+|       137 |          35 |             1 | AWS S3 essentially lets you create your own cloud storage                                                                                                                                        |
+|       138 |          35 |             2 | which are sets of systems that are isolated from one another                                                                                                                                     |
+|       139 |          35 |             3 | Amazon Web Services (AWS) adds redundancy to its IaaS systems by allowing EC2 virtual machine instances                                                                                          |
+|       140 |          35 |             4 | None of the mentioned                                                                                                                                                                            |
+|       141 |          36 |             1 | Amazon Relational Database Service                                                                                                                                                               |
+|       142 |          36 |             2 | Amazon SimpleDB                                                                                                                                                                                  |
+|       143 |          36 |             3 | Amazon Cloudfront                                                                                                                                                                                |
+|       144 |          36 |             4 | Amazon Associates Web Services                                                                                                                                                                   |
+|       145 |          37 |             1 | Amazon Elastic Cloud is a system for creating virtual disks(volume)                                                                                                                              |
+|       146 |          37 |             2 | SimpleDB interoperates with both Amazon EC2 and Amazon S3                                                                                                                                        |
+|       147 |          37 |             3 | EC3 is an Analytics as a Service provider                                                                                                                                                        |
+|       148 |          37 |             4 | None of the mentioned                                                                                                                                                                            |
+|       149 |          38 |             1 | CloudWatch                                                                                                                                                                                       |
+|       150 |          38 |             2 | Amazon SimpleDB                                                                                                                                                                                  |
+|       151 |          38 |             3 | Amazon Cloudfront                                                                                                                                                                                |
+|       152 |          38 |             4 | All of the mentioned                                                                                                                                                                             |
+|       153 |          39 |             1 | load performing                                                                                                                                                                                  |
+|       154 |          39 |             2 | load scheduling                                                                                                                                                                                  |
+|       155 |          39 |             3 | load balancing                                                                                                                                                                                   |
+|       156 |          39 |             4 | All of the mentioned                                                                                                                                                                             |
+|       157 |          40 |             1 | Accounting Management                                                                                                                                                                            |
+|       158 |          40 |             2 | Compliance                                                                                                                                                                                       |
+|       159 |          40 |             3 | Data Privacy                                                                                                                                                                                     |
+|       160 |          40 |             4 | All of the mentioned                                                                                                                                                                             |
+|       161 |          41 |             1 | Vmachines                                                                                                                                                                                        |
+|       162 |          41 |             2 | VirtualBox                                                                                                                                                                                       |
+|       163 |          41 |             3 | ThoughtPolice                                                                                                                                                                                    |
+|       164 |          41 |             4 | None of the mentioned                                                                                                                                                                            |
+|       165 |          42 |             1 | Software as a service (SaaS)                                                                                                                                                                     |
+|       166 |          42 |             2 | Platform as a service (PaaS)                                                                                                                                                                     |
+|       167 |          42 |             3 | Infrastructure as a service (IaaS)                                                                                                                                                               |
+|       168 |          42 |             4 | None of the above                                                                                                                                                                                |
+|       169 |          43 |             1 | A cloud formation that can be seen across the globe                                                                                                                                              |
+|       170 |          43 |             2 | A cloud service that can only be accessed from a publicly shared computerhe internet                                                                                                             |
+|       171 |          43 |             3 | A multi-tenant cloud environment accessed over the internet                                                                                                                                      |
+|       172 |          43 |             4 | A cloud environment owned, operated and controlled by a public company                                                                                                                           |
+|       173 |          44 |             1 | Jenkins                                                                                                                                                                                          |
+|       174 |          44 |             2 | Maven                                                                                                                                                                                            |
+|       175 |          44 |             3 |  Git                                                                                                                                                                                             |
+|       176 |          44 |             4 | Hudson                                                                                                                                                                                           |
+|       177 |          45 |             1 | A blend of public and private cloud services with orchestration between thems hardware                                                                                                           |
+|       178 |          45 |             2 | A blend of private cloud and legacy on-premises hardware                                                                                                                                         |
+|       179 |          45 |             3 | A cloud service deployed across multiple offices or locations                                                                                                                                    |
+|       180 |          45 |             4 | None of the above                                                                                                                                                                                |
+|       181 |          46 |             1 | chunks                                                                                                                                                                                           |
+|       182 |          46 |             2 | instances                                                                                                                                                                                        |
+|       183 |          46 |             3 | messages                                                                                                                                                                                         |
+|       184 |          46 |             4 | None of the mentioned                                                                                                                                                                            |
+|       185 |          47 |             1 | NoSqlDB                                                                                                                                                                                          |
+|       186 |          47 |             2 | SQL Server                                                                                                                                                                                       |
+|       187 |          47 |             3 | Oracle                                                                                                                                                                                           |
+|       188 |          47 |             4 | RDS                                                                                                                                                                                              |
+|       189 |          48 |             1 | AWS                                                                                                                                                                                              |
+|       190 |          48 |             2 | ASQ                                                                                                                                                                                              |
+|       191 |          48 |             3 | Azure                                                                                                                                                                                            |
+|       192 |          48 |             4 | Google App Services                                                                                                                                                                              |
+|       193 |          49 |             1 | Drive                                                                                                                                                                                            |
+|       194 |          49 |             2 | SkyDrive                                                                                                                                                                                         |
+|       195 |          49 |             3 | Dropbox                                                                                                                                                                                          |
+|       196 |          49 |             4 | All of the mentioned                                                                                                                                                                             |
+|       197 |          50 |             1 | Infrastructure As A Service                                                                                                                                                                      |
+|       198 |          50 |             2 | Platform As A Service                                                                                                                                                                            |
+|       199 |          50 |             3 | Software As A Service                                                                                                                                                                            |
+|       200 |          50 |             4 | None of the Above                                                                                                                                                                                |
+|       201 |          51 |             1 | Security                                                                                                                                                                                         |
+|       202 |          51 |             2 | Virtualization                                                                                                                                                                                   |
+|       203 |          51 |             3 | Scalability                                                                                                                                                                                      |
+|       204 |          51 |             4 | Cost-saving                                                                                                                                                                                      |
+|       205 |          52 |             1 | Infrastructure Service                                                                                                                                                                           |
+|       206 |          52 |             2 | Platform Service                                                                                                                                                                                 |
+|       207 |          52 |             3 | Software Service                                                                                                                                                                                 |
+|       208 |          52 |             4 | None of the above                                                                                                                                                                                |
+|       209 |          53 |             1 | Platform,Software,Infrastructure                                                                                                                                                                 |
+|       210 |          53 |             2 | Software,Hardware Infrastructure                                                                                                                                                                 |
+|       211 |          53 |             3 | Platform,Hardware                                                                                                                                                                                |
+|       212 |          53 |             4 | Infrastructure                                                                                                                                                                                   |
+|       213 |          54 |             1 | The Internet                                                                                                                                                                                     |
+|       214 |          54 |             2 | Cumulus Clouds                                                                                                                                                                                   |
+|       215 |          54 |             3 | A Computer                                                                                                                                                                                       |
+|       216 |          54 |             4 | Thin Clients                                                                                                                                                                                     |
+|       217 |          55 |             1 | Windows                                                                                                                                                                                          |
+|       218 |          55 |             2 | Mac OS                                                                                                                                                                                           |
+|       219 |          55 |             3 | Linux                                                                                                                                                                                            |
+|       220 |          55 |             4 | All of the above                                                                                                                                                                                 |
+|       221 |          56 |             1 | Platform as a Service (PaaS)                                                                                                                                                                     |
+|       222 |          56 |             2 | Infrastructure as a Service (IaaS)                                                                                                                                                               |
+|       223 |          56 |             3 | Software as a Service (SaaS)                                                                                                                                                                     |
+|       224 |          56 |             4 | Data as A Service ( DaaS)                                                                                                                                                                        |
+|       225 |          57 |             1 | Too expensive                                                                                                                                                                                    |
+|       226 |          57 |             2 | Security concernt                                                                                                                                                                                |
+|       227 |          57 |             3 | Too many platforms                                                                                                                                                                               |
+|       228 |          57 |             4 | Accessibilty                                                                                                                                                                                     |
+|       229 |          58 |             1 | Subscription based                                                                                                                                                                               |
+|       230 |          58 |             2 | Pay As you Go                                                                                                                                                                                    |
+|       231 |          58 |             3 | Ladder                                                                                                                                                                                           |
+|       232 |          58 |             4 | Perpetual License                                                                                                                                                                                |
+|       233 |          59 |             1 |  Yes, there needs to be cultural shift within the organisation across all stakeholders to ensure a successful adoption of a DevOps approach                                                      |
+|       234 |          59 |             2 | Yes, but the most up to date tools and LEAN processes need to be in place to drive an organisational culture shift                                                                               |
+|       235 |          59 |             3 | No, DevOps is all about the tools                                                                                                                                                                |
+|       236 |          59 |             4 |  No, cultural shift will occur when staff are using the most up to date tools and LEAN processes                                                                                                 |
+|       237 |          60 |             1 | One goal of DevOps is to establish an environment where Change Management does bot control application releases                                                                                  |
+|       238 |          60 |             2 | One goal of DevOps is to establish an environment where releasing more reliable applications faster and more frequently can occur                                                                |
+|       239 |          60 |             3 | One goal of DevOps is to establish an environment where application development perform all operations tasks.                                                                                    |
+|       240 |          60 |             4 | One goal of DevOps is to establish an environment where releasing applications is valued over the quality of the released application                                                            |
+|       241 |          61 |             1 |  Nothing changes as a risk adverse Change Management approach is paramount to IT and business success.                                                                                           |
+|       242 |          61 |             2 | The moment an app change is asked for,the request should go to the Developers to authorise. Once authorised it goes to Operations for implementation.                                            |
+|       243 |          61 |             3 | The moment an app change is asked for,the request should go out to everyone on the team, no matter which IT discipline they work in                                                              |
+|       244 |          61 |             4 | DevOps does not need Change Management                                                                                                                                                           |
+|       245 |          62 |             1 |  Developers taking over all Operations tasks.                                                                                                                                                    |
+|       246 |          62 |             2 | Automating the process of software delivery and infrastructure changes                                                                                                                           |
+|       247 |          62 |             3 | The collaboration and communication of both software developers and other information-technology (IT) professional while automating the process of software delivery and infrastructure changes. |
+|       248 |          62 |             4 | The collaboration and communication of just software developers and operations staff while automating the process software delivery and infrastructure changes.                                  |
+|       249 |          63 |             1 | Use of Agile and other development processes and methodologies                                                                                                                                   |
+|       250 |          63 |             2 | Demand for an increased rate of production releases from application and business unit stakeholders                                                                                              |
+|       251 |          63 |             3 | Wide availability of virtualised and cloud infrastructure from internal and external providers                                                                                                   |
+|       252 |          63 |             4 | Increased usage of data centre automation and configuration management tools                                                                                                                     |
+|       253 |          64 |             1 | Clock rate                                                                                                                                                                                       |
+|       254 |          64 |             2 | Instruction set                                                                                                                                                                                  |
+|       255 |          64 |             3 | Exeuction time                                                                                                                                                                                   |
+|       256 |          64 |             4 | Delay Time                                                                                                                                                                                       |
+|       257 |          65 |             1 | UNIX Service                                                                                                                                                                                     |
+|       258 |          65 |             2 | Kernel Service                                                                                                                                                                                   |
+|       259 |          65 |             3 | Windows Vista Service                                                                                                                                                                            |
+|       260 |          65 |             4 | Microsoft Windows Service                                                                                                                                                                        |
+|       261 |          66 |             1 | Phases                                                                                                                                                                                           |
+|       262 |          66 |             2 | Procedures                                                                                                                                                                                       |
+|       263 |          66 |             3 | Multiple Threads                                                                                                                                                                                 |
+|       264 |          66 |             4 | Steps                                                                                                                                                                                            |
+|       265 |          67 |             1 | Multiple processor                                                                                                                                                                               |
+|       266 |          67 |             2 | Single processor                                                                                                                                                                                 |
+|       267 |          67 |             3 | Corei5                                                                                                                                                                                           |
+|       268 |          67 |             4 | Corei5                                                                                                                                                                                           |
+|       269 |          68 |             1 | Scalability                                                                                                                                                                                      |
+|       270 |          68 |             2 | Parallelism                                                                                                                                                                                      |
+|       271 |          68 |             3 | Supervision                                                                                                                                                                                      |
+|       272 |          68 |             4 | Compatibility                                                                                                                                                                                    |
+|       273 |          69 |             1 | Execution                                                                                                                                                                                        |
+|       274 |          69 |             2 | Wait                                                                                                                                                                                             |
+|       275 |          69 |             3 | Stall                                                                                                                                                                                            |
+|       276 |          69 |             4 | Branching                                                                                                                                                                                        |
+|       277 |          70 |             1 | Single instruction stream - single data stream (SISD)                                                                                                                                            |
+|       278 |          70 |             2 | Single instruction stream - multiple data steam (SIMD)                                                                                                                                           |
+|       279 |          70 |             3 | Multiple instruction stream - single data steam (MISD)                                                                                                                                           |
+|       280 |          70 |             4 | Multiple instruction stream - multiple data steam (MIMD).                                                                                                                                        |
+|       281 |          71 |             1 |  Single instruction stream - single data stream (SISD)                                                                                                                                           |
+|       282 |          71 |             2 | Single instruction stream - multiple data steam                                                                                                                                                  |
+|       283 |          71 |             3 | Multiple instruction stream - single data steam (MISD)                                                                                                                                           |
+|       284 |          71 |             4 | Multiple instruction stream - multiple data steam (MIMD)                                                                                                                                         |
+|       285 |          72 |             1 | The typical license is subscription-based or usage-based and is billed on a recurring basis                                                                                                      |
+|       287 |          72 |             3 |  The software and the service are monitored and maintained by the vendor                                                                                                                         |
+|       288 |          72 |             4 | All of the mentioned                                                                                                                                                                             |
+|       289 |          73 |             1 | Java (software platform)                                                                                                                                                                         |
+|       290 |          73 |             2 | Perl                                                                                                                                                                                             |
+|       291 |          73 |             3 | Java (programming language)                                                                                                                                                                      |
+|       292 |          73 |             4 | Lua (programming language)                                                                                                                                                                       |
+|       293 |          74 |             1 | Bare metal                                                                                                                                                                                       |
+|       294 |          74 |             2 | Debian                                                                                                                                                                                           |
+|       295 |          74 |             3 | Cross-platform                                                                                                                                                                                   |
+|       296 |          74 |             4 | Unix-like                                                                                                                                                                                        |
+|       297 |          75 |             1 | Single instruction stream - single data stream (SISD)                                                                                                                                            |
+|       298 |          75 |             2 | Single instruction stream - multiple data steam (SIMD)                                                                                                                                           |
+|       299 |          75 |             3 | Multiple instruction stream - single data steam (MISD)                                                                                                                                           |
+|       300 |          75 |             4 | Multiple instruction stream - multiple data steam (MIMD)                                                                                                                                         |
+|       301 |          76 |             1 | SQL BI                                                                                                                                                                                           |
+|       302 |          76 |             2 | Galcier                                                                                                                                                                                          |
+|       303 |          76 |             3 | Tabelue                                                                                                                                                                                          |
+|       304 |          76 |             4 | Hadoop                                                                                                                                                                                           |
+|       305 |          77 |             1 | Velocity                                                                                                                                                                                         |
+|       306 |          77 |             2 | Veracity                                                                                                                                                                                         |
+|       307 |          77 |             3 | Volume                                                                                                                                                                                           |
+|       308 |          77 |             4 | Variety                                                                                                                                                                                          |
+|       309 |          78 |             1 | Inexperience collecting data from non traditional sources                                                                                                                                        |
+|       310 |          78 |             2 | Not accustomed to dealing with such large quantities of data                                                                                                                                     |
+|       311 |          78 |             3 | Overly complex with relatively slow systems                                                                                                                                                      |
+|       312 |          78 |             4 | All of the above                                                                                                                                                                                 |
+|       313 |          79 |             1 | Cloud services always use High-end hardwares for its data processing                                                                                                                             |
+|       314 |          79 |             2 | Cloud services alway,Artificial Intelligence is the science and engineering of making intelligent machines                                                                                       |
+|       315 |          79 |             3 | By year 2020, unstructured data will complement structured data                                                                                                                                  |
+|       316 |          79 |             4 | Utility cloud computing services offer virtual storage and server options, where the companies can access it on demand                                                                           |
+|       317 |          80 |             1 | Object                                                                                                                                                                                           |
+|       318 |          80 |             2 | Block                                                                                                                                                                                            |
+|       319 |          80 |             3 | Simple                                                                                                                                                                                           |
+|       320 |          80 |             4 | Secure                                                                                                                                                                                           |
+|       321 |          81 |             1 | CloudFront                                                                                                                                                                                       |
+|       322 |          81 |             2 | AWS Import/Export                                                                                                                                                                                |
+|       323 |          81 |             3 | DynamoDB                                                                                                                                                                                         |
+|       324 |          81 |             4 | ElastiCache                                                                                                                                                                                      |
+|       325 |          82 |             1 | Baskets                                                                                                                                                                                          |
+|       326 |          82 |             2 | Brackets                                                                                                                                                                                         |
+|       327 |          82 |             3 | Clusters                                                                                                                                                                                         |
+|       328 |          82 |             4 | Buckets                                                                                                                                                                                          |
+|       329 |          83 |             1 | Big data                                                                                                                                                                                         |
+|       330 |          83 |             2 | Metadata                                                                                                                                                                                         |
+|       331 |          83 |             3 | Master data                                                                                                                                                                                      |
+|       332 |          83 |             4 | Exif data                                                                                                                                                                                        |
+|       333 |          84 |             1 | Low scalability and high latency data storage infrastructure at high costs.                                                                                                                      |
+|       334 |          84 |             2 | High scalability and low latency data storage infrastructure at high costs.                                                                                                                      |
+|       335 |          84 |             3 | High scalability and low latency data storage infrastructure at high costs.                                                                                                                      |
+|       336 |          84 |             4 | Low scalability and high latency data storage infrastructure at low costs.                                                                                                                       |
+|       337 |          85 |             1 | To allow bucket access to multiple users.                                                                                                                                                        |
+|       338 |          85 |             2 | To grant or deny accounts to read and upload files in your bucket.                                                                                                                               |
+|       340 |          85 |             4 | All of the above                                                                                                                                                                                 |
+|       341 |          86 |             1 | Virtual Private Network                                                                                                                                                                          |
+|       342 |          86 |             2 | Private Cloud                                                                                                                                                                                    |
+|       343 |          86 |             3 | Virtual Private Cloud                                                                                                                                                                            |
+|       344 |          86 |             4 | Hybrid Cloud                                                                                                                                                                                     |
+|       345 |          87 |             1 | Spot Instances                                                                                                                                                                                   |
+|       346 |          87 |             2 | Reserved instances                                                                                                                                                                               |
+|       347 |          87 |             3 | Dedicated instances                                                                                                                                                                              |
+|       348 |          87 |             4 | On-Demand instances                                                                                                                                                                              |
+|       349 |          88 |             1 | Amazon DynamoDB                                                                                                                                                                                  |
+|       350 |          88 |             2 | Amazon Redshift                                                                                                                                                                                  |
+|       351 |          88 |             3 | Amazon Elastic                                                                                                                                                                                   |
+|       352 |          88 |             4 | Amazon Elastic                                                                                                                                                                                   |
+|       353 |          89 |             1 | Amazon RDS                                                                                                                                                                                       |
+|       354 |          89 |             2 | Multi-AZ                                                                                                                                                                                         |
+|       355 |          89 |             3 | Amazon ElastiCache                                                                                                                                                                               |
+|       356 |          89 |             4 | Amazon DynamoDB                                                                                                                                                                                  |
+|       357 |          90 |             1 | Managing web sessions                                                                                                                                                                            |
+|       358 |          90 |             2 | Storing JSON documents                                                                                                                                                                           |
+|       359 |          90 |             3 | Storing metadata for Amazon S3 objects                                                                                                                                                           |
+|       360 |          90 |             4 | Running relational joins and complex updates                                                                                                                                                     |
+|       361 |          91 |             1 | Amazon Simple Email Service                                                                                                                                                                      |
+|       362 |          91 |             2 | Amazon CloudWatch                                                                                                                                                                                |
+|       363 |          91 |             3 | Amazon Simple Queue Service                                                                                                                                                                      |
+|       364 |          91 |             4 | Amazon Route 53                                                                                                                                                                                  |
+|       365 |          92 |             1 | Use the Computer Management utility to enable the Hyper-V server role                                                                                                                            |
+|       366 |          92 |             2 | Use the Hyper-V Admin Console to enable the Hyper-V server role                                                                                                                                  |
+|       367 |          92 |             3 | Use the Add Roles Wizard in the Server Manager console to add the Hyper-V server role                                                                                                            |
+|       368 |          92 |             4 | None of the above - Hyper-V is installed and enabled by default in Windows Server 2008                                                                                                           |
+|       369 |          93 |             1 | Docker Swarn                                                                                                                                                                                     |
+|       370 |          93 |             2 | Docker Hub                                                                                                                                                                                       |
+|       371 |          93 |             3 | Docker Cloud                                                                                                                                                                                     |
+|       372 |          93 |             4 | Docker Compose                                                                                                                                                                                   |
+|       373 |          94 |             1 | Docker Swarn                                                                                                                                                                                     |
+|       374 |          94 |             2 | Docker Hub                                                                                                                                                                                       |
+|       375 |          94 |             3 | Docker Cloud                                                                                                                                                                                     |
+|       376 |          94 |             4 | Docker Compose                                                                                                                                                                                   |
+|       377 |          95 |             1 | MapReduce, Hive and HBase                                                                                                                                                                        |
+|       378 |          95 |             2 | MapReduce, MySQL and Google Apps                                                                                                                                                                 |
+|       379 |          95 |             3 | MapReduce, Hummer and Iguana                                                                                                                                                                     |
+|       380 |          95 |             4 | MapReduce, Heron and Trumpe                                                                                                                                                                      |
+|       381 |          96 |             1 | Hadoop is an ideal environment for extracting and transforming small volumes of data                                                                                                             |
+|       382 |          96 |             2 | Hadoop stores data in HDFS and supports data compression/decompression                                                                                                                           |
+|       383 |          96 |             3 | The Giraph framework is less useful than a MapReduce job to solve graph and machine learning                                                                                                     |
+|       384 |          96 |             4 | None of the mentioned                                                                                                                                                                            |
+|       385 |          97 |             1 | Lean Manufacturing                                                                                                                                                                               |
+|       386 |          97 |             2 | Agile Software Delivery                                                                                                                                                                          |
+|       387 |          97 |             3 | Waterfall Software Delivery                                                                                                                                                                      |
+|       388 |          97 |             4 | Continuous Software Delivery                                                                                                                                                                     |
+|       389 |          98 |             1 | Because they come from different backgrounds                                                                                                                                                     |
+|       390 |          98 |             2 | Because development team knows more about software products and services                                                                                                                         |
+|       391 |          98 |             3 | Because operations team knows more about test and production environments                                                                                                                        |
+|       392 |          98 |             4 | Because they have conflicting business goals and priorities                                                                                                                                      |
+|       393 |          99 |             1 | DevOps enables you to organize your teams around your organizational mission                                                                                                                     |
+|       394 |          99 |             2 | DevOps enables you to create your software with built-in quality and monitoring                                                                                                                  |
+|       395 |          99 |             3 | DevOps enables you to quickly identify, fix and learn from errors                                                                                                                                |
+|       396 |          99 |             4 | All above choices                                                                                                                                                                                |
+|       397 |         100 |             1 | It finances special projects to serve its clients                                                                                                                                                |
+|       398 |         100 |             2 | It finances products and services to serve its clients                                                                                                                                           |
+|       399 |         100 |             3 | It finances teams in matrix organizations and these teams are responsible for handling their own budgets                                                                                         |
+|       400 |         100 |             4 | It finances development and operations teams separately, so they take care of their own business                                                                                                 |
+|       401 |         101 |             1 | Test Automation should give quick and early feedback about your quality of wor                                                                                                                   |
+|       402 |         101 |             2 | Never mix test driven development (TDD) together with your test automation approach                                                                                                              |
+|       403 |         101 |             3 | Tests should generate consistent,deterministic and repeatable results provided same conditions for different test runs                                                                           |
+|       404 |         101 |             4 | With your test automation, avoid slow and periodic feedback.What you need is fast feedback whenever you or your developer attempts to check-in code to your trunk                                |
+|       405 |         102 |             1 | You will be quicker to identify root causes of issues and resolve them.                                                                                                                          |
+|       406 |         102 |             2 | By continuously delivering in production, your team will have the constant pride of contributing your organizational mission.                                                                    |
+|       407 |         102 |             3 | Potentially required rollbacks from your production systems will be less cumbersome.                                                                                                             |
+|       408 |         102 |             4 | All above choices.                                                                                                                                                                               |
+|       409 |         103 |             1 | Data storage systems.                                                                                                                                                                            |
+|       410 |         103 |             2 | Handling the logging of sensitive client information                                                                                                                                             |
+|       411 |         103 |             3 | Data transfer between clients and software.                                                                                                                                                      |
+|       412 |         103 |             4 | All above choices                                                                                                                                                                                |
+|       413 |         104 |             1 |  Git                                                                                                                                                                                             |
+|       414 |         104 |             2 | Jenkins                                                                                                                                                                                          |
+|       415 |         104 |             3 | Docker                                                                                                                                                                                           |
+|       416 |         104 |             4 | Fiddler                                                                                                                                                                                          |
+|       417 |         105 |             1 | DevOps tea                                                                                                                                                                                       |
+|       418 |         105 |             2 | Stakeholders of downstream work centers.                                                                                                                                                         |
+|       419 |         105 |             3 | Errors, incidents and fixes.                                                                                                                                                                     |
+|       420 |         105 |             4 | Clients.                                                                                                                                                                                         |
+|       421 |         106 |             1 | Trunk is a special private branch in a developer workstation.                                                                                                                                    |
+|       422 |         106 |             2 | Trunk is the process of merging code in DevOps deliveries.                                                                                                                                       |
+|       423 |         106 |             3 |  Trunk is a special source code version controlling system which stores mission critical special projects of your DevOps organization.                                                           |
+|       424 |         106 |             4 | Trunk is a special source code version controlling system which stores mission critical special projects of your DevOps organization.                                                            |
+|       425 |         107 |             1 | Canary Deployment Pattern (The Dark Launch).                                                                                                                                                     |
+|       426 |         107 |             2 | Blue-Green Deployment Pattern.                                                                                                                                                                   |
+|       427 |         107 |             3 | Cluster Immune System Release Pattern.                                                                                                                                                           |
+|       428 |         107 |             4 | Big bang code deployments of fully tested and validated releases.                                                                                                                                |
+|       429 |         108 |             1 | Use your track record of successful automated deployments with standard changes.                                                                                                                 |
+|       430 |         108 |             2 | Negotiate with release managers.                                                                                                                                                                 |
+|       431 |         108 |             3 | Publicly complain about bureaucracy and make everyone be aware of it.                                                                                                                            |
+|       432 |         108 |             4 | Make sure normal changes are very carefully deployed to your production systems.                                                                                                                 |
+|       433 |         109 |             1 | Complexity of your systems will be managed, so problems in designs and operations will be quickly detected.                                                                                      |
+|       434 |         109 |             2 | DevOps team does no longer need to be careful and mindful to ensure quality.                                                                                                                     |
+|       435 |         109 |             3 | Problems are quickly resolved while they are small. Resolving problems will result in spontaneous construction of new organizational knowledge and experience.                                   |
+|       436 |         109 |             4 | Leaders in your DevOps organization develop other leaders who create and continuously improve safe systems of work.                                                                              |
+|       437 |         110 |             1 | Telemetry is a widely known SaaS tool to plan and execute DevOps projects.                                                                                                                       |
+|       438 |         110 |             2 | Telemetry is a communication tool used by DevOps teams at geographically distributed locations.                                                                                                  |
+|       439 |         110 |             3 | Telemetry is a tool to design, code and execute automated unit tests.                                                                                                                            |
+|       440 |         110 |             4 | Telemetry is a tool to design, code and execute automated unit tests.                                                                                                                            |
+|       441 |         111 |             1 | This is easiest way to fix a problem. It doesn’t require an urgent code deployment                                                                                                               |
+|       442 |         111 |             2 | You don’t have to very urgently correct erroneous pieces in your deployment.                                                                                                                     |
+|       443 |         111 |             3 | Your DevOps team can take time to properly identify root cause of an issue and improve their techniques to ensure such a problem will not likely happen again in the future.                     |
+|       444 |         111 |             4 | All above choices.                                                                                                                                                                               |
+|       445 |         112 |             1 | DevOps is only suitable for start-up companies.                                                                                                                                                  |
+|       446 |         112 |             2 | DevOps is suitable for brownfield software products and services.                                                                                                                                |
+|       447 |         112 |             3 | DevOps is suitable for greenfield software products and services.                                                                                                                                |
+|       448 |         112 |             4 | Some of the most exemplary DevOps initiatives started in companies with giant and mature IT organizations.                                                                                       |
+|       449 |         113 |             1 | Establish an environment where change management does not control application releases                                                                                                           |
+|       450 |         113 |             2 | Establish an environment to release more reliable applications faster                                                                                                                            |
+|       451 |         113 |             3 | Establish an environment where application development performs all the operation tasks                                                                                                          |
+|       452 |         113 |             4 | Estalish an environment where the release of applications is valued more than its quality                                                                                                        |
+|       453 |         114 |             1 | Extend the sprint to four weeks to give the team more time                                                                                                                                       |
+|       454 |         114 |             2 | Expect that the team will learn from the mistakes and fix the problem in the next cycle                                                                                                          |
+|       455 |         114 |             3 | Shorten the sprint to achieve smaller targets and find the problem quickly                                                                                                                       |
+|       456 |         114 |             4 | Focus only on few limited changes that are viable to be delivered in two weeks                                                                                                                   |
+|       457 |         115 |             1 | From the initiation stage of the software development                                                                                                                                            |
+|       458 |         115 |             2 | After the functional acceptance test by the customer representatives                                                                                                                             |
+|       459 |         115 |             3 | Along with the implementation of continuous delivery                                                                                                                                             |
+|       460 |         115 |             4 | The non-functional requirements are of no concern to the customers                                                                                                                               |
+|       461 |         116 |             1 | checkout                                                                                                                                                                                         |
+|       462 |         116 |             2 | commit                                                                                                                                                                                           |
+|       463 |         116 |             3 | expor                                                                                                                                                                                            |
+|       464 |         116 |             4 | pull                                                                                                                                                                                             |
+|       465 |         117 |             1 | Body element                                                                                                                                                                                     |
+|       466 |         117 |             2 | Branch pointer                                                                                                                                                                                   |
+|       467 |         117 |             3 | Commit object                                                                                                                                                                                    |
+|       468 |         117 |             4 | Head pointer                                                                                                                                                                                     |
+|       469 |         118 |             1 | ignore.git                                                                                                                                                                                       |
+|       470 |         118 |             2 | ignore.git                                                                                                                                                                                       |
+|       471 |         118 |             3 | gitignore.txt                                                                                                                                                                                    |
+|       472 |         118 |             4 | git.ignore                                                                                                                                                                                       |
+|       473 |         119 |             1 | When using a single-character option                                                                                                                                                             |
+|       474 |         119 |             2 | When using a multi-character option                                                                                                                                                              |
+|       475 |         119 |             3 | When issuing Git commands with multiple options                                                                                                                                                  |
+|       476 |         119 |             4 | When referencing a Git alias                                                                                                                                                                     |
+|       477 |         120 |             1 | Git                                                                                                                                                                                              |
+|       478 |         120 |             2 | Subversion                                                                                                                                                                                       |
+|       479 |         120 |             3 | Concurrent versions system                                                                                                                                                                       |
+|       480 |         120 |             4 | none of this                                                                                                                                                                                     |
+|       481 |         121 |             1 | Jenkins                                                                                                                                                                                          |
+|       482 |         121 |             2 | Maven                                                                                                                                                                                            |
+|       483 |         121 |             3 | Git                                                                                                                                                                                              |
+|       484 |         121 |             4 | Hudson                                                                                                                                                                                           |
+|       485 |         122 |             1 | 4JENKINS_ROOT                                                                                                                                                                                    |
+|       486 |         122 |             2 | M2_HOME                                                                                                                                                                                          |
+|       487 |         122 |             3 | JENKINS_HOME                                                                                                                                                                                     |
+|       488 |         122 |             4 | JAVA_HOME                                                                                                                                                                                        |
+|       489 |         123 |             1 | Continuous delivery is a manual task                                                                                                                                                             |
+|       490 |         123 |             2 | Continuous delivery has manual releases to production decisions, while continuous deployment has releases automatically pushed to production                                                     |
+|       491 |         123 |             3 |  Continuous delivery includes all steps of software development life cycle, while continuous deployment may skip few steps such as validation and testing                                        |
+|       492 |         123 |             4 | Continuous delivery means complete delivery of the application to customer, while continuous deployment includes only deployment of the application in customer environment.                     |
+|       493 |         124 |             1 | Complex, but less number of releases                                                                                                                                                             |
+|       494 |         124 |             2 | A focus on cycle time reduction                                                                                                                                                                  |
+|       495 |         124 |             3 | Resource-based management of the procesS                                                                                                                                                         |
+|       496 |         124 |             4 | Self-managed and responsive teams                                                                                                                                                                |
+|       497 |         125 |             1 | ansible- m setup hostname                                                                                                                                                                        |
+|       498 |         125 |             2 | ansible pull                                                                                                                                                                                     |
+|       499 |         125 |             3 | ansible-playbook playbook.yml --list-hosts                                                                                                                                                       |
+|       500 |         125 |             4 | ansible-playbook                                                                                                                                                                                 |
+|       501 |         126 |             1 | Virtual machine                                                                                                                                                                                  |
+|       502 |         126 |             2 | Container instance                                                                                                                                                                               |
+|       503 |         126 |             3 | physical server                                                                                                                                                                                  |
+|       504 |         126 |             4 | All the above options                                                                                                                                                                            |
+|       505 |         127 |             1 | Unit testing                                                                                                                                                                                     |
+|       506 |         127 |             2 | Integration testing                                                                                                                                                                              |
+|       507 |         127 |             3 | functional testing                                                                                                                                                                               |
+|       508 |         127 |             4 | System testing                                                                                                                                                                                   |
+|       509 |         128 |             1 | String                                                                                                                                                                                           |
+|       510 |         128 |             2 | Int                                                                                                                                                                                              |
+|       511 |         128 |             3 | Object                                                                                                                                                                                           |
+|       512 |         128 |             4 | Void                                                                                                                                                                                             |
+|       513 |         129 |             1 | String                                                                                                                                                                                           |
+|       514 |         129 |             2 | Int                                                                                                                                                                                              |
+|       515 |         129 |             3 | Object                                                                                                                                                                                           |
+|       516 |         129 |             4 | Void                                                                                                                                                                                             |
+|       517 |         130 |             1 | Public Methods                                                                                                                                                                                   |
+|       518 |         130 |             2 | Private Methods                                                                                                                                                                                  |
+|       519 |         130 |             3 | Protected Methods                                                                                                                                                                                |
+|       520 |         130 |             4 | Methods with void return type                                                                                                                                                                    |
+|       521 |         131 |             1 | void assert(boolean condition)                                                                                                                                                                   |
+|       522 |         131 |             2 | void assertTrue(boolean condition)                                                                                                                                                               |
+|       523 |         131 |             3 | void assertCheck(boolean condition)                                                                                                                                                              |
+|       524 |         131 |             4 | void assertChecks(boolean condition)                                                                                                                                                             |
+|       525 |         132 |             1 |  Automated scheduling                                                                                                                                                                            |
+|       526 |         132 |             2 | Self-healing capabilities                                                                                                                                                                        |
+|       527 |         132 |             3 |  Automated rollouts and rollbacks                                                                                                                                                                |
+|       528 |         132 |             4 |  All of the above options                                                                                                                                                                        |
+|       529 |         133 |             1 | That stability is prioritised over creativity                                                                                                                                                    |
+|       530 |         133 |             2 |  Operational considerations are prioritised over stability                                                                                                                                       |
+|       531 |         133 |             3 |  Operational considerations are taken into account                                                                                                                                               |
+|       532 |         133 |             4 |  The resultant designs of the systems will fit nicely into the business as usual environment                                                                                                     |
+|       533 |         134 |             1 |  Docker Swarm                                                                                                                                                                                    |
+|       534 |         134 |             2 |  Docker Hub                                                                                                                                                                                      |
+|       535 |         134 |             3 |  Docker Cloud                                                                                                                                                                                    |
+|       536 |         134 |             4 |  Docker Compose                                                                                                                                                                                  |
+|       537 |         135 |             1 |  rdir                                                                                                                                                                                            |
+|       538 |         135 |             2 |  remove                                                                                                                                                                                          |
+|       539 |         135 |             3 |  rm                                                                                                                                                                                              |
+|       540 |         135 |             4 | rmdir                                                                                                                                                                                            |
+|       541 |         136 |             1 |  Nagios will execute a plugin whenever there is a need to check the status of a host or service                                                                                                  |
+|       542 |         136 |             2 |  Plugins are useful for monitoring services that are asynchronous in nature                                                                                                                      |
+|       543 |         136 |             3 |  Both a and b                                                                                                                                                                                    |
+|       544 |         136 |             4 |  None of the above options                                                                                                                                                                       |
+|       545 |         137 |             1 |  Grafana                                                                                                                                                                                         |
+|       546 |         137 |             2 | Kibana                                                                                                                                                                                           |
+|       547 |         137 |             3 |  Nagios                                                                                                                                                                                          |
+|       548 |         137 |             4 |  None of the above options                                                                                                                                                                       |
+|       549 |         138 |             1 |  Grafana                                                                                                                                                                                         |
+|       550 |         138 |             2 |  Nagios                                                                                                                                                                                          |
+|       551 |         138 |             3 |  Kubernetes                                                                                                                                                                                      |
+|       552 |         138 |             4 |  Docker                                                                                                                                                                                          |
+|       553 |         139 |             1 |  DevOps and ITIL® don’t mix                                                                                                                                                                      |
+|       554 |         139 |             2 |  DevOps won’t work in regulated industries                                                                                                                                                       |
+|       555 |         139 |             3 | DevOps won’t work with Outsourced Development                                                                                                                                                    |
+|       556 |         139 |             4 | You must use cloud technologies                                                                                                                                                                  |
+|       557 |         140 |             1 | DevOps and Continuous Delivery are the same thing.                                                                                                                                               |
+|       558 |         140 |             2 | DevOps and Continuous Delivery are not related and are mutually exclusive.                                                                                                                       |
+|       559 |         140 |             3 | DevOps and Continuous Delivery share a background in Agile methods and LEAN thinking.                                                                                                            |
+|       560 |         140 |             4 | DevOps and Continuous Delivery share common processes                                                                                                                                            |
+|       561 |         141 |             1 | Improved deployment frequency, which can lead to faster time to market                                                                                                                           |
+|       562 |         141 |             2 | Lower failure rate of new releases                                                                                                                                                               |
+|       563 |         141 |             3 | Shortened lead time between fixes                                                                                                                                                                |
+|       564 |         141 |             4 | Faster mean time to recovery in the event of a new release crashing or otherwise disabling the current system                                                                                    |
+|       565 |         142 |             1 | Use of Agile and other development processes and methodologies                                                                                                                                   |
+|       566 |         142 |             2 | Demand for an increased rate of production releases from application and business unit stakeholders                                                                                              |
+|       567 |         142 |             3 | Wide availability of virtualised and cloud infrastructure from internal and external providers                                                                                                   |
+|       568 |         142 |             4 | Increased usage of data centre automation and configuration management tools                                                                                                                     |
+|       569 |         143 |             1 | Improved deployment frequency,which can lead to faster time to market                                                                                                                            |
+|       570 |         143 |             2 | Lower failure rate of new releases                                                                                                                                                               |
+|       571 |         143 |             3 | Shortened lead time between fixes                                                                                                                                                                |
+|       572 |         143 |             4 | Faster mean time to recovery in the event of a new release crashing or otherwise disabling the current system                                                                                    |
+|       573 |         144 |             1 | Developers taking over all Operation tasks                                                                                                                                                       |
+|       574 |         144 |             2 | Automating the process of software delivery and infrastructure changes                                                                                                                           |
+|       575 |         144 |             3 | The collaboration and communication of both software developers and other information-technology (IT) professional while automating the process of software delivery and infrastructure changes. |
+|       576 |         144 |             4 | The collaboration and communication of just software developers and operations staff while automating the process software delivery and infrastructure changes                                   |
+|       577 |         145 |             1 | Developers taking over all Operations tasks                                                                                                                                                      |
+|       578 |         145 |             2 | Automating the process of software delivery and infrastructure changes                                                                                                                           |
+|       579 |         145 |             3 | The collaboration and communication of both software developers and other information-technology (IT) professional while automating the process of software delivery and infrastructure changes  |
+|       580 |         145 |             4 | The collaboration and communication of just software developers and operations staff while automating the process software delivery and infrastructure changes                                   |
+|       581 |         146 |             1 | Nothing changes as a risk adverse Change Management approach is paramount to IT and business success                                                                                             |
+|       582 |         146 |             2 | The moment an app change is asked for,the request should go to the Developers to authorise.Once authorised it goes to Operations for implementation                                              |
+|       583 |         146 |             3 | The moment an app change is asked for, the request should go out to everyone on the team,no matter which IT discipline they work in.                                                             |
+|       584 |         146 |             4 | DevOps does not need Change Management?                                                                                                                                                          |
+|       585 |         147 |             1 | "DevOps is more than just a tool or a process change, it inherently requires an organisational culture shift"                                                                                    |
+|       586 |         147 |             2 | Yes, there needs to be cultural shift within the organisation across all stakeholders to ensure a successful adoption of a DevOps approach                                                       |
+|       587 |         147 |             3 | Yes, but the most up to date tools and LEAN processes need to be in place to drive an organisational culture shift                                                                               |
+|       588 |         147 |             4 | No, cultural shift will occur when staff are using the most up to date tools and LEAN processes                                                                                                  |
+|       589 |         148 |             1 | One goal of DevOps is to establish an environment where Change Management does bot control application releases                                                                                  |
+|       590 |         148 |             2 | One goal of DevOps is to establish an environment where releasing more reliable applications faster and more frequently can occur                                                                |
+|       591 |         148 |             3 | One goal of DevOps is to establish an environment where application development perform all operations tasks                                                                                     |
+|       592 |         148 |             4 | One goal of DevOps is to establish an environment where releasing applications is valued over the quality of the released application                                                            |
+|       593 |         149 |             1 | Use of Agile and other development processes and methodologies                                                                                                                                   |
+|       594 |         149 |             2 | Demand for an increased rate of production releases from application and business unit stakeholders                                                                                              |
+|       595 |         149 |             3 | Wide availability of virtualised and cloud infrastructure from internal and external providers                                                                                                   |
+|       596 |         149 |             4 | Increased usage of data centre automation and configuration management tools                                                                                                                     |
+|       597 |         150 |             4 | That stability is prioritised over creativity                                                                                                                                                    |
+|       598 |         150 |             4 | Operational considerations are prioritised over stability                                                                                                                                        |
+|       599 |         150 |             4 | Operational considerations are taken into account                                                                                                                                                |
+|       600 |         150 |             4 | The resultant designs of the systems will fit nicely into the business as usual environment                                                                                                      |
++-----------+-------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
