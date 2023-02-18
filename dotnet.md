@@ -88,7 +88,11 @@
     12. Membership and Roles  Management
     13. Javascript Web Token (JWT)
     14. Introduction to asp.net core Web API
-    15. Building REST ful Web services using Web API
+    15. Handling HTTP Requests (CRUD) using Web API
+    16. async , await, Task Parallel Library 
+    17. Invoking Web API cors, HTTPClient
+    18. Secure REST API
+    
 
 11.	Node JS
 12.	Express JS
