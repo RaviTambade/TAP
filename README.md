@@ -84,8 +84,10 @@ TAP your potential.
 
 #### Case study Driven Training Approach (Project Based Learning)
 
-Participants would learn basics of Web Technologies. They would apply Web Technology concepts for building Client-Side Web User Interface for ECommerce Web Application. They would understand the role of each Full Stack Development (Front End, Web API,Web Server, Micro Serrives, Business Logic, Back End, Cloud Infrastructure, Testing Enviornment, Prouduction Enviornment, DevOps, etc.) for Online Shopping Application. They could differentiate  effective way of building Online Apps using Rich Front End  with the help of JavaScript UI Frameworks such as Angular, react.Learn by Doing approach would gradually increase self confidence of participant to get ready for applying concepts in project using Project based study approach.
+1. Project-based learning (PBL) involves participants designing, developing, and constructing hands-on solutions to a problem.
+2. Project-based learning is a student-centered pedagogy that involves a dynamic classroom approach in which it is believed that students acquire a deeper knowledge through active exploration of real-world challenges and problems.
 
+3. Project-based learning (PBL) is another collaborative, learner-centered instructional approach where students work in groups to construct their knowledge and gain mastery of the course content.
 
 
 
