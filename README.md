@@ -48,7 +48,7 @@ TAP your potential.
 
 #### Delivery Mode: 
     30%- 70% (Theory—Hands-on) Project Based Learning. Learn by Doing. 
-	BootCamp would follow incremental and iterative learning process according to project-based learning methodology.
+	BootCamp would follow agile Continous Learning for CI/CD culture adopted by industries.
 
 #### Prerequisite: 
     1. Having Bachelors in Engineering (BE) Computer, Information Technology, Electronics, Electronics & Telecommunications, Electrical & Mechanical, or Masters in Computer Application(MCA) . 
