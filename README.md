@@ -36,60 +36,6 @@ Feeling blessed.
 TAP your potential.
 
 
-#### Training: Full Stack Dot Net Developer TAP
-#### Mentor: Ravi Tambade & Transflower Team
-#### Duration: 15 Weeks 
-    Days : 75
-    Hours: 450
-    150 hours Mentor Delivery  (Lecture, Demonstration)
-    300 hours Hand-on along with Mentor 
-    ( Problem Solving, Coding, Building, Testing, Deployment, DevOps, .etc)
-    (6 hours per day) Program (Monday to Friday 9:30 am to 4:30 pm)
-
-#### Delivery Mode: 
-    30%- 70% (Theory—Hands-on) Project Based Learning. Learn by Doing. 
-	BootCamp would follow agile Continous Learning for CI/CD culture adopted by industries.
-    Continous Integration/ Continous Delivery ( CI/CD) pipline
-
-#### Prerequisite: 
-    1. Having Bachelors in Engineering (BE, BTech) 
-       1. Computer
-       2. Information Technology 
-       3. Electronics
-       4. Electronics & Telecommunications
-       5. Electrical 
-       6. Mechanical
-       7. Masters in Computer Application(MCA) . 
-    2. Basic Programming skill
-    3. Tryout mindset and eager to learn
-    
-#### Deliverables: 
-     1. Access to recorded sessions
-     2. Mentor prepared notes 
-     3. Concept Visualized Digrams
-     4. Soft copy Notes, 
-     5. Access to private git hub repositories
-     6. Case Study oriented, solved examples
-     7. Lot of Live Interactions with mentor and team throughout the Learning Process 
-
-#### Objective: 
-    1. Reduce participants learning curve for Dot Net Full Stack Development skill.
-    2. Apply Bootcamp learned concepts with Handon under guidance of passionate Mentor.
-    3. Build Full Stack Dotnet Apps using Web Technologies 
-    4. Apply Design Principles, Design Patterns and Clean Code strategy.
-    5. Follow Scrum Framework, Agile methodolgy every day in bootcamp for Project Learning 
-    6. Deliver & Integrate Cloud ready Web App using API(REST API), Micro Services  
-    7. Build self confidence to apply for a role of Dotnet FullStack Developer IT company.
-
-
-#### Case study Driven Training Approach (Project Based Learning)
-
-1. Project-based learning (PBL) involves participants designing, developing, and constructing hands-on solutions to a problem.
-2. Project-based learning is a student-centered pedagogy that involves a dynamic classroom approach in which it is believed that students acquire a deeper knowledge through active exploration of real-world challenges and problems.
-
-3. Project-based learning (PBL) is another collaborative, learner-centered instructional approach where students work in groups to construct their knowledge and gain mastery of the course content.
-
-
 
 #### Major Contents
 [Dot Net FullStack Boot Camp Content (TAP))](https://github.com/RaviTambade/tap/blob/main/dotnet.md)

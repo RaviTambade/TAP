@@ -3,36 +3,20 @@
 
 ### Boot Camp Contents
 
-<details><summary>1. Introduction to Software Engineering</summary>
-    <blockquote>
-        <details>
-        <summary>
-        1. Software Development Life Cycle
-        2. Software Requirements
-        3. Software Requirements Specification
-        </summary>
-        </details>
-    </blockquote>
-</details>
+1. Introduction to Software Engineering
+    1. Software Development Life Cycle
+    2. Software Requirements
+    3. Software Requirements Specification
+     
 
-<details><summary>2. Collaborative Software Development (Git, Git Hub)</summary>
-    <blockquote>
+2. Collaborative Software Development (Git, Git Hub)
         1. Software Development Team
         2. Source Control Tools
         3. Git and GitHub
         4. Git Commands
         5. Git Workflow
-    </blockquote>
-</details>
 
     
-2.	Collaborative Software Development (Git, Git Hub)
-    1. Software Development Team
-    2. Source Control Tools
-    3. Git and GitHub
-    4. Git Commands
-    5. Git Workflow
-
 3.	Agile Methodology (Scrum Framework)
     1. Agile Manifesto
     2. Scrum Framework
@@ -73,7 +57,7 @@
     4. Invoking Stored Procedures
     5. Obect Relational Mapping Technique
     6. Using Entity Framework Core
-    7. Data First , Code First Approach
+    7. Data First, Code First Approach
     8. ORM Migrations
     9. Building Data Access Logic Layer
 
@@ -116,7 +100,6 @@
     17. async , await, Task Parallel Library 
     18. Invoking Web API cors, HTTPClient
     19. Secure REST API
-
 
 11.	Node JS
     1. Rise of JavaScript as Full Stack Programming Language today
@@ -165,7 +148,7 @@
     
 15.	Applying Best PractiesUsing Clean Code Strategy
     1. Crafting Software
-    2. Importance of Framework, Design Patterns, Principles
+    2. Importance of Framework, Design Patterns, Design Principles
     3. Following Design Principles
     4. Descovring Design Patterns
     5. Applying Design Patterns
@@ -188,20 +171,30 @@
     9. Selenium IDE, Selenium Web Driver
     10. Using Unit Testing Frameworks
     11. Test Driven Development
+
 17.	Linux Operating System
+    1. Installing Linux
+    2. Basic Linux Commands
+    3. Grep Commands , Pipes
+    4. 
+    10. CMode
+    11. Crone Job
+
 18. Cloud Computing
     1. Introduction to Cloud
 	2. Using Public Cloud (AWS, Azure, Google Cloud)
 	3. IT Solution Deployment to on premise, hosted environment
     4. Virtualization 
+
 19. Containerization
-    1. Virtualization vs. Containerization,
-    2. Docker Engine & Docker Hub,
+    1. Virtualization vs. Containerization
+    2. Docker Engine & Docker Hub
     3. Docker Commands
     4. Dockerizing exiting Web Apps
     5. Conatiner Orchestration using Kubernetes
     6. Microservices with Kubernetes
-20.	DevOps
+
+20.	CI/CD Pipline (DevOps)
     1. Git Actions & Git Workflow
     2. Setting up CI/CD pipeline,
     3. Jenkins

@@ -1,6 +1,60 @@
 # Dot Net Full Stack Developer Boot Camp 
 ### TAP (Transflower Acceleration Program)
 
+#### Training: Full Stack Dot Net Developer TAP
+#### Mentor: Ravi Tambade & Transflower Team
+#### Duration: 15 Weeks 
+    Days : 75
+    Hours: 450
+    150 hours Mentor Delivery  (Lecture, Demonstration)
+    300 hours Hand-on along with Mentor 
+    ( Problem Solving, Coding, Building, Testing, Deployment, DevOps, .etc)
+    (6 hours per day) Program (Monday to Friday 9:30 am to 4:30 pm)
+
+#### Delivery Mode: 
+    30%- 70% (Theory—Hands-on) Project Based Learning. Learn by Doing. 
+	BootCamp would follow agile Continous Learning for CI/CD culture adopted by industries.
+    Continous Integration/ Continous Delivery ( CI/CD) pipline
+
+#### Prerequisite: 
+    1. Having Bachelors in Engineering (BE, BTech) 
+       1. Computer
+       2. Information Technology 
+       3. Electronics
+       4. Electronics & Telecommunications
+       5. Electrical 
+       6. Mechanical
+       7. Masters in Computer Application(MCA) . 
+    2. Basic Programming skill
+    3. Tryout mindset and eager to learn
+    
+#### Deliverables: 
+     1. Access to recorded sessions
+     2. Mentor prepared notes 
+     3. Concept Visualized Digrams
+     4. Soft copy Notes, 
+     5. Access to private git hub repositories
+     6. Case Study oriented, solved examples
+     7. Lot of Live Interactions with mentor and team throughout the Learning Process 
+
+#### Objective: 
+    1. Reduce participants learning curve for Dot Net Full Stack Development skill.
+    2. Apply Bootcamp learned concepts with Handon under guidance of passionate Mentor.
+    3. Build Full Stack Dotnet Apps using Web Technologies 
+    4. Apply Design Principles, Design Patterns and Clean Code strategy.
+    5. Follow Scrum Framework, Agile methodolgy every day in bootcamp for Project Learning 
+    6. Deliver & Integrate Cloud ready Web App using API(REST API), Micro Services  
+    7. Build self confidence to apply for a role of Dotnet FullStack Developer IT company.
+
+
+#### Case study Driven Training Approach (Project Based Learning)
+
+1. Project-based learning (PBL) involves participants designing, developing, and constructing hands-on solutions to a problem.
+2. Project-based learning is a student-centered pedagogy that involves a dynamic classroom approach in which it is believed that students acquire a deeper knowledge through active exploration of real-world challenges and problems.
+
+3. Project-based learning (PBL) is another collaborative, learner-centered instructional approach where students work in groups to construct their knowledge and gain mastery of the course content.
+
+
 ### Boot Camp Contents
 
 <details><summary>1. Introduction to Software Engineering
@@ -12,57 +66,22 @@
 
  
 
-<details><summary>3.Agile Methodology (Scrum Framework) (Git, Git Hub)</summary>
+<details><summary>3.Agile Methodology (Scrum Framework)</summary>
 </details>
 
-    1. Agile Manifesto
-    2. Scrum Framework
-    3. CI/CD Pipeline
-    4. DevOps Overview
-    5. Selenium IDE 
+ 
+<details><summary>4.Building & Managing Databases (Scrum Framework)</summary>
+</details>
 
-4.	Building & Managing Databases
-    1. DBMS
-    2. Database Design ER Diagrams, Data Flow Diagrams
-    3. Data Definition Language Commands
-    4. CRUD Operations against Tables
-    5. SQL Queries
-    6. Nested and Join Queries
-    7. Transactions & ACID properties
-    8. Stored Procedures & triggers
-    9. Building backend for Project
-    10. Operations management of Database Server
-    11. NoSQL Databases
-    12. Database as a Service
+<details><summary>5.Basics of Programming</summary>
+</details>
 
-5.	Basics of Programming
-    1. Application Development
-    2. Dotnet Core Developer Enviornment
-    3. Dotnet Core Solution, Project, Source files
-    4. Create, Build, Run Dotnet Solution
-    5. C# Programming Essentials
-    6. Object Oriented Programming using C#
-    7. Interfaces, Delegate & Events
-    8. Collection Framework
-    9. File I/O, JSON Serialization
-    10. Reflection, Garbage Collection
+<details><summary>6.Database Connectivity</summary>
+</details>
 
-6.	Database Connectivity
-    1. Using packages for database connectivity
-    2. CRUD operations using mysql connector
-    3. using Connected, Disconnected Data Access Mode
-    4. Invoking Stored Procedures
-    5. Obect Relational Mapping Technique
-    6. Using Entity Framework Core
-    7. Data First , Code First Approach
-    8. ORM Migrations
-    9. Building Data Access Logic Layer
+<details><summary>7.Windows App Development Dot NET Core</summary>
+</details>
 
-7.	Windows App Development Dot NET Core
-    1. Using dotnet core CLI for Windows Application Development
-    2. Event Driven Architecture and Forms
-    3. Using Menus, Controls in .net core windows applications
-    4. Building Windows Apps
 
 9.	Essential Web Technologies
     1. Web Application Architecture
@@ -169,7 +188,9 @@
     9. Selenium IDE, Selenium Web Driver
     10. Using Unit Testing Frameworks
     11. Test Driven Development
+
 17.	Linux Operating System
+
 18. Cloud Computing
     1. Introduction to Cloud
 	2. Using Public Cloud (AWS, Azure, Google Cloud)
