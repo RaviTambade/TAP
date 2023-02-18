@@ -17,8 +17,6 @@ This is not only their dreams that are broken, but off course we lost an expecte
 
 We have an old Indian mythology and concepts, where teachers used to adopt the students for their all round developments. The concept of adoption is necessary for the mentorship. We  adopt students for a given skills sets and sharpens their skills with its well designed program structure.
 
-It  would be a pleasure to play a role of catalyst in skill building of yours, your friend, closed ones throug TAP FullStack BootCamp. 
-
 ### Let us make things better
 - Data is collected, cleansed and processed, stored
 - Data is queried, fetched, analyzed and visualized
