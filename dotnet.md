@@ -11,10 +11,16 @@
     </blockquote>
 </details>
 
-1.	Introduction to Software Engineering
-    1. Software Development Life Cycle
-    2. Software Requirements
-    3. Software Requirements Specification
+<details><summary>2. Collaborative Software Development (Git, Git Hub)</summary>
+    <blockquote>
+        1. Software Development Team
+        2. Source Control Tools
+        3. Git and GitHub
+        4. Git Commands
+        5. Git Workflow
+    </blockquote>
+</details>
+
     
 2.	Collaborative Software Development (Git, Git Hub)
     1. Software Development Team
