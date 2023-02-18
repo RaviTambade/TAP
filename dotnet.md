@@ -146,19 +146,49 @@
     12. Single Page Application using Routing
     13. Secure Routes
     
-15.	Using Clean Code Strategy
-16.	Applying Design Principles
-17.	Applying Design Patterns
-18.	Software Testing
-19.	Using Test Automation Frameworks
-20.	Web Application Deployment
-21.	Linus Operating System
-22.	Introduction to Cloud
-23.	Using Public Cloud (AWS, Azure, Google Cloud)
-24.	IT Solution Deployment to on premise, hosted environment
-25.	Virtualization, Containers, Docker, Kubernetes
-26.	Applying CI/ CD pipeline using Gi Workflow, Jenkins, Azure DevOps
-27.	Microservices with Kubernetes
-28.	Apache Kafka, GRPC, Redis Cache
-29.	Data Structures and Algorithms using C#
-30.	Getting ready for Interviews
+15.	Applying Best PractiesUsing Clean Code Strategy
+    1. Crafting Software
+    2. Importance of Framework, Design Patterns, Principles
+    3. Following Design Principles
+    4. Descovring Design Patterns
+    5. Applying Design Patterns
+    6. Micro Services Architecture 
+    7. Transforming existing Web App using MicroServices
+    8. MicroServices API Gateway
+    9. Communicating with Micro Services RabbitMQ, GRPC, Kafka,etc.
+    10. Micro Services and Cloud Ready Apps
+    10. Testable Micro services
+ 
+16.	Software Testing
+    1. Why Software Testing
+    2. STLC vs SDLC
+    3. V-Model
+    4. Test Plan
+    5. Writing Test Cases
+    6. Setting up Testing Enviornment 
+    7. Test Execution
+    8. Introduction to Test Automation
+    9. Selenium IDE, Selenium Web Driver
+    10. Using Unit Testing Frameworks
+    11. Test Driven Development
+17.	Linux Operating System
+18. Cloud Computing
+    1. Introduction to Cloud
+	2. Using Public Cloud (AWS, Azure, Google Cloud)
+	3. IT Solution Deployment to on premise, hosted environment
+    4. Virtualization 
+19. Containerization
+    1. Virtualization vs. Containerization,
+    2. Docker Engine & Docker Hub,
+    3. Docker Commands
+    4. Dockerizing exiting Web Apps
+    5. Conatiner Orchestration using Kubernetes
+    6. Microservices with Kubernetes
+20.	DevOps
+    1. Git Actions & Git Workflow
+    2. Setting up CI/CD pipeline,
+    3. Jenkins
+    4. Azure DevOps
+    
+21.	Data Structures and Algorithms using C#
+22.	Getting ready for Interviews
