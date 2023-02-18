@@ -1,7 +1,34 @@
 1.	Introduction to Software Engineering
+    1. Software Development Life Cycle
+    2. Software Requirements
+    3. Software Requirements Specification
+    
 2.	Collaborative Software Development (Git, Git Hub)
+    1. Software Development Team
+    2. Source Control Tools
+    3. Git and GitHub
+    4. Git Commands
+    5. Git Workflow
+
 3.	Agile Methodology (Scrum Framework)
+    1. Agile Manifesto
+    2. Scrum Framework
+    3. CI/CD Pipeline
+    4. DevOps Overview
+    5. Selenium IDE 
+    
 4.	Basics of Programming
+    1. Application Development
+    2. Dotnet Core Developer Enviornment
+    3. Dotnet Core Solution, Project, Source files
+    4. Create, Build, Run Dotnet Solution
+    5. C# Programming Essentials
+    6. Object Oriented Programming using C#
+    7. Interfaces, Delegate & Events
+    8. Collection Framework
+    9. File I/O, JSON Serialization
+    10. Reflection, Garbage Collection
+    10.
 5.	Building & Managing Databases
 6.	Database Connectivity
 7.	Windows App Development Dot NET Core
