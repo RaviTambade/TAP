@@ -3,18 +3,37 @@
 
 ### Boot Camp Contents
 
-<details><summary>1. Introduction to Software Engineering
-</summary>
+<details><summary>1. Introduction to Software Engineering</summary>
+    <blockquote>
+        <details>
+        <summary>
+        1. Software Development Life Cycle
+        2. Software Requirements
+        3. Software Requirements Specification
+        </summary>
+        </details>
+    </blockquote>
 </details>
 
 <details><summary>2. Collaborative Software Development (Git, Git Hub)</summary>
+    <blockquote>
+        1. Software Development Team
+        2. Source Control Tools
+        3. Git and GitHub
+        4. Git Commands
+        5. Git Workflow
+    </blockquote>
 </details>
 
- 
+    
+2.	Collaborative Software Development (Git, Git Hub)
+    1. Software Development Team
+    2. Source Control Tools
+    3. Git and GitHub
+    4. Git Commands
+    5. Git Workflow
 
-<details><summary>3.Agile Methodology (Scrum Framework) (Git, Git Hub)</summary>
-</details>
-
+3.	Agile Methodology (Scrum Framework)
     1. Agile Manifesto
     2. Scrum Framework
     3. CI/CD Pipeline
