@@ -22,7 +22,7 @@ We have an old Indian mythology and concepts, where teachers used to adopt the s
 
 ### TAP your potential.
 
-[Dot Net FullStack Boot Camp Content (TAP)](https://github.com/RaviTambade/tap/blob/main/dotnet.md)
+[Dot Net FullStack Boot Camp](https://github.com/RaviTambade/tap/blob/main/dotnet.md)
 
 [Frequently Asked Questions(FAQ)](https://github.com/RaviTambade/tap/blob/main/FAQ.md)
 
