@@ -41,8 +41,9 @@ TAP your potential.
 #### Duration: 15 Weeks 
     Days : 75
     Hours: 450
-    Distribution: 150 hours Mentor Delivery (Lecture, Demonstration)
-    300 hours Hand-on along with Mentor ( Problem Solving, Coding, Building, Testing, Deployment, DevOps, .etc)
+    150 hours Mentor Delivery  (Lecture, Demonstration)
+    300 hours Hand-on along with Mentor 
+    ( Problem Solving, Coding, Building, Testing, Deployment, DevOps, .etc)
     (6 hours per day) Program (Monday to Friday 9:30 am to 4:30 pm)
 
 #### Delivery Mode: 
