@@ -22,14 +22,8 @@ It  would be a pleasure to play a role of catalyst in skill building of yours, y
 Thank you for trusting in Transflower’s vision.
 
 ### Let us make things better
-- Data is collected
-- Data is cleansed
-- Data is processed
-- Data is stored
-- Data is queried
-- Result is fetched
-- Result is analyzed
-- Trends are visualized
+- Data is collected, cleansed and processed, stored
+- Data is queried, fetched, analyzed and visualized
 - knowledge is built
 - Intelligence is applied
 - Wisdom is gained
