@@ -68,12 +68,18 @@ TAP your potential.
      2. Mentor prepared notes 
      3. Concept Visualized Digrams
      4. Soft copy Notes, 
-     5. Access to private git hub repositories,
+     5. Access to private git hub repositories
      6. Case Study oriented, solved examples
-     7. Lot of Live Interactions throughout the Learning Process. 
+     7. Lot of Live Interactions with mentor and team throughout the Learning Process 
 
 #### Objective: 
-This hands-on learning in team and passionate mentor would reduce participants learning curve for Dot Net Full Stack Skill Development. At the end of Learning process participants would be able to apply  for the post of Full Stack Junior Developer position at various Product based or Project based Information Technology  companies all over India. Participants would be able to build Full Stack Dotnet Applications using Web Technologies   HTML, CSS, JavaScript, React, Angular as well as ASP.NET Core, C# along with Databases such as MySQL and Mongo DB. Participants would be able to build, test, deploy & Integrate Web API (REST API) , Micro Services  in online Application Development using  Scrum Framework (Agile way) . Participant would be able to apply for potential IT companies, which are looking for project ready resources for their IT teams.
+    1. Rreduce participants learning curve for Dot Net Full Stack Skill Development.
+    2. Apply dotnet Fullstack Development concept through Project based with Handon under guidance of passionate Mentor.
+    3  build Full Stack Dotnet Applications using Web Technologies using design principles, design patterns and clean code strategy.
+    4 Follow Scrum Framework, Agile methodolgy every day in bootcamp for Project Learning 
+    5. Deliver & Integrate Cloud ready Web App using API(REST API), Micro Services  
+    6. Get Ready with self confidence to apply for a role of Dotnet FullStack Developer in Product based, Project based IT company.
+
 
 #### Case study Driven Training Approach (Project Based Learning)
 
