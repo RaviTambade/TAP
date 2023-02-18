@@ -17,19 +17,7 @@
     4. DevOps Overview
     5. Selenium IDE 
 
-4.	Basics of Programming
-    1. Application Development
-    2. Dotnet Core Developer Enviornment
-    3. Dotnet Core Solution, Project, Source files
-    4. Create, Build, Run Dotnet Solution
-    5. C# Programming Essentials
-    6. Object Oriented Programming using C#
-    7. Interfaces, Delegate & Events
-    8. Collection Framework
-    9. File I/O, JSON Serialization
-    10. Reflection, Garbage Collection
-
-5.	Building & Managing Databases
+4.	Building & Managing Databases
     1. DBMS
     2. Database Design ER Diagrams, Data Flow Diagrams
     3. Data Definition Language Commands
@@ -42,6 +30,18 @@
     10. Operations management of Database Server
     11. NoSQL Databases
     12. Database as a Service
+
+5.	Basics of Programming
+    1. Application Development
+    2. Dotnet Core Developer Enviornment
+    3. Dotnet Core Solution, Project, Source files
+    4. Create, Build, Run Dotnet Solution
+    5. C# Programming Essentials
+    6. Object Oriented Programming using C#
+    7. Interfaces, Delegate & Events
+    8. Collection Framework
+    9. File I/O, JSON Serialization
+    10. Reflection, Garbage Collection
 
 6.	Database Connectivity
     1. Using packages for database connectivity
@@ -70,7 +70,7 @@
     7. Using Cascaded Style Sheets (CSS)
     8. jQuery Selectors
     9. Ajax & External Data Access
-    10. Responsive User Inteface Framework BootStrap
+    10. Responsive User Inteface Framework BootStrap/ Material
     11. Building Interactive Web Site
 
 10.	Web App Development using ASP.NET Core
@@ -85,19 +85,49 @@
     9. Separation of Concernt, Dependency Injection
     10. Application Repository Pattern
     11. Applying Web Application Security
-    12. Membership and Roles  Management
-    13. Javascript Web Token (JWT)
-    14. Introduction to asp.net core Web API
-    15. Handling HTTP Requests (CRUD) using Web API
-    16. async , await, Task Parallel Library 
-    17. Invoking Web API cors, HTTPClient
-    18. Secure REST API
+    12. Filters
+    13. Membership and Roles  Management
+    14. Javascript Web Token (JWT)
+    15. Introduction to asp.net core Web API
+    16. Handling HTTP Requests (CRUD) using Web API
+    17. async , await, Task Parallel Library 
+    18. Invoking Web API cors, HTTPClient
+    19. Secure REST API
 
 
 11.	Node JS
-12.	Express JS
+    1. Rise of JavaScript as Full Stack Programming Language today
+    2. Node js as V8 JavaScript Runtime Engine
+    3. Building & Debugging Node JS with VS code
+    4. Event Emitter, Callback Functions
+    5. File IO, JSON Operations
+    6. Building Web app using HTTP module 
+    7. Node Package Manager & Express JS
+    8. Express Middleware & Router
+    9. REST API using Express JS
+    10. Using Tool Chain for Web Apps CI/CD pipeline
+    11. Using MySQL , Mongo Db connectivity using Node JS
+    12. Handling HTTP Requests (CRUD) using Web API
+    13. async , await, Task Parallel Library 
+    14. Invoking Web API cors, HTTPClient
+    15. Secure REST API
+
 13.	React
 14.	Angular
+    1. Angular CLI and Single Page Application
+    2. Angular UI Architecture
+    3. Components & Modules
+    4. Directives & Pipes
+    5. Angular Forms
+    6. Extending Angular App 
+    7. Component Life Cycle
+    7. Injectable Services
+    8. Custom Directives and Pipes
+    9. External REST API data access using HttpClient
+    10. RxJS Operators
+    11. Single Page Application using Routing
+    12. Secure Routes
+    
 15.	Using Clean Code Strategy
 16.	Applying Design Principles
 17.	Applying Design Patterns
