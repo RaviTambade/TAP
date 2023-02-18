@@ -5,13 +5,11 @@
 
 <details><summary>1. Introduction to Software Engineering</summary>
     <blockquote>
-    <details>
-    <summary>
+    
         1. Software Development Life Cycle
         2. Software Requirements
         3. Software Requirements Specification
-    </summary>
-    </details>
+     
     </blockquote>
 </details>
 
