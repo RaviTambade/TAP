@@ -104,5 +104,5 @@ Participants would learn basics of Web Technologies. They would apply Web Techno
 30.	Getting ready for Interviews
 
 
-[a link]([a link](https://github.com/RaviTambade/tap/blob/main/FAQ.md)Frequently Asked Questions about TAP FullStack BootCamp
+[Frequently Asked Questions (FAQ)]([a link](https://github.com/RaviTambade/tap/blob/main/FAQ.md)
 
