@@ -49,6 +49,12 @@ TAP your potential.
     #### 30%- 70% (Theory—Hands-on) Project Based Learning. Learn by Doing. 
 	#### BootCamp would follow incremental and iterative learning process according to project-based learning methodology.
 
+#### Prerequisite: 
+    1. Having Bachelors in Engineering (BE) Computer, Information Technology, Electronics, Electronics & Telecommunications, Electrical & Mechanical, or Masters in Computer Application(MCA) . 
+    2. Basic Programming skill
+    3. Tryout mindset and eager to learn
+    
+
 #### Deliverables: 
      Access to recorded sessions, Mentor prepared notes, Concept Visualized Digrams,
      Soft copy Notes, 
@@ -56,8 +62,7 @@ TAP your potential.
      Case Study oriented, solved examples
      Lot of Live Interactions throughout the Learning Process. 
 
-#### Prerequisite: 
-    Having Bachelors in Engineering stream Electronics, Mechanical, Electronics & Telecommunications, Computer, Information Technology or Masters in Computer Application (MCA) . 
+
 
 #### Objective: 
 This hands-on learning in team and passionate mentor would reduce participants learning curve for Dot Net Full Stack Skill Development. At the end of Learning process participants would be able to apply  for the post of Full Stack Junior Developer position at various Product based or Project based Information Technology  companies all over India. Participants would be able to build Full Stack Dotnet Applications using Web Technologies   HTML, CSS, JavaScript, React, Angular as well as ASP.NET Core, C# along with Databases such as MySQL and Mongo DB. Participants would be able to build, test, deploy & Integrate Web API (REST API) , Micro Services  in online Application Development using  Scrum Framework (Agile way) . Participant would be able to apply for potential IT companies, which are looking for project ready resources for their IT teams.
@@ -67,42 +72,13 @@ This hands-on learning in team and passionate mentor would reduce participants l
 Participants would learn basics of Web Technologies. They would apply Web Technology concepts for building Client-Side Web User Interface for ECommerce Web Application. They would understand the role of each Full Stack Development (Front End, Web API,Web Server, Micro Serrives, Business Logic, Back End, Cloud Infrastructure, Testing Enviornment, Prouduction Enviornment, DevOps, etc.) for Online Shopping Application. They could differentiate  effective way of building Online Apps using Rich Front End  with the help of JavaScript UI Frameworks such as Angular, react.Learn by Doing approach would gradually increase self confidence of participant to get ready for applying concepts in project using Project based study approach.
 
 #### Prerequisites
-1. Basic Programming skill
-2. Tryout mindset and eager to learn
+
 
 #### Major Contents
-
-1.	Introduction to Software Engineering
-2.	Collaborative Software Development (Git, Git Hub)
-3.	Agile Methodology (Scrum Framework)
-4.	Basics of Programming
-5.	Building & Managing Databases
-6.	Database Connectivity
-7.	Windows App Development Dot NET Core
-8.	Application Development Essentials
-9.	Essential Web Technologies
-10.	Web App Development using ASP.NET Core
-11.	Node JS
-12.	Express JS
-13.	React
-14.	Angular
-15.	Using Clean Code Strategy
-16.	Applying Design Principles
-17.	Applying Design Patterns
-18.	Software Testing
-19.	Using Test Automation Frameworks
-20.	Web Application Deployment
-21.	Linus Operating System
-22.	Introduction to Cloud
-23.	Using Public Cloud (AWS, Azure, Google Cloud)
-24.	IT Solution Deployment to on premise, hosted environment
-25.	Virtualization, Containers, Docker, Kubernetes
-26.	Applying CI/ CD pipeline using Gi Workflow, Jenkins, Azure DevOps
-27.	Microservices with Kubernetes
-28.	Apache Kafka, GRPC, Redis Cache
-29.	Data Structures and Algorithms using C#
-30.	Getting ready for Interviews
+[Dot Net FullStack Boot Camp Content (TAP))](https://github.com/RaviTambade/tap/blob/main/dotnet.md)
 
 
-([Frequently Asked Questions(FAQ)](https://github.com/RaviTambade/tap/blob/main/FAQ.md)
+
+
+[Frequently Asked Questions(FAQ)](https://github.com/RaviTambade/tap/blob/main/FAQ.md)
 
