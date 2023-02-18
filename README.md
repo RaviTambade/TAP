@@ -75,7 +75,7 @@ TAP your potential.
 #### Objective: 
     1. Reduce participants learning curve for Dot Net Full Stack Development skill.
     2. Apply Bootcamp learned concepts with Handon under guidance of passionate Mentor.
-    3.  build Full Stack Dotnet Apps using Web Technologies 
+    3. Build Full Stack Dotnet Apps using Web Technologies 
     4. Apply Design Principles, Design Patterns and Clean Code strategy.
     5. Follow Scrum Framework, Agile methodolgy every day in bootcamp for Project Learning 
     6. Deliver & Integrate Cloud ready Web App using API(REST API), Micro Services  
