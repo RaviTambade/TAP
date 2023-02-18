@@ -44,9 +44,22 @@
     12. Database as a Service
 
 6.	Database Connectivity
+    1. Using packages for database connectivity
+    2. CRUD operations using mysql connector
+    3. using Connected, Disconnected Data Access Mode
+    4. Invoking Stored Procedures
+    5. Obect Relational Mapping Technique
+    6. Using Entity Framework Core
+    7. Data First , Code First Approach
+    8. ORM Migrations
+    9. Building Data Access Logic Layer
 
 7.	Windows App Development Dot NET Core
-8.	Application Development Essentials
+    1. Using dotnet core CLI for Windows Application Development
+    2. Event Driven Architecture and Forms
+    3. Using Menus, Controls in .net core windows applications
+    4. Building Windows Apps
+
 9.	Essential Web Technologies
     4. Web Application Architecture
     5. Web Taxanomy & Topologies
