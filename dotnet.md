@@ -119,6 +119,18 @@
     15. Secure REST API
 
 13.	React
+    1. Simple React JS App
+    2. React JS build Enviornment
+    3. Component based Approach
+    4. Props and State
+    5. Nested Components
+    6. React Forms 
+    7. React Routing (SPA)
+    8. External Data Access (AXIOS, fetch)
+    9. Data Application Architecture Redux
+    10. React Testing
+    
+
 14.	Angular
     1. Angular CLI and Single Page Application
     2. Angular UI Architecture
@@ -127,12 +139,12 @@
     5. Angular Forms
     6. Extending Angular App 
     7. Component Life Cycle
-    7. Injectable Services
-    8. Custom Directives and Pipes
-    9. External REST API data access using HttpClient
-    10. RxJS Operators
-    11. Single Page Application using Routing
-    12. Secure Routes
+    8. Injectable Services
+    9. Custom Directives and Pipes
+    10. External REST API data access using HttpClient
+    11. RxJS Operators
+    12. Single Page Application using Routing
+    13. Secure Routes
     
 15.	Using Clean Code Strategy
 16.	Applying Design Principles
