@@ -49,9 +49,17 @@ TAP your potential.
 #### Delivery Mode: 
     30%- 70% (Theory—Hands-on) Project Based Learning. Learn by Doing. 
 	BootCamp would follow agile Continous Learning for CI/CD culture adopted by industries.
+    Continous Integration/ Continous Delivery ( CI/CD) pipline
 
 #### Prerequisite: 
-    1. Having Bachelors in Engineering (BE) Computer, Information Technology, Electronics, Electronics & Telecommunications, Electrical & Mechanical, or Masters in Computer Application(MCA) . 
+    1. Having Bachelors in Engineering (BE, BTech) 
+       1. Computer
+       2. Information Technology 
+       3. Electronics
+       4. Electronics & Telecommunications
+       5. Electrical 
+       6. Mechanical
+       7. Masters in Computer Application(MCA) . 
     2. Basic Programming skill
     3. Tryout mindset and eager to learn
     
