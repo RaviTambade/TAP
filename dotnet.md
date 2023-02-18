@@ -61,17 +61,17 @@
     4. Building Windows Apps
 
 9.	Essential Web Technologies
-    4. Web Application Architecture
-    5. Web Taxanomy & Topologies
-    6. HTML and Web Pages
-    7. HTML elements & Features
-    8. Dynamic Web Pages and Javascript
-    9. Document Object Model
-    10. Using Cascaded Style Sheets (CSS)
-    11. jQuery Selectors
-    12. Ajax & External Data Access
-    13. Responsive User Inteface Framework BootStrap
-    14. Building Interactive Web Site
+    1. Web Application Architecture
+    2. Web Taxanomy & Topologies
+    3. HTML and Web Pages
+    4. HTML elements & Features
+    5. Dynamic Web Pages and Javascript
+    6. Document Object Model
+    7. Using Cascaded Style Sheets (CSS)
+    8. jQuery Selectors
+    9. Ajax & External Data Access
+    10. Responsive User Inteface Framework BootStrap
+    11. Building Interactive Web Site
 
 10.	Web App Development using ASP.NET Core
     1. Web Application Development using ASP.NET CORE 7.0
@@ -92,7 +92,7 @@
     16. async , await, Task Parallel Library 
     17. Invoking Web API cors, HTTPClient
     18. Secure REST API
-    
+
 
 11.	Node JS
 12.	Express JS
