@@ -73,12 +73,13 @@ TAP your potential.
      7. Lot of Live Interactions with mentor and team throughout the Learning Process 
 
 #### Objective: 
-    1. Rreduce participants learning curve for Dot Net Full Stack Skill Development.
-    2. Apply dotnet Fullstack Development concept through Project based with Handon under guidance of passionate Mentor.
-    3  build Full Stack Dotnet Applications using Web Technologies using design principles, design patterns and clean code strategy.
-    4 Follow Scrum Framework, Agile methodolgy every day in bootcamp for Project Learning 
-    5. Deliver & Integrate Cloud ready Web App using API(REST API), Micro Services  
-    6. Get Ready with self confidence to apply for a role of Dotnet FullStack Developer in Product based, Project based IT company.
+    1. Reduce participants learning curve for Dot Net Full Stack Development skill.
+    2. Apply Bootcamp learned concepts with Handon under guidance of passionate Mentor.
+    3.  build Full Stack Dotnet Apps using Web Technologies 
+    4. Apply Design Principles, Design Patterns and Clean Code strategy.
+    5. Follow Scrum Framework, Agile methodolgy every day in bootcamp for Project Learning 
+    6. Deliver & Integrate Cloud ready Web App using API(REST API), Micro Services  
+    7. Build self confidence to apply for a role of Dotnet FullStack Developer IT company.
 
 
 #### Case study Driven Training Approach (Project Based Learning)
