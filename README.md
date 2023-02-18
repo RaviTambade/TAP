@@ -36,33 +36,30 @@ Feeling blessed.
 TAP your potential.
 
 
-### Training: Full Stack Dot Net Developer TAP
-### Mentor: Ravi Tambade & Transflower Team
-### Duration: 15 Weeks 
+#### Training: Full Stack Dot Net Developer TAP
+#### Mentor: Ravi Tambade & Transflower Team
+#### Duration: 15 Weeks 
     Days : 75
     Hours: 450
     Distribution: 150 hours Mentor Delivery (Lecture, Demonstration)
-                  300 hours Hand-on along with Mentor ( Problem Solving, Coding, Building, Testing, Deployment, DevOps, .etc)
-                  (6 hours per day) Program (Monday to Friday 9:30 am to 4:30 pm)
+    300 hours Hand-on along with Mentor ( Problem Solving, Coding, Building, Testing, Deployment, DevOps, .etc)
+    (6 hours per day) Program (Monday to Friday 9:30 am to 4:30 pm)
 
-### Delivery Mode: 
-    #### 30%- 70% (Theory—Hands-on) Project Based Learning. Learn by Doing. 
-	#### BootCamp would follow incremental and iterative learning process according to project-based learning methodology.
+#### Delivery Mode: 
+    30%- 70% (Theory—Hands-on) Project Based Learning. Learn by Doing. 
+	BootCamp would follow incremental and iterative learning process according to project-based learning methodology.
 
 #### Prerequisite: 
     1. Having Bachelors in Engineering (BE) Computer, Information Technology, Electronics, Electronics & Telecommunications, Electrical & Mechanical, or Masters in Computer Application(MCA) . 
     2. Basic Programming skill
     3. Tryout mindset and eager to learn
     
-
 #### Deliverables: 
      Access to recorded sessions, Mentor prepared notes, Concept Visualized Digrams,
      Soft copy Notes, 
      Access to private git hub repositories,
      Case Study oriented, solved examples
      Lot of Live Interactions throughout the Learning Process. 
-
-
 
 #### Objective: 
 This hands-on learning in team and passionate mentor would reduce participants learning curve for Dot Net Full Stack Skill Development. At the end of Learning process participants would be able to apply  for the post of Full Stack Junior Developer position at various Product based or Project based Information Technology  companies all over India. Participants would be able to build Full Stack Dotnet Applications using Web Technologies   HTML, CSS, JavaScript, React, Angular as well as ASP.NET Core, C# along with Databases such as MySQL and Mongo DB. Participants would be able to build, test, deploy & Integrate Web API (REST API) , Micro Services  in online Application Development using  Scrum Framework (Agile way) . Participant would be able to apply for potential IT companies, which are looking for project ready resources for their IT teams.
@@ -71,14 +68,11 @@ This hands-on learning in team and passionate mentor would reduce participants l
 
 Participants would learn basics of Web Technologies. They would apply Web Technology concepts for building Client-Side Web User Interface for ECommerce Web Application. They would understand the role of each Full Stack Development (Front End, Web API,Web Server, Micro Serrives, Business Logic, Back End, Cloud Infrastructure, Testing Enviornment, Prouduction Enviornment, DevOps, etc.) for Online Shopping Application. They could differentiate  effective way of building Online Apps using Rich Front End  with the help of JavaScript UI Frameworks such as Angular, react.Learn by Doing approach would gradually increase self confidence of participant to get ready for applying concepts in project using Project based study approach.
 
-#### Prerequisites
+
 
 
 #### Major Contents
 [Dot Net FullStack Boot Camp Content (TAP))](https://github.com/RaviTambade/tap/blob/main/dotnet.md)
-
-
-
 
 [Frequently Asked Questions(FAQ)](https://github.com/RaviTambade/tap/blob/main/FAQ.md)
 
