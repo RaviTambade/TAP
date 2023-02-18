@@ -1,6 +1,8 @@
 # TAP (Transflower Acceleration Program)
 
-TAP (Transflower Accleration Program) is a  100% live Mentor driven Project based learning Bootcamp. It is mentored by live instructors via zoom. You can login and join, learn , apply , build skill of FullStack Developer using TAP from anywhere.
+TAP (Transflower Accleration Program) is a  100% live Mentor driven Project based learning Bootcamp. 
+- It is designed and executed by Ravi Tambade Chief Mentor@Transflower. 
+- You can login and join, learn , apply , build skill of FullStack Developer using TAP from anywhere.
 
 Transflower provides personalized Mentoring Project Readiness Program for individual to build skill of Full Stack Developer for Information Technology projects of  Industries. I am sure 25 years of Mentoring Role would contribute in reducing your learning curve.
 
