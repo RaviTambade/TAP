@@ -72,20 +72,23 @@
     12. Ajax & External Data Access
     13. Responsive User Inteface Framework BootStrap
     14. Building Interactive Web Site
+
 10.	Web App Development using ASP.NET Core
-    4. Web Application Development using ASP.NET CORE 7.0
-    5. Using .net CLI for Web Application Development
-    6. Building Web App using Razor pages, layouts and C#
-    7. Software Design Principles (DRY, Hollywood, KISS, SOLID,etc.)
-    8. Using Design Patterns in Web Application Development
-    9. Importance of Framework in Rapid Application Development
-    10. Using ASP.NET MVC Framework
-    11. ASP.NET Middleware
-    12. Using Controllers, Actions & Views
-    13. HTML helper functions
-    15. State Management in ASP.NET Core
-    14. Separation of Concernt, Dependency Injection
-    17. Application Repository Pattern
+    1. Web Application Development using ASP.NET CORE 7.0
+    2. Using .net CLI for Web Application Development
+    3. Building Web App using Razor pages, layouts and C#
+    4. Using ASP.NET MVC Framework
+    5. ASP.NET Middleware
+    6. Using Controllers, Actions & Views
+    7. HTML helper functions
+    8. State Management in ASP.NET Core
+    9. Separation of Concernt, Dependency Injection
+    10. Application Repository Pattern
+    11. Applying Web Application Security
+    12. Membership and Roles  Management
+    13. Javascript Web Token (JWT)
+    14. Introduction to asp.net core Web API
+    15. Building REST ful Web services using Web API
 
 11.	Node JS
 12.	Express JS
