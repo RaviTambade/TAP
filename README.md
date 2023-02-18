@@ -21,27 +21,22 @@ It  would be a pleasure to play a role of catalyst in skill building of yours, y
 
 Thank you for trusting in Transflower’s vision.
 
-Let us make things better.
+###Let us make things better.
+- Data is collected.
+- Data is cleansed.
+- Data is processed.
+- Data is stored.
+- Data is queried.
+- Result is fetched.
+- Result is analyzed.
+- Trends are visualized.
+- knowledge is built.
+- Intelligence is applied.
+- Wisdom is gained.
 
-Data is collected.
-Data is cleansed.
-Data is processed.
-Data is stored.
-Data is queried.
-Result is fetched.
-Result is analyzed.
-Trends are visualized.
-knowledge is built.
-Intelligence is applied.
-Wisdom is gained.
+## TAP your potential.
 
-Feeling blessed.
-TAP your potential.
-
-
-
-#### Major Contents
-[Dot Net FullStack Boot Camp Content (TAP))](https://github.com/RaviTambade/tap/blob/main/dotnet.md)
+[Dot Net FullStack Boot Camp Content (TAP)](https://github.com/RaviTambade/tap/blob/main/dotnet.md)
 
 [Frequently Asked Questions(FAQ)](https://github.com/RaviTambade/tap/blob/main/FAQ.md)
 
