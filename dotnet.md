@@ -8,7 +8,6 @@
     1. Software Development Life Cycle
     2. Software Requirements
     3. Software Requirements Specification</summary><blockquote>
-    :smile:
   </blockquote></details>
 </blockquote></details>
 
