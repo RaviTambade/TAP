@@ -88,13 +88,14 @@ Great question! In short, you’ll need good laptop. A second monitor/TV/tablet 
 </details>
 <details>
 <summary>Specific laptop specs</summary>
-CPU: 
+<p> <b>CPU:</b></p> 
 Minimum: At least a dual-core 2Ghz or higher (Intel i3/i5/i7 or AMD equivalent)
 Recommended: At least quad-core (4 cores) Intel i5 or i7, AMD Ryzen 5/7/9, or (Mac) M1
-RAM: 8 GB or more is ideal
-Storage: Please make sure you have at least 15GB free space for software and projects. A Solid State Drive (SSD) recommended for better performance.
-Display: A 12-inch screen with 1366×768 resolution will serve you well
-Second Monitor: For remote bootcamps, a second screen is recommended–if you don’t have a monitor for a second screen, you could use a television or potentially a tablet.
+
+<p> <b>RAM:</b> 8 GB or more is ideal </p>
+<p><b>Storage:</b> Please make sure you have at least 15GB free space for software and projects. A Solid State Drive (SSD) recommended for better performance.</p>
+<p><b>Display: </b>A 12-inch screen with 1366×768 resolution will serve you well</p>
+<p>Second Monitor: For remote bootcamps, a second screen is recommended–if you don’t have a monitor for a second screen, you could use a television or potentially a tablet. Remember it is not essential to have second monitor</p>
 </details>
 
 <details>
