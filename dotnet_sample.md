@@ -5,7 +5,7 @@
 
 
 <details>
-<summary> #### Duration: 15 Weeks  ( 5 Days a week) (9:30 am to 4:30 pm)</summary>
+<summary> Duration: 15 Weeks  ( 5 Days a week) (9:30 am to 4:30 pm)</summary>
     Days : 75
     Hours: 450
     150 hours Mentor Delivery  (Lecture, Demonstration)
@@ -15,15 +15,15 @@
 </details>
 
 <details>
-<summary> #### Delivery Mode </summary>
+<summary>Delivery Mode </summary>
     30%- 70% (Theory—Hands-on) Project Based Learning. Learn by Doing. 
 	BootCamp would follow agile Continous Learning for CI/CD culture adopted by industries.
     Continous Integration/ Continous Delivery ( CI/CD) pipline
 </details>
 
 <details>
-<summary> #### Prerequisite:</summary> 
-    1. Having Bachelors in Engineering (BE, BTech) 
+<summary>Prerequisite:</summary> 
+    1.  Bachelors in Engineering (BE, BTech) 
        1. Computers or Information Technology (IT), Electronics, Electronics & Telecommunications(E&TC)
        2. Electrical or Mechanical
        3. Masters in Computer Application (MCA) . 
@@ -31,7 +31,8 @@
     3. Tryout mindset and eager to learn
 </details>
 
-#### Deliverables: 
+<details>
+<summary>Deliverables: </summary>
      1. Access to recorded sessions
      2. Mentor prepared notes 
      3. Concept Visualized Digrams
@@ -39,8 +40,10 @@
      5. Access to private git hub repositories
      6. Case Study oriented, solved examples
      7. Lot of Live Interactions with mentor and team throughout the Learning Process 
+</details>
 
-#### Objective: 
+<details>
+<summary>Objective: </summary>
     1. Reduce participants learning curve for Dot Net Full Stack Development skill.
     2. Apply Bootcamp learned concepts with Handon under guidance of passionate Mentor.
     3. Build Full Stack Dotnet Apps using Web Technologies 
@@ -48,15 +51,14 @@
     5. Follow Scrum Framework, Agile methodolgy every day in bootcamp for Project Learning 
     6. Deliver & Integrate Cloud ready Web App using API(REST API), Micro Services  
     7. Build self confidence to apply for a role of Dotnet FullStack Developer IT company.
+</details>
 
-
-#### Case study Driven Training Approach (Project Based Learning)
-
-1. Project-based learning (PBL) involves participants designing, developing, and constructing hands-on solutions to a problem.
-2. Project-based learning is a student-centered pedagogy that involves a dynamic classroom approach in which it is believed that students acquire a deeper knowledge through active exploration of real-world challenges and problems.
-
-3. Project-based learning (PBL) is another collaborative, learner-centered instructional approach where students work in groups to construct their knowledge and gain mastery of the course content.
-
+<details>
+<summary> Boot Camp is based on Project Based Collborative Learning </summary>
+    1. Project-based learning (PBL) involves participants designing, developing, and constructing hands-on solutions to a problem.
+    2. Project-based learning is a student-centered pedagogy that involves a dynamic classroom approach in which it is believed that students acquire a deeper knowledge through active exploration of real-world challenges and problems.
+    3. Project-based learning (PBL) is another collaborative, learner-centered instructional approach where students work in groups to construct their knowledge and gain mastery of the course content.
+</details>
 
 ### Boot Camp Contents
 <details>
