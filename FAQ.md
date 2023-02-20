@@ -12,7 +12,7 @@
 
 <details>
 <summary>Are your bootcamps in-person or online ?</summary>
-Our bootcamps are 100% online, taught by live instructors via zoom. Online lectures, Demonstration, Hands- on are based on Project based Activities using Scrum Framework. Participat would get expereince of Learn from anywhere for getting ready for Work from Home.
+Our bootcamps are 100% online, taught by live instructors via zoom. Online lectures, Demonstration, Hands- on are based on Project based Activities using Scrum Framework. Participants would get expereince of Learn from Anywhere for getting ready for Work from Anywhere.
 This boot camp does not only build technical skill but it also develop soft skill essential for Work from Home culture. Work from Home culture have been adopted by so many companies in these three years. Participants have to be ready for Work from Home as well as Hybrid Work culture mode. Instructors have more than  10 year of experience conducting online live session (Theroy as well as Labs).
 
 </details>
@@ -20,11 +20,12 @@ This boot camp does not only build technical skill but it also develop soft skil
 
 <details>
 <summary>What times of day are your bootcamps?</summary>
- Our daytime program is 14 weeks and meets daily from 9 am – 5 pm EST. Our after-hours program is 28 weeks and meets from 6:30 pm – 10 pm EST on Mondays, Wednesdays, and Thursdays. There are few latest technology boot camp sheduled as Week end batches for working professionals as well as individuals who need to upkill for those technologies.
+ Our daytime program is 14 weeks and meets daily from 9:30 am – 5:30 pm. Our after-hours program is 28 weeks and meets from 6:30 pm – 10 pm on Mondays, Wednesdays, and Thursdays. There are few latest technology boot camp sheduled as Week end batches for working professionals as well as individuals who need to upkill for those technologies.
 </details>
+
 <details>
 <summary>How much do bootcamp cost ?</summary>
-Our standard tuition is 30000 Rs. Your commitment to growth and education deserves to be honored.
+ Our standard tuition fees is 30000 Rs. Your commitment to growth and education deserves to be honored.
 </details>
 <details>
 <summary>Feeling sticker shock? </summary>
@@ -34,7 +35,7 @@ You can schedule a 15-minute 1:1 chat with them through email request of Whats a
 
 <details>
 <summary>Cay you help me get a tech job after I graduate?</summary>
-Yes! With Transflower you’ll receive life time access to our career support and alumni network. You’ll start working on your job hunt, and job-ready skills on week one! We support our students from the time they learn their very first line of code until they find a career they’ll love, even after they graduate! Strong network of students, companies who learned from  our mentor would help in getting connected. Your performance , commitment  matters a lot for taking advantages of these Job hunt assurance.
+Yes! With Transflower you’ll receive life time access to our career support and alumni network. You’ll start working on your job hunt, and job-ready skills on week one! We support our students from the time they learn their very first line of code until they find a career they’ll love, even after they graduate! Strong network of students, companies who learned from  our mentor would help in getting connected. Your performance , commitment  matters a lot for taking advantages of these Job hunt opportunities.
 </details>
 <details>
 <summary>Will Transflower guarantee I'll get a job?</summary>
@@ -42,7 +43,7 @@ While technology  is still growing–even since the economic changes due to COVI
 </details>
 <details>
 <summary>I'm, completely new to coding. Where should I start?</summary>
-We recommend you start with our Free Intro to Coding Workshops. These three-hour workshops cover the basics of JavaScript and are a great first step for learning how to code. The course is created for people with little-to-no coding experience. You can also attend one of our monthly Info Sessions. Our Info Sessions give you a chance to meet Transflower mentors and alumni, review curriculum.  [It is estimated that 85 million computer-programming jobs will be left unfilled by 2030](https://www.kornferry.com/insights/this-week-in-leadership/talent-crunch-future-of-work). TAP FullStck Developer bootcamps like ours help fill that gap much more quickly than colleges can. Our team will help you through the process of learning code and mentor and support you as you prepare for a career you’ll love.
+We recommend you start with our Free Intro to Coding Workshops. These three-hour workshops cover the basics of JavaScript and are a great first step for learning how to code. The course is created for people with little-to-no coding experience. You can also attend one of our monthly Info Sessions. Our Info Sessions give you a chance to meet Transflower mentors and alumni, review curriculum. [It is estimated that 85 million computer-programming jobs will be left unfilled by 2030](https://www.kornferry.com/insights/this-week-in-leadership/talent-crunch-future-of-work). TAP FullStck Developer bootcamps like ours help fill that gap much more quickly than colleges can. Our team will help you through the process of learning FullStack Development Coding and mentor and support team helps you to prepare for a career you’ll love.
 </details>
 <details>
 <summary>Which bootcamp should I take?</summary>
@@ -57,19 +58,20 @@ Both after-hours and daytime programs follow the same curriculum, have amazing i
 </details>
 <details>
 <summary>Who's your average student?</summary>
-Our classrooms are filled with smart, tenacious people who are excited (and a bit nervous) to embark on a new journey into tech careers. Students come from a variety of professional backgrounds — from yoga instructors, healthcare professionals, to retail sales professionals and just about everything in between. We believe tech should reflect the diversity of the real world. We celebrate all backgrounds, races, ethnicities, orientations, and gender identities. Our affinity groups are a great way to connect with other people who share your walk of life. We strive to create a collaborative, diverse classroom and if you’ve made it this far into the FAQ, you’ll fit right in.
+Our classrooms are filled with smart, tenacious people who are excited (and a bit nervous) to embark on a new journey into tech careers. Students come from a variety of professional backgrounds — from yoga instructors, healthcare professionals, to retail sales professionals and just about everything in between. We believe tech should reflect the diversity of the real world. We celebrate all backgrounds, races, ethnicities, orientations, and gender identities. Our affinity groups are a great way to connect with other people who share your walk of life. We strive to create a online collaborative, diverse classroom and if you’ve made it this far into the FAQ, you’ll fit right in.
 </details>
 <details>
 <summary>What are you looking for in a candidate?</summary>
-Our most successful students come to us with some, but not a ton, of programming experience. Many of our students have dabbled in code through online tutorials and courses through Codecademy or Udacity. We’re looking for students who are smart, tenacious, resourceful and hardworking. It should go without saying, but an interest in coding everyday is a must. You’ve gotta like it!
+Our most successful students come to us with some, but not a ton, of programming experience. Many of our students have dabbled in code through online tutorials and courses through Youtube, Codecademy or Udacity. We’re looking for students who are smart, tenacious, resourceful and hardworking. It should go without saying, but an interest in coding everyday is a must. You’ve gotta like it!
 We want candidates that are self-motivated and committed to the Transflower Acceleration Program (TAP). There will be assignments that have to be completed at night and over weekends, so candidates should be prepared to put in the necessary work to be successful. They also need to be punctual for every class and resourceful in how they complete coursework. Learning any new skill can become frustrating, so it’s important to see this opportunity as a welcome challenge, rather than a stress-inducing problem.
 </details>
 <details>
-<summary>To qualify for our bootcamps, an individual must be 18 years or older and have their Bacholors in Engineering or MCA, MCS.
+<summary>To qualify for our bootcamps, an individual must be 18 years or older and have their Bacholors in Engineering or MCA, MCS.</summary>
+
 </details>
 <details>
 <summary>Do I need to have a bachelor's degree?</summary>
-A bachelor’s degree is not required to get into our coding bootcamps. We’ve had many students without degrees become very successful and find great jobs that they love. One of the coolest parts about coding bootcamps is it is a way to enter this field without a degree. However, it’s important to note that some jobs in the tech industry will require a four-year degree.
+Yes, A bachelor’s degree is required to get into our TAP FullStack bootcamps. It would be difficult for undergraduate to  invest time for TAP FullSTack BootCamp from thier existing college activities.  You could learn coding happily when there is not any other stress of other activities. it’s important to note that some jobs in the tech industry will require a four-year degree.
 </details>
 <details>
 <summary>Do I need to be good at math?</summary>
@@ -77,11 +79,11 @@ It’s a myth that you need to be a mathematician to be a coder. Logic and probl
 </details>
 <details>
 <summary>How do I apply?</summary>
-It’s easy—start by filling out our application form. Once we receive your application, the Transflower team reviews your responses and selects a limited number of candidates for a video interview. Then, you’ll be notified of your admission decision.
+It’s easy—start by filling out [our application form](https://docs.google.com/forms/d/1AXAs1znOwd4591V6LIKyrFf4pfPFIQgGe6UWo_U6zDo/prefill/). Once we receive your application, the Transflower team reviews your responses and selects a limited number of candidates for a video interview. Then, you’ll be notified of your admission decision.
 </details>
 <details>
 <summary>Who are your instructors?</summary>
-Our instructors come from a variety of backgrounds, including Microsoft Certified Trainers, seasoned developers, bootcamp alumni, industry professionals and other tech enthusiasts. All instructors and course work are reviewed and approved by our  Chief Mentor, Director of Learning.
+Our instructors come from a variety of backgrounds, including Microsoft Certified Trainers, seasoned developers, bootcamp alumni, industry professionals and other tech enthusiasts. All instructors and course work are designed, reviewed and approved by our Chief Mentor, [Ravi Tambade](https://in.linkedin.com/in/ravitambade/), Director of Transflower Learning Pvt. Ltd.
 </details>
 <details>
 <summary>What computer equipment do I need for bootcamp?</summary>
