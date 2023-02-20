@@ -12,18 +12,15 @@
 
 <details>
 <summary>Are your bootcamps in-person or online ?</summary>
-Our bootcamps are 100% online, taught by live instructors via zoom. You can login and take all our bootcamps from anywhere.
+Our bootcamps are 100% online, taught by live instructors via zoom. Online lectures, Demonstration, Hands- on are based on Project based Activities using Scrum Framework. Participat would get expereince of Learn from anywhere for getting ready for Work from Home.
+This boot camp does not only build technical skill but it also develop soft skill essential for Work from Home culture. Work from Home culture have been adopted by so many companies in these three years. Participants have to be ready for Work from Home as well as Hybrid Work culture mode. Instructors have more than  10 year of experience conducting online live session (Theroy as well as Labs).
 
 </details>
 
-<details>
-<summary>Are your bootcamps in-person or online ?</summary>
-Our bootcamps are 100% online, taught by live instructors via zoom. You can login and take all our bootcamps from anywhere.
-</details>
 
 <details>
 <summary>What times of day are your bootcamps?</summary>
-Our after-hours program is 28 weeks and meets from 6:30 pm – 10 pm EST on Mondays, Wednesdays, and Thursdays. Our daytime program is 14 weeks and meets daily from 9 am – 5 pm EST.
+ Our daytime program is 14 weeks and meets daily from 9 am – 5 pm EST. Our after-hours program is 28 weeks and meets from 6:30 pm – 10 pm EST on Mondays, Wednesdays, and Thursdays. There are few latest technology boot camp sheduled as Week end batches for working professionals as well as individuals who need to upkill for those technologies.
 </details>
 <details>
 <summary>How much do bootcamp cost ?</summary>
@@ -32,34 +29,35 @@ Our standard tuition is 30000 Rs. Your commitment to growth and education deserv
 <details>
 <summary>Feeling sticker shock? </summary>
 Our admissions team is ready to help you talk through your goals, options, and questions!
-Schedule a 15-minute 1:1 chat with them.
+You can schedule a 15-minute 1:1 chat with them through email request of Whats app call, message.
 </details>
+
 <details>
 <summary>Cay you help me get a tech job after I graduate?</summary>
-Yes! With Transflower you’ll receive life time access to our career support and alumni network. You’ll start working on your job hunt, and job-ready skills on week one! We support our students from the time they learn their very first line of code until they find a career they’ll love, even after they graduate!
+Yes! With Transflower you’ll receive life time access to our career support and alumni network. You’ll start working on your job hunt, and job-ready skills on week one! We support our students from the time they learn their very first line of code until they find a career they’ll love, even after they graduate! Strong network of students, companies who learned from  our mentor would help in getting connected. Your performance , commitment  matters a lot for taking advantages of these Job hunt assurance.
 </details>
 <details>
 <summary>Will Transflower guarantee I'll get a job?</summary>
-While tech is still growing–even since the economic changes of 2020–we know that there are a lot of concerns around getting hired after a bootcamp. While we don’t offer a job guarantee, we do promise to provide the best in the business career services and coaching. Our career services team helps you during bootcamp, and after bootcamp once you’ve become an alumnus. Combined with our network of employer connections in the Midwest and beyond, and a focus on equipping you to land your dream job through, you’ll have a full set of job-landing tools at your disposal.
+While technology  is still growing–even since the economic changes due to COVID 2020–we know that there are a lot of concerns around getting hired after a bootcamp. While we don’t offer a job guarantee, we do promise to provide the best in the business career services and coaching. Our career services team will helps candidate during bootcamp, and after bootcamp once you’ve become an alumnus. Combined with our network of employer connections in the India and beyond, and a focus on equipping you to land your dream job through, you’ll have a full set of job-landing tools at your disposal. Your continous efforts of completing hands on, mini-projects, updation of Github repositories on time along with mentor technical guidance support would help in getting job opportunity in Information Technology companies in India.
 </details>
 <details>
 <summary>I'm, completely new to coding. Where should I start?</summary>
-We recommend you start with our Free Intro to Coding Workshops. These three-hour workshops cover the basics of JavaScript and are a great first step for learning how to code. The course is created for people with little-to-no coding experience. You can also attend one of our monthly Info Sessions. Our Info Sessions give you a chance to meet Transflower mentors and alumni, review curriculum. It is estimated that 1 million computer-programming jobs will be left unfilled by 2023. Coding bootcamps like ours help fill that gap much more quickly than colleges can. Our team will help you through the process of learning code and coach and support you as you prepare for a career you’ll love.
+We recommend you start with our Free Intro to Coding Workshops. These three-hour workshops cover the basics of JavaScript and are a great first step for learning how to code. The course is created for people with little-to-no coding experience. You can also attend one of our monthly Info Sessions. Our Info Sessions give you a chance to meet Transflower mentors and alumni, review curriculum.  [It is estimated that 85 million computer-programming jobs will be left unfilled by 2030](https://www.kornferry.com/insights/this-week-in-leadership/talent-crunch-future-of-work). TAP FullStck Developer bootcamps like ours help fill that gap much more quickly than colleges can. Our team will help you through the process of learning code and mentor and support you as you prepare for a career you’ll love.
 </details>
 <details>
 <summary>Which bootcamp should I take?</summary>
 Great question. We know this one can slow people down. Here are a few things you can do to help you decide. 
- 1. Keep in mind it’s a matter of preference, there is no right or wrong. Search for jobs in web development that include "front end", "web development" "JavaScript" or "back end" or "C# .NET" out of the jobs you find, note which ones appeal to you the most. Some people look for employers they want to work for and note what jobs they hire for the most.
+ 1. Keep in mind it’s a matter of preference, there is no right or wrong. Search for jobs in web development that include "front end", "web development" "JavaScript" or "back end" or "C# .NET" or "Java" or "Python" out of the jobs you find, note which ones appeal to you the most. Some people look for employers they want to work for and note what jobs they hire for the most.
  2. Attend one of our many events! Info sessions, coding workshops, and our other monthly events are great places for you to get to know the lay of the land.
  3. Take a workshop! They’re taught by bootcamp graduates who once asked the same question. They make coding un-intimidating and can answer your career questions along the way.
 </details>
 <details>
 <summary>How is after-hours different than daytime?</summary>
-Both after-hours and daytime programs follow the same curriculum, have amazing instructors, program managers, and career coaches. The only difference is the schedule. The after-hours program is 28 weeks and meets from 6:30pm-10pmEST on Monday, Wednesday, and Thursday. The daytime program is 14 weeks and meets daily from 9am-5pmEST.
+Both after-hours and daytime programs follow the same curriculum, have amazing instructors, program managers, and career coaches. The only difference is the schedule. The after-hours program is 28 weeks and meets from 6:30pm-10pm  on Monday, Wednesday, and Thursday. The daytime program is 14 weeks and meets daily from 9am-5pm.
 </details>
 <details>
 <summary>Who's your average student?</summary>
-Our classrooms are filled with smart, tenacious people who are excited (and a bit nervous) to embark on a new journey into tech careers. Students come from a variety of professional backgrounds — from yoga instructors, healthcare professionals, to retail sales professionals and just about everything in between. We believe tech should reflect the diversity of the real world. We celebrate all backgrounds, races, ethnicities, orientations, and gender identities. Our affinity groups are a great way to connect with other people who share your walk of life. We strive to create a collaborative, diverse classroom and if you’ve made it this far into the FAQ, you’ll fit right in. You can get more details on demographics in our Outcomes report.
+Our classrooms are filled with smart, tenacious people who are excited (and a bit nervous) to embark on a new journey into tech careers. Students come from a variety of professional backgrounds — from yoga instructors, healthcare professionals, to retail sales professionals and just about everything in between. We believe tech should reflect the diversity of the real world. We celebrate all backgrounds, races, ethnicities, orientations, and gender identities. Our affinity groups are a great way to connect with other people who share your walk of life. We strive to create a collaborative, diverse classroom and if you’ve made it this far into the FAQ, you’ll fit right in.
 </details>
 <details>
 <summary>What are you looking for in a candidate?</summary>
