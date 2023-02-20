@@ -6,19 +6,22 @@
 
 <details>
 <summary> Duration: 15 Weeks  ( 5 Days a week) (9:30 am to 4:30 pm)</summary>
-    Days : 75
-    Hours: 450
-    150 hours Mentor Delivery  (Lecture, Demonstration)
-    300 hours Hand-on along with Mentor 
-    ( Problem Solving, Coding, Building, Testing, Deployment, DevOps, .etc)
-    (6 hours per day) Program (Monday to Friday 9:30 am to 4:30 pm)
+     <ol>
+        <li>Days : 75</li>
+        <li>Hours: 450</li>
+        <li>150 hours Mentor Delivery  (Lecture, Demonstration)</li>
+        <li>Problem Solving, Coding, Building, Testing, Deployment, DevOps, .etc</li>
+    
+    </ol>
 </details>
 
 <details>
 <summary>Delivery Mode:30%-70% (Online Session-Lab) </summary>
-     Project Based Learning. Learn by Doing. 
-	BootCamp would follow agile Continous Learning for CI/CD culture adopted by industries.
-    Continous Integration/ Continous Delivery ( CI/CD) pipline
+    <ol>
+        <li>Project Based Learning. Learn by Doing. </li>
+        <li>BootCamp would follow agile Continous Learning for CI/CD culture adopted by industries.</li>
+        <li>Continous Integration/ Continous Delivery (CI/CD) pipeline</li>
+    </ol>
 </details>
 
 <details>
