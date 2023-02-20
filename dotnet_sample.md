@@ -4,16 +4,15 @@
 ### Boot Camp Contents
 
 <details>
-<summary>Introduction to Software Engineering</summary>
+<summary>Software Engineering</summary>
     <ul>
     <li>Software Development Life Cycle</li>
     <li>Software Requirements</li>
     <li>Software Requirements Specification</li>
     </ul>
 </details>     
-
 <details>
-<summary>Collaborative Software Development (Git, Git Hub)</summary>  
+<summary>Collaborative Software Development</summary>  
        <ul>
         <li> Software Development Team</li>
         <li>Source Control Tools </li>
@@ -21,11 +20,8 @@
         <li>Git Commands </li>
         <li>Git Workflow</li>
 </details>
-
-
-    
 <details>
-<summary>3.	Agile Methodology (Scrum Framework)</summary>
+<summary>3.Agile Methodology</summary>
     <ul>
     <li>Agile Manifesto</li>
     <li>Scrum Framework</li>
@@ -35,9 +31,9 @@
     </ul>
 </details>
 <details>
-<summary>4.	Building & Managing Databases</summary>
+<summary>4.	Relational Database Management Systems</summary>
     <ul>
-        <li>DBMS</li>
+        <li>RDBMS</li>
         <li>Database Design ER Diagrams, Data Flow Diagrams</li>
         <li>Data Definition Language Commands</li>
         <li>CRUD Operations against Tables</li>
@@ -51,17 +47,14 @@
         <li>Database as a Service</li>
     </ul>
 </details>
-
-
 <details>
-<summary>5.	Basics of Programming</summary>
+<summary>5.	Essential C# Programming</summary>
     <ul>
-        <li> Application Development</li>
+        <li> DotNet Core App Development</li>
         <li>Dotnet Core Developer Enviornment </li>
-        <li>Dotnet Core Solution, Project, Source files </li>
-        <li>Create, Build, Run Dotnet Solution </li>
-        <li>C# Programming Essentials </li>
-        <li>Object Oriented Programming using C# </li>
+        <li>Create, Build, Run Dotnet Solutions </li>
+        <li>C# Types, Keyword, Coding Conventions </li>
+        <li>Object Oriented Programming (OOPS)</li>
         <li>Interfaces, Delegate & Events </li>
         <li>Collection Framework</li>
         <li>File I/O, JSON Serialization</li>
@@ -72,29 +65,29 @@
 <details>
 <summary>Database Connectivity</summary>
         <ul>
-        <li>Using packages for database connectivity</li>
-        <li>CRUD operations using mysql connector</li>
-        <li>using Connected, Disconnected Data Access Mode</li>
-        <li>Invoking Stored Procedures</li>
-        <li>Obect Relational Mapping Technique </li>
-        <li>Using Entity Framework Core</li>
-        <li>Data First, Code First Approach </li>
-        <li>ORM Migrations</li>
-        <li>Building Data Access Logic Layer </li>
+            <li>database connectivity using C#</li>
+            <li>CRUD operations using mysql connector</li>
+            <li>Connected, Disconnected Data Access Mode</li>
+            <li>Invoking Stored Procedures</li>
+            <li>Obect Relational Mapping(ORM) </li>
+            <li>Entity Framework Core</li>
+            <li>Data First & Code First Approach </li>
+            <li>ORM Migrations</li>
+            <li>Building Data Access Logic Layer </li>
         </ul>
 </details> 
 <details>
 <summary>7.	Windows App Development Dot NET Core</summary>
-    <ol>
+    <ull>
         <li>Using dotnet core CLI for Windows Application Development </li>
         <li>Event Driven Architecture and Forms </li>
         <li> Using Menus, Controls in .net core windows applications</li>
         <li>Building Windows Apps </li>
-    </ol>
+    </ul>
 </details> 
 <details>
 <summary>9.	Essential Web Technologies</summary>
-    <ol>
+    <ul>
         <li>Web Application Architecture</li>
         <li>Web Taxanomy & Topologies</li>
         <li>HTML and Web Pages</li>
@@ -106,11 +99,11 @@
         <li>Ajax & External Data Access</li>
         <li>Responsive User Inteface Framework BootStrap/ Material</li>
         <li>Building Interactive Web Site</li>
-    </ol>
+    </ul>
 </details> 
 <details>
 <summary>10.	Web App Development using ASP.NET Core</summary>
-    <ol>
+    <ul>
         <li>Web Application Development using ASP.NET CORE 7.0 </li>
         <li>Using .net CLI for Web Application Development </li>
         <li>Building Web App using Razor pages, layouts and C# </li>
@@ -130,123 +123,148 @@
         <li>async , await, Task Parallel Library </li>
         <li>Invoking Web API cors, HTTPClient</li>
         <li>Secure REST API</li>
-    </ol>
-
+    </ul>
 </details> 
 <details>
 <summary>11.	Node JS</summary>
-    1. Rise of JavaScript as Full Stack Programming Language today
-    2. Node js as V8 JavaScript Runtime Engine
-    3. Building & Debugging Node JS with VS code
-    4. Event Emitter, Callback Functions
-    5. File IO, JSON Operations
-    6. Building Web app using HTTP module 
-    7. Node Package Manager & Express JS
-    8. Express Middleware & Router
-    9. REST API using Express JS
-    10. Using Tool Chain for Web Apps CI/CD pipeline
-    11. Using MySQL , Mongo Db connectivity using Node JS
-    12. Handling HTTP Requests (CRUD) using Web API
-    13. async , await, Task Parallel Library 
-    14. Invoking Web API cors, HTTPClient
-    15. Secure REST API
+    <ul>
+        <li>Rise of JavaScript as Full Stack Programming Language today</li>
+        <li>Node js as V8 JavaScript Runtime Engine</li>
+        <li>Building & Debugging Node JS with VS code</li>
+        <li>Event Emitter, Callback Functions</li>
+        <li>File IO, JSON Operations</li>
+        <li>Building Web app using HTTP module </li>
+        <li>Node Package Manager & Express JS</li>
+        <li>Express Middleware & Router</li>
+        <li>REST API using Express JS</li>
+        <li>Using Tool Chain for Web Apps CI/CD pipeline</li>
+        <li>Using MySQL , Mongo Db connectivity using Node JS</li>
+        <li>Handling HTTP Requests (CRUD) using Web API</li>
+        <li>async , await, Task Parallel Library </li>
+        <li>Invoking Web API cors, HTTPClient</li>
+        <li>Secure REST API</li>
+    </ul>
 </details> 
 <details>
 <summary>13.	React</summary>
-    1. Simple React JS App
-    2. React JS build Enviornment
-    3. Component based Approach
-    4. Props and State
-    5. Nested Components
-    6. React Forms 
-    7. React Routing (SPA)
-    8. External Data Access (AXIOS, fetch)
-    9. Data Application Architecture Redux
-    10. React Testing
+    <ul>
+        <li>Simple React JS App</li>
+        <li>React JS build Enviornment</li>
+        <li>Component based Approach</li>
+        <li>Props and State</li>
+        <li>Nested Components</li>
+        <li>React Forms</li>
+        <li>React Routing (SPA)</li>
+        <li>External Data Access (AXIOS, fetch)</li>
+        <li>Data Application Architecture Redux</li>
+        <li>React Testing</li>
+    </ul>
 </details>   
-
-
-
 <details>
-<summary>14.	Angular</summary>
-    1. Angular CLI and Single Page Application
-    2. Angular UI Architecture
-    3. Components & Modules
-    4. Directives & Pipes
-    5. Angular Forms
-    6. Extending Angular App 
-    7. Component Life Cycle
-    8. Injectable Services
-    9. Custom Directives and Pipes
-    10. External REST API data access using HttpClient
-    11. RxJS Operators
-    12. Single Page Application using Routing
-    13. Secure Routes
+<summary>14.Angular</summary>
+    <ul>
+        <li>Angular CLI and Single Page Application</li>
+        <li>Angular UI Architecture</li>
+        <li> Components & Modules</li>
+        <li>Directives & Pipes</li>
+        <li>Angular Forms</li>
+        <li>Extending Angular App</li>
+        <li>Component Life Cycle</li>
+        <li>Injectable Services</li>
+        <li>Custom Directives and Pipes</li>
+        <li>External REST API data access using HttpClient</li>
+        <li>RxJS Operators</li>
+        <li>Single Page Application using Routing</li>
+        <li>Child Routes, Secure Routes, Lazy loading, PreLoading</li>
+     </ul>
      </details>   
 <details>
-<summary>15.	Applying Best PractiesUsing Clean Code Strategy</summary>
-    1. Crafting Software
-    2. Importance of Framework, Design Patterns, Design Principles
-    3. Following Design Principles
-    4. Descovring Design Patterns
-    5. Applying Design Patterns
-    6. Micro Services Architecture 
-    7. Transforming existing Web App using MicroServices
-    8. MicroServices API Gateway
-    9. Communicating with Micro Services RabbitMQ, GRPC, Kafka,etc.
-    10. Micro Services and Cloud Ready Apps
-    10. Testable Micro services
+<summary>15.Applying Best PractiesUsing Clean Code Strategy</summary>
+    <ul>
+        <li>Crafting Software</li>
+        <li>Importance of Framework, Design Patterns, Design Principles</li>
+        <li>Following Design Principles</li>
+        <li>Descovring Design Patterns</li>
+        <li>Applying Design Patterns</li>
+        <li>Micro Services Architecture </li>
+        <li>Transforming existing Web App using MicroServices</li>
+        <li>MicroServices API Gateway</li>
+        <li>Communicating with Micro Services RabbitMQ, GRPC, Kafka,etc.</li>
+        <li>Micro Services and Cloud Ready Apps</li>
+        <li>Testable Micro services</li>
+        <li></li>
+     </ul>
   </details>   
 <details>
-<summary>16.	Software Testing</summary>
-    1. Why Software Testing
-    2. STLC vs SDLC
-    3. V-Model
-    4. Test Plan
-    5. Writing Test Cases
-    6. Setting up Testing Enviornment 
-    7. Test Execution
-    8. Introduction to Test Automation
-    9. Selenium IDE, Selenium Web Driver
-    10. Using Unit Testing Frameworks
-    11. Test Driven Development
+<summary>16.Software Testing</summary>
+     <ul>
+        <li>Why Software Testing </li>
+        <li> STLC vs SDLC</li>
+        <li>V-Model </li>
+        <li>Test Plan </li>
+        <li>Writing Test Cases </li>
+        <li>Setting up Testing Enviornment </li>
+        <li> Test Execution</li>
+        <li>Introduction to Test Automation </li>
+        <li>Selenium IDE, Selenium Web Driver </li>
+        <li>Using Unit Testing Frameworks </li>
+        <li>Test Driven Development </li>
+        <li> </li>
+     </ul>
  </details>   
 <details>
-<summary>17.	Linux Operating System</summary>
-    1. Installing Linux
-    2. Basic Linux Commands
-    3. Grep Commands , Pipes
-    4. 
-    10. CMode
-    11. Crone Job
+<summary>17.Linux Operating System</summary>
+    <ul>
+        <li>Installing Linux</li>
+	    <li>Basic Linux Commands</li>
+	    <li>Grep Commands , Pipes</li>
+        <li>CMode</li>
+        <li>Crone Job</li>
+	    <li></li>
+	    <li></li>
+        <li></li>
+    </ul>
  </details>   
 <details>
 <summary>18. Cloud Computing</summary>
-    1. Introduction to Cloud
-	2. Using Public Cloud (AWS, Azure, Google Cloud)
-	3. IT Solution Deployment to on premise, hosted environment
-    4. Virtualization 
+    <ul>
+        <li>Introduction to Cloud</li>
+	    <li>Using Public Cloud (AWS, Azure, Google Cloud)</li>
+	    <li>IT Solution Deployment to on premise, hosted environment</li>
+        <li>Virtualization </li>
+    </ul>
  </details>   
 <details>
 <summary>19. Containerization</summary>
-    1. Virtualization vs. Containerization
-    2. Docker Engine & Docker Hub
-    3. Docker Commands
-    4. Dockerizing exiting Web Apps
-    5. Conatiner Orchestration using Kubernetes
-    6. Microservices with Kubernetes
+    <ul>
+        <li> Virtualization vs. Containerization</li>
+        <li>Docker Engine & Docker Hub</li>
+        <li> Docker Commands</li>
+        <li>Dockerizing exiting Web Apps </li>
+        <li>Conatiner Orchestration using Kubernetes </li>
+        <li>Microservices with Kubernetes </li>
+    </ul>
  </details>   
 <details>
-<summary>20.	CI/CD Pipline (DevOps)</summary>
-    1. Git Actions & Git Workflow
-    2. Setting up CI/CD pipeline,
-    3. Jenkins
-    4. Azure DevOps
+<summary>20.CI/CD Pipeline (DevOps)</summary>
+    <ul>
+        <li>Git Actions & Git Workflow</li>
+        <li>Setting up CI/CD pipeline</li>
+        <li>Jenkins</li>
+        <li>Azure DevOps</li>
+    </ul>
  </details>   
 <details>
-<summary>21.	Data Structures and Algorithms using C#</summary>
+<summary>21.Data Structures and Algorithms using C#</summary>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
 </details>
 <details>
 <summary>
 22.	Getting ready for Interviews</summary>
+
  </details>   
