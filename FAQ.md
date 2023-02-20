@@ -96,7 +96,7 @@ Storage: Please make sure you have at least 15GB free space for software and pro
 Display: A 12-inch screen with 1366×768 resolution will serve you well
 Second Monitor: For remote bootcamps, a second screen is recommended–if you don’t have a monitor for a second screen, you could use a television or potentially a tablet.
 </details>
-<details>
+
 <details>
 <summary>How do I apply?</summary>
 It’s easy—start by filling out our application form. The form will be shred to your gmail id. Do send email with subject  TAP Fullstack enquiry to ravi.tambade@transflower.in. Once we receive your application form submitted, the Transflower team reviews your responses and selects a limited number of candidates for a video interview. This process will ensure your honest and keen interest in TAP. Then, you’ll be notified of your admission decision.
