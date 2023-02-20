@@ -5,116 +5,133 @@
 
 <details>
 <summary>Introduction to Software Engineering</summary>
-    <ol>
+    <ul>
     <li>Software Development Life Cycle</li>
     <li>Software Requirements</li>
     <li>Software Requirements Specification</li>
-    </ol>
+    </ul>
 </details>     
 
 <details>
-<summary>Collaborative Software Development (Git, Git Hub)</summary>
-        Software Development Team
-        Source Control Tools
-        Git and GitHub
-        Git Commands
-        Git Workflow
+<summary>Collaborative Software Development (Git, Git Hub)</summary>  
+       <ul>
+        <li> Software Development Team</li>
+        <li>Source Control Tools </li>
+        <li>Git and GitHub</li>
+        <li>Git Commands </li>
+        <li>Git Workflow</li>
 </details>
 
 
     
 <details>
 <summary>3.	Agile Methodology (Scrum Framework)</summary>
-    Agile Manifesto
-    Scrum Framework
-    CI/CD Pipeline
-    DevOps Overview
-    Selenium IDE 
+    <ul>
+    <li>Agile Manifesto</li>
+    <li>Scrum Framework</li>
+    <li>CI/CD Pipeline</li>
+    <li>DevOps Overview</li>
+    <li>Selenium IDE </li>
+    </ul>
 </details>
 <details>
 <summary>4.	Building & Managing Databases</summary>
-    DBMS
-    Database Design ER Diagrams, Data Flow Diagrams
-    Data Definition Language Commands
-    CRUD Operations against Tables
-    SQL Queries
-    Nested and Join Queries
-    Transactions & ACID properties
-    Stored Procedures & triggers
-    Building backend for Project
-    Operations management of Database Server
-    NoSQL Databases
-    Database as a Service
+    <ul>
+        <li>DBMS</li>
+        <li>Database Design ER Diagrams, Data Flow Diagrams</li>
+        <li>Data Definition Language Commands</li>
+        <li>CRUD Operations against Tables</li>
+        <li>SQL Queries</li>
+        <li>Nested and Join Queries</li>
+        <li>Transactions & ACID properties</li>
+        <li>Stored Procedures & triggers </li>
+        <li>Building backend for Project</li>
+        <li>Operations management of Database Server</li>
+        <li>NoSQL Databases</li>
+        <li>Database as a Service</li>
+    </ul>
 </details>
 
 
 <details>
 <summary>5.	Basics of Programming</summary>
-    Application Development
-    Dotnet Core Developer Enviornment
-    Dotnet Core Solution, Project, Source files
-    Create, Build, Run Dotnet Solution
-    C# Programming Essentials
-    Object Oriented Programming using C#
-    Interfaces, Delegate & Events
-    Collection Framework
-    File I/O, JSON Serialization
-    Reflection, Garbage Collection
+    <ul>
+        <li> Application Development</li>
+        <li>Dotnet Core Developer Enviornment </li>
+        <li>Dotnet Core Solution, Project, Source files </li>
+        <li>Create, Build, Run Dotnet Solution </li>
+        <li>C# Programming Essentials </li>
+        <li>Object Oriented Programming using C# </li>
+        <li>Interfaces, Delegate & Events </li>
+        <li>Collection Framework</li>
+        <li>File I/O, JSON Serialization</li>
+        <li>Reflection, Garbage Collection</li>
+    </ul>
 </details> 
+
 <details>
 <summary>Database Connectivity</summary>
-    Using packages for database connectivity
-    CRUD operations using mysql connector
-    using Connected, Disconnected Data Access Mode
-    Invoking Stored Procedures
-    Obect Relational Mapping Technique
-    Using Entity Framework Core
-    Data First, Code First Approach
-    ORM Migrations
-    Building Data Access Logic Layer
+        <ul>
+        <li>Using packages for database connectivity</li>
+        <li>CRUD operations using mysql connector</li>
+        <li>using Connected, Disconnected Data Access Mode</li>
+        <li>Invoking Stored Procedures</li>
+        <li>Obect Relational Mapping Technique </li>
+        <li>Using Entity Framework Core</li>
+        <li>Data First, Code First Approach </li>
+        <li>ORM Migrations</li>
+        <li>Building Data Access Logic Layer </li>
+        </ul>
 </details> 
 <details>
 <summary>7.	Windows App Development Dot NET Core</summary>
-    1. Using dotnet core CLI for Windows Application Development
-    2. Event Driven Architecture and Forms
-    3. Using Menus, Controls in .net core windows applications
-    4. Building Windows Apps
+    <ol>
+        <li>Using dotnet core CLI for Windows Application Development </li>
+        <li>Event Driven Architecture and Forms </li>
+        <li> Using Menus, Controls in .net core windows applications</li>
+        <li>Building Windows Apps </li>
+    </ol>
 </details> 
 <details>
 <summary>9.	Essential Web Technologies</summary>
-    1. Web Application Architecture
-    2. Web Taxanomy & Topologies
-    3. HTML and Web Pages
-    4. HTML elements & Features
-    5. Dynamic Web Pages and Javascript
-    6. Document Object Model
-    7. Using Cascaded Style Sheets (CSS)
-    8. jQuery Selectors
-    9. Ajax & External Data Access
-    10. Responsive User Inteface Framework BootStrap/ Material
-    11. Building Interactive Web Site
+    <ol>
+        <li>Web Application Architecture</li>
+        <li>Web Taxanomy & Topologies</li>
+        <li>HTML and Web Pages</li>
+        <li>HTML elements & Features</li>
+        <li>Dynamic Web Pages and Javascript</li>
+        <li>Document Object Model</li>
+        <li>Using Cascaded Style Sheets (CSS)</li>
+        <li>jQuery Selectors</li>
+        <li>Ajax & External Data Access</li>
+        <li>Responsive User Inteface Framework BootStrap/ Material</li>
+        <li>Building Interactive Web Site</li>
+    </ol>
 </details> 
 <details>
 <summary>10.	Web App Development using ASP.NET Core</summary>
-    1. Web Application Development using ASP.NET CORE 7.0
-    2. Using .net CLI for Web Application Development
-    3. Building Web App using Razor pages, layouts and C#
-    4. Using ASP.NET MVC Framework
-    5. ASP.NET Middleware
-    6. Using Controllers, Actions & Views
-    7. HTML helper functions
-    8. State Management in ASP.NET Core
-    9. Separation of Concernt, Dependency Injection
-    10. Application Repository Pattern
-    11. Applying Web Application Security
-    12. Filters
-    13. Membership and Roles  Management
-    14. Javascript Web Token (JWT)
-    15. Introduction to asp.net core Web API
-    16. Handling HTTP Requests (CRUD) using Web API
-    17. async , await, Task Parallel Library 
-    18. Invoking Web API cors, HTTPClient
-    19. Secure REST API
+    <ol>
+        <li>Web Application Development using ASP.NET CORE 7.0 </li>
+        <li>Using .net CLI for Web Application Development </li>
+        <li>Building Web App using Razor pages, layouts and C# </li>
+        <li>Using ASP.NET MVC Framework </li>
+        <li>ASP.NET Middleware</li>
+        <li>Using Controllers, Actions & Views </li>
+        <li>HTML helper functions</li>
+        <li>State Management in ASP.NET Core </li>
+        <li>Separation of Concernt, Dependency Injection</li>
+        <li>Application Repository Pattern</li>
+        <li>Applying Web Application Security</li>
+        <li>Filters</li>
+        <li>Membership and Roles  Management</li>
+        <li>Javascript Web Token (JWT)</li>
+        <li>Introduction to asp.net core Web API</li>
+        <li>Handling HTTP Requests (CRUD) using Web API</li>
+        <li>async , await, Task Parallel Library </li>
+        <li>Invoking Web API cors, HTTPClient</li>
+        <li>Secure REST API</li>
+    </ol>
+
 </details> 
 <details>
 <summary>11.	Node JS</summary>
