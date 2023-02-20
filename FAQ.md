@@ -77,13 +77,10 @@ Yes, A bachelor’s degree is required to get into our TAP FullStack bootcamps. 
 <summary>Do I need to be good at math?</summary>
 It’s a myth that you need to be a mathematician to be a coder. Logic and problem-solving skills are vital to being a developer though, and those skills are closely related to math. But don’t worry, we won’t ask you to do trigonometry or algebra.
 </details>
-<details>
-<summary>How do I apply?</summary>
-It’s easy—start by filling out [our application form](https://docs.google.com/forms/d/1AXAs1znOwd4591V6LIKyrFf4pfPFIQgGe6UWo_U6zDo/prefill/). Once we receive your application, the Transflower team reviews your responses and selects a limited number of candidates for a video interview. Then, you’ll be notified of your admission decision.
-</details>
+
 <details>
 <summary>Who are your instructors?</summary>
-Our instructors come from a variety of backgrounds, including Microsoft Certified Trainers, seasoned developers, bootcamp alumni, industry professionals and other tech enthusiasts. All instructors and course work are designed, reviewed and approved by our Chief Mentor, [Ravi Tambade](https://in.linkedin.com/in/ravitambade/), Director of Transflower Learning Pvt. Ltd.
+Our instructors come from a variety of backgrounds, including Microsoft Certified Trainers, seasoned developers, bootcamp alumni, industry professionals and other tech enthusiasts. All instructors and course work are designed, reviewed and approved by our Chief Mentor, Ravi Tambade(https://in.linkedin.com/in/ravitambade/), Director of Transflower Learning Pvt. Ltd.
 </details>
 <details>
 <summary>What computer equipment do I need for bootcamp?</summary>
@@ -100,6 +97,7 @@ Display: A 12-inch screen with 1366×768 resolution will serve you well
 Second Monitor: For remote bootcamps, a second screen is recommended–if you don’t have a monitor for a second screen, you could use a television or potentially a tablet.
 </details>
 <details>
-<summary>Do I need to do anything before bootcamp?</summary>
-Before the first day, every bootcamp student completes two full weeks of mandatory pre-work we call Unit 1. This work provides the foundation for the bootcamp lessons and covers fundamentals that all successful developers need to know. But you’re not on your own: we offer Tech Wednesdays each week which are specifically designed to help you troubleshoot all your Unit 1 questions. We also strongly recommend you reach out to developers either in the Transflower community or others you may know to learn more about their experiences in tech.
+<details>
+<summary>How do I apply?</summary>
+It’s easy—start by filling out our application form. The form will be shred to your gmail id. Do send email with subject  TAP Fullstack enquiry to ravi.tambade@transflower.in. Once we receive your application form submitted, the Transflower team reviews your responses and selects a limited number of candidates for a video interview. This process will ensure your honest and keen interest in TAP. Then, you’ll be notified of your admission decision.
 </details>
