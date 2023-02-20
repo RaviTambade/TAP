@@ -15,14 +15,14 @@
 </details>
 
 <details>
-<summary>Delivery Mode </summary>
-    30%- 70% (Theory—Hands-on) Project Based Learning. Learn by Doing. 
+<summary>Delivery Mode:30%-70% (Online Session-Lab) </summary>
+     Project Based Learning. Learn by Doing. 
 	BootCamp would follow agile Continous Learning for CI/CD culture adopted by industries.
     Continous Integration/ Continous Delivery ( CI/CD) pipline
 </details>
 
 <details>
-<summary>Prerequisite:</summary> 
+<summary>Prerequisite: Bachelors in Engg, MCA</summary> 
     1.  Bachelors in Engineering (BE, BTech) 
        1. Computers or Information Technology (IT), Electronics, Electronics & Telecommunications(E&TC)
        2. Electrical or Mechanical
@@ -32,7 +32,7 @@
 </details>
 
 <details>
-<summary>Deliverables: </summary>
+<summary>Deliverables: Access to Transflower Portal</summary>
      1. Access to recorded sessions
      2. Mentor prepared notes 
      3. Concept Visualized Digrams
