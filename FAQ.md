@@ -4,12 +4,17 @@
 
 <details>
 <summary>What is TAP ? </summary>
-Our bootcamps are 100% online, taught by live instructors via zoom. You can login and take all our bootcamps from anywhere.
+
+ TAP full form is Transflower Acceleration Program. It an Initive towards bridging the gap between Information Technology Expectaions and Latest Technology Skill Development of Freshers. TAP mentors enthusiastic learner to acquire skill using Project Based Learning Approach. Transflower beleives in "Learning is not a destination, it is a continuous journey". More than 25 years of Learning and Teaching experience at your service through Transflower to prepare candidate for FullStack Developer Role. Tap your potential. 
+
+ We request you to spend a time to know about TAP by reading [A Conversation between Mentor and Mentee](https://ravitambade.wordpress.com/2023/02/19/a-conversion-between-mentor-and-mentee/). TAP program prepares you to be ready for work from anywhere through Learn from anyWhere. It is 100% online, taught by live Mentor via online digital tools like Teams, Zoom , Google meet,etc.
+
 </details>
 
 <details>
 <summary>Are your bootcamps in-person or online ?</summary>
 Our bootcamps are 100% online, taught by live instructors via zoom. You can login and take all our bootcamps from anywhere.
+
 </details>
 
 <details>
