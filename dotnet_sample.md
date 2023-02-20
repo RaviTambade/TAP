@@ -5,7 +5,7 @@
 
 
 <details>
-<summary>#### Duration: 15 Weeks  ( 5 Days a week) (9:30 am to 4:30 pm)</summary>
+<summary> #### Duration: 15 Weeks  ( 5 Days a week) (9:30 am to 4:30 pm)</summary>
     Days : 75
     Hours: 450
     150 hours Mentor Delivery  (Lecture, Demonstration)
@@ -15,14 +15,14 @@
 </details>
 
 <details>
-<summary>#### Delivery Mode </summary>
+<summary> #### Delivery Mode </summary>
     30%- 70% (Theory—Hands-on) Project Based Learning. Learn by Doing. 
 	BootCamp would follow agile Continous Learning for CI/CD culture adopted by industries.
     Continous Integration/ Continous Delivery ( CI/CD) pipline
 </details>
 
 <details>
-<summary>#### Prerequisite:</summary> 
+<summary> #### Prerequisite:</summary> 
     1. Having Bachelors in Engineering (BE, BTech) 
        1. Computers or Information Technology (IT), Electronics, Electronics & Telecommunications(E&TC)
        2. Electrical or Mechanical
