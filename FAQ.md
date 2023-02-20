@@ -90,7 +90,7 @@ Great question! In short, you’ll need good laptop. A second monitor/TV/tablet 
 <summary>Specific laptop specs</summary>
 <b>CPU:</b> 
 <p>Minimum: At least a dual-core 2Ghz or higher (Intel i3/i5/i7 or AMD equivalent)</p>
-<p>Recommended: At least quad-core (4 cores) Intel i5 or i7, AMD Ryzen 5/7/9, or (Mac) M1>/p>
+<p>Recommended: At least quad-core (4 cores) Intel i5 or i7, AMD Ryzen 5/7/9, or (Mac) M1></p>
 <b>RAM:</b> 
 <p>8 GB or more is ideal </p>
 <b>Storage:</b> 
