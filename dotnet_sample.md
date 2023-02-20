@@ -5,6 +5,8 @@
 
 <details>
 <summary>Introduction to Software Engineering</summary>
+    - Bullet
+    - Points
     -Software Development Life Cycle
     -Software Requirements
     -Software Requirements Specification
