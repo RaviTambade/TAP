@@ -4,82 +4,82 @@
 ### Boot Camp Contents
 
 <details>
-<summary>1. Introduction to Software Engineering</summary>
-    1. Software Development Life Cycle
-    2. Software Requirements
-    3. Software Requirements Specification
+<summary>Introduction to Software Engineering</summary>
+    Software Development Life Cycle
+    Software Requirements
+    Software Requirements Specification
 </details>     
 
 <details>
-<summary>2. Collaborative Software Development (Git, Git Hub)
-        1. Software Development Team
-        2. Source Control Tools
-        3. Git and GitHub
-        4. Git Commands
-        5. Git Workflow
+<summary>Collaborative Software Development (Git, Git Hub)</summary>
+        Software Development Team
+        Source Control Tools
+        Git and GitHub
+        Git Commands
+        Git Workflow
 </details>
 
 
     
 <details>
-<summary>3.	Agile Methodology (Scrum Framework)
-    1. Agile Manifesto
-    2. Scrum Framework
-    3. CI/CD Pipeline
-    4. DevOps Overview
-    5. Selenium IDE 
+<summary>3.	Agile Methodology (Scrum Framework)</summary>
+    Agile Manifesto
+    Scrum Framework
+    CI/CD Pipeline
+    DevOps Overview
+    Selenium IDE 
 </details>
 <details>
-<summary>4.	Building & Managing Databases
-    1. DBMS
-    2. Database Design ER Diagrams, Data Flow Diagrams
-    3. Data Definition Language Commands
-    4. CRUD Operations against Tables
-    5. SQL Queries
-    6. Nested and Join Queries
-    7. Transactions & ACID properties
-    8. Stored Procedures & triggers
-    9. Building backend for Project
-    10. Operations management of Database Server
-    11. NoSQL Databases
-    12. Database as a Service
+<summary>4.	Building & Managing Databases</summary>
+    DBMS
+    Database Design ER Diagrams, Data Flow Diagrams
+    Data Definition Language Commands
+    CRUD Operations against Tables
+    SQL Queries
+    Nested and Join Queries
+    Transactions & ACID properties
+    Stored Procedures & triggers
+    Building backend for Project
+    Operations management of Database Server
+    NoSQL Databases
+    Database as a Service
 </details>
 
 
 <details>
-<summary>5.	Basics of Programming
-    1. Application Development
-    2. Dotnet Core Developer Enviornment
-    3. Dotnet Core Solution, Project, Source files
-    4. Create, Build, Run Dotnet Solution
-    5. C# Programming Essentials
-    6. Object Oriented Programming using C#
-    7. Interfaces, Delegate & Events
-    8. Collection Framework
-    9. File I/O, JSON Serialization
-    10. Reflection, Garbage Collection
+<summary>5.	Basics of Programming</summary>
+    Application Development
+    Dotnet Core Developer Enviornment
+    Dotnet Core Solution, Project, Source files
+    Create, Build, Run Dotnet Solution
+    C# Programming Essentials
+    Object Oriented Programming using C#
+    Interfaces, Delegate & Events
+    Collection Framework
+    File I/O, JSON Serialization
+    Reflection, Garbage Collection
 </details> 
 <details>
-<summary>6.	Database Connectivity
-    1. Using packages for database connectivity
-    2. CRUD operations using mysql connector
-    3. using Connected, Disconnected Data Access Mode
-    4. Invoking Stored Procedures
-    5. Obect Relational Mapping Technique
-    6. Using Entity Framework Core
-    7. Data First, Code First Approach
-    8. ORM Migrations
-    9. Building Data Access Logic Layer
+<summary>Database Connectivity</summary>
+    Using packages for database connectivity
+    CRUD operations using mysql connector
+    using Connected, Disconnected Data Access Mode
+    Invoking Stored Procedures
+    Obect Relational Mapping Technique
+    Using Entity Framework Core
+    Data First, Code First Approach
+    ORM Migrations
+    Building Data Access Logic Layer
 </details> 
 <details>
-<summary>7.	Windows App Development Dot NET Core
+<summary>7.	Windows App Development Dot NET Core</summary>
     1. Using dotnet core CLI for Windows Application Development
     2. Event Driven Architecture and Forms
     3. Using Menus, Controls in .net core windows applications
     4. Building Windows Apps
 </details> 
 <details>
-<summary>9.	Essential Web Technologies
+<summary>9.	Essential Web Technologies</summary>
     1. Web Application Architecture
     2. Web Taxanomy & Topologies
     3. HTML and Web Pages
@@ -93,7 +93,7 @@
     11. Building Interactive Web Site
 </details> 
 <details>
-<summary>10.	Web App Development using ASP.NET Core
+<summary>10.	Web App Development using ASP.NET Core</summary>
     1. Web Application Development using ASP.NET CORE 7.0
     2. Using .net CLI for Web Application Development
     3. Building Web App using Razor pages, layouts and C#
@@ -115,7 +115,7 @@
     19. Secure REST API
 </details> 
 <details>
-<summary>11.	Node JS
+<summary>11.	Node JS</summary>
     1. Rise of JavaScript as Full Stack Programming Language today
     2. Node js as V8 JavaScript Runtime Engine
     3. Building & Debugging Node JS with VS code
@@ -133,7 +133,7 @@
     15. Secure REST API
 </details> 
 <details>
-<summary>13.	React
+<summary>13.	React</summary>
     1. Simple React JS App
     2. React JS build Enviornment
     3. Component based Approach
@@ -149,7 +149,7 @@
 
 
 <details>
-<summary>14.	Angular
+<summary>14.	Angular</summary>
     1. Angular CLI and Single Page Application
     2. Angular UI Architecture
     3. Components & Modules
@@ -165,7 +165,7 @@
     13. Secure Routes
      </details>   
 <details>
-<summary>15.	Applying Best PractiesUsing Clean Code Strategy
+<summary>15.	Applying Best PractiesUsing Clean Code Strategy</summary>
     1. Crafting Software
     2. Importance of Framework, Design Patterns, Design Principles
     3. Following Design Principles
@@ -179,7 +179,7 @@
     10. Testable Micro services
   </details>   
 <details>
-<summary>16.	Software Testing
+<summary>16.	Software Testing</summary>
     1. Why Software Testing
     2. STLC vs SDLC
     3. V-Model
@@ -193,7 +193,7 @@
     11. Test Driven Development
  </details>   
 <details>
-<summary>17.	Linux Operating System
+<summary>17.	Linux Operating System</summary>
     1. Installing Linux
     2. Basic Linux Commands
     3. Grep Commands , Pipes
@@ -202,14 +202,14 @@
     11. Crone Job
  </details>   
 <details>
-<summary>18. Cloud Computing
+<summary>18. Cloud Computing</summary>
     1. Introduction to Cloud
 	2. Using Public Cloud (AWS, Azure, Google Cloud)
 	3. IT Solution Deployment to on premise, hosted environment
     4. Virtualization 
  </details>   
 <details>
-<summary>19. Containerization
+<summary>19. Containerization</summary>
     1. Virtualization vs. Containerization
     2. Docker Engine & Docker Hub
     3. Docker Commands
@@ -218,15 +218,16 @@
     6. Microservices with Kubernetes
  </details>   
 <details>
-<summary>20.	CI/CD Pipline (DevOps)
+<summary>20.	CI/CD Pipline (DevOps)</summary>
     1. Git Actions & Git Workflow
     2. Setting up CI/CD pipeline,
     3. Jenkins
     4. Azure DevOps
  </details>   
 <details>
-<summary>21.	Data Structures and Algorithms using C#
+<summary>21.	Data Structures and Algorithms using C#</summary>
+</details>
 <details>
 <summary>
-22.	Getting ready for Interviews
+22.	Getting ready for Interviews</summary>
  </details>   
