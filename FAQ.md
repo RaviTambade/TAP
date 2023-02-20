@@ -100,6 +100,6 @@ Recommended: At least quad-core (4 cores) Intel i5 or i7, AMD Ryzen 5/7/9, or (M
 </details>
 
 <details>
-<summary>How do I apply?</summary>
+<summary> <p> <b> <u>How do I apply?</u></b></p></summary>
 It’s easy—start by filling out our application form. The form will be shred to your gmail id. Do send email with subject  TAP Fullstack enquiry to ravi.tambade@transflower.in. Once we receive your application form submitted, the Transflower team reviews your responses and selects a limited number of candidates for a video interview. This process will ensure your honest and keen interest in TAP. Then, you’ll be notified of your admission decision.
 </details>
