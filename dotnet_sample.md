@@ -4,7 +4,7 @@
 ### Boot Camp Contents
 
 <details>
-<summary>Software Engineering</summary>
+<summary>1.Software Engineering</summary>
     <ul>
     <li>Software Development Life Cycle</li>
     <li>Software Requirements</li>
@@ -12,7 +12,7 @@
     </ul>
 </details>     
 <details>
-<summary>Collaborative Software Development</summary>  
+<summary>2.Collaborative Software Development</summary>  
        <ul>
         <li> Software Development Team</li>
         <li>Source Control Tools </li>
@@ -63,7 +63,7 @@
 </details> 
 
 <details>
-<summary>Database Connectivity</summary>
+<summary>6.Database Connectivity</summary>
         <ul>
             <li>database connectivity using C#</li>
             <li>CRUD operations using mysql connector</li>
@@ -86,7 +86,7 @@
     </ul>
 </details> 
 <details>
-<summary>9.	Essential Web Technologies</summary>
+<summary>8.	Essential Web Technologies</summary>
     <ul>
         <li>Web Application Architecture</li>
         <li>Web Taxanomy & Topologies</li>
@@ -102,7 +102,7 @@
     </ul>
 </details> 
 <details>
-<summary>10.	Web App Development using ASP.NET Core</summary>
+<summary>9.	Web App Development using ASP.NET Core</summary>
     <ul>
         <li>Web Application Development using ASP.NET CORE 7.0 </li>
         <li>Using .net CLI for Web Application Development </li>
@@ -126,7 +126,7 @@
     </ul>
 </details> 
 <details>
-<summary>11.	Node JS</summary>
+<summary>10.Node JS</summary>
     <ul>
         <li>Rise of JavaScript as Full Stack Programming Language today</li>
         <li>Node js as V8 JavaScript Runtime Engine</li>
@@ -146,7 +146,7 @@
     </ul>
 </details> 
 <details>
-<summary>13.	React</summary>
+<summary>11.React</summary>
     <ul>
         <li>Simple React JS App</li>
         <li>React JS build Enviornment</li>
@@ -161,7 +161,7 @@
     </ul>
 </details>   
 <details>
-<summary>14.Angular</summary>
+<summary>12.Angular</summary>
     <ul>
         <li>Angular CLI and Single Page Application</li>
         <li>Angular UI Architecture</li>
@@ -179,7 +179,7 @@
      </ul>
      </details>   
 <details>
-<summary>15.Applying Best PractiesUsing Clean Code Strategy</summary>
+<summary>13.Applying Best PractiesUsing Clean Code Strategy</summary>
     <ul>
         <li>Crafting Software</li>
         <li>Importance of Framework, Design Patterns, Design Principles</li>
@@ -196,7 +196,7 @@
      </ul>
   </details>   
 <details>
-<summary>16.Software Testing</summary>
+<summary>14.Software Testing</summary>
      <ul>
         <li>Why Software Testing </li>
         <li> STLC vs SDLC</li>
@@ -213,7 +213,7 @@
      </ul>
  </details>   
 <details>
-<summary>17.Linux Operating System</summary>
+<summary>15.Linux Operating System</summary>
     <ul>
         <li>Installing Linux</li>
 	    <li>Basic Linux Commands</li>
@@ -226,7 +226,7 @@
     </ul>
  </details>   
 <details>
-<summary>18. Cloud Computing</summary>
+<summary>16. Cloud Computing</summary>
     <ul>
         <li>Introduction to Cloud</li>
 	    <li>Using Public Cloud (AWS, Azure, Google Cloud)</li>
@@ -235,7 +235,7 @@
     </ul>
  </details>   
 <details>
-<summary>19. Containerization</summary>
+<summary>17. Containerization</summary>
     <ul>
         <li> Virtualization vs. Containerization</li>
         <li>Docker Engine & Docker Hub</li>
@@ -246,7 +246,7 @@
     </ul>
  </details>   
 <details>
-<summary>20.CI/CD Pipeline (DevOps)</summary>
+<summary>18.CI/CD Pipeline (DevOps)</summary>
     <ul>
         <li>Git Actions & Git Workflow</li>
         <li>Setting up CI/CD pipeline</li>
@@ -255,7 +255,7 @@
     </ul>
  </details>   
 <details>
-<summary>21.Data Structures and Algorithms using C#</summary>
+<summary>19.Data Structures and Algorithms(DSA) using C#</summary>
     <ul>
         <li></li>
         <li></li>
@@ -264,7 +264,6 @@
     </ul>
 </details>
 <details>
-<summary>
-22.	Getting ready for Interviews</summary>
+<summary>20.Interview Preparation</summary>
 
  </details>   
