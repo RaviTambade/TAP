@@ -1,32 +1,36 @@
 # Dot Net Full Stack Developer Boot Camp 
 ### TAP (Transflower Acceleration Program)
 #### Training: Full Stack Dot Net Developer TAP
-#### Mentor: Ravi Tambade & Transflower Team
-#### Duration: 15 Weeks 
+#### Mentor: Ravi Tambade (Microsoft Certified Trainer)
+
+
+<details>
+<summary>#### Duration: 15 Weeks  ( 5 Days a week) (9:30 am to 4:30 pm)</summary>
     Days : 75
     Hours: 450
     150 hours Mentor Delivery  (Lecture, Demonstration)
     300 hours Hand-on along with Mentor 
     ( Problem Solving, Coding, Building, Testing, Deployment, DevOps, .etc)
     (6 hours per day) Program (Monday to Friday 9:30 am to 4:30 pm)
+</details>
 
-#### Delivery Mode: 
+<details>
+<summary>#### Delivery Mode </summary>
     30%- 70% (Theory—Hands-on) Project Based Learning. Learn by Doing. 
 	BootCamp would follow agile Continous Learning for CI/CD culture adopted by industries.
     Continous Integration/ Continous Delivery ( CI/CD) pipline
+</details>
 
-#### Prerequisite: 
+<details>
+<summary>#### Prerequisite:</summary> 
     1. Having Bachelors in Engineering (BE, BTech) 
-       1. Computer
-       2. Information Technology 
-       3. Electronics
-       4. Electronics & Telecommunications
-       5. Electrical 
-       6. Mechanical
-       7. Masters in Computer Application(MCA) . 
-    2. Basic Programming skill
+       1. Computers or Information Technology (IT), Electronics, Electronics & Telecommunications(E&TC)
+       2. Electrical or Mechanical
+       3. Masters in Computer Application (MCA) . 
+    2. Basic Programming skill  will be added advantage but not compulsary
     3. Tryout mindset and eager to learn
-    
+</details>
+
 #### Deliverables: 
      1. Access to recorded sessions
      2. Mentor prepared notes 
