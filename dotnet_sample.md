@@ -5,9 +5,9 @@
 
 <details>
 <summary>Introduction to Software Engineering</summary>
-    - Software Development Life Cycle
-    - Software Requirements
-    - Software Requirements Specification
+    -Software Development Life Cycle
+    -Software Requirements
+    -Software Requirements Specification
 </details>     
 
 <details>
