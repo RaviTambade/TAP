@@ -1,6 +1,4 @@
 # Frequently Asked Questions(FAQ)
-## TAP (Transflower Acceleration Proram)
-
 
 <details>
 <summary>What is TAP ? </summary>
