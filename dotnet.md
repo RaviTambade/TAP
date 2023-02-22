@@ -282,12 +282,11 @@
     <ul>
         <li>Installing Linux</li>
 	    <li>Basic Linux Commands</li>
+        <li>Files, Permissions, Controlled Access</li>
 	    <li>Grep Commands , Pipes</li>
         <li>CMode</li>
         <li>Crone Job</li>
-	    <li></li>
-	    <li></li>
-        <li></li>
+	    <li>Shell Scripting</li>
     </ul>
  </details>   
 <details>
