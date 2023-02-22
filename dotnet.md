@@ -322,10 +322,19 @@
 <details>
 <summary>19.Data Structures and Algorithms(DSA) using C#</summary>
     <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>DataStructure in real life</li>
+        <li>DataSrcuture in .net</li>
+        <li>Understanding Data Structures</li>
+        <li>Time and Space Complexity</li>
+        <li>Arrays</li>
+        <li>Matrix Operations</li>
+        <li>Linked Lists</li>
+        <li>Stack & Queues</li>
+        <li>Trees</li>        
+        <li>Sorting Algoritms</li>
+        <li>Search Algorithms</li>
+        <li>Graphs</li>
+        <li>Problem solving using Algorithms</li>
     </ul>
 </details>
 <details>
