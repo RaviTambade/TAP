@@ -274,7 +274,7 @@
         <li>Selenium IDE, Selenium Web Driver </li>
         <li>Using Unit Testing Frameworks </li>
         <li>Test Driven Development </li>
-        <li> </li>
+        <li>Exploring differnt Testing Frameworks Jasmine, Karma, Nunit,etc. </li>
      </ul>
  </details>   
 <details>
