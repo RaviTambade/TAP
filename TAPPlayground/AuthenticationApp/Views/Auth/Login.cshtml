@@ -1,0 +1,26 @@
+@model AuthenticationApp.Models.User
+@{ViewData["title"]="Login Page";
+}
+<h3>Login</h3>
+
+@using(Html.BeginForm()){
+    <table>
+        <tr>
+            <th> @Html.LabelFor(model=>model.ContactNumber) </th>
+            <td>@Html.EditorFor(model=>model.ContactNumber)</td>
+        </tr>
+          <tr>
+            <th> @Html.LabelFor(model=>model.OTP) </th>
+            <td>@Html.EditorFor(model=>model.OTP)</td>
+        </tr>
+    </table>
+    <button ><input type="submit" value="Validate"/></button>
+}
+<body>
+    @if(ViewBag.ErrorMessage!=null){
+        <script>
+            alert("@ViewBag.ErrorMessage");
+        </script>
+    }
+</body>
+
