@@ -18,13 +18,12 @@
 </details>
 
 <details>
-<summary> Duration: 15 Weeks  ( 5 Days a week) (9:30 am to 4:30 pm)</summary>
+<summary> Duration: 15 Weeks  ( 5 Days a week Mon-Fri) (9:30 am to 4:30 pm)</summary>
      <ol>
         <li>Days : 75</li>
         <li>Hours: 450</li>
         <li>150 hours Mentor Delivery  (Lecture, Demonstration)</li>
-        <li>Problem Solving, Coding, Building, Testing, Deployment, DevOps, .etc</li>
-    
+        <li>300 hours Problem Solving, Coding, Building, Testing, Deployment, DevOps, .etc</li>
     </ol>
 </details>
 
@@ -57,8 +56,6 @@
      6. Case Study oriented, solved examples
      7. Lot of Live Interactions with mentor and team throughout the Learning Process 
 </details>
-
-
 
 <details>
 <summary> Boot Camp is based on Project Based Collborative Learning </summary>
