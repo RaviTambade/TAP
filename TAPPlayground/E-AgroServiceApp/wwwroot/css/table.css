@@ -1,0 +1,30 @@
+input{margin: auto;
+    align-self: center;  
+    border: none;
+     outline: none;
+     background: none;    }
+
+
+table,th,td{border:1px solid black;
+font-family: sans-serif;
+}
+th,td{
+padding: 10px;
+}
+th{background-color: aqua;
+    font-style:bold}
+
+button {
+size: 20px;
+width: 80px;
+height: 45px;
+background-color: rgba(243, 198, 198, 0.664);
+padding: 6px 6px;
+margin: 6px;
+font-style: bold;
+border-radius: 12px;
+}
+a{
+    text-decoration: none;
+     color: black;
+}
