@@ -25,7 +25,7 @@ public class AuthController : Controller
     {
      bool status=  _userService.ValidateUser(user);
      if(status){
-        return RedirectToAction("Valid","Auth");
+        return RedirectToAction("Index","Home");
      }
       return RedirectToAction("InValid","Auth");
        }
