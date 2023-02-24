@@ -30,7 +30,13 @@ public class AuthController : Controller
         return RedirectToAction("Valid","Auth");
      }
       return RedirectToAction("InValid","Auth");
-       }
+     }
+       
+       [HttpGet]
+    public IActionResult LoginAsFarmer()
+    {
+        return View();
+    }
 
 [HttpPost]
     public IActionResult LoginAsFarmer(User user)
