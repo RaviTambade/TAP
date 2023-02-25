@@ -1,7 +1,7 @@
 using MySql.Data.MySqlClient;
 using E_AgroServiceDemo.Repositories.Interfaces;
 using E_AgroServiceDemo.Models;
-
+using Mysqlx.Crud;
 
 namespace E_AgroServiceDemo.Repositories;
 
@@ -159,4 +159,30 @@ public class FarmerRepository : IFarmerRepository
         }
         return status;
     }
+
+ public bool DeleteFarmer(int id)
+    {
+        bool status = false;
+        MySqlConnection connection = new MySqlConnection();
+        connection.ConnectionString = conString;
+        try
+        {
+            string query = "DELETE FROM farmers WHERE farmerId="+id  ;
+            MySqlCommand command = new MySqlCommand(query, connection);
+            connection.Open();
+            command.ExecuteNonQuery();
+            status = true;
+        }
+        catch (Exception e)
+        {
+            throw e;
+
+        }
+        finally
+        {
+            connection.Close();
+        }
+        return status;
+    }
+
 }

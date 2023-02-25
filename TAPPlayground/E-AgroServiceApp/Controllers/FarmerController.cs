@@ -70,4 +70,17 @@ public IActionResult Insert(Farmer farmer)
         return RedirectToAction("ShowAll", "Farmer");
     }
 
+        [HttpGet]
+    public IActionResult Delete(int id)
+    {
+       var farmer= _farmerService.GetFarmerById(id);
+        return View(farmer);
+    }
+
+  public IActionResult Delete(Farmer farmer)
+    {
+       _farmerService.DeleteFarmer(farmer.FarmerId);
+          return RedirectToAction("ShowAll", "Farmer");
+    }
+
 }

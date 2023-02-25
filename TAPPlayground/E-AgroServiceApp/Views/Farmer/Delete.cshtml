@@ -1,0 +1,35 @@
+
+@model E_AgroServiceDemo.Models.Farmer;
+ @{ ViewData["Title"] = "Delete Page"; }
+<html>
+  <head>
+   <link rel="stylesheet"  href="~/css/table.css" type="text/css"/>
+  </head>
+ <body>
+ <h2 align="center">Delete</h2>
+    @using (Html.BeginForm()) {
+    <table align="center">
+      <tr>
+        <th>@Html.LabelFor(model => model.FarmerId)</th>
+        <th>@Html.LabelFor(model => model.FarmerName)</th>
+        <th>@Html.LabelFor(model => model.ContactNumber)</th>
+        <th>@Html.LabelFor(model => model.Password)</th>
+        <th>@Html.LabelFor(model => model.Location)</th>
+      </tr>
+      <tr>
+        <td>@Html.EditorFor(model => model.FarmerId)</td>
+        <td>@Html.DisplayFor(model => model.FarmerName)</td>
+        <td>@Html.DisplayFor(model => model.ContactNumber)</td>
+        <td>@Html.DisplayFor(model => model.Password)</td>
+        <td>@Html.DisplayFor(model => model.Location)</td>
+  
+      </tr>
+    </table>
+    
+    <div style="text-align: center;">
+    <button> <input type="submit" value="Delete" /> </button>
+    </div>
+    }
+    
+  </body>
+</html>
