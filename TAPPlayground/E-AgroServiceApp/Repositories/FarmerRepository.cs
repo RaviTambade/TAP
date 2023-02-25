@@ -61,7 +61,7 @@ public class FarmerRepository : IFarmerRepository
     public Farmer GetFarmerById(int id)
     {
         Farmer farmer = null;
-        List<Farmer> farmers = new List<Farmer>();
+        
         MySqlConnection con = new MySqlConnection();
         con.ConnectionString = conString;
         try
@@ -71,7 +71,7 @@ public class FarmerRepository : IFarmerRepository
             MySqlCommand command = new MySqlCommand(query, con);
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
-            {
+            {   int newid =int.Parse(reader["farmerId"].ToString());
                 string name = reader["farmerName"].ToString();
                 string mobileNumber = reader["contactNumber"].ToString();
                 string location = reader["location"].ToString();
@@ -81,7 +81,7 @@ public class FarmerRepository : IFarmerRepository
                 long balance = long.Parse(reader["balance"].ToString());
                 farmer = new Farmer()
                 {
-                    FarmerId = id,
+                    FarmerId = newid,
                     FarmerName = name,
                     ContactNumber = mobileNumber,
                     Location = location,
@@ -129,6 +129,33 @@ public class FarmerRepository : IFarmerRepository
         finally
         {
             con.Close();
+        }
+        return status;
+    }
+
+
+    
+    public bool UpdateFarmer(Farmer farmer)
+    {
+        bool status = false;
+        MySqlConnection connection = new MySqlConnection();
+        connection.ConnectionString = conString;
+        try
+        {
+            string query = "UPDATE farmers SET farmerName='" + farmer.FarmerName+ "', contactNumber='" + farmer.ContactNumber + "' , password='" + farmer.Password + "' , location='" + farmer.Location + "' WHERE farmerId=" +farmer.FarmerId ;   
+            MySqlCommand command = new MySqlCommand(query, connection);
+            connection.Open();
+            command.ExecuteNonQuery();
+            status = true;
+        }
+        catch (Exception e)
+        {
+            throw e;
+
+        }
+        finally
+        {
+            connection.Close();
         }
         return status;
     }

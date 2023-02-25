@@ -232,3 +232,5 @@ VALUES
   (1, 'Oberon', 3, 150),(2,'Topper 77',5,110),(3,'M-45',2,180);
 
   SELECT * FROM farmers;
+
+              UPDATE farmers SET farmerName='shubham', password=123  WHERE farmerId=1;

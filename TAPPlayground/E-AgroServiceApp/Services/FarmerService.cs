@@ -22,4 +22,9 @@ public class FarmerService:IFarmerService{
     {
         return _farmerrepo.InsertFarmer(farmer);
     }
+
+    public bool UpdateFarmer(Farmer farmer)
+    {
+        return _farmerrepo.UpdateFarmer(farmer);
+    }
 }
