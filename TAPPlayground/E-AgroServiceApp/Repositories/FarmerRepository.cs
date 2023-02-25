@@ -5,12 +5,13 @@ using E_AgroServiceDemo.Models;
 
 namespace E_AgroServiceDemo.Repositories;
 
-public class FarmerRepository:IFarmerRepository{
-        public static string conString = "server=localhost;port=3306;user=root;password=password;database=eagroservicesdb";
+public class FarmerRepository : IFarmerRepository
+{
+    public static string conString = "server=localhost;port=3306;user=root;password=password;database=eagroservicesdb";
 
     public List<Farmer> GetAllFarmers()
     {
-       List<Farmer> farmers=new List<Farmer>();
+        List<Farmer> farmers = new List<Farmer>();
         MySqlConnection con = new MySqlConnection();
         con.ConnectionString = conString;
         try
@@ -19,28 +20,29 @@ public class FarmerRepository:IFarmerRepository{
             con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
             MySqlDataReader reader = command.ExecuteReader();
-           while (reader.Read()) {
+            while (reader.Read())
+            {
                 int id = Int32.Parse(reader["farmerId"].ToString());
-                string name  = reader["farmerName"].ToString();
+                string name = reader["farmerName"].ToString();
                 string mobileNumber = reader["contactNumber"].ToString();
-                string location=reader["location"].ToString();
-                string password=reader["password"].ToString();
-                long creditedAmount=long.Parse(reader["creditBalance"].ToString());
-                long debitedAmount=long.Parse(reader["debitBalance"].ToString());
-                long balance=long.Parse(reader["balance"].ToString());
-               Farmer farmer=new Farmer()
+                string location = reader["location"].ToString();
+                string password = reader["password"].ToString();
+                long creditedAmount = long.Parse(reader["creditBalance"].ToString());
+                long debitedAmount = long.Parse(reader["debitBalance"].ToString());
+                long balance = long.Parse(reader["balance"].ToString());
+                Farmer farmer = new Farmer()
                 {
-                  FarmerId=id,
-                  FarmerName=name,
-                  ContactNumber=mobileNumber,
-                  Location=location,
-                  Password=password,
-                  CreditedAmount=creditedAmount,
-                  DebitedAmount=debitedAmount,
-                  Balance=balance
+                    FarmerId = id,
+                    FarmerName = name,
+                    ContactNumber = mobileNumber,
+                    Location = location,
+                    Password = password,
+                    CreditedAmount = creditedAmount,
+                    DebitedAmount = debitedAmount,
+                    Balance = balance
                 };
 
-               farmers.Add(farmer);
+                farmers.Add(farmer);
             }
             reader.Close();
         }
@@ -54,5 +56,80 @@ public class FarmerRepository:IFarmerRepository{
         }
         return farmers;
 
+    }
+
+    public Farmer GetFarmerById(int id)
+    {
+        Farmer farmer = null;
+        List<Farmer> farmers = new List<Farmer>();
+        MySqlConnection con = new MySqlConnection();
+        con.ConnectionString = conString;
+        try
+        {
+            string query = "SELECT * FROM farmers where farmerId=" + id;
+            con.Open();
+            MySqlCommand command = new MySqlCommand(query, con);
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string name = reader["farmerName"].ToString();
+                string mobileNumber = reader["contactNumber"].ToString();
+                string location = reader["location"].ToString();
+                string password = reader["password"].ToString();
+                long creditedAmount = long.Parse(reader["creditBalance"].ToString());
+                long debitedAmount = long.Parse(reader["debitBalance"].ToString());
+                long balance = long.Parse(reader["balance"].ToString());
+                farmer = new Farmer()
+                {
+                    FarmerId = id,
+                    FarmerName = name,
+                    ContactNumber = mobileNumber,
+                    Location = location,
+                    Password = password,
+                    CreditedAmount = creditedAmount,
+                    DebitedAmount = debitedAmount,
+                    Balance = balance
+                };
+
+            }
+            reader.Close();
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            con.Close();
+        }
+
+        return farmer;
+    }
+
+    public bool InsertFarmer(Farmer farmer)
+    {
+        bool status = false;
+        MySqlConnection con = new MySqlConnection();
+        con.ConnectionString = conString;
+        try
+        {
+            string query = "INSERT INTO farmers(farmerName,contactNumber,password,location)Values('" + farmer.FarmerName + "','" + farmer.ContactNumber + "','" + farmer.Password + "','" + farmer.Location + "')";
+
+            con.Open();
+            MySqlCommand command = new MySqlCommand(query, con);
+            command.ExecuteNonQuery();
+            status = true;
+
+
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            con.Close();
+        }
+        return status;
     }
 }

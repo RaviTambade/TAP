@@ -1,0 +1,38 @@
+@model E_AgroServiceDemo.Models.Farmer;
+@{
+    ViewData["Title"] = "Insert Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Insert Farmer</h1>
+</div>
+<link rel="stylesheet" href="~/css/table.css"/>
+@using (Html.BeginForm()){
+    <table>
+         <tr>
+            <th>@Html.LabelFor(model => model.FarmerName)</th>
+            <td>@Html.EditorFor(model => model.FarmerName)</td>
+        </tr>
+
+         <tr>
+            <th>@Html.LabelFor(model => model.ContactNumber)</th>
+            <td>@Html.EditorFor(model => model.ContactNumber)</td>
+        </tr>
+
+         <tr>
+            <th>@Html.LabelFor(model => model.Password)</th>
+            <td>@Html.EditorFor(model => model.Password)</td>
+        </tr>
+
+         <tr>
+            <th>@Html.LabelFor(model => model.Location)</th>
+            <td>@Html.EditorFor(model => model.Location)</td>
+        </tr>
+
+      
+
+    </table>
+   <button ><input type="submit" value="Insert" /></button>
+     
+    
+}

@@ -1,0 +1,34 @@
+@model E_AgroServiceDemo.Models.Farmer;
+@{
+    ViewData["Title"]="Show Page";
+}
+<link rel="stylesheet" href="~/css/table.css"/>
+<div>
+<h1 class="display-4">Show Farmer</h1>
+</div>
+@{
+    Farmer farmer=Model;
+
+<table>
+    <tr>
+    <th>FarmerId</th>
+    <th>FarmerName</th>
+    <th>ContactNumber</th>
+    <th>Location</th>
+    <th>Password</th>
+    <th>TotalCreditedAmount</th>
+    <th>TotalDeditedAmount</th>
+    <th>Balance</th>
+</tr>
+    <tr>
+        <td>@farmer.FarmerId</td>
+        <td>@farmer.FarmerName</td>
+        <td>@farmer.ContactNumber</td>
+        <td>@farmer.Location</td>
+        <td>@farmer.Password</td>
+        <td>@farmer.CreditedAmount</td>
+        <td>@farmer.DebitedAmount</td>
+        <td>@farmer.Balance</td>
+    </tr>  
+</table>
+}

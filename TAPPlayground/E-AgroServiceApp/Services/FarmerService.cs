@@ -13,4 +13,13 @@ public class FarmerService:IFarmerService{
     }    
     public List<Farmer> GetAllFarmers()=> _farmerrepo.GetAllFarmers();
 
+    public Farmer GetFarmerById(int id)
+    {
+      return _farmerrepo.GetFarmerById(id);
     }
+
+    public bool InsertFarmer(Farmer farmer)
+    {
+        return _farmerrepo.InsertFarmer(farmer);
+    }
+}

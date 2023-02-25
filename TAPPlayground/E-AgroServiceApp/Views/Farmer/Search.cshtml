@@ -1,0 +1,14 @@
+
+@model E_AgroServiceDemo.Models.Farmer;
+@{
+    ViewData["Title"] = "Farmer Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">SearchFarmer</h1>
+</div>
+@using(Html.BeginForm()){
+    <label for="FarmerId">Enter Id:</label>
+    <input type="text" name="Id"/>
+    <input type="submit" value="Search"/>
+}

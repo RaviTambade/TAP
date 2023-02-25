@@ -170,36 +170,36 @@ INSERT INTO
   farmers(farmerName, contactNumber, password, location)
 VALUES
   (
-    'Shubham Balasaheb Teli',
-    7448022744,
+    'Rohit Gore',
+    7448022756,
     'password',
-    'Bhavadi'
+    'Peth'
   ),
   (
-    'Sahil Sahebrao Mankar',
-    8530728589,
+    'Akshay Tanpure',
+    8530728512,
     'password',
-    'Pargaon'
+    'Wada'
   ),
-  ('Kuldeep Apune', 9373306793, 'pass@123', 'Chakan');
+  ('Akash Ajab', 9373306756, 'password', 'Valati');
 
 
 INSERT INTO
   transports
 VALUES
   (
-    'MH14RE0001',
-    'OMSAI transports',
-    'Sohail Khan',
-    8989878787,
-    'Pargaon'
+    'MH14RE1234',
+    'OM transports',
+    'Ashok Chakkar',
+    8989878723,
+    'Karegaon'
   );
 
 
 INSERT INTO
   consignees(consigneeName, contactNumber, location)
 VALUES
-  ('BT Company', 9090909090, 'Manchar');
+  ('Zatka Company', 9090909012, 'Manchar');
 
 
 INSERT INTO
@@ -213,14 +213,14 @@ INSERT INTO
     labourCharges
   )
 VALUES
-  (1, 'Potato', 100, 5000, 50, 25, 700), (2, 'Bhendi', 10, 50, 2, 25, 5),(3, 'Kobi', 10, 500, 10, 25, 50);
+  (1, 'Potato', 50, 2500, 25, 30, 400), (2, 'Onion', 500, 500, 2, 10,2000),(3, 'Onion',1000,50000, 1000, 12, 4000);
 
 
 UPDATE
   soldItems
 set
   consigneeId = 1,
-  truckNumber = 'MH14RE0001',
+  truckNumber = 'MH14RE1234',
   rateperkg = 27.40
 WHERE
   purchaseId = 1;
@@ -230,3 +230,5 @@ INSERT INTO
   farmerPurchasesBilling(farmerId, item1, quantity1, rate1)
 VALUES
   (1, 'Oberon', 3, 150),(2,'Topper 77',5,110),(3,'M-45',2,180);
+
+  SELECT * FROM farmers;
