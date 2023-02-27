@@ -1,0 +1,37 @@
+@model SessionManagement.Models.Cart
+
+@{
+    ViewData["Title"] = "Cart Page";
+}
+
+<link rel="stylesheet" href="~/css/table.css" type="text/css" />
+
+
+<h1>Cart</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model.Products)
+        {
+            <tr>
+                <td>@product.Name</td>
+                <td>@product.Description</td>
+                <td>@product.Price</td>
+                 <td><a href="@Url.Action("RemoveFromCart", "Cart", new { id = product.Id })">Remove</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>Total amount: @Model.TotalAmount</div>
+
+<a asp-controller="Product" asp-action="ShowAll">Continue Shopping</a>
+
