@@ -24,6 +24,12 @@ public class FarmerController : Controller
         return View();
     }
 
+
+ [HttpGet]
+    public IActionResult GetById(){
+      return View();
+    }
+
     [HttpGet]
     public IActionResult Search(){
       return View();
@@ -32,7 +38,7 @@ public class FarmerController : Controller
     [HttpPost]
 
     public IActionResult Search(int id){
-   var farmer= _farmerService.GetFarmerById(id);
+    var farmer= _farmerService.GetFarmerById(id);
     return View("GetById",farmer);
     }
 
@@ -50,5 +56,31 @@ public IActionResult Insert(Farmer farmer)
   _farmerService.InsertFarmer(farmer);
   return RedirectToAction("ShowAll","Farmer");
 }
+
+ [HttpGet]
+    public IActionResult Update(int id)
+    {
+       var farmer =_farmerService.GetFarmerById(id);
+        return View(farmer);
+    }
+    [HttpPost]
+    public IActionResult Update(Farmer farmer)
+    {
+       _farmerService.UpdateFarmer(farmer);
+        return RedirectToAction("ShowAll", "Farmer");
+    }
+
+        [HttpGet]
+    public IActionResult Delete(int id)
+    {
+       var farmer= _farmerService.GetFarmerById(id);
+        return View(farmer);
+    }
+
+  public IActionResult Delete(Farmer farmer)
+    {
+       _farmerService.DeleteFarmer(farmer.FarmerId);
+          return RedirectToAction("ShowAll", "Farmer");
+    }
 
 }

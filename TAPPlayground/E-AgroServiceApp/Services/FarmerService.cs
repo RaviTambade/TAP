@@ -10,7 +10,13 @@ public class FarmerService:IFarmerService{
 
     public FarmerService(IFarmerRepository farmerrepo){
         this._farmerrepo=farmerrepo;
-    }    
+    }
+
+    public bool DeleteFarmer(int id)
+    {
+      return _farmerrepo.DeleteFarmer(id);
+    }
+
     public List<Farmer> GetAllFarmers()=> _farmerrepo.GetAllFarmers();
 
     public Farmer GetFarmerById(int id)
@@ -21,5 +27,10 @@ public class FarmerService:IFarmerService{
     public bool InsertFarmer(Farmer farmer)
     {
         return _farmerrepo.InsertFarmer(farmer);
+    }
+
+    public bool UpdateFarmer(Farmer farmer)
+    {
+        return _farmerrepo.UpdateFarmer(farmer);
     }
 }
