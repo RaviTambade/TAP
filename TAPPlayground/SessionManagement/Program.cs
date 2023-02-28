@@ -5,16 +5,14 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddTransient<IProductRepository,ProductRepository>();
+builder.Services.AddTransient<IProductService,ProductService>();
 builder.Services.AddSession(options =>{
     options.IdleTimeout=TimeSpan.FromMinutes(1);
     options.Cookie.HttpOnly=true;
     options.Cookie.IsEssential=true;
 });
 
-
-builder.Services.AddTransient<IproductRepository,ProductRepository>();
-builder.Services.AddTransient<IproductService,ProductService>();
 
 var app = builder.Build();
 

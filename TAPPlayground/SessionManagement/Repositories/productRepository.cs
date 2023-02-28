@@ -2,10 +2,10 @@ using MySql.Data.MySqlClient;
 using SessionManagement.Models;
 
 namespace SessionManagement.Repositories;
-public class ProductRepository : IproductRepository
+public class ProductRepository : IProductRepository
 {
 
-    public static string conString = "server=localhost;port=3306;user=root;password=password;database=eagroservicesdb";
+    public static string conString = "server=localhost;port=3306;user=root;password=password;database=db";
 
     public List<Product> GetAllProducts()
     {

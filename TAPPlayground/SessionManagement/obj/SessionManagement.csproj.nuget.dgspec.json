@@ -1,0 +1,70 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\SessionManagement.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\SessionManagement.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\SessionManagement.csproj",
+        "projectName": "SessionManagement",
+        "projectPath": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\SessionManagement.csproj",
+        "packagesPath": "C:\\Users\\naval\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\naval\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "mysql.data": {
+              "target": "Package",
+              "version": "[8.0.32, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

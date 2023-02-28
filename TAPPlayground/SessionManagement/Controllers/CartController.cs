@@ -8,9 +8,9 @@ namespace SessionManagement.Controllers;
 
 public class CartController : Controller
 {
-    private readonly IproductService _service;
+    private readonly IProductService _service;
 
-    public CartController(IproductService service)
+    public CartController(IProductService service)
     {
         _service = service;
     }

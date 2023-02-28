@@ -1,7 +1,7 @@
 using SessionManagement.Models;
 
 namespace SessionManagement.Repositories;
-public interface IproductRepository{
+public interface IProductRepository{
 
     List<Product> GetAllProducts();
 

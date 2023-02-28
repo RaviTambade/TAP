@@ -7,9 +7,9 @@ namespace SessionManagement.Controllers;
 
 public class ProductController : Controller
 {
-    private readonly IproductService _service;
+    private readonly IProductService _service;
 
-    public ProductController(IproductService service)
+    public ProductController(IProductService service)
     {
         _service = service;
     }
