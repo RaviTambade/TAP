@@ -1,3 +1,4 @@
+using System.Data.Common;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using SessionManagement.Models;
@@ -73,8 +74,7 @@ public class CartController : Controller
         cart.Products.Add(product);
 
         HttpContext.Session.SetObjectAsJson("Cart", cart);
-
-        return Ok();
+        return RedirectToAction("BuyNow", "Cart");
     }
 
     public IActionResult RemoveFromCart(int id)
@@ -93,6 +93,27 @@ public class CartController : Controller
         return RedirectToAction("Index");
     }
 
+    [HttpGet]
+    public IActionResult BuyNow(List<Cart> products)
+    {
+        
+        var cart = HttpContext.Session.GetObjectFromJson<Cart>("Cart")
+                   ?? new Cart();
+        return View(cart);
+        
+    }
+
+
+    [HttpPost]
+    public IActionResult BuyNow()
+    {
+        return RedirectToAction("OrderPlaced","Cart");
+    }
+
+    [HttpGet]
+    public IActionResult OrderPlaced(){
+        return View();
+    }
 
 
 

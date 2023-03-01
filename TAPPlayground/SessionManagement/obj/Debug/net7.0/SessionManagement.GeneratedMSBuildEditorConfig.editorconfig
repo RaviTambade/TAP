@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/naval/OneDrive/Desktop/E-AgroServiceApp/SessionManagement/Views/Cart/BuyNow.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxCdXlOb3cuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/naval/OneDrive/Desktop/E-AgroServiceApp/SessionManagement/Views/Cart/Count.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxDb3VudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -26,6 +30,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/naval/OneDrive/Desktop/E-AgroServiceApp/SessionManagement/Views/Cart/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/naval/OneDrive/Desktop/E-AgroServiceApp/SessionManagement/Views/Cart/OrderPlaced.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxPcmRlclBsYWNlZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/naval/OneDrive/Desktop/E-AgroServiceApp/SessionManagement/Views/Home/Index.cshtml]

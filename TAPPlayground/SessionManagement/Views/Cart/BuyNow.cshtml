@@ -1,0 +1,45 @@
+ @model SessionManagement.Models.Cart;
+
+<h3>Confirm Your Buy</h3>
+
+<table>
+    <th>
+        <tr>
+           <th>Name</th>
+           <th>Description</th>
+           <th>Quantity</th>
+           <th>TotalPrice</th>
+        </tr>
+    </th>
+    <tbody>
+        @foreach (var product in Model.Products)
+        {
+            var TotalPrice=@product.Count * @product.Price;
+            <tr>
+                <td>@product.Name</td>
+                <td>@product.Description</td>
+                <td>@product.Count</td>
+                <td>@TotalPrice</td>
+                </tr>
+        }
+    </tbody>
+    </table> 
+
+    
+<div>Total amount: @Model.TotalAmount</div>
+    <form  method="post">
+    <label for="Owner">Owner:</label>
+    <input type="text" id="owner" name="owner">
+    <br>
+    <label for="CreditCartNumber">CreditCartNumber:</label>
+    <input type="text" id="CreditCartNumber" name="CreditCartNumber">
+    <br>
+    <br>
+    <label for="CVV">CVV:</label>
+    <input type="text" id="CVV" name="CVV">
+    <br>
+     <label for="ExpiryDate">ExpiryDate:</label>
+    <input type="text" id="ExpiryDate" name="ExpiryDate">
+    <br>
+    <button type="submit">Place Order</button>
+    </form>
