@@ -1,0 +1,39 @@
+@using SessionManagement.Models; 
+@model Product;
+ @{ ViewData["Title"] = "Products Page"; }
+
+<link rel="stylesheet" href="~/css/table.css" type="text/css" />
+
+<h1>Products</h1>
+    @using(Html.BeginForm()){
+
+<table>
+  <tr>
+    <th><label for="@Model.Id">Product Id:</label></th>
+    <td><input type="text" name="product.Id" value="@Model.Id" /></td>
+  </tr>
+  <tr>
+    <th><label for="@Model.Name">Name</label></th>
+    <td><input type="text" name="product.Name" value="@Model.Name" /></td>
+  </tr>
+  <tr>
+    <th><label for="@Model.Description">Description</label></th>
+    <td>
+      <input
+        type="text"
+        name="product.Description"
+        value="@Model.Description"
+      />
+    </td>
+  </tr>
+  <th><label for="@Model.Price">Price</label></th>
+  <td><input type="text" name="product.Price" value="@Model.Price"  /></td>
+
+  <tr>
+    <th><label for="@Model.Count">Quantity</label></th>
+    <td><input type="text" name="product.Count"  value="1"/></td>
+    <td></td>
+  </tr>
+</table>
+<input type="submit" value="Add" />
+} 

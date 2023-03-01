@@ -1,3 +1,4 @@
+-- Active: 1677504645201@@127.0.0.1@3306@productinfo
 CREATE TABLE
     products (
         productId INT PRIMARY KEY AUTO_INCREMENT,

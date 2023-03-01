@@ -7,10 +7,12 @@ public class Cart
     {
         Products.Remove(product);
     }
-
+     
+    
     public double TotalAmount
     {
-        get { return Products.Sum(p => p.Price); }
+        get { return Products.Sum(p => p.Count * p.Price); }
     }
+
 
 }

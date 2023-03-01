@@ -1536,11 +1536,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\SessionManagement.csproj",
+      "projectUniqueName": "C:\\Users\\naval\\OneDrive\\Desktop\\E-AgroServiceApp\\SessionManagement\\SessionManagement.csproj",
       "projectName": "SessionManagement",
-      "projectPath": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\SessionManagement.csproj",
+      "projectPath": "C:\\Users\\naval\\OneDrive\\Desktop\\E-AgroServiceApp\\SessionManagement\\SessionManagement.csproj",
       "packagesPath": "C:\\Users\\naval\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\obj\\",
+      "outputPath": "C:\\Users\\naval\\OneDrive\\Desktop\\E-AgroServiceApp\\SessionManagement\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\naval\\AppData\\Roaming\\NuGet\\NuGet.Config"
