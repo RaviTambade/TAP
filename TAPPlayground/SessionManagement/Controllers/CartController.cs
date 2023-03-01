@@ -43,15 +43,15 @@ public class CartController : Controller
     public IActionResult Count(Product product)
     {
         Console.WriteLine(product.Count);
-        AddToCart(product.Id, product.Count);
+        AddToCart(product);
         return RedirectToAction("Index", "Cart");
     }
 
 
-    public IActionResult AddToCart(int id, int count)
+    public IActionResult AddToCart(Product product)
     {
-        var product = _service.GetProductById(id);
-        product.Count = count;
+        // var product = _service.GetProductById(id);
+        // product.Count = count;
 
         var cart = HttpContext.Session.GetObjectFromJson<Cart>("Cart")
                    ?? new Cart();
@@ -63,7 +63,7 @@ public class CartController : Controller
 
         if (cart.Products.Any(p => p.Id == product.Id))
         {
-            var oldproduct = cart.Products.First(p => p.Id == id);
+            Product oldproduct = cart.Products.First(p => p.Id == product.Id);
             product.Count += oldproduct.Count;
             cart.Products.Remove(oldproduct);
             cart.Products.Add(product);
