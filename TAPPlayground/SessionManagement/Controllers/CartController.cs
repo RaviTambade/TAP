@@ -105,14 +105,14 @@ public class CartController : Controller
 
 
     [HttpPost]
-    public IActionResult BuyNow()
+    public IActionResult BuyNow(PaymentDetails details)
     {
-        return RedirectToAction("OrderPlaced","Cart");
+        return RedirectToAction("OrderPlaced","Cart",details);
     }
 
     [HttpGet]
-    public IActionResult OrderPlaced(){
-        return View();
+    public IActionResult OrderPlaced(PaymentDetails details){
+        return View(details);
     }
 
 

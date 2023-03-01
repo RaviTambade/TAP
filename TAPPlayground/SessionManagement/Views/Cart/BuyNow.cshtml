@@ -1,4 +1,6 @@
  @model SessionManagement.Models.Cart;
+ <link rel="stylesheet" href="~/css/table.css" type="text/css" />
+
 
 <h3>Confirm Your Buy</h3>
 
@@ -27,19 +29,28 @@
 
     
 <div>Total amount: @Model.TotalAmount</div>
+@{ 
+     PaymentDetails details = new PaymentDetails();
     <form  method="post">
-    <label >Owner:</label>
-    <input type="text" id="owner" name="owner">
-    <br>
-    <label >CreditCartNumber:</label>
-    <input type="text" id="CreditCartNumber" name="CreditCartNumber">
-    <br>
-    <br>
-    <label >CVV:</label>
-    <input type="text" id="CVV" name="CVV">
-    <br>
-     <label >ExpiryDate:</label>
-    <input type="text" id="ExpiryDate" name="ExpiryDate">
-    <br>
-    <button type="submit">Place Order</button>
+        <table>
+            <tr>
+   <th> <label for="@details.Owner" >Owner:</label></th> 
+   <td> <input type="text" id="owner" name="owner"></td>
+   </tr>
+   <tr> 
+   <th><label for="@details.CreditCardNumber" >CreditCartNumber:</label></th> 
+   <td><input type="text" id="CreditCardNumber" name="CreditCardNumber"></td> 
+    </tr>
+       <tr>
+   <th> <label for="@details.CVV" >CVV:</label></th>
+    <td><input type="text" id="CVV" name="CVV"></td>
+    </tr>
+       <tr>
+    <th><label for="@details.ExpiryDate" >ExpiryDate:</label></th>
+    <td><input type="text" id="ExpiryDate" name="ExpiryDate"></td>
+    </tr>
+    </table>
+        <a href="@Url.Action("BuyNow", "Cart", new PaymentDetails { Owner=@details.Owner, CreditCardNumber=@details.CreditCardNumber, CVV=@details.CVV ,ExpiryDate=@details.ExpiryDate })"><button> Place Order </button></a>
     </form>
+
+     }
