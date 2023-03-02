@@ -6,7 +6,7 @@
 
 <h2>Sales Dashboard</h2>
 <hr/>
-  <a href="/dashboard/barchart">Bar Chart</a> |   
+  <a href="/Dashboard/Barchart">Bar Chart</a>   
 <hr/>
 
 <div id="chart_div"></div>  
@@ -21,7 +21,7 @@
     function LoadData() {  
         $.ajax({  
   
-            url: '/dashboard/GetDetails',  
+            url: '/Dashboard/GetDetails',  
             dataType: "json",  
             type: "GET",  
 
@@ -38,10 +38,10 @@
     }
     function revenueChart(data) {  
         var dataArray = [  
-            ['name', 'totalQuantity', 'availableQuantity', 'sellQuantity']  
+            ['Product', 'totalQuantity', 'availableQuantity', 'soldQuantity']  
         ];  
         $.each(data, function(i, product) {  
-            dataArray.push([product.Name, product.TotalQuantity, product.AvailableQuantity, product.SellQuantity]);  
+            dataArray.push([product.name, product.totalQuantity, product.availableQuantity, product.soldQuantity]);  
         });  
         var data = google.visualization.arrayToDataTable(dataArray);  
         var options = {  

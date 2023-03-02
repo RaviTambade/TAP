@@ -14,6 +14,6 @@ public class Product{
 
     public int AvailableQuantity{get; set;}
 
-    public int SellQuantity{get; set;}
+    public int SoldQuantity{get; set;}
 
 }
