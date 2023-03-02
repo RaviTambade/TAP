@@ -8,4 +8,6 @@ public interface IProductRepository{
     Product GetProductById(int id);
 
    List<Product> GetProductsDetails();
+
+   bool UpdateProduct(Product product);
 }

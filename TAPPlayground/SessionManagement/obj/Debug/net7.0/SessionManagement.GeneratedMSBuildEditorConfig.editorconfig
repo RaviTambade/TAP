@@ -9,73 +9,73 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SessionManagement
 build_property.RootNamespace = SessionManagement
-build_property.ProjectDir = C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\
+build_property.ProjectDir = C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement
+build_property.MSBuildProjectDirectory = C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/shree/Desktop/tap/TAPPlayground/SessionManagement/Views/Cart/BuyNow.cshtml]
+[C:/Users/naval/OneDrive/Desktop/tap/TAPPlayground/SessionManagement/Views/Cart/BuyNow.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxCdXlOb3cuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/shree/Desktop/tap/TAPPlayground/SessionManagement/Views/Cart/Count.cshtml]
+[C:/Users/naval/OneDrive/Desktop/tap/TAPPlayground/SessionManagement/Views/Cart/Count.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxDb3VudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/shree/Desktop/tap/TAPPlayground/SessionManagement/Views/Cart/Empty.cshtml]
+[C:/Users/naval/OneDrive/Desktop/tap/TAPPlayground/SessionManagement/Views/Cart/Empty.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxFbXB0eS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/shree/Desktop/tap/TAPPlayground/SessionManagement/Views/Cart/Index.cshtml]
+[C:/Users/naval/OneDrive/Desktop/tap/TAPPlayground/SessionManagement/Views/Cart/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/shree/Desktop/tap/TAPPlayground/SessionManagement/Views/Cart/OrderPlaced.cshtml]
+[C:/Users/naval/OneDrive/Desktop/tap/TAPPlayground/SessionManagement/Views/Cart/OrderPlaced.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxPcmRlclBsYWNlZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/shree/Desktop/tap/TAPPlayground/SessionManagement/Views/Dashboard/BarChart.cshtml]
+[C:/Users/naval/OneDrive/Desktop/tap/TAPPlayground/SessionManagement/Views/Dashboard/BarChart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEJhckNoYXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/shree/Desktop/tap/TAPPlayground/SessionManagement/Views/Dashboard/Index.cshtml]
+[C:/Users/naval/OneDrive/Desktop/tap/TAPPlayground/SessionManagement/Views/Dashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/shree/Desktop/tap/TAPPlayground/SessionManagement/Views/Home/Index.cshtml]
+[C:/Users/naval/OneDrive/Desktop/tap/TAPPlayground/SessionManagement/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/shree/Desktop/tap/TAPPlayground/SessionManagement/Views/Home/Privacy.cshtml]
+[C:/Users/naval/OneDrive/Desktop/tap/TAPPlayground/SessionManagement/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/shree/Desktop/tap/TAPPlayground/SessionManagement/Views/Product/GetDetails.cshtml]
+[C:/Users/naval/OneDrive/Desktop/tap/TAPPlayground/SessionManagement/Views/Product/GetDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxHZXREZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/shree/Desktop/tap/TAPPlayground/SessionManagement/Views/Product/ShowAll.cshtml]
+[C:/Users/naval/OneDrive/Desktop/tap/TAPPlayground/SessionManagement/Views/Product/ShowAll.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxTaG93QWxsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/shree/Desktop/tap/TAPPlayground/SessionManagement/Views/Shared/Error.cshtml]
+[C:/Users/naval/OneDrive/Desktop/tap/TAPPlayground/SessionManagement/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/shree/Desktop/tap/TAPPlayground/SessionManagement/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/naval/OneDrive/Desktop/tap/TAPPlayground/SessionManagement/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/shree/Desktop/tap/TAPPlayground/SessionManagement/Views/_ViewImports.cshtml]
+[C:/Users/naval/OneDrive/Desktop/tap/TAPPlayground/SessionManagement/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/shree/Desktop/tap/TAPPlayground/SessionManagement/Views/_ViewStart.cshtml]
+[C:/Users/naval/OneDrive/Desktop/tap/TAPPlayground/SessionManagement/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/shree/Desktop/tap/TAPPlayground/SessionManagement/Views/Shared/_Layout.cshtml]
+[C:/Users/naval/OneDrive/Desktop/tap/TAPPlayground/SessionManagement/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-6kg3u246fn
