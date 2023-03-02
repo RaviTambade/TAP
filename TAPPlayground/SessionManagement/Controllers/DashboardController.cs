@@ -5,28 +5,30 @@ using SessionManagement.Services;
 
 namespace SessionManagement.Controllers;
 
-public class ProductController : Controller
+public class DashboardController : Controller
 {
     private readonly IProductService _service;
 
-    public ProductController(IProductService service)
+    public DashboardController(IProductService service)
     {
-        _service = service;
+        this._service = service;
     }
 
-    public IActionResult ShowAll()
-    {
-        var products = _service.GetAllProducts();
-        return View(products);
-    }
-
-    public IActionResult GetDetails()
+    public JsonResult GetDetails()
     {
         var products = _service.GetProductsDetails();
-        return View(products);
+        return Json(products);
     }
 
+    public IActionResult Index()
+    {
+        return View();
+    }
 
+     public IActionResult BarChart()
+    {
+        return View();
+    }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

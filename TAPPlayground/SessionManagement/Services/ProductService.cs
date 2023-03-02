@@ -26,4 +26,9 @@ private readonly IProductRepository _repo;
     {
         return _repo.GetProductById(id);
     }
+
+    public List<Product> GetProductsDetails()
+    {
+       return _repo.GetProductsDetails();
+    }
 }

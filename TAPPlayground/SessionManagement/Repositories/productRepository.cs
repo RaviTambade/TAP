@@ -5,7 +5,7 @@ namespace SessionManagement.Repositories;
 public class ProductRepository : IProductRepository
 {
 
-    public static string conString = "server=localhost;port=3306;user=root;password=password;database=simpledb";
+    public static string conString = "server=localhost;port=3306;user=root;password=Password;database=actsdb";
 
     public List<Product> GetAllProducts()
     {
@@ -89,6 +89,45 @@ public class ProductRepository : IProductRepository
 
         return product;
     }
+    public List<Product> GetProductsDetails()
+    {
+        List<Product> products = new List<Product>();
+        MySqlConnection con = new MySqlConnection();
+        con.ConnectionString = conString;
+        try
+        {
+            string query = "SELECT name,totalQuantity,AvailableQuantity,sellQuantity FROM products";
+            con.Open();
+            MySqlCommand command = new MySqlCommand(query, con);
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string? name = reader["name"].ToString();
+                int totalQuantity = Int32.Parse(reader["totalQuantity"].ToString());
+                int availableQuantity = Int32.Parse(reader["availableQuantity"].ToString());
+                int sellQuantity = Int32.Parse(reader["sellQuantity"].ToString());
 
+                Product product = new Product
+                {
+                    Name = name,
+                    TotalQuantity = totalQuantity,
+                    AvailableQuantity = availableQuantity,
+                    SellQuantity = sellQuantity
+                };
+
+                products.Add(product);
+            }
+            reader.Close();
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            con.Close();
+        }
+        return products;
+    }
 
 }
