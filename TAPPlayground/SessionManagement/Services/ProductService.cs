@@ -31,4 +31,8 @@ private readonly IProductRepository _repo;
     {
        return _repo.GetProductsDetails();
     }
+    public bool UpdateProduct(Product product){
+        return _repo.UpdateProduct(product);
+    }
+
 }

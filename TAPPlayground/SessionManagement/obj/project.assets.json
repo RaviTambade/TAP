@@ -1531,11 +1531,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\admin\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\naval\\.nuget\\packages\\": {}
+>>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\SessionManagement.csproj",
       "projectName": "SessionManagement",
       "projectPath": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\SessionManagement.csproj",
@@ -1545,6 +1550,16 @@
       "configFilePaths": [
         "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+=======
+      "projectUniqueName": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\SessionManagement.csproj",
+      "projectName": "SessionManagement",
+      "projectPath": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\SessionManagement.csproj",
+      "packagesPath": "C:\\Users\\naval\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\naval\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -1593,7 +1608,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

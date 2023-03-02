@@ -67,12 +67,17 @@ public class ProductRepository : IProductRepository
                 string? name = reader["name"].ToString();
                 string? description = reader["description"].ToString();
                 double price = double.Parse(reader["price"].ToString());
+                int availableQuantity=Int32.Parse(reader["availableQuantity"].ToString());
+                int soldQuantity=Int32.Parse(reader["soldQuantity"].ToString());
+
               product = new Product
                 {
                     Id = id,
                     Name = name,
                     Description = description,
-                    Price = price
+                    Price = price,
+                    AvailableQuantity=availableQuantity,
+                    SoldQuantity=soldQuantity
                 };
 
             }
@@ -128,6 +133,31 @@ public class ProductRepository : IProductRepository
             con.Close();
         }
         return products;
+    }
+
+     public bool UpdateProduct(Product product){
+        bool status=false;
+        MySqlConnection con=new MySqlConnection();
+        con.ConnectionString=conString;
+        try{
+            product.AvailableQuantity-=product.Count;
+            product.SoldQuantity+=product.Count;
+           
+            string query=$"Update products set availableQuantity={product.AvailableQuantity} ,soldQuantity={product.SoldQuantity} where productId={product.Id}";
+            MySqlCommand command=new MySqlCommand(query,con);
+            con.Open();
+            command.ExecuteNonQuery();
+            status=true;
+
+        }
+        catch(Exception e){
+            throw e;
+        }
+        finally{
+            con.Close();
+        }
+        return status;
+
     }
 
 }

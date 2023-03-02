@@ -94,7 +94,7 @@ public class CartController : Controller
     }
 
     [HttpGet]
-    public IActionResult BuyNow(List<Cart> products)
+    public IActionResult BuyNow()
     {
         
         var cart = HttpContext.Session.GetObjectFromJson<Cart>("Cart")
@@ -112,6 +112,12 @@ public class CartController : Controller
 
     [HttpGet]
     public IActionResult OrderPlaced(PaymentDetails details){
+          var cart = HttpContext.Session.GetObjectFromJson<Cart>("Cart");
+          foreach(var product in cart.Products){
+          var foundProduct=  _service.GetProductById(product.Id);
+          foundProduct.Count=product.Count;
+         _service.UpdateProduct(foundProduct);
+          }
         return View(details);
     }
 
