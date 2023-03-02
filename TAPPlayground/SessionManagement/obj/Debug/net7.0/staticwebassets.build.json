@@ -1,10 +1,6 @@
 {
   "Version": 1,
-<<<<<<< HEAD
-  "Hash": "6HSXI/xrswze03oZbYFEaXiX1/G/vHhijV/CWTHV1dM=",
-=======
-  "Hash": "ZbzOPtkZodufQBeCJYk5HN7P3sPXlJNOF+az9BRQQPI=",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+  "Hash": "7P0QftXSveNW8n/lpZJoHzxeXA1CIG9PGvv17frUEZk=",
   "Source": "SessionManagement",
   "BasePath": "_content/SessionManagement",
   "Mode": "Default",
@@ -14,28 +10,17 @@
     {
       "Name": "SessionManagement\\wwwroot",
       "Source": "SessionManagement",
-<<<<<<< HEAD
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\obj\\Debug\\net7.0\\scopedcss\\bundle\\SessionManagement.styles.css",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\obj\\Debug\\net7.0\\scopedcss\\bundle\\SessionManagement.styles.css",
       "SourceId": "SessionManagement",
       "SourceType": "Computed",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\obj\\Debug\\net7.0\\scopedcss\\bundle\\SessionManagement.styles.css",
-      "SourceId": "SessionManagement",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "SessionManagement.styles.css",
       "AssetKind": "All",
@@ -46,23 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\obj\\Debug\\net7.0\\scopedcss\\bundle\\SessionManagement.styles.css"
+      "OriginalItemSpec": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\obj\\Debug\\net7.0\\scopedcss\\bundle\\SessionManagement.styles.css"
     },
     {
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\SessionManagement.bundle.scp.css",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\SessionManagement.bundle.scp.css",
       "SourceId": "SessionManagement",
       "SourceType": "Computed",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\obj\\Debug\\net7.0\\scopedcss\\bundle\\SessionManagement.styles.css"
-    },
-    {
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\SessionManagement.bundle.scp.css",
-      "SourceId": "SessionManagement",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "SessionManagement.bundle.scp.css",
       "AssetKind": "All",
@@ -73,23 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\SessionManagement.bundle.scp.css"
+      "OriginalItemSpec": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\SessionManagement.bundle.scp.css"
     },
     {
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\css\\site.css",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\css\\site.css",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "OriginalItemSpec": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\SessionManagement.bundle.scp.css"
-    },
-    {
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\css\\site.css",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -103,17 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\css\\table.css",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\css\\table.css",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\css\\table.css",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "css/table.css",
       "AssetKind": "All",
@@ -127,17 +85,10 @@
       "OriginalItemSpec": "wwwroot\\css\\table.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\favicon.ico",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\favicon.ico",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\favicon.ico",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -151,17 +102,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\js\\site.js",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\js\\site.js",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\js\\site.js",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -175,17 +119,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -199,17 +136,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -223,17 +153,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -247,17 +170,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -271,17 +187,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -295,17 +204,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -319,17 +221,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -343,17 +238,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -367,17 +255,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -391,17 +272,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -415,17 +289,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -439,17 +306,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -463,17 +323,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -487,17 +340,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -511,17 +357,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -535,17 +374,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -559,17 +391,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -583,17 +408,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -607,17 +425,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -631,17 +442,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -655,17 +459,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -679,17 +476,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -703,17 +493,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -727,17 +510,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -751,17 +527,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -775,17 +544,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -799,17 +561,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -823,17 +578,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -847,17 +595,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -871,17 +612,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -895,17 +629,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -919,17 +646,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -943,17 +663,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -967,17 +680,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -991,17 +697,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -1015,17 +714,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -1039,17 +731,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -1063,17 +748,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -1087,17 +765,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -1111,17 +782,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -1135,17 +799,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -1159,17 +816,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -1183,17 +833,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -1207,17 +850,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -1231,17 +867,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\bootstrap\\LICENSE",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -1255,17 +884,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -1279,17 +901,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -1303,17 +918,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -1327,17 +935,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -1351,17 +952,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -1375,17 +969,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -1399,17 +986,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -1423,17 +1003,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -1447,17 +1020,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery\\dist\\jquery.js",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -1471,17 +1037,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -1495,17 +1054,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -1519,17 +1071,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "SessionManagement",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
-=======
-      "Identity": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\lib\\jquery\\LICENSE.txt",
-      "SourceId": "SessionManagement",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+      "ContentRoot": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\wwwroot\\",
       "BasePath": "_content/SessionManagement",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",

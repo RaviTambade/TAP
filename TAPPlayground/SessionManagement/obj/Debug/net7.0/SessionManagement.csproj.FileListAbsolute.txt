@@ -1,223 +1,55 @@
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\bin\Debug\net7.0\appsettings.Development.json
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\bin\Debug\net7.0\appsettings.json
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\bin\Debug\net7.0\SessionManagement.staticwebassets.runtime.json
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\bin\Debug\net7.0\SessionManagement.exe
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\bin\Debug\net7.0\SessionManagement.deps.json
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\bin\Debug\net7.0\SessionManagement.runtimeconfig.json
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\bin\Debug\net7.0\SessionManagement.dll
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\bin\Debug\net7.0\SessionManagement.pdb
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\bin\Debug\net7.0\Google.Protobuf.dll
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\bin\Debug\net7.0\K4os.Compression.LZ4.dll
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\bin\Debug\net7.0\K4os.Compression.LZ4.Streams.dll
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\bin\Debug\net7.0\K4os.Hash.xxHash.dll
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\bin\Debug\net7.0\MySql.Data.dll
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\bin\Debug\net7.0\ZstdNet.dll
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\bin\Debug\net7.0\comerr64.dll
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\bin\Debug\net7.0\gssapi64.dll
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\bin\Debug\net7.0\k5sprt64.dll
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\bin\Debug\net7.0\krb5_64.dll
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\bin\Debug\net7.0\krbcc64.dll
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\bin\Debug\net7.0\BouncyCastle.Crypto.dll
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\bin\Debug\net7.0\System.Drawing.Common.dll
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\bin\Debug\net7.0\System.Security.Permissions.dll
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\bin\Debug\net7.0\System.Windows.Extensions.dll
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\obj\Debug\net7.0\SessionManagement.csproj.AssemblyReference.cache
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\obj\Debug\net7.0\SessionManagement.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\obj\Debug\net7.0\SessionManagement.AssemblyInfoInputs.cache
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\obj\Debug\net7.0\SessionManagement.AssemblyInfo.cs
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\obj\Debug\net7.0\SessionManagement.csproj.CoreCompileInputs.cache
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\obj\Debug\net7.0\SessionManagement.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\obj\Debug\net7.0\SessionManagement.RazorAssemblyInfo.cache
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\obj\Debug\net7.0\SessionManagement.RazorAssemblyInfo.cs
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\obj\Debug\net7.0\staticwebassets\msbuild.SessionManagement.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\obj\Debug\net7.0\staticwebassets\msbuild.build.SessionManagement.props
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.SessionManagement.props
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.SessionManagement.props
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\obj\Debug\net7.0\staticwebassets.pack.json
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\obj\Debug\net7.0\staticwebassets.build.json
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\obj\Debug\net7.0\staticwebassets.development.json
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\obj\Debug\net7.0\scopedcss\bundle\SessionManagement.styles.css
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\obj\Debug\net7.0\scopedcss\projectbundle\SessionManagement.bundle.scp.css
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\obj\Debug\net7.0\SessionManagement.csproj.CopyComplete
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\obj\Debug\net7.0\SessionManagement.dll
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\obj\Debug\net7.0\refint\SessionManagement.dll
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\obj\Debug\net7.0\SessionManagement.pdb
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\obj\Debug\net7.0\SessionManagement.genruntimeconfig.cache
-C:\Users\naval\OneDrive\Desktop\E-AgroServiceApp\SessionManagement\obj\Debug\net7.0\ref\SessionManagement.dll
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\appsettings.Development.json
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\appsettings.json
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\SessionManagement.staticwebassets.runtime.json
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\SessionManagement.exe
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\SessionManagement.deps.json
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\SessionManagement.runtimeconfig.json
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\SessionManagement.dll
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\SessionManagement.pdb
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\Google.Protobuf.dll
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\K4os.Compression.LZ4.dll
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\K4os.Compression.LZ4.Streams.dll
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\K4os.Hash.xxHash.dll
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\MySql.Data.dll
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\ZstdNet.dll
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\comerr64.dll
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\gssapi64.dll
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\k5sprt64.dll
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\krb5_64.dll
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\krbcc64.dll
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\BouncyCastle.Crypto.dll
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\System.Drawing.Common.dll
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\System.Security.Permissions.dll
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\System.Windows.Extensions.dll
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.csproj.AssemblyReference.cache
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.AssemblyInfoInputs.cache
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.AssemblyInfo.cs
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.csproj.CoreCompileInputs.cache
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.RazorAssemblyInfo.cache
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.RazorAssemblyInfo.cs
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\staticwebassets\msbuild.SessionManagement.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\staticwebassets\msbuild.build.SessionManagement.props
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.SessionManagement.props
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.SessionManagement.props
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\staticwebassets.pack.json
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\staticwebassets.build.json
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\staticwebassets.development.json
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\scopedcss\bundle\SessionManagement.styles.css
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\scopedcss\projectbundle\SessionManagement.bundle.scp.css
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.csproj.CopyComplete
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.dll
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\refint\SessionManagement.dll
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.pdb
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.genruntimeconfig.cache
-C:\Users\shree\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\ref\SessionManagement.dll
-<<<<<<< HEAD
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\appsettings.Development.json
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\appsettings.json
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\SessionManagement.staticwebassets.runtime.json
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\SessionManagement.exe
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\SessionManagement.deps.json
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\SessionManagement.runtimeconfig.json
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\SessionManagement.dll
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\SessionManagement.pdb
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\Google.Protobuf.dll
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\K4os.Compression.LZ4.dll
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\K4os.Compression.LZ4.Streams.dll
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\K4os.Hash.xxHash.dll
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\MySql.Data.dll
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\ZstdNet.dll
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\comerr64.dll
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\gssapi64.dll
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\k5sprt64.dll
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\krb5_64.dll
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\krbcc64.dll
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\BouncyCastle.Crypto.dll
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\System.Drawing.Common.dll
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\System.Security.Permissions.dll
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\System.Windows.Extensions.dll
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.csproj.AssemblyReference.cache
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.GeneratedMSBuildEditorConfig.editorconfig
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.AssemblyInfoInputs.cache
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.AssemblyInfo.cs
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.csproj.CoreCompileInputs.cache
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.MvcApplicationPartsAssemblyInfo.cache
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.RazorAssemblyInfo.cache
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.RazorAssemblyInfo.cs
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\staticwebassets\msbuild.SessionManagement.Microsoft.AspNetCore.StaticWebAssets.props
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\staticwebassets\msbuild.build.SessionManagement.props
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.SessionManagement.props
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.SessionManagement.props
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\staticwebassets.pack.json
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\staticwebassets.build.json
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\staticwebassets.development.json
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\scopedcss\bundle\SessionManagement.styles.css
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\scopedcss\projectbundle\SessionManagement.bundle.scp.css
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.csproj.CopyComplete
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.dll
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\refint\SessionManagement.dll
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.pdb
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.genruntimeconfig.cache
-F:\ProjectFileTAP\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\ref\SessionManagement.dll
-=======
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\appsettings.Development.json
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\appsettings.json
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\SessionManagement.staticwebassets.runtime.json
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\SessionManagement.exe
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\SessionManagement.deps.json
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\SessionManagement.runtimeconfig.json
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\SessionManagement.dll
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\SessionManagement.pdb
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\Google.Protobuf.dll
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\K4os.Compression.LZ4.dll
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\K4os.Compression.LZ4.Streams.dll
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\K4os.Hash.xxHash.dll
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\MySql.Data.dll
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\ZstdNet.dll
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\comerr64.dll
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\gssapi64.dll
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\k5sprt64.dll
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\krb5_64.dll
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\krbcc64.dll
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\BouncyCastle.Crypto.dll
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\System.Drawing.Common.dll
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\System.Security.Permissions.dll
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\System.Windows.Extensions.dll
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.csproj.AssemblyReference.cache
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.AssemblyInfoInputs.cache
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.AssemblyInfo.cs
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.csproj.CoreCompileInputs.cache
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.RazorAssemblyInfo.cache
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.RazorAssemblyInfo.cs
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\staticwebassets\msbuild.SessionManagement.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\staticwebassets\msbuild.build.SessionManagement.props
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.SessionManagement.props
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.SessionManagement.props
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\staticwebassets.pack.json
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\staticwebassets.build.json
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\staticwebassets.development.json
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\scopedcss\bundle\SessionManagement.styles.css
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\scopedcss\projectbundle\SessionManagement.bundle.scp.css
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.csproj.CopyComplete
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.dll
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\refint\SessionManagement.dll
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.pdb
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.genruntimeconfig.cache
-C:\Users\naval\OneDrive\Desktop\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\ref\SessionManagement.dll
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+E:\Running project\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\appsettings.Development.json
+E:\Running project\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\appsettings.json
+E:\Running project\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\SessionManagement.staticwebassets.runtime.json
+E:\Running project\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\SessionManagement.exe
+E:\Running project\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\SessionManagement.deps.json
+E:\Running project\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\SessionManagement.runtimeconfig.json
+E:\Running project\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\SessionManagement.dll
+E:\Running project\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\SessionManagement.pdb
+E:\Running project\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\Google.Protobuf.dll
+E:\Running project\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\K4os.Compression.LZ4.dll
+E:\Running project\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\K4os.Compression.LZ4.Streams.dll
+E:\Running project\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\K4os.Hash.xxHash.dll
+E:\Running project\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+E:\Running project\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\MySql.Data.dll
+E:\Running project\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\ZstdNet.dll
+E:\Running project\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\comerr64.dll
+E:\Running project\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\gssapi64.dll
+E:\Running project\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\k5sprt64.dll
+E:\Running project\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\krb5_64.dll
+E:\Running project\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\krbcc64.dll
+E:\Running project\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\BouncyCastle.Crypto.dll
+E:\Running project\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+E:\Running project\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\System.Drawing.Common.dll
+E:\Running project\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+E:\Running project\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\System.Security.Permissions.dll
+E:\Running project\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\System.Windows.Extensions.dll
+E:\Running project\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+E:\Running project\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\Running project\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\Running project\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\Running project\tap\TAPPlayground\SessionManagement\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+E:\Running project\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.csproj.AssemblyReference.cache
+E:\Running project\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.GeneratedMSBuildEditorConfig.editorconfig
+E:\Running project\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.AssemblyInfoInputs.cache
+E:\Running project\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.AssemblyInfo.cs
+E:\Running project\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.csproj.CoreCompileInputs.cache
+E:\Running project\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.MvcApplicationPartsAssemblyInfo.cache
+E:\Running project\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.RazorAssemblyInfo.cache
+E:\Running project\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.RazorAssemblyInfo.cs
+E:\Running project\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\staticwebassets\msbuild.SessionManagement.Microsoft.AspNetCore.StaticWebAssets.props
+E:\Running project\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\staticwebassets\msbuild.build.SessionManagement.props
+E:\Running project\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.SessionManagement.props
+E:\Running project\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.SessionManagement.props
+E:\Running project\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\staticwebassets.pack.json
+E:\Running project\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\staticwebassets.build.json
+E:\Running project\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\staticwebassets.development.json
+E:\Running project\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+E:\Running project\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\scopedcss\bundle\SessionManagement.styles.css
+E:\Running project\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\scopedcss\projectbundle\SessionManagement.bundle.scp.css
+E:\Running project\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.csproj.CopyComplete
+E:\Running project\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.dll
+E:\Running project\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\refint\SessionManagement.dll
+E:\Running project\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.pdb
+E:\Running project\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\SessionManagement.genruntimeconfig.cache
+E:\Running project\tap\TAPPlayground\SessionManagement\obj\Debug\net7.0\ref\SessionManagement.dll

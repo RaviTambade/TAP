@@ -1531,41 +1531,24 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\admin\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\naval\\.nuget\\packages\\": {}
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+    "C:\\Users\\Rajat\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\SessionManagement.csproj",
+      "projectUniqueName": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\SessionManagement.csproj",
       "projectName": "SessionManagement",
-      "projectPath": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\SessionManagement.csproj",
-      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\obj\\",
+      "projectPath": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\SessionManagement.csproj",
+      "packagesPath": "C:\\Users\\Rajat\\.nuget\\packages\\",
+      "outputPath": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-=======
-      "projectUniqueName": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\SessionManagement.csproj",
-      "projectName": "SessionManagement",
-      "projectPath": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\SessionManagement.csproj",
-      "packagesPath": "C:\\Users\\naval\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\naval\\OneDrive\\Desktop\\tap\\TAPPlayground\\SessionManagement\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\naval\\AppData\\Roaming\\NuGet\\NuGet.Config"
->>>>>>> 8fc7ee874c965fadc9e354f6dc2828c0300166f6
+        "C:\\Users\\Rajat\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
