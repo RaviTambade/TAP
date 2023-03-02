@@ -29,6 +29,14 @@ public class DashboardController : Controller
     {
         return View();
     }
+    public IActionResult PieChart()
+    {
+        return View();
+    }
+    public IActionResult LineChart()
+    {
+        return View();
+    }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

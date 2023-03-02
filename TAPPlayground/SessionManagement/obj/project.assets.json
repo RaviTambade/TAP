@@ -1531,24 +1531,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\shree\\.nuget\\packages\\": {}
+    "C:\\Users\\admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\shree\\Desktop\\tap\\TAPPlayground\\SessionManagement\\SessionManagement.csproj",
+      "projectUniqueName": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\SessionManagement.csproj",
       "projectName": "SessionManagement",
-      "projectPath": "C:\\Users\\shree\\Desktop\\tap\\TAPPlayground\\SessionManagement\\SessionManagement.csproj",
-      "packagesPath": "C:\\Users\\shree\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\shree\\Desktop\\tap\\TAPPlayground\\SessionManagement\\obj\\",
+      "projectPath": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\SessionManagement.csproj",
+      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+      "outputPath": "F:\\ProjectFileTAP\\tap\\TAPPlayground\\SessionManagement\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\shree\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

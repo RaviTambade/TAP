@@ -5,7 +5,7 @@ namespace SessionManagement.Repositories;
 public class ProductRepository : IProductRepository
 {
 
-    public static string conString = "server=localhost;port=3306;user=root;password=password;database=simpledb";
+    public static string conString = "server=localhost;port=3306;user=root;password=Rohit@7378;database=OTBA";
 
     public List<Product> GetAllProducts()
     {
@@ -105,14 +105,14 @@ public class ProductRepository : IProductRepository
                 string? name = reader["name"].ToString();
                 int totalQuantity = Int32.Parse(reader["totalQuantity"].ToString());
                 int availableQuantity = Int32.Parse(reader["availableQuantity"].ToString());
-                int sellQuantity = Int32.Parse(reader["soldQuantity"].ToString());
+                int soldQuantity = Int32.Parse(reader["soldQuantity"].ToString());
 
                 Product product = new Product
                 {
                     Name = name,
                     TotalQuantity = totalQuantity,
                     AvailableQuantity = availableQuantity,
-                    SoldQuantity = sellQuantity
+                    SoldQuantity = soldQuantity
                 };
 
                 products.Add(product);
