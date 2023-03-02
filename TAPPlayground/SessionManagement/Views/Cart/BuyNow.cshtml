@@ -1,56 +1,48 @@
- @model SessionManagement.Models.Cart;
- <link rel="stylesheet" href="~/css/table.css" type="text/css" />
-
+@model SessionManagement.Models.Cart;
+<link rel="stylesheet" href="~/css/table.css" type="text/css" />
 
 <h3>Confirm Your Buy</h3>
 
 <table>
-    <th>
-        <tr>
-           <th>Name</th>
-           <th>Description</th>
-           <th>Quantity</th>
-           <th>TotalPrice</th>
-        </tr>
-    </th>
-    <tbody>
-        @foreach (var product in Model.Products)
-        {
-            var TotalPrice=@product.Count * @product.Price;
-            <tr>
-                <td>@product.Name</td>
-                <td>@product.Description</td>
-                <td>@product.Count</td>
-                <td>@TotalPrice</td>
-                </tr>
-        }
-    </tbody>
-    </table> 
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Quantity</th>
+    <th>TotalPrice</th>
+  </tr>
+  @foreach (var product in Model.Products) { 
+    var TotalPrice=@product.Count * @product.Price;
+  <tr>
+    <td>@product.Name</td>
+    <td>@product.Description</td>
+    <td>@product.Count</td>
+    <td>@TotalPrice</td>
+  </tr>
+  }
+</table>
 
-    
 <div>Total amount: @Model.TotalAmount</div>
-@{ 
-     PaymentDetails details = new PaymentDetails();
-    <form  method="post">
-        <table>
-            <tr>
-   <th> <label for="@details.Owner" >Owner:</label></th> 
-   <td> <input type="text" id="owner" name="owner"></td>
-   </tr>
-   <tr> 
-   <th><label for="@details.CreditCardNumber" >CreditCartNumber:</label></th> 
-   <td><input type="text" id="CreditCardNumber" name="CreditCardNumber"></td> 
-    </tr>
-       <tr>
-   <th> <label for="@details.CVV" >CVV:</label></th>
-    <td><input type="text" id="CVV" name="CVV"></td>
-    </tr>
-       <tr>
-    <th><label for="@details.ExpiryDate" >ExpiryDate:</label></th>
-    <td><input type="text" id="ExpiryDate" name="ExpiryDate"></td>
-    </tr>
-    </table>
-        <a href="@Url.Action("BuyNow", "Cart", new PaymentDetails { Owner=@details.Owner, CreditCardNumber=@details.CreditCardNumber, CVV=@details.CVV ,ExpiryDate=@details.ExpiryDate })"><button> Place Order </button></a>
-    </form>
 
-     }
+<form asp-controller="Cart" asp-action="OrderPlaced" method="post">
+  <table>
+    <tr>
+      <th><label for="Owner">Owner:</label></th>
+      <td><input type="text" id="owner" name="Owner" /></td>
+    </tr>
+    <tr>
+      <th><label for="CreditCardNumber">CreditCartNumber:</label></th>
+      <td>
+        <input type="text" id="CreditCardNumber" name="CreditCardNumber" />
+      </td>
+    </tr>
+    <tr>
+      <th><label for="CVV">CVV:</label></th>
+      <td><input type="text" id="CVV" name="CVV" /></td>
+    </tr>
+    <tr>
+      <th><label for="ExpiryDate">ExpiryDate:</label></th>
+      <td><input type="text" id="ExpiryDate" name="ExpiryDate" /></td>
+    </tr>
+  </table>
+  <button type="submit">Place Order</button>
+</form>

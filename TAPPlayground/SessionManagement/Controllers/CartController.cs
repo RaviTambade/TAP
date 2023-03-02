@@ -103,14 +103,7 @@ public class CartController : Controller
         
     }
 
-
     [HttpPost]
-    public IActionResult BuyNow(PaymentDetails details)
-    {
-        return RedirectToAction("OrderPlaced","Cart",details);
-    }
-
-    [HttpGet]
     public IActionResult OrderPlaced(PaymentDetails details){
           var cart = HttpContext.Session.GetObjectFromJson<Cart>("Cart");
           foreach(var product in cart.Products){

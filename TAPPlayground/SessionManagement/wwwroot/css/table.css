@@ -2,7 +2,8 @@ input{margin: auto;
     align-self: center;  
     border: none;
      outline: none;
-     background: none;    }
+     background: none;  
+      }
 
 
 table,th,td{border:1px solid black;
@@ -12,12 +13,12 @@ th,td{
 padding: 10px;
 }
 th{background-color: aqua;
-    font-style:bold}
+    font-style:bold;
+}
 
 button {
-size: 80px;
-width: 200px;
-height: 100px;
+width: 140px;
+height: 40x;
 background-color: rgba(243, 198, 198, 0.664);
 padding: 6px 6px;
 margin: 6px;

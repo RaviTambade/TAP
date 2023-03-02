@@ -1,11 +1,11 @@
-@using SessionManagement.Models; 
-@model Product;
- @{ ViewData["Title"] = "Products Page"; }
+@using SessionManagement.Models;
+@model Product; 
+ @{ ViewData["Title"] ="Products Page"; }
 
 <link rel="stylesheet" href="~/css/table.css" type="text/css" />
 
 <h1>Products</h1>
-    @using(Html.BeginForm()){
+@using(Html.BeginForm()){
 
 <table>
   <tr>
@@ -26,14 +26,14 @@
       />
     </td>
   </tr>
-  <th><label for="@Model.Price">Price</label></th>
-  <td><input type="text" name="product.Price" value="@Model.Price"  /></td>
-
+  <tr>
+    <th><label for="@Model.Price">Price</label></th>
+    <td><input type="text" name="product.Price" value="@Model.Price" /></td>
+  </tr>
   <tr>
     <th><label for="@Model.Count">Quantity</label></th>
-    <td><input type="text" name="product.Count"  value="1"/></td>
-    <td></td>
+    <td><input type="text" name="product.Count" value="1" /></td>
   </tr>
 </table>
 <button><input type="submit" value="Add" /></button>
-} 
+}
