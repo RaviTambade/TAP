@@ -5,7 +5,7 @@ namespace SessionManagement.Repositories;
 public class ProductRepository : IProductRepository
 {
 
-    public static string conString = "server=localhost;port=3306;user=root;password=password;database=simpledb";
+    public static string conString = "server=localhost;port=3306;user=root;password=Password;database=simpledb";
 
     public List<Product> GetAllProducts()
     {
@@ -159,5 +159,6 @@ public class ProductRepository : IProductRepository
         return status;
 
     }
+
 
 }

@@ -1,30 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\SessionManagement.csproj": {}
+    "C:\\projectclone\\tap\\TAPPlayground\\SessionManagement\\SessionManagement.csproj": {}
   },
   "projects": {
-    "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\SessionManagement.csproj": {
+    "C:\\projectclone\\tap\\TAPPlayground\\SessionManagement\\SessionManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\SessionManagement.csproj",
+        "projectUniqueName": "C:\\projectclone\\tap\\TAPPlayground\\SessionManagement\\SessionManagement.csproj",
         "projectName": "SessionManagement",
-        "projectPath": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\SessionManagement.csproj",
-        "packagesPath": "C:\\Users\\Rajat\\.nuget\\packages\\",
-        "outputPath": "E:\\Running project\\tap\\TAPPlayground\\SessionManagement\\obj\\",
+        "projectPath": "C:\\projectclone\\tap\\TAPPlayground\\SessionManagement\\SessionManagement.csproj",
+        "packagesPath": "C:\\Users\\Pragati\\.nuget\\packages\\",
+        "outputPath": "C:\\projectclone\\tap\\TAPPlayground\\SessionManagement\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Rajat\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Pragati\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net7.0"
+          "net6.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -35,8 +35,8 @@
         }
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "mysql.data": {
               "target": "Package",
@@ -62,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
