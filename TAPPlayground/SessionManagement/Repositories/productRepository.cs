@@ -5,7 +5,7 @@ namespace SessionManagement.Repositories;
 public class ProductRepository : IProductRepository
 {
 
-    public static string conString = "server=localhost;port=3306;user=root;password=Password;database=simpledb";
+    public static string conString = "server=localhost;port=3306;user=root;password=Password;database=Ecommerce";
 
     public List<Product> GetAllProducts()
     {
@@ -21,7 +21,7 @@ public class ProductRepository : IProductRepository
             while (reader.Read())
             {
                 int id = Int32.Parse(reader["productId"].ToString());
-                string? name = reader["name"].ToString();
+                string? title = reader["name"].ToString();
                 string? description = reader["description"].ToString();
                 double price = double.Parse(reader["price"].ToString());
 
