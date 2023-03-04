@@ -79,6 +79,37 @@ INSERT INTO products(title, description, stock_available,unit_price,image)
 					('ParleG','Delicious',2000,10,'./images/parleg.jfif'),
 					('Sting','Energy Drink',2500,20,'./images/sting.jpg');
 
+INSERT INTO products(title, description, stock_available,unit_price,image)
+            VALUES ('Potato chips','Testy', 2000,15,'./images/potato chips'),
+                   ('chocolate','Testy', 200,12,'./images/chocolate'),
+                   ('pen','Testy', 500,5,'./images/pen'),
+                   ('notebook','Testy', 400,50,'./images/notebook'),
+                   ('Laptop','Testy', 50,50000,'./images/Laptop'),
+                   ('Mobile','Testy', 200,15000,'./images/Mobile'),
+                   ('Books','Testy', 1000,100,'./images/Books'),
+                   ('Headphones','Testy', 150,1600,'./images/Headphones'),
+                   ('Watch','Testy', 400,2000,'./images/Watch');
+		
+   
+INSERT INTO products(title, description, stock_available,unit_price,image)
+            VALUES ('Water Bottle','clean ',1500,20,'./images/Water Bottle');
+            
+ INSERT INTO products(title, description, stock_available,unit_price,image)
+            VALUES ('Water Filter','5* rated  ',200,8000,'./images/Water Filter');
+            
+INSERT INTO products(title, description, stock_available,unit_price,image)
+            VALUES ('Freze','5 * rated ',500,12000,'./images/Freze');
+            
+INSERT INTO products(title, description, stock_available,unit_price,image)
+            VALUES ('Grass Cutter',' Saftey  ',150,25000,'./images/Grass Cutter');
+  
+INSERT INTO products(title, description, stock_available,unit_price,image)
+            VALUES ('Fan',' Saftey  ',1500,2500,'./images/Fan');
+
+INSERT INTO products(title, description, stock_available,unit_price,image)
+            VALUES ('Television',' Saftey  ',700,25000,'./images/Television');
+            
+            
 INSERT INTO orders(order_date,cust_id,status)
             VALUES('2022-07-28  12:35:25',1,'Approved'), 
 				  ('2022-07-23  12:35:25',3,'Inprogress'),
