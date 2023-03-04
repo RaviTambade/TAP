@@ -19,13 +19,14 @@ public class ProductController : Controller
         var products = _service.GetAllProducts();
         return View(products);
     }
+    /*
 
     public IActionResult GetDetails()
     {
         var products = _service.GetProductsDetails();
         return View(products);
     }
-
+*/
 
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

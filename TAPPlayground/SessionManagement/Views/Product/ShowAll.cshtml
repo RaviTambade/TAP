@@ -22,9 +22,9 @@
         @foreach (var product in Model)
         {
             <tr>
-                <td>@product.Name</td>
+                <td>@product.Title</td>
                 <td>@product.Description</td>
-                <td>@product.Price</td>
+                <td>@product.UnitPrice</td>
                 <td><a href="@Url.Action("Count", "Cart", new   {id=product.Id })"><button> Add to Cart </button></a></td>
             </tr>
         }

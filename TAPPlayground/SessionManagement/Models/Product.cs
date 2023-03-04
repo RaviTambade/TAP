@@ -3,17 +3,13 @@ namespace SessionManagement.Models;
 public class Product{
     public int Id {get;set;}
 
-    public String? Name{get;set;}
+    public String? Title{get;set;}
     public String? Description{get;set;}
 
-    public double Price{get;set;}
+    public int StockAvailable{get;set;}
 
-    public int Count{get;set;}
+    public double UnitPrice{get;set;}
     
-    public int TotalQuantity{get; set;}
-
-    public int AvailableQuantity{get; set;}
-
-    public int SoldQuantity{get; set;}
+    public string? Image{get; set;}
 
 }
