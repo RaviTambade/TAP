@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace ECommerceApp.Models;
 public class Address
 {
@@ -14,7 +16,18 @@ public class Address
     public string? PinCode{get;set;}
     public string FullAddress{
         get{
-            return $"{HouseNumber},{Landmark},{City},{State},{Country},{PinCode}";
+            // return $"{HouseNumber},{Landmark},{City},{State},{Country},{PinCode}";
+            StringBuilder address=new StringBuilder();
+            address.AppendLine(HouseNumber);
+            address.AppendLine(Landmark);
+            address.AppendLine(City);
+            address.AppendLine(State);
+            address.AppendLine(Country);
+            address.AppendLine(PinCode);
+             return address.ToString();
+
         }
+
+      
     }
 }

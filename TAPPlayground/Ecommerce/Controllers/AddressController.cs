@@ -15,12 +15,12 @@ public class AddressController : Controller
     }
 
      [HttpGet]
-     public IActionResult PermanentAddress(){
+     public IActionResult Address(){
         return View();
      }
 
      [HttpPost]
-     public IActionResult PermanentAddress(Address address){
+     public IActionResult Address(Address address){
          int customerid =HttpContext.Session.GetObjectFromJson<Customer>("Customer").CustomerId;
          address.CustomerId=customerid;
         _addresssrv.InsertAddress(address);

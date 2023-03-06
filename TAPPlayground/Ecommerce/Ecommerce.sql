@@ -59,7 +59,7 @@ FOR EACH ROW BEGIN
 	        country VARCHAR(25) NOT NULL,
 	        pincode VARCHAR(25) NOT NULL
 	    );
-	    products (
+	  CREATE TABLE products (
 	        product_id INT PRIMARY KEY AUTO_INCREMENT,
 	        title VARCHAR(20) NOT NULL,
 	        description VARCHAR(50),

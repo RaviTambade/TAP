@@ -38,15 +38,15 @@ public class DashboardController : Controller
     {
         return View();
     }
+   
     [HttpGet]
-
     public IActionResult PieChart()
      {
          return View();
      }
-    // public IActionResult LineChart()
-    // {
-    //     return View();
-    // }
-}
+    public IActionResult LineChart()
+   {     
+         return View();
+    }
+ }
 

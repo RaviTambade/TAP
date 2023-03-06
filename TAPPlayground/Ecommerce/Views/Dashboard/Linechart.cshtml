@@ -1,13 +1,12 @@
-
-<title>@ViewData["Title"] - Bar Chart</title>  
+<title>@ViewData["Title"] - Line Chart</title>  
 <script type="text/javascript" 
         src="https://www.gstatic.com/charts/loader.js"></script>  
-  
+
 
 
 <h2>Sales Dashboard</h2>
 <hr/>
-  <a href="/Dashboard/Barchart">Bar Chart</a>   
+  <a href="/dashboard/linechart">Line Chart</a> 
 <hr/>
 
 <div id="chart_div"></div>  
@@ -18,7 +17,7 @@
         packages: ['corechart', 'bar']  
     });  
     google.charts.setOnLoadCallback(LoadData);  
-    
+  
     function LoadData() {  
         $.ajax({  
   
@@ -36,30 +35,31 @@
             }  
         });  
         return false;  
-    }
-    function revenueChart(data) {  
+    }  
+  
+     function revenueChart(data) {  
         var dataArray = [  
-            ['title','totalRevenue']  
+            ['Product', 'totalrevenue']  
         ];  
         $.each(data, function(i, product) {  
             dataArray.push([product.title, product.totalRevenue]);  
-        });  
+        });    
         var data = google.visualization.arrayToDataTable(dataArray);  
         var options = {  
-            title: 'Details of Products ',  
+            title: 'Products Details ',  
             chartArea: {  
                 width: '50%'  
             },  
-            colors: ['#b0120a'],  
+            colors: ['#b0120a', '#7b1fa2', '#ffab91', '#d95f02'],  
             hAxis: {  
-                title: 'Product',  
+                title: 'Products',  
                 minValue: 0  
             },  
             vAxis: {  
-                title: 'Total sale'  
+                title: 'Total Sale'  
             }  
         };  
-        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));  
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));  
   
         chart.draw(data, options);  
         return false;  

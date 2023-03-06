@@ -21,7 +21,7 @@
     function LoadData() {  
         $.ajax({  
   
-            url: '/dashboard/GetDetails',  
+            url: '/Dashboard/GetDetails',  
             dataType: "json",  
             type: "GET",  
 
@@ -48,9 +48,9 @@
         var options = {  
             title: 'Details of Products ',  
             chartArea: {  
-                width: '50%'  
+                width: '80%'  
             },  
-            colors: ['#b0120a', '#7b1fa2', '#ffab91', '#d95f02'],  
+            colors: ['#b0120a', '#7b1fa2', '#ffab91', '#d95f02','#d95f02'] ,
             hAxis: {  
                 title: 'products',  
                 minValue: 0  

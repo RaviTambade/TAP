@@ -8,7 +8,7 @@
 
 <link rel="stylesheet" href="~/css/table.css" type="text/css" />
 <div style="text-align: right;">
-    <button ><a asp-controller="Address" asp-action="PermanentAddress">New Address </a></button> 
+    <button ><a asp-controller="Address" asp-action="Address">New Address </a></button> 
 </div>
 
 
@@ -16,13 +16,25 @@
 <form>
 <select name="address">
 <option value="">select address</option>
-@foreach (var addres in Model)
+@foreach (var address in Model)
 {
-    <option value="@addres.AddressId">"@addres.FullAddress</option>
+    <option value="@address.AddressId">
+        <p>@address.HouseNumber<br/>
+        @address.Landmark<br/>
+        @address.City<br/>
+        @address.State<br/>
+        @address.Country<br/>
+        @address.PinCode</p>
+
+    </option>
+
 }
 </select>
 </form>
-@* <table>
+<button><input type="submit" value="Submit" /></button>
+
+
+  @* <table>
         <tr>
             <th></th>
             <th>House</th>
@@ -33,8 +45,8 @@
             <th>Pincode</th>
 
             
-            @* <th> Add To Cart</th> *@
-        @* </tr>
+         <th> Add To Cart</th> 
+         </tr>
 
         @foreach (var address in Model)
         {
@@ -47,11 +59,11 @@
                 <td>@address.PinCode</td>
 
                
-                @* <td><a href="@Url.Action("BuyQuantity", "Cart" , new {id=@product.ProductId})"><button> Add to Cart </button></a></td> *@
-            @* </tr>
+                <td><a href="@Url.Action("BuyQuantity", "Cart" , new {id=@product.ProductId})"><button> Add to Cart </button></a></td> 
+            </tr>
         } 
-</table> *@ 
+</table>   
 
 
 
-
+  *@
