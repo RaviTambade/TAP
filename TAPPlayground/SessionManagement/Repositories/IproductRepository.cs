@@ -7,7 +7,7 @@ public interface IProductRepository{
 
     Product GetProductById(int id);
 
-   List<Product> GetProductsDetails();
+   //List<Product> GetProductsDetails();
 
-   bool UpdateProduct(Product product);
+  // bool UpdateProduct(Product product);
 }

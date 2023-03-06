@@ -20,17 +20,21 @@ public class ProductRepository : IProductRepository
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
-                int id = Int32.Parse(reader["productId"].ToString());
-                string? title = reader["name"].ToString();
+                int id = Int32.Parse(reader["product_id"].ToString());
+                string? title = reader["title"].ToString();
                 string? description = reader["description"].ToString();
-                double price = double.Parse(reader["price"].ToString());
+                int stockAvailable= Int32.Parse(reader["stock_available"].ToString());
+                double unitPrice = double.Parse(reader["unit_price"].ToString());
+                string? image = reader["image"].ToString();
 
                 Product product = new Product
                 {
                     Id = id,
-                    Name = name,
+                    Title = title,
                     Description = description,
-                    Price = price
+                    StockAvailable = stockAvailable,
+                    UnitPrice = unitPrice,
+                    Image = image
                 };
 
                 products.Add(product);
@@ -50,9 +54,58 @@ public class ProductRepository : IProductRepository
     }
 
     public Product GetProductById(int id)
+<<<<<<< HEAD
  
+=======
+    {
+        Product product = new Product();
+
+        MySqlConnection con = new MySqlConnection();
+        con.ConnectionString = conString;
+        try
+        {
+            string query = "SELECT * FROM products where product_id=" + id;
+            con.Open();
+            MySqlCommand command = new MySqlCommand(query, con);
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                int productId = Int32.Parse(reader["product_id"].ToString());
+                string? title = reader["title"].ToString();
+                string? description = reader["description"].ToString();
+                int stockAvailable= Int32.Parse(reader["stock_available"].ToString());
+                double unitPrice = double.Parse(reader["unit_price"].ToString());
+                string? image = reader["image"].ToString();
+
+
+              product = new Product
+                {
+                    Id = productId,
+                    Title = title,
+                    Description = description,
+                    StockAvailable = stockAvailable,
+                    UnitPrice = unitPrice,
+                    Image = image
+                };
+
+            }
+            reader.Close();
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            con.Close();
+        }
+
+        return product;
+>>>>>>> 40c693edac06cdb7a6bbe9532dfd00715b8c7933
     }
-    public List<Product> GetProductsDetails()
+
+}
+    /*public List<Product> GetProductsDetails()
     {
         List<Product> products = new List<Product>();
         MySqlConnection con = new MySqlConnection();
@@ -93,6 +146,7 @@ public class ProductRepository : IProductRepository
         return products;
     }
 
+
      public bool UpdateProduct(Product product){
         bool status=false;
         MySqlConnection con=new MySqlConnection();
@@ -118,5 +172,4 @@ public class ProductRepository : IProductRepository
 
     }
 
-
-}
+*/
