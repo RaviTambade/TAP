@@ -16,7 +16,10 @@ builder.Services.AddTransient<IAddressRepository,AddressRepository>();
 builder.Services.AddTransient<IAddressService,AddressService>();
 builder.Services.AddTransient<IDashboardRepository,DashboardRepository>();
 builder.Services.AddTransient<IDashboardService,DashboardService>();
-
+builder.Services.AddTransient<IOrderRepository,OrderRepository>();
+builder.Services.AddTransient<IOrderService,OrderService>();
+builder.Services.AddTransient<IOrderDetailsRepository,OrderDetailsRepository>();
+builder.Services.AddTransient<IOrderDetailsService,OrderDetailsService>();
 
 
 builder.Services.AddSession(options =>{

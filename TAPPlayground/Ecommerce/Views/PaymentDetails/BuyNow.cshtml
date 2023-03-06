@@ -1,0 +1,48 @@
+@model ECommerceApp.Models.Cart;
+<link rel="stylesheet" href="~/css/table.css" type="text/css" />
+
+<h3>Confirm Your Buy</h3>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Quantity</th>
+    <th>TotalPrice</th>
+  </tr>
+  @foreach (var product in Model.Products) { 
+    var TotalPrice=@product.BuyQuantity * @product.UnitPrice;
+  <tr>
+    <td>@product.Title</td>
+    <td>@product.Description</td>
+    <td>@product.BuyQuantity</td>
+    <td>@TotalPrice</td>
+  </tr>
+  }
+</table>
+
+<div>Total amount: @Model.TotalAmount</div>
+
+<form>
+  <table>
+    <tr>
+      <th><label for="Owner">Owner:</label></th>
+      <td><input type="text" id="owner" name="Owner" /></td>
+    </tr>
+    <tr>
+      <th><label for="CreditCardNumber">CreditCartNumber:</label></th>
+      <td>
+        <input type="text" id="CreditCardNumber" name="CreditCardNumber" />
+      </td>
+    </tr>
+    <tr>
+      <th><label for="CVV">CVV:</label></th>
+      <td><input type="text" id="CVV" name="CVV" /></td>
+    </tr>
+    <tr>
+      <th><label for="ExpiryDate">ExpiryDate:</label></th>
+      <td><input type="text" id="ExpiryDate" name="ExpiryDate" /></td>
+    </tr>
+  </table>
+  <button type="submit">Place Order</button>
+</form>

@@ -1,7 +1,7 @@
 
-CREATE DATABASE Ecommerce;
 
- USE Ecommerce ;
+
+--  USE Ecommerce ;
 
 CREATE TABLE
     users(
@@ -71,9 +71,10 @@ FOR EACH ROW BEGIN
 	    orders(
 	        order_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	        order_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+			delivery_date  DATETIME DEFAULT CURRENT_TIMESTAMP,
 	        cust_id INT NOT NULL,
 	        CONSTRAINT fk_customer_id FOREIGN KEY (cust_id) REFERENCES customers(cust_id) ON UPDATE CASCADE ON DELETE CASCADE,
-	        status VARCHAR(20)
+	        status ENUM('processing','deliverd') NOT NULL
 	    );
 	CREATE TABLE
 	    orderdetails(
@@ -84,6 +85,7 @@ FOR EACH ROW BEGIN
 	        CONSTRAINT fk_product_id FOREIGN KEY (product_id) REFERENCES products(product_id) ON UPDATE CASCADE ON DELETE CASCADE,
 	        quantity INT NOT NULL
 	    );
+
 	SELECT
 	    sum(quantity) as totalquantity
 	from orderdetails
@@ -104,7 +106,7 @@ FOR EACH ROW BEGIN
 	
 END; 
 
-CALL totalrevenue(2,@totalrevenue);
+CALL getrevenue(2,@totalrevenue);
 
 SELECT @totalrevenue;
 
@@ -127,6 +129,8 @@ group by month(order_date);*/
 
 
 INSERT INTO customers(first_name,last_name,email,contact_number,password) VALUES ('sahil','mankar','sahil@123','9960916323','sahil@123');
+INSERT INTO customers(first_name,last_name,email,contact_number,password) VALUES ('abhay','navle','abhay@123','9075966080','password');
+
 INSERT INTO products(title,description,stock_available,unit_price,image)VALUES('ParleG','tasty biscuits',20000,10,'./images/Parleg.jpg');
 INSERT INTO products(title,description,stock_available,unit_price,image)VALUES('GoodDay','tasty cookies',50000,15,'./images/goodday.jpg');
 INSERT INTO products(title,description,stock_available,unit_price,image)VALUES('MariGold','tasty biscuits',40000,16,'./images/marigold.jpg');
@@ -139,17 +143,17 @@ INSERT INTO addresses(cust_id,address_mode,house_number,landmark,city,state,coun
 INSERT INTO addresses(cust_id,address_mode,house_number,landmark,city,state,country,pincode)VALUES(1,'permanent','houseNo.32','Peth-Kurwandi Road','Manchar','Maharashtra','India','123321');
 INSERT INTO addresses(cust_id,address_mode,house_number,landmark,city,state,country,pincode)VALUES(1,'permanent','houseNo.234','Pune-Nashik Highway','Rajgurunagar','Maharashtra','India','121321');
 
-INSERT INTO orders(order_date,cust_id,status)
-            VALUES        ('2020-08-25  06:35:25',1,'Approved'); 
+INSERT INTO orders(order_date,cust_id)
+            VALUES        ('2020-08-25  06:35:25',1); 
 
-INSERT INTO orders(order_date,cust_id,status)
-            VALUES        ('2021-06-04  08:35:25',1,'Approved'); 
+INSERT INTO orders(order_date,cust_id)
+            VALUES        ('2021-06-04  08:35:25',1); 
 
-INSERT INTO orders(order_date,cust_id,status)
-            VALUES        ('2010-01-16  09:35:25',2,'Approved'); 
+INSERT INTO orders(order_date,cust_id)
+            VALUES        ('2010-01-16  09:35:25',2); 
 
-INSERT INTO orders(order_date,cust_id,status)
-            VALUES        ('2021-05-15  11:35:25',2,'Approved');
+INSERT INTO orders(order_date,cust_id)
+            VALUES        ('2021-05-15  11:35:25',2);
 
 
 				
