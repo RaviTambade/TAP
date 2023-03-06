@@ -39,6 +39,7 @@ public class AuthController : Controller
     }
 
 [HttpPost]
+
     public IActionResult LoginAsFarmer(User user)
     {
      bool status=  _userService.ValidateFarmer(user);

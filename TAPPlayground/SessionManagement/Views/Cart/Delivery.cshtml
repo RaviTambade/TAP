@@ -1,0 +1,46 @@
+@model SessionManagement.Models.Delivery;
+@{
+    ViewData["Title"] = "Insert Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Address</h1>
+</div>
+<link rel="stylesheet" href="~/css/table.css" />
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <th>@Html.LabelFor(model => model.CustomerId)</th>
+            <td>@Html.EditorFor(model => model.CustomerId)</td>
+        </tr>
+
+        <tr>
+            <th>@Html.LabelFor(model => model.Landmark)</th>
+            <td>@Html.EditorFor(model => model.Landmark)</td>
+        </tr>
+
+        <tr>
+            <th>@Html.LabelFor(model => model.City)</th>
+            <td>@Html.EditorFor(model => model.City)</td>
+        </tr>
+
+        <tr>
+            <th>@Html.LabelFor(model => model.State)</th>
+            <td>@Html.EditorFor(model => model.State)</td>
+        </tr>
+
+        <tr>
+            <th>@Html.LabelFor(model => model.Country)</th>
+            <td>@Html.EditorFor(model => model.Country)</td>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(model => model.PinCode)</th>
+            <td>@Html.EditorFor(model => model.PinCode)</td>
+        </tr>
+
+    </table>
+    <button><input type="submit" value="Insert" /></button>
+
+
+}

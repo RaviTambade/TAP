@@ -3,7 +3,7 @@ using MySql.Data.MySqlClient;
 namespace AuthenticationApp.Repositories;
 public class UserRepository : IUserRepository
 {
-    public static string conString = "server=localhost;port=3306;user=root;password=password;database=simpledb";
+    public static string conString = "server=localhost;port=3306;user=root;password=password;database=eagroservicesdb";
 
     public bool ValidateUser(User user)
     {
@@ -12,7 +12,7 @@ public class UserRepository : IUserRepository
         con.ConnectionString = conString;
         try
         {
-            string query = "SELECT EXISTS(SELECT * FROM users where ContactNumber='" + user.ContactNumber + "' and OTP='" + user.OTP + "')";
+            string query = "SELECT EXISTS(SELECT * FROM users where ContactNumber='" + user.ContactNumber + "' and otp='" + user.OTP+ "')";
             con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
             MySqlDataReader reader = command.ExecuteReader();
@@ -42,7 +42,7 @@ public class UserRepository : IUserRepository
         MySqlConnection con = new MySqlConnection(conString);
         try
         {
-            string query = "INSERT INTO users(ContactNumber,OTP)VALUES('" + user.ContactNumber + "','" + user.OTP + "')";
+            string query = "INSERT INTO users(contactNumber,otp)VALUES('" + user.ContactNumber + "','" + user.OTP + "')";
             con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
             command.ExecuteNonQuery();

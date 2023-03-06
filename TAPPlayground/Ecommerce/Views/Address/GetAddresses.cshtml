@@ -1,0 +1,57 @@
+
+@using ECommerceApp.Models;
+@model IEnumerable<Address>
+
+@{
+    ViewData["Title"] = "Address Page";
+}
+
+<link rel="stylesheet" href="~/css/table.css" type="text/css" />
+<div style="text-align: right;">
+    <button ><a asp-controller="Address" asp-action="PermanentAddress">New Address </a></button> 
+</div>
+
+
+<h1>Shipping Address</h1>
+<form>
+<select name="address">
+<option value="">select address</option>
+@foreach (var addres in Model)
+{
+    <option value="@addres.AddressId">"@addres.FullAddress</option>
+}
+</select>
+</form>
+@* <table>
+        <tr>
+            <th></th>
+            <th>House</th>
+            <th>LandMark</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Country</th>
+            <th>Pincode</th>
+
+            
+            @* <th> Add To Cart</th> *@
+        @* </tr>
+
+        @foreach (var address in Model)
+        {
+            <tr>
+                <td>@address.HouseNumber</td>
+                <td>@address.Landmark</td>
+                <td>@address.City</td>
+                <td>@address.State</td>
+                <td>@address.Country</td>
+                <td>@address.PinCode</td>
+
+               
+                @* <td><a href="@Url.Action("BuyQuantity", "Cart" , new {id=@product.ProductId})"><button> Add to Cart </button></a></td> *@
+            @* </tr>
+        } 
+</table> *@ 
+
+
+
+

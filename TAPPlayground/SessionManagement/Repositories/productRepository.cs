@@ -50,49 +50,7 @@ public class ProductRepository : IProductRepository
     }
 
     public Product GetProductById(int id)
-    {
-        Product product = new Product();
-
-        MySqlConnection con = new MySqlConnection();
-        con.ConnectionString = conString;
-        try
-        {
-            string query = "SELECT * FROM products where productId=" + id;
-            con.Open();
-            MySqlCommand command = new MySqlCommand(query, con);
-            MySqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-                // int id = Int32.Parse(reader["productId"].ToString());
-                string? name = reader["name"].ToString();
-                string? description = reader["description"].ToString();
-                double price = double.Parse(reader["price"].ToString());
-                int availableQuantity=Int32.Parse(reader["availableQuantity"].ToString());
-                int soldQuantity=Int32.Parse(reader["soldQuantity"].ToString());
-
-              product = new Product
-                {
-                    Id = id,
-                    Name = name,
-                    Description = description,
-                    Price = price,
-                    AvailableQuantity=availableQuantity,
-                    SoldQuantity=soldQuantity
-                };
-
-            }
-            reader.Close();
-        }
-        catch (Exception e)
-        {
-            throw e;
-        }
-        finally
-        {
-            con.Close();
-        }
-
-        return product;
+ 
     }
     public List<Product> GetProductsDetails()
     {

@@ -1,0 +1,18 @@
+@model ECommerceApp.Models.User
+@{ViewData["title"]="Login Page";
+}
+<h3>Login</h3>
+
+@using(Html.BeginForm()){
+    <table>
+        <tr>
+            <th> @Html.LabelFor(model=>model.ContactNumber) </th>
+            <td>@Html.EditorFor(model=>model.ContactNumber)</td>
+        </tr>
+          <tr>
+            <th> @Html.LabelFor(model=>model.Password) </th>
+            <td>@Html.EditorFor(model=>model.Password)</td>
+        </tr>
+    </table>
+    <button ><input type="submit" value="submit"></button>
+}
