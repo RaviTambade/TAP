@@ -9,4 +9,5 @@ public class Product{
     public string? ImageUrl{get;set;}
 
     public int BuyQuantity {get;set;}
+
 }

@@ -383,17 +383,18 @@ SELECT
     products.title,
 	products.description,
 	products.unit_price,
+    products.image,
     orderdetails.order_id,
 	orderdetails.quantity,
 	(products.unit_price*orderdetails.quantity) as  totalprice
 from products
 INNER JOIN orderdetails ON
     products.product_id =  orderdetails.product_id 
-    WHERE orderdetails.order_id=6  ;  
+    WHERE orderdetails.order_id=1  ;  
 SELECT SUM (products.unit_price*orderdetails.quantity) as totalamount  from products
 INNER JOIN orderdetails ON
     products.product_id =  orderdetails.product_id 
-    WHERE orderdetails.order_id=6 ;  
+    WHERE orderdetails.order_id=1 ;  
 
 SELECT * FROM orders WHERE cust_id=1;
 
@@ -402,7 +403,7 @@ SELECT * FROM orders WHERE cust_id=1;
 
 SELECT
     orderdetails.product_id,products.title,
-    SUM(orderdetails.quantity) * products.unit_price
+    SUM(orderdetails.quantity) * products.unit_price 
 FROM orderdetails, products
 WHERE
     orderdetails.product_id = products.product_id

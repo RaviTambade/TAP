@@ -77,4 +77,48 @@ public class AddressRepository : IAddressRepository
         return status;
     }
 
+      public Address GetAddressById(int addressId)
+    {
+        Address address= new Address();
+        MySqlConnection con = new MySqlConnection();
+        con.ConnectionString = conString;
+        try
+        {
+            string query = "SELECT * FROM addresses where address_id=" + addressId;
+            con.Open();
+            MySqlCommand command = new MySqlCommand(query, con);
+            MySqlDataReader reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                string? houseNumber = reader["house_number"].ToString();
+                string? landmark = reader["landmark"].ToString();
+                string? city = reader["city"].ToString();
+                string? state = reader["state"].ToString();
+                string? country = reader["country"].ToString();
+                string? pincode = reader["pincode"].ToString();
+
+                 address = new Address
+                {
+                    AddressId = addressId,
+                    HouseNumber = houseNumber,
+                    Landmark = landmark,
+                    City = city,
+                    State = state,
+                    Country = country,
+                    PinCode = pincode
+                };
+            }
+            reader.Close();
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            con.Close();
+        }
+        return address;
+    }
+
 }
