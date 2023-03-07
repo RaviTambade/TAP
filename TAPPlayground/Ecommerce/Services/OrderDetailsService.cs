@@ -14,4 +14,6 @@ public class OrderDetailsService:IOrderDetailsService{
     
 
     public bool InsertOrderdetails(int orderId, int productId, int quantity) => _repo.InsertOrderdetails(orderId,productId,quantity);
+
+    public List<OrderHistory> OrderHistory(int customerId) => _repo.OrderHistory(customerId);
 }

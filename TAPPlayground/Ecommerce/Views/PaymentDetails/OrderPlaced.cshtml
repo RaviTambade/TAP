@@ -26,46 +26,35 @@
             <th>Description</th>
             <th>Price</th>
             <th>Quantity</th>
-            <th>TotalPrice</th>
+            <th>amount</th>
             <th></th>
         </tr>
+        @{double totalprice=0;
         @foreach (var product in ViewData["products"] as List<Product>)
         {
-            var TotalPrice=@product.BuyQuantity * @product.UnitPrice;
+            double totalamount=@product.BuyQuantity * @product.UnitPrice;
+             totalprice = totalprice + totalamount;
             <tr>
                 <td> <img src="~/@product.ImageUrl" height="50px" width="50px" alt="@product.Title"/> </td>
                 <td>@product.Title</td>
                 <td>@product.Description</td>
                 <td>@product.UnitPrice</td>
                 <td>@product.BuyQuantity</td> 
-                <td>@TotalPrice</td> 
+                <td>@totalamount</td> 
             </tr>
+        }
         }
 </table>
 
+   <div> TotalAmount : @totalprice</div>
+
 <h1>Address Details</h1>
-<table>
-        <tr>
-            <th></th>
-            <th>House</th>
-            <th>LandMark</th>
-            <th>City</th>
-            <th>State</th>
-            <th>Country</th>
-            <th>Pincode</th>
-         </tr>
+<div> 
+<p>  @ViewBag.address.HouseNumber ,  @ViewBag.address.Landmark</p>
+<p> @ViewBag.address.City ,@ViewBag.address.PinCode</p>
+<p> @ViewBag.address.State ,@ViewBag.address.Country</p>
 
-              <tr>
-                <td> @ViewBag.address.HouseNumber</td>
-                <td> @ViewBag.address.Landmark</td>
-                <td> @ViewBag.address.City</td>
-                <td> @ViewBag.address.State</td>
-                <td> @ViewBag.address.Country</td>
-                <td> @ViewBag.address.PinCode</td>
-            </tr>
-
-</table>   
-
+</div>
 
 
 

@@ -7,23 +7,18 @@ using ECommerceApp.Models;
 using ECommerceApp.Services.Interfaces;
 
 
-namespace SessionManagement.Controllers;
+namespace ECommerceApp.Controllers;
 
 public class DashboardController : Controller
 {
     private readonly IDashboardService _dashboardsrv;
 
-    private readonly IProductService _productsrv;
-
-    public DashboardController(IDashboardService dashboardsrv, IProductService productsrv)
+        public DashboardController(IDashboardService dashboardsrv)
     {
         _dashboardsrv = dashboardsrv;
-        _productsrv = productsrv;
-
-    }
+           }
     public JsonResult GetDetails()
     {
-        var products = _productsrv.GetAllProducts();
         var result = _dashboardsrv.GetProductsData();
         return Json(result);
     }

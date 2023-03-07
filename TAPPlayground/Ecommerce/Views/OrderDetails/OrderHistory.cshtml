@@ -1,32 +1,33 @@
 
 @using ECommerceApp.Models;
-@model IEnumerable<Product>
+@model IEnumerable<OrderHistory>
 
 @{
     ViewData["Title"] = "Products Page";
 }
 <h1>Products</h1>
- <button> <a asp-controller="OrderDetails" asp-action="OrderHistory">OrderHistory</a></button>
 <hr/>
 <table class="table">
     <thead>
         <tr>
-            <th></th>
             <th>@Html.DisplayNameFor(model => model.Title)</th>
-            <th>@Html.DisplayNameFor(model => model.Description)</th>
             <th>@Html.DisplayNameFor(model => model.UnitPrice)</th>
+            <th>@Html.DisplayNameFor(model => model.Quantity)</th>
+            <th>@Html.DisplayNameFor(model => model.TotalAmmount)</th>
+            <th>@Html.DisplayNameFor(model => model.OrderDate)</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var product in Model)
         {
             <tr>
-                <td> <img src="~/@product.ImageUrl" height="50px" width="50px"/> </td>
                 <td>@Html.DisplayFor(modelItem => product.Title)</td>
-                <td>@Html.DisplayFor(modelItem => product.Description)</td>
                 <td>@Html.DisplayFor(modelItem => product.UnitPrice)</td>
-                <td><a href="@Url.Action("BuyQuantity", "Cart" , new {id=@product.ProductId})"><button> Add to Cart </button></a></td>
+                <td>@Html.DisplayFor(modelItem => product.Quantity)</td>
+                <td>@Html.DisplayFor(modelItem => product.TotalAmmount)</td>
+                <td>@Html.DisplayFor(modelItem => product.OrderDate)</td>
             </tr>
         }
     </tbody>
 </table>
+<button><a href="/Product/ShowAll">Home</a></button>

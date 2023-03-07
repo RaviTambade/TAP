@@ -17,14 +17,15 @@ public class Address
     public string FullAddress{
         get{
             // return $"{HouseNumber},{Landmark},{City},{State},{Country},{PinCode}";
-            StringBuilder address=new StringBuilder();
-            address.AppendLine(HouseNumber);
-            address.AppendLine(Landmark);
-            address.AppendLine(City);
-            address.AppendLine(State);
-            address.AppendLine(Country);
-            address.AppendLine(PinCode);
-             return address.ToString();
+            return HouseNumber+",\n"+Landmark+",\n".ToString(); 
+            // StringBuilder address=new StringBuilder();
+            // address.AppendLine(HouseNumber);
+            // address.AppendLine(Landmark);
+            // address.AppendLine(City);
+            // address.AppendLine(State);
+            // address.AppendLine(Country);
+            // address.AppendLine(PinCode);
+            //  return address.ToString();
 
         }
 

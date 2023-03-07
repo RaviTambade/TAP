@@ -18,14 +18,6 @@ public class OrderController : Controller
         return View();
     }
 
-    //  [HttpPost]
-    //  public IActionResult InsertOrder(Order order){
-    //      _ordersrv.InsertOrder(order);
-    //     return RedirectToAction();
-  
-    //  }
-
-
    
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
