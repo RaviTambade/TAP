@@ -13,8 +13,8 @@
 
 
 <h1>Shipping Address</h1>
-<form method="post" asp-controller="PaymentDetails" asp-action="BuyNow">
-<select name="address">
+<form method="post">
+<select name="addressId">
 <option value="">select address</option>
 @foreach (var address in Model)
 {
@@ -30,7 +30,7 @@
 
 }
 </select>
-<button><input type="submit" value="Submit" /></button>
+<button><input type="submit" value="Next" /></button>
 </form>
 
 

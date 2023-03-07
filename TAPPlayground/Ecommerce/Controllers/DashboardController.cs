@@ -24,7 +24,7 @@ public class DashboardController : Controller
     public JsonResult GetDetails()
     {
         var products = _productsrv.GetAllProducts();
-        var result = _dashboardsrv.GetProductsData(products);
+        var result = _dashboardsrv.GetProductsData();
         return Json(result);
     }
     [HttpGet]

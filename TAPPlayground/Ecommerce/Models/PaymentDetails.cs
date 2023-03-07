@@ -1,4 +1,4 @@
-namespace SessionManagement.Models;
+namespace ECommerceApp.Models;
 public class PaymentDetails{
     public string Owner{get;set;}
     public string CreditCardNumber{get;set;}

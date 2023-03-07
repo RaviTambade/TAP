@@ -9,5 +9,7 @@ public class OrderService:IOrderService{
         this._repo=repo;
     }
 
-    public bool InsertOrder(Order order)=>_repo.InsertOrder(order);
+    public int GetOrderId(int customerId) => _repo.GetOrderId(customerId);
+
+    public bool InsertOrder(int customerId)=>_repo.InsertOrder(customerId);
 }

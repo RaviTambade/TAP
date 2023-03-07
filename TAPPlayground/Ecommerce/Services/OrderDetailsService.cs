@@ -9,5 +9,7 @@ public class OrderDetailsService:IOrderDetailsService{
         this._repo=repo;
     }
 
-    public bool InsertOrderdetails(orderdetails orderdetails) => _repo.InsertOrderdetails(orderdetails);
+    // public bool InsertOrderdetails(orderdetails orderdetails) => _repo.InsertOrderdetails(orderdetails);
+
+    public bool InsertOrderdetails(int orderId, int productId, int quantity) => _repo.InsertOrderdetails(orderId,productId,quantity);
 }

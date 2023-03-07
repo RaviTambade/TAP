@@ -1,4 +1,4 @@
-USE Ecommerce ;
+--  USE Ecommerce ;
 
 CREATE TABLE
     users(
@@ -27,7 +27,7 @@ SELECT * FROM users;
  3:residentail and delivery
  */
 
-CREATE TRIGGER INSERT_USER AFTER INSERT ON CUSTOMERS 
+CREATE TRIGGER insert_user AFTER INSERT ON customers 
 FOR EACH ROW BEGIN 
 	INSERT INTO
 	    users(
@@ -86,15 +86,12 @@ CREATE TABLE
         quantity INT NOT NULL
     );
 
--- SELECT
+SELECT
+    sum(quantity) as totalquantity
+from orderdetails
+where product_id = 1;
 
---     sum(quantity) as totalquantity
-
--- from orderdetails
-
--- where product_id = 1;
-
-CREATE PROCEDURE GETREVENUE(IN PRODUCTID INT, OUT TOTALREVENUE 
+CREATE PROCEDURE getrevenue(IN productid INT, OUT totalrevenue 
 DOUBLE) BEGIN 
 	DECLARE totalquantity INT;
 	DECLARE unitprice DOUBLE;
@@ -111,27 +108,6 @@ DOUBLE) BEGIN
 END; 
 
 CALL getrevenue(2,@totalrevenue);
-
-
-
-
-SELECT
-    orderdetails.product_id,products.title,
-    SUM(orderdetails.quantity) * products.unit_price
-FROM orderdetails, products
-WHERE
-    orderdetails.product_id = products.product_id
-GROUP BY product_id;
-
-
-
-
-
-
-
-
-
-
 
 SELECT @totalrevenue;
 
@@ -150,8 +126,6 @@ from orders o1
  where products.product_id=orderdetails.product_id 
  and order_date > now() - INTERVAL 12 month 
  group by month(order_date);*/
-
-SELECT * FROM orderdetails WHERE product_id=1;
 
 INSERT INTO
     customers(
@@ -270,7 +244,7 @@ VALUES
         './images/crackjack.jpg'
     );
 
-SELECT * FROM products;
+SELECT * FROM customers;
 
 INSERT INTO
     addresses(
@@ -331,7 +305,7 @@ INSERT INTO
     )
 VALUES
 (
-        1,
+        2,
         'permanent',
         'houseNo.32',
         'Peth-Kurwandi Road',
@@ -354,7 +328,7 @@ INSERT INTO
     )
 VALUES
 (
-        1,
+        2,
         'permanent',
         'houseNo.234',
         'Pune-Nashik Highway',
@@ -403,3 +377,34 @@ VALUES
 INSERT INTO
     orderdetails(order_id, product_id, quantity)
 VALUES(3, 1, 78);
+
+SELECT
+	orderdetails.product_id,
+    products.title,
+	products.description,
+	products.unit_price,
+    orderdetails.order_id,
+	orderdetails.quantity,
+	(products.unit_price*orderdetails.quantity) as  totalprice
+from products
+INNER JOIN orderdetails ON
+    products.product_id =  orderdetails.product_id 
+    WHERE orderdetails.order_id=6  ;  
+SELECT SUM (products.unit_price*orderdetails.quantity) as totalamount  from products
+INNER JOIN orderdetails ON
+    products.product_id =  orderdetails.product_id 
+    WHERE orderdetails.order_id=6 ;  
+
+SELECT * FROM orders WHERE cust_id=1;
+
+--  SELECT DISTINCT orderdetails.order_id from orderdetails,orders WHERE orderdetails.order_id=orders.order_id AND  orders.cust_id=1   ;
+
+
+SELECT
+    orderdetails.product_id,products.title,
+    SUM(orderdetails.quantity) * products.unit_price
+FROM orderdetails, products
+WHERE
+    orderdetails.product_id = products.product_id
+GROUP BY product_id;
+

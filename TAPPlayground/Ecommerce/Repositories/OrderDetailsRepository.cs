@@ -7,14 +7,14 @@ public class OrderDetailsRepository : IOrderDetailsRepository
     public static string conString = "server=localhost;port=3306;user=root;password=password;database=Ecommerce";
 
    
-    public bool InsertOrderdetails(orderdetails orderdetails)
+    public bool InsertOrderdetails(int orderId,int productId,int quantity)
     {
         bool status = false;
         MySqlConnection con = new MySqlConnection();
         con.ConnectionString = conString;
         try
         {
-            string query =$"INSERT INTO orderdetails(order_id,product_id,quantity)VALUES('{orderdetails.OrderId}','{orderdetails.ProductId}','{orderdetails.Quantity}')";
+            string query =$"INSERT INTO orderdetails(order_id,product_id,quantity)VALUES('{orderId}','{productId}','{quantity}')";
             con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
             command.ExecuteNonQuery();

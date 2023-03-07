@@ -23,7 +23,7 @@
 
 <div>Total amount: @Model.TotalAmount</div>
 
-<form>
+<form asp-controller="PaymentDetails" asp-action="OrderPlaced" method="post">
   <table>
     <tr>
       <th><label for="Owner">Owner:</label></th>

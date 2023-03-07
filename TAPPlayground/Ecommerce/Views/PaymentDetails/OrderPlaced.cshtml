@@ -1,0 +1,19 @@
+@model ECommerceApp.Models.PaymentDetails;
+<link rel="stylesheet" href="~/css/table.css" type="text/css" />
+
+<h1>Order Placed Sucessfully</h1>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>CreditCartNumber</th>
+        <th>CVV</th>
+        <th>ExpiryDate</th>
+    </tr>
+    <tr>
+        <td>@Model.Owner</td>
+        <td>@Model.CreditCardNumber</td>
+        <td>@Model.CVV</td>
+        <td>@Model.ExpiryDate</td>
+    </tr>
+</table>

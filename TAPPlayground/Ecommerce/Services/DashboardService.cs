@@ -12,5 +12,5 @@ public class DashboardService:IDashboardService{
         _repo = repo;
     }
 
-    public List<object> GetProductsData(List<Product> products) => _repo.GetProductsData(products);
+    public List<RevenueModel> GetProductsData() => _repo.GetProductsData();
 }
