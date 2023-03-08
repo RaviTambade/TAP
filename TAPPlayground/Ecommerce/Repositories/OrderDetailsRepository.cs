@@ -4,7 +4,7 @@ using MySql.Data.MySqlClient;
 namespace ECommerceApp.Repositories;
 public class OrderDetailsRepository : IOrderDetailsRepository
 {
-    public static string conString = "server=localhost;port=3306;user=root;password=password;database=Ecommerce";
+    public static string conString = "server=localhost;port=3306;user=root;password=root;database=ECOMMERCE";
     public bool InsertOrderdetails(int orderId, int productId, int quantity)
     {
         bool status = false;

@@ -4,7 +4,7 @@ using ECommerceApp.Models;
 
 namespace ECommerceApp.Repositories;
 public class UserRepository:IUserRepository{
-      public static string conString = "server=localhost;port=3306;user=root;password=password;database=Ecommerce";
+      public static string conString = "server=localhost;port=3306;user=root;password=root;database=ECOMMERCE";
 
     public bool ValidateUser(User user)
     {

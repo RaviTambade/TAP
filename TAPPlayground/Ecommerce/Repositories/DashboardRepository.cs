@@ -8,7 +8,7 @@ namespace ECommerceApp.Repositories;
 public class DashboardRepository : IDashboardRepository
 {
 
-    public static string conString = "server=localhost;port=3306;user=root;password=password;database=Ecommerce";
+    public static string conString = "server=localhost;port=3306;user=root;password=root;database=ECOMMERCE";
 
     // public List<object> GetProductsData(List<Product> products)
     // {
