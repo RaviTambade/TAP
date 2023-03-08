@@ -346,9 +346,20 @@ SELECT * FROM orders WHERE status = "cancelled";
 SELECT * FROM orders WHERE status = "cancelled" AND cust_id=5;
 
 
-/* this query shows ordersdetails whose orderid=13;*/
+/* we get ORDER_id ,title of product ,quantity & new column as total amount (quantity and unit ptice of that product) through order _id*/
 
-SELECT * FROM orderdetails WHERE order_id =13 ;
+SELECT orderdetails.order_id,products.title, orderdetails.quantity ,(products.unit_price*orderdetails.quantity) AS total_amount FROM orderdetails, products WHERE  products.product_id =orderdetails.product_id AND order_id= 4;
+
+
+
+
+
+
+
+
+
+
+
 
 
 SELECT * FROM orders;
