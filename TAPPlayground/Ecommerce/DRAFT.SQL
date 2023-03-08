@@ -4,6 +4,7 @@ use Ecommerce;
 
 
 
+
 CREATE TABLE users( user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, email VARCHAR(25) UNIQUE NOT NULL, contact_number VARCHAR(20) NOT NULL UNIQUE,password VARCHAR(15) NOT NULL);
 CREATE TABLE customers(cust_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, first_name VARCHAR(25), last_name VARCHAR(25),email VARCHAR(25) UNIQUE NOT NULL,contact_number VARCHAR(20) UNIQUE NOT NULL, password VARCHAR(15) NOT NULL);
 CREATE TABLE addresses(address_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,cust_id INT NOT NULL, CONSTRAINT fk_customer_id_2 FOREIGN KEY(cust_id) REFERENCES customers(cust_id) ON UPDATE CASCADE ON DELETE CASCADE,address_mode ENUM('permanent', 'billing') NOT NULL,house_number VARCHAR(20),landmark VARCHAR(25) NOT NULL,city VARCHAR(25) NOT NULL,state VARCHAR(25) NOT NULL,country VARCHAR(25) NOT NULL,pincode VARCHAR(25) NOT NULL);
@@ -15,7 +16,7 @@ CREATE TABLE payments(payment_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,paymen
 CREATE TABLE shippers(shipper_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,compeny_name VARCHAR(25),contact_number VARCHAR (20),email VARCHAR(50));
 /*
 CREATE TABLE suppliers(supplier_id,compeny_name,contact_name,contact_title,address,city,state,contact_number,email); foreign key supplier id;
-CREATE TABLE(employee_id,emp_firtsName,lastName,birthDate,hierdate,contactNumber,email,photo,reportsTo);
+CREATE TABLE employees(employee_id,emp_firtsName,lastName,birthDate,hierdate,contactNumber,email,photo,reportsTo);
 */
 
 DELIMITER //
@@ -54,20 +55,20 @@ INSERT INTO products(title,description,stock_available,unit_price,image,category
 INSERT INTO products(title,description,stock_available,unit_price,image,category_id)VALUES('20-20','tasty biscuits', 70000, 10,'./images/2020.jpg',1);
 INSERT INTO products(title,description,stock_available,unit_price,image,category_id)VALUES('Crack-Jack','tasty biscuits',30000,10,'./images/crackjack.jpg',1);
 
-INSERT INTO products(title,description,stock_available,unit_price,image,category_id)VALUES('Pepsi','Drinks Any time',50000,10,'./images/Pepsi.jpg',2);
-INSERT INTO products(title,description,stock_available,unit_price,image,category_id)VALUES('Fizz','Making from apple',2000,10,'./images/Fizz.jpg',2);
-INSERT INTO products(title,description,stock_available,unit_price,image,category_id)VALUES('Slice','Making from Mangoes',10000,10,'./images/Slice.jpg',2);
-INSERT INTO products(title,description,stock_available,unit_price,image,category_id)VALUES('coco-cola','Drinking any time',6000,10,'./images/coco_cola.jpg',2);
+INSERT INTO products(title,description,stock_available,unit_price,image,category_id)VALUES('Pepsi','Drinks Any time',50000,40,'./images/Pepsi.jpg',2);
+INSERT INTO products(title,description,stock_available,unit_price,image,category_id)VALUES('Fizz','Making from apple',2000,25,'./images/Fizz.jpg',2);
+INSERT INTO products(title,description,stock_available,unit_price,image,category_id)VALUES('Slice','Making from Mangoes',10000,40,'./images/Slice.jpg',2);
+INSERT INTO products(title,description,stock_available,unit_price,image,category_id)VALUES('coco-cola','Drinking any time',6000,40,'./images/coco_cola.jpg',2);
 
-INSERT INTO products(title,description,stock_available,unit_price,image,category_id)VALUES('Maggi','Making in 2 minutes',500,10,'./images/Maggi.jpg',3);
-INSERT INTO products(title,description,stock_available,unit_price,image,category_id)VALUES('FrenchFries','Making for instatnt eat',1000,10,'./images/Francci.jpg',3);
-INSERT INTO products(title,description,stock_available,unit_price,image,category_id)VALUES('Idli','Light snack',20000,10,'./images/Idli.jpg',3);
-INSERT INTO products(title,description,stock_available,unit_price,image,category_id)VALUES('Makkesns','Fried snack',600,10,'./images/Makkens.jpg',3);
+INSERT INTO products(title,description,stock_available,unit_price,image,category_id)VALUES('Maggi','Making in 2 minutes',500,12,'./images/Maggi.jpg',3);
+INSERT INTO products(title,description,stock_available,unit_price,image,category_id)VALUES('FrenchFries','Making for instatnt eat',1000,40,'./images/Francci.jpg',3);
+INSERT INTO products(title,description,stock_available,unit_price,image,category_id)VALUES('Idli','Light snack',20000,20,'./images/Idli.jpg',3);
+INSERT INTO products(title,description,stock_available,unit_price,image,category_id)VALUES('Makkesns','Fried snack',600,60,'./images/Makkens.jpg',3);
 
-INSERT INTO products(title,description,stock_available,unit_price,image,category_id)VALUES('Tv','Entertenment Gadget',500,10,'./images/samsung.jpg',3);
-INSERT INTO products(title,description,stock_available,unit_price,image,category_id)VALUES('Mobiles','Communication Purpose',100,10,'./images/Oppo.jpg',3);
-INSERT INTO products(title,description,stock_available,unit_price,image,category_id)VALUES('Fiidge','Kitchen Use',200,10,'./images/Samsung.jpg',3);
-INSERT INTO products(title,description,stock_available,unit_price,image,category_id)VALUES('Laptops','Working Gaget',60,10,'./images/Dell.jpg',3);
+INSERT INTO products(title,description,stock_available,unit_price,image,category_id)VALUES('Tv','Entertenment Gadget',50,12000,'./images/samsung.jpg',4);
+INSERT INTO products(title,description,stock_available,unit_price,image,category_id)VALUES('Mobiles','Communication Purpose',100,10,'./images/Oppo.jpg',4);
+INSERT INTO products(title,description,stock_available,unit_price,image,category_id)VALUES('Fiidge','Kitchen Use',200,150,'./images/Samsung.jpg',4);
+INSERT INTO products(title,description,stock_available,unit_price,image,category_id)VALUES('Laptops','Working Gaget',60,60000,'./images/Dell.jpg',4);
 
 
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-08-25  06:35:25', 1,50.00,'initiated');
@@ -137,10 +138,24 @@ INSERT INTO shippers(compeny_name,contact_number,email)VALUES('Cochin Shipyard L
 
 
 /* Products SQL's */
+select * from products where category_id =1;
 
-select * from products;
+SELECT categories.category_id,categories.title,products.title 
+FROM products INNER JOIN categories ON products.category_id=categories.category_id;
+
+SELECT title  
+FROM products 
+where category_id in (select category_id from categories where title='colddrinks');
+
+SELECT categories.category_id,categories.title, products.title FROM categories 
+INNER JOIN products ON products.category_id=categories.category_id 
+WHERE categories.title='biscuits';  /* biscuits,snacks,colddrinks,electronics*/
 
 
+   /**/
+   
+   
+   
 /*select month(order_date),sum(unit_price*quantity) from orders,products,orderdetails where products.product_id=orderdetails.product_id and order_date > now() - INTERVAL 12 month group by month(order_date);*/
 
 /*  This query will give products information present in  a order by giving order_id  */
