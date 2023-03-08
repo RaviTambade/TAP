@@ -8,11 +8,18 @@ CREATE TABLE users( user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, email VARCH
 CREATE TABLE customers(cust_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, first_name VARCHAR(25), last_name VARCHAR(25),email VARCHAR(25) UNIQUE NOT NULL,contact_number VARCHAR(20) UNIQUE NOT NULL, password VARCHAR(15) NOT NULL);
 CREATE TABLE addresses(address_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,cust_id INT NOT NULL, CONSTRAINT fk_customer_id_2 FOREIGN KEY(cust_id) REFERENCES customers(cust_id) ON UPDATE CASCADE ON DELETE CASCADE,address_mode ENUM('permanent', 'billing') NOT NULL,house_number VARCHAR(20),landmark VARCHAR(25) NOT NULL,city VARCHAR(25) NOT NULL,state VARCHAR(25) NOT NULL,country VARCHAR(25) NOT NULL,pincode VARCHAR(25) NOT NULL);
 CREATE TABLE products (product_id INT PRIMARY KEY AUTO_INCREMENT,title VARCHAR(20) NOT NULL,description VARCHAR(50),stock_available INT NOT NULL,unit_price DOUBLE NOT NULL,image VARCHAR(40));
-CREATE TABLE orders(order_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,order_date DATETIME DEFAULT CURRENT_TIMESTAMP,delivery_date DATETIME DEFAULT CURRENT_TIMESTAMP,cust_id INT NOT NULL,CONSTRAINT fk_customer_id FOREIGN KEY (cust_id) REFERENCES customers(cust_id) ON UPDATE CASCADE ON DELETE CASCADE,total decimal(4,2) ,status ENUM('Delivered','Initiated','Inprogress','Cancelled') NOT NULL);
+CREATE TABLE orders(order_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,order_date DATETIME DEFAULT CURRENT_TIMESTAMP,delivery_date DATETIME DEFAULT CURRENT_TIMESTAMP,cust_id INT NOT NULL,CONSTRAINT fk_customer_id FOREIGN KEY (cust_id) REFERENCES customers(cust_id) ON UPDATE CASCADE ON DELETE CASCADE,total decimal(4,2) ,status ENUM('delivered','initiated','inprogress','cancelled','approved') NOT NULL);
 CREATE TABLE orderdetails(orderdetails_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,order_id INT NOT NULL,CONSTRAINT fk_order_id FOREIGN KEY (order_id) REFERENCES orders(order_id) ON UPDATE CASCADE ON DELETE CASCADE,product_id INT NOT NULL,CONSTRAINT fk_product_id FOREIGN KEY (product_id) REFERENCES products(product_id) ON UPDATE CASCADE ON DELETE CASCADE,quantity INT NOT NULL);
 
-INSERT INTO customers(first_name,last_name,email,contact_number,password) VALUES ('sahil','mankar','sahil@123','9960916323','sahil@123');
-INSERT INTO customers(first_name,last_name,email,contact_number,password) VALUES ('abhay','navle','abhay','9075966080','sahil@123');
+INSERT INTO customers(first_name,last_name,email,contact_number,password) VALUES ('Sahil','Mankar','sahil.m@gmail.com','9960916323','sahil@123');
+INSERT INTO customers(first_name,last_name,email,contact_number,password) VALUES ('Abhay','Navle','abhay.navale@gmail.com','9075966080','sahil@123');
+INSERT INTO customers(first_name,last_name,email,contact_number,password) VALUES ('Sachin','Patil','sachin.patil@gmail.com','9881723458','sahil@123');
+INSERT INTO customers(first_name,last_name,email,contact_number,password) VALUES ('Minal','Sagade','minal.sagade@outlook.com','9887454372','sahil@123');
+INSERT INTO customers(first_name,last_name,email,contact_number,password) VALUES ('Jai','Kinikar','jai.kinikar@gmail.com','98543234','sahil@123');
+INSERT INTO customers(first_name,last_name,email,contact_number,password) VALUES ('Rakhi','Sharma','rakhi.sharma@gmail.com','9845834534','sahil@123');
+INSERT INTO customers(first_name,last_name,email,contact_number,password) VALUES ('Shivam','Pethe','shivam.pethe@gmai.com','9881734798','sahil@123');
+INSERT INTO customers(first_name,last_name,email,contact_number,password) VALUES ('Manisha','Pant','manisha.pant@gmail.com','9884578673','sahil@123');
+
 
 INSERT INTO products(title,description,stock_available,unit_price,image) VALUES('ParleG','tasty biscuits',20000,10,'./images/Parleg.jpg');
 INSERT INTO products(title,description,stock_available,unit_price,image)VALUES('GoodDay','tasty cookies',50000,15,'./images/goodday.jpg');
@@ -26,10 +33,32 @@ INSERT INTO addresses(cust_id,address_mode,house_number,landmark,city,state,coun
 INSERT INTO addresses(cust_id,address_mode,house_number,landmark,city,state,country,pincode)VALUES(2,'permanent','houseNo.32','Peth-Kurwandi Road','Manchar','Maharashtra','India','123321');
 INSERT INTO addresses(cust_id,address_mode,house_number,landmark,city,state,country,pincode)VALUES(2,'permanent','houseNo.234','Pune-Nashik Highway','Rajgurunagar','Maharashtra','India','121321');
 
-INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2020-08-25  06:35:25', 1,500,'Initiated');
-INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2021-06-04  08:35:25', 1,300,'Delivered');
-INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2010-01-16  09:35:25', 2,200,'Cancelled');
-INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2021-05-15  11:35:25', 2,100,'Inprogress');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-08-25  06:35:25', 1,500,'Initiated');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:25', 8,300,'Delivered');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-01-16  09:35:25', 6,200,'Cancelled');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:25', 7,100,'Inprogress');
+
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-08-25  06:35:25', 1,500,'Initiated');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:25', 5,300,'Delivered');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-01-16  09:35:25', 3,200,'Cancelled');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:25', 2,100,'Inprogress');
+
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-08-25  06:35:25', 1,500,'Initiated');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:25', 2,300,'Delivered');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-01-16  09:35:25', 2,200,'Cancelled');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:25', 7,100,'Inprogress');
+
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-08-25  06:35:25', 3,500,'Initiated');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:25', 2,300,'Delivered');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-01-16  09:35:25', 2,200,'Cancelled');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:25', 6,100,'Inprogress');
+
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-08-25  06:35:25', 1,500,'Initiated');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:25', 1,300,'Delivered');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-01-16  09:35:25', 2,200,'Cancelled');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:25', 2,100,'Inprogress');
+
+
 
 INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(1, 1, 70);
 INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(1, 2, 700);
