@@ -96,10 +96,6 @@ AND customers.cust_id=1 order by orders.order_id;
 
 
 
-SHOW databases
-CREATE DATABASE TAPECOMMERCE
-
-
 --  USE Ecommerce ;
 
 CREATE TABLE users( user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, email VARCHAR(25) UNIQUE NOT NULL, contact_number VARCHAR(20) NOT NULL UNIQUE,password VARCHAR(15) NOT NULL);
@@ -129,35 +125,35 @@ INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2021-06-04  08:35:2
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2010-01-16  09:35:25', 2 ,20.00,'inprogress');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2021-05-15  11:35:25', 2 ,50.00,'cancelled');
 
-INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-08-25  06:35:25', 1,500,'initiated');
-INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:25', 8,200,'delivered');
-INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-01-16  09:35:25', 6,200,'cancelled');
-INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:25', 7,400,'inprogress');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-08-25  06:35:25',1, 50.00,'initiated');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:25',4, 80.25,'delivered');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-01-16  09:35:25',5,30.25,'cancelled');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:25', 7,40.20,'inprogress');
 
-INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-08-25  06:35:25', 4,500,'delivered');
-INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:25', 8,300,'delivered');
-INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-01-16  09:35:25', 4,450,'inprogress');
-INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:25', 2,450,'cancelled');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-08-25  06:35:25', 4,50.45,'delivered');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:25', 8,30.47,'delivered');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-01-16  09:35:25', 4,45.45,'inprogress');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:25', 2,45.24,'cancelled');
 
-INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-08-25  06:35:25', 1,500,'initiated');
-INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:25', 2,350,'inprogress');
-INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-01-16  09:35:25', 4,500,'delivered');
-INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:25', 7,250,'cancelled');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-08-25  06:35:25', 1,54.25,'initiated');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:25', 8,35.35,'inprogress');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-01-16  09:35:25', 4,50.45,'delivered');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:25', 7,47.58,'cancelled');
 
-INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-08-25  06:35:25', 3,450,'delivered');
-INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:25', 5,250,'delivered');
-INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-01-16  09:35:25', 4,500,'cancelled');
-INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:25', 6,800,'inprogress');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-08-25  06:35:25', 3,40.65,'delivered');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:25', 5,45.25,'delivered');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-01-16  09:35:25', 4,78.52,'cancelled');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:25', 6,88.25,'inprogress');
 
-INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-08-25  06:35:25', 1,400,'initiated');
-INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:25', 3,350,'delivered');
-INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-01-16  09:35:25', 8,500,'cancelled');
-INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:25', 1,400,'inprogress');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-08-25  06:35:25', 1,25.36,'initiated');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:25', 3,35.75,'delivered');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-01-16  09:35:25', 8,45.75,'cancelled');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:25', 4,47.25,'inprogress');
 
+SELECT * FROM customers;
 
-
-
-
+SELECT * FROM orders;
+DESCRIBE orders;
 
 
 
@@ -165,9 +161,16 @@ INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:2
 
 INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(1, 1, 70);
 INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(1, 2, 700);
-INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(2, 3, 78);
-INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(3, 4, 78);
-INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(3, 1, 78);
+INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(2, 3, 88);
+INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(15, 4, 78);
+INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(4, 4, 90);
+INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(6, 2, 45);
+INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(4, 3, 78);
+INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(5, 2, 45);
+INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(6, 4, 96);
+INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(7, 3, 25);
+INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(25, 2, 46);
+INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(14, 3, 35);
 
 
 CREATE TRIGGER insert_user AFTER INSERT ON customers 
@@ -300,7 +303,7 @@ BEGIN
             cust_id = cust_no
                 AND status = 'delivered';
 
-		-- canceled
+		-- cancelled
 		SELECT
             count(*) INTO cancelled
         FROM
@@ -329,13 +332,16 @@ BEGIN
 
 END;
 DROP PROCEDURE get_order_by_cust;
-CALL get_order_by_cust (3,@delivered,@cancelled,@inprogress,@initiated);
+CALL get_order_by_cust (1,@delivered,@cancelled,@inprogress,@initiated);
 
 
 SELECT @delivered , @cancelled ,@inprogress, @initiated;
 
 SELECT * FROM orders WHERE status = "cancelled";
 
+SELECT * FROM orders WHERE status = "cancelled" AND cust_id=2;
+
+SELECT * FROM orderdetails WHERE order_id =4 ;
 
 
-
+SELECT * FROM orders;
