@@ -337,11 +337,18 @@ CALL get_order_by_cust (1,@delivered,@cancelled,@inprogress,@initiated);
 
 SELECT @delivered , @cancelled ,@inprogress, @initiated;
 
+
+/* shows all list of orders on the basis of status =cancelled */
 SELECT * FROM orders WHERE status = "cancelled";
 
-SELECT * FROM orders WHERE status = "cancelled" AND cust_id=2;
 
-SELECT * FROM orderdetails WHERE order_id =4 ;
+/* this query shows details of orders whose cust id is 5 and status is cancelled */
+SELECT * FROM orders WHERE status = "cancelled" AND cust_id=5;
+
+
+/* this query shows ordersdetails whose orderid=13;*/
+
+SELECT * FROM orderdetails WHERE order_id =13 ;
 
 
 SELECT * FROM orders;
