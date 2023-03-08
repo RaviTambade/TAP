@@ -73,8 +73,22 @@ FROM products,customers, orders INNER JOIN orderdetails on orderdetails.order_id
 WHERE  products.product_id=orderdetails.product_id AND customers.cust_id=orders.cust_id 
 AND customers.cust_id=1 order by orders.order_id;
 
+use Ecommerce;
+CREATE PROCEDURE UpdateInventory(IN order_id INT ,IN product_id INT, IN quantity INT)
+BEGIN 
+START TRANSACTION;
+INSERT INTO orderdetails(order_id,product_id,quantity) VALUES(order_id,product_id,quantity);
+UPDATE products SET stock_available=stock_available-quantity WHERE products.product_id = product_id;
+COMMIT;
+END;
+
+CALL UpdateInventory(1,3,5000);
+
+SELECT * FROM products;
 
 
+
+SELECT * FROM products;
 
  
 
