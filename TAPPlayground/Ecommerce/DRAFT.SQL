@@ -171,11 +171,31 @@ INSERT INTO shippers(compeny_name,contact_number,email)VALUES('Cochin Shipyard L
 
 
 /*   
-    Remaining Tasks
-1)Retrive List of Customers that made purcheses after the date 2023-03-03 ?   -----completed
-2)Available products in stock ?                                               ------completed
-3)view Sells  by category ?                                                   ------completed
-4)Quarter wise products selling data                                          ----------
+Daily Completed Tasks
+1)Retrive List of Customers that made purcheses after the date 2023-03-03 ?                                -----completed
+2)Available products in stock ?                                                                           ------completed
+3)view Sells  by category ?                                                                                ------completed
+4)Creating  View products price above than average price                                                  -------completed
+5)average price from all products                                                                         -------completed
+6)getting all products by category id, category_title,products_title                                      -------completed 
+7)getting  products from which category is given                                                          -------completed
+8)getting all products by category id, category_title,products_title from which category is given             ---completed
+9)This query will give products information present in  a order by giving order_id                          -----completed
+10)This query  returns totalamount of a order                                                               ------completed
+11)This query give totalamount of sold products from orderdetails table of each product                    -------completed
+12)This query give order history of customer                                                               -------completed
+13)This procedure insert products of  order in orderdetails table 
+   and then updating stock_available of product by substracting  quantity of product bought by customer       ------completed
+14) Procedure                                                                                               ///////////////
+15)shows all list of orders on the basis of status =cancelled                                             ----------completed
+16)this query shows details of orders whose cust id is 5 and status is cancelled                           ----------completed
+17) we get ORDER_id ,title of product ,quantity & new column as total amount 
+  (quantity and unit ptice of that product) through order _id                                                 --------completed
+
+
+Remaining -
+1)Quarter wise products selling data                                                                         ////////////////
+
 */
 
 select * from products;
@@ -198,11 +218,7 @@ FROM orderdetails, products,categories
 WHERE orderdetails.product_id = products.product_id and products.category_id=categories.category_id 
 GROUP BY categories.category_title  ;
 
-
-    
-
-
-/* Creating  View products price above than average price*/
+/*4) Creating  View products price above than average price*/
 create or replace view vw_products_above_avgprice
 as select product_title , unit_price from products
 where  unit_price  > (select avg(unit_price) from products)
@@ -210,61 +226,56 @@ order by unit_price;
 
 select * from vw_products_above_avgprice;
 
-
-/*average price from all products*/
+/*5)average price from all products*/
 select avg(unit_price) from products;
 
 
-/* Products SQL's */
-
+  /* Products SQL's */
 select * from products where category_id =1;
 
-/*getting all products by category id, category_title,products_title*/
+/*6)getting all products by category id, category_title,products_title*/
 SELECT categories.category_id,categories.category_title,products.product_title 
 FROM products INNER JOIN categories ON products.category_id=categories.category_id;
 
-/*getting  products from which category is given */
+/*7)getting  products from which category is given */
 SELECT product_title  
 FROM products 
 where category_id in (select category_id from categories where category_title='colddrinks');
 
-/*getting all products by category id, category_title,products_title from which category is given*/
+/*8)getting all products by category id, category_title,products_title from which category is given*/
 SELECT categories.category_id,categories.category_title, products.product_title FROM categories 
 INNER JOIN products ON products.category_id=categories.category_id 
 WHERE categories.category_title='colddrinks';  /* biscuits,snacks,colddrinks,electronics*/
 
 
    
-   
-   
-   
 /*select month(order_date),sum(unit_price*quantity) from orders,products,orderdetails where products.product_id=orderdetails.product_id and order_date > now() - INTERVAL 12 month group by month(order_date);*/
 
-/*  This query will give products information present in  a order by giving order_id  */
+/*9)This query will give products information present in  a order by giving order_id  */
 SELECT orderdetails.product_id, products.product_title,products.description,products.unit_price, products.image, orderdetails.order_id,orderdetails.quantity,(products.unit_price*orderdetails.quantity) as  totalprice
 FROM products
 INNER JOIN orderdetails ON products.product_id =  orderdetails.product_id 
 WHERE orderdetails.order_id=1;
     
-/*This query  returns totalamount of a order   */
+/*10)This query  returns totalamount of a order   */
 SELECT SUM(products.unit_price*orderdetails.quantity) as totalamount  from products
 INNER JOIN orderdetails ON products.product_id =  orderdetails.product_id 
 WHERE orderdetails.order_id=1 ;  
 
-/*  This query give totalamount of sold products from orderdetails table of each product  */
+/* 11) This query give totalamount of sold products from orderdetails table of each product  */
 /*  Used in dashboard */
 SELECT orderdetails.product_id,products.product_title, SUM(orderdetails.quantity) * products.unit_price 
 FROM orderdetails, products
 WHERE orderdetails.product_id = products.product_id
 GROUP BY product_id;
 
-/*  This query give order history of customer */
+/*12) This query give order history of customer */
 SELECT products.product_id,products.product_title , products.unit_price, orderdetails.quantity,customers.cust_id,orders.order_id,orders.order_date 
 FROM products,customers, orders INNER JOIN orderdetails on orderdetails.order_id=orders.order_id 
 WHERE  products.product_id=orderdetails.product_id AND customers.cust_id=orders.cust_id 
 AND customers.cust_id=1 order by orders.order_id;
 
-/*  This procedure insert products of  order in orderdetails table 
+/*13) This procedure insert products of  order in orderdetails table 
     and then updating stock_available of product by substracting  quantity of product bought by customer   */
 
 DELIMITER $$
@@ -281,6 +292,7 @@ CALL UpdateInventory(1,4,5000,1);
 /*  This procedure return count of orders by its status (delivered,cancelled,inprogress,initiated) of a customer*/
 
 
+/*14) Procedure */
 
 DELIMITER $$
 CREATE PROCEDURE get_order_by_cust(
@@ -332,16 +344,19 @@ CALL get_order_by_cust (1,@delivered,@cancelled,@inprogress,@initiated);
 SELECT @delivered , @cancelled ,@inprogress, @initiated;
 
 
-/* shows all list of orders on the basis of status =cancelled */
+/* 15)shows all list of orders on the basis of status =cancelled */
 SELECT * FROM orders WHERE status = "cancelled";
 
 
-/* this query shows details of orders whose cust id is 5 and status is cancelled */
+/* 16)this query shows details of orders whose cust id is 5 and status is cancelled */
 SELECT * FROM orders WHERE status = "cancelled" AND cust_id=5;
 
 
-/* we get ORDER_id ,title of product ,quantity & new column as total amount (quantity and unit ptice of that product) through order _id*/
+/*17) we get ORDER_id ,title of product ,quantity & new column as total amount (quantity and unit ptice of that product) through order _id*/
 
-SELECT orderdetails.order_id,products.product_title, orderdetails.quantity ,(products.unit_price*orderdetails.quantity) AS total_amount FROM orderdetails, products WHERE  products.product_id =orderdetails.product_id AND order_id= 4;
+SELECT orderdetails.order_id,products.product_title, orderdetails.quantity ,(products.unit_price*orderdetails.quantity) AS total_amount 
+FROM orderdetails, products 
+WHERE  products.product_id =orderdetails.product_id 
+AND order_id= 4;
 
 
