@@ -172,10 +172,10 @@ INSERT INTO shippers(compeny_name,contact_number,email)VALUES('Cochin Shipyard L
 
 /*   
     Remaining Tasks
-1)Retrive List of Customers that made purcheses after the date 2023-03-03 ?   
-2)Available products in stock ?
-3)view Sells  by category ?
-4)Quarter wise products selling data
+1)Retrive List of Customers that made purcheses after the date 2023-03-03 ?   -----completed
+2)Available products in stock ?                                               ------completed
+3)view Sells  by category ?                                                   ------completed
+4)Quarter wise products selling data                                          ----------
 */
 
 select * from products;
@@ -202,7 +202,7 @@ GROUP BY categories.category_title  ;
     
 
 
-/* View products price above than average price*/
+/* Creating  View products price above than average price*/
 create or replace view vw_products_above_avgprice
 as select product_title , unit_price from products
 where  unit_price  > (select avg(unit_price) from products)
