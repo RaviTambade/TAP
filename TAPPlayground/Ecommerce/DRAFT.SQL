@@ -15,6 +15,9 @@ CREATE TABLE orderdetails(orderdetails_id INT NOT NULL AUTO_INCREMENT PRIMARY KE
 CREATE TABLE payments(payment_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,payment_date DATETIME, payment_mode ENUM('cash on delivery','online payment'),transection_id INT NOT NULL,order_id INT NOT NULL, CONSTRAINT fk_order_id_1 FOREIGN KEY (order_id) REFERENCES orders(order_id) ON UPDATE CASCADE ON DELETE CASCADE);
 CREATE TABLE shippers(shipper_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,compeny_name VARCHAR(25),contact_number VARCHAR (20),email VARCHAR(50));
 
+/*
+create table roles();
+*/
 
 
 /*trigger for customer in users*/
@@ -141,6 +144,10 @@ INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(6, 4,
 INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(7, 3, 25,1);
 INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 2, 46,4);
 INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 3, 35,4);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 12, 35,3);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 15, 35,4);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 8, 35,4);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 7, 35,4);
 
 
 
@@ -168,12 +175,31 @@ INSERT INTO shippers(compeny_name,contact_number,email)VALUES('Cochin Shipyard L
 1)Retrive List of Customers that made purcheses after the date 2023-03-03 ?   
 2)Available products in stock ?
 3)view Sells  by category ?
-
+4)Quarter wise products selling data
 */
 
+select * from products;
+select * from customers;
+select * from orders;
+select * from orderdetails;
+select * from categories;
+
+/*1)Retrive List of Customers that made purcheses after the date 2023-03-03 */
+SELECT customers.cust_id,customers.first_name, customers.last_name,orders.order_date FROM orders 
+INNER JOIN customers ON orders.cust_id=customers.cust_id 
+WHERE order_date > '2023-03-03';
+
+/*2)Available products in stock*/
+select product_id,product_title, stock_available from products;
+
+/*3)view Sells  by category*/
+SELECT   categories.category_title, SUM(orderdetails.quantity) 
+FROM orderdetails, products,categories
+WHERE orderdetails.product_id = products.product_id and products.category_id=categories.category_id 
+GROUP BY categories.category_title  ;
 
 
-
+    
 
 
 /* View products price above than average price*/
@@ -208,7 +234,7 @@ INNER JOIN products ON products.category_id=categories.category_id
 WHERE categories.category_title='colddrinks';  /* biscuits,snacks,colddrinks,electronics*/
 
 
-   /**/
+   
    
    
    
@@ -220,7 +246,7 @@ FROM products
 INNER JOIN orderdetails ON products.product_id =  orderdetails.product_id 
 WHERE orderdetails.order_id=1;
     
-/*  This query  returns totalamount of a order   */
+/*This query  returns totalamount of a order   */
 SELECT SUM(products.unit_price*orderdetails.quantity) as totalamount  from products
 INNER JOIN orderdetails ON products.product_id =  orderdetails.product_id 
 WHERE orderdetails.order_id=1 ;  
@@ -242,17 +268,19 @@ AND customers.cust_id=1 order by orders.order_id;
     and then updating stock_available of product by substracting  quantity of product bought by customer   */
 
 DELIMITER $$
-CREATE PROCEDURE UpdateInventory(IN order_id INT ,IN product_id INT, IN quantity INT)
+CREATE PROCEDURE UpdateInventory(IN order_id INT ,IN product_id INT, IN quantity INT,IN supplier_id INT)
 BEGIN 
 START TRANSACTION;
-INSERT INTO orderdetails(order_id,product_id,quantity) VALUES(order_id,product_id,quantity);
+INSERT INTO orderdetails(order_id,product_id,quantity,supplier_id) VALUES(order_id,product_id,quantity,supplier_id);
 UPDATE products SET stock_available=stock_available-quantity WHERE products.product_id = product_id;
 COMMIT;
 END $$
 DELIMITER ;
 
-CALL UpdateInventory(1,3,5000);
+CALL UpdateInventory(1,4,5000,1);
 /*  This procedure return count of orders by its status (delivered,cancelled,inprogress,initiated) of a customer*/
+
+
 
 DELIMITER $$
 CREATE PROCEDURE get_order_by_cust(
