@@ -51,6 +51,7 @@ INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_nu
 INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to)VALUES('Sahil','Mankar','1997-05-19','2021-07-07','8756789158','Sahil@gmail.com','SM569654' ,'./images/SM.jpg', 1);
 INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to)VALUES('Shubham','Navale','1995-07-25','2020-05-04','9996320158','SNavale@gmail.com','SN56987' ,'./images/SN.jpg', 3);
 INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to)VALUES('Rohit','Gore','1996-05-12','2022-09-07','7776320158','RGore@gmail.com','RG123654' ,'./images/RG.jpg', 4);
+INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to)VALUES('Pragati','Bangar','1998-05-10','2022-11-09','9666320158','PBangar@gmail.com','PB123654' ,'./images/PB.jpg', 5);
 
 
 /*possible vales  for addressmode:1:only residential ,2:only delivery address,3:residentail and delivery*/
@@ -162,6 +163,14 @@ INSERT INTO shippers(compeny_name,contact_number,email)VALUES('Cochin Shipyard L
 
 
 
+/*   
+    Remaining Tasks
+1)Retrive List of Customers that made purcheses after the date 2023-03-03 ?   
+2)Available products in stock ?
+3)view Sells  by category ?
+
+*/
+
 
 
 
@@ -174,6 +183,7 @@ where  unit_price  > (select avg(unit_price) from products)
 order by unit_price; 
 
 select * from vw_products_above_avgprice;
+
 
 /*average price from all products*/
 select avg(unit_price) from products;
@@ -205,7 +215,7 @@ WHERE categories.category_title='colddrinks';  /* biscuits,snacks,colddrinks,ele
 /*select month(order_date),sum(unit_price*quantity) from orders,products,orderdetails where products.product_id=orderdetails.product_id and order_date > now() - INTERVAL 12 month group by month(order_date);*/
 
 /*  This query will give products information present in  a order by giving order_id  */
-SELECT orderdetails.product_id, products.title,products.description,products.unit_price, products.image, orderdetails.order_id,orderdetails.quantity,(products.unit_price*orderdetails.quantity) as  totalprice
+SELECT orderdetails.product_id, products.product_title,products.description,products.unit_price, products.image, orderdetails.order_id,orderdetails.quantity,(products.unit_price*orderdetails.quantity) as  totalprice
 FROM products
 INNER JOIN orderdetails ON products.product_id =  orderdetails.product_id 
 WHERE orderdetails.order_id=1;
@@ -217,13 +227,13 @@ WHERE orderdetails.order_id=1 ;
 
 /*  This query give totalamount of sold products from orderdetails table of each product  */
 /*  Used in dashboard */
-SELECT orderdetails.product_id,products.title, SUM(orderdetails.quantity) * products.unit_price 
+SELECT orderdetails.product_id,products.product_title, SUM(orderdetails.quantity) * products.unit_price 
 FROM orderdetails, products
 WHERE orderdetails.product_id = products.product_id
 GROUP BY product_id;
 
 /*  This query give order history of customer */
-SELECT products.product_id,products.title , products.unit_price, orderdetails.quantity,customers.cust_id,orders.order_id,orders.order_date 
+SELECT products.product_id,products.product_title , products.unit_price, orderdetails.quantity,customers.cust_id,orders.order_id,orders.order_date 
 FROM products,customers, orders INNER JOIN orderdetails on orderdetails.order_id=orders.order_id 
 WHERE  products.product_id=orderdetails.product_id AND customers.cust_id=orders.cust_id 
 AND customers.cust_id=1 order by orders.order_id;
@@ -304,6 +314,6 @@ SELECT * FROM orders WHERE status = "cancelled" AND cust_id=5;
 
 /* we get ORDER_id ,title of product ,quantity & new column as total amount (quantity and unit ptice of that product) through order _id*/
 
-SELECT orderdetails.order_id,products.title, orderdetails.quantity ,(products.unit_price*orderdetails.quantity) AS total_amount FROM orderdetails, products WHERE  products.product_id =orderdetails.product_id AND order_id= 4;
+SELECT orderdetails.order_id,products.product_title, orderdetails.quantity ,(products.unit_price*orderdetails.quantity) AS total_amount FROM orderdetails, products WHERE  products.product_id =orderdetails.product_id AND order_id= 4;
 
 
