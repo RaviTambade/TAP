@@ -3,25 +3,21 @@ CREATE DATABASE Ecommerce;
 use Ecommerce;
 
 
-
-
 CREATE TABLE users( user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, email VARCHAR(25) UNIQUE NOT NULL, contact_number VARCHAR(20) NOT NULL UNIQUE,password VARCHAR(15) NOT NULL);
 CREATE TABLE customers(cust_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, first_name VARCHAR(25), last_name VARCHAR(25),email VARCHAR(25) UNIQUE NOT NULL,contact_number VARCHAR(20) UNIQUE NOT NULL, password VARCHAR(15) NOT NULL);
+CREATE TABLE employees(employee_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,empfirst_name VARCHAR(100),emplast_name VARCHAR(50),birth_date DATE,hire_date DATE,contact_number VARCHAR(20),email VARCHAR(50),password VARCHAR(15) NOT NULL,photo varchar (50),reports_to INT NOT NULL);
 CREATE TABLE addresses(address_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,cust_id INT NOT NULL, CONSTRAINT fk_customer_id_2 FOREIGN KEY(cust_id) REFERENCES customers(cust_id) ON UPDATE CASCADE ON DELETE CASCADE,address_mode ENUM('permanent', 'billing') NOT NULL,house_number VARCHAR(20),landmark VARCHAR(25) NOT NULL,city VARCHAR(25) NOT NULL,state VARCHAR(25) NOT NULL,country VARCHAR(25) NOT NULL,pincode VARCHAR(25) NOT NULL);
 CREATE TABLE categories(category_id INT PRIMARY KEY AUTO_INCREMENT, category_title VARCHAR(20),description VARCHAR (100),image VARCHAR(50)) ;
 CREATE TABLE products (product_id INT PRIMARY KEY AUTO_INCREMENT,product_title VARCHAR(20) NOT NULL,description VARCHAR(50),stock_available INT NOT NULL,unit_price DOUBLE NOT NULL,image VARCHAR(40),category_id INT NOT NULL, CONSTRAINT fk_category_id FOREIGN KEY(category_id) REFERENCES categories(category_id) ON UPDATE CASCADE ON DELETE CASCADE);
 CREATE TABLE orders(order_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,order_date DATETIME DEFAULT CURRENT_TIMESTAMP,shipped_date DATETIME DEFAULT CURRENT_TIMESTAMP,cust_id INT NOT NULL,CONSTRAINT fk_customer_id FOREIGN KEY (cust_id) REFERENCES customers(cust_id) ON UPDATE CASCADE ON DELETE CASCADE,total double ,status ENUM('delivered','initiated','inprogress','cancelled','approved') NOT NULL);
-CREATE TABLE orderdetails(orderdetails_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,order_id INT NOT NULL,CONSTRAINT fk_order_id FOREIGN KEY (order_id) REFERENCES orders(order_id) ON UPDATE CASCADE ON DELETE CASCADE,product_id INT NOT NULL,CONSTRAINT fk_product_id FOREIGN KEY (product_id) REFERENCES products(product_id) ON UPDATE CASCADE ON DELETE CASCADE,quantity INT NOT NULL);
+CREATE TABLE suppliers(supplier_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,company_name VARCHAR (50),supplier_name VARCHAR (20),contact_number VARCHAR (20),email VARCHAR(20),address VARCHAR(200),city VARCHAR(50),state VARCHAR(20)); 
+CREATE TABLE orderdetails(orderdetails_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,order_id INT NOT NULL,CONSTRAINT fk_order_id FOREIGN KEY (order_id) REFERENCES orders(order_id) ON UPDATE CASCADE ON DELETE CASCADE,product_id INT NOT NULL,CONSTRAINT fk_product_id FOREIGN KEY (product_id) REFERENCES products(product_id) ON UPDATE CASCADE ON DELETE CASCADE,supplier_id INT NOT NULL,CONSTRAINT fk_supplier_id FOREIGN KEY (supplier_id) REFERENCES suppliers(supplier_id) ON UPDATE CASCADE ON DELETE CASCADE,quantity INT NOT NULL,discount float default 0);  
 CREATE TABLE payments(payment_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,payment_date DATETIME, payment_mode ENUM('cash on delivery','online payment'),transection_id INT NOT NULL,order_id INT NOT NULL, CONSTRAINT fk_order_id_1 FOREIGN KEY (order_id) REFERENCES orders(order_id) ON UPDATE CASCADE ON DELETE CASCADE);
 CREATE TABLE shippers(shipper_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,compeny_name VARCHAR(25),contact_number VARCHAR (20),email VARCHAR(50));
 
 
-/*
-CREATE TABLE suppliers(supplier_id INT NOT NULL AUTO_INCREMENT,compeny_name VARCHAR,contact_name,contact_title,address,city,state,contact_number,email); foreign key supplier id;
 
-CREATE TABLE employees(employee_id,emp_firtsName,lastName,birthDate,hierdate,contactNumber,email,photo,reportsTo);
-*/
-
+/*trigger for customer in users*/
 DELIMITER //
 CREATE TRIGGER insert_user AFTER INSERT ON customers 
 FOR EACH ROW 
@@ -29,6 +25,16 @@ BEGIN
 	INSERT INTO users(email,contact_number,password)VALUES (NEW.email,NEW.contact_number,NEW.password);
 END //
 DELIMITER ;
+
+/*trigger for employees in users*/
+DELIMITER //
+CREATE TRIGGER insert_employee AFTER INSERT ON employees 
+FOR EACH ROW 
+BEGIN 
+	INSERT INTO users(email,contact_number,password)VALUES (NEW.email,NEW.contact_number,NEW.password);
+END //
+DELIMITER ;
+
 
 INSERT INTO customers(first_name,last_name,email,contact_number,password) VALUES ('Sahil','Mankar','sahil.m@gmail.com','9960916323','sahil@123');
 INSERT INTO customers(first_name,last_name,email,contact_number,password) VALUES ('Abhay','Navle','abhay.navale@gmail.com','9075966080','sahil@123');
@@ -38,6 +44,14 @@ INSERT INTO customers(first_name,last_name,email,contact_number,password) VALUES
 INSERT INTO customers(first_name,last_name,email,contact_number,password) VALUES ('Rakhi','Sharma','rakhi.sharma@gmail.com','9845834534','sahil@123');
 INSERT INTO customers(first_name,last_name,email,contact_number,password) VALUES ('Shivam','Pethe','shivam.pethe@gmai.com','9881734798','sahil@123');
 INSERT INTO customers(first_name,last_name,email,contact_number,password) VALUES ('Manisha','Pant','manisha.pant@gmail.com','9884578673','sahil@123');
+
+
+INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to)VALUES('Akash','Ajab','1999-09-15','2022-09-07','8756320158','AkAjab@gmail.com','AK123654' ,'./images/crackjack.jpg', 2);
+INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to)VALUES('Shubham','Teli','1999-02-10','2020-07-05','9876320158','Steli@gmail.com','ST5269' ,'./images/ST.jpg', 1);
+INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to)VALUES('Sahil','Mankar','1997-05-19','2021-07-07','8756789158','Sahil@gmail.com','SM569654' ,'./images/SM.jpg', 1);
+INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to)VALUES('Shubham','Navale','1995-07-25','2020-05-04','9996320158','SNavale@gmail.com','SN56987' ,'./images/SN.jpg', 3);
+INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to)VALUES('Rohit','Gore','1996-05-12','2022-09-07','7776320158','RGore@gmail.com','RG123654' ,'./images/RG.jpg', 4);
+
 
 /*possible vales  for addressmode:1:only residential ,2:only delivery address,3:residentail and delivery*/
 INSERT INTO addresses(cust_id,address_mode,house_number,landmark,city,state,country,pincode)VALUES(1,'permanent','houseNo.12','Pune-Nashik Highway','Manchar','Maharashtra','India','123321');
@@ -94,32 +108,39 @@ INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:2
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-01-16  09:35:25', 4,50.0,'cancelled');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:25', 6,80.0,'inprogress');
 
+
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-08-25  06:35:25', 1,40.0,'initiated');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:25', 3,35.0,'delivered');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-01-16  09:35:25', 6,85.00,'cancelled');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:25', 7,14.00,'inprogress');
 
 
+INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state)VALUES('Hindustan pvt.ltd','Pragati','7845632569','pragati@gmail.com','Sinhagad Road Pune','Pune','Maharashtra');
+INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state)VALUES('Britinia pvt.ltd','Akash','9945632569','Akash@gmail.com','Hadapsar  Pune','Pune','Maharashtra');
+INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state)VALUES('Surya pvt.ltd','Akshay','9645632569','Akshay@gmail.com','Rajgurunagar Pune','Pune','Maharashtra');
+INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state)VALUES('Naturals pvt.ltd','Rohit','9855632569','Rohit@gmail.com','Wanavdi Fatima nagar Pune','Pune','Maharashtra');
+INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state)VALUES('Goukul pvt.ltd','Abhay','9345632569','Abhay@gmail.com','Avasari Pune','Pune','Maharashtra');
 
-INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(1, 1, 70);
-INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(1, 2, 700);
-INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(2, 3, 78);
-INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(3, 4, 78);
-INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(3, 1, 78);
-INSERT INTO orderdetails(order_id,product_id,quantity) VALUES (7,2,2000);
 
-INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(12, 1, 70);
-INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(8, 2, 700);
-INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(2, 3, 88);
-INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(2, 4, 78);
-INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(4, 4, 90);
-INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(6, 2, 45);
-INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(4, 3, 78);
-INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(5, 2, 45);
-INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(6, 4, 96);
-INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(7, 3, 25);
-INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(4, 2, 46);
-INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(4, 3, 35);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(1, 1, 70,1);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(1, 2, 700,2);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(2, 3, 78,3);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(3, 4, 78,4);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(3, 1, 78,5);
+INSERT INTO orderdetails(order_id,product_id,quantity,supplier_id) VALUES (7,2,2000,1);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(12, 1, 70,2);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(8, 2, 700,3);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(2, 3, 88,4);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(2, 4, 78,3);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 4, 90,5);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(6, 2, 45,4);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 3, 78,1);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(5, 2, 45,2);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(6, 4, 96,4);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(7, 3, 25,1);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 2, 46,4);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 3, 35,4);
+
 
 
 INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('2022-05-03','cash on delivery',1234,1);
@@ -140,6 +161,24 @@ INSERT INTO shippers(compeny_name,contact_number,email)VALUES('Mercator Ltd','69
 INSERT INTO shippers(compeny_name,contact_number,email)VALUES('Cochin Shipyard Ltd','9985645987','cochinShipyard@gmail.com');
 
 
+
+
+
+
+
+
+/* View products price above than average price*/
+create or replace view vw_products_above_avgprice
+as select product_title , unit_price from products
+where  unit_price  > (select avg(unit_price) from products)
+order by unit_price; 
+
+select * from vw_products_above_avgprice;
+
+/*average price from all products*/
+select avg(unit_price) from products;
+
+
 /* Products SQL's */
 
 select * from products where category_id =1;
@@ -156,7 +195,7 @@ where category_id in (select category_id from categories where category_title='c
 /*getting all products by category id, category_title,products_title from which category is given*/
 SELECT categories.category_id,categories.category_title, products.product_title FROM categories 
 INNER JOIN products ON products.category_id=categories.category_id 
-WHERE categories.category_title='biscuits';  /* biscuits,snacks,colddrinks,electronics*/
+WHERE categories.category_title='colddrinks';  /* biscuits,snacks,colddrinks,electronics*/
 
 
    /**/
