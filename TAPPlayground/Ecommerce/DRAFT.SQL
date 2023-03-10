@@ -1,3 +1,5 @@
+
+
 CREATE DATABASE Ecommerce;
 USE Ecommerce;
 
@@ -49,8 +51,15 @@ INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 390
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545655,'AXIS0000286','2021-08-01 07-40-35',2352500);
 
 
-select * from transactions;
+INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES(39025545655,39025545658,'2023-03-01 12:40:35',22500);
+INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025545656,39025545660,'2023-03-01 12:40:35',22500);
+INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025545657,39025545659,'2023-03-01 12:40:35',22500);
+INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES(39025545660,39025545658,'2023-03-01 12:40:35',22500);
+INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025545655,39025545659,'2023-03-01 12:40:35',22500);
+INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025545658,39025545655,'2023-03-01 12:40:35',22500);
 
+
+select * from transactions;
 
 
 INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Sahil','Mankar','sahil.m@gmail.com','9960916323','sahil@123',39025545654);
@@ -205,11 +214,8 @@ Daily Completed Tasks
 16)this query shows details of orders whose cust id is 5 and status is cancelled                           ----------completed
 17) we get ORDER_id ,title of product ,quantity & new column as total amount 
   (quantity and unit ptice of that product) through order _id                                                 --------completed
-
-
 Remaining -
 1)Quarter wise products selling data                                                                         ////////////////
-
 */
 
 select * from products;
@@ -373,4 +379,32 @@ FROM orderdetails, products
 WHERE  products.product_id =orderdetails.product_id 
 AND order_id= 4;
 
+DELIMITER $$
+CREATE PROCEDURE TransferMoney(IN from_account_number BIGINT ,IN to_account_number BIGINT, IN transaction_date DATETIME,IN amount DOUBLE )
+BEGIN 
+DECLARE Debit double;
+START TRANSACTION;
+UPDATE accounts SET balance=balance-amount WHERE account_number = from_account_number;
+UPDATE accounts SET balance=balance+amount WHERE account_number = to_account_number;
+INSERT INTO transactions(from_account_number,to_account_number,transaction_date,amount) VALUES(from_account_number,to_account_number,transaction_date,amount);
+COMMIT;
+END $$
+DELIMITER ;
 
+
+select transactions.amount,transactions.transaction_date,
+CASE WHEN transactions.from_account_number=customers.account_number then 'debit'
+	 WHEN transactions.to_account_number=customers.account_number then 'credit'
+	 END AS MODETYPE FROM transactions,customers
+WHERE transactions.from_account_number=(select account_number from customers where cust_id=2) or transactions.to_account_number=(select account_number from customers where cust_id=2);
+
+select transactions.transaction_date,transactions.amount,transactions.from_account_number,
+CASE WHEN transactions.from_account_number=(select account_number from customers where cust_id=2) then 'debit'
+	 WHEN transactions.to_account_number=(select account_number from customers where cust_id=2) then 'credit'
+	 END AS MODETYPE FROM transactions,customers
+WHERE transactions.from_account_number=(select account_number from customers where cust_id=2) or transactions.to_account_number=(select account_number from customers where cust_id=2);
+
+
+CALL TransferMoney(39025545659,39025545658,'2023-03-09 02:15:05',500);
+select * from  transactions ;
+select * from accounts;
