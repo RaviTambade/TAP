@@ -48,8 +48,8 @@ INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 390
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545660,'AXIS0000286','2021-08-01 07-40-35',2352500);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545655,'AXIS0000286','2021-08-01 07-40-35',2352500);
 
-SELECT * FROM accounts;
 
+select * from transactions;
 
 
 
