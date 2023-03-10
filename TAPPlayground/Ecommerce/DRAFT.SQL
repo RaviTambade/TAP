@@ -49,7 +49,14 @@ INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 390
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545655,'AXIS0000286','2021-08-01 07-40-35',2352500);
 
 
-select * from transactions;
+INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES(39025545655,39025545658,'2023-03-01 12:40:35',22500);
+INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025545656,39025545660,'2023-03-01 12:40:35',22500);
+INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025545657,39025545659,'2023-03-01 12:40:35',22500);
+INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES(39025545660,39025545658,'2023-03-01 12:40:35',22500);
+INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025545655,39025545659,'2023-03-01 12:40:35',22500);
+INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025545658,39025545655,'2023-03-01 12:40:35',22500);
+
+
 
 
 
@@ -372,5 +379,7 @@ SELECT orderdetails.order_id,products.product_title, orderdetails.quantity ,(pro
 FROM orderdetails, products 
 WHERE  products.product_id =orderdetails.product_id 
 AND order_id= 4;
+
+
 
 
