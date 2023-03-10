@@ -57,7 +57,7 @@ INSERT INTO transactions(from_account_number, to_account_number,transaction_date
 INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025545658,39025545655,'2023-03-01 12:40:35',22500);
 
 
-
+select * from transactions;
 
 
 INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Sahil','Mankar','sahil.m@gmail.com','9960916323','sahil@123',39025545654);
@@ -380,6 +380,17 @@ FROM orderdetails, products
 WHERE  products.product_id =orderdetails.product_id 
 AND order_id= 4;
 
+DELIMITER $$
+CREATE PROCEDURE TransferMoney(IN from_account_number BIGINT ,IN to_account_number BIGINT, IN transaction_date DATETIME,IN amount DOUBLE )
+BEGIN 
+START TRANSACTION;
+UPDATE accounts SET balance=balance-amount WHERE account_number = from_account_number;
+UPDATE accounts SET balance=balance+amount WHERE account_number = to_account_number;
+INSERT INTO transactions(from_account_number,to_account_number,transaction_date,amount) VALUES(from_account_number,to_account_number,transaction_date,amount);
+COMMIT;
+END $$
+DELIMITER ;
 
-
-
+CALL TransferMoney(39025545659,39025545658,'2023-03-09 02:15:05',500);
+select * from  transactions;
+select * from accounts;
