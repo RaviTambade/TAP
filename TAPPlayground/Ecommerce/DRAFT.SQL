@@ -6,17 +6,17 @@ USE Ecommerce;
 
 CREATE TABLE users( user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, email VARCHAR(25) UNIQUE NOT NULL, contact_number VARCHAR(20) NOT NULL UNIQUE,password VARCHAR(15) NOT NULL);
 CREATE TABLE accounts(account_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,account_number BIGINT UNIQUE, ifsc_code VARCHAR(50) ,register_date DATETIME ,balance DOUBLE);
-CREATE TABLE customers(cust_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, first_name VARCHAR(25), last_name VARCHAR(25),email VARCHAR(25) UNIQUE NOT NULL,contact_number VARCHAR(20) UNIQUE NOT NULL, password VARCHAR(15) NOT NULL,account_number BIGINT NOT NULL ,CONSTRAINT fk_account_no3 FOREIGN KEY(account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE);
-CREATE TABLE employees(employee_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,empfirst_name VARCHAR(100),emplast_name VARCHAR(50),birth_date DATE,hire_date DATE,contact_number VARCHAR(20),email VARCHAR(50),password VARCHAR(15) NOT NULL,photo varchar (50),reports_to INT NOT NULL,account_number BIGINT NOT NULL ,CONSTRAINT fk_account_no4 FOREIGN KEY(account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE);
+CREATE TABLE customers(cust_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, first_name VARCHAR(25), last_name VARCHAR(25),email VARCHAR(25) UNIQUE NOT NULL,contact_number VARCHAR(20) UNIQUE NOT NULL, password VARCHAR(15) NOT NULL,account_number BIGINT NOT NULL UNIQUE ,CONSTRAINT fk_account_no3 FOREIGN KEY(account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE);
+CREATE TABLE employees(employee_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,empfirst_name VARCHAR(100),emplast_name VARCHAR(50),birth_date DATE,hire_date DATE,contact_number VARCHAR(20),email VARCHAR(50),password VARCHAR(15) NOT NULL,photo varchar (50),reports_to INT NOT NULL,account_number BIGINT NOT NULL UNIQUE ,CONSTRAINT fk_account_no4 FOREIGN KEY(account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE);
 CREATE TABLE addresses(address_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,cust_id INT NOT NULL, CONSTRAINT fk_customer_id_2 FOREIGN KEY(cust_id) REFERENCES customers(cust_id) ON UPDATE CASCADE ON DELETE CASCADE,address_mode ENUM('permanent', 'billing') NOT NULL,house_number VARCHAR(20),landmark VARCHAR(25) NOT NULL,city VARCHAR(25) NOT NULL,state VARCHAR(25) NOT NULL,country VARCHAR(25) NOT NULL,pincode VARCHAR(25) NOT NULL);
 CREATE TABLE categories(category_id INT PRIMARY KEY AUTO_INCREMENT, category_title VARCHAR(20),description VARCHAR (100),image VARCHAR(50)) ;
 CREATE TABLE products (product_id INT PRIMARY KEY AUTO_INCREMENT,product_title VARCHAR(20) NOT NULL,description VARCHAR(50),stock_available INT NOT NULL,unit_price DOUBLE NOT NULL,image VARCHAR(40),category_id INT NOT NULL, CONSTRAINT fk_category_id FOREIGN KEY(category_id) REFERENCES categories(category_id) ON UPDATE CASCADE ON DELETE CASCADE);
 CREATE TABLE orders(order_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,order_date DATETIME DEFAULT CURRENT_TIMESTAMP,shipped_date DATETIME DEFAULT CURRENT_TIMESTAMP,cust_id INT NOT NULL,CONSTRAINT fk_customer_id FOREIGN KEY (cust_id) REFERENCES customers(cust_id) ON UPDATE CASCADE ON DELETE CASCADE,total double ,status ENUM('delivered','initiated','inprogress','cancelled','approved') NOT NULL);
-CREATE TABLE suppliers(supplier_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,company_name VARCHAR (50),supplier_name VARCHAR (20),contact_number VARCHAR (20),email VARCHAR(20),address VARCHAR(200),city VARCHAR(50),state VARCHAR(20),account_number BIGINT NOT NULL,CONSTRAINT fk_account_no5 FOREIGN KEY(account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE); 
+CREATE TABLE suppliers(supplier_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,company_name VARCHAR (50),supplier_name VARCHAR (20),contact_number VARCHAR (20),email VARCHAR(20),address VARCHAR(200),city VARCHAR(50),state VARCHAR(20),account_number BIGINT NOT NULL UNIQUE,CONSTRAINT fk_account_no5 FOREIGN KEY(account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE); 
 CREATE TABLE orderdetails(orderdetails_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,order_id INT NOT NULL,CONSTRAINT fk_order_id FOREIGN KEY (order_id) REFERENCES orders(order_id) ON UPDATE CASCADE ON DELETE CASCADE,product_id INT NOT NULL,CONSTRAINT fk_product_id FOREIGN KEY (product_id) REFERENCES products(product_id) ON UPDATE CASCADE ON DELETE CASCADE,supplier_id INT NOT NULL,CONSTRAINT fk_supplier_id FOREIGN KEY (supplier_id) REFERENCES suppliers(supplier_id) ON UPDATE CASCADE ON DELETE CASCADE,quantity INT NOT NULL,discount float default 0);  
 CREATE TABLE payments(payment_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,payment_date DATETIME, payment_mode ENUM('cash on delivery','online payment'),transection_id INT NOT NULL,order_id INT NOT NULL, CONSTRAINT fk_order_id_1 FOREIGN KEY (order_id) REFERENCES orders(order_id) ON UPDATE CASCADE ON DELETE CASCADE);
-CREATE TABLE shippers(shipper_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,company_name VARCHAR(25),contact_number VARCHAR (20),email VARCHAR(50),account_number BIGINT NOT NULL,CONSTRAINT account_number01 FOREIGN KEY(account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE);
-CREATE TABLE transactions(transaction_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,from_account_number BIGINT NOT NULL,CONSTRAINT fk_account_no FOREIGN KEY(from_account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE,to_account_number BIGINT NOT NULL ,CONSTRAINT fk_acountno2 FOREIGN KEY(to_account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE, transaction_date DATETIME,amount DOUBLE);
+CREATE TABLE shippers(shipper_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,company_name VARCHAR(25),contact_number VARCHAR (20),email VARCHAR(50),account_number BIGINT NOT NULL UNIQUE,CONSTRAINT account_number01 FOREIGN KEY(account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE);
+CREATE TABLE transactions(transaction_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,from_account_number BIGINT NOT NULL ,CONSTRAINT fk_account_no FOREIGN KEY(from_account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE,to_account_number BIGINT NOT NULL ,CONSTRAINT fk_acountno2 FOREIGN KEY(to_account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE, transaction_date DATETIME,amount DOUBLE);
 
 
 /*
@@ -42,42 +42,47 @@ BEGIN
 END //
 DELIMITER ;
 
-INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545654,'MAHB0000286','2023-03-01 12:40:35',22500);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545655,'MAHB0000286','2023-03-01 12:40:35',22500);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545656,'UNB0000286','2023-04-15 02:45:35',2250025);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545657,'BARBO0000286','2023-03-04 02-40-35',225700);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545658,'MAHB000299','2022-03-16  03-40-35',24540);
-INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545659,'MAHB0000886','2022-05-01 04-40-35',454500);
-INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545660,'AXIS0000286','2021-08-01 07-40-35',2352500);
-INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545655,'AXIS0000286','2021-08-01 07-40-35',2352500);
-
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545659,'MAHB0000886','2022-05-01 04-50-35',454500);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545660,'AXIS0000296','2021-07-01 07-40-35',2352500);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545661,'UBIN0000286','2021-08-01 07-10-35',23500);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545662,'AXIS0000285','2021-05-02 07-40-35',232500);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545663,'MAHB0000284','2021-08-03 07-40-35',235250);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545664,'UBIN0000286','2021-08-04 07-40-35',23520);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545665,'HDFC0000286','2021-02-05 07-40-35',52500);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545666,'SBI0000286','2021-08-07 07-40-35',233500);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545667,'AXIS0000236','2021-08-08 07-40-35',23500);
 
 INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES(39025545655,39025545658,'2023-03-01 12:40:35',22500);
 INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025545656,39025545660,'2023-03-01 12:40:35',22500);
 INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025545657,39025545659,'2023-03-01 12:40:35',22500);
-INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES(39025545660,39025545658,'2023-03-01 12:40:35',22500);
-INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025545655,39025545659,'2023-03-01 12:40:35',22500);
-INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025545658,39025545655,'2023-03-01 12:40:35',22500);
+INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES(39025545660,39025545662,'2023-03-01 12:40:35',22500);
+INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025545659,39025545663,'2023-03-01 12:40:35',22500);
+INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025545658,39025545665,'2023-03-01 12:40:35',22500);
 
 
 select * from transactions;
 
 
-INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Sahil','Mankar','sahil.m@gmail.com','9960916323','sahil@123',39025545654);
+INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Sahil','Mankar','sahil.m@gmail.com','9960916323','sahil@123',39025545656);
 INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Abhay','Navle','abhay.navale@gmail.com','9075966080','sahil@123',39025545655);
-INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Sachin','Patil','sachin.patil@gmail.com','9881723458','sahil@123',39025545655);
-INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Minal','Sagade','minal.sagade@outlook.com','9887454372','sahil@123',39025545656);
-INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Jai','Kinikar','jai.kinikar@gmail.com','98543234','sahil@123',39025545655);
-INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Rakhi','Sharma','rakhi.sharma@gmail.com','9845834534','sahil@123',39025545657);
+INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Sachin','Patil','sachin.patil@gmail.com','9881723458','sahil@123',39025545658);
+INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Minal','Sagade','minal.sagade@outlook.com','9887454372','sahil@123',39025545657);
+INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Jai','Kinikar','jai.kinikar@gmail.com','98543234','sahil@123',39025545659);
+INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Rakhi','Sharma','rakhi.sharma@gmail.com','9845834534','sahil@123',39025545661);
 INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Shivam','Pethe','shivam.pethe@gmai.com','9881734798','sahil@123',39025545660);
-INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Manisha','Pant','manisha.pant@gmail.com','9884578673','sahil@123',39025545660);
 
 
-INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Akash','Ajab','1999-09-15','2022-09-07','8756320158','AkAjab@gmail.com','AK123654' ,'./images/crackjack.jpg', 2,39025545656);
-INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Shubham','Teli','1999-02-10','2020-07-05','9876320158','Steli@gmail.com','ST5269' ,'./images/ST.jpg', 1,39025545656);
-INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Sahil','Mankar','1997-05-19','2021-07-07','8756789158','Sahil@gmail.com','SM569654' ,'./images/SM.jpg', 1,39025545655);
-INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Shubham','Navale','1995-07-25','2020-05-04','9996320158','SNavale@gmail.com','SN56987' ,'./images/SN.jpg', 3,39025545656);
-INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Rohit','Gore','1996-05-12','2022-09-07','7776320158','RGore@gmail.com','RG123654' ,'./images/RG.jpg', 4,39025545660);
-INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Pragati','Bangar','1998-05-10','2022-11-09','9666320158','PBangar@gmail.com','PB123654' ,'./images/PB.jpg', 5,39025545657);
+
+INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Akash','Ajab','1999-09-15','2022-09-07','8756320158','AkAjab@gmail.com','AK123654' ,'./images/crackjack.jpg', 2,39025545660);
+INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Shubham','Teli','1999-02-10','2020-07-05','9876320158','Steli@gmail.com','ST5269' ,'./images/ST.jpg', 1,39025545661);
+INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Sahil','Mankar','1997-05-19','2021-07-07','8756789158','Sahil@gmail.com','SM569654' ,'./images/SM.jpg', 1,39025545662);
+INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Shubham','Navale','1995-07-25','2020-05-04','9996320158','SNavale@gmail.com','SN56987' ,'./images/SN.jpg', 3,39025545663);
+INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Rohit','Gore','1996-05-12','2022-09-07','7776320158','RGore@gmail.com','RG123654' ,'./images/RG.jpg', 4,39025545664);
+INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Pragati','Bangar','1998-05-10','2022-11-09','9666320158','PBangar@gmail.com','PB123654' ,'./images/PB.jpg', 5,39025545665);
 
 
 /*possible vales  for addressmode:1:only residential ,2:only delivery address,3:residentail and delivery*/
@@ -114,14 +119,14 @@ INSERT INTO products(product_title,description,stock_available,unit_price,image,
 INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('Fiidge','Kitchen Use',200,150,'./images/Samsung.jpg',4);
 INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('Laptops','Working Gaget',60,60000,'./images/Dell.jpg',4);
 
-
+select * from orders;
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-08-25  06:35:25', 1,50.00,'initiated');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:25', 2, 82.00,'delivered');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-01-16  09:35:25', 6,20.00,'cancelled');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:25', 7,40.00,'inprogress');
 
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-08-25  06:35:25', 4,50.00,'delivered');
-INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:25', 8,30.00,'delivered');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:25', 4,30.00,'delivered');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-01-16  09:35:25', 4,45.00,'inprogress');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:25', 2,45.00,'cancelled');
 
@@ -142,11 +147,11 @@ INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-01-16  09:35:2
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:25', 7,14.00,'inprogress');
 
 
-INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,account_number)VALUES('Hindustan pvt.ltd','Pragati','7845632569','pragati@gmail.com','Sinhagad Road Pune','Pune','Maharashtra',39025545658);
-INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,account_number)VALUES('Britinia pvt.ltd','Akash','9945632569','Akash@gmail.com','Hadapsar  Pune','Pune','Maharashtra',39025545657);
-INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,account_number)VALUES('Surya pvt.ltd','Akshay','9645632569','Akshay@gmail.com','Rajgurunagar Pune','Pune','Maharashtra',39025545656);
-INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,account_number)VALUES('Naturals pvt.ltd','Rohit','9855632569','Rohit@gmail.com','Wanavdi Fatima nagar Pune','Pune','Maharashtra',39025545660);
-INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,account_number)VALUES('Goukul pvt.ltd','Abhay','9345632569','Abhay@gmail.com','Avasari Pune','Pune','Maharashtra',39025545655);
+INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,account_number)VALUES('Hindustan pvt.ltd','Pragati','7845632569','pragati@gmail.com','Sinhagad Road Pune','Pune','Maharashtra',39025545666);
+INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,account_number)VALUES('Britinia pvt.ltd','Akash','9945632569','Akash@gmail.com','Hadapsar  Pune','Pune','Maharashtra',39025545662);
+INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,account_number)VALUES('Surya pvt.ltd','Akshay','9645632569','Akshay@gmail.com','Rajgurunagar Pune','Pune','Maharashtra',39025545663);
+INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,account_number)VALUES('Naturals pvt.ltd','Rohit','9855632569','Rohit@gmail.com','Wanavdi Fatima nagar Pune','Pune','Maharashtra',39025545665);
+INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,account_number)VALUES('Goukul pvt.ltd','Abhay','9345632569','Abhay@gmail.com','Avasari Pune','Pune','Maharashtra',39025545659);
 
 
 INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(1, 1, 70,1);
@@ -160,10 +165,10 @@ INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(8, 2,
 INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(2, 3, 88,4);
 INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(2, 4, 78,3);
 INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 4, 90,5);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(6, 2, 45,4);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(10, 2, 45,4);
 INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 3, 78,1);
 INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(5, 2, 45,2);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(6, 4, 96,4);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(20, 4, 96,4);
 INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(7, 3, 25,1);
 INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 2, 46,4);
 INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 3, 35,4);
@@ -171,7 +176,7 @@ INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 12
 INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 15, 35,4);
 INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 8, 35,4);
 INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 7, 35,4);
-
+select * from orders;
 
 
 INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('2022-05-03','cash on delivery',1234,1);
@@ -183,9 +188,9 @@ INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('
 INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('2022-09-10','cash on delivery',43210,7);
 
 
-INSERT INTO shippers(company_name,contact_number,email,account_number)VALUES('Amazon','6985645987','amazone@gmail.com',39025545660);
-INSERT INTO shippers(company_name,contact_number,email,account_number)VALUES('Flipcart','69825645987','flipcart@gmail.com',39025545660);
-INSERT INTO shippers(company_name,contact_number,email,account_number)VALUES('Bluedrt','6912545987','bluedart@gmail.com',39025545660);
+INSERT INTO shippers(company_name,contact_number,email,account_number)VALUES('Amazon','6985645987','amazone@gmail.com',39025545661);
+INSERT INTO shippers(company_name,contact_number,email,account_number)VALUES('Flipcart','69825645987','flipcart@gmail.com',39025545662);
+INSERT INTO shippers(company_name,contact_number,email,account_number)VALUES('Bluedrt','6912545987','bluedart@gmail.com',39025545663);
 INSERT INTO shippers(company_name,contact_number,email,account_number)VALUES('Essar Shipping Ltd','6982345987','essar@gmail.com',39025545659);
 INSERT INTO shippers(company_name,contact_number,email,account_number)VALUES('Greatship India Ltd','6985645697','greatship@gmail.com',39025545658);
 INSERT INTO shippers(company_name,contact_number,email,account_number)VALUES('Mercator Ltd','6985647887','mercator@gmail.com',39025545657);
@@ -392,11 +397,19 @@ END $$
 DELIMITER ;
 
 
-select transactions.amount,transactions.transaction_date,
+select transactions.transaction_id,transactions.amount,transactions.transaction_date,
 CASE WHEN transactions.from_account_number=customers.account_number then 'debit'
 	 WHEN transactions.to_account_number=customers.account_number then 'credit'
 	 END AS MODETYPE FROM transactions,customers
 WHERE transactions.from_account_number=(select account_number from customers where cust_id=2) or transactions.to_account_number=(select account_number from customers where cust_id=2);
+
+select customers.cust_id, customers.first_name, customers.last_name, transactions.amount,transactions.transaction_date,
+CASE WHEN transactions.from_account_number=customers.account_number then 'debit'
+	 WHEN transactions.to_account_number=customers.account_number then 'credit'
+	 END AS MODETYPE FROM transactions,customers
+WHERE ( transactions.from_account_number=(select account_number from customers where cust_id=2) and customers.cust_id=2)
+  or (transactions.to_account_number=(select account_number from customers where cust_id=2)  and customers.cust_id=2) ;
+
 
 select transactions.transaction_date,transactions.amount,transactions.from_account_number,
 CASE WHEN transactions.from_account_number=(select account_number from customers where cust_id=2) then 'debit'
