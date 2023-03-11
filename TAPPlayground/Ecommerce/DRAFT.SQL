@@ -219,6 +219,12 @@ Daily Completed Tasks
 16)this query shows details of orders whose cust id is 5 and status is cancelled                           ----------completed
 17) we get ORDER_id ,title of product ,quantity & new column as total amount 
   (quantity and unit ptice of that product) through order _id                                                 --------completed
+18)This Store procedure show Transaction History                                                           ---------completed
+19) This Query show how many times Money credited or debited in customers account                          ---------completed 
+20) This Query show how many times Money credited or debited in customers account                          ---------completed
+21) This Query show how many times Money credited or debited in account where customer id is 2             ---------completed
+
+
 Remaining -
 1)Quarter wise products selling data                                                                         ////////////////
 */
