@@ -384,6 +384,7 @@ FROM orderdetails, products
 WHERE  products.product_id =orderdetails.product_id 
 AND order_id= 4;
 
+/*18)This Store procedure show Transaction History*/
 DELIMITER $$
 CREATE PROCEDURE TransferMoney(IN from_account_number BIGINT ,IN to_account_number BIGINT, IN transaction_date DATETIME,IN amount DOUBLE )
 BEGIN 
@@ -396,13 +397,14 @@ COMMIT;
 END $$
 DELIMITER ;
 
-
+/*19) This Query show how many times Money credited or debited in customers account */
 select transactions.transaction_id,transactions.amount,transactions.transaction_date,
 CASE WHEN transactions.from_account_number=customers.account_number then 'debit'
 	 WHEN transactions.to_account_number=customers.account_number then 'credit'
 	 END AS MODETYPE FROM transactions,customers
 WHERE transactions.from_account_number=(select account_number from customers where cust_id=2) or transactions.to_account_number=(select account_number from customers where cust_id=2);
 
+/*20) This Query show how many times Money credited or debited in customers account */
 select customers.cust_id, customers.first_name, customers.last_name, transactions.amount,transactions.transaction_date,
 CASE WHEN transactions.from_account_number=customers.account_number then 'debit'
 	 WHEN transactions.to_account_number=customers.account_number then 'credit'
@@ -410,7 +412,7 @@ CASE WHEN transactions.from_account_number=customers.account_number then 'debit'
 WHERE ( transactions.from_account_number=(select account_number from customers where cust_id=2) and customers.cust_id=2)
   or (transactions.to_account_number=(select account_number from customers where cust_id=2)  and customers.cust_id=2) ;
 
-
+/*21) This Query show how many times Money credited or debited in account where customer id is 2*/
 select transactions.transaction_date,transactions.amount,transactions.from_account_number,
 CASE WHEN transactions.from_account_number=(select account_number from customers where cust_id=2) then 'debit'
 	 WHEN transactions.to_account_number=(select account_number from customers where cust_id=2) then 'credit'
