@@ -4,7 +4,198 @@ using MySql.Data.MySqlClient;
 namespace ECommerceApp.Repositories;
 public class OrderDetailsRepository : IOrderDetailsRepository
 {
-    public static string conString = "server=localhost;port=3306;user=root;password=root;database=Ecommerce";
+
+
+    public static string conString = "server=localhost;port=3306;user=root;password=password;database=Ecommerce";
+    public List<OrderDetails> GetAllOrderDetails()
+    {
+        List<OrderDetails> orderDetails = new List<OrderDetails>();
+        MySqlConnection con = new MySqlConnection();
+        con.ConnectionString = conString;
+        try
+        {
+            string query = "select * from orderdetails";
+            con.Open();
+            MySqlCommand command = new MySqlCommand(query, con);
+            MySqlDataReader reader = command.ExecuteReader();
+
+
+            while (reader.Read())
+            {
+                int id = Int32.Parse(reader["orderdetails_id"].ToString());
+                int orderId = Int32.Parse(reader["order_id"].ToString());
+                int productId = Int32.Parse(reader["product_id"].ToString());
+                int supplierId = Int32.Parse(reader["supplier_id"].ToString());
+                int quantity = Int32.Parse(reader["quantity"].ToString());
+                double discount = double.Parse(reader["discount"].ToString());
+
+                OrderDetails orderDetail = new OrderDetails()
+                {
+                    OrderDetailsId = id,
+                    OrderId = orderId,
+                    ProductId = productId,
+                    SupplierId = supplierId,
+                    Quantity = quantity,
+                    Discount = discount
+                };
+                orderDetails.Add(orderDetail);
+
+            }
+            reader.Close();
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            con.Close();
+        }
+        return orderDetails;
+    }
+
+    public OrderDetails GetOrderDetailById(int id)
+    {
+        OrderDetails orderDetail = new OrderDetails();
+
+        MySqlConnection con = new MySqlConnection();
+        con.ConnectionString = conString;
+        try
+        {
+            string query = "select * from orderdetails where orderdetails_id=" + id;
+            con.Open();
+            MySqlCommand command = new MySqlCommand(query, con);
+            MySqlDataReader reader = command.ExecuteReader();
+
+
+            if (reader.Read())
+            {
+                int orderDetailsId = Int32.Parse(reader["orderdetails_id"].ToString());
+                int orderId = Int32.Parse(reader["order_id"].ToString());
+                int productId = Int32.Parse(reader["product_id"].ToString());
+                int supplierId = Int32.Parse(reader["supplier_id"].ToString());
+                int quantity = Int32.Parse(reader["quantity"].ToString());
+                double discount = double.Parse(reader["discount"].ToString());
+
+                orderDetail = new OrderDetails()
+                {
+                    OrderDetailsId = orderDetailsId,
+                    OrderId = orderId,
+                    ProductId = productId,
+                    SupplierId = supplierId,
+                    Quantity = quantity,
+                    Discount = discount
+                };
+
+            }
+            reader.Close();
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            con.Close();
+        }
+        return orderDetail;
+    }
+
+
+
+    public List<OrderDetails> GetOrderDetails(int orderId)
+    {
+        List<OrderDetails> orderDetails = new List<OrderDetails>();
+
+        MySqlConnection con = new MySqlConnection();
+        con.ConnectionString = conString;
+        try
+        {
+            string query = "SELECT * FROM orderdetails INNER JOIN orders ON orderdetails.order_id=orders.order_id WHERE orders.order_id=" + orderId;
+            con.Open();
+            MySqlCommand command = new MySqlCommand(query, con);
+            MySqlDataReader reader = command.ExecuteReader();
+
+
+            while (reader.Read())
+            {
+                int orderDetailsId = Int32.Parse(reader["orderdetails_id"].ToString());
+                int productId = Int32.Parse(reader["product_id"].ToString());
+                int supplierId = Int32.Parse(reader["supplier_id"].ToString());
+                int quantity = Int32.Parse(reader["quantity"].ToString());
+                double discount = double.Parse(reader["discount"].ToString());
+
+                OrderDetails orderDetail = new OrderDetails()
+                {
+                    OrderDetailsId = orderDetailsId,
+                    OrderId = orderId,
+                    ProductId = productId,
+                    SupplierId = supplierId,
+                    Quantity = quantity,
+                    Discount = discount
+                };
+
+                orderDetails.Add(orderDetail);
+            }
+            reader.Close();
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            con.Close();
+        }
+
+        return orderDetails;
+    }
+
+    public List<OrderDetailsOrder> GetProductsOfOrder(int orderId)
+    {
+        List<OrderDetailsOrder> products = new List<OrderDetailsOrder>();
+
+        MySqlConnection con = new MySqlConnection();
+        con.ConnectionString = conString;
+
+        try
+        {
+            string query ="SELECT orderdetails.order_id,products.product_title, orderdetails.quantity ,"+
+                          " (products.unit_price*orderdetails.quantity) AS total_amount FROM orderdetails, products "+
+                          " WHERE  products.product_id =orderdetails.product_id AND order_id="+orderId;
+            con.Open();
+            MySqlCommand command =new MySqlCommand(query,con);
+            MySqlDataReader reader = command.ExecuteReader();
+
+            while(reader.Read())
+            {
+                string prodctTitle= reader["product_title"].ToString();
+                int quantity=Int32.Parse(reader["quantity"].ToString());
+                double  totalAmount= double.Parse(reader["total_amount"].ToString());
+
+
+                OrderDetailsOrder product= new OrderDetailsOrder(){
+                    OrderId=orderId,
+                    ProductTitle=prodctTitle,
+                    Quantity=quantity,
+                    TotalAmount=totalAmount
+                };
+                products.Add(product);
+            }
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            con.Close();
+        }
+
+        return products;
+    }
+
+
     public bool InsertOrderdetails(int orderId, int productId, int quantity)
     {
         bool status = false;
@@ -17,6 +208,7 @@ public class OrderDetailsRepository : IOrderDetailsRepository
             MySqlCommand command = new MySqlCommand(query, con);
             command.ExecuteNonQuery();
             status = true;
+
         }
         catch (Exception e)
         {
@@ -106,7 +298,7 @@ public class OrderDetailsRepository : IOrderDetailsRepository
                 orderHistories.Add(orderhistory);
             }
         }
-              catch (Exception e)
+        catch (Exception e)
         {
             throw e;
         }
@@ -116,6 +308,7 @@ public class OrderDetailsRepository : IOrderDetailsRepository
         }
         return orderHistories;
     }
+
 
 }
 

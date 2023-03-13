@@ -5,19 +5,41 @@ using ECommerceApp.Services.Interfaces;
 using ECommerceApp.Helpers;
 namespace ECommerceApp.Controllers;
 
-public class OrderController : Controller
+public class OrdersController : Controller
 {
     private readonly IOrderService _ordersrv;
 
-    public OrderController(IOrderService ordersrv)
+    public OrdersController(IOrderService ordersrv)
     {
         _ordersrv = ordersrv;
     }
     [HttpGet]
+    public JsonResult GetAllOrders()
+    {
+        var orders = _ordersrv.GetAllOrders();
+        return Json(orders);
+    }
+
+    [HttpGet]
+
+    public JsonResult GetOrderById(int id)
+    {
+        var order = _ordersrv.GetOrderById(id);
+        return Json(order);
+    }
+
+    [HttpGet]
+
+    public JsonResult GetOrderByCustId(int custid)
+    {
+        var order = _ordersrv.GetOrderByCustId(custid);
+        return Json(order);
+    }
+    
+       [HttpGet]
     public IActionResult InsertOrder(){
         return View();
     }
-
    
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -1,9 +1,9 @@
 
 @{
-    ViewData["Title"] = "Customer Page";
+    ViewData["Title"] = "Order Page";
 }
 
-<h2>Customer List</h2>
+<h2>Orders List</h2>
 
 
  
@@ -23,7 +23,7 @@
         //invoke REST API to fetch data from server
         
         $.ajax({  
-            url: '/Customers/GetAll',  
+            url: '/Orders/GetAllOrders',  
             dataType: "json",  
             type: "GET",  
             error: function(xhr, status, error) {  
