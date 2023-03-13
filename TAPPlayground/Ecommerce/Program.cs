@@ -22,7 +22,10 @@ builder.Services.AddTransient<IOrderDetailsRepository,OrderDetailsRepository>();
 builder.Services.AddTransient<IOrderDetailsService,OrderDetailsService>();
 builder.Services.AddTransient<IShipperRepository,ShipperRepository>();
 builder.Services.AddTransient<IShipperService,ShipperService>();
-
+builder.Services.AddTransient<ITransactionRepository,TransactionRepository>();
+builder.Services.AddTransient<ITransactionService,TransactionService>();
+builder.Services.AddTransient<IMiniStatementRepository,MiniStatementRepository>();
+builder.Services.AddTransient<IMiniStatementService,MiniStatementService>();
 builder.Services.AddSession(options =>{
     options.IdleTimeout=TimeSpan.FromMinutes(10);
     options.Cookie.HttpOnly=true;
