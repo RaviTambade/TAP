@@ -27,6 +27,14 @@ public class OrdersController : Controller
         var order = _ordersrv.GetOrderById(id);
         return Json(order);
     }
+
+    [HttpGet]
+
+    public JsonResult GetOrderByCustId(int id)
+    {
+        var order = _ordersrv.GetOrderByCustId(id);
+        return Json(order);
+    }
     
        [HttpGet]
     public IActionResult InsertOrder(){

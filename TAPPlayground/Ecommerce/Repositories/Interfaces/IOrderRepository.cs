@@ -8,4 +8,6 @@ public interface IOrderRepository
 
     int GetOrderId(int customerId);
     bool InsertOrder(int customerId);
+
+    Order GetOrderByCustId(int id);
 }

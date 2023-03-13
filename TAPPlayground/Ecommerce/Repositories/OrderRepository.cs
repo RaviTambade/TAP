@@ -144,5 +144,46 @@ public class OrderRepository : IOrderRepository
         }
         return status;
     }
+    public Order GetOrderByCustId(int custid)
+    {
+        Order order = new Order();
+        MySqlConnection con = new MySqlConnection();
+        con.ConnectionString = conString;
+        try
+        {
+            string query = "SELECT * FROM orders where cust_id=" +custid;
+            con.Open();
+            MySqlCommand command = new MySqlCommand(query, con);
+            MySqlDataReader reader = command.ExecuteReader();
+            if(reader.Read())
+            {
+                //int orderId = int.Parse(reader["order_id"].ToString());
+                DateTime orderDate= DateTime.Parse(reader["order_date"].ToString());
+                DateTime shippedDate =DateTime.Parse(reader["shipped_date"].ToString());
+                int customerId = int.Parse(reader["cust_Id"].ToString());
+                double total = double.Parse(reader["total"].ToString());
+                string? status = reader["status"].ToString();
+
+                order = new Order()
+                {
+                    CustomerId= custid,
+                    OrderDate = orderDate,
+                    ShippedDate = shippedDate,
+                    Total = total,
+                    Status = status
+                };
+            }
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            con.Close();
+        }
+        return order;
+    }
+    
 
 }
