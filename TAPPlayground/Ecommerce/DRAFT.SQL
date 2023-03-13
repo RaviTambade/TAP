@@ -1,5 +1,5 @@
-
-
+-- Active: 1678361403571@@127.0.0.1@3306@ecommerce
+/*DROP DATABASE Ecommerce;*/
 CREATE DATABASE Ecommerce;
 USE Ecommerce;
 
@@ -426,3 +426,6 @@ WHERE transactions.from_account_number=(select account_number from customers whe
 CALL TransferMoney(39025545659,39025545658,'2023-03-09 02:15:05',500);
 select * from  transactions ;
 select * from accounts;
+SELECT * FROM customers;
+
+select customers.first_name,customers.last_name,customers.email,customers.contact_number,accounts.account_number,accounts.ifsc_code,accounts.balance FROM customers  INNER JOIN  accounts ON accounts.account_number=customers.account_number  -- WHERE customers.cust_id=1; 

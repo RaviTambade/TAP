@@ -22,6 +22,8 @@ builder.Services.AddTransient<IOrderDetailsRepository,OrderDetailsRepository>();
 builder.Services.AddTransient<IOrderDetailsService,OrderDetailsService>();
 builder.Services.AddTransient<IShipperRepository,ShipperRepository>();
 builder.Services.AddTransient<IShipperService,ShipperService>();
+builder.Services.AddTransient<IAccountRepository,AccountRepository>();
+builder.Services.AddTransient<IAccountService,AccountService>();
 
 builder.Services.AddSession(options =>{
     options.IdleTimeout=TimeSpan.FromMinutes(10);
