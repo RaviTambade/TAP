@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 -- Active: 1678361403571@@127.0.0.1@3306@ecommerce
 /*DROP DATABASE Ecommerce;*/
+=======
+-- Active: 1677916902963@@127.0.0.1@3306@ecommerce
+
+
+>>>>>>> 4f93cab34277b8835b3bbc7d3dd04b2ca3d628db
 CREATE DATABASE Ecommerce;
 USE Ecommerce;
 
@@ -19,8 +25,7 @@ CREATE TABLE transactions(transaction_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY
 /*
 create table roles();
 */
-
-
+SELECT suppliers.supplier_id,suppliers.company_name,suppliers.supplier_name,orderdetails.orderdetails_id,orderdetails.order_id,orderdetails.product_id FROM suppliers INNER JOIN orderdetails ON suppliers.supplier_id=orderdetails.supplier_id WHERE product_id=1;
 /*trigger for customer in users*/
 DELIMITER //
 CREATE TRIGGER insert_user AFTER INSERT ON customers 
