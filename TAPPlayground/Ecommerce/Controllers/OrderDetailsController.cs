@@ -27,30 +27,54 @@ public class OrderDetailsController : Controller
     [HttpGet]
     public JsonResult GetOrderDetailById(int id)
     {
-        var orderDetail =_srv.GetOrderDetailById(id);
+        var orderDetail = _srv.GetOrderDetailById(id);
         return Json(orderDetail);
     }
 
     // Getting all information of a Order  
-    
+
     [HttpGet]
     public JsonResult GetOrderDetails(int orderId)
     {
-        var orderDetails=_srv.GetOrderDetails(orderId);
+        var orderDetails = _srv.GetOrderDetails(orderId);
         return Json(orderDetails);
     }
-    
+
 
 
     //Getting all products of a order
-      [HttpGet]
+    [HttpGet]
     public JsonResult GetProductsOfOrder(int orderId)
     {
-        var orderDetails=_srv.GetProductsOfOrder(orderId);
+        var orderDetails = _srv.GetProductsOfOrder(orderId);
+        return Json(orderDetails);
+    }
+    //Insert into order details
+    [HttpPost]
+    public JsonResult InsertOrderdetails([FromBody] OrderDetails orderDetails)
+    {
+        bool result = _srv.InsertOrderdetails(orderDetails);
+        return Json(result);
+    }
+
+    //updating orderdetails
+
+    [HttpPut]
+    public JsonResult UpdateOrderDetails([FromBody] OrderDetails orderDetails)
+    {
+        bool result = _srv.UpdateOrderDetails(orderDetails);
+        return Json(result);
+    }
+
+    //Deleting Record from orderdetails
+    [HttpDelete]
+    public JsonResult DeleteOrdeDetails(int id)
+    {
+        bool orderDetails = _srv.DeleteOrdeDetails(id);
         return Json(orderDetails);
     }
 
-    
+
 
     [HttpGet]
     public IActionResult OrderHistory()
