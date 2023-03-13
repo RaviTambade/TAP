@@ -118,7 +118,28 @@ public class EmployeeRepository : IEmployeeRepository
 
              MySqlCommand cmd=new MySqlCommand(query,con) ;
              con.Open();
-             cmd.ExecuteReader();              
+             cmd.ExecuteNonQuery();               
+
+          }catch(Exception e )
+          {
+            throw e;
+          }
+          finally {
+            con.Close();
+          }
+          return status;
+   }
+
+   public  bool UpdateEmp(Employee emp){
+          bool status = false;
+          MySqlConnection con = new MySqlConnection();
+          con.ConnectionString=conString;
+          try{
+            
+            string query = "UPDATE employees set empfirst_name='"+emp.EmpFirstName+"', emplast_name= '"+emp.EmpLastName+"',birth_date="+emp.BirthDate+",hire_date="+emp.HireDate+",contact_number='"+emp.ContactNumber+"',email='"+emp.Email+"',password='"+emp.Password+"',photo='"+emp.Photo+"',reports_to="+emp.ReportsTo+",account_number='"+emp.AccountNumber+"' WHERE id=" +emp.EmpId;
+             MySqlCommand cmd=new MySqlCommand(query,con) ;
+             con.Open();
+             cmd.ExecuteNonQuery();               
 
           }catch(Exception e )
           {
@@ -130,4 +151,24 @@ public class EmployeeRepository : IEmployeeRepository
           return status;
    }
    
+   public  bool DeleteEmp(int id){
+          bool status = false;
+          MySqlConnection con = new MySqlConnection();
+          con.ConnectionString=conString;
+          try{
+            
+            string query = "DELETE FROM employees WHERE employee_id="+id;
+             MySqlCommand cmd=new MySqlCommand(query,con) ;
+             con.Open();
+             cmd.ExecuteNonQuery();              
+
+          }catch(Exception e )
+          {
+            throw e;
+          }
+          finally {
+            con.Close();
+          }
+          return status;
+   }
 }

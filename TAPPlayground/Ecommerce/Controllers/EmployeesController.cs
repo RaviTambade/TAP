@@ -7,7 +7,7 @@ namespace ECommerceApp.Controllers;
 
 public class EmployeeController : Controller
 {
-    
+
     private readonly IEmployeeService _empsrv;
 
     public EmployeeController(IEmployeeService empsrv)
@@ -17,8 +17,10 @@ public class EmployeeController : Controller
 
     public IActionResult Index()
     {
-        return View ();
+        return View();
     }
+
+
 
     [HttpGet]
     public JsonResult ShowAll()
@@ -27,6 +29,10 @@ public class EmployeeController : Controller
         return Json(employees);
     }
 
+
+
+
+
     [HttpGet]
     public JsonResult GetById(int id)
     {
@@ -34,14 +40,52 @@ public class EmployeeController : Controller
         return Json(employee);
     }
 
-      [HttpPost]
-    public JsonResult Insert([FromBody] Employee emp)
+
+
+
+
+    [HttpPost]
+    public JsonResult InsertEmp([FromBody] Employee emp)
     {
         bool result = _empsrv.InsertEmp(emp);
         return Json(result);
     }
+    [HttpGet]
+    public IActionResult InsertEmp()
+    {
+        return View();
+    }
 
-    
+
+
+
+
+
+    [HttpPut]
+    public JsonResult UpdateEmp([FromBody] Employee emp)
+    {
+        bool result = _empsrv.UpdateEmp(emp);
+        return Json(result);
+    }
+    [HttpGet]
+    public IActionResult UpdateEmp()
+    {
+        return View();
+    }
+
+
+
+
+
+
+    [HttpDelete]
+    public JsonResult DeleteEmp(int id)
+    {
+        bool result = _empsrv.DeleteEmp(id);
+        return Json(result);
+    }
+
+
 
 
 
