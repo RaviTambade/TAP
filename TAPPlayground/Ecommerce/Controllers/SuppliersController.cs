@@ -44,4 +44,11 @@ public class SuppliersController:Controller{
         bool status=_srv.InsertSupplier(supplier);
         return Json(status);
     }
+
+      [HttpDelete]
+    public JsonResult DeleteSupplier(int id)
+    {
+        bool supplier = _srv.DeleteSupplier(id);
+        return Json(supplier);
+    }
 }

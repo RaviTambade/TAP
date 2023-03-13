@@ -12,7 +12,8 @@ public class SupplierService : ISupplierService
    public SupplierService(ISupplierRepository repo){
     _repo=repo;
    }
-   public List<Supplier> GetAllSuppliers()=> _repo.GetAllSuppliers();
+
+    public List<Supplier> GetAllSuppliers()=> _repo.GetAllSuppliers();
 
     public Supplier GetSupplierById(int id)
     {
@@ -32,5 +33,9 @@ public class SupplierService : ISupplierService
     public bool UpdateSupplier(Supplier supplier)
     {
         return _repo.UpdateSupplier(supplier);
+    }
+      public bool DeleteSupplier(int id)
+    {
+        return _repo.DeleteSupplier(id);
     }
 }

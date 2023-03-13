@@ -186,5 +186,31 @@ public class SupplierRepository : ISupplierRepository
         return status;
 
     }
+          public bool DeleteSupplier(int id)
+    {
+         bool status = false;
+        MySqlConnection con = new MySqlConnection();
+        con.ConnectionString = conString;
+        try
+        {
+            string query = "DELETE FROM suppliers WHERE supplier_id="+id;
+            con.Open();
+            MySqlCommand command = new MySqlCommand(query, con);
+            command.ExecuteNonQuery();
+            status = true;
+
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            con.Close();
+        }
+        return status;
+    }
 }
+    
+
     

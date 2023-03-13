@@ -9,6 +9,8 @@ public interface ISupplierRepository{
 
     bool InsertSupplier(Supplier supplier);
     bool UpdateSupplier(Supplier supplier);
+
+    bool DeleteSupplier(int id);
     
     
 }
