@@ -1,5 +1,11 @@
+<<<<<<< HEAD
+-- Active: 1678361403571@@127.0.0.1@3306@ecommerce
+/*DROP DATABASE Ecommerce;*/
+=======
+-- Active: 1677916902963@@127.0.0.1@3306@ecommerce
 
 
+>>>>>>> 4f93cab34277b8835b3bbc7d3dd04b2ca3d628db
 CREATE DATABASE Ecommerce;
 USE Ecommerce;
 
@@ -19,8 +25,7 @@ CREATE TABLE transactions(transaction_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY
 /*
 create table roles();
 */
-
-
+SELECT suppliers.supplier_id,suppliers.company_name,suppliers.supplier_name,orderdetails.orderdetails_id,orderdetails.order_id,orderdetails.product_id FROM suppliers INNER JOIN orderdetails ON suppliers.supplier_id=orderdetails.supplier_id WHERE product_id=1;
 /*trigger for customer in users*/
 DELIMITER //
 CREATE TRIGGER insert_user AFTER INSERT ON customers 
@@ -426,3 +431,6 @@ WHERE transactions.from_account_number=(select account_number from customers whe
 CALL TransferMoney(39025545659,39025545658,'2023-03-09 02:15:05',500);
 select * from  transactions ;
 select * from accounts;
+SELECT * FROM customers;
+
+select customers.first_name,customers.last_name,customers.email,customers.contact_number,accounts.account_number,accounts.ifsc_code,accounts.balance FROM customers  INNER JOIN  accounts ON accounts.account_number=customers.account_number  -- WHERE customers.cust_id=1; 
