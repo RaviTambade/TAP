@@ -23,4 +23,14 @@ public class SupplierService : ISupplierService
     {
         return _repo.GetSuppliersOfProduct(productId);
     }
+
+    public bool InsertSupplier(Supplier supplier)
+    {
+        return _repo.InsertSupplier(supplier);
+    }
+
+    public bool UpdateSupplier(Supplier supplier)
+    {
+        return _repo.UpdateSupplier(supplier);
+    }
 }
