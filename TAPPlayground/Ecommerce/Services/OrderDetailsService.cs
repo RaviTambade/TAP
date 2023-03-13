@@ -9,6 +9,10 @@ public class OrderDetailsService:IOrderDetailsService{
         this._repo=repo;
     }
 
+    public List<OrderDetails> GetAllOrderDetails() => _repo.GetAllOrderDetails();
+
+    public OrderDetails GetOrderDetailById(int id) => _repo.GetOrderDetailById(id);
+
     public List<Product> GetOrderdProducts(int orderId)=> _repo.GetOrderdProducts(orderId);
 
     
