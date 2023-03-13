@@ -6,8 +6,13 @@ namespace ECommerceApp.Repositories.Interfaces;
 public interface IEmployeeRepository{
 
  
-    List<Employees> GetAllEmployees();
-    Employees GetEmployeeById(int id);
+    List<Employee> GetAllEmployees();
+    Employee GetEmployeeById(int id);
+    bool InsertEmp (Employee emp);
+
+
+
+
     
 
     

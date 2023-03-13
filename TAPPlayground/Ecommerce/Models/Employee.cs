@@ -1,6 +1,6 @@
 namespace ECommerceApp.Models;
 
-public class Employees
+public class Employee
 {
     public int EmpId{get;set;}
     public string? EmpFirstName{get;set;}

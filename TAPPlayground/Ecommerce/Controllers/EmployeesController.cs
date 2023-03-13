@@ -5,12 +5,12 @@ using ECommerceApp.Services.Interfaces;
 
 namespace ECommerceApp.Controllers;
 
-public class EmployeesController : Controller
+public class EmployeeController : Controller
 {
     
-    private readonly IEmployeesService _empsrv;
+    private readonly IEmployeeService _empsrv;
 
-    public EmployeesController(IEmployeesService empsrv)
+    public EmployeeController(IEmployeeService empsrv)
     {
         _empsrv = empsrv;
     }
@@ -21,16 +21,24 @@ public class EmployeesController : Controller
     }
 
     [HttpGet]
-    public JsonResult ShowAllEmployees()
+    public JsonResult ShowAll()
     {
         var employees = _empsrv.GetAllEmployees();
         return Json(employees);
     }
 
+    [HttpGet]
     public JsonResult GetById(int id)
     {
         var employee = _empsrv.GetEmployeeById(id);
         return Json(employee);
+    }
+
+      [HttpPost]
+    public JsonResult Insert([FromBody] Employee emp)
+    {
+        bool result = _empsrv.InsertEmp(emp);
+        return Json(result);
     }
 
     
