@@ -22,21 +22,19 @@ builder.Services.AddTransient<IOrderDetailsRepository,OrderDetailsRepository>();
 builder.Services.AddTransient<IOrderDetailsService,OrderDetailsService>();
 builder.Services.AddTransient<IShipperRepository,ShipperRepository>();
 builder.Services.AddTransient<IShipperService,ShipperService>();
-<<<<<<< HEAD
 builder.Services.AddTransient<ITransactionRepository,TransactionRepository>();
 builder.Services.AddTransient<ITransactionService,TransactionService>();
 builder.Services.AddTransient<IMiniStatementRepository,MiniStatementRepository>();
 builder.Services.AddTransient<IMiniStatementService,MiniStatementService>();
-=======
-<<<<<<< HEAD
+builder.Services.AddTransient<IEmployeeRepository,EmployeeRepository>();
+builder.Services.AddTransient<IEmployeesService,EmployeesService>();
+builder.Services.AddTransient<IAccountRepository,AccountRepository>();
+builder.Services.AddTransient<IAccountService,AccountService>();
 builder.Services.AddTransient<IPaymentRepository,PaymentRepository>();
 builder.Services.AddTransient<IPaymentService,PaymentService>();
-=======
 builder.Services.AddTransient<ISupplierRepository,SupplierRepository>();
 builder.Services.AddTransient<ISupplierService,SupplierService>();
->>>>>>> 5e3bd213559366d2874caa0519a41a6e8964a545
 
->>>>>>> 4f93cab34277b8835b3bbc7d3dd04b2ca3d628db
 builder.Services.AddSession(options =>{
     options.IdleTimeout=TimeSpan.FromMinutes(10);
     options.Cookie.HttpOnly=true;
