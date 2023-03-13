@@ -6,7 +6,11 @@ namespace ECommerceApp.Repositories;
 public class ShipperRepository : IShipperRepository
 {
       
+<<<<<<< HEAD
     public static string conString = "server=localhost;port=3306;user=root;password=Password;database=Ecommerce";
+=======
+    public static string conString = "server=localhost;port=3306;user=root;password=password;database=Ecommerce";
+>>>>>>> 075ed33cb974bb44e93d0f301c7dcc93de8a811f
 
     public List<Shipper> GetAllShippers()
     {
