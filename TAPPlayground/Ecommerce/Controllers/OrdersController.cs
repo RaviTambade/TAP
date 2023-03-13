@@ -30,9 +30,9 @@ public class OrdersController : Controller
 
     [HttpGet]
 
-    public JsonResult GetOrderByCustId(int id)
+    public JsonResult GetOrderByCustId(int custid)
     {
-        var order = _ordersrv.GetOrderByCustId(id);
+        var order = _ordersrv.GetOrderByCustId(custid);
         return Json(order);
     }
     

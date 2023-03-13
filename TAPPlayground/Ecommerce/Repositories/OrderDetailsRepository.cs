@@ -4,9 +4,6 @@ using MySql.Data.MySqlClient;
 namespace ECommerceApp.Repositories;
 public class OrderDetailsRepository : IOrderDetailsRepository
 {
-<<<<<<< HEAD
-    public static string conString = "server=localhost;port=3306;user=root;password=Password;database=Ecommerce";
-=======
 
 
     public static string conString = "server=localhost;port=3306;user=root;password=password;database=Ecommerce";
@@ -199,7 +196,6 @@ public class OrderDetailsRepository : IOrderDetailsRepository
     }
 
 
->>>>>>> 075ed33cb974bb44e93d0f301c7dcc93de8a811f
     public bool InsertOrderdetails(int orderId, int productId, int quantity)
     {
         bool status = false;
