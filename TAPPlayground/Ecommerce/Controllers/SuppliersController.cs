@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using ECommerceApp.Models;
 using ECommerceApp.Services.Interfaces;
 using System.Security;
+using System.Reflection.Metadata.Ecma335;
 
 namespace ECommerceApp.Controllers;
 
@@ -22,6 +23,11 @@ public class SuppliersController:Controller{
     public JsonResult GetSupplierById(int id){
         var supplier=_srv.GetSupplierById(id);
         return Json(supplier);
+    }
 
+      [HttpGet]
+    public JsonResult GetSuppliersOfProduct(int productId){
+        var suppliers=_srv.GetSupplierById(productId);
+        return Json(suppliers);
     }
 }

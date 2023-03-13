@@ -4,4 +4,8 @@ public interface ISupplierRepository{
     List<Supplier> GetAllSuppliers();
 
     Supplier GetSupplierById(int id);
+
+    List<Supplier> GetSuppliersOfProduct(int productId);
+
+    
 }

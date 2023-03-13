@@ -3,6 +3,8 @@ using ECommerceApp.Repositories;
 using ECommerceApp.Repositories;
 using ECommerceApp.Repositories.Interfaces;
 using ECommerceApp.Services.Interfaces;
+using Microsoft.AspNetCore.Mvc;
+
 namespace ECommerceApp.Services;
 public class SupplierService : ISupplierService
 {
@@ -15,5 +17,10 @@ public class SupplierService : ISupplierService
     public Supplier GetSupplierById(int id)
     {
         return _repo.GetSupplierById(id);
+    }
+
+    public List<Supplier> GetSuppliersOfProduct(int productId)
+    {
+        return _repo.GetSuppliersOfProduct(productId);
     }
 }
