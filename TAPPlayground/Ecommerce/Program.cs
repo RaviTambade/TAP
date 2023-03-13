@@ -22,8 +22,13 @@ builder.Services.AddTransient<IOrderDetailsRepository,OrderDetailsRepository>();
 builder.Services.AddTransient<IOrderDetailsService,OrderDetailsService>();
 builder.Services.AddTransient<IShipperRepository,ShipperRepository>();
 builder.Services.AddTransient<IShipperService,ShipperService>();
+<<<<<<< HEAD
 builder.Services.AddTransient<IPaymentRepository,PaymentRepository>();
 builder.Services.AddTransient<IPaymentService,PaymentService>();
+=======
+builder.Services.AddTransient<ISupplierRepository,SupplierRepository>();
+builder.Services.AddTransient<ISupplierService,SupplierService>();
+>>>>>>> 5e3bd213559366d2874caa0519a41a6e8964a545
 
 builder.Services.AddSession(options =>{
     options.IdleTimeout=TimeSpan.FromMinutes(10);
