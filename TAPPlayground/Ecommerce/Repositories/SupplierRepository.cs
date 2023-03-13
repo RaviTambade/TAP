@@ -1,3 +1,4 @@
+using System.Collections.Concurrent;
 using System.Runtime.InteropServices;
 using ECommerceApp.Models;
 using ECommerceApp.Repositories.Interfaces;
@@ -24,6 +25,7 @@ public class SupplierRepository : ISupplierRepository
                 string supplierName = reader["supplier_name"].ToString();
                 string contactNumber = reader["contact_number"].ToString();
                 string email = reader["email"].ToString();
+                string address = reader["address"].ToString();
                 string city = reader["city"].ToString();
                 string state = reader["state"].ToString();
                 long accountNumber = long.Parse(reader["account_number"].ToString());
@@ -35,6 +37,7 @@ public class SupplierRepository : ISupplierRepository
                     SupplierName = supplierName,
                     ContactNumber = contactNumber,
                     Email = email,
+                    Address=address,
                     City = city,
                     State = state,
                     AccountNumber = accountNumber
@@ -70,6 +73,7 @@ public class SupplierRepository : ISupplierRepository
                 string supplierName = reader["supplier_name"].ToString();
                 string contactNumber = reader["contact_number"].ToString();
                 string email = reader["email"].ToString();
+                string address = reader["address"].ToString();
                 string city = reader["city"].ToString();
                 string state = reader["state"].ToString();
                 long accountNumber = long.Parse(reader["account_number"].ToString());
@@ -81,6 +85,7 @@ public class SupplierRepository : ISupplierRepository
                     SupplierName = supplierName,
                     ContactNumber = contactNumber,
                     Email = email,
+                    Address=address,
                     City = city,
                     State = state,
                     AccountNumber = accountNumber
@@ -134,4 +139,52 @@ public class SupplierRepository : ISupplierRepository
         }
         return suppliers;
     }
+
+    public bool InsertSupplier(Supplier supplier){
+        bool status=false;
+        MySqlConnection connection=new MySqlConnection();
+        connection.ConnectionString=conString;
+        try{
+            string query=$"INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,account_number)VALUES('{supplier.CompanyName}','{supplier.SupplierName}','{supplier.ContactNumber}','{supplier.Email}','{supplier.Address}','{supplier.City}','{supplier.State}','{supplier.AccountNumber}')";
+            connection.Open();
+            MySqlCommand command=new MySqlCommand(query ,connection);
+            command.ExecuteNonQuery();
+            status=true;
+        }
+        catch(Exception e){
+             throw e;
+        }
+        finally{
+          connection.Close();
+        }
+        return status;
+    }
+
+    
+    public bool UpdateSupplier(Supplier supplier)
+    {
+        bool status = false;
+        MySqlConnection connection = new MySqlConnection();
+        connection.ConnectionString = conString;
+        try
+        {
+            string query = "UPDATE suppliers SET company_name='" +supplier.CompanyName + "', supplier_name='" + supplier.SupplierName + "', contact_number='" + supplier.ContactNumber +"', email='" + supplier.Email +"', address='" + supplier.Address +"', city='" + supplier.City+"', state='" + supplier.State+"', account_number='" + supplier.AccountNumber +"' WHERE supplier_id=" +supplier.SupplierId;
+            MySqlCommand command = new MySqlCommand(query, connection);
+            connection.Open();
+            command.ExecuteNonQuery();
+            status = true;
+        }
+        catch (Exception e)
+        {
+            throw e;
+
+        }
+        finally
+        {
+            connection.Close();
+        }
+        return status;
+
+    }
 }
+    
