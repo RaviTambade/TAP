@@ -184,6 +184,75 @@ public class OrderRepository : IOrderRepository
         }
         return order;
     }
-    
+    public bool InsertOrders(Order order)
+    {
+        bool status = false;
+        MySqlConnection con = new MySqlConnection();
+        con.ConnectionString = conString;
+        try
+        {
+            string query ="INSERT INTO orders(order_date,shipped_date,customer_id,total,status) VALUES('"+order.OrderDate+"','"+order.ShippedDate+"','"+order.CustomerId+"','"+order.Total+"','"+order.Status+"')";
+            con.Open();
+            MySqlCommand command = new MySqlCommand(query,con);
+            command.ExecuteNonQuery();
+            status = true;
+        }
+        catch(Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            con.Close();
+        }
+        return status;
+    }
+
+    public bool UpdateOrder(Order order)
+    {
+        bool status = false;
+        MySqlConnection con = new MySqlConnection();
+        con.ConnectionString = conString;
+        try
+        {
+            string query ="Update orders set order_Date='"+order.OrderDate+"', shipped_Date='"+order.ShippedDate+"',customer_Id='"+order.CustomerId+"', total ='"+order.Total+"', status ='"+order.Status+"' Where order_id = "+order.OrderId;
+            con.Open();
+            MySqlCommand command = new MySqlCommand(query,con);
+            command.ExecuteNonQuery();
+            status = true;
+        }
+        catch(Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            con.Close();
+        }
+        return status;
+    }
+    public bool DeleteOrder(int id)
+    {
+        bool status = false;
+        MySqlConnection con = new MySqlConnection();
+        con.ConnectionString = conString;
+        try
+        {
+            string query ="DELETE FROM orders where order_id =" +id;
+            con.Open();
+            MySqlCommand command = new MySqlCommand(query,con);
+            command.ExecuteNonQuery();
+            status = true;
+        }
+        catch(Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            con.Close();
+        }
+        return status;
+    }
 
 }

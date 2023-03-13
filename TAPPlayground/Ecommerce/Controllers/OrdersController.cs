@@ -36,12 +36,50 @@ public class OrdersController : Controller
         return Json(order);
     }
     
-       [HttpGet]
+    [HttpGet]
     public IActionResult InsertOrder(){
         return View();
     }
-   
+   [HttpGet]
+   public JsonResult InsertOrders()
+   {
+        Order order = null;
+        return Json(order);
+   }
+   [HttpPost]
+   public JsonResult InsertOrders(Order order)
+   {
+       var allorder =_ordersrv.InsertOrders(order);
+       return Json(allorder);
+   }
 
+   [HttpGet]
+   public JsonResult DeleteOrder(int id)
+   {
+    var order = _ordersrv.GetOrderById(id);
+    return Json(order);
+   }
+
+     [HttpGet]
+   public JsonResult DeleteOrder(Order order)
+   {
+    var orders = _ordersrv.DeleteOrder(order.OrderId);
+    return Json(orders);
+   }
+
+   [HttpGet]
+   public JsonResult UpdateOrder(int id)
+   {
+    var order = _ordersrv.GetOrderById(id);
+    return Json(order);
+   }
+
+   [HttpPost]
+   public JsonResult UpdateOrder(Order order)
+   {
+    var orders = _ordersrv.UpdateOrder(order);
+    return Json(orders);
+   }
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
