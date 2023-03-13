@@ -5,7 +5,7 @@ namespace ECommerceApp.Repositories;
 public class CustomerRepository : ICustomerRepository
 {
 
-    public static string conString="server=localhost;port=3306;user=root;password=password;database=ecommercetap";
+    public static string conString="server=localhost;port=3306;user=root;password=password;database=Ecommerce";
 
     public List<Customer> GetAllCustomers(){
 

@@ -20,7 +20,8 @@ builder.Services.AddTransient<IOrderRepository,OrderRepository>();
 builder.Services.AddTransient<IOrderService,OrderService>();
 builder.Services.AddTransient<IOrderDetailsRepository,OrderDetailsRepository>();
 builder.Services.AddTransient<IOrderDetailsService,OrderDetailsService>();
-
+builder.Services.AddTransient<IShipperRepository,ShipperRepository>();
+builder.Services.AddTransient<IShipperService,ShipperService>();
 
 builder.Services.AddSession(options =>{
     options.IdleTimeout=TimeSpan.FromMinutes(10);
