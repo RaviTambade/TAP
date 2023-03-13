@@ -5,7 +5,48 @@ namespace ECommerceApp.Repositories;
 public class CustomerRepository : ICustomerRepository
 {
 
-    public static string conString="server=localhost;port=3306;user=root;password=root;database=ECOMMERCE";
+    public static string conString="server=localhost;port=3306;user=root;password=password;database=ecommercetap";
+
+    public List<Customer> GetAllCustomers(){
+
+        List<Customer> customers=new List<Customer>();
+
+        Customer customer=new Customer();
+        MySqlConnection connection=new MySqlConnection(conString);
+        try{
+            MySqlCommand command=new MySqlCommand();
+            command.CommandText=$"SELECT * FROM customers";
+            command.Connection=connection;
+            connection.Open();
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                 int id = Int32.Parse(reader["cust_id"].ToString());
+                string? firstname = reader["first_name"].ToString();
+                string? lastname = reader["last_name"].ToString();
+                string? email = reader["email"].ToString();
+                string? contact=reader["contact_number"].ToString();
+                customer = new Customer
+                {
+                   CustomerId=id,
+                   FirstName=firstname,
+                   LastName=lastname,
+                   Email=email,
+                   ContactNumber=contact
+                };
+                customers.Add(customer);
+            }
+        }
+        catch(Exception e){
+            throw e;
+        }
+        finally{
+            connection.Close();
+        }
+      return customers; 
+
+
+    }
 
     public Customer GetCustomer(string contact)
     {
@@ -45,6 +86,45 @@ public class CustomerRepository : ICustomerRepository
       return customer; 
 
     }
+
+    public Customer GetCustomerById(int custid)
+    {
+        Customer customer=new Customer();
+        MySqlConnection connection=new MySqlConnection(conString);
+        try{
+            MySqlCommand command=new MySqlCommand();
+            command.CommandText=$"SELECT * FROM customers where cust_id={custid}";
+            command.Connection=connection;
+            connection.Open();
+           MySqlDataReader reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                int id = Int32.Parse(reader["cust_id"].ToString());
+                string? firstname = reader["first_name"].ToString();
+                string? lastname = reader["last_name"].ToString();
+                string? email = reader["email"].ToString();
+                   string? contact=reader["contact_number"].ToString();
+                customer = new Customer
+                {
+                   CustomerId=id,
+                   FirstName=firstname,
+                   LastName=lastname,
+                   Email=email,
+                   ContactNumber=contact
+                };
+            
+            }
+        }
+        catch(Exception e){
+            throw e;
+        }
+        finally{
+            connection.Close();
+        }
+      return customer; 
+    }
+
+
 
     public bool InsertCustomer(Customer customer){
         bool status=false;
