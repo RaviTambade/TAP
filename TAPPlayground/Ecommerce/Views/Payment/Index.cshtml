@@ -1,0 +1,48 @@
+
+@{
+    ViewData["Title"] = "Payment Page";
+}
+
+<h2>payment List</h2>
+
+
+ 
+
+  <button id="btn">show</button>
+  <p id='para1'>Transflower</p>
+  <hr/>
+  <p id='para2'>Seed</p>
+
+
+ 
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">  
+   
+   $(document).ready(function(){
+    $("#btn").click(function(){
+        //invoke REST API to fetch data from server
+        
+        $.ajax({  
+            url: '/payments/getallpayments',  
+            dataType: "json",  
+            type: "GET",  
+            error: function(xhr, status, error) {  
+                var err = eval("(" + xhr.responseText + ")");  
+                toastr.error(err.message); 
+                console.log(err); 
+            },
+            //On Successful retriving data  perfrom callback function 
+            //Success block is automatically called when ajax call receives 
+            //data from server  
+            success: function(data) {  
+              var result=JSON.stringify(data);
+              var element=document.getElementById("para2");
+              element.innerHTML=result;
+              return false;  
+            }  
+        });  
+    });
+});
+
+</script>  
+
