@@ -11,7 +11,12 @@ public class OrderDetailsService:IOrderDetailsService{
 
     public List<OrderDetails> GetAllOrderDetails() => _repo.GetAllOrderDetails();
 
+    public List<OrderDetails> GetOrderDetails(int orderId) => _repo.GetOrderDetails(orderId);
     public OrderDetails GetOrderDetailById(int id) => _repo.GetOrderDetailById(id);
+
+     public List<OrderDetailsOrder> GetProductsOfOrder(int orderId) => _repo.GetProductsOfOrder(orderId);
+
+    // old methods
 
     public List<Product> GetOrderdProducts(int orderId)=> _repo.GetOrderdProducts(orderId);
 
@@ -20,4 +25,6 @@ public class OrderDetailsService:IOrderDetailsService{
     public bool InsertOrderdetails(int orderId, int productId, int quantity) => _repo.InsertOrderdetails(orderId,productId,quantity);
 
     public List<OrderHistory> OrderHistory(int customerId) => _repo.OrderHistory(customerId);
+
+   
 }
