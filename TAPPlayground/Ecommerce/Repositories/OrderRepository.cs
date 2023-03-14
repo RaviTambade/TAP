@@ -184,6 +184,76 @@ public class OrderRepository : IOrderRepository
         }
         return order;
     }
-    
+    public bool InsertOrders(Order order)
+    {
+        bool status = false;
+        MySqlConnection con = new MySqlConnection();
+        con.ConnectionString = conString;
+        try
+        {
+            string query ="INSERT INTO orders(order_id,order_date,shipped_date,cust_id,total,status)"
+            + "VALUES('"+order.OrderId+"','"+order.OrderDate+"','"+order.ShippedDate+"','"+order.CustomerId+"','"+order.Total+"','"+order.Status+"')";
+            con.Open();
+            MySqlCommand command = new MySqlCommand(query,con);
+            command.ExecuteNonQuery();
+            status = true;
+        }
+        catch(Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            con.Close();
+        }
+        return status;
+    }
+
+    public bool UpdateOrder(Order order)
+    {
+        bool status = false;
+        MySqlConnection con = new MySqlConnection();
+        con.ConnectionString = conString;
+        try
+        {
+            string query ="Update orders set order_date='"+order.OrderDate+"', shipped_date='"+order.ShippedDate+"',cust_id='"+order.CustomerId+"', total ='"+order.Total+"', status ='"+order.Status+"' Where order_id =" +order.OrderId;
+            con.Open();
+            MySqlCommand command = new MySqlCommand(query,con);
+            command.ExecuteNonQuery();
+            status = true;
+        }
+        catch(Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            con.Close();
+        }
+        return status;
+    }
+    public bool DeleteOrder(int id)
+    {
+        bool status = false;
+        MySqlConnection con = new MySqlConnection();
+        con.ConnectionString = conString;
+        try
+        {
+            string query ="DELETE FROM orders where order_id =" +id;
+            con.Open();
+            MySqlCommand command = new MySqlCommand(query,con);
+            command.ExecuteNonQuery();
+            status = true;
+        }
+        catch(Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            con.Close();
+        }
+        return status;
+    }
 
 }

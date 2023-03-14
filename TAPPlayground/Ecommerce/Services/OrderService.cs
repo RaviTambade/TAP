@@ -16,4 +16,10 @@ public class OrderService : IOrderService{
     public int GetOrderId(int customerId) => _repo.GetOrderId(customerId);
 
     public bool InsertOrder(int customerId)=>_repo.InsertOrder(customerId);
+
+    public bool InsertOrders(Order order)=>_repo.InsertOrders(order);
+
+    public bool UpdateOrder(Order order)=>_repo.UpdateOrder(order);
+
+    public bool DeleteOrder(int id)=>_repo.DeleteOrder(id);
 }

@@ -10,4 +10,10 @@ public interface IOrderRepository
     bool InsertOrder(int customerId);
 
     Order GetOrderByCustId(int id);
+
+    bool InsertOrders(Order order);
+
+    bool UpdateOrder(Order order);
+
+    bool DeleteOrder(int id);
 }

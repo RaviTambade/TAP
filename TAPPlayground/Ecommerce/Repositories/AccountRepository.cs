@@ -9,7 +9,7 @@ namespace ECommerceApp.Repositories;
 
 public class AccountRepository : IAccountRepository
 {
-    public static string conString = "server=localhost;port=3306;user=root;password=password;database=Ecommerce";
+    public static string conString = "server=localhost;port=3306;user=root;password=Password;database=Ecommerce";
     public List<Account> GetAllAccounts()
     {
         List<Account> accounts = new List<Account>();

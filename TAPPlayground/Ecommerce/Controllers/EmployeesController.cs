@@ -5,22 +5,15 @@ using ECommerceApp.Services.Interfaces;
 
 namespace ECommerceApp.Controllers;
 
-public class EmployeeController : Controller
+public class EmployeesController : Controller
 {
 
     private readonly IEmployeeService _empsrv;
 
-    public EmployeeController(IEmployeeService empsrv)
+    public EmployeesController(IEmployeeService empsrv)
     {
         _empsrv = empsrv;
     }
-
-    public IActionResult Index()
-    {
-        return View();
-    }
-
-
 
     [HttpGet]
     public JsonResult ShowAll()
@@ -28,10 +21,6 @@ public class EmployeeController : Controller
         var employees = _empsrv.GetAllEmployees();
         return Json(employees);
     }
-
-
-
-
 
     [HttpGet]
     public JsonResult GetById(int id)
@@ -41,25 +30,14 @@ public class EmployeeController : Controller
     }
 
 
-
-
-
     [HttpPost]
-    public JsonResult InsertEmp([FromBody] Employee emp)
+    public JsonResult InsertEmp([FromBody]Employee emp)
     {
+        Console.WriteLine("In Controller");
+        Console.WriteLine(emp);
         bool result = _empsrv.InsertEmp(emp);
         return Json(result);
     }
-    [HttpGet]
-    public IActionResult InsertEmp()
-    {
-        return View();
-    }
-
-
-
-
-
 
     [HttpPut]
     public JsonResult UpdateEmp([FromBody] Employee emp)
@@ -67,16 +45,7 @@ public class EmployeeController : Controller
         bool result = _empsrv.UpdateEmp(emp);
         return Json(result);
     }
-    [HttpGet]
-    public IActionResult UpdateEmp()
-    {
-        return View();
-    }
-
-
-
-
-
+   
 
     [HttpDelete]
     public JsonResult DeleteEmp(int id)
