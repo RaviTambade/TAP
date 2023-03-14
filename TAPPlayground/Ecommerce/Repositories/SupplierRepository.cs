@@ -188,7 +188,7 @@ public class SupplierRepository : ISupplierRepository
     }
           public bool DeleteSupplier(int id)
     {
-         bool status = false;
+        bool status = false;
         MySqlConnection con = new MySqlConnection();
         con.ConnectionString = conString;
         try
