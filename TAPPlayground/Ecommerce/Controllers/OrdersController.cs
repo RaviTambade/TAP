@@ -2,7 +2,6 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using ECommerceApp.Models;
 using ECommerceApp.Services.Interfaces;
-using ECommerceApp.Helpers;
 namespace ECommerceApp.Controllers;
 
 public class OrdersController : Controller
@@ -37,49 +36,44 @@ public class OrdersController : Controller
     }
     
     [HttpGet]
-    public IActionResult InsertOrder(){
+    public IActionResult InsertOrder()
+    {
         return View();
     }
-   [HttpGet]
-   public JsonResult InsertOrders()
+
+    [HttpGet]
+   public IActionResult InsertOrders()
    {
-        Order order = null;
-        return Json(order);
-   }
-   [HttpPost]
-   public JsonResult InsertOrders(Order order)
-   {
-       var allorder =_ordersrv.InsertOrders(order);
-       return Json(allorder);
+       return View();
    }
 
-   [HttpGet]
+   [HttpPost]
+   public JsonResult InsertOrders([FromBody] Order order)
+   {
+        bool result =_ordersrv.InsertOrders(order);
+        return Json(result);
+   }
+  
+    [HttpGet]
+   public IActionResult UpdateOrder()
+   {
+       return View();
+   }
+
+    [HttpPut]
+   public JsonResult UpdateOrder([FromBody] Order order)
+   {
+        bool result =_ordersrv.UpdateOrder(order);
+        return Json(result);
+   }
+   [HttpDelete]
    public JsonResult DeleteOrder(int id)
    {
-    var order = _ordersrv.GetOrderById(id);
-    return Json(order);
+    bool result = _ordersrv.DeleteOrder(id);
+    return Json(result);
    }
 
-     [HttpGet]
-   public JsonResult DeleteOrder(Order order)
-   {
-    var orders = _ordersrv.DeleteOrder(order.OrderId);
-    return Json(orders);
-   }
-
-   [HttpGet]
-   public JsonResult UpdateOrder(int id)
-   {
-    var order = _ordersrv.GetOrderById(id);
-    return Json(order);
-   }
-
-   [HttpPost]
-   public JsonResult UpdateOrder(Order order)
-   {
-    var orders = _ordersrv.UpdateOrder(order);
-    return Json(orders);
-   }
+   
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

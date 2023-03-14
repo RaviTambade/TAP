@@ -191,7 +191,8 @@ public class OrderRepository : IOrderRepository
         con.ConnectionString = conString;
         try
         {
-            string query ="INSERT INTO orders(order_date,shipped_date,customer_id,total,status) VALUES('"+order.OrderDate+"','"+order.ShippedDate+"','"+order.CustomerId+"','"+order.Total+"','"+order.Status+"')";
+            string query ="INSERT INTO orders(order_id,order_date,shipped_date,cust_id,total,status)"
+            + "VALUES('"+order.OrderId+"','"+order.OrderDate+"','"+order.ShippedDate+"','"+order.CustomerId+"','"+order.Total+"','"+order.Status+"')";
             con.Open();
             MySqlCommand command = new MySqlCommand(query,con);
             command.ExecuteNonQuery();
@@ -215,7 +216,7 @@ public class OrderRepository : IOrderRepository
         con.ConnectionString = conString;
         try
         {
-            string query ="Update orders set order_Date='"+order.OrderDate+"', shipped_Date='"+order.ShippedDate+"',customer_Id='"+order.CustomerId+"', total ='"+order.Total+"', status ='"+order.Status+"' Where order_id = "+order.OrderId;
+            string query ="Update orders set order_date='"+order.OrderDate+"', shipped_date='"+order.ShippedDate+"',cust_id='"+order.CustomerId+"', total ='"+order.Total+"', status ='"+order.Status+"' Where order_id =" +order.OrderId;
             con.Open();
             MySqlCommand command = new MySqlCommand(query,con);
             command.ExecuteNonQuery();
