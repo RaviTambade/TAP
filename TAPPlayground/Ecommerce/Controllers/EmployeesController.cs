@@ -31,9 +31,11 @@ public class EmployeesController : Controller
 
 
     [HttpPost]
-    public JsonResult InsertEmp([FromBody] Employee employee)
+    public JsonResult InsertEmp([FromBody]Employee emp)
     {
-        bool result = _empsrv.InsertEmp(employee);
+        Console.WriteLine("In Controller");
+        Console.WriteLine(emp);
+        bool result = _empsrv.InsertEmp(emp);
         return Json(result);
     }
 

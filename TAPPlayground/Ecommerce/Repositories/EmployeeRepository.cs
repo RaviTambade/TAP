@@ -22,8 +22,8 @@ public class EmployeeRepository : IEmployeeRepository
                  int id = Int32.Parse(reader["employee_id"].ToString());
                 string firstname = reader["empfirst_name"].ToString();
                 string lastname = reader["emplast_name"].ToString();
-                string birthdate = reader["birth_date"].ToString();
-                string hiredate =reader["hire_date"].ToString();
+                DateTime birthdate =  DateTime.Parse(reader["birth_date"].ToString(),System.Globalization.CultureInfo.InvariantCulture);
+                DateTime hiredate =DateTime.Parse(reader["hire_date"].ToString(),System.Globalization.CultureInfo.InvariantCulture);
                 string contact=reader["contact_number"].ToString();
                 string email = reader["email"].ToString();
                 string password = reader["password"].ToString();
@@ -36,8 +36,8 @@ public class EmployeeRepository : IEmployeeRepository
                     EmpId=id,
                     EmpFirstName=firstname,
                     EmpLastName=lastname,
-                    BirthDate=birthdate,
-                    HireDate=hiredate,
+                    BirthDate=birthdate.ToShortDateString(),
+                    HireDate=hiredate.ToShortDateString(),
                     ContactNumber=contact,
                     Email=email,
                     Password=password,
@@ -72,8 +72,8 @@ public class EmployeeRepository : IEmployeeRepository
                 id = Int32.Parse(reader["employee_id"].ToString());
                 string firstname = reader["empfirst_name"].ToString();
                 string lastname = reader["emplast_name"].ToString();
-                string birthdate = reader["birth_date"].ToString();
-                string hiredate = reader["hire_date"].ToString();
+                DateTime birthdate =  DateTime.Parse(reader["birth_date"].ToString(),System.Globalization.CultureInfo.InvariantCulture);
+                DateTime hiredate =DateTime.Parse(reader["hire_date"].ToString(),System.Globalization.CultureInfo.InvariantCulture);
                 string contact=reader["contact_number"].ToString();
                 string email = reader["email"].ToString();
                 string password = reader["password"].ToString();
@@ -86,8 +86,8 @@ public class EmployeeRepository : IEmployeeRepository
                     EmpId=id, 
                     EmpFirstName=firstname,
                     EmpLastName=lastname,
-                    BirthDate=birthdate,
-                    HireDate=hiredate,
+                    BirthDate=birthdate.ToShortDateString(),
+                    HireDate=hiredate.ToShortDateString(),
                     ContactNumber=contact,
                     Email=email,
                     Password=password,
@@ -107,15 +107,32 @@ public class EmployeeRepository : IEmployeeRepository
    }
    
    public  bool InsertEmp(Employee emp){
-          //  if(emp==null){
-          //   return false;
-          //  }
+         
+          Console.WriteLine("Printing emp Object");
+          Console.WriteLine(emp);
+          Console.WriteLine(emp.EmpId);
+          Console.WriteLine(emp.EmpFirstName);
+          Console.WriteLine(emp.EmpLastName);
+          Console.WriteLine(emp.BirthDate);
+          Console.WriteLine(emp.HireDate);
+          Console.WriteLine(emp.ContactNumber);
+          Console.WriteLine(emp.Email);
+          Console.WriteLine(emp.Password);
+          Console.WriteLine(emp.Photo);
+          Console.WriteLine(emp.ReportsTo);
+          Console.WriteLine(emp.AccountNumber);
           bool status = false;
           MySqlConnection con = new MySqlConnection();
           con.ConnectionString=conString;
           try{
-            string query =$"INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('{emp.EmpFirstName}','{emp.EmpLastName}','{emp.BirthDate}','{emp.HireDate}','{emp.ContactNumber}','{emp.Email}','{emp.Password}','{emp.Photo}','{emp.ReportsTo}','{emp.AccountNumber}')";
-            Console.WriteLine(query);
+            //string query =$"INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('"+emp.EmpFirstName+"','"+emp.EmpLastName+"','1998-05-19','2023-03-15','"+emp.ContactNumber+"','"+emp.Email+"','"+emp.Password+"','"+emp.Photo+"','"+emp.ReportsTo+"','"+emp.AccountNumber+"')";
+              string query =$"INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES"+
+              "('"+emp.EmpFirstName+"','"+emp.EmpLastName+ "','1998-05-19','2023-03-15','"+ emp.ContactNumber+ "','"+
+                emp.Email+"','"+emp.Password+ "','"+ emp.Photo+"',"+emp.ReportsTo+","+39025546668+")";
+
+              Console.WriteLine(query);
+        
+  
 
              MySqlCommand cmd=new MySqlCommand(query,con) ;
              con.Open();
@@ -127,8 +144,8 @@ public class EmployeeRepository : IEmployeeRepository
             throw e;
           }
           finally {
-            con.Close();
-          }
+               con.Close();
+          } 
           return status;
    }
 
@@ -138,11 +155,11 @@ public class EmployeeRepository : IEmployeeRepository
           con.ConnectionString=conString;
           try{
             
-            string query = "UPDATE employees set empfirst_name='"+emp.EmpFirstName+"', emplast_name= '"+emp.EmpLastName+"',birth_date="+emp.BirthDate+",hire_date="+emp.HireDate+",contact_number='"+emp.ContactNumber+"',email='"+emp.Email+"',password='"+emp.Password+"',photo='"+emp.Photo+"',reports_to="+emp.ReportsTo+",account_number='"+emp.AccountNumber+"' WHERE id=" +emp.EmpId;
+            string query = "UPDATE employees SET empfirst_name='"+emp.EmpFirstName+"', emplast_name= '"+emp.EmpLastName+"',birth_date='"+emp.BirthDate+"',hire_date='"+emp.HireDate+"',contact_number='"+emp.ContactNumber+"',email='"+emp.Email+"',password='"+emp.Password+"',photo='"+emp.Photo+"',reports_to="+emp.ReportsTo+",account_number='"+emp.AccountNumber+"' WHERE employee_id=" +emp.EmpId;
              MySqlCommand cmd=new MySqlCommand(query,con) ;
              con.Open();
              cmd.ExecuteNonQuery();               
-
+             status=true;
           }catch(Exception e )
           {
             throw e;

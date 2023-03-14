@@ -1,5 +1,5 @@
 
--- Active: 1677916902963@@127.0.0.1@3306@ecommerce
+-- Active: 1678272625741@@127.0.0.1@3306@ecommerce
 /*DROP DATABASE Ecommerce;*/
 
 -- Active: 1677916902963@@127.0.0.1@3306@ecommerce
@@ -43,7 +43,7 @@ BEGIN
 END //
 DELIMITER ;
 
-INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025542222,'MAHB0000286','2023-03-01 12:40:40',22555);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546668,'MAHB0000286','2023-03-01 12:40:40',22555);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545655,'MAHB0000286','2023-03-01 12:40:35',22500);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545656,'UNB0000286','2023-04-15 02:45:35',2250025);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545657,'BARBO0000286','2023-03-04 02-40-35',225700);
@@ -229,6 +229,7 @@ Daily Completed Tasks
 Remaining -
 1)Quarter wise products selling data                                                                         ////////////////
 */
+DESC employees;
 
 select * from employees;
 select * from customers;
@@ -435,3 +436,6 @@ select * from accounts;
 SELECT * FROM customers;
 
 select customers.first_name,customers.last_name,customers.email,customers.contact_number,accounts.account_number,accounts.ifsc_code,accounts.balance FROM customers  INNER JOIN  accounts ON accounts.account_number=customers.account_number  -- WHERE customers.cust_id=1; 
+
+/* insert employee query*/
+INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Vishwambhar','Kapare','1998-05-19','2023-03-15','70385488505','Rushi@gmail.com','Rc5269','./images/Rc.jpg',3,39025546668)
