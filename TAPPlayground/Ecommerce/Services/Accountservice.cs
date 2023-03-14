@@ -12,4 +12,8 @@ public AccountService(IAccountRepository repo){
 }
 public List<Account> GetAllAccounts()=>_repo.GetAllAccounts();
 public Account GetAccountById(int id)=>_repo.GetAccountById(id);
+public bool InsertAccount(Account account)=>_repo.InsertAccount(account);
+public bool UpdateAccount(int id)=>_repo.UpdateAccount(id);
+public bool DeleteAccount(int id)=>_repo.DeleteAccount(id);
+
 }

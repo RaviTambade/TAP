@@ -22,4 +22,22 @@ public class AccountsController : Controller
         var account=_accountserv.GetAccountById(id);
         return Json(account);
     }
+     [HttpPost]
+    public JsonResult InsertAccount(Account account)
+    {
+        bool status=_accountserv.InsertAccount(account);
+        return Json(status);
+    }
+      [HttpPost]
+    public JsonResult UpdateAccount(int id)
+    {
+        bool status=_accountserv.UpdateAccount(id);
+        return Json(status);
+}
+   [HttpPost]
+    public JsonResult DeleteAccount(int id)
+    {
+        bool status=_accountserv.DeleteAccount(id);
+        return Json(status);
+}
 }
