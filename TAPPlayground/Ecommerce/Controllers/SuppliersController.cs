@@ -30,4 +30,25 @@ public class SuppliersController:Controller{
         var suppliers=_srv.GetSupplierById(productId);
         return Json(suppliers);
     }
+
+      [HttpPost]
+      [Route("suppliers/insertsupplier")]
+    public JsonResult InsertSupplier([FromBody] Supplier supplier){
+        bool status=_srv.InsertSupplier(supplier);
+        return Json(status);
+    }
+
+      [HttpPut]
+      [Route("suppliers/updatesupplier")]
+    public JsonResult UpdateSupplier([FromBody]Supplier supplier){
+        bool status=_srv.InsertSupplier(supplier);
+        return Json(status);
+    }
+
+      [HttpDelete]
+    public JsonResult DeleteSupplier(int id)
+    {
+        bool supplier = _srv.DeleteSupplier(id);
+        return Json(supplier);
+    }
 }

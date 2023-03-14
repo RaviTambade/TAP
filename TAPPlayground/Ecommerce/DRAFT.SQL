@@ -1,11 +1,11 @@
-<<<<<<< HEAD
+
 -- Active: 1678361403571@@127.0.0.1@3306@ecommerce
 /*DROP DATABASE Ecommerce;*/
-=======
+
 -- Active: 1677916902963@@127.0.0.1@3306@ecommerce
 
 
->>>>>>> 4f93cab34277b8835b3bbc7d3dd04b2ca3d628db
+
 CREATE DATABASE Ecommerce;
 USE Ecommerce;
 
@@ -44,6 +44,7 @@ BEGIN
 END //
 DELIMITER ;
 
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545111,'MAHB0000286','2023-03-01 12:40:40',22555);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545655,'MAHB0000286','2023-03-01 12:40:35',22500);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545656,'UNB0000286','2023-04-15 02:45:35',2250025);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545657,'BARBO0000286','2023-03-04 02-40-35',225700);
@@ -64,7 +65,6 @@ INSERT INTO transactions(from_account_number, to_account_number,transaction_date
 INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES(39025545660,39025545662,'2023-03-01 12:40:35',22500);
 INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025545659,39025545663,'2023-03-01 12:40:35',22500);
 INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025545658,39025545665,'2023-03-01 12:40:35',22500);
-
 
 select * from transactions;
 
@@ -149,7 +149,7 @@ INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-01-16  09:35:2
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:25', 7,14.00,'inprogress');
 
 
-INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,account_number)VALUES('Hindustan pvt.ltd','Pragati','7845632569','pragati@gmail.com','Sinhagad Road Pune','Pune','Maharashtra',39025545666);
+INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,account_number)VALUES('Hindustan pvt.ltd','Pragati','7845632569','pragati@gmail.com','Sinhagad Road Pune','Pune','Maharashtra',39025545999);
 INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,account_number)VALUES('Britinia pvt.ltd','Akash','9945632569','Akash@gmail.com','Hadapsar  Pune','Pune','Maharashtra',39025545662);
 INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,account_number)VALUES('Surya pvt.ltd','Akshay','9645632569','Akshay@gmail.com','Rajgurunagar Pune','Pune','Maharashtra',39025545663);
 INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,account_number)VALUES('Naturals pvt.ltd','Rohit','9855632569','Rohit@gmail.com','Wanavdi Fatima nagar Pune','Pune','Maharashtra',39025545665);
@@ -429,6 +429,8 @@ WHERE transactions.from_account_number=(select account_number from customers whe
 
 
 CALL TransferMoney(39025545659,39025545658,'2023-03-09 02:15:05',500);
+select * from  accounts;
+select * from suppliers;
 select * from  transactions ;
 select * from accounts;
 SELECT * FROM customers;

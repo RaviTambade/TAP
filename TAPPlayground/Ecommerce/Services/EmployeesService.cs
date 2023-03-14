@@ -6,18 +6,22 @@ using ECommerceApp.Services.Interfaces;
 
 namespace ECommerceApp.Services;
 
-public class EmployeesService : IEmployeesService
+public class EmployeeService : IEmployeeService
 {
     private readonly IEmployeeRepository _repo;
 
-    public EmployeesService(IEmployeeRepository repo)
+    public EmployeeService(IEmployeeRepository repo)
     {
         _repo = repo;
     }
 
-    public List<Employees> GetAllEmployees() => _repo.GetAllEmployees();
+    public List<Employee> GetAllEmployees() => _repo.GetAllEmployees();
 
-   public Employees GetEmployeeById(int id)=> _repo.GetEmployeeById(id);
+   public Employee GetEmployeeById(int id)=> _repo.GetEmployeeById(id);
 
-   
+    public bool InsertEmp (Employee emp) => _repo.InsertEmp(emp);
+
+    public bool UpdateEmp(Employee emp)=> _repo.UpdateEmp(emp);
+
+    public bool DeleteEmp(int id)=>_repo.DeleteEmp(id);
 }

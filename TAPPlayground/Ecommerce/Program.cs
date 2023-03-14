@@ -27,7 +27,7 @@ builder.Services.AddTransient<ITransactionService,TransactionService>();
 builder.Services.AddTransient<IMiniStatementRepository,MiniStatementRepository>();
 builder.Services.AddTransient<IMiniStatementService,MiniStatementService>();
 builder.Services.AddTransient<IEmployeeRepository,EmployeeRepository>();
-builder.Services.AddTransient<IEmployeesService,EmployeesService>();
+builder.Services.AddTransient<IEmployeeService,EmployeeService>();
 builder.Services.AddTransient<IAccountRepository,AccountRepository>();
 builder.Services.AddTransient<IAccountService,AccountService>();
 builder.Services.AddTransient<IPaymentRepository,PaymentRepository>();
