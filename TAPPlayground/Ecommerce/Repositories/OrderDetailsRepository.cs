@@ -196,14 +196,14 @@ public class OrderDetailsRepository : IOrderDetailsRepository
     }
 
 
-    public bool InsertOrderdetails(int orderId, int productId, int quantity)
+    public bool InsertOrderdetails(OrderDetails orderDetails)
     {
         bool status = false;
         MySqlConnection con = new MySqlConnection();
         con.ConnectionString = conString;
         try
         {
-            string query = $"INSERT INTO orderdetails(order_id,product_id,quantity)VALUES('{orderId}','{productId}','{quantity}')";
+            string query = $"INSERT INTO orderdetails(order_id,product_id,quantity,discount,supplier_id)VALUES('{orderDetails.OrderId}','{orderDetails.ProductId}','{orderDetails.Quantity}','{orderDetails.Discount}','{orderDetails.SupplierId}')";
             con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
             command.ExecuteNonQuery();
@@ -220,6 +220,57 @@ public class OrderDetailsRepository : IOrderDetailsRepository
         }
         return status;
     }
+
+     public bool UpdateOrderDetails(OrderDetails orderDetails)
+    {
+        bool status = false;
+        MySqlConnection con = new MySqlConnection();
+        con.ConnectionString = conString;
+        try
+        {
+            string query = $"Update orderdetails SET order_id='{orderDetails.OrderId}',product_id ='{orderDetails.ProductId}',quantity ='{orderDetails.Quantity}',discount='{orderDetails.Discount}',supplier_id='{orderDetails.SupplierId}' WHERE orderdetails_id='{orderDetails.OrderDetailsId}' ";
+            con.Open();
+            MySqlCommand command = new MySqlCommand(query, con);
+            command.ExecuteNonQuery();
+            status = true;
+
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            con.Close();
+        }
+        return status;
+    }
+
+      public bool DeleteOrdeDetails(int id)
+    {
+         bool status = false;
+        MySqlConnection con = new MySqlConnection();
+        con.ConnectionString = conString;
+        try
+        {
+            string query = "DELETE FROM orderdetails WHERE orderdetails_id="+id;
+            con.Open();
+            MySqlCommand command = new MySqlCommand(query, con);
+            command.ExecuteNonQuery();
+            status = true;
+
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            con.Close();
+        }
+        return status;
+    }
+    
     public List<Product> GetOrderdProducts(int orderId)
     {
         List<Product> products = new List<Product>();
@@ -309,7 +360,10 @@ public class OrderDetailsRepository : IOrderDetailsRepository
         return orderHistories;
     }
 
-
+    public bool InsertOrderdetails(int orderId, int productId, int quantity)
+    {
+        throw new NotImplementedException();
+    }
 }
 
 

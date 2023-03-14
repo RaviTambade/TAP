@@ -22,6 +22,16 @@ builder.Services.AddTransient<IOrderDetailsRepository,OrderDetailsRepository>();
 builder.Services.AddTransient<IOrderDetailsService,OrderDetailsService>();
 builder.Services.AddTransient<IShipperRepository,ShipperRepository>();
 builder.Services.AddTransient<IShipperService,ShipperService>();
+builder.Services.AddTransient<ITransactionRepository,TransactionRepository>();
+builder.Services.AddTransient<ITransactionService,TransactionService>();
+builder.Services.AddTransient<IMiniStatementRepository,MiniStatementRepository>();
+builder.Services.AddTransient<IMiniStatementService,MiniStatementService>();
+builder.Services.AddTransient<IEmployeeRepository,EmployeeRepository>();
+builder.Services.AddTransient<IEmployeeService,EmployeeService>();
+builder.Services.AddTransient<IAccountRepository,AccountRepository>();
+builder.Services.AddTransient<IAccountService,AccountService>();
+builder.Services.AddTransient<IPaymentRepository,PaymentRepository>();
+builder.Services.AddTransient<IPaymentService,PaymentService>();
 builder.Services.AddTransient<ISupplierRepository,SupplierRepository>();
 builder.Services.AddTransient<ISupplierService,SupplierService>();
 

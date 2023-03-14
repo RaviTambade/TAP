@@ -4,6 +4,6 @@ namespace ECommerceApp.Repositories.Interfaces;
 
 public interface IShipperRepository{
 
- List<Shipper> GetAllShippers();
+ public List<Shipper> GetAllShippers();
 
 }
