@@ -34,21 +34,22 @@ public class TransactionController : Controller
     
     [HttpPost]
     [Route("transactions/inserttransaction")]
-    public JsonResult InsertTransaction([FromBody] Transaction transaction){
+     public JsonResult InsertTransaction([FromBody] Transaction transaction){
         bool status=_transactionsrv.InsertTransaction(transaction);
         return Json(status);
     }
 
-      [HttpPut]
-      [Route("transactions/updatetransaction")]
-    public JsonResult UpdateTransaction([FromBody]Transaction transaction){
-        bool status=_transactionsrv.UpdateTransaction(transaction);
-        return Json(status);
+    [HttpPut]
+    public JsonResult UpdateTransaction([FromBody] Transaction transaction)
+    {
+        bool result = _transactionsrv.UpdateTransaction(transaction);
+        return Json(result);
     }
 
-      [HttpDelete]
+    [HttpDelete]
     public JsonResult DeleteTransaction(int id)
     {
+        Console.WriteLine(id);
         bool supplier = _transactionsrv.DeleteTransaction(id);
         return Json(supplier);
     }
