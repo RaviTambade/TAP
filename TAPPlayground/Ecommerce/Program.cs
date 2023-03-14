@@ -34,6 +34,8 @@ builder.Services.AddTransient<IPaymentRepository,PaymentRepository>();
 builder.Services.AddTransient<IPaymentService,PaymentService>();
 builder.Services.AddTransient<ISupplierRepository,SupplierRepository>();
 builder.Services.AddTransient<ISupplierService,SupplierService>();
+// builder.Services.AddTransient<ICustomersAccountsRepository,CustomersAccountsRepository>();
+// builder.Services.AddTransient<ICustomersAccountsService,CustomersAccountsService>();
 
 builder.Services.AddSession(options =>{
     options.IdleTimeout=TimeSpan.FromMinutes(10);
