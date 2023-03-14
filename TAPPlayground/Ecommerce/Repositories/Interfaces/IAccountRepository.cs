@@ -8,7 +8,7 @@ public interface IAccountRepository{
     Account GetAccountById(int id);
 
    bool InsertAccount(Account account);
-   bool UpdateAccount(int id);
+   bool UpdateAccount(Account account);
    bool DeleteAccount(int id);
    
 }

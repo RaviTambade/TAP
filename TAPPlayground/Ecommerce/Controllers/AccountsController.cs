@@ -23,18 +23,18 @@ public class AccountsController : Controller
         return Json(account);
     }
      [HttpPost]
-    public JsonResult InsertAccount(Account account)
+    public JsonResult InsertAccount([FromBody] Account account)
     {
         bool status=_accountserv.InsertAccount(account);
         return Json(status);
     }
-      [HttpPost]
-    public JsonResult UpdateAccount(int id)
+      [HttpPut]
+    public JsonResult UpdateAccount([FromBody] Account account)
     {
-        bool status=_accountserv.UpdateAccount(id);
+        bool status=_accountserv.UpdateAccount(account);
         return Json(status);
 }
-   [HttpPost]
+   [HttpDelete]
     public JsonResult DeleteAccount(int id)
     {
         bool status=_accountserv.DeleteAccount(id);
