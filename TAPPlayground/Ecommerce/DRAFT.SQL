@@ -1,10 +1,10 @@
--- Active: 1678116914124@@127.0.0.1@3306@ecommerce
+-- Active: 1677916902963@@127.0.0.1@3306@ecommerce
 
 
 
-CREATE DATABASE Ecommerce;
--- drop DATABASE ecommerce;
 -- CREATE DATABASE Ecommerce;
+-- drop DATABASE ecommerce;
+-- USE  Ecommerce;
 
 USE Ecommerce;
 CREATE TABLE users( user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, email VARCHAR(25) UNIQUE NOT NULL, contact_number VARCHAR(20) NOT NULL UNIQUE,password VARCHAR(15) NOT NULL);
