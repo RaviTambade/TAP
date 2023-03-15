@@ -19,6 +19,7 @@ public class SecureController : Controller
     [HttpPost]
     public JsonResult Register(Customer customer)
     {
+        Console.WriteLine(customer.FirstName);
         bool result = _securessvr.RegisterCustomer(customer);
         return Json(result);
     }
@@ -30,16 +31,13 @@ public class SecureController : Controller
         return Json(result);
     }
 
-    [HttpPut]
-    public IActionResult ChangePassword()
-    {
+    // [HttpPut]
+    // public IActionResult ChangePassword()
+    // {
         
-    }
-    [HttpPost]
-    public IActionResult Login()
-    {
-        
-    }
+    // }
+  
+
 
 
 }

@@ -13,4 +13,5 @@ public class Customer{
     public string? ContactNumber{get;set;}
      [Required(ErrorMessage ="please enter name")]
     public string? Password{get;set;}
+    public long AccountNumber{get;set;}
 }

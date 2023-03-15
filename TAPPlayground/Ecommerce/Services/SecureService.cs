@@ -8,13 +8,13 @@ namespace ECommerceApp.Services;
 
 public class SecureService : ISecureService
 {
-    private readonly ISecureService _repo;
+    private readonly ISecureRepository _repo;
 
-    public SecureService(ISecureService repo)
+    public SecureService(ISecureRepository repo)
     {
         _repo = repo;
     }
     public bool RegisterCustomer(Customer customer)=>_repo.RegisterCustomer(customer);
-    public bool Validate(User user)=> _repo.ValidateUser(user);
+    public bool ValidateUser(User user)=> _repo.ValidateUser(user);
 
 }

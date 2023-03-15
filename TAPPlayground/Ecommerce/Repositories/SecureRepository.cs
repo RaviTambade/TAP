@@ -13,7 +13,7 @@ public class SecureRepository : ISecureRepository
          MySqlConnection connection=new MySqlConnection(conString);
         try{
             MySqlCommand command=new MySqlCommand();
-            command.CommandText=$"INSERT INTO customers(first_name,last_name,email,contact_number,password)VALUES('{customer.FirstName}','{customer.LastName}','{customer.Email}','{customer.ContactNumber}','{customer.Password}')";
+            command.CommandText=$"INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number)VALUES('{customer.FirstName}','{customer.LastName}','{customer.Email}','{customer.ContactNumber}','{customer.Password}','{customer.AccountNumber}')";
             command.Connection=connection;
             connection.Open();
             command.ExecuteNonQuery();

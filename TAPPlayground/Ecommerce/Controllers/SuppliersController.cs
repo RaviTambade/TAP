@@ -19,17 +19,17 @@ public class SuppliersController:Controller{
        return Json(suppliers);
     }
 
-    [HttpGet]
-    public JsonResult GetSupplierById(int id){
-        var supplier=_srv.GetSupplierById(id);
-        return Json(supplier);
-    }
+    // [HttpGet]
+    // public JsonResult GetSupplierById(int id){
+    //     var supplier=_srv.GetSupplierById(id);
+    //     return Json(supplier);
+    // }
 
-      [HttpGet]
-    public JsonResult GetSuppliersOfProduct(int productId){
-        var suppliers=_srv.GetSupplierById(productId);
-        return Json(suppliers);
-    }
+    //   [HttpGet]
+    // public JsonResult GetSuppliersOfProduct(int productId){
+    //     var suppliers=_srv.GetSupplierById(productId);
+    //     return Json(suppliers);
+    // }
 
       [HttpPost]
       [Route("suppliers/insertsupplier")]

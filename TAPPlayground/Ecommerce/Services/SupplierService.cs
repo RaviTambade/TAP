@@ -15,10 +15,10 @@ public class SupplierService : ISupplierService
 
     public List<Supplier> GetAllSuppliers()=> _repo.GetAllSuppliers();
 
-    public Supplier GetSupplierById(int id)
-    {
-        return _repo.GetSupplierById(id);
-    }
+    // public Supplier GetSupplierById(int id)
+    // {
+    //     return _repo.GetSupplierById(id);
+    // }
 
     public List<Supplier> GetSuppliersOfProduct(int productId)
     {

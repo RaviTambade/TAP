@@ -1,16 +1,7 @@
-<<<<<<< HEAD
 
--- Active: 1678361403571@@127.0.0.1@3306@ecommerce
-/*DROP DATABASE Ecommerce;*/
-
--- Active: 1677916902963@@127.0.0.1@3306@ecommerce
-=======
--- Active: 1678272625741@@127.0.0.1@3306@ecommerce
->>>>>>> e8fedbe562a38aac5a9c1e85b2a294ae1895a0f4
-
-
-CREATE DATABASE Ecommerce;
-USE Ecommerce;
+-- drop DATABASE ecommerce;
+-- CREATE DATABASE Ecommerce;
+-- USE Ecommerce;
 CREATE TABLE users( user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, email VARCHAR(25) UNIQUE NOT NULL, contact_number VARCHAR(20) NOT NULL UNIQUE,password VARCHAR(15) NOT NULL);
 CREATE TABLE accounts(account_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,account_number BIGINT UNIQUE, ifsc_code VARCHAR(50) ,register_date DATETIME ,balance DOUBLE);
 CREATE TABLE customers(cust_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, first_name VARCHAR(25), last_name VARCHAR(25),email VARCHAR(25) UNIQUE NOT NULL,contact_number VARCHAR(20) UNIQUE NOT NULL, password VARCHAR(15) NOT NULL,account_number BIGINT NOT NULL UNIQUE ,CONSTRAINT fk_account_no3 FOREIGN KEY(account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE);
@@ -46,7 +37,7 @@ BEGIN
 END //
 DELIMITER ;
 
-INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546670,'MAHB0000286','2023-03-01 12:40:40',22555);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546671,'MAHB0000286','2023-03-01 12:40:40',22555);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545655,'MAHB0000286','2023-03-01 12:40:35',22500);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545656,'UNB0000286','2023-04-15 02:45:35',2250025);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545657,'BARBO0000286','2023-03-04 02-40-35',225700);
