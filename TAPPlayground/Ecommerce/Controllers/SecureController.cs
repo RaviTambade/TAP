@@ -16,8 +16,15 @@ public class SecureController : Controller
     {
         this._securessvr = secureservice;
     }
+
+   
+    public IActionResult Index()
+    {
+        return View();
+    }
+
     [HttpPost]
-    public JsonResult Register(Customer customer)
+    public JsonResult Register([FromBody]Customer customer)
     {
         Console.WriteLine(customer.FirstName);
         bool result = _securessvr.RegisterCustomer(customer);
@@ -25,17 +32,19 @@ public class SecureController : Controller
     }
 
     [HttpPost]
-    public JsonResult Validate(User user)
+    public JsonResult Validate([FromBody]Credential user)
     {
+        Console.WriteLine("user email"+user.Email);
         bool result = _securessvr.ValidateUser(user);
         return Json(result);
     }
 
-    // [HttpPut]
-    // public IActionResult ChangePassword()
-    // {
-        
-    // }
+    [HttpPut]
+    public JsonResult ChangePassword([FromBody]ChangedCredential user)
+    { 
+        bool result=_securessvr.ChangePassword(user);
+        return Json(result);
+    }
   
 
 

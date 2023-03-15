@@ -26,13 +26,17 @@ public class CustomerRepository : ICustomerRepository
                 string? lastname = reader["last_name"].ToString();
                 string? email = reader["email"].ToString();
                 string? contact=reader["contact_number"].ToString();
+                long accountnumber= long.Parse(reader["account_number"].ToString());
+                string password= reader["password"].ToString();
                 customer = new Customer
                 {
                    CustomerId=id,
                    FirstName=firstname,
                    LastName=lastname,
                    Email=email,
-                   ContactNumber=contact
+                   ContactNumber=contact,
+                   AccountNumber=accountnumber,
+                   Password= password  
                 };
                 customers.Add(customer);
             }
@@ -131,7 +135,8 @@ public class CustomerRepository : ICustomerRepository
         MySqlConnection connection=new MySqlConnection(conString);
         try{
             MySqlCommand command=new MySqlCommand();
-            command.CommandText=$"INSERT INTO customers(first_name,last_name,email,contact_number,password)VALUES('{customer.FirstName}','{customer.LastName}','{customer.Email}','{customer.ContactNumber}','{customer.Password}')";
+            command.CommandText=$"INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number)VALUES('{customer.FirstName}','{customer.LastName}','{customer.Email}','{customer.ContactNumber}','{customer.Password}','{customer.AccountNumber}')";
+           Console.WriteLine(command.CommandText);
             command.Connection=connection;
             connection.Open();
             command.ExecuteNonQuery();
@@ -152,7 +157,7 @@ public class CustomerRepository : ICustomerRepository
           con.ConnectionString=conString;
         try{
             
-            string query = $"Update customers SET first_name ='{customer.FirstName}',last_name ='{customer.LastName}',email='{customer.Email}',contact_number='{customer.ContactNumber}',password ='{customer.Password}' WHERE cust_id='{customer.CustomerId}' ";
+            string query = $"Update customers SET first_name ='{customer.FirstName}',last_name ='{customer.LastName}',email='{customer.Email}',contact_number='{customer.ContactNumber}',password ='{customer.Password}',account_number='{customer.AccountNumber}' WHERE cust_id='{customer.CustomerId}' ";
             MySqlCommand cmd=new MySqlCommand(query,con) ;
             con.Open();
             cmd.ExecuteNonQuery();               

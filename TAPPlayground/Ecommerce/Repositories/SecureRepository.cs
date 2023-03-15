@@ -29,14 +29,16 @@ public class SecureRepository : ISecureRepository
  
     }
 
-    public bool ValidateUser(User user)
+    public bool ValidateUser(Credential user)
     {
         bool status = false;
          MySqlConnection connection=new MySqlConnection(conString);
         try{
             MySqlCommand command=new MySqlCommand();
-            command.CommandText="SELECT EXISTS(SELECT * FROM users where contact_number='" + user.ContactNumber + "' and password='" + user.Password+ "')";
-            MySqlDataReader reader = command.ExecuteReader();
+            command.CommandText="SELECT EXISTS(SELECT * FROM users where email='" + user.Email + "' and password='" + user.Password+ "')";
+            command.Connection=connection;
+            connection.Open();
+            MySqlDataReader reader = command.ExecuteReader(); 
             reader.Read();
             if ((Int64)reader[0] == 1)
             {
@@ -56,6 +58,31 @@ public class SecureRepository : ISecureRepository
     
     }
 
+    public  bool ChangePassword(ChangedCredential user){
+        bool status = false;
+        MySqlConnection con = new MySqlConnection();
+        con.ConnectionString=conString;
+    try{
+        
+        string query = $"Update users SET password ='{user.NewPassword}' WHERE email='{user.Email}' and password='{user.OldPassword}' ";
+        MySqlCommand cmd=new MySqlCommand(query,con) ;
+        con.Open();
+        int rowsAffected= cmd.ExecuteNonQuery();
+        if(rowsAffected>=1)
+        {
+            status= true;
+        }
+        }
+    catch(Exception e )
+        {
+        throw e;
+        }
+        finally {
+        con.Close();
+        }
+        return status;
+   }
+   
 }
 
     
