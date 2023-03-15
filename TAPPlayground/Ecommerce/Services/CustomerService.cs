@@ -13,4 +13,7 @@ public class CustomerService:ICustomerService{
     public Customer GetCustomer(string contact_number) => _repo.GetCustomer(contact_number);
     public Customer GetCustomerById(int id)=> _repo.GetCustomerById(id);
     public bool InsertCustomer(Customer customer)=>_repo.InsertCustomer(customer);
+    public bool UpdateCustomer(Customer customer)=> _repo.UpdateCustomer(customer);
+    public bool DeleteCustomer(int id)=>_repo.DeleteCustomer(id);
 }
+
