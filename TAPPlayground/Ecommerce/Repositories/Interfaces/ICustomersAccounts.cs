@@ -1,4 +1,4 @@
-
+/*
 // using ECommerceApp.Models;
 // namespace ECommerceApp.Repositories.Interfaces;
 // public class ICustomersAccounts{
@@ -16,3 +16,4 @@ namespace ECommerceApp.Repositories.Interfaces;
 =======
 >>>>>>> 97a86088288e4aabafc208014ad053e92eb04570
 // }
+*/

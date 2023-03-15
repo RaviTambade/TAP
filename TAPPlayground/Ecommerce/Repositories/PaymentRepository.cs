@@ -22,7 +22,7 @@ public class PaymentRepository : IPaymentRepository
             while (reader.Read())
             {
                 int paymentId =int.Parse(reader["payment_id"].ToString());
-                 DateTime date= new DateTime(reader["payment_date"].ToString());
+                 DateTime date= DateTime.Parse(reader["payment_date"].ToString(),System.Globalization.CultureInfo.InvariantCulture);
                 string? payment_mode = reader["payment_mode"].ToString();
                 int transactionId =int.Parse(reader["transection_id"].ToString());
                 int orderId =int.Parse(reader["order_id"].ToString());
@@ -30,7 +30,7 @@ public class PaymentRepository : IPaymentRepository
                 Payment payment = new Payment
                 {
                     PaymentId=paymentId,
-                    PaymentDate= date,
+                    PaymentDate= date.ToShortDateString(),
                     PaymentMode = payment_mode,
                     TransactionId = transactionId,
                     OrderId = orderId
@@ -67,7 +67,7 @@ public class PaymentRepository : IPaymentRepository
             while (reader.Read())
             {
                 //paymentId =int.Parse(reader["payment_id"].ToString());
-                 DateTime date= new DateTime(reader["payment_date"].ToString());
+                 DateTime date= DateTime.Parse(reader["payment_date"].ToString(),System.Globalization.CultureInfo.InvariantCulture);
                 string? payment_mode = reader["payment_mode"].ToString();
                 int transactionId =int.Parse(reader["transection_id"].ToString());
                 int orderId =int.Parse(reader["order_id"].ToString());
@@ -75,7 +75,7 @@ public class PaymentRepository : IPaymentRepository
                 payment = new Payment()
                 {
                     PaymentId=paymentId,
-                    PaymentDate= date,
+                    PaymentDate= date.ToShortDateString(),
                     PaymentMode = payment_mode,
                     TransactionId = transactionId,
                     OrderId = orderId
@@ -109,7 +109,7 @@ public class PaymentRepository : IPaymentRepository
             while (reader.Read())
             {
                 int paymentId =int.Parse(reader["payment_id"].ToString());
-                DateTime date= DateTime.Parse(reader["payment_date"].ToString());
+                DateTime date= DateTime.Parse(reader["payment_date"].ToString(),System.Globalization.CultureInfo.InvariantCulture);
                 string? payment_mode = reader["payment_mode"].ToString();
                 int transactionId =int.Parse(reader["transection_id"].ToString());
                 OrderId =int.Parse(reader["order_id"].ToString());
@@ -117,7 +117,7 @@ public class PaymentRepository : IPaymentRepository
                 payment = new Payment()
                 {
                     PaymentId=paymentId,
-                    PaymentDate= date,
+                    PaymentDate= date.ToShortDateString(),
                     PaymentMode = payment_mode,
                     TransactionId = transactionId,
                     OrderId = OrderId
