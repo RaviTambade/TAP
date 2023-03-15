@@ -5,7 +5,7 @@ namespace ECommerceApp.Repositories;
 public class CustomerRepository : ICustomerRepository
 {
 
-    public static string conString="server=localhost;port=3306;user=root;password=Password;database=Ecommerce";
+    public static string conString="server=localhost;port=3306;user=root;password=1234512345;database=Ecommerce";
 
     public List<Customer> GetAllCustomers(){
 
@@ -145,4 +145,49 @@ public class CustomerRepository : ICustomerRepository
         }
       return status;      
     }
+
+       public  bool UpdateCustomer(Customer customer){
+          bool status = false;
+          MySqlConnection con = new MySqlConnection();
+          con.ConnectionString=conString;
+        try{
+            
+            string query = $"Update customers SET first_name ='{customer.FirstName}',last_name ='{customer.LastName}',email='{customer.Email}',contact_number='{customer.ContactNumber}',password ='{customer.Password}' WHERE cust_id='{customer.CustomerId}' ";
+            MySqlCommand cmd=new MySqlCommand(query,con) ;
+            con.Open();
+            cmd.ExecuteNonQuery();               
+            status=true;
+          }
+        catch(Exception e )
+          {
+            throw e;
+          }
+          finally {
+            con.Close();
+          }
+          return status;
+   }
+   
+   public  bool DeleteCustomer(int id){
+          bool status = false;
+          MySqlConnection con = new MySqlConnection();
+          con.ConnectionString=conString;
+          try{
+            
+            string query = "DELETE FROM customers WHERE cust_id="+id;
+            MySqlCommand cmd=new MySqlCommand(query,con) ;
+            con.Open();
+            cmd.ExecuteNonQuery();  
+            status=true;            
+
+          }catch(Exception e )
+          {
+            throw e;
+          }
+          finally {
+            con.Close();
+          }
+          return status;
+   }
+
 }

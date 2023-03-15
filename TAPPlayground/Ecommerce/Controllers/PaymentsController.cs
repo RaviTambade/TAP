@@ -21,16 +21,50 @@ public class PaymentsController : Controller
         return Json(payment);
     }
     
+     
+     
+     
      public JsonResult GetPaymentById(int paymentId)
     {
         var payment=_paymentsrv.GetPaymentById(paymentId);
         return Json(payment);
     }
+   
+   
      public JsonResult GetPaymentByOrderId(int OrderId)
     {
         var payment=_paymentsrv.GetPaymentById(OrderId);
         return Json(payment);
     }
+   
+
+
+   
+   [HttpPost]
+   public JsonResult InsertPayment(Payment payment)
+    {
+        var pay=_paymentsrv.InsertPayments(payment);
+        return Json(pay);
+    }
+  
+  [HttpPost]
+   public JsonResult UpdatePayments(Payment payment)
+    {
+        var pay=_paymentsrv.UpdatePayment(payment);
+        return Json(pay);
+    }
+
+
+     [HttpDelete]
+    public JsonResult DeletePayment(int paymentId)
+    {
+        bool pay=_paymentsrv.DeletePayment(paymentId);
+        return Json(pay);
+    }
+    
+    
+    
+    
     public IActionResult Index()
     {
         return View();

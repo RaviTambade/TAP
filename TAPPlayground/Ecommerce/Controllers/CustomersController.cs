@@ -33,6 +33,25 @@ public class CustomersController : Controller
         return Json(customer);
     }
 
+    [HttpPost]
+    public JsonResult InsertCustomer([FromBody] Customer customer)
+    {
+        bool result = _customersSrv.InsertCustomer(customer);
+        return Json(result);
+    }
 
+    [HttpDelete]
+    public JsonResult DeleteCustomer(int id)
+    {
+        bool result = _customersSrv.DeleteCustomer(id);
+        return Json(result);
+    }
+
+    [HttpPut]
+    public JsonResult UpdateCustomer([FromBody] Customer customer)
+    {
+        bool result = _customersSrv.UpdateCustomer(customer);
+        return Json(result);
+    }
     
 }

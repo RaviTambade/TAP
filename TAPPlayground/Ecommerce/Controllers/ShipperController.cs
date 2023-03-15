@@ -15,11 +15,45 @@ public class ShipperController : Controller
     }
 
     [HttpGet]
-    public JsonResult ShowAllShippers()
+    public JsonResult GetAllShippers()
     {
         var shippers=_shippersrv.GetAllShippers();
         return Json(shippers);
     }
+
+    [HttpGet]
+    public JsonResult GetShipperById(int id)
+    {
+        var shipper=_shippersrv.GetShipperById(id);
+        return Json(shipper);
+    }
+
+
+   [HttpPost]
+    public JsonResult InsertShipper([FromBody]Shipper shipper)
+    {
+        bool status=_shippersrv.InsertShipper(shipper);
+        return Json(status);
+    }
+
+
+    [HttpPut]
+    public JsonResult UpdateShipper([FromBody]Shipper shipper)
+    {
+        System.Console.WriteLine(shipper);
+        bool status=_shippersrv.UpdateShipper(shipper);
+        return Json(status);
+
+    }
+
+
+   [HttpDelete]
+    public JsonResult DeleteShipper(int id)
+    {
+        bool status=_shippersrv.DeleteShipper(id);
+        return Json(status);
+}
+
 
     public IActionResult Index()
     {
@@ -32,4 +66,6 @@ public class ShipperController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
+
+ 
 }

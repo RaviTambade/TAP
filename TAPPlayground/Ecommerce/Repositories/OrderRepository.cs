@@ -1,6 +1,7 @@
 using ECommerceApp.Models;
 using ECommerceApp.Repositories.Interfaces;
 using MySql.Data.MySqlClient;
+using System.Globalization;
 namespace ECommerceApp.Repositories;
 public class OrderRepository : IOrderRepository
 {
@@ -13,24 +14,24 @@ public class OrderRepository : IOrderRepository
         con.ConnectionString = conString;
         try
         {
-            string query = $"SELECT * FROM orders";
+            string query = "SELECT * FROM orders";
             con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
             MySqlDataReader reader = command.ExecuteReader();
             while(reader.Read())
             {
                 int id = int.Parse(reader["order_id"].ToString());
-                DateTime orderDate= DateTime.Parse(reader["order_date"].ToString());
-                DateTime shippedDate =DateTime.Parse(reader["shipped_date"].ToString());
-                int customerId = int.Parse(reader["cust_Id"].ToString());
+                DateTime orderDate= DateTime.ParseExact(reader["order_date"].ToString(), "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+                DateTime shippedDate= DateTime.ParseExact(reader["shipped_date"].ToString(), "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+                int customerId = int.Parse(reader["cust_id"].ToString());
                 double total = double.Parse(reader["total"].ToString());
                 string? status = reader["status"].ToString();
 
                 Order order = new Order()
                 {
                     OrderId = id,
-                    OrderDate = orderDate,
-                    ShippedDate = shippedDate,
+                    OrderDate = orderDate.ToLongDateString(),
+                    ShippedDate = shippedDate.ToLongDateString(),
                     CustomerId = customerId,
                     Total = total,
                     Status = status
@@ -65,8 +66,8 @@ public class OrderRepository : IOrderRepository
             if(reader.Read())
             {
                 //int orderId = int.Parse(reader["order_id"].ToString());
-                DateTime orderDate= DateTime.Parse(reader["order_date"].ToString());
-                DateTime shippedDate =DateTime.Parse(reader["shipped_date"].ToString());
+                DateTime orderDate= DateTime.ParseExact(reader["order_date"].ToString(), "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+                DateTime shippedDate= DateTime.ParseExact(reader["shipped_date"].ToString(), "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
                 int customerId = int.Parse(reader["cust_Id"].ToString());
                 double total = double.Parse(reader["total"].ToString());
                 string? status = reader["status"].ToString();
@@ -74,8 +75,8 @@ public class OrderRepository : IOrderRepository
                 order = new Order()
                 {
                     OrderId = id,
-                    OrderDate = orderDate,
-                    ShippedDate = shippedDate,
+                    OrderDate = orderDate.ToShortDateString(),
+                    ShippedDate = shippedDate.ToShortDateString(),
                     CustomerId = customerId,
                     Total = total,
                     Status = status
@@ -158,8 +159,8 @@ public class OrderRepository : IOrderRepository
             if(reader.Read())
             {
                 int orderId = int.Parse(reader["order_id"].ToString());
-                DateTime orderDate= DateTime.Parse(reader["order_date"].ToString());
-                DateTime shippedDate =DateTime.Parse(reader["shipped_date"].ToString());
+                DateTime orderDate= DateTime.ParseExact(reader["order_date"].ToString(), "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+                DateTime shippedDate= DateTime.ParseExact(reader["shipped_date"].ToString(), "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
                 double total = double.Parse(reader["total"].ToString());
                 string? status = reader["status"].ToString();
 
@@ -167,8 +168,8 @@ public class OrderRepository : IOrderRepository
                 {
                     OrderId = orderId,
                     CustomerId= custid,
-                    OrderDate = orderDate,
-                    ShippedDate = shippedDate,
+                    OrderDate = orderDate.ToLongDateString(),
+                    ShippedDate = shippedDate.ToLongDateString(),
                     Total = total,
                     Status = status
                 };
@@ -191,8 +192,8 @@ public class OrderRepository : IOrderRepository
         con.ConnectionString = conString;
         try
         {
-            string query ="INSERT INTO orders(order_id,order_date,shipped_date,cust_id,total,status)"
-            + "VALUES('"+order.OrderId+"','"+order.OrderDate+"','"+order.ShippedDate+"','"+order.CustomerId+"','"+order.Total+"','"+order.Status+"')";
+            string query =$"INSERT INTO orders(order_date,shipped_date,cust_id,total,status)VALUES"+
+            "('"+order.OrderDate+"','"+order.ShippedDate+"',"+order.CustomerId+","+order.Total+",'"+order.Status+"')";
             con.Open();
             MySqlCommand command = new MySqlCommand(query,con);
             command.ExecuteNonQuery();

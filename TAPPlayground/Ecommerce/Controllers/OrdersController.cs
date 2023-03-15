@@ -41,12 +41,6 @@ public class OrdersController : Controller
         return View();
     }
 
-    [HttpGet]
-   public IActionResult InsertOrders()
-   {
-       return View();
-   }
-
    [HttpPost]
    public JsonResult InsertOrders([FromBody] Order order)
    {
@@ -54,18 +48,13 @@ public class OrdersController : Controller
         return Json(result);
    }
   
-    [HttpGet]
-   public IActionResult UpdateOrder()
-   {
-       return View();
-   }
-
     [HttpPut]
    public JsonResult UpdateOrder([FromBody] Order order)
    {
         bool result =_ordersrv.UpdateOrder(order);
         return Json(result);
    }
+   
    [HttpDelete]
    public JsonResult DeleteOrder(int id)
    {
