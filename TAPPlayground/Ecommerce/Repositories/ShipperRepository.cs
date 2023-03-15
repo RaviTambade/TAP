@@ -52,6 +52,120 @@ public class ShipperRepository : IShipperRepository
         }
         return shippers;
     }
+
+    public Shipper GetShipperById(int id)
+    {
+        Shipper shipper = new Shipper();
+        MySqlConnection connection = new MySqlConnection(conString);
+        try
+        {
+            string query = "SELECT * FROM shippers WHERE shipper_id=" + id;
+            connection.Open();
+            MySqlCommand command = new MySqlCommand(query, connection);
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                id = int.Parse(reader["supplier_id"].ToString());
+                string companyName = reader["company_name"].ToString();
+                string contactNumber = reader["contact_number"].ToString();
+                string email = reader["email"].ToString();
+                long accountNumber = long.Parse(reader["account_number"].ToString());
+
+                shipper = new Shipper()
+                {
+                    ShipperId = id,
+                    CompanyName = companyName,
+                    ContactNumber = contactNumber,
+                    Email = email,
+                    AcountNumber = accountNumber
+                };
+            }
+            reader.Close();
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            connection.Close();
+        }
+        return shipper;
+    }
+
+
+   public bool InsertShipper(Shipper shipper){
+        bool status=false;
+        MySqlConnection connection=new MySqlConnection();
+        connection.ConnectionString=conString;
+        try{
+            string query=$"INSERT INTO shippers(company_name,contact_number,email,account_number)VALUES('{shipper.CompanyName}','{shipper.ContactNumber}','{shipper.Email}','{shipper.AcountNumber}')";
+            connection.Open();
+            MySqlCommand command=new MySqlCommand(query ,connection);
+            command.ExecuteNonQuery();
+            status=true;
+        }
+        catch(Exception e){
+             throw e;
+        }
+        finally{
+          connection.Close();
+        }
+        return status;
+    }
+
+ public bool UpdateShipper(Shipper shipper)
+    {
+        bool status = false;
+        MySqlConnection connection = new MySqlConnection();
+        connection.ConnectionString = conString;
+        try
+        {
+            string query = "UPDATE shippers SET company_name='" +shipper.CompanyName  + "', contact_number='" + shipper.ContactNumber +"', email='" + shipper.Email +"', account_number='" + shipper.AcountNumber  +"' WHERE shipper_id=" +shipper.ShipperId;
+            MySqlCommand command = new MySqlCommand(query, connection);
+            connection.Open();
+            command.ExecuteNonQuery();
+            status = true;
+        }
+        catch (Exception e)
+        {
+            throw e;
+
+        }
+        finally
+        {
+            connection.Close();
+        }
+        return status;
+
+    }
+
+          public bool DeleteShipper(int id)
+    {
+        bool status = false;
+        MySqlConnection con = new MySqlConnection();
+        con.ConnectionString = conString;
+        try
+        {
+            string query = "DELETE FROM shippers WHERE shipper_id="+id;
+            con.Open();
+            MySqlCommand command = new MySqlCommand(query, con);
+            command.ExecuteNonQuery();
+            status = true;
+
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            con.Close();
+        }
+        return status;
+    }
+
+
 }
 
     

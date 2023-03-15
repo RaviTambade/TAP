@@ -9,7 +9,7 @@ namespace ECommerceApp.Repositories;
 
 public class AccountRepository : IAccountRepository
 {
-    public static string conString = "server=localhost;port=3306;user=root;password=Password;database=Ecommerce";
+    public static string conString = "server=localhost;port=3306;user=root;password=password;database=Ecommerce";
     public List<Account> GetAllAccounts()
     {
         List<Account> accounts = new List<Account>();
@@ -34,7 +34,7 @@ public class AccountRepository : IAccountRepository
                     AccountId = accountId,
                     AccountNumber = accountNumber,
                     IFSCCode = ifscCode,
-                    RegisterDate = registerDate,
+                    RegisterDate = registerDate.ToShortDateString(),
                     Balance = accountBalance
                 };
                 accounts.Add(account);
@@ -76,7 +76,7 @@ public class AccountRepository : IAccountRepository
                     AccountId = accountId,
                     AccountNumber = accountNumber,
                     IFSCCode = ifscCode,
-                    RegisterDate = registerDate,
+                    RegisterDate = registerDate.ToShortDateString(),
                     Balance = accountBalance
                 };
             }
@@ -101,8 +101,8 @@ public class AccountRepository : IAccountRepository
         con.ConnectionString = conString;
         try
         {
-            string query = "INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES()";
-;
+            string query = "INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES('"+account.AccountNumber+"','"+account.IFSCCode+ "','"+ account.RegisterDate+ "','"+ account.Balance+"')";
+
             con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
             command.ExecuteNonQuery();
@@ -126,8 +126,7 @@ public class AccountRepository : IAccountRepository
         con.ConnectionString = conString;
         try
         {
-            string query = $"Update accounts SET account_number ='{account.AccountNumber}',ifsc_code ='{account.IFSCCode}',register_date='{account.RegisterDate}',balance'{account.Balance}' WHERE account_id='{account.AccountId}' ";
-
+            string query = "Update accounts SET account_number ='"+account.AccountNumber+"',ifsc_code ='"+account.IFSCCode+"',register_date='"+account.RegisterDate+"',balance='"+account.Balance+"' WHERE account_id='"+account.AccountId+"'";
             con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
             command.ExecuteNonQuery();
@@ -144,14 +143,14 @@ public class AccountRepository : IAccountRepository
         return status;
 
     }
-    public bool DeleteAccount(int id)
+    public bool DeleteAccount(Int32 id)
     {
         bool status = false;
         MySqlConnection con = new MySqlConnection();
         con.ConnectionString = conString;
         try
         {
-            string query = "DELETE account WHERE account_id=" + id;
+            string query = "DELETE  FROM accounts WHERE account_id=" + id;
             con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
             command.ExecuteNonQuery();
