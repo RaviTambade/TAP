@@ -1,7 +1,7 @@
 
 -- drop DATABASE ecommerce;
 -- CREATE DATABASE Ecommerce;
--- USE Ecommerce;
+USE Ecommerce;
 CREATE TABLE users( user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, email VARCHAR(25) UNIQUE NOT NULL, contact_number VARCHAR(20) NOT NULL UNIQUE,password VARCHAR(15) NOT NULL);
 CREATE TABLE accounts(account_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,account_number BIGINT UNIQUE, ifsc_code VARCHAR(50) ,register_date DATETIME ,balance DOUBLE);
 CREATE TABLE customers(cust_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, first_name VARCHAR(25), last_name VARCHAR(25),email VARCHAR(25) UNIQUE NOT NULL,contact_number VARCHAR(20) UNIQUE NOT NULL, password VARCHAR(15) NOT NULL,account_number BIGINT NOT NULL UNIQUE ,CONSTRAINT fk_account_no3 FOREIGN KEY(account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE);
@@ -36,8 +36,22 @@ BEGIN
 	INSERT INTO users(email,contact_number,password)VALUES (NEW.email,NEW.contact_number,NEW.password);
 END //
 DELIMITER ;
+<<<<<<< HEAD
+select * from accounts;
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546621,'MAHB0000286','2023-03-01 12:40:40',22555);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546671,'MAHB0000286','2023-03-01 12:40:40',22555);
+=======
 
+<<<<<<< HEAD
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546682,'MAHB0000286','2023-03-01 12:40:40',22555);
+=======
+<<<<<<< HEAD
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546333,'MAHB0000286','2023-03-01 12:40:40',22555);
+=======
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546676,'MAHB0000286','2023-03-01 12:40:40',22555);
+>>>>>>> 8069b9e9dbfb823902ece866816ac6e635fbb9ab
+>>>>>>> 2b73f6cddb7e9e10d2776338db0fe2a9ae0b086c
+>>>>>>> 1319a8f134d704b91305e38cdeb648b84d9b7e2c
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545655,'MAHB0000286','2023-03-01 12:40:35',22500);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545656,'UNB0000286','2023-04-15 02:45:35',2250025);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545657,'BARBO0000286','2023-03-04 02-40-35',225700);
@@ -59,7 +73,11 @@ INSERT INTO transactions(from_account_number, to_account_number,transaction_date
 INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025545659,39025545663,'2023-03-01 12:40:35',22500);
 INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025545658,39025545665,'2023-03-01 12:40:35',22500);
 
-select * from users;
+<<<<<<< HEAD
+select * from customers;
+=======
+select * from suppliers;
+>>>>>>> 1319a8f134d704b91305e38cdeb648b84d9b7e2c
 desc customers;
 
 
