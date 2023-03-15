@@ -126,9 +126,15 @@ public class EmployeeRepository : IEmployeeRepository
           con.ConnectionString=conString;
           try{
             //string query =$"INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('"+emp.EmpFirstName+"','"+emp.EmpLastName+"','1998-05-19','2023-03-15','"+emp.ContactNumber+"','"+emp.Email+"','"+emp.Password+"','"+emp.Photo+"','"+emp.ReportsTo+"','"+emp.AccountNumber+"')";
-              string query =$"INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES"+
+              /*string query =$"INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES"+
               "('"+emp.EmpFirstName+"','"+emp.EmpLastName+ "','1998-05-19','2023-03-15','"+ emp.ContactNumber+ "','"+
-                emp.Email+"','"+emp.Password+ "','"+ emp.Photo+"',"+emp.ReportsTo+","+39025546668+")";
+                emp.Email+"','"+emp.Password+ "','"+ emp.Photo+"',"+emp.ReportsTo+","+39025546670+")";
+              */
+
+              string query =$"INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES"+
+              "('"+emp.EmpFirstName+"','"+emp.EmpLastName+ "','"+emp.BirthDate+"','"+emp.HireDate+"','"+ emp.ContactNumber+ "','"+
+                emp.Email+"','"+emp.Password+ "','"+ emp.Photo+"',"+emp.ReportsTo+",'"+emp.AccountNumber+"')";
+  
 
               Console.WriteLine(query);
         
@@ -150,12 +156,15 @@ public class EmployeeRepository : IEmployeeRepository
    }
 
    public  bool UpdateEmp(Employee emp){
+          
+          Console.WriteLine(emp);
           bool status = false;
           MySqlConnection con = new MySqlConnection();
           con.ConnectionString=conString;
           try{
-            
-            string query = "UPDATE employees SET empfirst_name='"+emp.EmpFirstName+"', emplast_name= '"+emp.EmpLastName+"',birth_date='"+emp.BirthDate+"',hire_date='"+emp.HireDate+"',contact_number='"+emp.ContactNumber+"',email='"+emp.Email+"',password='"+emp.Password+"',photo='"+emp.Photo+"',reports_to="+emp.ReportsTo+",account_number='"+emp.AccountNumber+"' WHERE employee_id=" +emp.EmpId;
+            string query = "UPDATE employees SET empfirst_name='"+emp.EmpFirstName+"', emplast_name='"+emp.EmpLastName+"', birth_date='"+emp.BirthDate+"', hire_date='"+emp.HireDate+"', contact_number='"+emp.ContactNumber+"', email='"+emp.Email+"', password='"+emp.Password+"', photo='"+emp.Photo+"', reports_to="+emp.ReportsTo+", account_number='"+emp.AccountNumber+"' WHERE employee_id=" +emp.EmpId;
+             
+             Console.WriteLine(query);
              MySqlCommand cmd=new MySqlCommand(query,con) ;
              con.Open();
              cmd.ExecuteNonQuery();               
@@ -170,17 +179,18 @@ public class EmployeeRepository : IEmployeeRepository
           return status;
    }
    
+ 
+
    public  bool DeleteEmp(int id){
           bool status = false;
           MySqlConnection con = new MySqlConnection();
           con.ConnectionString=conString;
           try{
-            
             string query = "DELETE FROM employees WHERE employee_id="+id;
              MySqlCommand cmd=new MySqlCommand(query,con) ;
              con.Open();
              cmd.ExecuteNonQuery();              
-
+             status = true;
           }catch(Exception e )
           {
             throw e;
@@ -190,4 +200,6 @@ public class EmployeeRepository : IEmployeeRepository
           }
           return status;
    }
+
+
 }

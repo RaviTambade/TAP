@@ -1,4 +1,4 @@
--- Active: 1678116914124@@127.0.0.1@3306@ecommerce
+-- Active: 1678272625741@@127.0.0.1@3306@ecommerce
 
 
 CREATE DATABASE Ecommerce;
@@ -38,7 +38,7 @@ BEGIN
 END //
 DELIMITER ;
 
-INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546668,'MAHB0000286','2023-03-01 12:40:40',22555);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546670,'MAHB0000286','2023-03-01 12:40:40',22555);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545655,'MAHB0000286','2023-03-01 12:40:35',22500);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545656,'UNB0000286','2023-04-15 02:45:35',2250025);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545657,'BARBO0000286','2023-03-04 02-40-35',225700);
@@ -231,6 +231,11 @@ select * from customers;
 select * from orders;
 select * from orderdetails;
 select * from categories;
+select * from accounts;
+select * from suppliers;
+select * from  transactions ;
+
+
 
 /*1)Retrive List of Customers that made purcheses after the date 2023-03-03 */
 SELECT customers.cust_id,customers.first_name, customers.last_name,orders.order_date FROM orders 
@@ -424,13 +429,9 @@ WHERE transactions.from_account_number=(select account_number from customers whe
 
 
 CALL TransferMoney(39025545659,39025545658,'2023-03-09 02:15:05',500);
-select * from  accounts;
-select * from suppliers;
-select * from  transactions ;
-select * from accounts;
-SELECT * FROM customers;
 
 select customers.first_name,customers.last_name,customers.email,customers.contact_number,accounts.account_number,accounts.ifsc_code,accounts.balance FROM customers  INNER JOIN  accounts ON accounts.account_number=customers.account_number  -- WHERE customers.cust_id=1; 
 
 /* insert employee query*/
 INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Vishwambhar','Kapare','1998-05-19','2023-03-15','70385488505','Rushi@gmail.com','Rc5269','./images/Rc.jpg',3,39025546668)
+
