@@ -64,7 +64,7 @@
 
          <tr>
             <th><label>contact number</label> </th>
-            <td><input type="text" name="contect_number" id="txtcontectnumber"/></td>
+            <td><input type="text" name="contect_number" id="txtcontactnumber"/></td>
         </tr>
          <tr>
             <th><label>Account number</label> </th>
@@ -87,7 +87,7 @@
     console.log("hello");
      $(document).ready(function(){
         console.log("document is initialized");
-        $('#btn').click(onClick)
+        $('#btn').click(onClick);
         $('#btnchangepassword').click(onChangePassword);
         $('#registerbtn').click(onRegister);
     }); 
@@ -161,9 +161,10 @@
 
         $.ajax({  
             url:restAPIUrl1 ,                                // link of REST API url
-            type: "PUT",                                   // type of HTTP request
+            type: "POST",                                   // type of HTTP request
             contentType: "application/json; charset=utf-8",//  What is the type of content of REST body
             data: JSON.stringify(credentialToUpdate),              // data to be sent through request body
+
 
                                                            //callback function to be called on failure of REST API call
             error: function(xhr, status, error) {  
