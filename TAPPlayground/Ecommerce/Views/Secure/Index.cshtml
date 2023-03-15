@@ -1,0 +1,240 @@
+@model ECommerceApp.Models.User
+@{ViewData["title"]="Login Page";
+}
+
+<div>
+    <h3>Login</h3>
+
+    
+        <table>
+        <tr>
+            <th><label>Email</label> </th>
+            <td><input type="email" name="email" id="txtemail"/></td>
+        </tr>
+          <tr>
+            <th> <lable>Password</lable> </th>
+            <td><input type="password" name="password" id="txtpassword"/> </td>
+        </tr>
+    </table>
+    <button  id="btn">Validate</button>
+  
+</div>
+    
+<hr/>
+<div>
+    <h3>Change Password</h3>
+
+     
+        <table>
+        <tr>
+            <th><label>Email</label> </th>
+            <td><input type="email" name="email" id="txtchangeemail"/></td>
+        </tr>
+          <tr>
+            <th> <lable>Old Password</lable> </th>
+            <td><input type="password" name="oldpassword"  id="txtoldpassword" /> </td>
+        </tr>
+           <tr>
+            <th> <lable>New Password</lable> </th>
+            <td><input type="password" name="newpassword"  id="txtnewpassword"/> </td>
+        </tr>
+    </table>
+    <button id="btnchangepassword" >Change Password</button>
+     
+</div>
+<hr/>
+
+<div>
+    <h3>Register</h3>
+
+    
+        <table>
+        <tr>
+            <th><label>First Name</label> </th>
+            <td><input type="text" name="first_name" id="txtfirstname"/></td>
+        </tr>
+         <tr>
+            <th><label>Last Name</label> </th>
+            <td><input type="text" name="last_name" id="txtlastname"/></td>
+        </tr>
+         <tr>
+            <th><label>email</label> </th>
+            <td><input type="email" name="email" id="txtregisteremail"/></td>
+        </tr>
+
+         <tr>
+            <th><label>contact number</label> </th>
+            <td><input type="text" name="contect_number" id="txtcontectnumber"/></td>
+        </tr>
+         <tr>
+            <th><label>Account number</label> </th>
+            <td><input type="text" name="account_number" id="txtaccountnumber"/></td>
+        </tr>
+          <tr>
+            <th> <lable>Password</lable> </th>
+            <td><input type="password" name="password" id="txtregisterpassword"/> </td>
+        </tr>
+    </table>
+    <button  id="registerbtn">Register</button>
+
+</div>
+
+//----------------------------------------------------------
+
+ <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<script type="text/javascript">  
+    console.log("hello");
+     $(document).ready(function(){
+        console.log("document is initialized");
+        $('#btn').click(onClick)
+        $('#btnchangepassword').click(onChangePassword);
+        $('#registerbtn').click(onRegister);
+    }); 
+    
+    function onClick() {  
+        //get data from email and password text boxex
+
+        var strEmail=($('#txtemail').val());
+        var strPassword=($('#txtpassword').val());
+
+        //create JSON object to store textboxes contents into json
+
+        var credential = {
+                     "email":strEmail ,
+                     "password":strPassword  
+       }
+
+       
+
+       //Invoke REST API programmatically using $.ajax  JQuery function
+       var restAPIUrl='/secure/validate'
+
+       //IT will invoke Remote REST API 
+
+        $.ajax({  
+            url:restAPIUrl ,                                // link of REST API url
+            type: "POST",                                   // type of HTTP request
+            contentType: "application/json; charset=utf-8",//  What is the type of content of REST body
+            data: JSON.stringify(credential),              // data to be sent through request body
+
+                                                           //callback function to be called on failure of REST API call
+            error: function(xhr, status, error) {  
+
+                var err = eval("(" + xhr.responseText + ")");  
+                toastr.error(err.message);  
+            },  
+
+                                                     //callback function to be called on success of REST API call
+
+            success: function(data) {  
+                console.log("valid user");  
+                return false;  
+            }  
+        });  
+        return false;  
+    }
+
+    //Event handler for on change password
+
+     function onChangePassword() {  
+        //get data from email and password text boxex
+        console.log("okk..");
+        var strEmail=($('#txtchangeemail').val());
+        var strOldPassword=($('#txtoldpassword').val());
+         var strNewPassword=($('#txtnewpassword').val());
+
+        //create JSON object to store textboxes contents into json
+
+        var credentialToUpdate = {
+                     "email":strEmail ,
+                     "oldpassword":strOldPassword  ,
+                     "newpassword":strNewPassword  
+       }
+
+       
+
+       //Invoke REST API programmatically using $.ajax  JQuery function
+       var restAPIUrl1='/secure/changePassword'
+
+       //IT will invoke Remote REST API 
+
+        $.ajax({  
+            url:restAPIUrl1 ,                                // link of REST API url
+            type: "PUT",                                   // type of HTTP request
+            contentType: "application/json; charset=utf-8",//  What is the type of content of REST body
+            data: JSON.stringify(credentialToUpdate),              // data to be sent through request body
+
+                                                           //callback function to be called on failure of REST API call
+            error: function(xhr, status, error) {  
+
+                var err = eval("(" + xhr.responseText + ")");  
+                toastr.error(err.message);  
+            },  
+
+                                                     //callback function to be called on success of REST API call
+
+            success: function(data) {  
+                console.log("Password is updated");  
+                return false;  
+            }  
+        });  
+        return false;  
+    }
+
+
+
+
+    
+     function onRegister() {  
+        //get data from email and password text boxex
+        console.log("okk..");
+        var strFirstName=($('#txtfirstname').val());
+        var strLastName=($('#txtlastname').val());
+        var strContactNumber=($('#txtcontactnumber').val());
+        var strAccountNumber=($('#txtaccountnumber').val());
+        var strEmail=($('#txtregisteremail').val());
+         var strPassword=($('#txtregisterpassword').val());
+
+        //create JSON object to store textboxes contents into json
+
+        var credentialToRegister = {
+                    "firstName": strFirstName,
+                    "lastName": strLastName,
+                    "contactNumber":strContactNumber,
+                    "accountNumber":strAccountNumber,
+                    "email":strEmail ,
+                    "password":strPassword  
+       }
+
+       
+
+       //Invoke REST API programmatically using $.ajax  JQuery function
+       var restAPIUrl='/secure/Register'
+
+       //IT will invoke Remote REST API 
+
+        $.ajax({  
+            url:restAPIUrl ,                                // link of REST API url
+            type: "POST",                                   // type of HTTP request
+            contentType: "application/json; charset=utf-8",//  What is the type of content of REST body
+            data: JSON.stringify(credentialToRegister),              // data to be sent through request body
+
+                                                           //callback function to be called on failure of REST API call
+            error: function(xhr, status, error) {  
+
+                var err = eval("(" + xhr.responseText + ")");  
+                toastr.error(err.message);  
+            },  
+
+                                                     //callback function to be called on success of REST API call
+
+            success: function(data) {  
+                console.log("Registerd..");  
+                return false;  
+            }  
+        });  
+        return false;  
+
+     }
+</script>  

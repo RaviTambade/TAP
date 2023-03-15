@@ -106,7 +106,7 @@ INSERT INTO products(product_title,description,stock_available,unit_price,image,
 INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('Slice','Making from Mangoes',10000,40,'./images/Slice.jpg',2);
 INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('coco-cola','Drinking any time',6000,40,'./images/coco_cola.jpg',2);
 
-select * from accounts;
+select * from customers;
 
 INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('Maggi','Making in 2 minutes',500,12,'./images/Maggi.jpg',3);
 INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('FrenchFries','Making for instatnt eat',1000,40,'./images/Francci.jpg',3);

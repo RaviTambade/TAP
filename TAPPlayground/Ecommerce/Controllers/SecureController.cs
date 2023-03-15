@@ -16,6 +16,13 @@ public class SecureController : Controller
     {
         this._securessvr = secureservice;
     }
+
+   
+    public IActionResult Index()
+    {
+        return View();
+    }
+
     [HttpPost]
     public JsonResult Register([FromBody]Customer customer)
     {
