@@ -6,7 +6,7 @@ namespace ECommerceApp.Repositories;
 
 public class TransactionRepository : ITransactionRepository
 {
-    public static string conString="server=localhost;port=3306;user=root;password=Password;database=Ecommerce";
+    public static string conString="server=localhost;port=3306;user=root;password=Rohit@7378;database=Ecommerce";
 
     public List<Transaction> GetAllTransaction()
     {
@@ -32,7 +32,7 @@ public class TransactionRepository : ITransactionRepository
                     TransactionId = id,
                     FromAccountNumber = fromAccountNumber,
                     ToAccountNumber = toAccountNumber,
-                    TransactionDate = transactionDate,
+                    TransactionDate = transactionDate.ToShortDateString(),
                     Amount = amount
                 };
                 transactions.Add(transaction);
@@ -73,7 +73,7 @@ public class TransactionRepository : ITransactionRepository
                     TransactionId = transactionId,
                     FromAccountNumber = fromAccountNumber,
                     ToAccountNumber = toAccountNumber,
-                    TransactionDate = transactionDate,
+                    TransactionDate = transactionDate.ToShortDateString(),
                     Amount = amount
                 };
             }
@@ -90,14 +90,19 @@ public class TransactionRepository : ITransactionRepository
         return transaction;
     }
 
-
     public bool InsertTransaction(Transaction transaction)
     {
+        Console.WriteLine("Printing emp Object");
+        Console.WriteLine(transaction.FromAccountNumber);
+        Console.WriteLine(transaction.ToAccountNumber);
+        Console.WriteLine(transaction.TransactionDate);
+        Console.WriteLine(transaction.Amount);
         bool status=false;
         MySqlConnection connection=new MySqlConnection();
         connection.ConnectionString=conString;
         try{
-            string query=$"INSERT INTO transaction(from_account_number,to_account_number,transaction_date,amount)VALUES('{transaction.FromAccountNumber}','{transaction.ToAccountNumber}','{transaction.TransactionDate}','{transaction.Amount}')";
+            string query=$"INSERT INTO transactions(from_account_number,to_account_number,transaction_date,amount)VALUES"+
+                        "('"+transaction.FromAccountNumber+"','"+ transaction.ToAccountNumber+ "','" +transaction.TransactionDate + "'," + transaction.Amount+")";
             connection.Open();
             MySqlCommand command=new MySqlCommand(query ,connection);
             command.ExecuteNonQuery();
@@ -113,13 +118,15 @@ public class TransactionRepository : ITransactionRepository
     }
 
     public bool UpdateTransaction(Transaction transaction)
-    {
+    {   
+        Console.WriteLine(transaction.Amount);
         bool status = false;
         MySqlConnection connection = new MySqlConnection();
         connection.ConnectionString = conString;
         try
         {
             string query = "UPDATE transactions SET from_account_number='" + transaction.FromAccountNumber + "', to_account_number='" + transaction.ToAccountNumber + "', transaction_date='" + transaction.TransactionDate +"', amount='" + transaction.Amount +"' WHERE transaction_id=" +transaction.TransactionId;
+            Console.WriteLine(query);
             MySqlCommand command = new MySqlCommand(query, connection);
             connection.Open();
             command.ExecuteNonQuery();
@@ -135,7 +142,6 @@ public class TransactionRepository : ITransactionRepository
             connection.Close();
         }
         return status;
-
     }
 
       public bool DeleteTransaction(int id)

@@ -31,7 +31,7 @@ public class EmployeesController : Controller
 
 
     [HttpPost]
-    public JsonResult InsertEmp([FromBody]Employee emp)
+    public JsonResult InsertEmp([FromBody] Employee emp)
     {
         Console.WriteLine("In Controller");
         Console.WriteLine(emp);
@@ -45,7 +45,7 @@ public class EmployeesController : Controller
         bool result = _empsrv.UpdateEmp(emp);
         return Json(result);
     }
-   
+
 
     [HttpDelete]
     public JsonResult DeleteEmp(int id)
