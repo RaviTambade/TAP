@@ -1,7 +1,8 @@
+-- Active: 1678116914124@@127.0.0.1@3306@ecommerce
 
--- drop DATABASE ecommerce;
--- CREATE DATABASE Ecommerce;
--- USE Ecommerce;
+
+CREATE DATABASE Ecommerce;
+USE Ecommerce;
 CREATE TABLE users( user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, email VARCHAR(25) UNIQUE NOT NULL, contact_number VARCHAR(20) NOT NULL UNIQUE,password VARCHAR(15) NOT NULL);
 CREATE TABLE accounts(account_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,account_number BIGINT UNIQUE, ifsc_code VARCHAR(50) ,register_date DATETIME ,balance DOUBLE);
 CREATE TABLE customers(cust_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, first_name VARCHAR(25), last_name VARCHAR(25),email VARCHAR(25) UNIQUE NOT NULL,contact_number VARCHAR(20) UNIQUE NOT NULL, password VARCHAR(15) NOT NULL,account_number BIGINT NOT NULL UNIQUE ,CONSTRAINT fk_account_no3 FOREIGN KEY(account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE);
@@ -59,8 +60,8 @@ INSERT INTO transactions(from_account_number, to_account_number,transaction_date
 INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025545659,39025545663,'2023-03-01 12:40:35',22500);
 INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025545658,39025545665,'2023-03-01 12:40:35',22500);
 
-select * from users;
-desc customers;
+select * from transactions;
+
 
 
 
@@ -106,7 +107,7 @@ INSERT INTO products(product_title,description,stock_available,unit_price,image,
 INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('Slice','Making from Mangoes',10000,40,'./images/Slice.jpg',2);
 INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('coco-cola','Drinking any time',6000,40,'./images/coco_cola.jpg',2);
 
-select * from customers;
+select * from transactions;
 
 INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('Maggi','Making in 2 minutes',500,12,'./images/Maggi.jpg',3);
 INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('FrenchFries','Making for instatnt eat',1000,40,'./images/Francci.jpg',3);

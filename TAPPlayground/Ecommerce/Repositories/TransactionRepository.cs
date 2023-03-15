@@ -103,6 +103,7 @@ public class TransactionRepository : ITransactionRepository
         try{
             string query=$"INSERT INTO transactions(from_account_number,to_account_number,transaction_date,amount)VALUES"+
                         "('"+transaction.FromAccountNumber+"','"+ transaction.ToAccountNumber+ "','" +transaction.TransactionDate + "'," + transaction.Amount+")";
+            Console.WriteLine(query);            
             connection.Open();
             MySqlCommand command=new MySqlCommand(query ,connection);
             command.ExecuteNonQuery();
