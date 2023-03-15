@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using ECommerceApp.Models;
@@ -14,6 +15,6 @@ public List<Account> GetAllAccounts()=>_repo.GetAllAccounts();
 public Account GetAccountById(int id)=>_repo.GetAccountById(id);
 public bool InsertAccount(Account account)=>_repo.InsertAccount(account);
 public bool UpdateAccount(Account account)=>_repo.UpdateAccount(account);
-public bool DeleteAccount(int id)=>_repo.DeleteAccount(id);
+public bool DeleteAccount(Int32  id)=>_repo.DeleteAccount(id);
 
 }

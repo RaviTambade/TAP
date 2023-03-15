@@ -35,7 +35,7 @@ public class AccountsController : Controller
         return Json(status);
 }
    [HttpDelete]
-    public JsonResult DeleteAccount(int id)
+    public JsonResult DeleteAccount(Int32 id)
     {
         bool status=_accountserv.DeleteAccount(id);
         return Json(status);
