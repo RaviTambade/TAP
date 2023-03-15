@@ -6,7 +6,7 @@ namespace ECommerceApp.Repositories;
 
 public class TransactionRepository : ITransactionRepository
 {
-    public static string conString="server=localhost;port=3306;user=root;password=Rohit@7378;database=Ecommerce";
+    public static string conString="server=localhost;port=3306;user=root;password=password;database=Ecommerce";
 
     public List<Transaction> GetAllTransaction()
     {
@@ -24,7 +24,7 @@ public class TransactionRepository : ITransactionRepository
                 int id = int.Parse(reader["transaction_id"].ToString());
                 long fromAccountNumber = long.Parse(reader["from_account_number"].ToString());
                 long toAccountNumber = long.Parse(reader["to_account_number"].ToString());
-                DateTime transactionDate = DateTime.Parse(reader["transaction_date"].ToString());
+                DateTime transactiondate = DateTime.Parse(reader["transaction_date"].ToString(),System.Globalization.CultureInfo.InvariantCulture);
                 double amount = double.Parse(reader["amount"].ToString());
 
                 Transaction transaction = new Transaction
@@ -32,7 +32,7 @@ public class TransactionRepository : ITransactionRepository
                     TransactionId = id,
                     FromAccountNumber = fromAccountNumber,
                     ToAccountNumber = toAccountNumber,
-                    TransactionDate = transactionDate.ToShortDateString(),
+                    TransactionDate = transactiondate.ToLongDateString(),
                     Amount = amount
                 };
                 transactions.Add(transaction);
@@ -65,7 +65,7 @@ public class TransactionRepository : ITransactionRepository
                int transactionId = int.Parse(reader["transaction_id"].ToString());
                 long fromAccountNumber = long.Parse(reader["from_account_number"].ToString());
                 long toAccountNumber = long.Parse(reader["to_account_number"].ToString());
-                DateTime transactionDate = DateTime.Parse(reader["transaction_date"].ToString());
+                DateTime transactionDate = DateTime.Parse(reader["transaction_date"].ToString(),System.Globalization.CultureInfo.InvariantCulture);
                 double amount = double.Parse(reader["amount"].ToString());
 
                 transaction = new Transaction()
@@ -73,7 +73,7 @@ public class TransactionRepository : ITransactionRepository
                     TransactionId = transactionId,
                     FromAccountNumber = fromAccountNumber,
                     ToAccountNumber = toAccountNumber,
-                    TransactionDate = transactionDate.ToShortDateString(),
+                    TransactionDate = transactionDate.ToLongDateString(),
                     Amount = amount
                 };
             }
@@ -101,7 +101,7 @@ public class TransactionRepository : ITransactionRepository
         MySqlConnection connection=new MySqlConnection();
         connection.ConnectionString=conString;
         try{
-            string query=$"INSERT INTO transactions(from_account_number,to_account_number,transaction_date,amount)VALUES"+
+            string query="INSERT INTO transactions(from_account_number,to_account_number,transaction_date,amount)VALUES"+
                         "('"+transaction.FromAccountNumber+"','"+ transaction.ToAccountNumber+ "','" +transaction.TransactionDate + "'," + transaction.Amount+")";
             Console.WriteLine(query);            
             connection.Open();

@@ -1,0 +1,163 @@
+<div>
+    <h5>Insert OrderDetails</h5>
+
+    
+        <table>
+        <tr>
+            <th><label>Order Id:</label> </th>
+            <td><input type="number" name="orderId" id="orderId"/></td>
+        </tr>
+        <tr>
+            <th> <label>ProductId:</label> </th>
+            <td><input type="number" name="productId" id="productId"/> </td>
+        </tr>
+         <tr>
+            <th> <label>Quantity:</label> </th>
+            <td><input type="number" name="quantity" id="quantity"/> </td>
+        </tr>
+        <tr>
+            <th> <label>Discount:</label> </th>
+            <td><input type="number" name="discount" id="discount"/> </td>
+        </tr>
+        <tr>
+            <th> <label>SupplierId:</label> </th>
+            <td><input type="number" name="supplierId" id="supplierId"/> </td>
+        </tr>
+    </table>
+    <button  id="btn">Insert</button>
+  
+</div>
+
+<hr/>
+
+<div>
+    <h5>Update OrderDetails</h5>
+
+    
+        <table>
+         <tr>
+            <th><label>OrderDetails Id:</label> </th>
+            <td><input type="number" name="updateOrderDetailsId" id="updateOrderDetailsId"/></td>
+        </tr>
+        <tr>
+            <th><label>Order Id:</label> </th>
+            <td><input type="number" name="updateOrderId" id="updateOrderId"/></td>
+        </tr>
+        <tr>
+            <th> <label>ProductId:</label> </th>
+            <td><input type="number" name="updateProductId" id="updateProductId"/> </td>
+        </tr>
+         <tr>
+            <th> <label>Quantity:</label> </th>
+            <td><input type="number" name="updateQuantity" id="updateQuantity"/> </td>
+        </tr>
+        <tr>
+            <th> <label>Discount:</label> </th>
+            <td><input type="number" name="updateDiscount" id="updateDiscount"/> </td>
+        </tr>
+        <tr>
+            <th> <label>SupplierId:</label> </th>
+            <td><input type="number" name="updateSupplierId" id="updateSupplierId"/> </td>
+        </tr>
+    </table>
+    <button  id="updatebtn">Update</button>
+  
+</div>
+
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<script type="text/javascript">  
+    console.log("hello");
+     $(document).ready(function(){
+        console.log("document is initialized");
+        $('#btn').click(onRegister);
+        $('#updatebtn').click(onUpdate);
+    }); 
+    
+    function onRegister() {  
+        var strOrderId=($('#orderId').val());
+        var strProductId=($('#productId').val());
+        var strquantity=($('#quantity').val());
+        var strdiscount=($('#discount').val());
+        var strsupplierId=($('#supplierId').val());
+
+        var data = {
+                     
+                     "orderId":strOrderId ,
+                     "productId":strProductId,
+                     "quantity":strquantity,
+                     "discount":strdiscount,
+                     "supplierId":strsupplierId
+       }
+
+    console.log(strOrderId);
+
+        $.ajax({  
+            url: "/OrderDetails/InsertOrderdetails",                               
+            type: "POST",                                  
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(data),             
+            
+                                                           
+            error: function(xhr, status, error) {  
+                var err = eval("(" + xhr.responseText + ")");  
+                toastr.error(err.message);  
+            },    
+
+            success: function(response) {  
+                console.log(response);
+                console.log("data inserted sucessfully");  
+                alert("data sucessfully inserted ")
+                
+               
+                return false;  
+            }  
+        });  
+        return false;  
+    }
+
+     
+    function onUpdate() {  
+        var strOrderDetailsId=($('#updateOrderDetailsId').val());
+        var strOrderId=($('#updateOrderId').val());
+        var strProductId=($('#updateProductId').val());
+        var strquantity=($('#updateQuantity').val());
+        var strdiscount=($('#updateDiscount').val());
+        var strsupplierId=($('#updateSupplierId').val());
+
+        var data = {
+                     "orderDetailsId":strOrderDetailsId,
+                     "orderId":strOrderId ,
+                     "productId":strProductId,
+                     "quantity":strquantity,
+                     "discount":strdiscount,
+                     "supplierId":strsupplierId
+       }
+
+    console.log(strOrderDetailsId);
+
+        $.ajax({  
+            url: "/OrderDetails/UpdateOrderDetails",                               
+            type: "PUT",                                  
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(data),             
+            
+                                                           
+            error: function(xhr, status, error) {  
+                var err = eval("(" + xhr.responseText + ")");  
+                toastr.error(err.message);  
+            },    
+
+            success: function(response) {
+                
+                console.log(response);
+                console.log("data updated sucessfully");  
+                return false;  
+            }  
+        });  
+        return false;  
+    }
+
+</script>
