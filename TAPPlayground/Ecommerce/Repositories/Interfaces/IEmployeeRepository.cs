@@ -12,4 +12,5 @@ public interface IEmployeeRepository
     bool InsertEmp(Employee emp);
     bool UpdateEmp(Employee emp);
     bool DeleteEmp(int id);
+    
 }
