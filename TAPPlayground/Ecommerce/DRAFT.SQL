@@ -37,7 +37,7 @@ BEGIN
 END //
 DELIMITER ;
 
-INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546671,'MAHB0000286','2023-03-01 12:40:40',22555);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546676,'MAHB0000286','2023-03-01 12:40:40',22555);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545655,'MAHB0000286','2023-03-01 12:40:35',22500);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545656,'UNB0000286','2023-04-15 02:45:35',2250025);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545657,'BARBO0000286','2023-03-04 02-40-35',225700);
@@ -59,7 +59,9 @@ INSERT INTO transactions(from_account_number, to_account_number,transaction_date
 INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025545659,39025545663,'2023-03-01 12:40:35',22500);
 INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025545658,39025545665,'2023-03-01 12:40:35',22500);
 
-select * from transactions;
+select * from users;
+desc customers;
+
 
 
 INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Sahil','Mankar','sahil.m@gmail.com','9960916323','sahil@123',39025545656);
@@ -103,6 +105,8 @@ INSERT INTO products(product_title,description,stock_available,unit_price,image,
 INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('Fizz','Making from apple',2000,25,'./images/Fizz.jpg',2);
 INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('Slice','Making from Mangoes',10000,40,'./images/Slice.jpg',2);
 INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('coco-cola','Drinking any time',6000,40,'./images/coco_cola.jpg',2);
+
+select * from accounts;
 
 INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('Maggi','Making in 2 minutes',500,12,'./images/Maggi.jpg',3);
 INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('FrenchFries','Making for instatnt eat',1000,40,'./images/Francci.jpg',3);
