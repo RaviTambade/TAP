@@ -26,6 +26,34 @@ public class TransactionController : Controller
         return Json(transactions);
     }
 
+    [HttpGet]
+    public JsonResult GetTransactionById(int id){
+        var transaction=_transactionsrv.GetTransactionById(id);
+        return Json(transaction);
+    }
+    
+    [HttpPost]
+    [Route("transactions/inserttransaction")]
+     public JsonResult InsertTransaction([FromBody] Transaction transaction){
+        bool status=_transactionsrv.InsertTransaction(transaction);
+        return Json(status);
+    }
+
+    [HttpPut]
+    public JsonResult UpdateTransaction([FromBody] Transaction transaction)
+    {
+        bool result = _transactionsrv.UpdateTransaction(transaction);
+        return Json(result);
+    }
+
+    [HttpDelete]
+    public JsonResult DeleteTransaction(int id)
+    {
+        Console.WriteLine(id);
+        bool supplier = _transactionsrv.DeleteTransaction(id);
+        return Json(supplier);
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

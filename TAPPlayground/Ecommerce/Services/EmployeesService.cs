@@ -19,7 +19,7 @@ public class EmployeeService : IEmployeeService
 
    public Employee GetEmployeeById(int id)=> _repo.GetEmployeeById(id);
 
-    public bool InsertEmp (Employee emp) => _repo.InsertEmp(emp);
+    public bool InsertEmp(Employee emp) => _repo.InsertEmp(emp);
 
     public bool UpdateEmp(Employee emp)=> _repo.UpdateEmp(emp);
 

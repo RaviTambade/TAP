@@ -7,7 +7,7 @@ namespace ECommerceApp.Repositories;
 public class SupplierRepository : ISupplierRepository
 
 {
-    public static string conString = "server=localhost;port=3306;user=root;password=password;database=ecommerce";
+    public static string conString = "server=localhost;port=3306;user=root;password=Password;database=ecommerce";
     public List<Supplier> GetAllSuppliers()
     {
         List<Supplier> suppliers = new List<Supplier>();
@@ -188,7 +188,7 @@ public class SupplierRepository : ISupplierRepository
     }
           public bool DeleteSupplier(int id)
     {
-         bool status = false;
+        bool status = false;
         MySqlConnection con = new MySqlConnection();
         con.ConnectionString = conString;
         try

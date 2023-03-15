@@ -6,7 +6,7 @@ public class OrderDetailsRepository : IOrderDetailsRepository
 {
 
 
-    public static string conString = "server=localhost;port=3306;user=root;password=password;database=Ecommerce";
+    public static string conString = "server=localhost;port=3306;user=root;password=Password;database=Ecommerce";
     public List<OrderDetails> GetAllOrderDetails()
     {
         List<OrderDetails> orderDetails = new List<OrderDetails>();
