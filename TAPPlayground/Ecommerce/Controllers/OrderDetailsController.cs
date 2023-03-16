@@ -15,6 +15,11 @@ public class OrderDetailsController : Controller
         _srv = srv;
     }
 
+    [HttpGet]
+    public IActionResult Index()
+    {
+        return View();
+    }
     // Getting all Records of orderdetails
     [HttpGet]
     public JsonResult GetAllOrderDetails()

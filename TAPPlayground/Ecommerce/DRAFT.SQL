@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 -- Active: 1678859769284@@127.0.0.1@3306@ecommerce
+=======
+-- Active: 1677916902963@@127.0.0.1@3306@ecommerce
 
--- drop DATABASE ecommerce;
+
+>>>>>>> c1071a4db1536ad49d740fd57fba2a84cab9c958
+
 -- CREATE DATABASE Ecommerce;
+-- drop DATABASE ecommerce;
+-- USE  Ecommerce;
+
 USE Ecommerce;
 CREATE TABLE users( user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, email VARCHAR(25) UNIQUE NOT NULL, contact_number VARCHAR(20) NOT NULL UNIQUE,password VARCHAR(15) NOT NULL);
 CREATE TABLE accounts(account_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,account_number BIGINT UNIQUE, ifsc_code VARCHAR(50) ,register_date DATETIME ,balance DOUBLE);
@@ -38,11 +46,16 @@ BEGIN
 END //
 DELIMITER ;
 
+<<<<<<< HEAD
 select * from payments;
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546630,'MAHB0000286','2023-03-01 12:40:40',22555);
-INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546671,'MAHB0000286','2023-03-01 12:40:40',22555);
 =======
+select * from accounts;
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546621,'MAHB0000286','2023-03-01 12:40:40',22555);
+>>>>>>> c1071a4db1536ad49d740fd57fba2a84cab9c958
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546671,'MAHB0000286','2023-03-01 12:40:40',22555);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 3902554668,'MAHB0000286','2023-03-01 12:40:40',22555);
 
@@ -50,6 +63,14 @@ INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 390
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546334,'MAHB0000286','2023-03-01 12:40:40',22555);
 
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546975,'MAHB0000286','2023-03-01 12:40:40',22555);
+=======
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546682,'MAHB0000286','2023-03-01 12:40:40',22555);
+
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546333,'MAHB0000286','2023-03-01 12:40:40',22555);
+
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546676,'MAHB0000286','2023-03-01 12:40:40',22555);
+
+>>>>>>> c1071a4db1536ad49d740fd57fba2a84cab9c958
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545655,'MAHB0000286','2023-03-01 12:40:35',22500);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545656,'UNB0000286','2023-04-15 02:45:35',2250025);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545657,'BARBO0000286','2023-03-04 02-40-35',225700);
@@ -72,11 +93,18 @@ INSERT INTO transactions(from_account_number, to_account_number,transaction_date
 INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025545658,39025545665,'2023-03-01 12:40:35',22500);
 
 
-select * from customers;
+<<<<<<< HEAD
 =======
+select * from transactions;
+
+
+
+>>>>>>> c1071a4db1536ad49d740fd57fba2a84cab9c958
+select * from customers;
+
 select * from suppliers;
->>>>>>> 1319a8f134d704b91305e38cdeb648b84d9b7e2c
 desc customers;
+
 
 
 
@@ -97,6 +125,7 @@ INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_nu
 INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Rohit','Gore','1996-05-12','2022-09-07','7776320158','RGore@gmail.com','RG123654' ,'./images/RG.jpg', 4,39025545664);
 INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Pragati','Bangar','1998-05-10','2022-11-09','9666320158','PBangar@gmail.com','PB123654' ,'./images/PB.jpg', 5,39025545665);
 
+select * from orders;
 
 /*possible vales  for addressmode:1:only residential ,2:only delivery address,3:residentail and delivery*/
 INSERT INTO addresses(cust_id,address_mode,house_number,landmark,city,state,country,pincode)VALUES(1,'permanent','houseNo.12','Pune-Nashik Highway','Manchar','Maharashtra','India','123321');
@@ -122,7 +151,7 @@ INSERT INTO products(product_title,description,stock_available,unit_price,image,
 INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('Slice','Making from Mangoes',10000,40,'./images/Slice.jpg',2);
 INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('coco-cola','Drinking any time',6000,40,'./images/coco_cola.jpg',2);
 
-select * from customers;
+select * from transactions;
 
 INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('Maggi','Making in 2 minutes',500,12,'./images/Maggi.jpg',3);
 INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('FrenchFries','Making for instatnt eat',1000,40,'./images/Francci.jpg',3);

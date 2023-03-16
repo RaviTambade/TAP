@@ -47,7 +47,9 @@ public class SuppliersController:Controller{
       [HttpPut]
       [Route("suppliers/updatesupplier")]
     public JsonResult UpdateSupplier([FromBody]Supplier supplier){
-        bool status=_srv.InsertSupplier(supplier);
+      Console.WriteLine(supplier.AccountNumber);
+      Console.WriteLine(supplier.CompanyName);
+        bool status=_srv.UpdateSupplier(supplier);
         return Json(status);
     }
 

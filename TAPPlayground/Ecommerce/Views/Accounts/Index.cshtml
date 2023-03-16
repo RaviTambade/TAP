@@ -1,0 +1,75 @@
+
+
+<div>
+    <h3>Insert</h3>
+        <table>
+        <tr>
+            <th><label>AccountNumber</label> </th>
+            <td><input type="number" name="accountNumber" id="txtaccountnumber"/></td>
+        </tr>
+          <tr>
+            <th> <lable>IFSCCode</lable> </th>
+            <td><input type="txt" name="ifscCode" id="txtifsccode"/> </td>
+        </tr>
+          <tr>
+            <th> <lable>RegisterDate</lable> </th>
+            <td><input type="datetime" name="registerDate" id="txtregisterdate"/> </td>
+        </tr>
+         <tr>
+            <th> <lable>Balance</lable> </th>
+            <td><input type="number" name="balance" id="txtbalance"/> </td>
+        </tr>
+    </table>
+    <button  id="btn">Insert</button>
+</div>
+
+
+
+ <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<script type="text/javascript">  
+     $(document).ready(function(){
+        console.log("Hello")
+        $('#btn').click(onClick)
+    }); 
+    
+    function onClick() {  
+
+        var strAccountNumber=($('#txtaccountnumber').val());
+        var strIFSCCode=($('#txtifsccode').val());
+        var strRegisterDate=($('#txtregisterdate').val());
+        var strBalance=($('#txtbalance').val());
+
+
+
+        var credential = {
+                     "accountNumber":strAccountNumber ,
+                     "ifscCode":strIFSCCode , 
+                    "registerDate":strRegisterDate , 
+                     "balance":strBalance           
+       }
+
+       var restAPIUrl='/accounts/InsertAccount' 
+
+        $.ajax({  
+            url:restAPIUrl ,                               
+            type: "POST",                                   
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(credential),              
+
+                                                           
+            error: function(xhr, status, error) {  
+
+                var err = eval("(" + xhr.responseText + ")");  
+                toastr.error(err.message);  
+            },
+
+            success: function(data) {  
+                console.log("Insert Account");  
+                return false;  
+            }  
+        });  
+        return false;  
+    }
+</script>
+    

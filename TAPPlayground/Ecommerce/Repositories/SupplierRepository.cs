@@ -170,6 +170,7 @@ public class SupplierRepository : ISupplierRepository
         try
         {
             string query = "UPDATE suppliers SET company_name='" +supplier.CompanyName + "', supplier_name='" + supplier.SupplierName + "', contact_number='" + supplier.ContactNumber +"', email='" + supplier.Email +"', address='" + supplier.Address +"', city='" + supplier.City+"', state='" + supplier.State+"', account_number='" + supplier.AccountNumber +"' WHERE supplier_id=" +supplier.SupplierId;
+            Console.WriteLine(query);
             MySqlCommand command = new MySqlCommand(query, connection);
             connection.Open();
             command.ExecuteNonQuery();

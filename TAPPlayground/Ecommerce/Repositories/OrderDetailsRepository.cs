@@ -6,7 +6,7 @@ public class OrderDetailsRepository : IOrderDetailsRepository
 {
 
 
-    public static string conString = "server=localhost;port=3306;user=root;password=Password;database=Ecommerce";
+    public static string conString = "server=localhost;port=3306;user=root;password=password;database=Ecommerce";
     public List<OrderDetails> GetAllOrderDetails()
     {
         List<OrderDetails> orderDetails = new List<OrderDetails>();
@@ -205,6 +205,7 @@ public class OrderDetailsRepository : IOrderDetailsRepository
         {
             string query = $"INSERT INTO orderdetails(order_id,product_id,quantity,discount,supplier_id)VALUES('{orderDetails.OrderId}','{orderDetails.ProductId}','{orderDetails.Quantity}','{orderDetails.Discount}','{orderDetails.SupplierId}')";
             con.Open();
+            Console.WriteLine(query);
             MySqlCommand command = new MySqlCommand(query, con);
             command.ExecuteNonQuery();
             status = true;
@@ -230,6 +231,7 @@ public class OrderDetailsRepository : IOrderDetailsRepository
         {
             string query = $"Update orderdetails SET order_id='{orderDetails.OrderId}',product_id ='{orderDetails.ProductId}',quantity ='{orderDetails.Quantity}',discount='{orderDetails.Discount}',supplier_id='{orderDetails.SupplierId}' WHERE orderdetails_id='{orderDetails.OrderDetailsId}' ";
             con.Open();
+            Console.WriteLine(query);
             MySqlCommand command = new MySqlCommand(query, con);
             command.ExecuteNonQuery();
             status = true;
