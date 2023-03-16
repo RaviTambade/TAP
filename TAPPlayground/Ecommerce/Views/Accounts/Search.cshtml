@@ -1,0 +1,77 @@
+@model ECommerceApp.Models.Account
+<th>AccountSearch</th>
+<table>
+    <tr>
+        <td>
+    <tr>
+        <td><input type="txt" name="Search" id="txtaccountId" placeholder="Enter Account Id"></td>
+        <td><button id="btnsearch">Search</button></td>
+    </tr>
+    </td>
+    </tr>
+</table>
+<table>
+
+    <tr>
+        <th>Account Number</th>
+        <td><label id="accountNumber"></label></td>
+    </tr>
+    <tr>
+        <th>IFSC Code</th>
+        <td>
+            <lable id="ifscCode"></lable>
+        </td>
+
+    </tr>
+    <tr>
+        <th>Register Date</th>
+        <td>
+            <lable id="registerDate"></lable>
+        </td>
+
+    </tr>
+    <tr>
+        <th>Balance</th>
+        <td>
+        <lable id="balance"></lable>
+        </td>
+    </tr>
+
+
+</table>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#btnsearch").click(function () {
+            var id = $('#txtaccountId').val();
+
+            var restApiUrl = "http://localhost:5223/accounts/GetAccountById/" + id;
+
+            console.log(restApiUrl);
+            $.ajax({
+                url: restApiUrl,
+                dataType: "json",
+                type: "GET",
+
+                error: function (xhr, status, error) {
+                    var err = eval("(" + xhr.responseText + ")");
+                    toastr.error(err.message);
+                    console.log(err);
+                },
+
+                success: function (data) {
+
+                    $("#accountNumber").text(data.accountNumber);
+                    $("#ifscCode").text(data.ifscCode);
+                    $("#registerDate").text(data.registerDate);
+                    $("#balance").text(data.balance);
+                    return false;
+                }
+            });
+
+        })
+    });
+
+</script>

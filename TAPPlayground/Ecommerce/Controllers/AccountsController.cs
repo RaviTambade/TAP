@@ -22,6 +22,11 @@ public class AccountsController : Controller
         var account=_accountserv.GetAccountById(id);
         return Json(account);
     }
+    [HttpGet]
+    public IActionResult Search(int id)
+    {
+           return View();
+    }
 [HttpGet]
     public IActionResult Index()
     {
