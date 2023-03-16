@@ -1,4 +1,6 @@
-
+@model ECommerceApp.Models.Account
+@{ViewData["title"]="Login Page";
+}
 
 <div>
     <h3>Insert</h3>
@@ -22,7 +24,34 @@
     </table>
     <button  id="btn">Insert</button>
 </div>
-
+</hr>
+<div>
+    <h3>Update</h3>
+        <table>
+             <tr>
+            <th><label>AccountId</label> </th>
+            <td><input type="number" name="accountId" id="txtupdateaccountid"/></td>
+        </tr>
+        
+        <tr>
+            <th><label>AccountNumber</label> </th>
+            <td><input type="number" name="accountNumber" id="txtupdateaccountnumber"/></td>
+        </tr>
+          <tr>
+            <th> <lable>IFSCCode</lable> </th>
+            <td><input type="txt" name="ifscCode" id="txtupdateifsccode"/> </td>
+        </tr>
+          <tr>
+            <th> <lable>RegisterDate</lable> </th>
+            <td><input type="datetime" name="registerDate" id="txtupdateregisterdate"/> </td>
+        </tr>
+         <tr>
+            <th> <lable>Balance</lable> </th>
+            <td><input type="number" name="balance" id="txtupdatebalance"/> </td>
+        </tr>
+    </table>
+    <button  id="btnUpdate">Update</button>
+</div>
 
 
  <script src="~/lib/jquery/dist/jquery.min.js"></script>
@@ -30,11 +59,11 @@
 <script type="text/javascript">  
      $(document).ready(function(){
         console.log("Hello")
-        $('#btn').click(onClick)
+        $('#btn').click(onClick);
+        $('#btnUpdate').click(onUpdate);
     }); 
     
-    function onClick() {  
-
+    function onClick() {
         var strAccountNumber=($('#txtaccountnumber').val());
         var strIFSCCode=($('#txtifsccode').val());
         var strRegisterDate=($('#txtregisterdate').val());
@@ -43,16 +72,16 @@
 
 
         var credential = {
+                      
                      "accountNumber":strAccountNumber ,
                      "ifscCode":strIFSCCode , 
                     "registerDate":strRegisterDate , 
                      "balance":strBalance           
        }
-
        var restAPIUrl='/accounts/InsertAccount' 
 
         $.ajax({  
-            url:restAPIUrl ,                               
+            url:restAPIUrl,                               
             type: "POST",                                   
             contentType: "application/json; charset=utf-8",
             data: JSON.stringify(credential),              
@@ -71,5 +100,47 @@
         });  
         return false;  
     }
+        function onUpdate() {  
+        var strAccountId=($('#txtupdateaccountid').val());
+        var strAccountNumber=($('#txtupdateaccountnumber').val());
+        var strIFSCCode=($('#txtupdateifsccode').val());
+        var strRegisterDate=($('#txtupdateregisterdate').val());
+        var strBalance=($('#txtupdatebalance').val());
+
+
+
+        var credential = {
+                     "accountId":strAccountId,
+                     "accountNumber":strAccountNumber ,
+                     "ifscCode":strIFSCCode , 
+                    "registerDate":strRegisterDate , 
+                     "balance":strBalance           
+       }
+console.log(credential);
+
+       var restAPIUrl='/accounts/UpdateAccount' 
+console.log(restAPIUrl);
+
+        $.ajax({  
+            url:restAPIUrl,                               
+            type: "PUT",                                   
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(credential),              
+
+                                                           
+            error: function(xhr, status, error) {  
+
+                var err = eval("(" + xhr.responseText + ")");  
+                toastr.error(err.message);  
+            },
+
+            success: function(data) {  
+                console.log("Update Account");  
+                return false;  
+            }  
+        });  
+        return false;  
+    }
 </script>
+
     

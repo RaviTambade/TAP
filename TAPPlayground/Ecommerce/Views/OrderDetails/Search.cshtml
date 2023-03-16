@@ -1,0 +1,71 @@
+
+
+<h1>Search with ID</h1>
+<hr/>
+<table>
+    <tr>
+       
+        <td><input type="text" name="search" id="txtorderdetailsid"></td>
+        
+        <td> <button id="btnsearch">Search</button></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td> 
+         <label id="lblorderid"></label> </br>
+        <label id="lblproductid"></label> </br>
+        <label id="lblquantity"></label></br>
+        <label id="lbldiscount"></label></br>
+        <label id="lblsupplierid"></label></td>
+
+    </tr>
+</table>
+
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+console.log("inside script");
+
+
+$(document).ready(function(){
+console.log("doc initialized");
+
+$("#btnsearch").click(function(){
+    console.log("button Clicked");
+//invoke REST API to fetch data from server
+var orderDetailsId = $('#txtorderdetailsid').val();
+console.log(orderDetailsId);
+
+var restApiUrl= "http://localhost:5223/OrderDetails/GetOrderDetailById/"+orderDetailsId ;
+
+console.log(restApiUrl);
+ $.ajax({  
+            url: restApiUrl,  
+            dataType: "json",  
+            type: "GET",  
+
+            error: function(xhr, status, error) {  
+                var err = eval("(" + xhr.responseText + ")");  
+                toastr.error(err.message); 
+                console.log(err); 
+            },
+            
+            success: function(data) {  
+            console.log(data);
+            
+
+            $("#lblorderid").text(data.orderId);
+            $("#lblproductid").text(data.productId);
+            $("#lblquantity").text(data.quantity);
+            $("#lbldiscount").text(data.discount);
+            $("#lblsupplierid").text(data.supplierId);          
+              return false;  
+            }  
+        }); 
+
+})
+});
+
+
+</script> 

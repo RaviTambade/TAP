@@ -19,6 +19,11 @@ public class TransactionController : Controller
         return View();
     }
 
+    public IActionResult Search()
+    {
+        return View();
+    }
+    
     [HttpGet]
     public JsonResult ShowAllTransactions()
     {
@@ -44,6 +49,7 @@ public class TransactionController : Controller
     [HttpPut]
     public JsonResult UpdateTransaction([FromBody] Transaction transaction)
     {
+        Console.WriteLine(transaction);
         bool result = _transactionsrv.UpdateTransaction(transaction);
         return Json(result);
     }
