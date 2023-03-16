@@ -49,7 +49,7 @@ public class SuppliersController:Controller{
     public JsonResult UpdateSupplier([FromBody]Supplier supplier){
       Console.WriteLine(supplier.AccountNumber);
       Console.WriteLine(supplier.CompanyName);
-        bool status=_srv.InsertSupplier(supplier);
+        bool status=_srv.UpdateSupplier(supplier);
         return Json(status);
     }
 

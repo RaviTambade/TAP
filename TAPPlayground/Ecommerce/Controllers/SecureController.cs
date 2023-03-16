@@ -42,6 +42,7 @@ public class SecureController : Controller
     [HttpPut]
     public JsonResult ChangePassword([FromBody]ChangedCredential user)
     { 
+        Console.WriteLine(user.Email);
         bool result=_securessvr.ChangePassword(user);
         return Json(result);
     }

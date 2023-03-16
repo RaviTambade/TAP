@@ -5,7 +5,7 @@ namespace ECommerceApp.Repositories;
 public class CustomerRepository : ICustomerRepository
 {
 
-    public static string conString="server=localhost;port=3306;user=root;password=Password;database=Ecommerce";
+    public static string conString="server=localhost;port=3306;user=root;password=1234512345;database=Ecommerce";
 
     public List<Customer> GetAllCustomers(){
 
@@ -107,14 +107,19 @@ public class CustomerRepository : ICustomerRepository
                 string? firstname = reader["first_name"].ToString();
                 string? lastname = reader["last_name"].ToString();
                 string? email = reader["email"].ToString();
-                   string? contact=reader["contact_number"].ToString();
+                string? contact=reader["contact_number"].ToString();
+                long accountnumber = long.Parse(reader["account_number"].ToString());
+                string password = reader["password"].ToString();
+
                 customer = new Customer
                 {
                    CustomerId=id,
                    FirstName=firstname,
                    LastName=lastname,
                    Email=email,
-                   ContactNumber=contact
+                   ContactNumber=contact,
+                   AccountNumber=accountnumber,
+                   Password=password   
                 };
             
             }
@@ -158,6 +163,7 @@ public class CustomerRepository : ICustomerRepository
         try{
             
             string query = $"Update customers SET first_name ='{customer.FirstName}',last_name ='{customer.LastName}',email='{customer.Email}',contact_number='{customer.ContactNumber}',password ='{customer.Password}',account_number='{customer.AccountNumber}' WHERE cust_id='{customer.CustomerId}' ";
+            Console.WriteLine(query);
             MySqlCommand cmd=new MySqlCommand(query,con) ;
             con.Open();
             cmd.ExecuteNonQuery();               

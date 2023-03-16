@@ -6,7 +6,11 @@ namespace ECommerceApp.Repositories;
 public class PaymentRepository : IPaymentRepository
 {
       
+
     public static string conString = "server=localhost;port=3306;user=root;password=PASSWORD;database=Ecommerce";
+
+    public static string conString = "server=localhost;port=3306;user=root;password=1234512345;database=Ecommerce";
+
 
     public List<Payment> GetAllPayments()
     {

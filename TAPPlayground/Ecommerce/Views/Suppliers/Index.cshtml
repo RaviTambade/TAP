@@ -54,44 +54,44 @@
         <table>
              <tr>
             <th><label>SupplierId</label> </th>
-            <td><input type="text" name="supplier_id" id="txtsupplierid"/></td>
+            <td><input type="text" name="updatesupplier_id" id="updatetxtsupplierid"/></td>
         </tr>
         <tr>
             <th><label>CompanyName</label> </th>
-            <td><input type="text" name="company_name" id="txtcompanyname"/></td>
+            <td><input type="text" name="updatecompany_name" id="updatetxtcompanyname"/></td>
         </tr>
          <tr>
             <th><label>SupplierName</label> </th>
-            <td><input type="text" name="supplier_name" id="txtsuppliername"/></td>
+            <td><input type="text" name="updatesupplier_name" id="updatetxtsuppliername"/></td>
         </tr>
          <tr>
             <th><label>ContactNumber</label> </th>
-            <td><input type="text" name="contact_number" id="txtcontactnumber"/></td>
+            <td><input type="text" name="updatecontact_number" id="updatetxtcontactnumber"/></td>
         </tr>
 
          <tr>
             <th><label>Email</label> </th>
-            <td><input type="email" name="email" id="txtemail"/></td>
+            <td><input type="email" name="updateemail" id="updatetxtemail"/></td>
         </tr>
 
           <tr>
             <th><label>Address</label></th>
-            <td><input type="text" name="address" id="txtaddress"/> </td>
+            <td><input type="text" name="updateaddress" id="updatetxtaddress"/> </td>
         </tr>
         
           <tr>
             <th> <label>City</label> </th>
-            <td><input type="text" name="city" id="txtcity"/> </td>
+            <td><input type="text" name="updatecity" id="updatetxtcity"/> </td>
         </tr>
 
          <tr>
             <th> <label>State</label> </th>
-            <td><input type="text" name="state" id="txtstate"/> </td>
+            <td><input type="text" name="updatestate" id="updatetxtstate"/> </td>
         </tr>
 
          <tr>
             <th><label>Account number</label> </th>
-            <td><input type="text" name="account_number" id="txtaccountnumber"/></td>
+            <td><input type="text" name="updateaccount_number" id="updatetxtaccountnumber"/></td>
         </tr>
 
     </table>
@@ -140,7 +140,7 @@
        
 
        //Invoke REST API programmatically using $.ajax  JQuery function
-       var restAPIUrl='/suppliers/insertsupplier'
+       var restAPIUrl='/suppliers/insertsupplier';
 
        //IT will invoke Remote REST API 
 
@@ -170,18 +170,18 @@
 
 
        function onUpdate() {  
-        var strSupplierId=($('#txtsupplierid').val());
-        var strCompanyName=($('#txtcompanyname').val());
-        var strSupplierName=($('#txtsuppliername').val());
-        var strContactNumber=($('#txtcontactnumber').val());
-        var strEmail=($('#txtemail').val());
-        var strAddress=($('#txtaddress').val());
-         var strCity=($('#txtcity').val());
-         var strState=($('#txtstate').val());
-         var strAccountNumber=($('#txtaccountnumber').val());
+        var strSupplierId=($('#updatetxtsupplierid').val());
+        var strCompanyName=($('#updatetxtcompanyname').val());
+        var strSupplierName=($('#updatetxtsuppliername').val());
+        var strContactNumber=($('#updatetxtcontactnumber').val());
+        var strEmail=($('#updatetxtemail').val());
+        var strAddress=($('#updatetxtaddress').val());
+         var strCity=($('#updatetxtcity').val());
+         var strState=($('#updatetxtstate').val());
+         var strAccountNumber=($('#updatetxtaccountnumber').val());
 
         var data = {
-                     "supplierId":strSupplierId
+                     "supplierId":strSupplierId,
                     "companyName": strCompanyName ,
                     "supplierName": strSupplierName ,
                     "contactNumber":strContactNumber ,
