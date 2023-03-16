@@ -1,0 +1,67 @@
+@model ECommerceApp.Models.Supplier
+
+<h3>GetSupplier</h3>
+<table>
+
+    <tr>
+        <td><input type="text" name="search" id="txtsupplierid"></td>
+        <td><button id="btnsearch">Search</button></td>
+    </tr>
+
+    <tr>
+        <td>
+            <label id="lblcompanyname">Shubham</label><br />
+            <label id="lblsuppliername">Teli</label><br />
+            <label id="lblcontactnumber">9075966080</label><br />
+            <label id="lblemail">shubham@gmail.com</label><br />
+            <label id="lbladdress">Bhavadi</label><br />
+            <label id="lblcity">Manchar</label><br />
+            <label id="lblstate">Maharashtra</label><br />
+            <label id="lblaccountnumber">90876543237</label>
+        </td>
+    </tr>
+</table>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+    console.log("hello buddy");
+
+    $(document).ready(function () {
+        console.log("ready");
+        $("#btnsearch").click(function () {
+            var supplierId = $('#txtsupplierid').val();
+            console.log(supplierId);
+
+            var restApiUrl = "http://localhost:5223/suppliers/getsupplierbyid/" + supplierId;
+            console.log(restApiUrl);
+
+            $.ajax({
+                url: restApiUrl,
+                dataType: "json",
+                type: "GET",
+
+                error: function (xhr, status, error) {
+                    var err = eval("(" + xhr.responseText + ")");
+                    toastr.error(err.message);
+                    console.log(err);
+                },
+                success: function (data) {
+                    console.log(data);
+                    $('#lblcompanyname').text(data.companyName);
+                    $('#lblsuppliername').text(data.supplierName);
+                    $('#lblcontactnumber').text(data.lblcontactnumber);
+                    $('#lblemail').text(data.email);
+                    $('#lbladdress').text(data.address);
+                    $('#lblcity').text(data.city);
+                    $('#lblstate').text(data.state);
+                    $('#lblaccountnumber').text(data.accountNumber);
+
+                    return false;
+                }
+            });
+        })
+
+    });
+
+
+</script>
