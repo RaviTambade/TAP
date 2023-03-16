@@ -9,7 +9,11 @@ public class PaymentRepository : IPaymentRepository
 
     public static string conString = "server=localhost;port=3306;user=root;password=PASSWORD;database=Ecommerce";
 
+<<<<<<< HEAD
     //public static string conString = "server=localhost;port=3306;user=root;password=1234512345;database=Ecommerce";
+=======
+    // public static string conString = "server=localhost;port=3306;user=root;password=1234512345;database=Ecommerce";
+>>>>>>> a28b7b9cefe093a62d6901d7a0cbe50355868bff
 
 
     public List<Payment> GetAllPayments()
