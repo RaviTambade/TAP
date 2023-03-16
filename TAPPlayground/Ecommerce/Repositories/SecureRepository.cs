@@ -10,15 +10,19 @@ public class SecureRepository : ISecureRepository
     public bool RegisterCustomer(Customer customer)
     {
         bool status = false;
+        string query= $"INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number)VALUES('{customer.FirstName}','{customer.LastName}','{customer.Email}','{customer.ContactNumber}','{customer.Password}','{customer.AccountNumber}')";;
+        Console.WriteLine(query);
+
          MySqlConnection connection=new MySqlConnection(conString);
         try{
             MySqlCommand command=new MySqlCommand();
-            command.CommandText=$"INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number)VALUES('{customer.FirstName}','{customer.LastName}','{customer.Email}','{customer.ContactNumber}','{customer.Password}','{customer.AccountNumber}')";
             command.Connection=connection;
+            command.CommandText=query;
             connection.Open();
             command.ExecuteNonQuery();
             status=true;
         }
+        
         catch(Exception e){
             throw e;
         }

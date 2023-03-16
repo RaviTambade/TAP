@@ -41,9 +41,15 @@ public class OrdersController : Controller
         return View();
     }
 
+    public IActionResult Index()
+    {
+        return View();
+    }
+
    [HttpPost]
    public JsonResult InsertOrders([FromBody] Order order)
-   {
+   {    
+        Console.WriteLine("Order date" +order.OrderDate);
         bool result =_ordersrv.InsertOrders(order);
         return Json(result);
    }
@@ -51,6 +57,7 @@ public class OrdersController : Controller
     [HttpPut]
    public JsonResult UpdateOrder([FromBody] Order order)
    {
+        Console.WriteLine("Order date" +order.OrderDate);
         bool result =_ordersrv.UpdateOrder(order);
         return Json(result);
    }

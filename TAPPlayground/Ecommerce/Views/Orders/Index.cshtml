@@ -1,0 +1,194 @@
+@model ECommerceApp.Models.Order
+@{
+    ViewData["Title"] = "Order Page";
+}
+
+<div>
+    <h3>Insert</h3>
+
+    
+        <table>
+        <tr>
+            <th><label>Order Date</label> </th>
+            <td><input type="text" name="order_date" id="txtorderdate"/></td>
+        </tr>
+         <tr>
+            <th><label>Shipped Date</label> </th>
+            <td><input type="text" name="shipped_date" id="txtshippeddate"/></td>
+        </tr>
+         <tr>
+            <th><label>Customer Id</label> </th>
+            <td><input type="text" name="customer_id" id="txtcustomerid"/></td>
+        </tr>
+
+         <tr>
+            <th><label>Total</label> </th>
+            <td><input type="text" name="total" id="txttotal"/></td>
+        </tr>
+         <tr>
+            <th><label>Status</label> </th>
+            <td><input type="text" name="status" id="txtstatus"/></td>
+        </tr>
+    </table>
+    <button id="insertbtn">Insert</button>
+
+</div>
+
+
+<div>
+    <h3>Update Orders</h3>
+
+    
+        <table>
+        <tr>
+            <th><label>Order Id</label> </th>
+            <td><input type="text" name="order_id" id="txtupdateorderid"/></td>
+        </tr>
+        <tr>
+            <th><label>Order Date</label> </th>
+            <td><input type="text" name="order_date" id="txtupdateorderdate"/></td>
+        </tr>
+         <tr>
+            <th><label>Shipped Date</label> </th>
+            <td><input type="text" name="shipped_date" id="txtupdateshippeddate"/></td>
+        </tr>
+         <tr>
+            <th><label>Customer Id</label> </th>
+            <td><input type="text" name="customer_id" id="txtupdatecustomerid"/></td>
+        </tr>
+
+         <tr>
+            <th><label>Total</label> </th>
+            <td><input type="text" name="total" id="txtupdatetotal"/></td>
+        </tr>
+         <tr>
+            <th><label>Status</label> </th>
+            <td><input type="text" name="status" id="txtupdatestatus"/></td>
+        </tr>
+    </table>
+    <button id="updatebtn">Update</button>
+
+</div>
+
+
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<script type="text/javascript">  
+    console.log("hello");
+     $(document).ready(function(){
+        console.log("document is initialized");
+        $('#insertbtn').click(onInsert);
+        $('#updatebtn').click(onUpdate)
+    }); 
+function onInsert() {  
+        //get data from email and password text boxex
+        console.log("okk..");
+        var strOrderDate=($('#txtorderdate').val());
+        var strShippedDate=($('#txtshippeddate').val());
+        var strCustomerId=($('#txtcustomerid').val());
+        var strTotal=($('#txttotal').val());
+        var strStatus=($('#txtstatus').val());
+
+        //create JSON object to store textboxes contents into json
+
+        var credentialToInsert = {
+                    "orderDate": strOrderDate,
+                    "shippedDate": strShippedDate,
+                    "customerId":strCustomerId,
+                    "total":strTotal,
+                    "status":strStatus 
+ 
+       }
+
+       
+
+       //Invoke REST API programmatically using $.ajax  JQuery function
+       var restAPIUrl='/orders/Insertorders'
+
+       //IT will invoke Remote REST API 
+
+        $.ajax({  
+            url:restAPIUrl ,                                // link of REST API url
+            type: "POST",                                   // type of HTTP request
+            contentType: "application/json; charset=utf-8",//  What is the type of content of REST body
+            data: JSON.stringify(credentialToInsert),              // data to be sent through request body
+
+                                                           //callback function to be called on failure of REST API call
+            error: function(xhr, status, error) {  
+                var err = eval("(" + xhr.responseText + ")");  
+                toastr.error(err.message);  
+            },  
+
+                                                     //callback function to be called on success of REST API call
+
+            success: function(data) {  
+            console.log("Inserted..");  
+            return false;  
+            }  
+        });  
+        return false;  
+
+     }
+ 
+
+
+
+
+
+function onUpdate() {  
+        //get data from email and password text boxex
+        console.log("okk..");
+        var strOrderId=($('#txtupdateorderid').val());
+        var strOrderDate=($('#txtupdateorderdate').val());
+        var strShippedDate=($('#txtupdateshippeddate').val());
+        var strCustomerId=($('#txtupdatecustomerid').val());
+        var strTotal=($('#txtupdatetotal').val());
+        var strStatus=($('#txtupdatestatus').val());
+        
+   
+        //create JSON object to store textboxes contents into json
+
+        var credentialToUpdate = {
+                    "orderId" : strOrderId,
+                    "orderDate": strOrderDate,
+                    "shippedDate": strShippedDate,
+                    "customerId":strCustomerId,
+                    "total":strTotal,
+                    "status":strStatus 
+ 
+       }
+
+       
+
+       //Invoke REST API programmatically using $.ajax  JQuery function
+       var restAPIUrl='/orders/Updateorder'
+
+       //IT will invoke Remote REST API 
+
+        $.ajax({  
+            url:restAPIUrl ,                                // link of REST API url
+            type: "PUT",                                   // type of HTTP request
+            contentType: "application/json; charset=utf-8",//  What is the type of content of REST body
+            data: JSON.stringify(credentialToUpdate),              // data to be sent through request body
+
+                                                           //callback function to be called on failure of REST API call
+            error: function(xhr, status, error) {  
+                var err = eval("(" + xhr.responseText + ")");  
+                toastr.error(err.message);  
+            },  
+
+                                                     //callback function to be called on success of REST API call
+
+            success: function(data) {  
+            console.log("updated..");  
+            return false;  
+            }  
+        });  
+        return false;  
+
+     }
+</script>  
+
+

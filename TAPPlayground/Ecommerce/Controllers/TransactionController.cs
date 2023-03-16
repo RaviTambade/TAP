@@ -34,7 +34,9 @@ public class TransactionController : Controller
     
     [HttpPost]
     [Route("transactions/inserttransaction")]
-     public JsonResult InsertTransaction([FromBody] Transaction transaction){
+     public JsonResult InsertTransaction([FromBody] Transaction transaction)
+     {
+        Console.WriteLine(transaction);
         bool status=_transactionsrv.InsertTransaction(transaction);
         return Json(status);
     }
