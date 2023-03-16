@@ -37,6 +37,7 @@ public class AccountsController : Controller
       [HttpPut]
     public JsonResult UpdateAccount([FromBody] Account account)
     {
+        Console.WriteLine(account.AccountNumber);
         bool status=_accountserv.UpdateAccount(account);
         return Json(status);
 }
