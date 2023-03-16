@@ -5,11 +5,11 @@
         <table>
         <tr>
             <th><label>Order Id:</label> </th>
-            <td><input type="number" name="orderId" id="orderId"/></td>
+            <td><input type="number" name="orderid" id="orderid"/></td>
         </tr>
         <tr>
             <th> <label>ProductId:</label> </th>
-            <td><input type="number" name="productId" id="productId"/> </td>
+            <td><input type="number" name="productid" id="productid"/> </td>
         </tr>
          <tr>
             <th> <label>Quantity:</label> </th>
@@ -21,7 +21,7 @@
         </tr>
         <tr>
             <th> <label>SupplierId:</label> </th>
-            <td><input type="number" name="supplierId" id="supplierId"/> </td>
+            <td><input type="number" name="supplierid" id="supplierid"/> </td>
         </tr>
     </table>
     <button  id="btn">Insert</button>
@@ -37,27 +37,27 @@
         <table>
          <tr>
             <th><label>OrderDetails Id:</label> </th>
-            <td><input type="number" name="updateOrderDetailsId" id="updateOrderDetailsId"/></td>
+            <td><input type="number" name="updateorderDetailsid" id="updateorderdetailsid"/></td>
         </tr>
         <tr>
             <th><label>Order Id:</label> </th>
-            <td><input type="number" name="updateOrderId" id="updateOrderId"/></td>
+            <td><input type="number" name="updateorderid" id="updateorderid"/></td>
         </tr>
         <tr>
             <th> <label>ProductId:</label> </th>
-            <td><input type="number" name="updateProductId" id="updateProductId"/> </td>
+            <td><input type="number" name="updateproductid" id="updateproductid"/> </td>
         </tr>
          <tr>
             <th> <label>Quantity:</label> </th>
-            <td><input type="number" name="updateQuantity" id="updateQuantity"/> </td>
+            <td><input type="number" name="updatequantity" id="updatequantity"/> </td>
         </tr>
         <tr>
             <th> <label>Discount:</label> </th>
-            <td><input type="number" name="updateDiscount" id="updateDiscount"/> </td>
+            <td><input type="number" name="updatediscount" id="updatediscount"/> </td>
         </tr>
         <tr>
             <th> <label>SupplierId:</label> </th>
-            <td><input type="number" name="updateSupplierId" id="updateSupplierId"/> </td>
+            <td><input type="number" name="updatesupplierid" id="updatesupplierid"/> </td>
         </tr>
     </table>
     <button  id="updatebtn">Update</button>
@@ -77,11 +77,11 @@
     }); 
     
     function onRegister() {  
-        var strOrderId=($('#orderId').val());
-        var strProductId=($('#productId').val());
+        var strOrderId=($('#orderid').val());
+        var strProductId=($('#productid').val());
         var strquantity=($('#quantity').val());
         var strdiscount=($('#discount').val());
-        var strsupplierId=($('#supplierId').val());
+        var strSupplierId=($('#supplierid').val());
 
         var data = {
                      
@@ -89,7 +89,7 @@
                      "productId":strProductId,
                      "quantity":strquantity,
                      "discount":strdiscount,
-                     "supplierId":strsupplierId
+                     "supplierId":strSupplierId
        }
 
     console.log(strOrderId);
@@ -120,12 +120,12 @@
 
      
     function onUpdate() {  
-        var strOrderDetailsId=($('#updateOrderDetailsId').val());
-        var strOrderId=($('#updateOrderId').val());
-        var strProductId=($('#updateProductId').val());
-        var strquantity=($('#updateQuantity').val());
-        var strdiscount=($('#updateDiscount').val());
-        var strsupplierId=($('#updateSupplierId').val());
+        var strOrderDetailsId=($('#updateorderdetailsid').val());
+        var strOrderId=($('#updateorderid').val());
+        var strProductId=($('#updateproductid').val());
+        var strquantity=($('#updatequantity').val());
+        var strdiscount=($('#updatediscount').val());
+        var strSupplierId=($('#updatesupplierid').val());
 
         var data = {
                      "orderDetailsId":strOrderDetailsId,
@@ -133,7 +133,7 @@
                      "productId":strProductId,
                      "quantity":strquantity,
                      "discount":strdiscount,
-                     "supplierId":strsupplierId
+                     "supplierId":strSupplierId
        }
 
     console.log(strOrderDetailsId);

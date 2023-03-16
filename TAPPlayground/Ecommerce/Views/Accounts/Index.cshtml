@@ -1,6 +1,4 @@
-@model ECommerceApp.Models.Account
-@{ViewData["title"]="Insert Account";
-}
+
 
 <div>
     <h3>Insert</h3>
@@ -24,7 +22,7 @@
     </table>
     <button  id="btn">Insert</button>
 </div>
-//----------------------------------------------------------
+
 
 
  <script src="~/lib/jquery/dist/jquery.min.js"></script>
@@ -51,7 +49,7 @@
                      "balance":strBalance           
        }
 
-       var restAPIUrl='/account/insert' 
+       var restAPIUrl='/accounts/InsertAccount' 
 
         $.ajax({  
             url:restAPIUrl ,                               
@@ -73,4 +71,5 @@
         });  
         return false;  
     }
+</script>
     
