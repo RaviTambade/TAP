@@ -29,6 +29,7 @@ public class CustomersController : Controller
     [HttpGet]
     public JsonResult GetById(int id)
     {
+        Console.WriteLine(id);
         var customer=_customersSrv.GetCustomerById(id);
         return Json(customer);
     }
@@ -36,6 +37,7 @@ public class CustomersController : Controller
     [HttpPost]
     public JsonResult InsertCustomer([FromBody] Customer customer)
     {
+        Console.WriteLine(customer.CustomerId+" "+ customer.FirstName);
         bool result = _customersSrv.InsertCustomer(customer);
         return Json(result);
     }
@@ -48,10 +50,17 @@ public class CustomersController : Controller
     }
 
     [HttpPut]
-    public JsonResult UpdateCustomer([FromBody] Customer customer)
+    public JsonResult UpdateCustomer([FromBody]Customer customer)
     {
+        Console.WriteLine("firstname "+customer.FirstName+" lastname " + customer.LastName +" id "+ customer.CustomerId);
         bool result = _customersSrv.UpdateCustomer(customer);
         return Json(result);
+    }
+
+     [HttpGet]
+    public IActionResult Search(int id)
+    {
+        return View();
     }
     
 }

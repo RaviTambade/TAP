@@ -16,7 +16,7 @@
             <td><input type="password" name="password" id="txtpassword"/> </td>
         </tr>
     </table>
-    <button  id="btn">Validate</button>
+    <button  id="btn">Login</button>
   
 </div>
     
@@ -78,8 +78,6 @@
     <button  id="registerbtn">Register</button>
 
 </div>
-
-//----------------------------------------------------------
 
  <script src="~/lib/jquery/dist/jquery.min.js"></script>
 
@@ -161,7 +159,7 @@
 
         $.ajax({  
             url:restAPIUrl1 ,                                // link of REST API url
-            type: "POST",                                   // type of HTTP request
+            type: "put",                                   // type of HTTP request
             contentType: "application/json; charset=utf-8",//  What is the type of content of REST body
             data: JSON.stringify(credentialToUpdate),              // data to be sent through request body
 
@@ -217,7 +215,7 @@
 
         $.ajax({  
             url:restAPIUrl ,                                // link of REST API url
-            type: "POST",                                   // type of HTTP request
+            type: "post",                                   // type of HTTP request
             contentType: "application/json; charset=utf-8",//  What is the type of content of REST body
             data: JSON.stringify(credentialToRegister),              // data to be sent through request body
 

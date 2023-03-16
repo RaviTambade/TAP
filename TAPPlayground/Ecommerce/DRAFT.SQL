@@ -1,3 +1,4 @@
+-- Active: 1678859769284@@127.0.0.1@3306@ecommerce
 
 -- drop DATABASE ecommerce;
 -- CREATE DATABASE Ecommerce;
@@ -36,22 +37,19 @@ BEGIN
 	INSERT INTO users(email,contact_number,password)VALUES (NEW.email,NEW.contact_number,NEW.password);
 END //
 DELIMITER ;
-<<<<<<< HEAD
-select * from accounts;
-INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546621,'MAHB0000286','2023-03-01 12:40:40',22555);
+
+select * from payments;
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546630,'MAHB0000286','2023-03-01 12:40:40',22555);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546671,'MAHB0000286','2023-03-01 12:40:40',22555);
 =======
 
 <<<<<<< HEAD
-INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546682,'MAHB0000286','2023-03-01 12:40:40',22555);
-=======
-<<<<<<< HEAD
-INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546333,'MAHB0000286','2023-03-01 12:40:40',22555);
-=======
-INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546676,'MAHB0000286','2023-03-01 12:40:40',22555);
->>>>>>> 8069b9e9dbfb823902ece866816ac6e635fbb9ab
->>>>>>> 2b73f6cddb7e9e10d2776338db0fe2a9ae0b086c
->>>>>>> 1319a8f134d704b91305e38cdeb648b84d9b7e2c
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 3902554668,'MAHB0000286','2023-03-01 12:40:40',22555);
+
+
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546334,'MAHB0000286','2023-03-01 12:40:40',22555);
+
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546975,'MAHB0000286','2023-03-01 12:40:40',22555);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545655,'MAHB0000286','2023-03-01 12:40:35',22500);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545656,'UNB0000286','2023-04-15 02:45:35',2250025);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545657,'BARBO0000286','2023-03-04 02-40-35',225700);
@@ -73,7 +71,7 @@ INSERT INTO transactions(from_account_number, to_account_number,transaction_date
 INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025545659,39025545663,'2023-03-01 12:40:35',22500);
 INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025545658,39025545665,'2023-03-01 12:40:35',22500);
 
-<<<<<<< HEAD
+
 select * from customers;
 =======
 select * from suppliers;
@@ -194,7 +192,7 @@ INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 15
 INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 8, 35,4);
 INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 7, 35,4);
 select * from orders;
-
+desc TABLE payments;
 
 INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('2022-05-03','cash on delivery',1234,1);
 INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('2022-06-12','online payment',987514,2);
