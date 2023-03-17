@@ -6,5 +6,5 @@ public class CustomerAccount{
     public string ContactNumber{get;set;}
     public long AccountNumber{get;set;}
     public string IFSCCode{get;set;}
-    public long AccountBalance{get;set;}
+    public double AccountBalance{get;set;}
 }

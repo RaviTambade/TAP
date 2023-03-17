@@ -62,6 +62,10 @@ END //
 DELIMITER ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+select * from payments;
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546630,'MAHB0000286','2023-03-01 12:40:40',22555);
+=======
 select * from suppliers;
 =======
 
@@ -69,6 +73,7 @@ select * from payments;
 >>>>>>> 76376dd609c48a65e809cf3996a55a4c7562f3af
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546630,'MAHB0000286','2023-03-01 12:40:40',22555);
 
+>>>>>>> 7cc4b2ff3c7fc7005179d071fca9dcb551260296
 select * from accounts;
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546621,'MAHB0000286','2023-03-01 12:40:40',22555);
 

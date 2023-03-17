@@ -1,0 +1,60 @@
+@model ECommerceApp.Models.Order
+
+<h1>search by Order Id</h1>
+</hr>
+<table>
+    <tr>
+        <td><input type ="text" name = "search" id="txtorderid"></td>
+
+        <td><button id = "btnsearch">Search</button></td>
+    </tr>
+    <tr>
+        <td><label id ="lblorderdate"></label> </br>
+        <label id="lblshippeddate"></label> </br>
+        <label id="lblcustomerid"></label> </br>
+        <label id="lbltotal"></label> </br>
+        <label id="lblstatus"></label></td>
+    </tr>
+</table>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">  
+   console.log("script");
+    $(document).ready(function(){
+        console.log("document");
+    $("#btnsearch").click(function(){
+        console.log("button is clicked");
+        //invoke REST API to fetch data from server
+        
+        var orderId =$('#txtorderid').val();
+        console.log(orderId);
+        var restApiUrl = "http://localhost:5223/orders/getorderbyid/"+orderId;
+        console.log(restApiUrl);
+        $.ajax({  
+            url: restApiUrl,  
+            dataType: "json",  
+            type: "GET",  
+
+            error: function(xhr, status, error) {  
+                var err = eval("(" + xhr.responseText + ")");  
+                toastr.error(err.message); 
+                console.log(err); 
+            },
+            //On Successful retriving data  perfrom callback function 
+            //Success block is automatically called when ajax call receives 
+            //data from server  
+            success: function(data) { 
+                console.log(data); 
+              $("#lblorderdate").text(data.orderDate);
+              $("#lblshippeddate").text(data.shippedDate);
+              $("#lblcustomerid").text(data.customerId);
+              $("#lbltotal").text(data.total);
+              $("#lblstatus").text(data.status);
+              return false;  
+            }  
+        });  
+    });
+});
+</script>
+
+
