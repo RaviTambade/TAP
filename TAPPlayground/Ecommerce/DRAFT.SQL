@@ -1,14 +1,29 @@
 <<<<<<< HEAD
+
+-- Active: 1677916902963@@127.0.0.1@3306@ecommerce
+=======
+<<<<<<< HEAD
+-- Active: 1678116914124@@127.0.0.1@3306@ecommerce
+
+
+
+=======
+<<<<<<< HEAD
+-- Active: 1678361403571@@127.0.0.1@3306@ecommerce
+=======
+<<<<<<< HEAD
 -- Active: 1678859769284@@127.0.0.1@3306@ecommerce
+>>>>>>> 76376dd609c48a65e809cf3996a55a4c7562f3af
 =======
 -- Active: 1677916902963@@127.0.0.1@3306@ecommerce
+>>>>>>> be38652f1050f7c4faeba7d607f11f6992ef2204
+>>>>>>> a28b7b9cefe093a62d6901d7a0cbe50355868bff
 
 
->>>>>>> c1071a4db1536ad49d740fd57fba2a84cab9c958
 
 -- CREATE DATABASE Ecommerce;
 -- drop DATABASE ecommerce;
--- USE  Ecommerce;
+USE  Ecommerce;
 
 USE Ecommerce;
 CREATE TABLE users( user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, email VARCHAR(25) UNIQUE NOT NULL, contact_number VARCHAR(20) NOT NULL UNIQUE,password VARCHAR(15) NOT NULL);
@@ -47,30 +62,43 @@ END //
 DELIMITER ;
 
 <<<<<<< HEAD
-select * from payments;
-INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546630,'MAHB0000286','2023-03-01 12:40:40',22555);
+select * from suppliers;
 =======
+
+select * from payments;
+>>>>>>> 76376dd609c48a65e809cf3996a55a4c7562f3af
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546630,'MAHB0000286','2023-03-01 12:40:40',22555);
+
 select * from accounts;
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546621,'MAHB0000286','2023-03-01 12:40:40',22555);
->>>>>>> c1071a4db1536ad49d740fd57fba2a84cab9c958
+
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546671,'MAHB0000286','2023-03-01 12:40:40',22555);
 
 <<<<<<< HEAD
-<<<<<<< HEAD
+
+
+=======
+>>>>>>> 76376dd609c48a65e809cf3996a55a4c7562f3af
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 3902554668,'MAHB0000286','2023-03-01 12:40:40',22555);
 
 
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546334,'MAHB0000286','2023-03-01 12:40:40',22555);
 
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546975,'MAHB0000286','2023-03-01 12:40:40',22555);
+<<<<<<< HEAD
 =======
+
+>>>>>>> 76376dd609c48a65e809cf3996a55a4c7562f3af
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546682,'MAHB0000286','2023-03-01 12:40:40',22555);
 
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546333,'MAHB0000286','2023-03-01 12:40:40',22555);
 
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546676,'MAHB0000286','2023-03-01 12:40:40',22555);
 
->>>>>>> c1071a4db1536ad49d740fd57fba2a84cab9c958
+<<<<<<< HEAD
+
+=======
+>>>>>>> 76376dd609c48a65e809cf3996a55a4c7562f3af
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545655,'MAHB0000286','2023-03-01 12:40:35',22500);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545656,'UNB0000286','2023-04-15 02:45:35',2250025);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545657,'BARBO0000286','2023-03-04 02-40-35',225700);
@@ -93,13 +121,17 @@ INSERT INTO transactions(from_account_number, to_account_number,transaction_date
 INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025545658,39025545665,'2023-03-01 12:40:35',22500);
 
 
+
 <<<<<<< HEAD
+select * from transactions;
+
 =======
+
 select * from transactions;
 
 
 
->>>>>>> c1071a4db1536ad49d740fd57fba2a84cab9c958
+>>>>>>> 76376dd609c48a65e809cf3996a55a4c7562f3af
 select * from customers;
 
 select * from suppliers;
@@ -140,16 +172,17 @@ INSERT INTO categories(category_title,description,image)values('snacks','For dai
 INSERT INTO categories(category_title,description,image)values('electronics','Domastic Equipments','./images/crackjack.jpg');
 
 
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id) VALUES('ParleG','tasty biscuits',20000,10,'./images/Parleg.jpg',1);
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('GoodDay','tasty cookies',50000,15,'./images/goodday.jpg',1);
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('MariGold','tasty biscuits',40000,16,'./images/marigold.jpg',1);
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('20-20','tasty biscuits', 70000, 10,'./images/2020.jpg',1);
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('Crack-Jack','tasty biscuits',30000,10,'./images/crackjack.jpg',1);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id) VALUES('ParleG','tasty biscuits',20000,10,'/images/Parleg.jpg',1);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('GoodDay','tasty cookies',50000,15,'/images/goodday.jpg',1);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('MariGold','tasty biscuits',40000,16,'/images/marigold.jpg',1);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('20-20','tasty biscuits', 70000, 10,'/images/2020.jpg',1);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('Crack-Jack','tasty biscuits',30000,10,'/images/crackjack.jpg',1);
 
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('Pepsi','Drinks Any time',50000,40,'./images/Pepsi.jpg',2);
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('Fizz','Making from apple',2000,25,'./images/Fizz.jpg',2);
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('Slice','Making from Mangoes',10000,40,'./images/Slice.jpg',2);
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('coco-cola','Drinking any time',6000,40,'./images/coco_cola.jpg',2);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('Pepsi','Drinks Any time',50000,40,'/images/Pepsi.jpg',2);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('Fizz','Making from apple',2000,25,'/images/Fizz.jpg',2);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('Slice','Making from Mangoes',10000,40,'/images/Slice.jpg',2);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('coco-cola','Drinking any time',6000,40,'/images/coco_cola.jpg',2);
+delete  from products
 
 select * from transactions;
 

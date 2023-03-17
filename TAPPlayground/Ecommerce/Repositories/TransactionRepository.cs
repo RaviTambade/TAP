@@ -6,7 +6,7 @@ namespace ECommerceApp.Repositories;
 
 public class TransactionRepository : ITransactionRepository
 {
-    public static string conString="server=localhost;port=3306;user=root;password=password;database=Ecommerce";
+    public static string conString="server=localhost;port=3306;user=root;password=Rohit@7378;database=Ecommerce";
 
     public List<Transaction> GetAllTransaction()
     {
@@ -57,6 +57,7 @@ public class TransactionRepository : ITransactionRepository
         try
         {
             string query = "SELECT * FROM transactions WHERE transaction_id=" + id;
+            Console.WriteLine(query);
             connection.Open();
             MySqlCommand command = new MySqlCommand(query, connection);
             MySqlDataReader reader = command.ExecuteReader();
