@@ -172,16 +172,17 @@ INSERT INTO categories(category_title,description,image)values('snacks','For dai
 INSERT INTO categories(category_title,description,image)values('electronics','Domastic Equipments','./images/crackjack.jpg');
 
 
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id) VALUES('ParleG','tasty biscuits',20000,10,'./images/Parleg.jpg',1);
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('GoodDay','tasty cookies',50000,15,'./images/goodday.jpg',1);
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('MariGold','tasty biscuits',40000,16,'./images/marigold.jpg',1);
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('20-20','tasty biscuits', 70000, 10,'./images/2020.jpg',1);
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('Crack-Jack','tasty biscuits',30000,10,'./images/crackjack.jpg',1);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id) VALUES('ParleG','tasty biscuits',20000,10,'/images/Parleg.jpg',1);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('GoodDay','tasty cookies',50000,15,'/images/goodday.jpg',1);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('MariGold','tasty biscuits',40000,16,'/images/marigold.jpg',1);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('20-20','tasty biscuits', 70000, 10,'/images/2020.jpg',1);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('Crack-Jack','tasty biscuits',30000,10,'/images/crackjack.jpg',1);
 
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('Pepsi','Drinks Any time',50000,40,'./images/Pepsi.jpg',2);
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('Fizz','Making from apple',2000,25,'./images/Fizz.jpg',2);
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('Slice','Making from Mangoes',10000,40,'./images/Slice.jpg',2);
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('coco-cola','Drinking any time',6000,40,'./images/coco_cola.jpg',2);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('Pepsi','Drinks Any time',50000,40,'/images/Pepsi.jpg',2);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('Fizz','Making from apple',2000,25,'/images/Fizz.jpg',2);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('Slice','Making from Mangoes',10000,40,'/images/Slice.jpg',2);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('coco-cola','Drinking any time',6000,40,'/images/coco_cola.jpg',2);
+delete  from products
 
 select * from transactions;
 

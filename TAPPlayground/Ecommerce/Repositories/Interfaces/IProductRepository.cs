@@ -4,5 +4,6 @@ namespace ECommerceApp.Repositories.Interfaces;
 public interface IProductRepository{
     List<Product> GetAllProducts();
 
+
     Product GetProduct(int id);
 }
