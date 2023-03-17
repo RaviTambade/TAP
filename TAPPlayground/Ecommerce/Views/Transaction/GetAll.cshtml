@@ -1,0 +1,80 @@
+@{
+    ViewData["Title"] = "Transaction Page";
+}
+<h1>Transaction Catalog</h1>
+<hr/>
+<ul id="lsttransactions">
+</ul>
+
+<button id="btn">Get Details</button>
+<hr/>
+    <label id="lblfromaccountnumber"></label> </br>
+    <label id="lbltoaccountnumber"></label> </br>
+    <label id="lbltransactiondate"></label></br>
+    <label id="lblamount"></label></br>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">  
+
+    function doSomething(event){
+        console.log ("anchor is clicked" + event);
+    }
+
+function getAll(){
+  //invoke REST API to fetch data from server  
+        $.ajax({  
+            url: '/transaction/showalltransactions',  
+            dataType: "json",  
+            type: "GET",  
+            error: function(xhr, status, error) {  
+                var err = eval("(" + xhr.responseText + ")");  
+                toastr.error(err.message); 
+                console.log(err); 
+            },
+            //On Successful retriving data  perfrom callback function 
+            //Success block is automatically called when ajax call receives 
+            //data from server  
+            success: function(data) {  
+              console.log(data);
+            //  var result=JSON.stringify(data);
+            // $("#para").text(result);
+                for (let i = 0; i < data.length; i++) {        
+                        var str="<li><a onClick='doSomething()' src=''>"+ data[i].fromAccountNumber +"</a></li>";
+                        $("#lsttransactions").append(str);
+                }
+              return false;  
+            }  
+        });  
+}
+
+
+function getById(id){
+  //invoke REST API to fetch data by id from server  
+        $.ajax({  
+            url: '/transaction/gettransactionbyid/'+id,  
+            dataType: "json",  
+            type: "GET",  
+            error: function(xhr, status, error) {  
+                var err = eval("(" + xhr.responseText + ")");  
+                toastr.error(err.message); 
+                console.log(err); 
+            },
+            //On Successful retriving data  perfrom callback function 
+            //Success block is automatically called when ajax call receives 
+            //data from server  
+            success: function(data) {  
+                       $("#lblfromaccountnumber").text(data.fromAccountNumber);
+                       $("#lbltoaccountnumber").text(data.toAccountNumber);
+                       $("#lbltransactiondate").text(data.transactionDate);
+                       $("#lblamount").text(data.amount);     
+              return false;  
+            }  
+        });  
+}
+    $(document).ready(function(){
+       getAll();
+       $("#btn").click( function (){
+        getById(1);
+       })
+    });
+</script>  
