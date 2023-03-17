@@ -1,214 +1,96 @@
-
 @{
     ViewData["Title"] = "Customer Page";
 }
 
 <h2>Customer List</h2>
-
-  <button id="btn">show</button>
-  <p id='para1'>Transflower</p>
-  <hr/>
-  <p id='para2'>Seed</p>
-
-<div>
-    <h3>Insert Form</h3>    
-        <table>
-        <tr>
-            <th><label>First Name</label> </th>
-            <td><input type="text" name="first_name" id="txtfirstname"/></td>
-        </tr>
-         <tr>
-            <th><label>Last Name</label> </th>
-            <td><input type="text" name="last_name" id="txtlastname"/></td>
-        </tr>
-         <tr>
-            <th><label>email</label> </th>
-            <td><input type="email" name="email" id="txtinsertemail"/></td>
-        </tr>
-
-         <tr>
-            <th><label>contact number</label> </th>
-            <td><input type="number" name="contact_number" id="txtcontactnumber"/></td>
-        </tr>
-         <tr>
-            <th><label>Account number</label> </th>
-            <td><input type="number" name="account_number" id="txtaccountnumber"/></td>
-        </tr>
-          <tr>
-            <th> <lable>Password</lable> </th>
-            <td><input type="password" name="password" id="txtinsertpassword"/> </td>
-        </tr>
-    </table>
-    <button  id="insertbtn">Insert</button>
-
-</div>
+<hr>
+<ul id="lstcustomers"> </ul>
+<hr>
+<h2>Customer Catalog</h2>
+<hr />
 
 <div>
-    <h3>Update Form</h3>    
-        <table>
-        <tr>
-            <th><label>ID</label> </th>
-            <td><input type="number" name="cust_id" id="txtid"/></td>
-        </tr>
-        <tr>
-            <th><label>First Name</label> </th>
-            <td><input type="text" name="first_name" id="txtupdatefirstname"/></td>
-        </tr>
-         <tr>
-            <th><label>Last Name</label> </th>
-            <td><input type="text" name="last_name" id="txtupdatelastname"/></td>
-        </tr>
-         <tr>
-            <th><label>email</label> </th>
-            <td><input type="email" name="email" id="txtupdateemail"/></td>
-        </tr>
-
-         <tr>
-            <th><label>contact number</label> </th>
-            <td><input type="number" name="contact_number" id="txtupdatenumber"/></td>
-        </tr>
-         <tr>
-            <th><label>Account number</label> </th>
-            <td><input type="number" name="account_number" id="txtupdateaccountnumber"/></td>
-        </tr>
-          <tr>
-            <th> <lable>Password</lable> </th>
-            <td><input type="password" name="password" id="txtupdatepassword"/> </td>
-        </tr>
-    </table>
-    <button  id="updatebtn">Update</button>
-
+    <button id="btn">Get Details</button>
+    <a href="./login">Login</a>
 </div>
 
- 
+<hr />
+<label id="lblid"></label> </br>
+<label id="lblfirstname"></label> </br>
+<label id="lbllastname"></label> </br>
+<label id="lblcontactnumber"></label></br>
+<label id="lblaccountnumber"></label></br>
+<label id="lblemail"></label></br>
+<label id="lblpassword"></label>
+
+
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript">  
-   
-    $(document).ready(function(){
-    $('#insertbtn').click(onInsert);
-    $('#updatebtn').click(onUpdate);
-    $("#btn").click(function(){
-        //invoke REST API to fetch data from server
-        
-        $.ajax({  
-            url: '/Customers/GetAll',  
-            dataType: "json",  
-            type: "GET",  
-            error: function(xhr, status, error) {  
-                var err = eval("(" + xhr.responseText + ")");  
-                toastr.error(err.message); 
-                console.log(err); 
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#btn").click(function () {
+            getById(1);
+        })
+        getAll();
+    });
+
+
+
+    function getAll() {
+        //invoke REST API to fetch data from server  
+        $.ajax({
+            url: '/customers/getall',
+            dataType: "json",
+            type: "GET",
+            error: function (xhr, status, error) {
+                var err = eval("(" + xhr.responseText + ")");
+                toastr.error(err.message);
+                console.log(err);
             },
             //On Successful retriving data  perfrom callback function 
             //Success block is automatically called when ajax call receives 
             //data from server  
-            success: function(data) {  
-              var result=JSON.stringify(data);
-              var element=document.getElementById("para2");
-              element.innerHTML=result;
-              return false;  
-            }  
-        });  
-    });
-});
+            success: function (data) {
+                //  var result=JSON.stringify(data);
+                // $("#para").text(result);
+                for (let i = 0; i < data.length; i++) {
+                    var str = "<li><a onClick='doSomething()' src=''>" + data[i].firstName + "</a></li>";
+                    $("#lstcustomers").append(str);
+                }
+                return false;
+            }
+        });
+    }
 
 
+    function getById(id) {
+        //invoke REST API to fetch data by id from server  
+        $.ajax({
+            url: '/customers/getbyid/' + id,
+            dataType: "json",
+            type: "GET",
+            error: function (xhr, status, error) {
+                var err = eval("(" + xhr.responseText + ")");
+                toastr.error(err.message);
+                console.log(err);
+            },
+            //On Successful retriving data  perfrom callback function 
+            //Success block is automatically called when ajax call receives 
+            //data from server  
 
-     function onInsert() {  
-        //get data from email and password text boxex
-        console.log("okk..");
-        var strFirstName=($('#txtfirstname').val());
-        var strLastName=($('#txtlastname').val());
-        var strContactNumber=($('#txtcontactnumber').val());
-        var strAccountNumber=($('#txtaccountnumber').val());
-        var strEmail=($('#txtinsertemail').val());
-         var strPassword=($('#txtinsertpassword').val());
+            success: function (data) {
+                $("#lblid").text("ID: "+ data.customerId);
+                $("#lblfirstname").text("First Name: "+ data.firstName);
+                $("#lbllastname").text("Last Name: "+ data.lastName);
+                $("#lblcontactnumber").text("Contact Number: "+ data.contactNumber);
+                $("#lblaccountnumber").text("Account Number: "+ data.accountNumber);
+                $("#lblemail").text("Email: "+ data.email);
+                $("#lblpassword").text("Password: "+ data.password);
 
-        //create JSON object to store textboxes contents into json
+                return false;
+            }
+        });
+    }
 
-        var credentialToInsert = {
-                    "firstName": strFirstName,
-                    "lastName": strLastName,
-                    "contactNumber":strContactNumber,
-                    "accountNumber":strAccountNumber,
-                    "email":strEmail ,
-                    "password":strPassword  
-       }
-       //Invoke REST API programmatically using $.ajax  JQuery function
-       var restAPIUrl='/customers/InsertCustomer'
-
-       //IT will invoke Remote REST API 
-
-        $.ajax({  
-            url:restAPIUrl ,                                // link of REST API url
-            type: "POST",                                   // type of HTTP request
-            contentType: "application/json; charset=utf-8",//  What is the type of content of REST body
-            data: JSON.stringify(credentialToInsert),              // data to be sent through request body
-                                                           //callback function to be called on failure of REST API call
-            error: function(xhr, status, error) {  
-                var err = eval("(" + xhr.responseText + ")");  
-                toastr.error(err.message);  
-            },  
-    //callback function to be called on success of REST API call
-            success: function(data) {  
-                console.log("Inserted..");  
-                return false;  
-            }  
-        });  
-        return false;  
-     }
-
-
-
-     
-
-     function onUpdate() {  
-        //get data from email and password text boxex
-        console.log("on update..");
-        var strId=($('#txtid').val());
-        var strFirstName=($('#txtupdatefirstname').val());
-        var strLastName=($('#txtupdatelastname').val());
-        var strContactNumber=($('#txtupdatenumber').val());
-        var strAccountNumber=($('#txtupdateaccountnumber').val());
-        var strEmail=($('#txtupdateemail').val());
-         var strPassword=($('#txtupdatepassword').val());
-        console.log("updated");
-        console.log(strFirstName);
-        //create JSON object to store textboxes contents into json
-
-        var credentialToUpdate = {
-                    "customerId":strId,
-                    "firstName": strFirstName,
-                    "lastName": strLastName,
-                    "contactNumber":strContactNumber,
-                    "accountNumber":strAccountNumber,
-                    "email":strEmail ,
-                    "password":strPassword  
-       }
-       console.log(credentialToUpdate);
-    
-       //Invoke REST API programmatically using $.ajax  JQuery function
-       var restAPIUrl='/customers/UpdateCustomer'
-       //IT will invoke Remote REST API 
-
-        $.ajax({  
-            url:restAPIUrl ,                                // link of REST API url
-            type: "PUT",                                   // type of HTTP request
-            contentType: "application/json; charset=utf-8",//  What is the type of content of REST body
-           data: JSON.stringify(credentialToUpdate),              // data to be sent through request body
-                                                          //callback function to be called on failure of REST API call
-            error: function(xhr, status, error) {  
-                var err = eval("(" + xhr.responseText + ")");  
-                toastr.error(err.message);  
-            },  
-    //callback function to be called on success of REST API call
-            success: function(data) {  
-                console.log("Updated data..");  
-                return false;  
-            }  
-        });  
-        return false;  
-     }
-
-</script>  
+</script>
 

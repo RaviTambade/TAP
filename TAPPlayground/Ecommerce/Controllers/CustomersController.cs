@@ -19,6 +19,28 @@ public class CustomersController : Controller
         return View();
     }
 
+     public IActionResult Login()
+    {
+        return View();
+    }
+     public IActionResult WishList()
+    {
+        return View();
+    }
+     public IActionResult DeliveredOrders()
+    {
+        return View();
+    }
+     public IActionResult CancelledOrders()
+    {
+        return View();
+    }
+     public IActionResult Dashboard()
+    {
+        return View();
+    }
+
+
     [HttpGet]
     public JsonResult GetAll()
     {

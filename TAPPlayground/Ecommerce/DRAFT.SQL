@@ -1,3 +1,4 @@
+-- Active: 1678859769284@@127.0.0.1@3306@ecommerce
 <<<<<<< HEAD
 
 -- Active: 1677916902963@@127.0.0.1@3306@ecommerce
@@ -66,8 +67,8 @@ select * from suppliers;
 =======
 
 select * from payments;
->>>>>>> 76376dd609c48a65e809cf3996a55a4c7562f3af
-INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546630,'MAHB0000286','2023-03-01 12:40:40',22555);
+
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546631,'MAHB0000286','2023-03-01 12:40:40',22555);
 
 select * from accounts;
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546621,'MAHB0000286','2023-03-01 12:40:40',22555);
