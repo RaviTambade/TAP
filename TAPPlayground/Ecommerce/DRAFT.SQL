@@ -53,7 +53,6 @@ DELIMITER ;
 <<<<<<< HEAD
 select * from payments;
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546630,'MAHB0000286','2023-03-01 12:40:40',22555);
-=======
 select * from accounts;
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546621,'MAHB0000286','2023-03-01 12:40:40',22555);
 >>>>>>> c1071a4db1536ad49d740fd57fba2a84cab9c958
