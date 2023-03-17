@@ -1,0 +1,84 @@
+<h1>Users</h1>
+<hr/>
+<div>
+<label class="form-label "> Select Role</label>
+<select name="users" id="user">
+    <option value="Admin">Admin</option>
+    <option value= "Customer"> Customer</option>
+    <option value= "Shipper"> Shipper</option>
+</select>
+<button id="btn">Get Details</button>
+</div>
+
+<ul id="listusers">
+</ul>
+
+<hr/>
+<div>
+    <label id="lbluserid"></label> </br>
+    <label id="lblusername"></label> </br>
+    <label id="lblcontactnumber"></label></br>
+    <label id="lblpassword"></label></br>
+    <label id="lblrole"></label>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">  
+
+    console.log("hello");
+     $(document).ready(function(){
+        console.log("document is initialized");
+        $('#btn').click(getAll);
+    }); 
+    function doSomething(){
+       
+
+
+
+                        // $("#lbluserid").text(data[i].userId);
+                        // $("#lblusername").text(data[i].userName);
+                        // $("#lblcontactnumber").text(data[i].contactNumber);
+                        // $("#lblpassword").text(data[i].password);
+                        // $("#lblrole").text(data[i].role);   
+        
+    }
+
+function getAll(){
+            var userRole=($('#user').val());
+            console.log(userRole);
+            console.log("/Secure/GetUserByRole/"+userRole);
+  //invoke REST API to fetch data from server  
+        $.ajax({  
+            url: "/secure/getuserbyrole/"+userRole,  
+            dataType: "json",  
+            type: "GET",  
+            error: function(xhr, status, error) {  
+                var err = eval("(" + xhr.responseText + ")");  
+                toastr.error(err.message); 
+                console.log(err); 
+            },
+            //On Successful retriving data  perfrom callback function 
+            //Success block is automatically called when ajax call receives 
+            //data from server  
+            success: function(data) {  
+                
+                console.log(data)
+                for (let i = 0; i < data.length; i++) {  
+
+
+                        // $("#lbluserid").text(data[i].userId);
+                        // $("#lblusername").text(data[i].userName);
+                        // $("#lblcontactnumber").text(data[i].contactNumber);
+                        // $("#lblpassword").text(data[i].password);
+                        // $("#lblrole").text(data[i].role);   
+                        console.log( $("#lblcontactnumber").text(data[i].contactNumber));  
+
+                        var str="<li><a onClick='doSomething()' >"+ data[i].userName +"</a></li>";
+                        $("#listusers").append(str);
+                }
+              return false;  
+            }  
+        });  
+
+}
+</script>
