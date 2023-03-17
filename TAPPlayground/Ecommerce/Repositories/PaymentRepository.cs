@@ -1,12 +1,24 @@
 using ECommerceApp.Models;
 using ECommerceApp.Repositories.Interfaces;
 using MySql.Data.MySqlClient;
-
+using System.Globalization;
 namespace ECommerceApp.Repositories;
 public class PaymentRepository : IPaymentRepository
 {
       
-    public static string conString = "server=localhost;port=3306;user=root;password=Password;database=Ecommerce";
+
+    public static string conString = "server=localhost;port=3306;user=root;password=PASSWORD;database=Ecommerce";
+
+<<<<<<< HEAD
+  
+=======
+<<<<<<< HEAD
+    //public static string conString = "server=localhost;port=3306;user=root;password=1234512345;database=Ecommerce";
+=======
+    // public static string conString = "server=localhost;port=3306;user=root;password=1234512345;database=Ecommerce";
+>>>>>>> a28b7b9cefe093a62d6901d7a0cbe50355868bff
+>>>>>>> 76376dd609c48a65e809cf3996a55a4c7562f3af
+
 
     public List<Payment> GetAllPayments()
     {
@@ -22,7 +34,7 @@ public class PaymentRepository : IPaymentRepository
             while (reader.Read())
             {
                 int paymentId =int.Parse(reader["payment_id"].ToString());
-                 DateTime date= DateTime.Parse(reader["payment_date"].ToString(),System.Globalization.CultureInfo.InvariantCulture);
+                DateTime date =  DateTime.Parse(reader["payment_date"].ToString(),CultureInfo.InvariantCulture);
                 string? payment_mode = reader["payment_mode"].ToString();
                 int transactionId =int.Parse(reader["transection_id"].ToString());
                 int orderId =int.Parse(reader["order_id"].ToString());
@@ -30,7 +42,7 @@ public class PaymentRepository : IPaymentRepository
                 Payment payment = new Payment
                 {
                     PaymentId=paymentId,
-                    PaymentDate= date.ToShortDateString(),
+                    PaymentDate= date.ToLongDateString(),
                     PaymentMode = payment_mode,
                     TransactionId = transactionId,
                     OrderId = orderId
@@ -67,7 +79,7 @@ public class PaymentRepository : IPaymentRepository
             while (reader.Read())
             {
                 //paymentId =int.Parse(reader["payment_id"].ToString());
-                 DateTime date= DateTime.Parse(reader["payment_date"].ToString(),System.Globalization.CultureInfo.InvariantCulture);
+                DateTime date =  DateTime.Parse(reader["payment_date"].ToString(),CultureInfo.InvariantCulture);
                 string? payment_mode = reader["payment_mode"].ToString();
                 int transactionId =int.Parse(reader["transection_id"].ToString());
                 int orderId =int.Parse(reader["order_id"].ToString());
@@ -75,7 +87,7 @@ public class PaymentRepository : IPaymentRepository
                 payment = new Payment()
                 {
                     PaymentId=paymentId,
-                    PaymentDate= date.ToShortDateString(),
+                    PaymentDate= date.ToLongDateString(),
                     PaymentMode = payment_mode,
                     TransactionId = transactionId,
                     OrderId = orderId
@@ -109,7 +121,7 @@ public class PaymentRepository : IPaymentRepository
             while (reader.Read())
             {
                 int paymentId =int.Parse(reader["payment_id"].ToString());
-                DateTime date= DateTime.Parse(reader["payment_date"].ToString(),System.Globalization.CultureInfo.InvariantCulture);
+                 DateTime date =  DateTime.Parse(reader["payment_date"].ToString(),CultureInfo.InvariantCulture);
                 string? payment_mode = reader["payment_mode"].ToString();
                 int transactionId =int.Parse(reader["transection_id"].ToString());
                 OrderId =int.Parse(reader["order_id"].ToString());
@@ -117,7 +129,7 @@ public class PaymentRepository : IPaymentRepository
                 payment = new Payment()
                 {
                     PaymentId=paymentId,
-                    PaymentDate= date.ToShortDateString(),
+                    PaymentDate= date.ToLongDateString(),
                     PaymentMode = payment_mode,
                     TransactionId = transactionId,
                     OrderId = OrderId
@@ -143,13 +155,12 @@ public class PaymentRepository : IPaymentRepository
           MySqlConnection con = new MySqlConnection();
           con.ConnectionString=conString;
           try{
-            string query = "INSERT INTO payments(payment_date,payment_mode,transection_id,order_id)"
-                            + "VALUES('"+payment.PaymentDate+"','"+payment.PaymentMode+"','"+payment.TransactionId+"','"+payment.OrderId+"')";
-
+            string query = $"INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('{payment.PaymentDate}','{payment.PaymentMode}','{payment.TransactionId}','{payment.OrderId}')";
+            Console.WriteLine(query);
              MySqlCommand cmd=new MySqlCommand(query,con) ;
              con.Open();
              cmd.ExecuteNonQuery();               
-
+           status=true;
           }catch(Exception e )
           {
             throw e;

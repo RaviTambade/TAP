@@ -22,15 +22,27 @@ public class AccountsController : Controller
         var account=_accountserv.GetAccountById(id);
         return Json(account);
     }
+    [HttpGet]
+    public IActionResult Search(int id)
+    {
+           return View();
+    }
+[HttpGet]
+    public IActionResult Index()
+    {
+        return View();
+    }
      [HttpPost]
     public JsonResult InsertAccount([FromBody] Account account)
     {
         bool status=_accountserv.InsertAccount(account);
         return Json(status);
     }
+
       [HttpPut]
     public JsonResult UpdateAccount([FromBody] Account account)
     {
+        Console.WriteLine(account.AccountNumber);
         bool status=_accountserv.UpdateAccount(account);
         return Json(status);
 }

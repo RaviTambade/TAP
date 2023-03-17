@@ -41,8 +41,10 @@ public class PaymentsController : Controller
 
    
    [HttpPost]
-   public JsonResult InsertPayment(Payment payment)
+   public JsonResult InsertPayment([FromBody]Payment payment)
     {
+        Console.WriteLine("In controller");
+        Console.WriteLine(payment);
         var pay=_paymentsrv.InsertPayments(payment);
         return Json(pay);
     }

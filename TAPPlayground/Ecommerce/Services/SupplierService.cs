@@ -20,9 +20,9 @@ public class SupplierService : ISupplierService
         return _repo.GetSupplierById(id);
     }
 
-    public List<Supplier> GetSuppliersOfProduct(int productId)
+    public List<Supplier> GetSuppliersOfProduct(int id)
     {
-        return _repo.GetSuppliersOfProduct(productId);
+        return _repo.GetSuppliersOfProduct(id);
     }
 
     public bool InsertSupplier(Supplier supplier)

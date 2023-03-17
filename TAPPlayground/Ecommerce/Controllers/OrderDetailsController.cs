@@ -20,6 +20,11 @@ public class OrderDetailsController : Controller
     {
         return View();
     }
+     [HttpGet]
+    public IActionResult Search(int id)
+    {
+        return View();
+    }
     // Getting all Records of orderdetails
     [HttpGet]
     public JsonResult GetAllOrderDetails()

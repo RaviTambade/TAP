@@ -1,0 +1,78 @@
+@model ECommerceApp.Models.Customer
+
+<h1>Search with ID</h1>
+<hr/>
+<table>
+    <tr>
+       
+        <td><input type="text" name="search" id="txtcustid"></td>
+        
+        <td> <button id="btnsearch">Search</button></td>
+    </tr>
+    <tr>
+        
+        <td> 
+         <label id="lblfirstname"> </label> </br>
+        <label id="lbllastname"></label> </br>
+        <label id="lblemail"></label></br>
+        <label id="lblcontactnumber"></label></br>
+        <label id="lblaccountnumber"></label></br>
+        <label id="lblpassword"></label></td>
+        </td>
+    </tr>
+    
+
+</table>
+
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+console.log("inside script");
+
+
+$(document).ready(function(){
+console.log("doc initialized");
+
+$("#btnsearch").click(function(){
+    console.log("button Clicked");
+//invoke REST API to fetch data from server
+var custId = $('#txtcustid').val();
+console.log(custId);
+
+var restApiUrl= "http://localhost:5223/customers/getbyid/"+ custId;
+
+console.log(restApiUrl);
+ $.ajax({  
+            url: restApiUrl,  
+            dataType: "json",  
+            type: "GET",  
+
+            error: function(xhr, status, error) {  
+                var err = eval("(" + xhr.responseText + ")");  
+                toastr.error(err.message); 
+                console.log(err); 
+            },
+            //On Successful retriving data  perfrom callback function 
+            //Success block is automatically called when ajax call receives 
+            //data from server  
+            success: function(data) {  
+            console.log(data);
+            
+
+            $("#lblfirstname").text(data.firstName);
+            $("#lbllastname").text(data.lastName);
+            $("#lblemail").text(data.email);
+            $("#lblcontactnumber").text(data.contactNumber);
+            $("#lblaccountnumber").text(data.accountNumber);
+            $("#lblpassword").text(data.password);
+          
+              return false;  
+            }  
+        }); 
+
+})
+});
+
+
+</script> 

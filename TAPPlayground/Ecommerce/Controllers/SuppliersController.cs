@@ -32,8 +32,8 @@ public class SuppliersController:Controller{
     }
 
       [HttpGet]
-    public JsonResult GetSuppliersOfProduct(int productId){
-        var suppliers=_srv.GetSuppliersOfProduct(productId);
+    public JsonResult GetSuppliersOfProduct(int id){
+        var suppliers=_srv.GetSuppliersOfProduct(id);
         return Json(suppliers);
     }
 
@@ -48,7 +48,9 @@ public class SuppliersController:Controller{
       [HttpPut]
       [Route("suppliers/updatesupplier")]
     public JsonResult UpdateSupplier([FromBody]Supplier supplier){
-        bool status=_srv.InsertSupplier(supplier);
+      Console.WriteLine(supplier.AccountNumber);
+      Console.WriteLine(supplier.CompanyName);
+        bool status=_srv.UpdateSupplier(supplier);
         return Json(status);
     }
 
@@ -58,4 +60,11 @@ public class SuppliersController:Controller{
         bool supplier = _srv.DeleteSupplier(id);
         return Json(supplier);
     }
+
+      [HttpGet]
+    public IActionResult Search(int id)
+    {
+        return View();
+    }
+    
 }

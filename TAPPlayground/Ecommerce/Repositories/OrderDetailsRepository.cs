@@ -64,6 +64,7 @@ public class OrderDetailsRepository : IOrderDetailsRepository
         {
             string query = "select * from orderdetails where orderdetails_id=" + id;
             con.Open();
+            Console.WriteLine(query);
             MySqlCommand command = new MySqlCommand(query, con);
             MySqlDataReader reader = command.ExecuteReader();
 
