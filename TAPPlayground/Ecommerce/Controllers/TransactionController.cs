@@ -23,6 +23,11 @@ public class TransactionController : Controller
     {
         return View();
     }
+
+    public IActionResult GetAll()
+    {
+        return View();
+    }
     
     [HttpGet]
     public JsonResult ShowAllTransactions()
