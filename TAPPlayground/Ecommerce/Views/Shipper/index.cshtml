@@ -1,48 +1,186 @@
-
-@{
-    ViewData["Title"] = "Dashboard Page";
+@model ECommerceApp.Models.Shipper
+@{ViewData["title"]="Register Page";
 }
 
-<h2>Shippers List</h2>
+<div>
+    <h3>Register</h3>
+        <table>
+            
+        <tr>
+            <th><label>CompanyName</label> </th>
+            <td><input type="text" name="company_name" id="txtcompanyname"/></td>
+        </tr>
+        <tr>
+            <th><label>ContactNumber</label> </th>
+            <td><input type="number" name="contact_number" id="txtcontactnumber"/></td>
+        </tr>
+
+         <tr>
+            <th><label>Email</label> </th>
+            <td><input type="email" name="email" id="txtemail"/></td>
+        </tr>
+        <tr>
+            <th><label>Account number</label> </th>
+            <td><input type="number" name="account_number" id="txtaccountnumber"/></td>
+        </tr>
+
+    </table>
+    <button  id="registerbtn">Register</button>
+
+</div>
+
+<hr/>
+<hr/>
+<div>
+    <h3>Update</h3>
+        <table>
+             <tr>
+            <th><label>ShipperId</label> </th>
+            <td><input type="text" name="updateshipper_id" id="updatetxtshipperid"/></td>
+        </tr>
+        <tr>
+            <th><label>CompanyName</label> </th>
+            <td><input type="text" name="updatecompany_name" id="updatetxtcompanyname"/></td>
+        </tr>
+         <tr>
+            <th><label>ContactNumber</label> </th>
+            <td><input type="text" name="updatecontact_number" id="updatetxtcontactnumber"/></td>
+        </tr>
+
+         <tr>
+            <th><label>Email</label> </th>
+            <td><input type="email" name="updateemail" id="updatetxtemail"/></td>
+        </tr>
+
+         <tr>
+            <th><label>Account number</label> </th>
+            <td><input type="text" name="account_number" id="updatetxtaccountnumber"/></td>
+        </tr>
+
+    </table>
+    <button  id="onupdatebtn">Update</button>
+
+</div>
 
 
- 
-
-  <button id="btn">show</button>
-  <p id='para1'>Transflower</p>
-  <hr/>
-  <p id='para2'>Seed</p>
 
 
- 
-<script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript">  
-   
-   $(document).ready(function(){
-    $("#btn").click(function(){
-        //invoke REST API to fetch data from server
-        
+
+
+
+
+
+
+
+
+
+
+ <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<script type="text/javascript">
+       console.log("Hello...")  
+     $(document).ready(function(){
+        console.log("document is initialized");
+        $('#registerbtn').click(onRegister);
+         $('#updatebtn').click(onUpdate);
+    }); 
+    
+     function onRegister() {  
+        //get data from text boxex
+        console.log("okk..");
+        var strCompanyName=($('#txtcompanyname').val());
+        var strContactNumber=($('#txtcontactnumber').val());
+        var strEmail=($('#txtemail').val());
+        var strAccountNumber=($('#txtaccountnumber').val());
+
+        //create JSON object to store textboxes contents into json
+      console.log(strAccountNumber);
+        var shipperToRegister = {
+                    "companyName": strCompanyName ,
+                    "contactNumber":strContactNumber ,
+                    "email":strEmail ,
+                    "accountNumber":strAccountNumber
+                    
+       }
+       console.log (shipperToRegister);
+      
+       //Invoke REST API programmatically using $.ajax  JQuery function
+       var restAPIUrl='http://localhost:5223/Shipper/insertshipper'
+
+       //IT will invoke Remote REST API 
+
         $.ajax({  
-            url: '/Shipper/ShowAllShippers',  
-            dataType: "json",  
-            type: "GET",  
+            url: restAPIUrl ,                                // link of REST API url
+            type: "POST",                                   // type of HTTP request
+            contentType: "application/json; charset=utf-8",//  What is the type of content of REST body
+            data: JSON.stringify(shipperToRegister),              // data to be sent through request body
+
+                                                           //callback function to be called on failure of REST API call
             error: function(xhr, status, error) {  
+
                 var err = eval("(" + xhr.responseText + ")");  
                 toastr.error(err.message); 
-                console.log(err); 
-            },
-            //On Successful retriving data  perfrom callback function 
-            //Success block is automatically called when ajax call receives 
-            //data from server  
+                console.log(shipperToRegister.accountNumber) 
+                
+            },  
+
+                                                     //callback function to be called on success of REST API call
+
             success: function(data) {  
-              var result=JSON.stringify(data);
-              var element=document.getElementById("para1");
-              element.innerHTML=result;
-              return false;  
+                console.log("Registerd..");  
+                console.log(data.accountNumber);
+
+                return false;  
+                
             }  
         });  
-    });
-});
+        return false;  
 
-</script>  
+
+     }
+
+
+       function onUpdate() {  
+        var strShipperId=($('#updatetxtshipperid').val());
+        var strCompanyName=($('#updatetxtcompanyname').val());
+        var strContactNumber=($('#updatetxtcontactnumber').val());
+        var strEmail=($('#updatetxtemail').val());
+         var strAccountNumber=($('#updatetxtaccountnumber').val());
+        var data = {
+                     "shipperId":strShipperId,
+                    "companyName": strCompanyName ,
+                    "contactNumber":strContactNumber ,
+                    "email":strEmail ,
+                    "accountNumber":strAccountNumber
+                     
+       }
+       console.log(data.shipperId);
+        $.ajax({  
+            url: "/shipper/updateshipper",                               
+            type: "PUT",                                  
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(data),             
+            
+                                                           
+            error: function(xhr, status, error) {  
+                var err = eval("(" + xhr.responseText + ")");  
+                toastr.error(err.message);  
+            },    
+            success: function(response) {
+                
+                console.log(response);
+                console.log("data updated sucessfully");  
+                return false;  
+            }  
+        });  
+        return false;  
+    }
+</script>
+  
+
+
+
+
+
+
 

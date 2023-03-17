@@ -100,6 +100,7 @@ public class ShipperRepository : IShipperRepository
         connection.ConnectionString=conString;
         try{
             string query=$"INSERT INTO shippers(company_name,contact_number,email,account_number)VALUES('{shipper.CompanyName}','{shipper.ContactNumber}','{shipper.Email}','{shipper.AcountNumber}')";
+            Console.WriteLine(query);
             connection.Open();
             MySqlCommand command=new MySqlCommand(query ,connection);
             command.ExecuteNonQuery();

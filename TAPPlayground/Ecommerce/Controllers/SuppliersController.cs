@@ -39,9 +39,10 @@ public class SuppliersController:Controller{
 
       [HttpPost]
       [Route("suppliers/insertsupplier")]
-    public JsonResult InsertSupplier([FromBody] Supplier supplier){
+       public JsonResult InsertSupplier([FromBody] Supplier supplier){
         bool status=_srv.InsertSupplier(supplier);
         return Json(status);
+        
     }
 
       [HttpPut]
