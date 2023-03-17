@@ -40,8 +40,8 @@ builder.Services.AddTransient<ISecureService,SecureService>();
 // builder.Services.AddTransient<ISecureService,SecureService>();
 // builder.Services.AddTransient<ISecureRepository,SecureRepository>();
 
-// builder.Services.AddTransient<ICustomersAccountsRepository,CustomersAccountsRepository>();
-// builder.Services.AddTransient<ICustomersAccountsService,CustomersAccountsService>();
+builder.Services.AddTransient<ICustomersAccountsRepository,CustomersAccountsRepository>();
+builder.Services.AddTransient<ICustomersAccountsService,CustomersAccountsService>();
 
 builder.Services.AddSession(options =>{
     options.IdleTimeout=TimeSpan.FromMinutes(10);
