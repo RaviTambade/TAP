@@ -14,6 +14,29 @@ public class ProductController : Controller
         _productsrv = productsrv;
     }
 
+ [HttpGet]
+    public IActionResult Index()
+    {
+        
+        return View();
+    }
+
+
+    [HttpGet]
+    public JsonResult getAll()
+    {
+        var products = _productsrv.GetAllProducts();
+        return Json(products);
+    }
+
+    [HttpGet]
+    public JsonResult GetById(int id)
+    {
+       var product = _productsrv.GetProduct(id);
+        return Json(product);
+    }
+
+
     [HttpGet]
     public IActionResult ShowAll()
     {

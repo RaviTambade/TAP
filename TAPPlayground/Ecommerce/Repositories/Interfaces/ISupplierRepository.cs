@@ -5,7 +5,7 @@ public interface ISupplierRepository{
 
     Supplier GetSupplierById(int id);
 
-    List<Supplier> GetSuppliersOfProduct(int productId);
+    List<Supplier> GetSuppliersOfProduct(int id);
 
     bool InsertSupplier(Supplier supplier);
     bool UpdateSupplier(Supplier supplier);

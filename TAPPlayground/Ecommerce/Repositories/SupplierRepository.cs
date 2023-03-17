@@ -64,6 +64,7 @@ public class SupplierRepository : ISupplierRepository
         try
         {
             string query = "SELECT * FROM suppliers WHERE supplier_id=" + id;
+            Console.WriteLine(query);
             connection.Open();
             MySqlCommand command = new MySqlCommand(query, connection);
             MySqlDataReader reader = command.ExecuteReader();
@@ -105,24 +106,24 @@ public class SupplierRepository : ISupplierRepository
         return supplier;
     }
 
-    public List<Supplier> GetSuppliersOfProduct(int ProductId)
+    public List<Supplier> GetSuppliersOfProduct(int id)
     {
         List<Supplier> suppliers = new List<Supplier>();
         MySqlConnection connection = new MySqlConnection(conString);
         try
         {
-            string query = " SELECT suppliers.supplier_id,suppliers.company_name,suppliers.supplier_name FROM suppliers INNER JOIN orderdetails ON suppliers.supplier_id=orderdetails.supplier_id WHERE product_id=" + ProductId;
+            string query = " SELECT suppliers.supplier_id,suppliers.company_name,suppliers.supplier_name FROM suppliers INNER JOIN orderdetails ON suppliers.supplier_id=orderdetails.supplier_id WHERE product_id=" + id;
             connection.Open();
             MySqlCommand command = new MySqlCommand(query, connection);
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
-                int id = int.Parse(reader["supplier_id"].ToString());
+                int supplierid = int.Parse(reader["supplier_id"].ToString());
                 string companyName = reader["company_name"].ToString();
                 string supplierName = reader["supplier_name"].ToString();
                 Supplier supplier = new Supplier()
                 {
-                    SupplierId = id,
+                    SupplierId = supplierid,
                     CompanyName = companyName,
                     SupplierName = supplierName,
                 };
