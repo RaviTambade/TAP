@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<body>
+<div class="container-fluid  p-5 my-5 bg-primary text-white">
+  <h1>Transaction Registration Page</h1> 
+</div>
+<form action="/action_page.php" class="was-validated">
+  <div class="mb-3 mt-3">
+    <label for="fromaccountnumber" class="form-label">From Account Number:</label>
+    <input type="text" class="form-control" id="fromaccountnumber" placeholder="Enter From Account Number" name="fromaccountnumber" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+  </div>
+  <div class="mb-3 mt-5">
+    <label for="toaccountnumber" class="form-label">To Account Number:</label>
+    <input type="txt" class="form-control" id="toaccountnumber" placeholder="Enter To Account Number" name="toaccountnumber" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+  </div>
+   <div class="mb-3 mt-5">
+    <label for="transactiondate" class="form-label">Transaction Date:</label>
+    <input type="txt" class="form-control" id="transactiondate" placeholder="Enter Date" name="transactiondate" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+  </div>
+   <div class="mb-3 mt-5">
+    <label for="amount" class="form-label">Amount:</label>
+    <input type="txt" class="form-control" id="amount" placeholder="Enter Amount" name="amount" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</body>
+</html>

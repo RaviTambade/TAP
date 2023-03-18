@@ -36,10 +36,6 @@ builder.Services.AddTransient<ISupplierRepository,SupplierRepository>();
 builder.Services.AddTransient<ISupplierService,SupplierService>();
 builder.Services.AddTransient<ISecureRepository,SecureRepository>();
 builder.Services.AddTransient<ISecureService,SecureService>();
-
-// builder.Services.AddTransient<ISecureService,SecureService>();
-// builder.Services.AddTransient<ISecureRepository,SecureRepository>();
-
 builder.Services.AddTransient<ICustomersAccountsRepository,CustomersAccountsRepository>();
 builder.Services.AddTransient<ICustomersAccountsService,CustomersAccountsService>();
 
