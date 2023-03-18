@@ -19,6 +19,20 @@ public class OrdersController : Controller
         return Json(orders);
     }
 
+      [HttpGet]
+    public JsonResult GetCancelledOrders()
+    {
+        var orders = _ordersrv.GetAllCancelledOrders();
+        return Json(orders);
+    }
+
+    [HttpGet]
+    public JsonResult GetDeliveredOrders()
+    {
+        var orders = _ordersrv.GetAllDeliveredOrders();
+        return Json(orders);
+    }
+
     [HttpGet]
 
     public JsonResult GetOrderById(int id)

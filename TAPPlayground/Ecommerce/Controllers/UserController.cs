@@ -14,7 +14,7 @@ public class UserController : Controller
         _usersrv = usersrv;
     }
 
-    public IActionResult Index()
+    public IActionResult UserMockUpScreen()
     {
         return View();
     }
