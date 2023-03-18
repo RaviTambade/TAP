@@ -41,7 +41,22 @@ public class OrdersController : Controller
         return View();
     }
 
-    public IActionResult Index()
+    public IActionResult Orderdetails()
+    {
+        return View();
+    }
+
+    public IActionResult Paymode()
+    {
+        return View();
+    }
+
+    public IActionResult OnlinePay()
+    {
+        return View();
+    }
+
+    public IActionResult NetBanking()
     {
         return View();
     }
