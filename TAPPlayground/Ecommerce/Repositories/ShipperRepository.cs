@@ -35,7 +35,7 @@ public class ShipperRepository : IShipperRepository
                     CompanyName = companyName,
                     ContactNumber = contactNumber,
                     Email = email,
-                    AcountNumber = accountNo
+                    AccountNumber = accountNo
                 };
 
                 shippers.Add(shipper);
@@ -65,7 +65,7 @@ public class ShipperRepository : IShipperRepository
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
-                id = int.Parse(reader["supplier_id"].ToString());
+                id = int.Parse(reader["shipper_id"].ToString());
                 string companyName = reader["company_name"].ToString();
                 string contactNumber = reader["contact_number"].ToString();
                 string email = reader["email"].ToString();
@@ -77,7 +77,7 @@ public class ShipperRepository : IShipperRepository
                     CompanyName = companyName,
                     ContactNumber = contactNumber,
                     Email = email,
-                    AcountNumber = accountNumber
+                    AccountNumber = accountNumber
                 };
             }
             reader.Close();
@@ -99,7 +99,7 @@ public class ShipperRepository : IShipperRepository
         MySqlConnection connection=new MySqlConnection();
         connection.ConnectionString=conString;
         try{
-            string query=$"INSERT INTO shippers(company_name,contact_number,email,account_number)VALUES('{shipper.CompanyName}','{shipper.ContactNumber}','{shipper.Email}','{shipper.AcountNumber}')";
+            string query=$"INSERT INTO shippers(company_name,contact_number,email,account_number)VALUES('{shipper.CompanyName}','{shipper.ContactNumber}','{shipper.Email}','{shipper.AccountNumber}')";
             Console.WriteLine(query);
             connection.Open();
             MySqlCommand command=new MySqlCommand(query ,connection);
@@ -122,7 +122,7 @@ public class ShipperRepository : IShipperRepository
         connection.ConnectionString = conString;
         try
         {
-            string query = "UPDATE shippers SET company_name='" +shipper.CompanyName  + "', contact_number='" + shipper.ContactNumber +"', email='" + shipper.Email +"', account_number='" + shipper.AcountNumber  +"' WHERE shipper_id=" +shipper.ShipperId;
+            string query = "UPDATE shippers SET company_name='" +shipper.CompanyName  + "', contact_number='" + shipper.ContactNumber +"', email='" + shipper.Email +"', account_number='" + shipper.AccountNumber  +"' WHERE shipper_id=" +shipper.ShipperId;
             MySqlCommand command = new MySqlCommand(query, connection);
             connection.Open();
             command.ExecuteNonQuery();

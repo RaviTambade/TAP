@@ -10,7 +10,7 @@ public class Shipper{
 
       public string? Email{get;set;}
 
-      public long AcountNumber{get;set;}
+      public long AccountNumber{get;set;}
 
 
 }
