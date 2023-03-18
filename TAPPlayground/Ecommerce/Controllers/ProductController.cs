@@ -20,6 +20,11 @@ public class ProductController : Controller
         
         return View();
     }
+    
+    public IActionResult MockupScreen()
+    {
+       return View();
+    }
 
 
     [HttpGet]

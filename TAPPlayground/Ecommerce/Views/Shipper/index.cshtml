@@ -1,29 +1,258 @@
-
-@{
-    ViewData["Title"] = "Dashboard Page";
+@model ECommerceApp.Models.Shipper
+@{ViewData["title"]="Register Page";
 }
 
-<h2>Shippers List</h2>
+<div>
+    <hr/>
+    <h2><p class="text-center">Register Details  </p></h2>
+    <hr/>
+      <table class="table table-bordered">
 
+          <div class="form-floating mb-3 mt-3">
+        <input type="text" class="form-control" name="company_name" id="txtcompanyname"/>
+        <label for="CompanyName">CompanyName</label>
+     </div>  
+
+     <div class="form-floating mb-3 mt-3">
+        <input type="text" class="form-control" name="contact_number" id="txtcontactnumber"/>
+        <label for="ContactNumber">ContactNumber</label>
+     </div>
+
+     <div class="form-floating mb-3 mt-3">
+        <input type="text" class="form-control" name="email" id="txtemail"/>
+        <label for="email">Email</label>
+     </div>
+
+     <div class="form-floating mb-3 mt-3">
+        <input type="text" class="form-control" name="account_number" id="txtaccountnumber"/>
+        <label for="Account number">Account number</label>
+     </div>
+    </table>
+   <button id="registerbtn" class="btn btn-primary">Register</button>
+
+</div>
+
+<hr/>
+<hr/>
+<div>
+   <h2><p class="text-center">Update Details </p></h2>
+   <hr/>
+        <table class="table table-bordered">
+
+    <div class="form-floating mb-3 mt-3">
+      <input type="text" class="form-control" name="updateshipper_id" id="updatetxtshipperid"/>
+      <label for="email">ShipperId</label>
+    </div>
+
+      <div class="form-floating mb-3 mt-3">
+        <input type="text" class="form-control" name="updatecompany_name" id="updatetxtcompanyname"/>
+        <label for="email">CompanyName</label>
+     </div>
+
+    <div class="form-floating mb-3 mt-3">
+      <input type="text" class="form-control"  name="updatecontact_number" id="updatetxtcontactnumber"/>
+      <label for="email">ContactNumber</label>
+    </div>
+
+    <div class="form-floating mb-3 mt-3">
+      <input type="text" class="form-control" name="updateemail" id="updatetxtemail"/>
+      <label for="email">Email</label>
+    </div>
+
+     <div class="form-floating mb-3 mt-3">
+      <input type="text" class="form-control" name="account_number" id="updatetxtaccountnumber"/>
+      <label for="email">Account number</label>
+    </div>
+
+    </table>
+ <button id="onupdatebtn" class="btn btn-primary">Update</button>
+<hr/>
+<hr/>
 
  
 
-  <button id="btn">show</button>
-  <p id='para1'>Transflower</p>
-  <hr/>
-  <p id='para2'>Seed</p>
 
 
- 
-<script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript">  
-   
-   $(document).ready(function(){
-    $("#btn").click(function(){
-        //invoke REST API to fetch data from server
-        
+ <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<script type="text/javascript">
+       console.log("Hello...")  
+     $(document).ready(function(){
+        console.log("document is initialized");
+        $('#registerbtn').click(onRegister);
+         $('#onupdatebtn').click(onUpdate);
+    }); 
+    
+     function onRegister() {  
+        //get data from text boxex
+        console.log("okk..");
+        var strCompanyName=($('#txtcompanyname').val());
+        var strContactNumber=($('#txtcontactnumber').val());
+        var strEmail=($('#txtemail').val());
+        var strAccountNumber=($('#txtaccountnumber').val());
+
+        //create JSON object to store textboxes contents into json
+      console.log(strAccountNumber);
+        var shipperToRegister = {
+                    "companyName": strCompanyName ,
+                    "contactNumber":strContactNumber ,
+                    "email":strEmail ,
+                    "accountNumber":strAccountNumber
+                    
+       }
+       console.log (shipperToRegister);
+      
+       //Invoke REST API programmatically using $.ajax  JQuery function
+       var restAPIUrl='http://localhost:5223/Shipper/insertshipper'
+
+       //IT will invoke Remote REST API 
+
         $.ajax({  
-            url: '/Shipper/ShowAllShippers',  
+            url: restAPIUrl ,                                // link of REST API url
+            type: "POST",                                   // type of HTTP request
+            contentType: "application/json; charset=utf-8",//  What is the type of content of REST body
+            data: JSON.stringify(shipperToRegister),              // data to be sent through request body
+
+                                                           //callback function to be called on failure of REST API call
+            error: function(xhr, status, error) {  
+
+                var err = eval("(" + xhr.responseText + ")");  
+                toastr.error(err.message); 
+                console.log(shipperToRegister.accountNumber) 
+                
+            },  
+
+                                                     //callback function to be called on success of REST API call
+
+            success: function(data) {  
+                console.log("Registerd..");  
+                console.log(data.accountNumber);
+
+                return false;  
+                
+            }  
+        });  
+        return false;  
+
+
+     }
+
+
+       function onUpdate() {  
+        var strShipperId=($('#updatetxtshipperid').val());
+        var strCompanyName=($('#updatetxtcompanyname').val());
+        var strContactNumber=($('#updatetxtcontactnumber').val());
+        var strEmail=($('#updatetxtemail').val());
+         var strAccountNumber=($('#updatetxtaccountnumber').val());
+        var data = {
+                     "shipperId":strShipperId,
+                    "companyName": strCompanyName ,
+                    "contactNumber":strContactNumber ,
+                    "email":strEmail ,
+                    "accountNumber":strAccountNumber
+                     
+       }
+       console.log(data.shipperId);
+        $.ajax({  
+            url: "/shipper/updateshipper",                               
+            type: "PUT",                                  
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(data),             
+            
+                                                           
+            error: function(xhr, status, error) {  
+                var err = eval("(" + xhr.responseText + ")");  
+                toastr.error(err.message);  
+            },    
+            success: function(response) {
+                
+                console.log(response);
+                console.log("data updated sucessfully");  
+                return false;  
+            }  
+        });  
+        return false;  
+    }
+</script>
+  
+
+
+
+<!--
+
+
+<h2><p class="text-center">Show List Of Shippers</p></h2>
+<hr/>
+
+<ul id ="lstshippers">    
+</ul>
+
+
+
+ <h2><p class="text-center"> Information of shipper</p></h2>
+
+ <button id="btn" class="btn btn-info"> Click here</button>
+<hr/>
+
+<div class="container mt-3">
+  <a href="#demo" class="btn btn-primary" data-bs-toggle="collapse">Show Info</a>
+  <div id="demo" class="collapse">
+
+    <td><p class="text-warning"><label id ="lblcompanyname"></label> </p></td>
+ <td><p class="text-warning"><label id ="lblcontactnumber"></label> </p></td>
+ <td><p class="text-warning"><label id ="lblemail"></label> </p></td>
+  <td><p class="text-warning"><label id ="lblaccountnumber"></label> </p></td>
+ 
+</div>
+ 
+<hr/>
+</div>
+ <script src="~/lib/jquery/dist/jquery.min.js"></script>
+ <script type="text/javascript"> 
+
+
+   function doSomething(event){
+        console.log ("anchor is clicked" + event);
+
+   }
+
+
+   function getAllShippers(){
+
+   $.ajax({
+
+    url:'/shipper/getallshippers',
+    dataType:"json",
+    type:"GET",
+    error:function(xhr,status,error){
+       var err = eval("(" +xhr.responseText+")");
+       tostr.error(err.message);
+       console.log(err);
+    },
+
+
+
+    success: function (data){
+
+        for (let i = 0; i < data.length; i++) {        
+                        var str="<li><a onClick='doSomething()' src=''>"+ data[i].companyName +"</a></li>";
+                        $("#lstshippers").append(str);
+                }
+               return false;
+    }
+
+   });
+
+   }
+
+
+
+
+
+function getShipperById(id){
+  //invoke REST API to fetch data by id from server  
+        $.ajax({  
+            url: '/shipper/getShipperById/'+id,  
             dataType: "json",  
             type: "GET",  
             error: function(xhr, status, error) {  
@@ -35,14 +264,25 @@
             //Success block is automatically called when ajax call receives 
             //data from server  
             success: function(data) {  
-              var result=JSON.stringify(data);
-              var element=document.getElementById("para1");
-              element.innerHTML=result;
+                        $("#lblcompanyname").text(data.companyName);
+                        $("#lblcontactnumber").text(data.contactNumber);
+                        $("#lblemail").text(data.email);
+                        $("#lblaccountnumber").text(data.accountNumber);
+                      
+                    
+                    
               return false;  
             }  
         });  
+}
+   
+    $(document).ready(function(){
+       getAllShippers();
+       $("#btn").click( function (){
+        getShipperById(5);
+       })
     });
-});
+</script> 
 
-</script>  
+-->
 

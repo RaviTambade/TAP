@@ -52,6 +52,31 @@ public class SuppliersController:Controller{
         return View();
     }
 
+      public IActionResult Home()
+    {
+        return View();
+    }
+
+       public IActionResult ShowAllSuppliers()
+    {
+        return View();
+    }
+       public IActionResult ShowById()
+    {
+        return View();
+    }
+   
+       [HttpPost]
+       public IActionResult ShowById(int id)
+    {
+        return View();
+    }
+
+
+
+
+
+
 
 
     [HttpGet]
@@ -74,9 +99,10 @@ public class SuppliersController:Controller{
 
       [HttpPost]
       [Route("suppliers/insertsupplier")]
-    public JsonResult InsertSupplier([FromBody] Supplier supplier){
+       public JsonResult InsertSupplier([FromBody] Supplier supplier){
         bool status=_srv.InsertSupplier(supplier);
         return Json(status);
+        
     }
 
       [HttpPut]

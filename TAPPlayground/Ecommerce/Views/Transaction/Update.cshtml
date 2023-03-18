@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<body>
+<div class="container-fluid  p-5 my-5 bg-primary text-white">
+  <h1>Transaction Updation Page</h1> 
+</div>
+<form action="/action_page.php" class="was-validated">
+  <div class="mb-3 mt-3">
+    <label for="transactionid" class="form-label">Transaction Id:</label>
+    <input type="text" class="form-control" id="txtid" placeholder="Enter Transaction Id" name="transactionid" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+  </div>
+  <div class="mb-3 mt-3">
+    <label for="fromaccountnumber" class="form-label">From Account Number:</label>
+    <input type="text" class="form-control" id="txtupdatefromaccountnumber" placeholder="Enter From Account Number" name="fromaccountnumber" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+  </div>
+  <div class="mb-3 mt-5">
+    <label for="toaccountnumber" class="form-label">To Account Number:</label>
+    <input type="txt" class="form-control" id="txtupdatetoaccountnumber" placeholder="Enter To Account Number" name="toaccountnumber" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+  </div>
+   <div class="mb-3 mt-5">
+    <label for="transactiondate" class="form-label">Transaction Date:</label>
+    <input type="txt" class="form-control" id="txtupdatetransactiondate" placeholder="Enter Date" name="transactiondate" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+  </div>
+   <div class="mb-3 mt-5">
+    <label for="amount" class="form-label">Amount:</label>
+    <input type="txt" class="form-control" id="txtupdateamount" placeholder="Enter Amount" name="amount" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+  </div>
+  <button id="btnupdate" class="btn btn-primary">Submit</button>
+</form>
+</body>
+</html>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+    console.log("Hello");
+    $(document).ready(function(){
+        console.log("Document is initialized");;
+        $('#btnupdate').click(onUpdate);
+    });
+  function onUpdate(){
+        console.log("on Update...");
+        var strTransactionId=($('#txtid').val());
+        var strFromAccountNumber=($('#txtupdatefromaccountnumber').val());
+        var strToAccountNumber=($('#txtupdatetoaccountnumber').val());
+        var strTransactionDate=($('#txtupdatetransactiondate').val());
+        var strAmount=($('#txtupdateamount').val());
+                 
+        //create JSON object to store textboxes contents into json
+        var transactionToUpdate = {
+            "transactionid": strTransactionId,
+            "fromaccountnumber": strFromAccountNumber,
+            "toaccountnumber": strToAccountNumber,
+            "transactiondate": strTransactionDate,
+            "amount": strAmount
+        }
+        console.log(transactionToUpdate);
+        //Invoke REST API programmatically using $.ajax JQuery function
+        var id=$('#txtid').val();
+        var restApiurl1 = 'http://localhost:5223/transaction/updatetransaction/'+id;
+        //IT will invoke Remote REST API 
+        $.ajax({
+            url:restApiurl1,
+            type:"PUT",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(transactionToUpdate),
+
+            //callback function to be called on failure of REST API call
+            error: function(xhr, status, error) {  
+            var err = eval("(" + xhr.responseText + ")");  
+            toastr.error(err.message);  
+            }, 
+            //callback function to be called on success of REST API call
+                        success: function(data) {  
+                console.log("Updated..");  
+                return false;  
+            }  
+        });  
+        return false;  
+}
+</script>

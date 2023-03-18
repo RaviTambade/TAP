@@ -7,49 +7,56 @@ namespace ECommerceApp.Controllers;
 public class AccountsController : Controller
 {
     private readonly IAccountService _accountserv;
-    public AccountsController(IAccountService accountserv){
-     _accountserv = accountserv;
+    public AccountsController(IAccountService accountserv)
+    {
+        _accountserv = accountserv;
     }
     [HttpGet]
     public JsonResult GetAllAccounts()
     {
-        var accounts=_accountserv.GetAllAccounts();
+        var accounts = _accountserv.GetAllAccounts();
         return Json(accounts);
     }
     [HttpGet]
+    public IActionResult AccountsDetails()
+    {
+        return View();
+    }
+
+    [HttpGet]
     public JsonResult GetAccountById(int id)
     {
-        var account=_accountserv.GetAccountById(id);
+        var account = _accountserv.GetAccountById(id);
         return Json(account);
     }
     [HttpGet]
     public IActionResult Search(int id)
     {
-           return View();
+        return View();
     }
-[HttpGet]
+    [HttpGet]
     public IActionResult Index()
     {
         return View();
     }
-     [HttpPost]
+    [HttpPost]
     public JsonResult InsertAccount([FromBody] Account account)
     {
-        bool status=_accountserv.InsertAccount(account);
+        bool status = _accountserv.InsertAccount(account);
         return Json(status);
     }
 
-      [HttpPut]
+    [HttpPut]
     public JsonResult UpdateAccount([FromBody] Account account)
     {
         Console.WriteLine(account.AccountNumber);
-        bool status=_accountserv.UpdateAccount(account);
+        bool status = _accountserv.UpdateAccount(account);
         return Json(status);
-}
-   [HttpDelete]
+    }
+    [HttpDelete]
     public JsonResult DeleteAccount(Int32 id)
     {
-        bool status=_accountserv.DeleteAccount(id);
+        bool status = _accountserv.DeleteAccount(id);
         return Json(status);
-}
+    }
 }
