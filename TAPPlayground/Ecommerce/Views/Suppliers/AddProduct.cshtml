@@ -1,0 +1,40 @@
+@model ECommerceApp.Models.Supplier
+
+
+
+<div class="container">
+<form >
+  <div class="mb-3 mt-3">
+    <label for="imageurl" class="form-label">productImageUrl:</label>
+    <input type="text" class="form-control" id="txtimageurl" placeholder="Enter imageurl" name="imageurl">
+  </div>
+  <div class="mb-3">
+    <label for="title" class="form-label">Title:</label>
+    <input type="text" class="form-control" id="txttitle" placeholder="Enter product title" name="title">
+  </div>
+    <div class="mb-3">
+    <label for="description" class="form-label">Description:</label>
+    <input type="text" class="form-control" id="txtdescription" placeholder=" Enter description of product" name="description">
+  </div>
+    <div class="mb-3">
+    <label for="unitprice" class="form-label">UnitPrice:</label>
+    <input type="number" class="form-control" id="txtunitprice" placeholder="Enter unit price of product" name="unitprice">
+  </div>
+    <div class="mb-3">
+    <label for="quantity" class="form-label">Quantity:</label>
+    <input type="number" class="form-control" id="txtquantity" placeholder="Enter product quantity" name="quantity">
+  </div>
+  <div class="form-check mb-3">
+    <label class="form-check-label">
+      <input class="form-check-input" type="checkbox" name="remember"> Remember me
+    </label>
+  </div>
+  <div>
+  <button type="submit" class="btn btn-success">Submit</button>
+    <button style="text-align: center;" type="button" class="btn btn-success"><a href="/suppliers/home"style="color:inherit ; text-decoration: none;">Back</a></button>
+  </div>
+</form>
+
+</div>
+
+

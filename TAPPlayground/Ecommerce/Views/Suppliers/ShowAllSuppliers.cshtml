@@ -1,0 +1,62 @@
+@model ECommerceApp.Models.Supplier
+  <table id="my-table" class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>SupplierId</th>
+        <th>SupplierName</th>
+        <th>CompanyName</th>
+        <th>ContactNumber</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>State</th>
+        <th>AccountNumber</th>
+          </tr>
+    </thead>
+    <tbody id="my-tbody">
+      
+    </tbody>
+  </table>
+</div>
+<div class="d-grid">
+  <button type="button" class="btn btn-primary btn-block">Back</button>
+</div>
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+
+    //invoke REST API to fetch data from server
+
+
+    function showAllSuppliers() {
+        $.ajax({
+            url: '/suppliers/getallsuppliers',
+            dataType: "json",
+            type: "GET",
+            error: function (xhr, status, error) {
+                var err = eval("(" + xhr.responseText + ")");
+                toastr.error(err.message);
+                console.log(err);
+            },
+            //On Successful retriving data  perfrom callback function 
+            //Success block is automatically called when ajax call receives 
+            //data from server  
+            success: function (data) {
+                console.log(data);
+                var rows='';
+                for (let i = 0; i < data.length; i++) {
+              rows +='<tr><td>'+data[i].supplierId +'</td><td>'+data[i].supplierName +'</td><td>'+data[i].companyName +'</td><td>'+data[i].contactNumber +'</td><td>'+data[i].email+'</td><td>'+data[i].address +'</td><td>'+ data[i].city +'</td><td>' + data[i].state +'</td><td>'+data[i].accountNumber+'</td></tr>';
+                    $("#my-tbody").html(rows);     
+                }
+                 return false;
+            }
+        });
+    }
+
+
+    $(document).ready(function () {
+        showAllSuppliers();
+    });
+
+</script>

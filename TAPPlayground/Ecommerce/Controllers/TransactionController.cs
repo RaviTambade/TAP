@@ -23,6 +23,23 @@ public class TransactionController : Controller
     {
         return View();
     }
+
+    public IActionResult Register()
+    {
+        return View();
+    }
+    public IActionResult Update()
+    {
+        return View();
+    }
+    public IActionResult GetAll()
+    {
+        return View();
+    }
+        public IActionResult GetById()
+    {
+        return View();
+    }
     
     [HttpGet]
     public JsonResult ShowAllTransactions()

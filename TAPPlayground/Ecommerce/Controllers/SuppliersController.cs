@@ -18,6 +18,66 @@ public class SuppliersController:Controller{
         return View();
     }
 
+        public IActionResult GetDetails()
+    {
+        return View();
+    }
+
+      public IActionResult TotalSold()
+    {
+        return View();
+    }
+    
+      public IActionResult AvailableQuantity()
+    {
+        return View();
+    }
+
+       public IActionResult AddProduct()
+    {
+        return View();
+    }
+
+      public IActionResult UpdateProduct()
+    {
+        return View();
+    }
+
+     public IActionResult ReturnedProducts()
+    {
+        return View();
+    }
+     public IActionResult CancelledProducts()
+    {
+        return View();
+    }
+
+      public IActionResult Home()
+    {
+        return View();
+    }
+
+       public IActionResult ShowAllSuppliers()
+    {
+        return View();
+    }
+       public IActionResult ShowById()
+    {
+        return View();
+    }
+   
+       [HttpPost]
+       public IActionResult ShowById(int id)
+    {
+        return View();
+    }
+
+
+
+
+
+
+
 
     [HttpGet]
     public JsonResult GetAllSuppliers(){

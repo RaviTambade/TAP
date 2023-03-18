@@ -13,6 +13,8 @@ public class UserService : IUserService
 
     public bool ValidateUser(User user) => _repo.ValidateUser(user);
 
-
-
+    public List<User> GetAllUser()
+    {
+        return _repo.GetAllUser();
+    }
 }

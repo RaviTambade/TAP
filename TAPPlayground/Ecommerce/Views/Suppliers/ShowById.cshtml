@@ -1,0 +1,66 @@
+
+  
+  <div>SupplierId<input type="text" name="supplierid" id="txtsupplierid"></div>
+  <button class="btn btn-success" type="submit" id="btn">submit</button>
+  <div>
+      <table id="my-table" class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>SupplierId</th>
+        <th>SupplierName</th>
+        <th>CompanyName</th>
+        <th>ContactNumber</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>State</th>
+        <th>AccountNumber</th>
+          </tr>
+    </thead>
+    <tbody id="my-tbody">
+      
+    </tbody>
+  </table>
+</div>
+<div class="d-grid">
+    <div>
+  <button style="text-align: center;" type="button" class="btn btn-success"><a href="/suppliers/home">Back</a></button>
+</div>
+</div>
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+        $("#btn").click(getSupplierById);
+    });
+
+ function getSupplierById() {
+    var id=$("#txtsupplierid").val();
+    console.log(id);
+    
+        //invoke REST API to fetch data by id from server  
+        $.ajax({
+            url: '/suppliers/getsupplierbyid/' + id,
+            dataType: "json",
+            type: "GET",
+            error: function (xhr, status, error) {
+                var err = eval("(" + xhr.responseText + ")");
+                toastr.error(err.message);
+                console.log(err);
+            },
+            //On Successful retriving data  perfrom callback function 
+            //Success block is automatically called when ajax call receives 
+            //data from server  
+            success: function (data) {
+                console.log(data);
+               var row =' <tr><td>'+data.supplierId +'</td><td>'+data.supplierName +'</td><td>'+data.companyName +'</td><td>'+data.contactNumber +'</td><td>'+data.email+'</td><td>'+data.address +'</td><td>'+ data.city +'</td><td>' + data.state +'</td><td>'+data.accountNumber+'</td></tr>';
+                    $("#my-tbody").html(row);     
+        
+            }
+        });
+    }
+
+
+  
+</script>
