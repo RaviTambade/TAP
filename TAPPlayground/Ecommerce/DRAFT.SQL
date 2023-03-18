@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 -- Active: 1678859769284@@127.0.0.1@3306@ecommerce
-<<<<<<< HEAD
-
-=======
->>>>>>> 4400146642f56ca514866e6aa2f10a768cc80e4a
--- Active: 1677916902963@@127.0.0.1@3306@ecommerce
-
 
 
 -- CREATE DATABASE Ecommerce;
@@ -56,11 +49,9 @@ select * from payments;
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546630,'MAHB0000286','2023-03-01 12:40:40',22555);
 =======
 select * from suppliers;
-=======
->>>>>>> f358ca23022a3b7bf83b1cce049f126d3dd00443
 
-<<<<<<< HEAD
-select * from payments;
+
+select * from orders;
 
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546631,'MAHB0000286','2023-03-01 12:40:40',22555);
 =======
@@ -77,6 +68,9 @@ INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 390
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 3902554668,'MAHB0000286','2023-03-01 12:40:40',22555);
 
 
+ DESC orders;
+
+SELECT * from orders;
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546334,'MAHB0000286','2023-03-01 12:40:40',22555);
 
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546975,'MAHB0000286','2023-03-01 12:40:40',22555);
@@ -182,8 +176,8 @@ INSERT INTO products(product_title,description,stock_available,unit_price,image,
 INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('Fiidge','Kitchen Use',200,150,'./images/Samsung.jpg',4);
 INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('Laptops','Working Gaget',60,60000,'./images/Dell.jpg',4);
 
-select * from orders;
-INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-08-25  06:35:25', 1,50.00,'initiated');
+select * from orders WHERE cust_id=1;
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-17  04:20:10', 1,85.00,'cancelled');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:25', 2, 82.00,'delivered');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-01-16  09:35:25', 6,20.00,'cancelled');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:25', 7,40.00,'inprogress');
@@ -191,7 +185,7 @@ INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:2
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-08-25  06:35:25', 4,50.00,'delivered');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:25', 4,30.00,'delivered');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-01-16  09:35:25', 4,45.00,'inprogress');
-INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:25', 2,45.00,'cancelled');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-04-12  12:35:25', 1,75.00,'cancelled');
 
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-08-25  06:35:25', 1,50.00,'initiated');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:25', 2,35.00,'inprogress');

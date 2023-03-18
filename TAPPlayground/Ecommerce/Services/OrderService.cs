@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using ECommerceApp.Models;
 using ECommerceApp.Repositories.Interfaces;
 using ECommerceApp.Services.Interfaces;
@@ -10,6 +11,10 @@ public class OrderService : IOrderService{
     }
 
     public List<Order> GetAllOrders() => _repo.GetAllOrders();
+
+    public List<Order> GetAllCancelledOrders() => _repo.GetAllCancelledOrders();
+    public List<Order> GetAllDeliveredOrders() => _repo.GetAllDeliveredOrders();
+
     public Order GetOrderById(int id) => _repo.GetOrderById(id);
 
     public Order GetOrderByCustId(int id) => _repo.GetOrderByCustId(id);
