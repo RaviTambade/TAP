@@ -1,0 +1,41 @@
+
+<h6> Bank Details page:<h6>
+
+<form>
+  <label for="banks">Choose your bank:</label>
+  <select name="banks" id="banks">
+    <option value="mhb">Maharashtra Bank</option>
+    <option value="sbi">State Bank Of India</option>
+    <option value="ubi">Union Bank Of India</option>
+    <option value="hdfc">HDFC Bank</option>
+  </select>
+</form>
+
+<form action="/action_page.php">
+  <div class="mb-3 mt-3">
+    <label for="ownername" class="form-label">Owner Name:</label>
+    <input type="ownername" class="form-control" id="ownername" placeholder="Enter Owner Name" name="ownername">
+    </div>
+
+    <div class="mb-3 mt-3">
+    <label for="creditcardnumber" class="form-label">Credit Card Number:</label>
+    <input type="creditcardnumber" class="form-control" id="creditcardnumber" placeholder="Enter Credit Card Number" name="creditcardnumber">
+    </div>
+
+    <div class="mb-3 mt-3">
+    <label for="cvv" class="form-label">CVV:</label>
+    <input type="cvv" class="form-control" id="cvv" placeholder="Enter cvv" name="cvv">
+    </div>
+    
+    <div class="mb-3 mt-3">
+    <label for="expirydate" class="form-label">Expiry Date:</label>
+    <input type="expirydate" class="form-control" id="expirydate" placeholder="Enter Expiry Date" name="expirydate">
+    </div>
+
+    <div class="mb-3 mt-3">
+    <label for="ifsc" class="form-label">IFSC Code:</label>
+    <input type="ifsc" class="form-control" id="ifsc" placeholder="Enter IFSC Code" name="ifsc">
+  </div>
+</form>
+
+<button type="submit" id="submit">Place Order</button>

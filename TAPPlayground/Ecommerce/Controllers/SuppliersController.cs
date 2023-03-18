@@ -52,6 +52,31 @@ public class SuppliersController:Controller{
         return View();
     }
 
+      public IActionResult Home()
+    {
+        return View();
+    }
+
+       public IActionResult ShowAllSuppliers()
+    {
+        return View();
+    }
+       public IActionResult ShowById()
+    {
+        return View();
+    }
+   
+       [HttpPost]
+       public IActionResult ShowById(int id)
+    {
+        return View();
+    }
+
+
+
+
+
+
 
 
     [HttpGet]
