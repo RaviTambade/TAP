@@ -1,3 +1,4 @@
+-- Active: 1678116914124@@127.0.0.1@3306@ecommerce
 
 -- CREATE DATABASE Ecommerce;
 -- drop DATABASE ecommerce;
