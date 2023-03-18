@@ -2,7 +2,81 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+<!--<div class="mt-4 p-5 bg-primary text-white rounded">
+  <h1>My First Bootstrap Page</h1>
+  <p>This is some text.</p>
+</div>-->
+
+
+
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link" href="#">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Aboutus</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Contact</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Services</a>
+  </li>
+</ul>
+<hr/>
+
+<div class="container">
+<form >
+  <div class="mb-3 mt-3">
+    <label for="email" class="form-label">Email:</label>
+    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+  </div>
+  <div class="mb-3">
+    <label for="pwd" class="form-label">Password:</label>
+    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+  </div>
+  <div class="form-check mb-3">
+    <label class="form-check-label">
+      <input class="form-check-input" type="checkbox" name="remember"> Remember me
+    </label>
+  </div>
+  <button type="submit" class="btn btn-danger">Submit</button>
+</form>
+
 </div>
+
+<div class="container mt-3">
+  <h2>Order Details</h2>
+  <p>List of ordres placed</p>            
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Order ID</th>
+        <th>Order Date</th>
+        <th>Customer</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>3424</td>
+        <td>12-3-2023</td>
+        <td>Abhay Navale</td>
+        <td>Delivered</td>
+      </tr>
+      <tr>
+        
+       <td>3456</td>
+        <td>11-2-2023</td>
+        <td>Sameer patil</td>
+        <td>Cancelled</td>
+      </tr>
+      <tr>
+       <td>3424</td>
+        <td>12-3-2023</td>
+        <td>Sahil Mankar</td>
+        <td>In progress</td>
+      </tr>
+    </tbody>
+  </table>

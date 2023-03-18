@@ -1,0 +1,87 @@
+@model ECommerceApp.Models.Supplier
+@{
+    ViewData["title"] = "Register Page";
+}
+
+<ul id="listsuppliers"></ul>
+<button id="btn">show</button>
+<hr />
+<label id="lblcompanyname"></label> <br />
+<label id="lblsuppliername"></label> <br />
+<label id="lblcontactnumber"></label> <br />
+<label id="lblemail"></label> <br />
+<label id="lbladdress"></label><br />
+<label id="lblcity"></label> <br />
+<label id="lblstate"></label> <br />
+<label id="lblaccountnumber"></label> <br />
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+
+    //invoke REST API to fetch data from server
+
+
+    function getAllSuppliers() {
+        $.ajax({
+            url: '/suppliers/getallsuppliers',
+            dataType: "json",
+            type: "GET",
+            error: function (xhr, status, error) {
+                var err = eval("(" + xhr.responseText + ")");
+                toastr.error(err.message);
+                console.log(err);
+            },
+            //On Successful retriving data  perfrom callback function 
+            //Success block is automatically called when ajax call receives 
+            //data from server  
+            success: function (data) {
+                console.log(data);
+                for (let i = 0; i < data.length; i++) {
+                    var str="<li>"+ data[i].companyName +"</li>";
+                    $("#listsuppliers").append(str);     
+                }
+                 return false;
+            }
+        });
+    }
+
+
+    function getSupplierById(id) {
+        //invoke REST API to fetch data by id from server  
+        $.ajax({
+            url: '/suppliers/getsupplierbyid/' + id,
+            dataType: "json",
+            type: "GET",
+            error: function (xhr, status, error) {
+                var err = eval("(" + xhr.responseText + ")");
+                toastr.error(err.message);
+                console.log(err);
+            },
+            //On Successful retriving data  perfrom callback function 
+            //Success block is automatically called when ajax call receives 
+            //data from server  
+            success: function (data) {
+                $('#lblcompanyname').text(data.companyName);
+                $('#lblsuppliername').text(data.supplierName);
+                $('#lblcontactnumber').text(data.contactNumber);
+                $('#lblemail').text(data.email);
+                $('#lbladdress').text(data.address);
+                $('#lblcity').text(data.city);
+                $('#lblstate').text(data.state);
+                $('#lblaccountnumber').text(data.accountNumber);
+
+                return false;
+            }
+        });
+    }
+
+
+    $(document).ready(function () {
+        getAllSuppliers();
+        $("#btn").click(function () {
+            getSupplierById(4);
+        })
+    });
+
+
+</script>
