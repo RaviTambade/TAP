@@ -1,38 +1,29 @@
- 
-
 @{
-    ViewData["Title"] = "Products Page";
+    ViewData["Title"] = "Transaction Page";
 }
-<h1>Products Catalog</h1>
+<h1>Transaction Catalog</h1>
 <hr/>
-<ul id="lstproducts">
+<ul id="lsttransactions">
 </ul>
 
 <button id="btn">Get Details</button>
 <hr/>
-    <label id="lbltitle"></label> </br>
-    <label id="lbldescription"></label> </br>
-    <label id="lblstockavailable"></label></br>
-    <label id="lblunitprice"></label></br>
-<<<<<<< HEAD
-    <img id="lblimageUrl" height="100" widh=100  ></br>
-=======
-    <img id="lblimageUrl" height="100" widh=100 /></br>
->>>>>>> e946a5518d4c398504704a973e4f04cf4af11bc7
-    <label id="lblbuyquantity"></label>
+    <label id="lblfromaccountnumber"></label> </br>
+    <label id="lbltoaccountnumber"></label> </br>
+    <label id="lbltransactiondate"></label></br>
+    <label id="lblamount"></label></br>
 
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript">  
 
     function doSomething(event){
         console.log ("anchor is clicked" + event);
-
     }
 
 function getAll(){
   //invoke REST API to fetch data from server  
         $.ajax({  
-            url: '/product/getall',  
+            url: '/transaction/showalltransactions',  
             dataType: "json",  
             type: "GET",  
             error: function(xhr, status, error) {  
@@ -44,21 +35,23 @@ function getAll(){
             //Success block is automatically called when ajax call receives 
             //data from server  
             success: function(data) {  
+              console.log(data);
             //  var result=JSON.stringify(data);
             // $("#para").text(result);
                 for (let i = 0; i < data.length; i++) {        
-                        var str="<li><a onClick='doSomething()' src=''>"+ data[i].title +"</a></li>";
-                        $("#lstproducts").append(str);
+                        var str="<li><a onClick='doSomething()' src=''>"+ data[i].fromAccountNumber +"</a></li>";
+                        $("#lsttransactions").append(str);
                 }
               return false;  
             }  
         });  
 }
 
+
 function getById(id){
   //invoke REST API to fetch data by id from server  
         $.ajax({  
-            url: '/product/getbyid/'+id,  
+            url: '/transaction/gettransactionbyid/'+id,  
             dataType: "json",  
             type: "GET",  
             error: function(xhr, status, error) {  
@@ -70,19 +63,14 @@ function getById(id){
             //Success block is automatically called when ajax call receives 
             //data from server  
             success: function(data) {  
-                        $("#lbltitle").text(data.title);
-                        $("#lbldescription").text(data.description);
-                        $("#lblstockavailable").text(data.stockAvailable);
-                        $("#lblunitprice").text(data.unitPrice);
-                        console.log(data.imageUrl);
-                        $("#lblimageUrl").attr("src", data.imageUrl);
-                        $("#lblbuyquantity").text(data.buyQuantity);
-                    
+                       $("#lblfromaccountnumber").text(data.fromAccountNumber);
+                       $("#lbltoaccountnumber").text(data.toAccountNumber);
+                       $("#lbltransactiondate").text(data.transactionDate);
+                       $("#lblamount").text(data.amount);     
               return false;  
             }  
         });  
-} 
-   
+}
     $(document).ready(function(){
        getAll();
        $("#btn").click( function (){
