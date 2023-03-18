@@ -1,0 +1,212 @@
+@* 
+
+
+<div>
+    <h3>Insert</h3>
+        <table>
+        <tr>
+            <th><label>AccountNumber</label> </th>
+            <td><input type="number" name="accountNumber" id="txtaccountnumber"/></td>
+        </tr>
+          <tr>
+            <th> <lable>IFSCCode</lable> </th>
+            <td><input type="txt" name="ifscCode" id="txtifsccode"/> </td>
+        </tr>
+          <tr>
+            <th> <lable>RegisterDate</lable> </th>
+            <td><input type="datetime" name="registerDate" id="txtregisterdate"/> </td>
+        </tr>
+         <tr>
+            <th> <lable>Balance</lable> </th>
+            <td><input type="number" name="balance" id="txtbalance"/> </td>
+        </tr>
+    </table>
+    <button  id="btn">Insert</button>
+</div>
+</hr>
+<div>
+    <h3>Update</h3>
+        <table>
+             <tr>
+            <th><label>AccountId</label> </th>
+            <td><input type="number" name="accountId" id="txtupdateaccountid"/></td>
+        </tr>
+        
+        <tr>
+            <th><label>AccountNumber</label> </th>
+            <td><input type="number" name="accountNumber" id="txtupdateaccountnumber"/></td>
+        </tr>
+          <tr>
+            <th> <lable>IFSCCode</lable> </th>
+            <td><input type="txt" name="ifscCode" id="txtupdateifsccode"/> </td>
+        </tr>
+          <tr>
+            <th> <lable>RegisterDate</lable> </th>
+            <td><input type="datetime" name="registerDate" id="txtupdateregisterdate"/> </td>
+        </tr>
+         <tr>
+            <th> <lable>Balance</lable> </th>
+            <td><input type="number" name="balance" id="txtupdatebalance"/> </td>
+        </tr>
+    </table>
+    <button  id="btnUpdate">Update</button>
+</div>
+
+
+ <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<script type="text/javascript">  
+     $(document).ready(function(){
+        console.log("Hello")
+        $('#btn').click(onClick);
+        $('#btnUpdate').click(onUpdate);
+    }); 
+    
+    function onClick() {
+        var strAccountNumber=($('#txtaccountnumber').val());
+        var strIFSCCode=($('#txtifsccode').val());
+        var strRegisterDate=($('#txtregisterdate').val());
+        var strBalance=($('#txtbalance').val());
+
+
+
+        var credential = {
+                      
+                     "accountNumber":strAccountNumber ,
+                     "ifscCode":strIFSCCode , 
+                    "registerDate":strRegisterDate , 
+                     "balance":strBalance           
+       }
+       var restAPIUrl='/accounts/InsertAccount' 
+
+        $.ajax({  
+            url:restAPIUrl,                               
+            type: "POST",                                   
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(credential),              
+
+                                                           
+            error: function(xhr, status, error) {  
+
+                var err = eval("(" + xhr.responseText + ")");  
+                toastr.error(err.message);  
+            },
+
+            success: function(data) {  
+                console.log("Insert Account");  
+                return false;  
+            }  
+        });  
+        return false;  
+    }
+        function onUpdate() {  
+        var strAccountId=($('#txtupdateaccountid').val());
+        var strAccountNumber=($('#txtupdateaccountnumber').val());
+        var strIFSCCode=($('#txtupdateifsccode').val());
+        var strRegisterDate=($('#txtupdateregisterdate').val());
+        var strBalance=($('#txtupdatebalance').val());
+
+
+
+        var credential = {
+                     "accountId":strAccountId,
+                     "accountNumber":strAccountNumber ,
+                     "ifscCode":strIFSCCode , 
+                    "registerDate":strRegisterDate , 
+                     "balance":strBalance           
+       }
+console.log(credential);
+
+       var restAPIUrl='/accounts/UpdateAccount' 
+console.log(restAPIUrl);
+
+        $.ajax({  
+            url:restAPIUrl,                               
+            type: "PUT",                                   
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(credential),              
+
+                                                           
+            error: function(xhr, status, error) {  
+
+                var err = eval("(" + xhr.responseText + ")");  
+                toastr.error(err.message);  
+            },
+
+            success: function(data) {  
+                console.log("Update Account");  
+                return false;  
+            }  
+        });  
+        return false;  
+    }
+</script> *@
+
+
+
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card border-0 shadow rounded-3 my-5">
+          <div class="card-body p-4 p-sm-5">
+            <h5 class="card-title text-center mb-5 fs-5">Update Account</h5>
+             <div class="form-floating mb-3">
+              <input
+                type="number"
+                class="form-control"
+                id="accountid"
+                placeholder="name@example.com"
+              />
+              <label for="accountid">AccountId</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="number"
+                class="form-control"
+                id="accountnumber"
+                placeholder="name@example.com"
+              />
+              <label for="accountnumber">AccountNumber</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="txt"
+                class="form-control"
+                id="ifsccode"
+                placeholder="ifsccode"
+              />
+             <label for="ifsccode">IFSC Code</label> 
+            </div>
+            <div class="form-floating mb-3">
+             <input
+                type="Date"
+                class="form-control"
+                id="registerdate"
+                placeholder="registerdate"
+              />
+              <label for="registerdate">Register Date</label>
+            </div>
+            <div class="form-floating mb-3">
+             <input
+                type="number"
+                class="form-control"
+                id="balance"
+                placeholder="balance"
+              />
+              <label for="balance">Balance</label>
+            </div>
+             <div class="d-grid">
+              <button class="btn btn-primary fw-bold" type="submit">
+              Update
+              </button> 
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
