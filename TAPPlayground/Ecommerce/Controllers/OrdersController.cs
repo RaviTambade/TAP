@@ -45,6 +45,11 @@ public class OrdersController : Controller
     {
         return View();
     }
+
+    public IActionResult OrderHistory()
+    {
+        return View();
+    }
     public IActionResult Orderdetails()
     {
         return View();
