@@ -1,34 +1,33 @@
  
 
 @{
-    ViewData["Title"] = "Products Page";
+    ViewData["Title"] = "Accounts Details";
 }
-<h1>Products Catalog</h1>
+<h1>Accounts</h1>
 <hr/>
-<ul id="lstproducts">
+<ul id="lblaccountid">
 </ul>
 
 <button id="btn">Get Details</button>
 <hr/>
-    <label id="lbltitle"></label> </br>
-    <label id="lbldescription"></label> </br>
-    <label id="lblstockavailable"></label></br>
-    <label id="lblunitprice"></label></br>
-    <img id="lblimageUrl" height="100" widh=100  ></br>
-    <label id="lblbuyquantity"></label>
+    <label id="lblaccountid"></label> </br>
+    <label id="lblaccountnumber"></label> </br>
+    <label id="lblifsccode"></label> </br>
+    <label id="lblregisterdate"></label></br>
+    <label id="lblbalance"></label></br>
 
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript">  
 
-    function doSomething(event){
-        console.log ("anchor is clicked" + event);
+    @* function doSomething(event){
+        console.log ("anchor is clicked" + event); *@
 
     }
 
 function getAll(){
   //invoke REST API to fetch data from server  
         $.ajax({  
-            url: '/product/getall',  
+            url: '/accounts/getallaccounts',  
             dataType: "json",  
             type: "GET",  
             error: function(xhr, status, error) {  
@@ -40,21 +39,20 @@ function getAll(){
             //Success block is automatically called when ajax call receives 
             //data from server  
             success: function(data) {  
-            //  var result=JSON.stringify(data);
-            // $("#para").text(result);
+              var result=JSON.stringify(data);
+            /$("#para").text(result);
                 for (let i = 0; i < data.length; i++) {        
-                        var str="<li><a onClick='doSomething()' src=''>"+ data[i].title +"</a></li>";
-                        $("#lstproducts").append(str);
+                         var str="<li><a onClick='doSomething()' src=''>"+ data[i].accountid +"</a></li>";
+                        $("#accountid").append(str); 
                 }
               return false;  
             }  
         });  
 }
-
 function getById(id){
   //invoke REST API to fetch data by id from server  
         $.ajax({  
-            url: '/product/getbyid/'+id,  
+            url: '/accounts/GetAccountById/'+id,  
             dataType: "json",  
             type: "GET",  
             error: function(xhr, status, error) {  
@@ -66,14 +64,12 @@ function getById(id){
             //Success block is automatically called when ajax call receives 
             //data from server  
             success: function(data) {  
-                        $("#lbltitle").text(data.title);
-                        $("#lbldescription").text(data.description);
-                        $("#lblstockavailable").text(data.stockAvailable);
-                        $("#lblunitprice").text(data.unitPrice);
-                        console.log(data.imageUrl);
-                        $("#lblimageUrl").attr("src", data.imageUrl);
-                        $("#lblbuyquantity").text(data.buyQuantity);
-                    
+                        $("#lblaccountid").text(data.accountId);
+                        $("#lblaccountnumber").text(data.accountNumber);
+                        $("#lblifsccode").text(data.ifscCode);
+                        $("#lblregisterdate").text(data.registerDate);
+                        $("#lblbalance").text(data.blance);
+                       
               return false;  
             }  
         });  
@@ -85,4 +81,4 @@ function getById(id){
         getById(1);
        })
     });
-</script>  
+</script>
