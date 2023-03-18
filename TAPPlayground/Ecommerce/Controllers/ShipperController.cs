@@ -21,19 +21,39 @@ public class ShipperController : Controller
         return Json(shippers);
     }
 
+
     [HttpGet]
-    public JsonResult GetShipperById(int id)
+    public JsonResult getShipperById (int id)
     {
         var shipper=_shippersrv.GetShipperById(id);
         return Json(shipper);
     }
 
+  [HttpGet]
+    public IActionResult InsertShipper()
+    {
+        return View();
+    }
 
-   [HttpPost]
+
+
+   /*[HttpPost]
     public JsonResult InsertShipper([FromBody]Shipper shipper)
     {
         bool status=_shippersrv.InsertShipper(shipper);
         return Json(status);
+    }
+    */
+
+  [HttpPost]
+      [Route("shipper/insertshipper")]
+     
+    public JsonResult InsertShipper([FromBody] Shipper shipper){
+             Console.WriteLine(shipper.Email);
+             Console.WriteLine(shipper.AccountNumber);
+             bool status=_shippersrv.InsertShipper(shipper);
+             return Json(status);
+         
     }
 
 
@@ -42,17 +62,18 @@ public class ShipperController : Controller
     {
         System.Console.WriteLine(shipper);
         bool status=_shippersrv.UpdateShipper(shipper);
-        return Json(status);
+        return Json(status);  
+         Console.WriteLine(shipper);
+
 
     }
-
 
    [HttpDelete]
     public JsonResult DeleteShipper(int id)
     {
         bool status=_shippersrv.DeleteShipper(id);
         return Json(status);
-}
+    }
 
 
     public IActionResult Index()
@@ -60,6 +81,36 @@ public class ShipperController : Controller
         return View();
     }
 
+ public IActionResult Search()
+    {
+        return View();
+    }
+
+public IActionResult Details()
+    {
+        return View();
+    }
+
+  
+public IActionResult DeliveryList()
+    {
+        return View();
+    }  
+
+public IActionResult CancelList()
+    {
+        return View();
+    } 
+
+ public IActionResult ReturnList()
+    {
+        return View();
+    }  
+
+ public IActionResult Status()
+    {
+        return View();
+    }      
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
