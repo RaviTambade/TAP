@@ -67,7 +67,7 @@ public class SecureController : Controller
             new User{UserId=1 ,UserName="sahil" ,ContactNumber="9975966045" ,Password="sahil@123",Role="Admin"},
             new User{UserId=2 ,UserName="shubham" ,ContactNumber="9309478546" ,Password="shubham@311",Role="Admin"},
             new User{UserId=3 ,UserName="abhay" ,ContactNumber="7754123965" ,Password="abhay@22",Role="Customer"},
-            new User{UserId=4 ,UserName="akshay" ,ContactNumber="65410237" ,Password="akshay@67",Role="Shipper"},
+            new User{UserId=4 ,UserName="akshay" ,ContactNumber="9565410237" ,Password="akshay@67",Role="Shipper"},
 
         };
 
