@@ -14,12 +14,24 @@ public class ShipperController : Controller
         _shippersrv = shippersrv;
     }
 
+   public IActionResult Home()
+    {
+        return View();
+    }
+
+    public IActionResult Index()
+    {
+        return View();
+    }
+
+
     [HttpGet]
     public JsonResult GetAllShippers()
     {
         var shippers=_shippersrv.GetAllShippers();
         return Json(shippers);
     }
+
 
 
     [HttpGet]
@@ -29,26 +41,11 @@ public class ShipperController : Controller
         return Json(shipper);
     }
 
-  [HttpGet]
-    public IActionResult InsertShipper()
-    {
-        return View();
-    }
-
-
-
-   /*[HttpPost]
-    public JsonResult InsertShipper([FromBody]Shipper shipper)
-    {
-        bool status=_shippersrv.InsertShipper(shipper);
-        return Json(status);
-    }
-    */
 
   [HttpPost]
-      [Route("shipper/insertshipper")]
-     
-    public JsonResult InsertShipper([FromBody] Shipper shipper){
+
+      [Route("shipper/insertshipper")]  
+        public JsonResult InsertShipper([FromBody] Shipper shipper){
              Console.WriteLine(shipper.Email);
              Console.WriteLine(shipper.AccountNumber);
              bool status=_shippersrv.InsertShipper(shipper);
@@ -76,11 +73,7 @@ public class ShipperController : Controller
     }
 
 
-    public IActionResult Index()
-    {
-        return View();
-    }
-
+    
  public IActionResult Search()
     {
         return View();
@@ -111,6 +104,11 @@ public IActionResult CancelList()
     {
         return View();
     }      
+
+
+
+
+
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
