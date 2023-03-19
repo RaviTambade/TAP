@@ -1,4 +1,4 @@
-@model ECommerceApp.Models.Account
+@* @model ECommerceApp.Models.Account
 <th>AccountSearch</th>
 <table>
     <tr>
@@ -74,4 +74,50 @@
         })
     });
 
-</script>
+</script> *@
+
+
+
+<div class="container">
+    <input type="search" class="searchterm" placeholder="Enter Account Id">
+     <button type="button" class="btn btn-success">Search</button>
+
+  @* <div class="mb-3 mt-3">
+    <label for="search" class="form-label">Email:</label>
+    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+  </div>
+  <div class="mb-3">
+    <label for="pwd" class="form-label">Password:</label>
+    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+  </div> *@
+  @* <div class="form-check mb-3">
+    <label class="form-check-label">
+      <input class="form-check-input" type="checkbox" name="remember"> Remember me
+    </label>
+  </div>
+  <button type="submit" class="btn btn-danger">Submit</button>
+</form>
+
+</div> *@
+
+<div class="container mt-3">
+  <h2>Account Details</h2>       
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Account Number</th>
+        <th>IFSC Code</th>
+        <th>Register Date</th>
+        <th>Balance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>342423657</td>
+        <td>CBI0000123</td>
+        <td>12-3-2023</td>
+        <td>50000000</td>
+      </tr>
+      <tr>
+        
+      

@@ -1,4 +1,4 @@
- 
+@*  
 
 @{
     ViewData["Title"] = "Accounts Details";
@@ -22,7 +22,7 @@
     @* function doSomething(event){
         console.log ("anchor is clicked" + event); *@
 
-    }
+    @* }
 
 function getAll(){
   //invoke REST API to fetch data from server  
@@ -81,4 +81,42 @@ function getById(id){
         getById(1);
        })
     });
-</script>
+</script> *@ 
+
+
+<div class="container mt-3">
+  <h2>Account Details</h2>       
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Account Id</th>
+        <th>Account Number</th>
+        <th>IFSC Code</th>
+        <th>Register Date</th>
+        <th>Balance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>342423657</td>
+        <td>CBI0000123</td>
+        <td>12-3-2023</td>
+        <td>50000000</td>
+      </tr>
+        <tr>
+        <td>2</td>
+        <td>342423657</td>
+        <td>CBI0000123</td>
+        <td>12-3-2023</td>
+        <td>50000000</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>342423657</td>
+        <td>CBI0000123</td>
+        <td>12-3-2023</td>
+        <td>50000000</td>
+      </tr>
+        
+      

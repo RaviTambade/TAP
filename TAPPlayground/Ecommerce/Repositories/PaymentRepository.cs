@@ -9,7 +9,6 @@ public class PaymentRepository : IPaymentRepository
 
     public static string conString = "server=localhost;port=3306;user=root;password=PASSWORD;database=Ecommerce";
 
- 
     public List<Payment> GetAllPayments()
     {
         List<Payment> payments = new List<Payment>();

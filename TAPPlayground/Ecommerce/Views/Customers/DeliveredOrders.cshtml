@@ -1,0 +1,59 @@
+@* <ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link " href="./dashboard">Customer's DashBoard</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./wishlist">Wishlist</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./deliveredorders">Delivered Orders</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link " href="./Cancelledorders">Cancelled Orders</a>
+  </li>
+</ul> *@
+
+<ul id="deliveredorders" class="list-group">
+
+</ul>
+
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        console.log("doc initialization");
+        getAll();
+    });
+
+    function getAll() {
+        //invoke REST API to fetch data from server  
+        $.ajax({
+            url: '/orders/GetDeliveredOrders',
+            dataType: "json",
+            type: "GET",
+            error: function (xhr, status, error) {
+                var err = eval("(" + xhr.responseText + ")");
+                toastr.error(err.message);
+                console.log(err);
+            },
+            //On Successful retriving data  perfrom callback function 
+            //Success block is automatically called when ajax call receives 
+            //data from server  
+            success: function (data) {
+                //  var result=JSON.stringify(data);
+                // $("#para").text(result);
+                console.log(data);
+               for (let i = 0; i < data.length; i++) {
+                var date = JSON.stringify(data[i].orderDate)
+                var dDate = JSON.stringify(data[i].deliveredDate)
+                    var str = "<a class=list-group-item list-group-item-action>" + "orderId :" + data[i].orderId + "  OrderDate :" + date + "  Delivered date :" +dDate+  " Status:" + data[i].status +"</a>" 
+                    $("#deliveredorders").append(str);
+                }
+                return false;
+            }
+        });
+    }
+</script>
+

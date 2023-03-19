@@ -1,0 +1,61 @@
+@model ECommerceApp.Models.Shipper
+
+<h3>GetShipper</h3>
+<table>
+
+    <tr>
+        <div class="spinner-border text-success"></div>
+        <td><input type="text" name="search" id="txtshipperid"></td>
+        <td><button id="btnsearch">Search</button></td>
+
+    <tr>
+        <td>
+            <label id="lblcompanyname">Amazon</label><br />
+            <label id="lblcontactnumber">8668997994</label><br />
+            <label id="lblemail">amazon@gmail.com</label><br />
+            <label id="lblaccountnumber">39025545698</label>
+        </td>
+    </tr>
+</table>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+    console.log("hi team");
+
+    $(document).ready(function () {
+        console.log("ready");
+        $("#btnsearch").click(function () {
+            var shipperId = $('#txtshipperid').val();
+            console.log(shipperId);
+
+            var restApiUrl = "http://localhost:5223/shipper/getshipperbyid/" + shipperId;
+            console.log(restApiUrl);
+
+            $.ajax({
+                url: restApiUrl,
+                dataType: "json",
+                type: "GET",
+
+                error: function (xhr, status, error)
+                  {
+                    var err = eval("(" + xhr.responseText + ")");
+                    toastr.error(err.message);
+                    console.log(err);
+                  },
+                success: function (data)
+                 {
+                    console.log(data);
+                 $('#lblcompanyname').text(data.companyName);
+                     $('#lblcontactnumber').text(data.lblcontactnumber);
+                  $('#lblemail').text(data.email);
+                    $('#lblaccountnumber').text(data.accountNumber);
+                    return false;
+                 }
+           
+               });
+     })
+
+  });
+
+
+</script>

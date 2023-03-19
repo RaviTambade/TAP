@@ -1,37 +1,82 @@
+<form action="/action_page.php">
+  <div class="form-group">
+    <label for="firstname">First Name:</label>
+    <input type="text" class="form-control" id="lblfirstname">
+  </div>
+  <div class="form-group">
+    <label for="lastname">Last Name:</label>
+    <input type="text" class="form-control" id="lbllastname">
+  </div>
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" id="lblemail">
+  </div>
+  <div class="form-group">
+    <label for="accountnumber">Account Number:</label>
+    <input type="number" class="form-control" id="lblaccountnumber">
+  </div>
 
-<div>
-    <h3>Update Form</h3>
-    <table>
-        <tr>
-            <th><label>ID</label> </th>
-            <td><input type="number" name="cust_id" id="txtid" /></td>
-        </tr>
-        <tr>
-            <th><label>First Name</label> </th>
-            <td><input type="text" name="first_name" id="txtupdatefirstname" /></td>
-        </tr>
-        <tr>
-            <th><label>Last Name</label> </th>
-            <td><input type="text" name="last_name" id="txtupdatelastname" /></td>
-        </tr>
-        <tr>
-            <th><label>email</label> </th>
-            <td><input type="email" name="email" id="txtupdateemail" /></td>
-        </tr>
+<div class="form-group">
+    <label for="contactnumber">Contact Number:</label>
+    <input type="number" class="form-control" id="lblcontactnumber">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
 
-        <tr>
-            <th><label>contact number</label> </th>
-            <td><input type="number" name="contact_number" id="txtupdatenumber" /></td>
-        </tr>
-        <tr>
-            <th><label>Account number</label> </th>
-            <td><input type="number" name="account_number" id="txtupdateaccountnumber" /></td>
-        </tr>
-        <tr>
-            <th>
-                <lable>Password</lable>
-            </th>
-            <td><input type="password" name="password" id="txtupdatepassword" /> </td>
-        </tr>
-    </table>
-    <button id="updatebtn">Update</button>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $('#updatebtn').click(onUpdate);
+    });
+
+
+    function onUpdate() {
+        //get data from email and password text boxex
+        console.log("on update..");
+        var strId = ($('#txtid').val());
+        var strFirstName = ($('#txtupdatefirstname').val());
+        var strLastName = ($('#txtupdatelastname').val());
+        var strContactNumber = ($('#txtupdatenumber').val());
+        var strAccountNumber = ($('#txtupdateaccountnumber').val());
+        var strEmail = ($('#txtupdateemail').val());
+        var strPassword = ($('#txtupdatepassword').val());
+        console.log("updated");
+        console.log(strFirstName);
+        //create JSON object to store textboxes contents into json
+
+        var credentialToUpdate = {
+            "customerId": strId,
+            "firstName": strFirstName,
+            "lastName": strLastName,
+            "contactNumber": strContactNumber,
+            "accountNumber": strAccountNumber,
+            "email": strEmail,
+            "password": strPassword
+        }
+        console.log(credentialToUpdate);
+
+        //Invoke REST API programmatically using $.ajax  JQuery function
+        var restAPIUrl = '/customers/UpdateCustomer'
+        //IT will invoke Remote REST API 
+
+        $.ajax({
+            url: restAPIUrl,                                // link of REST API url
+            type: "PUT",                                   // type of HTTP request
+            contentType: "application/json; charset=utf-8",//  What is the type of content of REST body
+            data: JSON.stringify(credentialToUpdate),              // data to be sent through request body
+            //callback function to be called on failure of REST API call
+            error: function (xhr, status, error) {
+                var err = eval("(" + xhr.responseText + ")");
+                toastr.error(err.message);
+            },
+            //callback function to be called on success of REST API call
+            success: function (data) {
+                console.log("Updated data..");
+                return false;
+            }
+        });
+        return false;
+    }
+
+</script>
