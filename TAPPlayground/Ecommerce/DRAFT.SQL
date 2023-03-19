@@ -50,12 +50,10 @@ select * from payments;
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546630,'MAHB0000286','2023-03-01 12:40:40',22555);
 select * from suppliers;
 
-<<<<<<< HEAD
+
 
 select * from orders;
-=======
 select * from payments;
->>>>>>> 03291d46c076cd8bccac856536c5ce3851bc80c7
 
 
 

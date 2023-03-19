@@ -5,7 +5,7 @@ using System.Globalization;
 namespace ECommerceApp.Repositories;
 public class OrderRepository : IOrderRepository
 {
-    public static string conString = "server=localhost;port=3306;user=root;password=1234512345;database=Ecommerce";
+    public static string conString = "server=localhost;port=3306;user=root;password=Password;database=Ecommerce";
 
     public List<Order> GetAllOrders()
     {

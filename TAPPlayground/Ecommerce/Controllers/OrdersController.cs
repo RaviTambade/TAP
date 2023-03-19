@@ -55,6 +55,11 @@ public class OrdersController : Controller
         return View();
     }
     
+
+     public IActionResult Index()
+    {
+        return View();
+    }
     public IActionResult Addressdetails()
     {
         return View();
