@@ -12,9 +12,9 @@ public AccountService(IAccountRepository repo){
 
 }
 public List<Account> GetAll()=>_repo.GetAll();
-public Account GetById(int id)=>_repo.GetById(id);
+public Account GetById(int accountId)=>_repo.GetById(accountId);
 public bool Insert(Account account)=>_repo.Insert(account);
 public bool Update(Account account)=>_repo.Update(account);
-public bool Delete(Int32  id)=>_repo.Delete(id);
+public bool Delete(Int32  accountId)=>_repo.Delete(accountId);
 
 }

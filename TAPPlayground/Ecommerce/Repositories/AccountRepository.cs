@@ -62,7 +62,7 @@ public class AccountRepository : IAccountRepository
         return accounts;
     }
 
-    public Account GetById(int id)
+    public Account GetById(int accountId)
     {
         Account account = new Account();
         MySqlConnection con = new MySqlConnection();
@@ -71,7 +71,7 @@ public class AccountRepository : IAccountRepository
         {
             string query = "SELECT * FROM accounts where account_Id =@accountId";
             MySqlCommand command = new MySqlCommand(query, con);
-            command.Parameters.AddWithValue("@accountId", id);
+            command.Parameters.AddWithValue("@accountId", accountId);
             con.Open();
             MySqlDataReader reader = command.ExecuteReader();
             if (reader.Read())
@@ -167,7 +167,7 @@ public class AccountRepository : IAccountRepository
         return status;
 
     }
-    public bool Delete(Int32 id)
+    public bool Delete(Int32 accountId)
     {
         bool status = false;
         MySqlConnection con = new MySqlConnection();
@@ -176,7 +176,7 @@ public class AccountRepository : IAccountRepository
         {
             string query = "DELETE  FROM accounts WHERE account_id=@accountId";
             MySqlCommand command = new MySqlCommand(query, con);
-            command.Parameters.AddWithValue("@accountId", id);
+            command.Parameters.AddWithValue("@accountId", accountId);
             con.Open();
              int rowsAffected=command.ExecuteNonQuery();
             if(rowsAffected >0){
