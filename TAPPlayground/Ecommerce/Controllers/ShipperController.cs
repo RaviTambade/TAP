@@ -17,8 +17,7 @@ public class ShipperController : Controller
     }
 
    public IActionResult Home()
-    {         
-         
+    {              
        //  Console.WriteLine(connString);
         return View();
     }
@@ -32,12 +31,9 @@ public class ShipperController : Controller
     [HttpGet]
     public JsonResult GetAllShippers()
     {
-
         var shippers=_shippersrv.GetAllShippers();
         return Json(shippers);
     }
-
-
 
     [HttpGet]
     public JsonResult getShipperById (int id)
@@ -46,9 +42,7 @@ public class ShipperController : Controller
         return Json(shipper);
     }
 
-
   [HttpPost]
-
       [Route("shipper/insertshipper")]  
         public JsonResult InsertShipper([FromBody] Shipper shipper){
              Console.WriteLine(shipper.Email);
@@ -59,7 +53,6 @@ public class ShipperController : Controller
              return Json(status);
          
     }
-
 
     [HttpPut]
     public JsonResult UpdateShipper([FromBody]Shipper shipper)
