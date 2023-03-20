@@ -207,7 +207,14 @@ public class OrderRepository : IOrderRepository
             string query = $"INSERT INTO orders(order_date,shipped_date,cust_id,total,status)VALUES(@orderDate,@shippedDate,@customerId,@total,@status)";
             con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
-            command.Parameters.AddWithValue("orderDate",OrderDate);
+               using (MySqlConnection con = new MySqlConnection(_conString))
+            {
+            using (MySqlCommand comm = new MySqlCommand())
+            {
+            comm.Connection = con;
+            comm.CommandType = CommandType.Text;
+            comm.CommandText = query;
+            command.Parameters.AddWithValue("orderDate",OrderDate.Text);
             command.ExecuteNonQuery();
             status = true;
         }
