@@ -1,5 +1,5 @@
 using ECommerceApp.Repositories.Interfaces;
 namespace ECommerceApp.Services.Interfaces;
-public interface ICustomersAccountsService:ICustomersAccountsRepository{
+public interface ICustomerAccountService:ICustomerAccountRepository{
     
 }

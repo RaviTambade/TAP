@@ -19,23 +19,39 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
+                         
                          <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Secure" asp-action="NewAccount">Register</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Secure" asp-action="LogIn">LogIn</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="customers" asp-action="Wishlist">Wishlist</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="customers" asp-action="deliveredorders">Delivered Orders</a>
                         </li>
-                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Dashboard" asp-action="Index">Dashboard</a>
+                            <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="customers" asp-action="cancelledorders">Cancelled Orders</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Suppliers" asp-action="Home">SuppliersHome</a>
+                    
+                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Shipper" asp-action="Home">Shippers Section</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Orders" asp-action="orderHistory">Order</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="customers" asp-action="dashboard">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Secure" asp-action="ShowUserByRole">UserByRole</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Accounts" asp-action="AccountsIndex">Accounts</a>
                         </li>
                          <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="UserMockUpScreen">User Home</a>

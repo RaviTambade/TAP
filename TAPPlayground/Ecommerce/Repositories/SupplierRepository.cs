@@ -8,11 +8,21 @@ namespace ECommerceApp.Repositories;
 public class SupplierRepository : ISupplierRepository
 
 {
-    public static string conString = "server=localhost;port=3306;user=root;password=Password;database=ecommerce";
-    public List<Supplier> GetAllSuppliers()
+
+    //IConfiguration interface help us to 
+    //read settings available in appsettings.json file
+    
+    private IConfiguration _configuration;
+    private string _conString;
+  
+    //Parameterized Constructor
+    public SupplierRepository(IConfiguration configuration){
+        _configuration=configuration;
+        _conString= this._configuration.GetConnectionString("DefaultConnection");
+    }    public List<Supplier> GetAllSuppliers()
     {
         List<Supplier> suppliers = new List<Supplier>();
-        MySqlConnection connection = new MySqlConnection(conString);
+        MySqlConnection connection = new MySqlConnection(_conString);
         try
         {
             string query = "SELECT * FROM suppliers";
@@ -60,7 +70,7 @@ public class SupplierRepository : ISupplierRepository
     public Supplier GetSupplierById(int id)
     {
         Supplier supplier = new Supplier();
-        MySqlConnection connection = new MySqlConnection(conString);
+        MySqlConnection connection = new MySqlConnection(_conString);
         try
         {
             string query = "SELECT * FROM suppliers WHERE supplier_id=" + id;
@@ -109,7 +119,7 @@ public class SupplierRepository : ISupplierRepository
     public List<Supplier> GetSuppliersOfProduct(int id)
     {
         List<Supplier> suppliers = new List<Supplier>();
-        MySqlConnection connection = new MySqlConnection(conString);
+        MySqlConnection connection = new MySqlConnection(_conString);
         try
         {
             string query = " SELECT suppliers.supplier_id,suppliers.company_name,suppliers.supplier_name FROM suppliers INNER JOIN orderdetails ON suppliers.supplier_id=orderdetails.supplier_id WHERE product_id=" + id;
@@ -145,7 +155,7 @@ public class SupplierRepository : ISupplierRepository
     public bool InsertSupplier(Supplier supplier){
         bool status=false;
         MySqlConnection connection=new MySqlConnection();
-        connection.ConnectionString=conString;
+        connection.ConnectionString=_conString;
         try{
             string query=$"INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,account_number)VALUES('{supplier.CompanyName}','{supplier.SupplierName}','{supplier.ContactNumber}','{supplier.Email}','{supplier.Address}','{supplier.City}','{supplier.State}','{supplier.AccountNumber}')";
             connection.Open();
@@ -167,7 +177,7 @@ public class SupplierRepository : ISupplierRepository
     {
         bool status = false;
         MySqlConnection connection = new MySqlConnection();
-        connection.ConnectionString = conString;
+        connection.ConnectionString = _conString;
         try
         {
             string query = "UPDATE suppliers SET company_name='" +supplier.CompanyName + "', supplier_name='" + supplier.SupplierName + "', contact_number='" + supplier.ContactNumber +"', email='" + supplier.Email +"', address='" + supplier.Address +"', city='" + supplier.City+"', state='" + supplier.State+"', account_number='" + supplier.AccountNumber +"' WHERE supplier_id=" +supplier.SupplierId;
@@ -193,7 +203,7 @@ public class SupplierRepository : ISupplierRepository
     {
         bool status = false;
         MySqlConnection con = new MySqlConnection();
-        con.ConnectionString = conString;
+        con.ConnectionString = _conString;
         try
         {
             string query = "DELETE FROM suppliers WHERE supplier_id="+id;

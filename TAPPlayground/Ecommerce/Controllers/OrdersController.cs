@@ -19,6 +19,20 @@ public class OrdersController : Controller
         return Json(orders);
     }
 
+      [HttpGet]
+    public JsonResult GetCancelledOrders()
+    {
+        var orders = _ordersrv.GetAllCancelledOrders();
+        return Json(orders);
+    }
+
+    [HttpGet]
+    public JsonResult GetDeliveredOrders()
+    {
+        var orders = _ordersrv.GetAllDeliveredOrders();
+        return Json(orders);
+    }
+
     [HttpGet]
 
     public JsonResult GetOrderById(int id)
@@ -41,7 +55,27 @@ public class OrdersController : Controller
         return View();
     }
     
+
+     public IActionResult Index()
+    {
+        return View();
+    }
+
+    public IActionResult Search()
+    {
+        return View();
+    }
+
+    public IActionResult Insert()
+    {
+        return View();
+    }
     public IActionResult Addressdetails()
+    {
+        return View();
+    }
+
+    public IActionResult OrderHistory()
     {
         return View();
     }

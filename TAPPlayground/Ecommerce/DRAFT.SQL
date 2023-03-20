@@ -1,4 +1,13 @@
+<<<<<<< HEAD
+-- Active: 1678361403571@@127.0.0.1@3306@ecommerce
+=======
+<<<<<<< HEAD
+-- Active: 1678859769284@@127.0.0.1@3306@ecommerce
+
+=======
 -- Active: 1678116914124@@127.0.0.1@3306@ecommerce
+>>>>>>> 03291d46c076cd8bccac856536c5ce3851bc80c7
+>>>>>>> 934ebd3ea7e61692ac5bd50891968167459a2a70
 
 -- CREATE DATABASE Ecommerce;
 -- drop DATABASE ecommerce;
@@ -45,6 +54,9 @@ select * from payments;
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546630,'MAHB0000286','2023-03-01 12:40:40',22555);
 select * from suppliers;
 
+
+
+select * from orders;
 select * from payments;
 
 
@@ -63,6 +75,9 @@ INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 390
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 3902554668,'MAHB0000286','2023-03-01 12:40:40',22555);
 
 
+ DESC orders;
+
+SELECT * from orders;
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546334,'MAHB0000286','2023-03-01 12:40:40',22555);
 
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546975,'MAHB0000286','2023-03-01 12:40:40',22555);
@@ -164,8 +179,8 @@ INSERT INTO products(product_title,description,stock_available,unit_price,image,
 INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('Fiidge','Kitchen Use',200,150,'./images/Samsung.jpg',4);
 INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES('Laptops','Working Gaget',60,60000,'./images/Dell.jpg',4);
 
-select * from orders;
-INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-08-25  06:35:25', 1,50.00,'initiated');
+select * from orders WHERE cust_id=1;
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-17  04:20:10', 1,85.00,'cancelled');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:25', 2, 82.00,'delivered');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-01-16  09:35:25', 6,20.00,'cancelled');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:25', 7,40.00,'inprogress');
@@ -173,7 +188,7 @@ INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:2
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-08-25  06:35:25', 4,50.00,'delivered');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:25', 4,30.00,'delivered');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-01-16  09:35:25', 4,45.00,'inprogress');
-INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:25', 2,45.00,'cancelled');
+INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-04-12  12:35:25', 1,75.00,'cancelled');
 
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-08-25  06:35:25', 1,50.00,'initiated');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:25', 2,35.00,'inprogress');
@@ -479,8 +494,11 @@ WHERE transactions.from_account_number=(select account_number from customers whe
 
 CALL TransferMoney(39025545659,39025545658,'2023-03-09 02:15:05',500);
 
-select customers.first_name,customers.last_name,customers.email,customers.contact_number,accounts.account_number,accounts.ifsc_code,accounts.balance FROM customers  INNER JOIN  accounts ON accounts.account_number=customers.account_number  -- WHERE customers.cust_id=1; 
+select customers.first_name,customers.last_name,customers.email,customers.contact_number,accounts.account_number,accounts.ifsc_code,accounts.balance FROM customers  INNER JOIN  accounts ON accounts.account_number=customers.account_number ;-- WHERE customers.cust_id=1; 
 
 /* insert employee query*/
 INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Vishwambhar','Kapare','1998-05-19','2023-03-15','70385488505','Rushi@gmail.com','Rc5269','./images/Rc.jpg',3,39025546668)
+
+select customers.first_name,customers.last_name,customers.email,customers.contact_number,accounts.account_number,accounts.ifsc_code,accounts.balance FROM customers  INNER JOIN  accounts ON accounts.account_number=customers.account_number;-- WHERE customers.cust_id=1; 
+SELECT * FROM  customers;
 

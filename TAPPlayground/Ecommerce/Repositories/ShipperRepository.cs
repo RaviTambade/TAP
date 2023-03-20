@@ -2,19 +2,28 @@ using ECommerceApp.Models;
 using ECommerceApp.Repositories.Interfaces;
 using MySql.Data.MySqlClient;
 
+using Microsoft.Extensions.Configuration;  // set namespace 
 namespace ECommerceApp.Repositories;
 public class ShipperRepository : IShipperRepository
 {
-      
 
-    public static string conString = "server=localhost;port=3306;user=root;password=Password;database=Ecommerce";
-
+    //IConfiguration interface help us to 
+    //read settings available in appsettings.json file
+    
+    private readonly IConfiguration _configuration;
+    private readonly string _conString;
+  
+    //Parameterized Constructor
+    public ShipperRepository(IConfiguration configuration){
+        _configuration=configuration;
+        _conString= this._configuration.GetConnectionString("DefaultConnection");
+    }
 
     public List<Shipper> GetAllShippers()
     {
         List<Shipper> shippers = new List<Shipper>();
         MySqlConnection connection = new MySqlConnection();
-        connection.ConnectionString = conString;
+        connection.ConnectionString = _conString;
         try
         {
             string query = "SELECT * FROM shippers";
@@ -52,11 +61,12 @@ public class ShipperRepository : IShipperRepository
         }
         return shippers;
     }
+    
 
     public Shipper GetShipperById(int id)
     {
         Shipper shipper = new Shipper();
-        MySqlConnection connection = new MySqlConnection(conString);
+        MySqlConnection connection = new MySqlConnection(_conString);
         try
         {
             string query = "SELECT * FROM shippers WHERE shipper_id=" + id;
@@ -97,7 +107,7 @@ public class ShipperRepository : IShipperRepository
    public bool InsertShipper(Shipper shipper){
         bool status=false;
         MySqlConnection connection=new MySqlConnection();
-        connection.ConnectionString=conString;
+        connection.ConnectionString=_conString;
         try{
             string query=$"INSERT INTO shippers(company_name,contact_number,email,account_number)VALUES('{shipper.CompanyName}','{shipper.ContactNumber}','{shipper.Email}','{shipper.AccountNumber}')";
             Console.WriteLine(query);
@@ -119,7 +129,7 @@ public class ShipperRepository : IShipperRepository
     {
         bool status = false;
         MySqlConnection connection = new MySqlConnection();
-        connection.ConnectionString = conString;
+        connection.ConnectionString = _conString;
         try
         {
             string query = "UPDATE shippers SET company_name='" +shipper.CompanyName  + "', contact_number='" + shipper.ContactNumber +"', email='" + shipper.Email +"', account_number='" + shipper.AccountNumber  +"' WHERE shipper_id=" +shipper.ShipperId;
@@ -141,11 +151,11 @@ public class ShipperRepository : IShipperRepository
 
     }
 
-          public bool DeleteShipper(int id)
+    public bool DeleteShipper(int id)
     {
         bool status = false;
         MySqlConnection con = new MySqlConnection();
-        con.ConnectionString = conString;
+        con.ConnectionString = _conString;
         try
         {
             string query = "DELETE FROM shippers WHERE shipper_id="+id;
@@ -153,7 +163,6 @@ public class ShipperRepository : IShipperRepository
             MySqlCommand command = new MySqlCommand(query, con);
             command.ExecuteNonQuery();
             status = true;
-
         }
         catch (Exception e)
         {

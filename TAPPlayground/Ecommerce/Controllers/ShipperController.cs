@@ -8,11 +8,25 @@ namespace ECommerceApp.Controllers;
 public class ShipperController : Controller
 {
     private readonly IShipperService _shippersrv;
+   
+    // set constructor level dependency injection
 
     public ShipperController(IShipperService shippersrv)
     {
         _shippersrv = shippersrv;
     }
+
+   public IActionResult Home()
+    {              
+       //  Console.WriteLine(connString);
+        return View();
+    }
+
+    public IActionResult Index()
+    {
+        return View();
+    }
+
 
     [HttpGet]
     public JsonResult GetAllShippers()
@@ -21,7 +35,6 @@ public class ShipperController : Controller
         return Json(shippers);
     }
 
-
     [HttpGet]
     public JsonResult getShipperById (int id)
     {
@@ -29,38 +42,29 @@ public class ShipperController : Controller
         return Json(shipper);
     }
 
-  [HttpGet]
-    public IActionResult InsertShipper()
-    {
-        return View();
-    }
-
-
-
-   /*[HttpPost]
-    public JsonResult InsertShipper([FromBody]Shipper shipper)
-    {
-        bool status=_shippersrv.InsertShipper(shipper);
-        return Json(status);
-    }
-    */
-
   [HttpPost]
-      [Route("shipper/insertshipper")]
-     
-    public JsonResult InsertShipper([FromBody] Shipper shipper){
+      [Route("shipper/insertshipper")]  
+        public JsonResult InsertShipper([FromBody] Shipper shipper){
              Console.WriteLine(shipper.Email);
              Console.WriteLine(shipper.AccountNumber);
+<<<<<<< HEAD
+=======
+              // string conString = this._configuration.GetConnectionString("DefaultConnection");
+
+>>>>>>> 40f899d9cbca70933a8189e644e89608ddadebc7
              bool status=_shippersrv.InsertShipper(shipper);
              return Json(status);
          
     }
 
-
     [HttpPut]
     public JsonResult UpdateShipper([FromBody]Shipper shipper)
     {
         System.Console.WriteLine(shipper);
+<<<<<<< HEAD
+=======
+        //string conString = this._configuration.GetConnectionString("DefaultConnection");
+>>>>>>> 40f899d9cbca70933a8189e644e89608ddadebc7
         bool status=_shippersrv.UpdateShipper(shipper);
         return Json(status);  
          Console.WriteLine(shipper);
@@ -71,16 +75,16 @@ public class ShipperController : Controller
    [HttpDelete]
     public JsonResult DeleteShipper(int id)
     {
+<<<<<<< HEAD
+=======
+         //string conString = this._configuration.GetConnectionString("DefaultConnection");
+>>>>>>> 40f899d9cbca70933a8189e644e89608ddadebc7
         bool status=_shippersrv.DeleteShipper(id);
         return Json(status);
     }
 
 
-    public IActionResult Index()
-    {
-        return View();
-    }
-
+    
  public IActionResult Search()
     {
         return View();
@@ -106,11 +110,21 @@ public IActionResult CancelList()
     {
         return View();
     }  
+    
+ public IActionResult ShippersList()
+    {
+        return View();
+    }  
 
  public IActionResult Status()
     {
         return View();
     }      
+
+
+
+
+
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
