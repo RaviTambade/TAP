@@ -1,4 +1,4 @@
--- Active: 1677916902963@@127.0.0.1@3306@ecommerce
+-- Active: 1678361403571@@127.0.0.1@3306@ecommerce
 
 
 -- CREATE DATABASE Ecommerce;
@@ -197,6 +197,7 @@ INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-08-25  06:35:2
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:25', 3,35.0,'delivered');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-01-16  09:35:25', 6,85.00,'cancelled');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:25', 7,14.00,'inprogress');
+
 
 
 INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,account_number)VALUES('Hindustan pvt.ltd','Pragati','7845632569','pragati@gmail.com','Sinhagad Road Pune','Pune','Maharashtra',39025545999);
