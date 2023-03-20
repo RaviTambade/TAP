@@ -4,17 +4,26 @@ using System.Runtime.CompilerServices;
 using ECommerceApp.Models;
 using ECommerceApp.Repositories.Interfaces;
 using MySql.Data.MySqlClient;
+using System.Globalization;
+
+using Microsoft.Extensions.Configuration;
 
 namespace ECommerceApp.Repositories;
-
 public class AccountRepository : IAccountRepository
 {
-    public static string conString = "server=localhost;port=3306;user=root;password=password;database=Ecommerce";
-    public List<Account> GetAllAccounts()
+    
+    private IConfiguration _configuration;
+    private string _conString;
+  
+    public AccountRepository(IConfiguration configuration){
+        _configuration=configuration;
+        _conString= this._configuration.GetConnectionString("DefaultConnection");
+    }
+  public List<Account> GetAllAccounts()
     {
         List<Account> accounts = new List<Account>();
         MySqlConnection con = new MySqlConnection();
-        con.ConnectionString = conString;
+        con.ConnectionString = _conString;
         try
         {
             string query = "SELECT * FROM accounts";
@@ -27,7 +36,7 @@ public class AccountRepository : IAccountRepository
                 int accountId = int.Parse(reader["account_id"].ToString());
                 long accountNumber = long.Parse(reader["account_number"].ToString());
                 string ifscCode = reader["ifsc_code"].ToString();
-                DateTime registerDate = DateTime.Parse(reader["register_date"].ToString(),System.Globalization.CultureInfo.InvariantCulture);
+                DateTime registerDate = DateTime.ParseExact(reader["register_date"].ToString(),"dd-MM-yyyy HH:mm:ss",CultureInfo.InvariantCulture);
                 double accountBalance = double.Parse(reader["balance"].ToString());
                 Account account = new Account
                 {
@@ -56,7 +65,7 @@ public class AccountRepository : IAccountRepository
     {
         Account account = new Account();
         MySqlConnection con = new MySqlConnection();
-        con.ConnectionString = conString;
+        con.ConnectionString = _conString;
         try
         {
             string query = "SELECT * FROM accounts where account_Id =" + id;
@@ -98,7 +107,7 @@ public class AccountRepository : IAccountRepository
 
         bool status = false;
         MySqlConnection con = new MySqlConnection();
-        con.ConnectionString = conString;
+        con.ConnectionString = _conString;
         try
         {
             string query = "INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES('"+account.AccountNumber+"','"+account.IFSCCode+ "','"+ account.RegisterDate+ "','"+ account.Balance+"')";
@@ -123,7 +132,7 @@ public class AccountRepository : IAccountRepository
     {
         bool status = false;
         MySqlConnection con = new MySqlConnection();
-        con.ConnectionString = conString;
+        con.ConnectionString = _conString;
         try
         {
             string query = "Update accounts SET account_number ='"+account.AccountNumber+"',ifsc_code ='"+account.IFSCCode+"',register_date='"+account.RegisterDate+"',balance='"+account.Balance+"' WHERE account_id='"+account.AccountId+"'";
@@ -147,7 +156,7 @@ public class AccountRepository : IAccountRepository
     {
         bool status = false;
         MySqlConnection con = new MySqlConnection();
-        con.ConnectionString = conString;
+        con.ConnectionString = _conString;
         try
         {
             string query = "DELETE  FROM accounts WHERE account_id=" + id;
