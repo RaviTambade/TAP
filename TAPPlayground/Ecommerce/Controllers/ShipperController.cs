@@ -47,12 +47,7 @@ public class ShipperController : Controller
         public JsonResult InsertShipper([FromBody] Shipper shipper){
              Console.WriteLine(shipper.Email);
              Console.WriteLine(shipper.AccountNumber);
-<<<<<<< HEAD
-               //string conString = this._configuration.GetConnectionString("DefaultConnection");
-
-=======
             
->>>>>>> a092b10a846631d28def1f5d6a5b6285238e8cc1
              bool status=_shippersrv.InsertShipper(shipper);
              return Json(status);
          
@@ -62,11 +57,7 @@ public class ShipperController : Controller
     public JsonResult UpdateShipper([FromBody]Shipper shipper)
     {
         System.Console.WriteLine(shipper);
-<<<<<<< HEAD
-       // string conString = this._configuration.GetConnectionString("DefaultConnection");
-=======
         //string conString = this._configuration.GetConnectionString("DefaultConnection");
->>>>>>> a092b10a846631d28def1f5d6a5b6285238e8cc1
         bool status=_shippersrv.UpdateShipper(shipper);
         return Json(status);  
          Console.WriteLine(shipper);
@@ -77,11 +68,7 @@ public class ShipperController : Controller
    [HttpDelete]
     public JsonResult DeleteShipper(int id)
     {
-<<<<<<< HEAD
-        // string conString = this._configuration.GetConnectionString("DefaultConnection");
-=======
          //string conString = this._configuration.GetConnectionString("DefaultConnection");
->>>>>>> a092b10a846631d28def1f5d6a5b6285238e8cc1
         bool status=_shippersrv.DeleteShipper(id);
         return Json(status);
     }
