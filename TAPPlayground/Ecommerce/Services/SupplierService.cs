@@ -1,6 +1,5 @@
 using ECommerceApp.Models;
 using ECommerceApp.Repositories;
-using ECommerceApp.Repositories;
 using ECommerceApp.Repositories.Interfaces;
 using ECommerceApp.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -13,29 +12,29 @@ public class SupplierService : ISupplierService
     _repo=repo;
    }
 
-    public List<Supplier> GetAllSuppliers()=> _repo.GetAllSuppliers();
+    public List<Supplier> GetAll()=> _repo.GetAll();
 
-    public Supplier GetSupplierById(int id)
+    public Supplier GetById(int supplierId)
     {
-        return _repo.GetSupplierById(id);
+        return _repo.GetById(supplierId);
     }
 
-    public List<Supplier> GetSuppliersOfProduct(int id)
+    public List<Supplier> GetSuppliers(int productId)
     {
-        return _repo.GetSuppliersOfProduct(id);
+        return _repo.GetSuppliers(productId);
     }
 
-    public bool InsertSupplier(Supplier supplier)
+    public bool Insert(Supplier supplier)
     {
-        return _repo.InsertSupplier(supplier);
+        return _repo.Insert(supplier);
     }
 
-    public bool UpdateSupplier(Supplier supplier)
+    public bool Update(Supplier supplier)
     {
-        return _repo.UpdateSupplier(supplier);
+        return _repo.Update(supplier);
     }
-      public bool DeleteSupplier(int id)
+      public bool Delete(int id)
     {
-        return _repo.DeleteSupplier(id);
+        return _repo.Delete(id);
     }
 }

@@ -19,7 +19,7 @@ public class AccountRepository : IAccountRepository
         _configuration = configuration;
         _conString = this._configuration.GetConnectionString("DefaultConnection");
     }
-    public List<Account> GetAllAccounts()
+    public List<Account> GetAll()
     {
         List<Account> accounts = new List<Account>();
         MySqlConnection con = new MySqlConnection();
@@ -30,6 +30,7 @@ public class AccountRepository : IAccountRepository
             MySqlCommand command = new MySqlCommand(query, con);
             con.Open();
             MySqlDataReader reader = command.ExecuteReader();
+            
             while (reader.Read())
             {
 
@@ -61,7 +62,7 @@ public class AccountRepository : IAccountRepository
         return accounts;
     }
 
-    public Account GetAccountById(int id)
+    public Account GetById(int id)
     {
         Account account = new Account();
         MySqlConnection con = new MySqlConnection();
@@ -69,9 +70,9 @@ public class AccountRepository : IAccountRepository
         try
         {
             string query = "SELECT * FROM accounts where account_Id =@accountId";
-            con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
             command.Parameters.AddWithValue("@accountId", id);
+            con.Open();
             MySqlDataReader reader = command.ExecuteReader();
             if (reader.Read())
             {
@@ -103,7 +104,7 @@ public class AccountRepository : IAccountRepository
         return account;
     }
 
-    public bool InsertAccount(Account account)
+    public bool Insert(Account account)
     {
 
         bool status = false;
@@ -112,15 +113,17 @@ public class AccountRepository : IAccountRepository
         try
         {
             string query = "INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES(@accountNumber,@ifscCode,@registerDate,@balance)";
-
-            con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
             command.Parameters.AddWithValue("@accountNumber", account.AccountNumber);
             command.Parameters.AddWithValue("@ifscCode", account.IFSCCode);
             command.Parameters.AddWithValue("@registerDate", account.RegisterDate);
             command.Parameters.AddWithValue("@balance", account.Balance);
-            command.ExecuteNonQuery();
-            status = true;
+
+            con.Open();
+             int rowsAffected=command.ExecuteNonQuery();
+            if(rowsAffected >0){
+             status=true;
+            }
         }
         catch (Exception e)
         {
@@ -133,7 +136,7 @@ public class AccountRepository : IAccountRepository
         return status;
 
     }
-    public bool UpdateAccount(Account account)
+    public bool Update(Account account)
     {
         bool status = false;
         MySqlConnection con = new MySqlConnection();
@@ -141,16 +144,17 @@ public class AccountRepository : IAccountRepository
         try
         {
             string query = "Update accounts SET account_number =@accountNumber,ifsc_code =@ifscCode,register_date=@registerDate,balance=@balance WHERE account_id=@accountId";
-            con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
             command.Parameters.AddWithValue("@accountNumber", account.AccountNumber);
             command.Parameters.AddWithValue("@ifscCode", account.IFSCCode);
             command.Parameters.AddWithValue("@registerDate", account.RegisterDate);
             command.Parameters.AddWithValue("@balance", account.Balance);
             command.Parameters.AddWithValue("@accountId", account.AccountId);
-
-            command.ExecuteNonQuery();
-            status = true;
+            con.Open();
+             int rowsAffected=command.ExecuteNonQuery();
+            if(rowsAffected >0){
+             status=true;
+            }
         }
         catch (Exception e)
         {
@@ -163,7 +167,7 @@ public class AccountRepository : IAccountRepository
         return status;
 
     }
-    public bool DeleteAccount(Int32 id)
+    public bool Delete(Int32 id)
     {
         bool status = false;
         MySqlConnection con = new MySqlConnection();
@@ -171,12 +175,13 @@ public class AccountRepository : IAccountRepository
         try
         {
             string query = "DELETE  FROM accounts WHERE account_id=@accountId";
-            con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
             command.Parameters.AddWithValue("@accountId", id);
-
-            command.ExecuteNonQuery();
-            status = true;
+            con.Open();
+             int rowsAffected=command.ExecuteNonQuery();
+            if(rowsAffected >0){
+             status=true;
+            }
         }
         catch (Exception e)
         {

@@ -1,16 +1,16 @@
 using ECommerceApp.Models;
 namespace ECommerceApp.Repositories.Interfaces;
 public interface ISupplierRepository{
-    List<Supplier> GetAllSuppliers();
+    List<Supplier> GetAll();
 
-    Supplier GetSupplierById(int id);
+    Supplier GetById(int id);
 
-    List<Supplier> GetSuppliersOfProduct(int id);
+    List<Supplier> GetSuppliers(int productId);
 
-    bool InsertSupplier(Supplier supplier);
-    bool UpdateSupplier(Supplier supplier);
+    bool Insert(Supplier supplier);
+    bool Update(Supplier supplier);
 
-    bool DeleteSupplier(int id);
+    bool Delete(int supplierId);
     
     
 }

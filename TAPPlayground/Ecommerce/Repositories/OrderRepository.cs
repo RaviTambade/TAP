@@ -104,7 +104,7 @@ public class OrderRepository : IOrderRepository
         return order;
     }
 
-    public int GetOrderId(int customerId)
+    public int GetOrderId(int id)
     {
         int orderId = 0;
         MySqlConnection con = new MySqlConnection();
@@ -114,7 +114,7 @@ public class OrderRepository : IOrderRepository
             string query = $"SELECT MAX(order_id) as order_id from orders where cust_id=@customerId";
             con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
-            command.Parameters.AddWithValue("@customerId",customerId);
+            command.Parameters.AddWithValue("@customerId",id);
             MySqlDataReader reader = command.ExecuteReader();
 
             if (reader.Read())
@@ -133,16 +133,17 @@ public class OrderRepository : IOrderRepository
         return orderId;
     }
 
-    public bool InsertOrder(int customerId)
+    public bool InsertOrder(int id)
     {
         bool status = false;
         MySqlConnection con = new MySqlConnection();
         con.ConnectionString = _conString;
         try
         {
-            string query = $"INSERT INTO orders(cust_id)VALUES('{customerId}')";
+            string query = $"INSERT INTO orders(cust_id)VALUES(@customerId)";
             con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
+            command.Parameters.AddWithValue("@customerId", id);
             command.ExecuteNonQuery();
             status = true;
         }
@@ -156,7 +157,7 @@ public class OrderRepository : IOrderRepository
         }
         return status;
     }
-    public Order GetOrderByCustId(int custid)
+    public Order GetOrderByCustId(int id)
     {
         Order order = new Order();
         MySqlConnection con = new MySqlConnection();
@@ -166,7 +167,7 @@ public class OrderRepository : IOrderRepository
             string query = "SELECT * FROM orders where cust_id=@customerId";
             con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
-            command.Parameters.AddWithValue("@customerId",custid);
+            command.Parameters.AddWithValue("@customerId",id);
             MySqlDataReader reader = command.ExecuteReader();
             if (reader.Read())
             {
@@ -179,7 +180,7 @@ public class OrderRepository : IOrderRepository
                 order = new Order()
                 {
                     OrderId = orderId,
-                    CustomerId = custid,
+                    CustomerId = id,
                     OrderDate = orderDate.ToLongDateString(),
                     ShippedDate = shippedDate.ToLongDateString(),
                     Total = total,

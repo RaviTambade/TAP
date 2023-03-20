@@ -9,13 +9,13 @@ namespace ECommerceApp.Services;
 public class ProductService : IProductService
 {
     private readonly IProductRepository _repo;
-
     public ProductService(IProductRepository repo)
     {
         _repo = repo;
     }
-
-    public List<Product> GetAllProducts() => _repo.GetAllProducts();
-
-    public Product GetProduct(int id)=>_repo.GetProduct(id);
+    public List<Product> GetAll() => _repo.GetAll();
+    public Product GetById(int productId) => _repo.GetById(productId);
+    public bool Insert(Product product) => _repo.Insert(product);
+    public bool Update(Product product) => _repo.Update(product);
+    public bool Delete(int productId) => _repo.Delete(productId);
 }

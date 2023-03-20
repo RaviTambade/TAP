@@ -283,5 +283,3 @@ public class OrderDetailsRepository : IOrderDetailsRepository
         return orderHistories;
     }
 }
-
-

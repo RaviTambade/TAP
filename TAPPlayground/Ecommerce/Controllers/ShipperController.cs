@@ -57,7 +57,6 @@ public class ShipperController : Controller
     public JsonResult UpdateShipper([FromBody]Shipper shipper)
     {
         System.Console.WriteLine(shipper);
-       // string conString = this._configuration.GetConnectionString("DefaultConnection");
         //string conString = this._configuration.GetConnectionString("DefaultConnection");
         bool status=_shippersrv.UpdateShipper(shipper);
         return Json(status);  

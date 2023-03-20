@@ -13,24 +13,24 @@ public class TransactionService : ITransactionService
         _transactionRepo=transactionRepo;
     }
 
-    public List<Transaction> GetAllTransaction()=>_transactionRepo.GetAllTransaction();
+    public List<Transaction> GetAll()=>_transactionRepo.GetAll();
     
-     public Transaction GetTransactionById(int id)
+     public Transaction GetById(int transactionId)
     {
-        return _transactionRepo.GetTransactionById(id);
+        return _transactionRepo.GetById(transactionId);
     }
 
-    public bool InsertTransaction(Transaction transaction)
+    public bool Insert(Transaction transaction)
     {
-        return _transactionRepo.InsertTransaction(transaction);
+        return _transactionRepo.Insert(transaction);
     }
 
-    public bool UpdateTransaction(Transaction transaction)
+    public bool Update(Transaction transaction)
     {
-        return _transactionRepo.UpdateTransaction(transaction);
+        return _transactionRepo.Update(transaction);
     }
-      public bool DeleteTransaction(int id)
+      public bool Delete(int transactionId)
     {
-        return _transactionRepo.DeleteTransaction(id);
+        return _transactionRepo.Delete(transactionId);
     }
 }

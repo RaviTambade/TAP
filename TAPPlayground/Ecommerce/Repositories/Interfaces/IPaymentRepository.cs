@@ -4,12 +4,12 @@ public interface IPaymentRepository
 {
  List<Payment> GetAllPayments();
 
- Payment GetPaymentById(int paymentId);
- Payment GetPaymentByOrderId(int OrderId);
+ Payment GetPaymentById(int id);
+ Payment GetPaymentByOrderId(int id);
 
  bool InsertPayments(Payment payment);
  bool UpdatePayment(Payment payment);
- bool DeletePayment(int paymentId);
+ bool DeletePayment(int id);
 
 
 }
