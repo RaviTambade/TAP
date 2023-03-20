@@ -4,15 +4,12 @@ using ECommerceApp.Models;
 using ECommerceApp.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
-
 namespace ECommerceApp.Controllers;
 
 public class PaymentDetailsController : Controller
 {
-
     private readonly IOrderService _ordersrv;
     private readonly IOrderDetailsService _orderdetailssrv;
-
     private readonly IAddressService _addresssrv;
 
     public PaymentDetailsController(IOrderService ordersrv, IOrderDetailsService orderdetailssrv, IAddressService addresssrv)
@@ -46,12 +43,9 @@ public class PaymentDetailsController : Controller
                 // Console.WriteLine(product.BuyQuantity);
                 _orderdetailssrv.InsertOrderdetails(orderId, product.ProductId, product.BuyQuantity);
                 ViewData["products"] = _orderdetailssrv.GetOrderdProducts(orderId);
-                ViewBag.address = _addresssrv.GetAddressById(addresId);
+                ViewBag.address = _addresssrv.GetById(addresId);
             }
-
         }
-
         return View(details);
     }
-
 }
