@@ -15,26 +15,26 @@ public class ShipperService : IShipperService
         _repo = repo;
     }
 
-    public List<Shipper> GetAllShippers() => _repo.GetAllShippers();
+    public List<Shipper> GetAll() => _repo.GetAll();
 
 
-    public Shipper GetShipperById(int id)
+    public Shipper GetById(int id)
     {
-        return _repo.GetShipperById(id);
+        return _repo.GetById(id);
     }
 
-   public bool InsertShipper(Shipper shipper)
+   public bool Insert(Shipper shipper)
     {
-        return _repo.InsertShipper(shipper);
+        return _repo.Insert(shipper);
     }
 
-   public bool UpdateShipper(Shipper shipper)
+   public bool Update(Shipper shipper)
     {
-        return _repo.UpdateShipper(shipper);
+        return _repo.Update(shipper);
     }
-   public bool DeleteShipper(int id)
+   public bool Delete(int id)
     {
-        return _repo.DeleteShipper(id);
+        return _repo.Delete(id);
     }
     
 }
