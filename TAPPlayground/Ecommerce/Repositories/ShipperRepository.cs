@@ -32,11 +32,11 @@ public class ShipperRepository : IShipperRepository
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
-                int id = int.Parse(reader["shipper_id"].ToString());
-                string? companyName = reader["company_name"].ToString();
-                string? email = reader["email"].ToString();
-                string? contactNumber = reader["contact_number"].ToString();
-                long accountNo = long.Parse(reader["account_number"].ToString());
+                    int id = int.Parse(reader["shipper_id"].ToString());
+                    string? companyName = reader["company_name"].ToString();
+                    string? email = reader["email"].ToString();
+                    string? contactNumber = reader["contact_number"].ToString();
+                    long accountNo = long.Parse(reader["account_number"].ToString());
 
                 Shipper shipper = new Shipper
                 {
@@ -46,10 +46,9 @@ public class ShipperRepository : IShipperRepository
                     Email = email,
                     AccountNumber = accountNo
                 };
-
                 shippers.Add(shipper);
             }
-            reader.Close();
+               reader.Close();
         }
         catch (Exception e)
         {
@@ -72,15 +71,15 @@ public class ShipperRepository : IShipperRepository
             string query = "SELECT * FROM shippers WHERE shipper_id= @shipperId";
             connection.Open();
             MySqlCommand command = new MySqlCommand(query, connection);
-             command.Parameters.AddWithValue("@shipperId", id);
+            command.Parameters.AddWithValue("@shipperId", id);
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
-                id = int.Parse(reader["shipper_id"].ToString());
-                string companyName = reader["company_name"].ToString();
-                string contactNumber = reader["contact_number"].ToString();
-                string email = reader["email"].ToString();
-                long accountNumber = long.Parse(reader["account_number"].ToString());
+                    id = int.Parse(reader["shipper_id"].ToString());
+                    string companyName = reader["company_name"].ToString();
+                    string contactNumber = reader["contact_number"].ToString();
+                    string email = reader["email"].ToString();
+                    long accountNumber = long.Parse(reader["account_number"].ToString());
 
                 shipper = new Shipper()
                 {
@@ -112,17 +111,18 @@ public class ShipperRepository : IShipperRepository
         try{
             string query=$"INSERT INTO shippers(company_name,contact_number,email,account_number)VALUES(@companyName, @contactNumber,@email, @accountNumber)";
             Console.WriteLine(query);
-            connection.Open();
+          
             MySqlCommand command=new MySqlCommand(query ,connection);
-                         command.Parameters.AddWithValue("@companyName",shipper.CompanyName);
-                         command.Parameters.AddWithValue("@contactNumber",shipper.ContactNumber);
-                         command.Parameters.AddWithValue("@email",shipper.Email);
-                         command.Parameters.AddWithValue("@accountNumber",shipper.AccountNumber);
-
-             Console.WriteLine(query);
-            command.ExecuteNonQuery();
-            status=true;
-        }
+            command.Parameters.AddWithValue("@companyName",shipper.CompanyName);
+            command.Parameters.AddWithValue("@contactNumber",shipper.ContactNumber);
+            command.Parameters.AddWithValue("@email",shipper.Email);
+            command.Parameters.AddWithValue("@accountNumber",shipper.AccountNumber);
+            connection.Open();
+              int rowsAffected=command.ExecuteNonQuery();
+            if(rowsAffected >0){
+             status=true;
+            }
+          }
         catch(Exception e){
              throw e;
         }
@@ -141,14 +141,16 @@ public class ShipperRepository : IShipperRepository
         {
             string query = "UPDATE shippers SET company_name=@companyname, contact_number=@contactNumber,email=@email,account_number=@accountNumber WHERE shipper_id =@shipperId";
             MySqlCommand command = new MySqlCommand(query, connection);
-                         command.Parameters.AddWithValue("@shipperId",shipper.ShipperId);
-                         command.Parameters.AddWithValue("@companyName",shipper.CompanyName);
-                         command.Parameters.AddWithValue("@contactNumber",shipper.ContactNumber);
-                         command.Parameters.AddWithValue("@email",shipper.Email);
-                         command.Parameters.AddWithValue("@accountNumber",shipper.AccountNumber);
+            command.Parameters.AddWithValue("@shipperId",shipper.ShipperId);
+            command.Parameters.AddWithValue("@companyName",shipper.CompanyName);
+            command.Parameters.AddWithValue("@contactNumber",shipper.ContactNumber);
+            command.Parameters.AddWithValue("@email",shipper.Email);
+            command.Parameters.AddWithValue("@accountNumber",shipper.AccountNumber);
             connection.Open();
-            command.ExecuteNonQuery();
-            status = true;
+            int rowsAffected=command.ExecuteNonQuery();
+            if(rowsAffected >0){
+             status=true;
+            }
         }
         catch (Exception e)
         {
