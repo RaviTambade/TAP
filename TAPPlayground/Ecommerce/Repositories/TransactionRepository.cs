@@ -1,18 +1,26 @@
 using ECommerceApp.Models;
 using ECommerceApp.Repositories.Interfaces;
 using MySql.Data.MySqlClient;
+using Microsoft.Extensions.Configuration;
 
 namespace ECommerceApp.Repositories;
 
 public class TransactionRepository : ITransactionRepository
 {
-    public static string conString="server=localhost;port=3306;user=root;password=Rohit@7378;database=Ecommerce";
+        private IConfiguration _configuration;
+        private string _conString;
+
+        public TransactionRepository(IConfiguration configuration)
+        {
+            _configuration = configuration;
+            _conString = this._configuration.GetConnectionString("DefaultConnection");
+        }
 
     public List<Transaction> GetAllTransaction()
     {
         List<Transaction> transactions = new List<Transaction>();
         MySqlConnection connection = new MySqlConnection();
-        connection.ConnectionString = conString;
+        connection.ConnectionString = _conString;
         try
         {
             string query = "SELECT * FROM transactions";
@@ -53,13 +61,14 @@ public class TransactionRepository : ITransactionRepository
     public Transaction GetTransactionById(int id)
     {
         Transaction transaction = new Transaction();
-        MySqlConnection connection = new MySqlConnection(conString);
+        MySqlConnection connection = new MySqlConnection(_conString);
         try
         {
-            string query = "SELECT * FROM transactions WHERE transaction_id=" + id;
+            string query = "SELECT * FROM transactions WHERE transaction_id=@transactionId";
             Console.WriteLine(query);
             connection.Open();
             MySqlCommand command = new MySqlCommand(query, connection);
+            command.Parameters.AddWithValue("@transactionId",id);
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
@@ -100,13 +109,16 @@ public class TransactionRepository : ITransactionRepository
         Console.WriteLine(transaction.Amount);
         bool status=false;
         MySqlConnection connection=new MySqlConnection();
-        connection.ConnectionString=conString;
+        connection.ConnectionString=_conString;
         try{
-            string query="INSERT INTO transactions(from_account_number,to_account_number,transaction_date,amount)VALUES"+
-                        "('"+transaction.FromAccountNumber+"','"+ transaction.ToAccountNumber+ "','" +transaction.TransactionDate + "'," + transaction.Amount+")";
+            string query="INSERT INTO transactions(from_account_number,to_account_number,transaction_date,amount)VALUES(@fromAccountNumber,@toAccountNumber,@transactionDate,@amount)";
             Console.WriteLine(query);            
             connection.Open();
             MySqlCommand command=new MySqlCommand(query ,connection);
+            command.Parameters.AddWithValue("@fromAccountNumber",transaction.FromAccountNumber);
+            command.Parameters.AddWithValue("@toAccountNumber",transaction.ToAccountNumber);
+            command.Parameters.AddWithValue("@transactionDate",transaction.TransactionDate);
+            command.Parameters.AddWithValue("@amount",transaction.Amount);
             command.ExecuteNonQuery();
             status=true;
         }
@@ -124,12 +136,17 @@ public class TransactionRepository : ITransactionRepository
         Console.WriteLine(transaction.Amount);
         bool status = false;
         MySqlConnection connection = new MySqlConnection();
-        connection.ConnectionString = conString;
+        connection.ConnectionString = _conString;
         try
         {
-            string query = "UPDATE transactions SET from_account_number='" + transaction.FromAccountNumber + "', to_account_number='" + transaction.ToAccountNumber + "', transaction_date='" + transaction.TransactionDate +"', amount='" + transaction.Amount +"' WHERE transaction_id=" +transaction.TransactionId;
+            string query = "UPDATE transactions SET from_account_number=@fromAccountNumber, to_account_number=@toAccountNumber, transaction_date=@transactionDate, amount=@amount WHERE transaction_id=@transactionId";
             Console.WriteLine(query);
             MySqlCommand command = new MySqlCommand(query, connection);
+            command.Parameters.AddWithValue("@transactionId",transaction.TransactionId);
+            command.Parameters.AddWithValue("@fromAccountNumber",transaction.FromAccountNumber);
+            command.Parameters.AddWithValue("@toAccountNumber",transaction.ToAccountNumber);
+            command.Parameters.AddWithValue("@transactionDate",transaction.TransactionDate);
+            command.Parameters.AddWithValue("@amount",transaction.Amount);
             connection.Open();
             command.ExecuteNonQuery();
             status = true;
@@ -150,12 +167,13 @@ public class TransactionRepository : ITransactionRepository
     {
        bool status = false;
         MySqlConnection con = new MySqlConnection();
-        con.ConnectionString = conString;
+        con.ConnectionString = _conString;
         try
         {
-            string query = "DELETE FROM transactions WHERE transaction_id="+id;
+            string query = "DELETE FROM transactions WHERE transaction_id=@transactionId";
             con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
+            command.Parameters.AddWithValue("@transactionId",id);
             command.ExecuteNonQuery();
             status = true;
         }

@@ -39,6 +39,11 @@ public class CustomersController : Controller
     {
         return View();
     }
+    
+    public IActionResult CustomerService()
+    {
+        return View();
+    }
 
 
     [HttpGet]

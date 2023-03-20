@@ -161,17 +161,30 @@ public class SupplierRepository : ISupplierRepository
         MySqlConnection connection=new MySqlConnection();
         connection.ConnectionString=_conString;
         try{
+
+            //string query=$"INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,account_number)VALUES(@companyName,@supplierName,@supplierContactName,@supplierEmail,@supplierAddress,@supplierCity,@supplierState,@supplierAccountNumber";
+
             string query="INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,account_number)VALUES(@companyName,@supplierName,@contactNumber,@email,@address,@city,@state,@accountNumber)";
+
             connection.Open();
             MySqlCommand command=new MySqlCommand(query ,connection);
             command.Parameters.AddWithValue("@companyName",supplier.CompanyName);
             command.Parameters.AddWithValue("@supplierName",supplier.SupplierName);
+
+            command.Parameters.AddWithValue("@supplierContactName",supplier.ContactNumber);
+            command.Parameters.AddWithValue("@supplierEmail",supplier.Email);
+            command.Parameters.AddWithValue("@supplierAddress",supplier.Address);
+            command.Parameters.AddWithValue("@supplierCity",supplier.Address);
+            command.Parameters.AddWithValue("@supplierState",supplier.Address);
+            command.Parameters.AddWithValue("@supplierAccountNumber",supplier.Address);
+
             command.Parameters.AddWithValue("@contactNumber",supplier.ContactNumber);
             command.Parameters.AddWithValue("@email",supplier.Email);
             command.Parameters.AddWithValue("@address",supplier.Address);
             command.Parameters.AddWithValue("@city",supplier.City);
             command.Parameters.AddWithValue("@state",supplier.State);
             command.Parameters.AddWithValue("@accountNumber",supplier.AccountNumber);
+
 
             command.ExecuteNonQuery();
             status=true;
