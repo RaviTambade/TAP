@@ -20,8 +20,7 @@ public class PaymentsController : Controller
         var payment=_paymentsrv.GetAllPayments();
         return Json(payment);
     }
-    
-     
+      
      
      
      public JsonResult GetById(int id)
@@ -37,8 +36,6 @@ public class PaymentsController : Controller
         return Json(payment);
     }
    
-
-
    
    [HttpPost]
    public JsonResult Insert([FromBody]Payment payment)
@@ -49,13 +46,12 @@ public class PaymentsController : Controller
         return Json(pay);
     }
   
-  [HttpPost]
+    [HttpPost]
    public JsonResult Update([FromBody]Payment payment)
     {
         var pay=_paymentsrv.UpdatePayment(payment);
         return Json(pay);
     }
-
 
      [HttpDelete]
     public JsonResult Delete(int id)
@@ -66,12 +62,10 @@ public class PaymentsController : Controller
     
     
     
-    
     public IActionResult Index()
     {
         return View();
     }
-
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

@@ -2,21 +2,18 @@ using ECommerceApp.Models;
 namespace ECommerceApp.Repositories.Interfaces;
 public interface IOrderDetailsRepository
 {
-    List<OrderDetails> GetAllOrderDetails();
-    OrderDetails GetOrderDetailById(int id);
-    List<OrderDetails>  GetOrderDetails(int orderId);
-    List<OrderDetailsOrder> GetProductsOfOrder(int orderId );
+    List<OrderDetails> GetAll();
+    OrderDetails GetById(int orderDetailsId);
+    
+    List<OrderDetailsOrder> GetOrderDetailsByOrder(int orderId );
 
+    bool Insert(OrderDetails orderDetails);     
+    
+    bool DeleteByOrderDetailsId(int orderDetailsId);
+    bool DeleteByOrderId(int orderId);
+    List<OrderHistory> GetOrderHistory(int customerId);   
 
-    bool InsertOrderdetails(OrderDetails orderDetails);    
+    bool Update(OrderDetails orderDetails);
 
-    //this method dosent have to do anything with insert
-    bool InsertOrderdetails(int orderId,int productId,int quantity);    
-
-    bool UpdateOrderDetails(OrderDetails orderDetails);
-
-    bool DeleteOrdeDetails(int id);
-
-    List<Product> GetOrderdProducts(int orderId);
-    List<OrderHistory> OrderHistory(int customerId);
+    
 }

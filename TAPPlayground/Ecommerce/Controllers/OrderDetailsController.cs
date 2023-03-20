@@ -1,5 +1,4 @@
-using System.Diagnostics;
-using ECommerceApp.Helpers;
+
 using ECommerceApp.Models;
 using ECommerceApp.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -8,11 +7,11 @@ namespace ECommerceApp.Controllers;
 
 public class OrderDetailsController : Controller
 {
-    private readonly IOrderDetailsService _srv;
+    private readonly IOrderDetailsService _service;
 
     public OrderDetailsController(IOrderDetailsService srv)
     {
-        _srv = srv;
+        _service = srv;
     }
 
     [HttpGet]
@@ -20,77 +19,69 @@ public class OrderDetailsController : Controller
     {
         return View();
     }
-     [HttpGet]
+
+    [HttpGet]
     public IActionResult Search(int id)
     {
         return View();
     }
+
     // Getting all Records of orderdetails
     [HttpGet]
-    public JsonResult GetAllOrderDetails()
+    public JsonResult AllOrderDetails()
     {
-        var orderDetails = _srv.GetAllOrderDetails();
+        var orderDetails = _service.GetAll();
         return Json(orderDetails);
     }
 
     //Getting orderdetail record by  its id
     [HttpGet]
-    public JsonResult GetOrderDetailById(int id)
+    public JsonResult GetById(int id)
     {
-        var orderDetail = _srv.GetOrderDetailById(id);
+        var orderDetail = _service.GetById(id);
         return Json(orderDetail);
     }
 
-    // Getting all information of a Order  
-
-    [HttpGet]
-    public JsonResult GetOrderDetails(int orderId)
-    {
-        var orderDetails = _srv.GetOrderDetails(orderId);
-        return Json(orderDetails);
-    }
-
-
-
     //Getting all products of a order
     [HttpGet]
-    public JsonResult GetProductsOfOrder(int orderId)
+    public JsonResult GetOrderDetailsByOrder(int id)
     {
-        var orderDetails = _srv.GetProductsOfOrder(orderId);
+        var orderDetails = _service.GetOrderDetailsByOrder(id);
         return Json(orderDetails);
     }
-    //Insert into order details
+
+    //Inserting  orderdetails
     [HttpPost]
-    public JsonResult InsertOrderdetails([FromBody] OrderDetails orderDetails)
+    public JsonResult Insert([FromBody] OrderDetails orderDetails)
     {
-        bool result = _srv.InsertOrderdetails(orderDetails);
+        bool result = _service.Insert(orderDetails);
         return Json(result);
     }
 
     //updating orderdetails
 
     [HttpPut]
-    public JsonResult UpdateOrderDetails([FromBody] OrderDetails orderDetails)
+    public JsonResult Update([FromBody] OrderDetails orderDetails)
     {
-        bool result = _srv.UpdateOrderDetails(orderDetails);
+        bool result = _service.Update(orderDetails);
         return Json(result);
     }
 
     //Deleting Record from orderdetails
     [HttpDelete]
-    public JsonResult DeleteOrdeDetails(int id)
+    public JsonResult Delete(int id)
     {
-        bool orderDetails = _srv.DeleteOrdeDetails(id);
+        bool orderDetails = _service.DeleteByOrderDetailsId(id);
         return Json(orderDetails);
     }
 
 
-
+    //showing customers orderhistory
     [HttpGet]
-    public IActionResult OrderHistory()
+    public IActionResult OrderHistory(int id)  //customerId
     {
-        var customerId = HttpContext.Session.GetObjectFromJson<Customer>("Customer").CustomerId;
-        var history = _srv.OrderHistory(customerId);
+        // var customerId = HttpContext.Session.GetObjectFromJson<Customer>("Customer").CustomerId;
+        var history = _service.GetOrderHistory(id);
         return View(history);
     }
 }

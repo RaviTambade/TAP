@@ -33,7 +33,6 @@ public class AccountRepository : IAccountRepository
             
             while (reader.Read())
             {
-
                 int accountId = int.Parse(reader["account_id"].ToString());
                 long accountNumber = long.Parse(reader["account_number"].ToString());
                 string ifscCode = reader["ifsc_code"].ToString();

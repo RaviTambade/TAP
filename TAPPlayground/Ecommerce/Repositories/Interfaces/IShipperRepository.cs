@@ -4,14 +4,14 @@ namespace ECommerceApp.Repositories.Interfaces;
 
 public interface IShipperRepository{
 
- public List<Shipper> GetAllShippers();
+ public List<Shipper> GetAll();
 
 
-    Shipper GetShipperById(int id);
+    Shipper GetById(int id);
 
-    bool InsertShipper(Shipper shipper);
-    bool UpdateShipper(Shipper shipper);
-    bool DeleteShipper(int id);
+    bool Insert(Shipper shipper);
+    bool Update(Shipper shipper);
+    bool Delete(int id);
     
 
 

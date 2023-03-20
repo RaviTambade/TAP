@@ -3,21 +3,21 @@ using ECommerceApp.Models;
 namespace ECommerceApp.Repositories.Interfaces;
 public interface IOrderRepository
 {
-    List<Order> GetAllOrders();
+    List<Order> GetAll();
 
-    List<Order> GetAllCancelledOrders();
-    List<Order> GetAllDeliveredOrders();
+    List<Order> GetAllCancelled();
+    List<Order> GetAllDelivered();
    
-    Order GetOrderById(int id);
+    Order GetById(int id);
 
     int GetOrderId(int id);
     bool InsertOrder(int id);
 
-    Order GetOrderByCustId(int id);
+    Order GetOrder(int id);
 
-    bool InsertOrders(Order order);
+    bool Insert(Order order);
 
-    bool UpdateOrder(Order order);
+    bool Update(Order order);
 
-    bool DeleteOrder(int id);
+    bool Delete(int id);
 }

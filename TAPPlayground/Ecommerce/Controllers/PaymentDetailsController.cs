@@ -41,9 +41,7 @@
 //             var products = HttpContext.Session.GetObjectFromJson<Cart>("Cart").Products;
 //             foreach (var product in products)
 //             {
-//                 // Console.WriteLine(orderId);
-//                 // Console.WriteLine(product.ProductId);
-//                 // Console.WriteLine(product.BuyQuantity);
+
 //                 _orderdetailssrv.InsertOrderdetails(orderId, product.ProductId, product.BuyQuantity);
 //                 ViewData["products"] = _orderdetailssrv.GetOrderdProducts(orderId);
 //                 ViewBag.address = _addresssrv.GetAddressById(addresId);
