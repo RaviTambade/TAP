@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-=======
--- Active: 1678361403571@@127.0.0.1@3306@ecommerce
-
->>>>>>> 700bbb5b45665bd0529b8a8f36bb6bad07e8553a
+-- Active: 1677916902963@@127.0.0.1@3306@ecommerce
 
 -- CREATE DATABASE Ecommerce;
 -- drop DATABASE ecommerce;
@@ -45,7 +41,7 @@ END //
 DELIMITER ;
 
 
-select * from payments;
+select * from products;
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546690,'MAHB0000286','2023-03-01 12:40:40',22555);
 select * from suppliers;
 

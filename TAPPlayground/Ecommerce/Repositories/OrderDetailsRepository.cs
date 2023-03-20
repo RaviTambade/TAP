@@ -4,8 +4,6 @@ using MySql.Data.MySqlClient;
 namespace ECommerceApp.Repositories;
 public class OrderDetailsRepository : IOrderDetailsRepository
 {
-
-
     public static string conString = "server=localhost;port=3306;user=root;password=password;database=Ecommerce";
     public List<OrderDetails> GetAllOrderDetails()
     {
@@ -18,8 +16,6 @@ public class OrderDetailsRepository : IOrderDetailsRepository
             con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
             MySqlDataReader reader = command.ExecuteReader();
-
-
             while (reader.Read())
             {
                 int id = Int32.Parse(reader["orderdetails_id"].ToString());
@@ -324,49 +320,49 @@ public class OrderDetailsRepository : IOrderDetailsRepository
 //         return products;
 //     }
 
-//     public List<OrderHistory> OrderHistory(int customerId)
-//     {
-//         List<OrderHistory> orderHistories = new List<OrderHistory>();
-//         MySqlConnection connection = new MySqlConnection();
-//         connection.ConnectionString = conString;
-//         try
-//         {
-//             string query = $"SELECT products.product_id,products.title , products.unit_price, orderdetails.quantity,customers.cust_id,orders.order_id,orders.order_date FROM products,customers, orders INNER JOIN orderdetails on orderdetails.order_id=orders.order_id WHERE  products.product_id=orderdetails.product_id AND customers.cust_id=orders.cust_id AND customers.cust_id={customerId} order by orders.order_id;";
-//             connection.Open();
-//             MySqlCommand command = new MySqlCommand(query, connection);
-//             MySqlDataReader reader = command.ExecuteReader();
-//             while (reader.Read())
-//             {
-//                 string? title = reader["title"].ToString();
-//                 double unitprice = double.Parse(reader["unit_price"].ToString());
-//                 int quantity = int.Parse(reader["quantity"].ToString());
-//                 DateTime date = DateTime.Parse(reader["order_date"].ToString());
+    public List<OrderHistory> OrderHistory(int customerId)
+    {
+        List<OrderHistory> orderHistories = new List<OrderHistory>();
+        MySqlConnection connection = new MySqlConnection();
+        connection.ConnectionString = conString;
+        try
+        {
+            string query = $"SELECT products.product_id,products.title , products.unit_price, orderdetails.quantity,customers.cust_id,orders.order_id,orders.order_date FROM products,customers, orders INNER JOIN orderdetails on orderdetails.order_id=orders.order_id WHERE  products.product_id=orderdetails.product_id AND customers.cust_id=orders.cust_id AND customers.cust_id={customerId} order by orders.order_id;";
+            connection.Open();
+            MySqlCommand command = new MySqlCommand(query, connection);
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string? title = reader["title"].ToString();
+                double unitprice = double.Parse(reader["unit_price"].ToString());
+                int quantity = int.Parse(reader["quantity"].ToString());
+                DateTime date = DateTime.Parse(reader["order_date"].ToString());
 
-//                 OrderHistory orderhistory = new OrderHistory
-//                 {
-//                     Title = title,
-//                     UnitPrice = unitprice,
-//                     Quantity = quantity,
-//                     OrderDate = date
-//                 };
-//                 orderHistories.Add(orderhistory);
-//             }
-//         }
-//         catch (Exception e)
-//         {
-//             throw e;
-//         }
-//         finally
-//         {
-//             connection.Close();
-//         }
-//         return orderHistories;
-//     }
+                OrderHistory orderhistory = new OrderHistory
+                {
+                    Title = title,
+                    UnitPrice = unitprice,
+                    Quantity = quantity,
+                    OrderDate = date
+                };
+                orderHistories.Add(orderhistory);
+            }
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            connection.Close();
+        }
+        return orderHistories;
+    }
 
-//     public bool InsertOrderdetails(int orderId, int productId, int quantity)
-//     {
-//         throw new NotImplementedException();
-//     }
-// }
-
+    public bool InsertOrderdetails(int orderId, int productId, int quantity)
+    {
+        throw new NotImplementedException();
+    }
 }
+
+

@@ -17,6 +17,6 @@ public interface IOrderDetailsRepository
 
     bool DeleteOrdeDetails(int id);
 
-    List<Product> GetOrderdProducts(int orderId);
+   // List<Product> GetOrderdProducts(int orderId);
     List<OrderHistory> OrderHistory(int customerId);
 }

@@ -24,7 +24,7 @@ public class OrderDetailsService:IOrderDetailsService{
 
     // old methods
 
-    public List<Product> GetOrderdProducts(int orderId)=> _repo.GetOrderdProducts(orderId);
+   // public List<Product> GetOrderdProducts(int orderId)=> _repo.GetOrderdProducts(orderId);
 
     public List<OrderHistory> OrderHistory(int customerId) => _repo.OrderHistory(customerId);
 

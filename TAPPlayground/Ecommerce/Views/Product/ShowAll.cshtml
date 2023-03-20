@@ -12,7 +12,7 @@
     <thead>
         <tr>
             <th></th>
-            <th>@Html.DisplayNameFor(model => model.Title)</th>
+            <th>@Html.DisplayNameFor(model => model.ProductTitle)</th>
             <th>@Html.DisplayNameFor(model => model.Description)</th>
             <th>@Html.DisplayNameFor(model => model.UnitPrice)</th>
         </tr>
@@ -22,7 +22,7 @@
         {
             <tr>
                 <td> <img src="~/@product.ImageUrl" height="50px" width="50px"/> </td>
-                <td>@Html.DisplayFor(modelItem => product.Title)</td>
+                <td>@Html.DisplayFor(modelItem => product.ProductTitle)</td>
                 <td>@Html.DisplayFor(modelItem => product.Description)</td>
                 <td>@Html.DisplayFor(modelItem => product.UnitPrice)</td>
                 <td><a href="@Url.Action("BuyQuantity", "Cart" , new {id=@product.ProductId})"><button> Add to Cart </button></a></td>

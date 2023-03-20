@@ -46,7 +46,7 @@ public class ProductController : Controller
     }
 
      [HttpPost]
-    public JsonResult Insert(Product product)
+    public JsonResult Insert([FromBody] Product product)
     {
        bool status = _productsrv.Insert(product);
        return Json(status);
