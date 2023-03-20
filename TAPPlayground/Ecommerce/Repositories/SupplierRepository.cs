@@ -24,8 +24,8 @@ public class SupplierRepository : ISupplierRepository
         try
         {
             string query = "SELECT * FROM suppliers";
-            connection.Open();
             MySqlCommand command = new MySqlCommand(query, connection);
+            connection.Open();
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
@@ -72,10 +72,9 @@ public class SupplierRepository : ISupplierRepository
         try
         {
             string query = "SELECT * FROM suppliers WHERE supplier_id=@supplierId";
-            Console.WriteLine(query);
-            connection.Open();
             MySqlCommand command = new MySqlCommand(query, connection);
             command.Parameters.AddWithValue("@supplierId", id);
+            connection.Open();
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
@@ -114,7 +113,6 @@ public class SupplierRepository : ISupplierRepository
         }
         return supplier;
     }
-
     public List<Supplier> GetSuppliers(int productId)
     {
         List<Supplier> suppliers = new List<Supplier>();
@@ -122,9 +120,9 @@ public class SupplierRepository : ISupplierRepository
         try
         {
             string query = " SELECT suppliers.supplier_id,suppliers.company_name,suppliers.supplier_name FROM suppliers INNER JOIN orderdetails ON suppliers.supplier_id=orderdetails.supplier_id WHERE product_id=@productId";
-            connection.Open();
             MySqlCommand command = new MySqlCommand(query, connection);
             command.Parameters.AddWithValue("productId",productId);
+            connection.Open();
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
@@ -151,7 +149,6 @@ public class SupplierRepository : ISupplierRepository
         }
         return suppliers;
     }
-
     public bool Insert(Supplier supplier){
         bool status=false;
         MySqlConnection connection=new MySqlConnection();
@@ -172,8 +169,7 @@ public class SupplierRepository : ISupplierRepository
             command.Parameters.AddWithValue("@address",supplier.Address);
             command.Parameters.AddWithValue("@city",supplier.City);
             command.Parameters.AddWithValue("@state",supplier.State);
-            command.Parameters.AddWithValue("@accountNumber",supplier.AccountNumber);     
-            
+            command.Parameters.AddWithValue("@accountNumber",supplier.AccountNumber);      
             connection.Open();
             int rowsAffected=command.ExecuteNonQuery();
             if(rowsAffected >0){
@@ -188,8 +184,6 @@ public class SupplierRepository : ISupplierRepository
         }
         return status;
     }
-
-    
     public bool Update(Supplier supplier)
     {
         bool status = false;
@@ -210,8 +204,10 @@ public class SupplierRepository : ISupplierRepository
             command.Parameters.AddWithValue("@state",supplier.State);
             command.Parameters.AddWithValue("@accountNumber",supplier.AccountNumber);
             connection.Open();
-            command.ExecuteNonQuery();
-            status = true;
+             int rowsAffected=command.ExecuteNonQuery();
+            if(rowsAffected >0){
+             status=true;
+            }
         }
         catch (Exception e)
         {
@@ -228,16 +224,18 @@ public class SupplierRepository : ISupplierRepository
     public bool Delete(int id)
     {
         bool status = false;
-        MySqlConnection con = new MySqlConnection();
-        con.ConnectionString = _conString;
+        MySqlConnection connection = new MySqlConnection();
+        connection.ConnectionString = _conString;
         try
         {
             string query = "DELETE FROM suppliers WHERE supplier_id=@supplierId";
-             MySqlCommand command = new MySqlCommand(query, con);
+             MySqlCommand command = new MySqlCommand(query,connection);
             command.Parameters.AddWithValue("@supplierId",id);
-            con.Open();
-            command.ExecuteNonQuery();
-            status = true;
+            connection.Open();
+            int rowsAffected=command.ExecuteNonQuery();
+            if(rowsAffected >0){
+             status=true;
+            }
         }
         catch (Exception e)
         {
@@ -245,7 +243,7 @@ public class SupplierRepository : ISupplierRepository
         }
         finally
         {
-            con.Close();
+            connection.Close();
         }
         return status;
     }
