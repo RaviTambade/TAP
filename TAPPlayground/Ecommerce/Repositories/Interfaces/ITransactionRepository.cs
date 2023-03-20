@@ -4,9 +4,9 @@ namespace ECommerceApp.Repositories.Interfaces;
 
 public interface ITransactionRepository
 {
-    List<Transaction> GetAllTransaction();
-    Transaction GetTransactionById(int id);
-    bool InsertTransaction(Transaction transaction);
-    bool UpdateTransaction(Transaction transaction);
-    bool DeleteTransaction(int id);  
+    List<Transaction> GetAll();
+    Transaction GetById(int transactionId);
+    bool Insert(Transaction transaction);
+    bool Update(Transaction transaction);
+    bool Delete(int transactionId);  
 }
