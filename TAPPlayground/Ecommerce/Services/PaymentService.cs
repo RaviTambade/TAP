@@ -10,9 +10,9 @@ public class PaymentService:IPaymentService{
     }
 
     public List<Payment> GetAllPayments() => _repo.GetAllPayments();
-    public Payment GetPaymentById( int paymentId) =>_repo.GetPaymentById(paymentId);
-    public Payment GetPaymentByOrderId( int OrderId) =>_repo.GetPaymentById(OrderId);
+    public Payment GetPaymentById( int id) =>_repo.GetPaymentById(id);
+    public Payment GetPaymentByOrderId( int id) =>_repo.GetPaymentById(id);
     public bool InsertPayments(Payment payment)=>_repo.InsertPayments(payment);
     public bool UpdatePayment(Payment payment)=>_repo.UpdatePayment(payment);
-    public bool DeletePayment(int paymentId)=>_repo.DeletePayment(paymentId);
+    public bool DeletePayment(int id)=>_repo.DeletePayment(id);
 }
