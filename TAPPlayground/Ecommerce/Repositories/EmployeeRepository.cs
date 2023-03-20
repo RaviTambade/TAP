@@ -1,20 +1,27 @@
 using ECommerceApp.Models;
 using ECommerceApp.Repositories.Interfaces;
 using MySql.Data.MySqlClient;
+using Microsoft.Extensions.Configuration;         
 namespace ECommerceApp.Repositories;
 public class EmployeeRepository : IEmployeeRepository
 {
-
-    public static string conString="server=localhost;port=3306;user=root;password=password;database=ecommerce";
+    private IConfiguration _configuration;
+    private string _conString;
+    
+    //parameterized Constructor
+    public EmployeeRepository(IConfiguration configuration){
+      _configuration= configuration;
+      _conString=this._configuration.GetConnectionString("DefaultConnection");
+    }
 
     public List<Employee> GetAllEmployees(){
 
         List<Employee> Employees=new List<Employee>();
-        MySqlConnection connection=new MySqlConnection(conString);
+        MySqlConnection connection=new MySqlConnection(_conString);
         try{
             MySqlCommand command=new MySqlCommand();
             command.CommandText="SELECT * FROM employees";
-            command.Connection=connection;
+            command.Connection= connection;
             connection.Open();
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
@@ -60,12 +67,13 @@ public class EmployeeRepository : IEmployeeRepository
 
    public Employee GetEmployeeById(int id){
           Employee employee =new Employee();
-            MySqlConnection connection=new MySqlConnection(conString);
+            MySqlConnection connection=new MySqlConnection(_conString);
           try{
               MySqlCommand command=new MySqlCommand();
-              command.CommandText="SELECT * FROM employees where employee_id="+id;
+              command.CommandText="SELECT * FROM employees where employee_id=@employeeId";
               command.Connection=connection;
               connection.Open();
+              command.Parameters.AddWithValue("@employeeId",id);
              MySqlDataReader reader = command.ExecuteReader();
               if (reader.Read())
               {
@@ -123,26 +131,26 @@ public class EmployeeRepository : IEmployeeRepository
           Console.WriteLine(emp.AccountNumber);
           bool status = false;
           MySqlConnection con = new MySqlConnection();
-          con.ConnectionString=conString;
+          con.ConnectionString=_conString;
           try{
-            //string query =$"INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('"+emp.EmpFirstName+"','"+emp.EmpLastName+"','1998-05-19','2023-03-15','"+emp.ContactNumber+"','"+emp.Email+"','"+emp.Password+"','"+emp.Photo+"','"+emp.ReportsTo+"','"+emp.AccountNumber+"')";
-              /*string query =$"INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES"+
-              "('"+emp.EmpFirstName+"','"+emp.EmpLastName+ "','1998-05-19','2023-03-15','"+ emp.ContactNumber+ "','"+
-                emp.Email+"','"+emp.Password+ "','"+ emp.Photo+"',"+emp.ReportsTo+","+39025546670+")";
-              */
+            
 
               string query =$"INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES"+
-              "('"+emp.EmpFirstName+"','"+emp.EmpLastName+ "','"+emp.BirthDate+"','"+emp.HireDate+"','"+ emp.ContactNumber+ "','"+
-                emp.Email+"','"+emp.Password+ "','"+ emp.Photo+"',"+emp.ReportsTo+",'"+emp.AccountNumber+"')";
-  
-
-              Console.WriteLine(query);
-        
-  
-
-             MySqlCommand cmd=new MySqlCommand(query,con) ;
+                                                  "(@EmpFirstName,@EmpLastName,@BirthDate,@HireDate,@ContactNumber,@Email,@Password,@Photo,@ReportsTo,@AccountNumber)";
+             Console.WriteLine(query);
              con.Open();
-             cmd.ExecuteNonQuery(); 
+             MySqlCommand command=new MySqlCommand(query,con) ;
+             command.Parameters.AddWithValue("@EmpFirstName",emp.EmpFirstName);             
+             command.Parameters.AddWithValue("@EmpLastName",emp.EmpLastName);
+             command.Parameters.AddWithValue("@BirthDate",emp.BirthDate);
+             command.Parameters.AddWithValue("@HireDate",emp.HireDate);
+             command.Parameters.AddWithValue("@ContactNumber",emp.ContactNumber);
+             command.Parameters.AddWithValue("@Email",emp.Email);
+             command.Parameters.AddWithValue("@Password",emp.Password);
+             command.Parameters.AddWithValue("@Photo",emp.Photo);
+             command.Parameters.AddWithValue("@ReportsTo",emp.ReportsTo);
+             command.Parameters.AddWithValue("@AccountNumber",emp.AccountNumber);
+             command.ExecuteNonQuery(); 
              status=true;              
 
           }catch(Exception e )
@@ -160,14 +168,24 @@ public class EmployeeRepository : IEmployeeRepository
           Console.WriteLine(emp);
           bool status = false;
           MySqlConnection con = new MySqlConnection();
-          con.ConnectionString=conString;
+          con.ConnectionString=_conString;
           try{
-            string query = "UPDATE employees SET empfirst_name='"+emp.EmpFirstName+"', emplast_name='"+emp.EmpLastName+"', birth_date='"+emp.BirthDate+"', hire_date='"+emp.HireDate+"', contact_number='"+emp.ContactNumber+"', email='"+emp.Email+"', password='"+emp.Password+"', photo='"+emp.Photo+"', reports_to="+emp.ReportsTo+", account_number='"+emp.AccountNumber+"' WHERE employee_id=" +emp.EmpId;
-             
+            string query = "UPDATE employees SET empfirst_name=@EmpFirstName, emplast_name=@EmpLastName, birth_date=@BirthDate, hire_date=@HireDate, contact_number=@ContactNumber, email=@Email, password=@Password, photo=@Photo, reports_to=@ReportsTo, account_number=@AccountNumber WHERE employee_id=@EmployeeId";   
              Console.WriteLine(query);
-             MySqlCommand cmd=new MySqlCommand(query,con) ;
              con.Open();
-             cmd.ExecuteNonQuery();               
+             MySqlCommand command=new MySqlCommand(query,con) ;
+             command.Parameters.AddWithValue("@EmpFirstName",emp.EmpFirstName);             
+             command.Parameters.AddWithValue("@EmpLastName",emp.EmpLastName);
+             command.Parameters.AddWithValue("@BirthDate",emp.BirthDate);
+             command.Parameters.AddWithValue("@HireDate",emp.HireDate);
+             command.Parameters.AddWithValue("@ContactNumber",emp.ContactNumber);
+             command.Parameters.AddWithValue("@Email",emp.Email);
+             command.Parameters.AddWithValue("@Password",emp.Password);
+             command.Parameters.AddWithValue("@Photo",emp.Photo);
+             command.Parameters.AddWithValue("@ReportsTo",emp.ReportsTo);
+             command.Parameters.AddWithValue("@AccountNumber",emp.AccountNumber);
+             con.Open();
+             command.ExecuteNonQuery();               
              status=true;
           }catch(Exception e )
           {
@@ -184,12 +202,13 @@ public class EmployeeRepository : IEmployeeRepository
    public  bool DeleteEmp(int id){
           bool status = false;
           MySqlConnection con = new MySqlConnection();
-          con.ConnectionString=conString;
+          con.ConnectionString=_conString;
           try{
-            string query = "DELETE FROM employees WHERE employee_id="+id;
-             MySqlCommand cmd=new MySqlCommand(query,con) ;
+            string query = "DELETE FROM employees WHERE employee_id=@employeeId";
+             MySqlCommand command=new MySqlCommand(query,con) ;
+            command.Parameters.AddWithValue("@employeeId",id);
              con.Open();
-             cmd.ExecuteNonQuery();              
+             command.ExecuteNonQuery();              
              status = true;
           }catch(Exception e )
           {
