@@ -73,10 +73,11 @@ public class SupplierRepository : ISupplierRepository
         MySqlConnection connection = new MySqlConnection(_conString);
         try
         {
-            string query = "SELECT * FROM suppliers WHERE supplier_id=" + id;
+            string query = "SELECT * FROM suppliers WHERE supplier_id=@supplierId";
             Console.WriteLine(query);
             connection.Open();
             MySqlCommand command = new MySqlCommand(query, connection);
+            command.Parameters.AddWithValue("@supplierId", id);
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
@@ -122,9 +123,10 @@ public class SupplierRepository : ISupplierRepository
         MySqlConnection connection = new MySqlConnection(_conString);
         try
         {
-            string query = " SELECT suppliers.supplier_id,suppliers.company_name,suppliers.supplier_name FROM suppliers INNER JOIN orderdetails ON suppliers.supplier_id=orderdetails.supplier_id WHERE product_id=" + id;
+            string query = " SELECT suppliers.supplier_id,suppliers.company_name,suppliers.supplier_name FROM suppliers INNER JOIN orderdetails ON suppliers.supplier_id=orderdetails.supplier_id WHERE product_id=@productId";
             connection.Open();
             MySqlCommand command = new MySqlCommand(query, connection);
+            command.Parameters.AddWithValue("productId",id);
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
@@ -157,9 +159,10 @@ public class SupplierRepository : ISupplierRepository
         MySqlConnection connection=new MySqlConnection();
         connection.ConnectionString=_conString;
         try{
-            string query=$"INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,account_number)VALUES('{supplier.CompanyName}','{supplier.SupplierName}','{supplier.ContactNumber}','{supplier.Email}','{supplier.Address}','{supplier.City}','{supplier.State}','{supplier.AccountNumber}')";
+            string query=$"INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,account_number)VALUES(@companyName,@supplierName,@supplierContactName,@supplierEmail,@supplierAddress,'{supplier.City}','{supplier.State}','{supplier.AccountNumber}')";
             connection.Open();
             MySqlCommand command=new MySqlCommand(query ,connection);
+            command.Parameters.AddWithValue("@companyName")
             command.ExecuteNonQuery();
             status=true;
         }
@@ -206,9 +209,12 @@ public class SupplierRepository : ISupplierRepository
         con.ConnectionString = _conString;
         try
         {
-            string query = "DELETE FROM suppliers WHERE supplier_id="+id;
+            //Paramterized Query
+
+            string query = "DELETE FROM suppliers WHERE supplier_id=@supplierId";
             con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
+            command.Parameters.AddWithValue("@supplierId",id);
             command.ExecuteNonQuery();
             status = true;
 
