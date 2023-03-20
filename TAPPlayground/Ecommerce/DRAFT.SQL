@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 -- Active: 1678116914124@@127.0.0.1@3306@ecommerce
+=======
+-- Active: 1678361403571@@127.0.0.1@3306@ecommerce
+
+>>>>>>> 43e33ca45152976999c5cc900faed572098e5517
 
 -- CREATE DATABASE Ecommerce;
 -- drop DATABASE ecommerce;
@@ -42,7 +47,7 @@ DELIMITER ;
 
 
 select * from payments;
-INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546630,'MAHB0000286','2023-03-01 12:40:40',22555);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546690,'MAHB0000286','2023-03-01 12:40:40',22555);
 select * from suppliers;
 
 
@@ -58,7 +63,7 @@ INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 390
 
 
 select * from accounts;
-INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546621,'MAHB0000286','2023-03-01 12:40:40',22555);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546610,'MAHB0000286','2023-03-01 12:40:40',22555);
 
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546671,'MAHB0000286','2023-03-01 12:40:40',22555);
 
@@ -196,6 +201,7 @@ INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-08-25  06:35:2
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:25', 3,35.0,'delivered');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-01-16  09:35:25', 6,85.00,'cancelled');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:25', 7,14.00,'inprogress');
+
 
 
 INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,account_number)VALUES('Hindustan pvt.ltd','Pragati','7845632569','pragati@gmail.com','Sinhagad Road Pune','Pune','Maharashtra',39025545999);
@@ -491,5 +497,5 @@ select customers.first_name,customers.last_name,customers.email,customers.contac
 INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Vishwambhar','Kapare','1998-05-19','2023-03-15','70385488505','Rushi@gmail.com','Rc5269','./images/Rc.jpg',3,39025546668)
 
 select customers.first_name,customers.last_name,customers.email,customers.contact_number,accounts.account_number,accounts.ifsc_code,accounts.balance FROM customers  INNER JOIN  accounts ON accounts.account_number=customers.account_number;-- WHERE customers.cust_id=1; 
-SELECT * FROM  customers;
+SELECT * FROM  accounts;
 
