@@ -5,14 +5,21 @@ namespace ECommerceApp.Repositories;
 public class CustomerRepository : ICustomerRepository
 {
 
-    public static string conString="server=localhost;port=3306;user=root;password=1234512345;database=Ecommerce";
+    private IConfiguration _configuration;
+    private string _conString;
+
+    public CustomerRepository(IConfiguration configuration)
+    {
+        _configuration = configuration;
+        _conString = this._configuration.GetConnectionString("DefaultConnection");
+    }
 
     public List<Customer> GetAll(){
 
         List<Customer> customers=new List<Customer>();
 
         Customer customer=new Customer();
-        MySqlConnection connection=new MySqlConnection(conString);
+        MySqlConnection connection=new MySqlConnection(_conString);
         try{
             MySqlCommand command=new MySqlCommand();
             command.CommandText=$"SELECT * FROM customers";
@@ -52,14 +59,15 @@ public class CustomerRepository : ICustomerRepository
 
     }
 
-    public Customer GetByContact(string contact)
+    public Customer GetByContactNumber(string contact)
     {
         Customer customer=new Customer();
-        MySqlConnection connection=new MySqlConnection(conString);
+        MySqlConnection connection=new MySqlConnection(_conString);
         try{
             MySqlCommand command=new MySqlCommand();
             command.CommandText=$"SELECT * FROM customers where contact_number=@contact";
             command.Connection=connection;
+            command.Parameters.AddWithValue("@contactNumber",contact);
             connection.Open();
            MySqlDataReader reader = command.ExecuteReader();
             if (reader.Read())
@@ -91,14 +99,18 @@ public class CustomerRepository : ICustomerRepository
 
     }
 
-    public Customer GetById(int custid)
+
+    public Customer GetById(int custId)
+
+
     {
         Customer customer=new Customer();
-        MySqlConnection connection=new MySqlConnection(conString);
+        MySqlConnection connection=new MySqlConnection(_conString);
         try{
             MySqlCommand command=new MySqlCommand();
-            command.CommandText=$"SELECT * FROM customers where cust_id={custid}";
+            command.CommandText=$"SELECT * FROM customers where cust_id=@customerId";
             command.Connection=connection;
+            command.Parameters.AddWithValue("@customerId",custId);
             connection.Open();
            MySqlDataReader reader = command.ExecuteReader();
             if (reader.Read())
@@ -133,16 +145,20 @@ public class CustomerRepository : ICustomerRepository
       return customer; 
     }
 
-
-
-    public bool InsertCustomer(Customer customer){
+    public bool Insert(Customer customer){
         bool status=false;
-        MySqlConnection connection=new MySqlConnection(conString);
+        MySqlConnection connection=new MySqlConnection(_conString);
         try{
             MySqlCommand command=new MySqlCommand();
-            command.CommandText=$"INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number)VALUES('{customer.FirstName}','{customer.LastName}','{customer.Email}','{customer.ContactNumber}','{customer.Password}','{customer.AccountNumber}')";
+            command.CommandText=$"INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number)VALUES(@firstName,@lastName,@email,@contactNumber,@password,@accountNumber";
            Console.WriteLine(command.CommandText);
             command.Connection=connection;
+            command.Parameters.AddWithValue("@firstName",customer.FirstName);
+            command.Parameters.AddWithValue("@lastName",customer.LastName);
+            command.Parameters.AddWithValue("@email",customer.Email);
+            command.Parameters.AddWithValue("@contactNumber",customer.ContactNumber);
+            command.Parameters.AddWithValue("@password",customer.Password);
+            command.Parameters.AddWithValue("@accountNumber",customer.AccountNumber);
             connection.Open();
             command.ExecuteNonQuery();
             status=true;
@@ -156,15 +172,22 @@ public class CustomerRepository : ICustomerRepository
       return status;      
     }
 
-       public  bool UpdateCustomer(Customer customer){
+       public  bool Update(Customer customer){
           bool status = false;
           MySqlConnection con = new MySqlConnection();
-          con.ConnectionString=conString;
+          con.ConnectionString=_conString;
         try{
             
-            string query = $"Update customers SET first_name ='{customer.FirstName}',last_name ='{customer.LastName}',email='{customer.Email}',contact_number='{customer.ContactNumber}',password ='{customer.Password}',account_number='{customer.AccountNumber}' WHERE cust_id='{customer.CustomerId}' ";
+            string query = $"Update customers SET first_name =@firstName,last_name =@lastName,email=@email,contact_number=@contactNumber,password =@password,account_number=@accountNumber WHERE cust_id=@customerId ";
             Console.WriteLine(query);
-            MySqlCommand cmd=new MySqlCommand(query,con) ;
+            MySqlCommand cmd=new MySqlCommand(query,con);
+            cmd.Parameters.AddWithValue("@customerId",customer.CustomerId);
+            cmd.Parameters.AddWithValue("@firstName",customer.FirstName);
+            cmd.Parameters.AddWithValue("@lastName",customer.LastName);
+            cmd.Parameters.AddWithValue("@email",customer.Email);
+            cmd.Parameters.AddWithValue("@contactNumber",customer.ContactNumber);
+            cmd.Parameters.AddWithValue("@password",customer.Password);
+            cmd.Parameters.AddWithValue("@accountNumber",customer.AccountNumber);
             con.Open();
             cmd.ExecuteNonQuery();               
             status=true;
@@ -179,14 +202,15 @@ public class CustomerRepository : ICustomerRepository
           return status;
    }
    
-   public  bool DeleteCustomer(int id){
+   public  bool Delete(int customerId){
           bool status = false;
           MySqlConnection con = new MySqlConnection();
-          con.ConnectionString=conString;
+          con.ConnectionString=_conString;
           try{
             
-            string query = "DELETE FROM customers WHERE cust_id="+id;
+            string query = "DELETE FROM customers WHERE cust_id=@customerId";
             MySqlCommand cmd=new MySqlCommand(query,con) ;
+            cmd.Parameters.AddWithValue("@customerId",customerId);
             con.Open();
             cmd.ExecuteNonQuery();  
             status=true;            
