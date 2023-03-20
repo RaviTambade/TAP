@@ -11,11 +11,11 @@ public class CustomerAccountsController : Controller
      _accountserv = accountserv;
     }
     [HttpGet]
-    public JsonResult GetAllCustomersAccounts()
+    public JsonResult GetAll()
     {
         Console.WriteLine("customers");
 
-        var accounts=_accountserv.GetAllCustomersAccounts();
+        var accounts=_accountserv.GetAll();
         return Json(accounts);
     }
 }

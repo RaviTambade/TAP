@@ -12,9 +12,9 @@ public class AccountsController : Controller
         _accountserv = accountserv;
     }
     [HttpGet]
-    public JsonResult GetAllAccounts()
+    public JsonResult GetAll()
     {
-        var accounts = _accountserv.GetAllAccounts();
+        var accounts = _accountserv.GetAll();
         return Json(accounts);
     }
     [HttpGet]
@@ -24,9 +24,9 @@ public class AccountsController : Controller
     }
 
     [HttpGet]
-    public JsonResult GetAccountById(int id)
+    public JsonResult GetById(int id)
     {
-        var account = _accountserv.GetAccountById(id);
+        var account = _accountserv.GetById(id);
         return Json(account);
     }
     [HttpGet]
@@ -40,35 +40,35 @@ public class AccountsController : Controller
         return View();
     }
     [HttpPost]
-    public JsonResult InsertAccount([FromBody] Account account)
+    public JsonResult Insert([FromBody] Account account)
     {
-        bool status = _accountserv.InsertAccount(account);
+        bool status = _accountserv.Insert(account);
         return Json(status);
     }
 
     [HttpPut]
-    public JsonResult UpdateAccount([FromBody] Account account)
+    public JsonResult Update([FromBody] Account account)
     {
         Console.WriteLine(account.AccountNumber);
-        bool status = _accountserv.UpdateAccount(account);
+        bool status = _accountserv.Update(account);
         return Json(status);
     }
     [HttpDelete]
-    public JsonResult DeleteAccount(Int32 id)
+    public JsonResult Delete(Int32 id)
     {
-        bool status = _accountserv.DeleteAccount(id);
+        bool status = _accountserv.Delete(id);
         return Json(status);
     }
-    public IActionResult Insert()
-    {
-        return View();
-    }
-     public IActionResult Update()
-    {
-        return View();
-    }
-    public IActionResult Delete()
-    {
-       return View(); 
-    }
+    // public IActionResult Insert()
+    // {
+    //     return View();
+    // }
+    //  public IActionResult Update()
+    // {
+    //     return View();
+    // }
+    // public IActionResult Delete()
+    // {
+    //    return View(); 
+    // }
 }

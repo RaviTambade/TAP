@@ -99,7 +99,10 @@ public class CustomerRepository : ICustomerRepository
 
     }
 
+
     public Customer GetById(int custId)
+
+
     {
         Customer customer=new Customer();
         MySqlConnection connection=new MySqlConnection(_conString);
