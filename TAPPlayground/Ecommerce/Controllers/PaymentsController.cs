@@ -20,8 +20,7 @@ public class PaymentsController : Controller
         var payment=_paymentsrv.GetAllPayments();
         return Json(payment);
     }
-    
-     
+      
      
      
      public JsonResult GetById(int id)
@@ -36,7 +35,12 @@ public class PaymentsController : Controller
         var payment=_paymentsrv.GetPaymentById(id);
         return Json(payment);
     }
+<<<<<<< HEAD
 
+=======
+   
+   
+>>>>>>> 59118d049f910a1baf76fb7d83c45096983c86b4
    [HttpPost]
    public JsonResult Insert([FromBody]Payment payment)
     {
@@ -59,7 +63,14 @@ public class PaymentsController : Controller
         bool pay=_paymentsrv.DeletePayment(id);
         return Json(pay);
     }
+<<<<<<< HEAD
       public IActionResult Index()
+=======
+    
+    
+    
+    public IActionResult Index()
+>>>>>>> 59118d049f910a1baf76fb7d83c45096983c86b4
     {
         return View();
     }

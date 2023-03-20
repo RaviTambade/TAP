@@ -9,11 +9,11 @@ public class CustomerService:ICustomerService{
         this._repo=repo;
     }
 
-    public List<Customer> GetAllCustomers() => _repo.GetAllCustomers();
-    public Customer GetCustomer(string contact_number) => _repo.GetCustomer(contact_number);
-    public Customer GetCustomerById(int id)=> _repo.GetCustomerById(id);
-    public bool InsertCustomer(Customer customer)=>_repo.InsertCustomer(customer);
-    public bool UpdateCustomer(Customer customer)=> _repo.UpdateCustomer(customer);
-    public bool DeleteCustomer(int id)=>_repo.DeleteCustomer(id);
+    public List<Customer> GetAll() => _repo.GetAll();
+    public Customer GetByContactNumber(string contact_number) => _repo.GetByContactNumber(contact_number);
+    public Customer GetById(int id)=> _repo.GetById(id);
+    public bool Insert(Customer customer)=>_repo.Insert(customer);
+    public bool Update(Customer customer)=> _repo.Update(customer);
+    public bool Delete(int id)=>_repo.Delete(id);
 }
 

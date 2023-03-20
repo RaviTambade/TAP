@@ -5,5 +5,4 @@ namespace ECommerceApp.Services.Interfaces;
 
 public interface IProductService : IProductRepository
 {
-
 }
