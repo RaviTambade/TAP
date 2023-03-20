@@ -31,7 +31,7 @@ public class OrderDetailsController : Controller
     [HttpGet]
     public JsonResult AllOrderDetails()
     {
-        var orderDetails = _service.AllOrderDetails();
+        var orderDetails = _service.GetAll();
         return Json(orderDetails);
     }
 
@@ -72,7 +72,7 @@ public class OrderDetailsController : Controller
     [HttpDelete]
     public JsonResult Delete(int id)
     {
-        bool orderDetails = _service.Delete(id);
+        bool orderDetails = _service.DeleteByOrderDetailsId(id);
         return Json(orderDetails);
     }
 
@@ -82,7 +82,7 @@ public class OrderDetailsController : Controller
     public IActionResult OrderHistory(int id)  //customerId
     {
         // var customerId = HttpContext.Session.GetObjectFromJson<Customer>("Customer").CustomerId;
-        var history = _service.OrderHistory(id);
+        var history = _service.GetOrderHistory(id);
         return View(history);
     }
 }

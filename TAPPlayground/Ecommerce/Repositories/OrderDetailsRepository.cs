@@ -13,7 +13,7 @@ public class OrderDetailsRepository : IOrderDetailsRepository
         _configuration = configuration;
         _conString = this._configuration.GetConnectionString("DefaultConnection");
     }
-    public List<OrderDetails> AllOrderDetails()
+    public List<OrderDetails> GetAll()
     {
         List<OrderDetails> orderDetails = new List<OrderDetails>();
         MySqlConnection con = new MySqlConnection();
@@ -57,7 +57,7 @@ public class OrderDetailsRepository : IOrderDetailsRepository
         return orderDetails;
     }
 
-    public OrderDetails GetById(int id)
+    public OrderDetails GetById(int orderDetailsId)
     {
         OrderDetails orderDetail = new OrderDetails();
         MySqlConnection con = new MySqlConnection();
@@ -66,7 +66,7 @@ public class OrderDetailsRepository : IOrderDetailsRepository
         {
             string query = "select * from orderdetails where orderdetails_id=@orderDetailsId";
             MySqlCommand command = new MySqlCommand(query, con);
-            command.Parameters.AddWithValue("@orderDetailsId", id);
+            command.Parameters.AddWithValue("@orderDetailsId", orderDetailsId);
             con.Open();
             MySqlDataReader reader = command.ExecuteReader();
             if (reader.Read())
@@ -102,10 +102,7 @@ public class OrderDetailsRepository : IOrderDetailsRepository
     }
 
 
-
-
-
-    public List<OrderDetailsOrder> GetProductsOfOrder(int orderId)
+    public List<OrderDetailsOrder> GetOrderDetailsByOrder(int orderId)
     {
         List<OrderDetailsOrder> products = new List<OrderDetailsOrder>();
         MySqlConnection con = new MySqlConnection();
@@ -215,7 +212,7 @@ public class OrderDetailsRepository : IOrderDetailsRepository
         return status;
     }
 
-    public bool Delete(int id)
+    public bool DeleteByOrderDetailsId(int orderDetailsId)
     {
         bool status = false;
         MySqlConnection con = new MySqlConnection();
@@ -243,7 +240,12 @@ public class OrderDetailsRepository : IOrderDetailsRepository
         return status;
     }
 
-    public List<OrderHistory> OrderHistory(int customerId)
+    public bool DeleteByOrderId(int orderId){
+
+        bool status=false;
+        return status;
+    }
+    public List<OrderHistory> GetOrderHistory(int customerId)
     {
         List<OrderHistory> orderHistories = new List<OrderHistory>();
         MySqlConnection con = new MySqlConnection();

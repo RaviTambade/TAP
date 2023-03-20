@@ -11,26 +11,30 @@ public class OrderDetailsService : IOrderDetailsService
         this._repo = repo;
     }
 
-    public List<OrderDetails> AllOrderDetails()
+    public List<OrderDetails> GetAll()
     {
-        return _repo.AllOrderDetails();
+        return _repo.GetAll();
     }
 
-    public bool Delete(int id)
+    public bool DeleteByOrderDetailsId(int orderDetailsId)
     {
-        return _repo.Delete(id);
-
+        return _repo.DeleteByOrderDetailsId(orderDetailsId);
     }
 
-    public OrderDetails GetById(int id)
+    public bool DeleteByOrderId(int orderId)
     {
-        return _repo.GetById(id);
-
+        return _repo.DeleteByOrderId(orderId);
     }
 
-    public List<OrderDetailsOrder> GetProductsOfOrder(int orderId)
+
+    public OrderDetails GetById(int orderDetailsId)
     {
-        return _repo.GetProductsOfOrder(orderId);
+        return _repo.GetById(orderDetailsId);
+    }
+
+    public List<OrderDetailsOrder> GetOrderDetailsByOrder(int orderId)
+    {
+        return _repo.GetOrderDetailsByOrder(orderId);
     }
 
     public bool Insert(OrderDetails orderDetails)
@@ -38,9 +42,9 @@ public class OrderDetailsService : IOrderDetailsService
         return _repo.Insert(orderDetails);
     }
 
-    public List<OrderHistory> OrderHistory(int customerId)
+    public List<OrderHistory> GetOrderHistory(int customerId)
     {
-        return _repo.OrderHistory(customerId);
+        return _repo.GetOrderHistory(customerId);
     }
 
     public bool Update(OrderDetails orderDetails)
