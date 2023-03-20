@@ -25,7 +25,7 @@ public class AddressController : Controller
     {
         int customerid = HttpContext.Session.GetObjectFromJson<Customer>("Customer").CustomerId;
         address.CustomerId = customerid;
-        _addresssrv.InsertAddress(address);
+        _addresssrv.Insert(address);
         return RedirectToAction("GetAddresses");
     }
 
@@ -33,7 +33,7 @@ public class AddressController : Controller
     public IActionResult GetAddresses()
     {
         var customer = HttpContext.Session.GetObjectFromJson<Customer>("Customer");
-        var addresses = _addresssrv.GetAddresses(customer.CustomerId);
+        var addresses = _addresssrv.GetAll(customer.CustomerId);
         return View(addresses);
     }
 

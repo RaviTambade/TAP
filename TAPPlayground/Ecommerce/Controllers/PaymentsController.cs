@@ -15,33 +15,30 @@ public class PaymentsController : Controller
     }
 
     [HttpGet]
-    public JsonResult ShowAllPayments()
+    public JsonResult GetAll()
     {
         var payment=_paymentsrv.GetAllPayments();
         return Json(payment);
     }
-    
+      
      
      
-     
-     public JsonResult GetPaymentById(int paymentId)
+     public JsonResult GetById(int id)
     {
-        var payment=_paymentsrv.GetPaymentById(paymentId);
+        var payment=_paymentsrv.GetPaymentById(id);
         return Json(payment);
     }
    
    
-     public JsonResult GetPaymentByOrderId(int OrderId)
+     public JsonResult GetPayment(int id)
     {
-        var payment=_paymentsrv.GetPaymentById(OrderId);
+        var payment=_paymentsrv.GetPaymentById(id);
         return Json(payment);
     }
    
-
-
    
    [HttpPost]
-   public JsonResult InsertPayment([FromBody]Payment payment)
+   public JsonResult Insert([FromBody]Payment payment)
     {
         Console.WriteLine("In controller");
         Console.WriteLine(payment);
@@ -50,7 +47,7 @@ public class PaymentsController : Controller
     }
   
   [HttpPost]
-   public JsonResult UpdatePayments(Payment payment)
+   public JsonResult Update([FromBody]Payment payment)
     {
         var pay=_paymentsrv.UpdatePayment(payment);
         return Json(pay);
@@ -58,12 +55,11 @@ public class PaymentsController : Controller
 
 
      [HttpDelete]
-    public JsonResult DeletePayment(int paymentId)
+    public JsonResult Delete(int id)
     {
-        bool pay=_paymentsrv.DeletePayment(paymentId);
+        bool pay=_paymentsrv.DeletePayment(id);
         return Json(pay);
     }
-    
     
     
     

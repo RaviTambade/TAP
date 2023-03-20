@@ -9,7 +9,7 @@ public class AddressRepository : IAddressRepository
     public static string conString = "server=localhost;port=3306;user=root;password=Password;database=Ecommerce";
 
 
-    public List<Address> GetAddresses(int id)
+    public List<Address> GetAll(int id)
     {
         List<Address> addresses = new List<Address>();
         MySqlConnection con = new MySqlConnection();
@@ -56,7 +56,7 @@ public class AddressRepository : IAddressRepository
         return addresses;
     }
 
-    public bool InsertAddress(Address address)
+    public bool Insert(Address address)
     {
         bool status = false;
         MySqlConnection con = new MySqlConnection();
@@ -80,7 +80,7 @@ public class AddressRepository : IAddressRepository
         return status;
     }
 
-      public Address GetAddressById(int addressId)
+      public Address GetById(int addressId)
     {
         Address address= new Address();
         MySqlConnection con = new MySqlConnection();

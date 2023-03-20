@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 
 -- Active: 1678115210596@@127.0.0.1@3306@ecommerce
 
 -- Active: 1678361403571@@127.0.0.1@3306@ecommerce
 
+=======
+>>>>>>> 9d312977bb9f52ca97e4e6faa2045d65daa576e2
 
 
 CREATE DATABASE Ecommerce;
@@ -497,5 +500,5 @@ select customers.first_name,customers.last_name,customers.email,customers.contac
 INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Vishwambhar','Kapare','1998-05-19','2023-03-15','70385488505','Rushi@gmail.com','Rc5269','./images/Rc.jpg',3,39025546668)
 
 select customers.first_name,customers.last_name,customers.email,customers.contact_number,accounts.account_number,accounts.ifsc_code,accounts.balance FROM customers  INNER JOIN  accounts ON accounts.account_number=customers.account_number;-- WHERE customers.cust_id=1; 
-SELECT * FROM  accounts;
+SELECT * FROM  orderdetails;
 

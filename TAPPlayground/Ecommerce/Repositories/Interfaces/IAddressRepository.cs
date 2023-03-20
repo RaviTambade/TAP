@@ -3,9 +3,9 @@ using ECommerceApp.Models;
 namespace ECommerceApp.Repositories.Interfaces;
 public interface IAddressRepository{
 
-    List<Address> GetAddresses(int id);
+    List<Address> GetAll(int id);
 
-    bool InsertAddress(Address address);
+    bool Insert(Address address);
 
-     Address GetAddressById(int addressId);
+     Address GetById(int addressId);
 }

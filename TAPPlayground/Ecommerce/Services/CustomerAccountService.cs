@@ -10,5 +10,5 @@ public CustomerAccountService(ICustomerAccountRepository repo){
     this._repo=repo;
 
 }
-public List<CustomerAccount> GetAllCustomersAccounts()=>_repo.GetAllCustomersAccounts();
+public List<CustomerAccount> GetAll()=>_repo.GetAll();
 }

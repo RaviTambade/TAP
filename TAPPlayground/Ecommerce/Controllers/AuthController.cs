@@ -24,7 +24,7 @@ public class AuthController : Controller
     [HttpPost]
     public IActionResult Register(Customer customer)
     {
-        _customersrv.InsertCustomer(customer);
+        _customersrv.Insert(customer);
         return RedirectToAction("LogIn", "Auth");
     }
 
@@ -39,7 +39,7 @@ public class AuthController : Controller
         bool status = _usersrv.ValidateUser(user);
         if (status)
         {
-            var customer = _customersrv.GetCustomer(user.ContactNumber);
+            var customer = _customersrv.GetByContactNumber(user.ContactNumber);
             HttpContext.Session.SetObjectAsJson("Customer", customer);
 
             return RedirectToAction("ShowAll", "Product");

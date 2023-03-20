@@ -117,8 +117,8 @@ public class SuppliersController:Controller{
       [HttpDelete]
     public JsonResult DeleteSupplier(int id)
     {
-        bool supplier = _srv.Delete(id);
-        return Json(supplier);
+        bool status = _srv.Delete(id);
+        return Json(status);
     }
 
       [HttpGet]
