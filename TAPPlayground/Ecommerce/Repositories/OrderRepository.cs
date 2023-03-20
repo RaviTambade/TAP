@@ -2,16 +2,25 @@ using ECommerceApp.Models;
 using ECommerceApp.Repositories.Interfaces;
 using MySql.Data.MySqlClient;
 using System.Globalization;
+using Microsoft.Extensions.Configuration;
 namespace ECommerceApp.Repositories;
 public class OrderRepository : IOrderRepository
 {
-    public static string conString = "server=localhost;port=3306;user=root;password=Password;database=Ecommerce";
+    private IConfiguration _configuration;
+
+    private string _conString;
+
+    public OrderRepository(IConfiguration configuration)
+    {
+        _configuration=configuration;
+        _conString=this._configuration.GetConnectionString("DefaultConnection");
+    }
 
     public List<Order> GetAllOrders()
     {
         List<Order> orders = new List<Order>();
         MySqlConnection con = new MySqlConnection();
-        con.ConnectionString = conString;
+        con.ConnectionString = _conString;
         try
         {
             string query = "SELECT * FROM orders";
@@ -56,7 +65,7 @@ public class OrderRepository : IOrderRepository
     {
         Order order = new Order();
         MySqlConnection con = new MySqlConnection();
-        con.ConnectionString = conString;
+        con.ConnectionString = _conString;
         try
         {
             string query = "SELECT * FROM orders where order_id=" + id;
@@ -98,7 +107,7 @@ public class OrderRepository : IOrderRepository
     {
         int orderId = 0;
         MySqlConnection con = new MySqlConnection();
-        con.ConnectionString = conString;
+        con.ConnectionString = _conString;
         try
         {
             string query = $"SELECT MAX(order_id) as order_id from orders where cust_id={customerId}";
@@ -126,7 +135,7 @@ public class OrderRepository : IOrderRepository
     {
         bool status = false;
         MySqlConnection con = new MySqlConnection();
-        con.ConnectionString = conString;
+        con.ConnectionString = _conString;
         try
         {
             string query = $"INSERT INTO orders(cust_id)VALUES('{customerId}')";
@@ -149,7 +158,7 @@ public class OrderRepository : IOrderRepository
     {
         Order order = new Order();
         MySqlConnection con = new MySqlConnection();
-        con.ConnectionString = conString;
+        con.ConnectionString = _conString;
         try
         {
             string query = "SELECT * FROM orders where cust_id=" + custid;
@@ -189,7 +198,7 @@ public class OrderRepository : IOrderRepository
     {
         bool status = false;
         MySqlConnection con = new MySqlConnection();
-        con.ConnectionString = conString;
+        con.ConnectionString = _conString;
         try
         {
             string query = $"INSERT INTO orders(order_date,shipped_date,cust_id,total,status)VALUES" +
@@ -214,7 +223,7 @@ public class OrderRepository : IOrderRepository
     {
         bool status = false;
         MySqlConnection con = new MySqlConnection();
-        con.ConnectionString = conString;
+        con.ConnectionString = _conString;
         try
         {
             string query = "Update orders set order_date='" + order.OrderDate + "', shipped_date='" + order.ShippedDate + "',cust_id='" + order.CustomerId + "', total ='" + order.Total + "', status ='" + order.Status + "' Where order_id =" + order.OrderId;
@@ -237,7 +246,7 @@ public class OrderRepository : IOrderRepository
     {
         bool status = false;
         MySqlConnection con = new MySqlConnection();
-        con.ConnectionString = conString;
+        con.ConnectionString = _conString;
         try
         {
             string query = "DELETE FROM orders where order_id =" + id;
@@ -261,7 +270,7 @@ public class OrderRepository : IOrderRepository
     {
         List<Order> orders = new List<Order>();
         MySqlConnection con = new MySqlConnection();
-        con.ConnectionString = conString;
+        con.ConnectionString = _conString;
         try
         {
 
@@ -312,7 +321,7 @@ public class OrderRepository : IOrderRepository
     {
         List<Order> orders = new List<Order>();
         MySqlConnection con = new MySqlConnection();
-        con.ConnectionString = conString;
+        con.ConnectionString = _conString;
         try
         {
 
