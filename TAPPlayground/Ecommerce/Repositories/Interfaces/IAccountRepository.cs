@@ -3,12 +3,12 @@ using ECommerceApp.Models;
 namespace ECommerceApp.Repositories.Interfaces;
 public interface IAccountRepository{
 
-    List<Account> GetAllAccounts();
+    List<Account> GetAll();
 
-    Account GetAccountById(int id);
+    Account GetById(int id);
 
-   bool InsertAccount(Account account);
-   bool UpdateAccount(Account account);
-   bool DeleteAccount(int id);
+   bool Insert(Account account);
+   bool Update(Account account);
+   bool Delete(int id);
    
 }

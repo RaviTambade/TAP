@@ -13,21 +13,21 @@ public class OrdersController : Controller
         _ordersrv = ordersrv;
     }
     [HttpGet]
-    public JsonResult GetAllOrders()
+    public JsonResult GetAll()
     {
         var orders = _ordersrv.GetAllOrders();
         return Json(orders);
     }
 
       [HttpGet]
-    public JsonResult GetCancelledOrders()
+    public JsonResult GetCancelled()
     {
         var orders = _ordersrv.GetAllCancelledOrders();
         return Json(orders);
     }
 
     [HttpGet]
-    public JsonResult GetDeliveredOrders()
+    public JsonResult GetDelivered()
     {
         var orders = _ordersrv.GetAllDeliveredOrders();
         return Json(orders);
@@ -35,7 +35,7 @@ public class OrdersController : Controller
 
     [HttpGet]
 
-    public JsonResult GetOrderById(int id)
+    public JsonResult GetById(int id)
     {
         var order = _ordersrv.GetOrderById(id);
         return Json(order);
@@ -43,9 +43,9 @@ public class OrdersController : Controller
 
     [HttpGet]
 
-    public JsonResult GetOrderByCustId(int custid)
+    public JsonResult GetOrder(int id)
     {
-        var order = _ordersrv.GetOrderByCustId(custid);
+        var order = _ordersrv.GetOrderByCustId(id);
         return Json(order);
     }
     
@@ -66,7 +66,7 @@ public class OrdersController : Controller
         return View();
     }
 
-    public IActionResult Insert()
+    public IActionResult InsertOrders()
     {
         return View();
     }
@@ -100,7 +100,7 @@ public class OrdersController : Controller
     }
 
    [HttpPost]
-   public JsonResult InsertOrders([FromBody] Order order)
+   public JsonResult Insert([FromBody] Order order)
    {    
         Console.WriteLine("Order date" +order.OrderDate);
         bool result =_ordersrv.InsertOrders(order);
@@ -108,7 +108,7 @@ public class OrdersController : Controller
    }
   
     [HttpPut]
-   public JsonResult UpdateOrder([FromBody] Order order)
+   public JsonResult Update([FromBody] Order order)
    {
         Console.WriteLine("Order date" +order.OrderDate);
         bool result =_ordersrv.UpdateOrder(order);
@@ -116,7 +116,7 @@ public class OrdersController : Controller
    }
    
    [HttpDelete]
-   public JsonResult DeleteOrder(int id)
+   public JsonResult Delete(int id)
    {
     bool result = _ordersrv.DeleteOrder(id);
     return Json(result);

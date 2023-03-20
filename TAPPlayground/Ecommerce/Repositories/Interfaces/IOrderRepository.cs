@@ -10,8 +10,8 @@ public interface IOrderRepository
    
     Order GetOrderById(int id);
 
-    int GetOrderId(int customerId);
-    bool InsertOrder(int customerId);
+    int GetOrderId(int id);
+    bool InsertOrder(int id);
 
     Order GetOrderByCustId(int id);
 

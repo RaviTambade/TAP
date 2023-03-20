@@ -44,22 +44,21 @@ public class TransactionController : Controller
     [HttpGet]
     public JsonResult ShowAllTransactions()
     {
-        var transactions=_transactionsrv.GetAllTransaction();
+        var transactions=_transactionsrv.GetAll();
         return Json(transactions);
     }
 
     [HttpGet]
     public JsonResult GetTransactionById(int id){
-        var transaction=_transactionsrv.GetTransactionById(id);
+        var transaction=_transactionsrv.GetById(id);
         return Json(transaction);
     }
     
     [HttpPost]
-    [Route("transactions/inserttransaction")]
      public JsonResult InsertTransaction([FromBody] Transaction transaction)
      {
-        Console.WriteLine(transaction);
-        bool status=_transactionsrv.InsertTransaction(transaction);
+        Console.WriteLine(transaction); 
+        bool status=_transactionsrv.Insert(transaction);
         return Json(status);
     }
 
@@ -67,7 +66,7 @@ public class TransactionController : Controller
     public JsonResult UpdateTransaction([FromBody] Transaction transaction)
     {
         Console.WriteLine(transaction);
-        bool result = _transactionsrv.UpdateTransaction(transaction);
+        bool result = _transactionsrv.Update(transaction);
         return Json(result);
     }
 
@@ -75,7 +74,7 @@ public class TransactionController : Controller
     public JsonResult DeleteTransaction(int id)
     {
         Console.WriteLine(id);
-        bool supplier = _transactionsrv.DeleteTransaction(id);
+        bool supplier = _transactionsrv.Delete(id);
         return Json(supplier);
     }
 

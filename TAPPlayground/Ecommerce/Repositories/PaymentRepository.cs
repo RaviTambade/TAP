@@ -2,18 +2,29 @@ using ECommerceApp.Models;
 using ECommerceApp.Repositories.Interfaces;
 using MySql.Data.MySqlClient;
 using System.Globalization;
+using Microsoft.Extensions.Configuration;
 namespace ECommerceApp.Repositories;
 public class PaymentRepository : IPaymentRepository
 {
+    private IConfiguration _configuration;
+
+    private string _conString;
+
+    public PaymentRepository(IConfiguration configuration)
+    {
+        _configuration = configuration;
+        _conString= this._configuration.GetConnectionString("DefaultConnection");
+
+    }
       
 
-    public static string conString = "server=localhost;port=3306;user=root;password=PASSWORD;database=Ecommerce";
+    
 
     public List<Payment> GetAllPayments()
     {
         List<Payment> payments = new List<Payment>();
         MySqlConnection connection = new MySqlConnection();
-        connection.ConnectionString = conString;
+        connection.ConnectionString = _conString;
         try
         {
             string query = "SELECT * FROM payments";
@@ -54,16 +65,17 @@ public class PaymentRepository : IPaymentRepository
 
 
 
-    public Payment GetPaymentById(int paymentId)
+    public Payment GetPaymentById(int id)
     {
         Payment payment = new Payment();
         MySqlConnection connection = new MySqlConnection();
-        connection.ConnectionString = conString;
+        connection.ConnectionString = _conString;
         try
         {
-            string query = "SELECT * FROM payments where payment_id=" + paymentId;
+            string query = "SELECT * FROM payments where payment_id=@paymentId";
             connection.Open();
             MySqlCommand command = new MySqlCommand(query, connection);
+            command.Parameters.AddWithValue("paymentId",id);
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
@@ -75,7 +87,7 @@ public class PaymentRepository : IPaymentRepository
 
                 payment = new Payment()
                 {
-                    PaymentId=paymentId,
+                    PaymentId=id,
                     PaymentDate= date.ToLongDateString(),
                     PaymentMode = payment_mode,
                     TransactionId = transactionId,
@@ -96,16 +108,17 @@ public class PaymentRepository : IPaymentRepository
     }
 
 
-    public Payment GetPaymentByOrderId(int OrderId)
+    public Payment GetPaymentByOrderId(int id)
     {
         Payment payment = new Payment();
         MySqlConnection connection = new MySqlConnection();
-        connection.ConnectionString = conString;
+        connection.ConnectionString = _conString;
         try
         {
-            string query = "SELECT * FROM payments where order_id=" + OrderId;
+            string query = "SELECT * FROM payments where order_id=@orderId";
             connection.Open();
             MySqlCommand command = new MySqlCommand(query, connection);
+            command.Parameters.AddWithValue("orderId",id);
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
@@ -113,7 +126,7 @@ public class PaymentRepository : IPaymentRepository
                  DateTime date =  DateTime.Parse(reader["payment_date"].ToString(),CultureInfo.InvariantCulture);
                 string? payment_mode = reader["payment_mode"].ToString();
                 int transactionId =int.Parse(reader["transection_id"].ToString());
-                OrderId =int.Parse(reader["order_id"].ToString());
+                int OrderId =int.Parse(reader["order_id"].ToString());
 
                 payment = new Payment()
                 {
@@ -121,7 +134,7 @@ public class PaymentRepository : IPaymentRepository
                     PaymentDate= date.ToLongDateString(),
                     PaymentMode = payment_mode,
                     TransactionId = transactionId,
-                    OrderId = OrderId
+                    OrderId = id
                 };
             }
             reader.Close();
@@ -142,11 +155,15 @@ public class PaymentRepository : IPaymentRepository
     public  bool InsertPayments(Payment payment){
           bool status = false;
           MySqlConnection con = new MySqlConnection();
-          con.ConnectionString=conString;
+          con.ConnectionString=_conString;
           try{
-            string query = $"INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('{payment.PaymentDate}','{payment.PaymentMode}','{payment.TransactionId}','{payment.OrderId}')";
+            string query = $"INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES(@paymentDate,@paymentMode,@transactionId,@orderId)";
             Console.WriteLine(query);
              MySqlCommand cmd=new MySqlCommand(query,con) ;
+            cmd.Parameters.AddWithValue("@paymentDate",payment.PaymentDate);
+            cmd.Parameters.AddWithValue("@paymentMode",payment.PaymentMode);
+            cmd.Parameters.AddWithValue("@transactionId",payment.TransactionId);
+            cmd.Parameters.AddWithValue("@orderId",payment.OrderId);
              con.Open();
              cmd.ExecuteNonQuery();               
            status=true;
@@ -163,13 +180,17 @@ public class PaymentRepository : IPaymentRepository
    public  bool UpdatePayment(Payment payment){
           bool status = false;
           MySqlConnection con = new MySqlConnection();
-          con.ConnectionString=conString;
+          con.ConnectionString=_conString;
           try{
             
-            string query = "UPDATE payments set payment_id='"+payment.PaymentId+"', payment_date= '"+payment.PaymentDate+"',transection_id="+payment.TransactionId+",order_id="+payment.OrderId;
-             MySqlCommand cmd=new MySqlCommand(query,con) ;
-             con.Open();
-             cmd.ExecuteNonQuery();               
+            string query = "UPDATE payments set payment_id=@paymentId, payment_date= @paymentDate,transection_id=@transactionId,order_id=@orderId";
+            MySqlCommand cmd=new MySqlCommand(query,con) ;
+            cmd.Parameters.AddWithValue("@paymentDate",payment.PaymentDate);
+            cmd.Parameters.AddWithValue("@paymentMode",payment.PaymentMode);
+            cmd.Parameters.AddWithValue("@transactionId",payment.TransactionId);
+            cmd.Parameters.AddWithValue("@orderId",payment.OrderId);
+            con.Open();
+            cmd.ExecuteNonQuery();               
 
           }catch(Exception e )
           {
@@ -181,14 +202,15 @@ public class PaymentRepository : IPaymentRepository
           return status;
    }
    
-   public  bool DeletePayment(int paymentId){
+   public  bool DeletePayment(int id){
           bool status = false;
           MySqlConnection con = new MySqlConnection();
-          con.ConnectionString=conString;
+          con.ConnectionString=_conString;
           try{
             
-            string query = "DELETE FROM payments WHERE payment_id="+paymentId;
+            string query = "DELETE FROM payments WHERE payment_id=@paymentId";
              MySqlCommand cmd=new MySqlCommand(query,con) ;
+             cmd.Parameters.AddWithValue("@paymentId",id);
              con.Open();
              cmd.ExecuteNonQuery();              
            status=true;

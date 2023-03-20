@@ -11,10 +11,10 @@ public AccountService(IAccountRepository repo){
     this._repo=repo;
 
 }
-public List<Account> GetAllAccounts()=>_repo.GetAllAccounts();
-public Account GetAccountById(int id)=>_repo.GetAccountById(id);
-public bool InsertAccount(Account account)=>_repo.InsertAccount(account);
-public bool UpdateAccount(Account account)=>_repo.UpdateAccount(account);
-public bool DeleteAccount(Int32  id)=>_repo.DeleteAccount(id);
+public List<Account> GetAll()=>_repo.GetAll();
+public Account GetById(int id)=>_repo.GetById(id);
+public bool Insert(Account account)=>_repo.Insert(account);
+public bool Update(Account account)=>_repo.Update(account);
+public bool Delete(Int32  id)=>_repo.Delete(id);
 
 }

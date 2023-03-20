@@ -7,7 +7,7 @@ public class CustomerRepository : ICustomerRepository
 
     public static string conString="server=localhost;port=3306;user=root;password=1234512345;database=Ecommerce";
 
-    public List<Customer> GetAllCustomers(){
+    public List<Customer> GetAll(){
 
         List<Customer> customers=new List<Customer>();
 
@@ -52,13 +52,13 @@ public class CustomerRepository : ICustomerRepository
 
     }
 
-    public Customer GetCustomer(string contact)
+    public Customer GetByContact(string contact)
     {
         Customer customer=new Customer();
         MySqlConnection connection=new MySqlConnection(conString);
         try{
             MySqlCommand command=new MySqlCommand();
-            command.CommandText=$"SELECT * FROM customers where contact_number='{contact}'";
+            command.CommandText=$"SELECT * FROM customers where contact_number=@contact";
             command.Connection=connection;
             connection.Open();
            MySqlDataReader reader = command.ExecuteReader();
@@ -91,7 +91,7 @@ public class CustomerRepository : ICustomerRepository
 
     }
 
-    public Customer GetCustomerById(int custid)
+    public Customer GetById(int custid)
     {
         Customer customer=new Customer();
         MySqlConnection connection=new MySqlConnection(conString);
