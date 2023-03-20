@@ -4,7 +4,7 @@ using ECommerceApp.Models;
 
 namespace ECommerceApp.Repositories;
 public class UserRepository:IUserRepository{
-      public static string conString = "server=localhost;port=3306;user=root;password=Rohit@7378;database=Ecommerce";
+    public static string conString = "server=localhost;port=3306;user=root;password=Rohit@7378;database=Ecommerce";
 
     public List<User> GetAllUser()
     {

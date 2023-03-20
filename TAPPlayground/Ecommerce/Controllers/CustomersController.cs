@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using ECommerceApp.Models;
+using ECommerceApp.Contexts;
 using ECommerceApp.Services.Interfaces;
 
 namespace ECommerceApp.Controllers;
@@ -8,10 +9,12 @@ namespace ECommerceApp.Controllers;
 public class CustomersController : Controller
 {
     private readonly ICustomerService _customersSrv;
+    private readonly ICustomerORMService _customersOrmSrv;
 
-    public CustomersController(ICustomerService customerSrv)
+    public CustomersController(ICustomerService customerSrv, ICustomerORMService customerOrmService)
     {
         _customersSrv = customerSrv;
+        _customersOrmSrv = customerOrmService;
     }
 
     public IActionResult Index()
@@ -49,7 +52,8 @@ public class CustomersController : Controller
     [HttpGet]
     public JsonResult GetAll()
     {
-        var customers=_customersSrv.GetAll();
+        //var customers=_customersSrv.GetAll();
+        var customers=_customersOrmSrv.GetAll(); 
         return Json(customers);
     }
 

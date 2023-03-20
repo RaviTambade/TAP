@@ -5,12 +5,10 @@ namespace ECommerceApp.Repositories.Interfaces;
 
 public interface IEmployeeRepository
 {
-
-
-    List<Employee> GetAllEmployees();
-    Employee GetEmployeeById(int id);
-    bool InsertEmp(Employee emp);
-    bool UpdateEmp(Employee emp);
-    bool DeleteEmp(int id);
+    List<Employee> GetAll();
+    Employee GetById(int empId);
+    bool Insert(Employee emp);
+    bool Update(Employee emp);
+    bool Delete(int empId);
     
 }
