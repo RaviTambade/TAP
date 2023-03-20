@@ -247,7 +247,4 @@ public class SupplierRepository : ISupplierRepository
         }
         return status;
     }
-}
-    
-
-    
+}    

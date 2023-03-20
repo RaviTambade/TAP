@@ -19,7 +19,7 @@ public class ShipperRepository : IShipperRepository
         _conString= this._configuration.GetConnectionString("DefaultConnection");
     }
 
-    public List<Shipper> GetAllShippers()
+    public List<Shipper> GetAll()
     {
         List<Shipper> shippers = new List<Shipper>();
         MySqlConnection connection = new MySqlConnection();
@@ -63,7 +63,7 @@ public class ShipperRepository : IShipperRepository
     }
     
 
-    public Shipper GetShipperById(int id)
+    public Shipper GetById(int id)
     {
         Shipper shipper = new Shipper();
         MySqlConnection connection = new MySqlConnection(_conString);
@@ -105,7 +105,7 @@ public class ShipperRepository : IShipperRepository
     }
 
 
-   public bool InsertShipper(Shipper shipper){
+   public bool Insert(Shipper shipper){
         bool status=false;
         MySqlConnection connection=new MySqlConnection();
         connection.ConnectionString=_conString;
@@ -132,7 +132,7 @@ public class ShipperRepository : IShipperRepository
         return status;
     }
 
- public bool UpdateShipper(Shipper shipper)
+ public bool Update(Shipper shipper)
     {
         bool status = false;
         MySqlConnection connection = new MySqlConnection();
@@ -163,7 +163,7 @@ public class ShipperRepository : IShipperRepository
 
     }
 
-    public bool DeleteShipper(int id)
+    public bool Delete(int id)
     {
         bool status = false;
         MySqlConnection con = new MySqlConnection();

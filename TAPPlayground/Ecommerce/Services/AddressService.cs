@@ -9,9 +9,9 @@ public class AddressService:IAddressService{
         this._repo=repo;
     }
 
-    public Address GetAddressById(int addressId)=>_repo.GetAddressById(addressId);
+    public Address GetById(int addressId)=>_repo.GetById(addressId);
 
-    public List<Address> GetAddresses(int id) => _repo.GetAddresses(id);
+    public List<Address> GetAll(int id) => _repo.GetAll(id);
 
-    public bool InsertAddress(Address address)=>_repo.InsertAddress(address);
+    public bool Insert(Address address)=>_repo.Insert(address);
 }

@@ -10,21 +10,21 @@ public class OrderService : IOrderService{
         this._repo=repo;
     }
 
-    public List<Order> GetAllOrders() => _repo.GetAllOrders();
+    public List<Order> GetAllOrders() => _repo.GetAll();
 
-    public List<Order> GetAllCancelledOrders() => _repo.GetAllCancelledOrders();
-    public List<Order> GetAllDeliveredOrders() => _repo.GetAllDeliveredOrders();
+    public List<Order> GetAllCancelled() => _repo.GetAllCancelled();
+    public List<Order> GetAllDelivered() => _repo.GetAllDelivered();
 
-    public Order GetOrderById(int id) => _repo.GetOrderById(id);
+    public Order GetById(int id) => _repo.GetById(id);
 
-    public Order GetOrderByCustId(int id) => _repo.GetOrderByCustId(id);
+    public Order GetOrder(int id) => _repo.GetOrder(id);
     public int GetOrderId(int id) => _repo.GetOrderId(id);
 
     public bool InsertOrder(int id)=>_repo.InsertOrder(id);
 
-    public bool InsertOrders(Order order)=>_repo.InsertOrders(order);
+    public bool Insert(Order order)=>_repo.Insert(order);
 
-    public bool UpdateOrder(Order order)=>_repo.UpdateOrder(order);
+    public bool Update(Order order)=>_repo.Update(order);
 
-    public bool DeleteOrder(int id)=>_repo.DeleteOrder(id);
+    public bool Delete(int id)=>_repo.Delete(id);
 }
