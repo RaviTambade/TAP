@@ -6,22 +6,18 @@ using ECommerceApp.Repositories.Interfaces;
 using MySql.Data.MySqlClient;
 namespace ECommerceApp.Repositories;
 public class SupplierRepository : ISupplierRepository
-
 {
-
-    //IConfiguration interface help us to 
-    //read settings available in appsettings.json file
-    
+  
     private IConfiguration _configuration;
     private string _conString;
   
-    //Parameterized Constructor
+
     public SupplierRepository(IConfiguration configuration){
         _configuration=configuration;
         _conString= this._configuration.GetConnectionString("DefaultConnection");
     }   
     
-     public List<Supplier> GetAllSuppliers()
+     public List<Supplier> GetAll()
     {
         List<Supplier> suppliers = new List<Supplier>();
         MySqlConnection connection = new MySqlConnection(_conString);
@@ -69,7 +65,7 @@ public class SupplierRepository : ISupplierRepository
         }
         return suppliers;
     }
-    public Supplier GetSupplierById(int id)
+    public Supplier GetById(int id)
     {
         Supplier supplier = new Supplier();
         MySqlConnection connection = new MySqlConnection(_conString);
@@ -119,7 +115,7 @@ public class SupplierRepository : ISupplierRepository
         return supplier;
     }
 
-    public List<Supplier> GetSuppliersOfProduct(int id)
+    public List<Supplier> GetSuppliers(int productId)
     {
         List<Supplier> suppliers = new List<Supplier>();
         MySqlConnection connection = new MySqlConnection(_conString);
@@ -128,7 +124,7 @@ public class SupplierRepository : ISupplierRepository
             string query = " SELECT suppliers.supplier_id,suppliers.company_name,suppliers.supplier_name FROM suppliers INNER JOIN orderdetails ON suppliers.supplier_id=orderdetails.supplier_id WHERE product_id=@productId";
             connection.Open();
             MySqlCommand command = new MySqlCommand(query, connection);
-            command.Parameters.AddWithValue("productId",id);
+            command.Parameters.AddWithValue("productId",productId);
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
@@ -156,25 +152,33 @@ public class SupplierRepository : ISupplierRepository
         return suppliers;
     }
 
-    public bool InsertSupplier(Supplier supplier){
+    public bool Insert(Supplier supplier){
         bool status=false;
         MySqlConnection connection=new MySqlConnection();
         connection.ConnectionString=_conString;
         try{
             string query="INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,account_number)VALUES(@companyName,@supplierName,@contactNumber,@email,@address,@city,@state,@accountNumber)";
-            connection.Open();
-            MySqlCommand command=new MySqlCommand(query ,connection);
+            MySqlCommand command=new MySqlCommand(query ,connection);    
             command.Parameters.AddWithValue("@companyName",supplier.CompanyName);
             command.Parameters.AddWithValue("@supplierName",supplier.SupplierName);
+            command.Parameters.AddWithValue("@supplierContactName",supplier.ContactNumber);
+            command.Parameters.AddWithValue("@supplierEmail",supplier.Email);
+            command.Parameters.AddWithValue("@supplierAddress",supplier.Address);
+            command.Parameters.AddWithValue("@supplierCity",supplier.Address);
+            command.Parameters.AddWithValue("@supplierState",supplier.Address);
+            command.Parameters.AddWithValue("@supplierAccountNumber",supplier.Address);
             command.Parameters.AddWithValue("@contactNumber",supplier.ContactNumber);
             command.Parameters.AddWithValue("@email",supplier.Email);
             command.Parameters.AddWithValue("@address",supplier.Address);
             command.Parameters.AddWithValue("@city",supplier.City);
             command.Parameters.AddWithValue("@state",supplier.State);
-            command.Parameters.AddWithValue("@accountNumber",supplier.AccountNumber);
-
-            command.ExecuteNonQuery();
-            status=true;
+            command.Parameters.AddWithValue("@accountNumber",supplier.AccountNumber);     
+            
+            connection.Open();
+            int rowsAffected=command.ExecuteNonQuery();
+            if(rowsAffected >0){
+             status=true;
+            }
         }
         catch(Exception e){
              throw e;
@@ -186,7 +190,7 @@ public class SupplierRepository : ISupplierRepository
     }
 
     
-    public bool UpdateSupplier(Supplier supplier)
+    public bool Update(Supplier supplier)
     {
         bool status = false;
         MySqlConnection connection = new MySqlConnection();
@@ -221,22 +225,19 @@ public class SupplierRepository : ISupplierRepository
         return status;
 
     }
-          public bool DeleteSupplier(int id)
+    public bool Delete(int id)
     {
         bool status = false;
         MySqlConnection con = new MySqlConnection();
         con.ConnectionString = _conString;
         try
         {
-            //Paramterized Query
-
             string query = "DELETE FROM suppliers WHERE supplier_id=@supplierId";
-            con.Open();
-            MySqlCommand command = new MySqlCommand(query, con);
+             MySqlCommand command = new MySqlCommand(query, con);
             command.Parameters.AddWithValue("@supplierId",id);
+            con.Open();
             command.ExecuteNonQuery();
             status = true;
-
         }
         catch (Exception e)
         {
