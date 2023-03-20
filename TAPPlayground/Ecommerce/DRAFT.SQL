@@ -1,3 +1,4 @@
+-- Active: 1678361403571@@127.0.0.1@3306@ecommerce
 
 -- CREATE DATABASE Ecommerce;
 -- drop DATABASE ecommerce;
@@ -494,8 +495,11 @@ WHERE transactions.from_account_number=(select account_number from customers whe
 
 CALL TransferMoney(39025545659,39025545658,'2023-03-09 02:15:05',500);
 
-select customers.first_name,customers.last_name,customers.email,customers.contact_number,accounts.account_number,accounts.ifsc_code,accounts.balance FROM customers  INNER JOIN  accounts ON accounts.account_number=customers.account_number  -- WHERE customers.cust_id=1; 
+select customers.first_name,customers.last_name,customers.email,customers.contact_number,accounts.account_number,accounts.ifsc_code,accounts.balance FROM customers  INNER JOIN  accounts ON accounts.account_number=customers.account_number ;-- WHERE customers.cust_id=1; 
 
 /* insert employee query*/
 INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Vishwambhar','Kapare','1998-05-19','2023-03-15','70385488505','Rushi@gmail.com','Rc5269','./images/Rc.jpg',3,39025546668)
+
+select customers.first_name,customers.last_name,customers.email,customers.contact_number,accounts.account_number,accounts.ifsc_code,accounts.balance FROM customers  INNER JOIN  accounts ON accounts.account_number=customers.account_number;-- WHERE customers.cust_id=1; 
+SELECT * FROM  customers;
 

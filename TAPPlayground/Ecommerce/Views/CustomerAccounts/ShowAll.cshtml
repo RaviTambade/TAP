@@ -1,0 +1,50 @@
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">  
+
+
+
+<div class="container mt-3">
+  <h2>Customer Account Details</h2>       
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th> Id</th>
+        <th>Account Number</th>
+        <th>IFSC Code</th>
+        <th>Register Date</th>
+        <th>Balance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        </script>
+
+
+
+
+        function getAll(){
+  //invoke REST API to fetch data from server  
+        $.ajax({  
+            url: '/accounts/getallcustomeraccounts',  
+            dataType: "json",  
+            type: "GET",  
+            error: function(xhr, status, error) {  
+                var err = eval("(" + xhr.responseText + ")");  
+                toastr.error(err.message); 
+                console.log(err); 
+            },
+            //On Successful retriving data  perfrom callback function 
+            //Success block is automatically called when ajax call receives 
+            //data from server  
+            success: function(data) {  
+              var result=JSON.stringify(data);
+            /$("#para").text(result);
+                for (let i = 0; i < data.length; i++) {        
+                         var str="<li><a onClick='doSomething()' src=''>"+ data[i].accountid +"</a></li>";
+                        $("#accountid").append(str); 
+                }
+              return false;  
+            }  
+        });  
+        }
