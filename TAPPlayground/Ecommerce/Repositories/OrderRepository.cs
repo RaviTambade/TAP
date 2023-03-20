@@ -16,7 +16,7 @@ public class OrderRepository : IOrderRepository
         _conString=this._configuration.GetConnectionString("DefaultConnection");
     }
 
-    public List<Order> GetAllOrders()
+    public List<Order> GetAll()
     {
         List<Order> orders = new List<Order>();
         MySqlConnection con = new MySqlConnection();
@@ -61,7 +61,7 @@ public class OrderRepository : IOrderRepository
         return orders;
     }
 
-    public Order GetOrderById(int id)
+    public Order GetById(int id)
     {
         Order order = new Order();
         MySqlConnection con = new MySqlConnection();
@@ -157,7 +157,7 @@ public class OrderRepository : IOrderRepository
         }
         return status;
     }
-    public Order GetOrderByCustId(int id)
+    public Order GetOrder(int id)
     {
         Order order = new Order();
         MySqlConnection con = new MySqlConnection();
@@ -198,7 +198,7 @@ public class OrderRepository : IOrderRepository
         }
         return order;
     }
-    public bool InsertOrders(Order order)
+    public bool Insert(Order order)
     {
         bool status = false;
         MySqlConnection con = new MySqlConnection();
@@ -227,7 +227,7 @@ public class OrderRepository : IOrderRepository
         return status;
     }
 
-    public bool UpdateOrder(Order order)
+    public bool Update(Order order)
     {
         bool status = false;
         MySqlConnection con = new MySqlConnection();
@@ -256,7 +256,7 @@ public class OrderRepository : IOrderRepository
         }
         return status;
     }
-    public bool DeleteOrder(int id)
+    public bool Delete(int id)
     {
         bool status = false;
         MySqlConnection con = new MySqlConnection();
@@ -281,7 +281,7 @@ public class OrderRepository : IOrderRepository
         return status;
     }
 
-    public List<Order> GetAllCancelledOrders()
+    public List<Order> GetAllCancelled()
     {
         List<Order> orders = new List<Order>();
         MySqlConnection con = new MySqlConnection();
@@ -332,7 +332,7 @@ public class OrderRepository : IOrderRepository
     }
 
 
-    public List<Order> GetAllDeliveredOrders()
+    public List<Order> GetAllDelivered()
     {
         List<Order> orders = new List<Order>();
         MySqlConnection con = new MySqlConnection();
