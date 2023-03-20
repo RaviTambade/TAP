@@ -1,5 +1,8 @@
+<<<<<<< HEAD
+=======
 -- Active: 1678361403571@@127.0.0.1@3306@ecommerce
 
+>>>>>>> 700bbb5b45665bd0529b8a8f36bb6bad07e8553a
 
 -- CREATE DATABASE Ecommerce;
 -- drop DATABASE ecommerce;

@@ -7,7 +7,7 @@ public class Product{
     public double UnitPrice{get;set;}
 
     public string? ImageUrl{get;set;}
+    public int CategoryId {get;set;}
 
-    public int BuyQuantity {get;set;}
 
 }
