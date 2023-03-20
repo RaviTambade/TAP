@@ -1,0 +1,104 @@
+ @model ECommerceApp.Models.Shipper
+ 
+ <h2><p class="text-center">Show List Of Shippers</p></h2>
+<hr/>
+
+<ul id ="lstshippers">    
+</ul>
+
+
+
+ <h2><p class="text-center"> Information of shipper</p></h2>
+
+ <button id="btn" class="btn btn-info"> Click here</button>
+<hr/>
+
+<div class="container mt-3">
+  <a href="#demo" class="btn btn-primary" data-bs-toggle="collapse">Show Info</a>
+  <div id="demo" class="collapse">
+
+    <td><p class="text-warning"><label id ="lblcompanyname"></label> </p></td>
+ <td><p class="text-warning"><label id ="lblcontactnumber"></label> </p></td>
+ <td><p class="text-warning"><label id ="lblemail"></label> </p></td>
+  <td><p class="text-warning"><label id ="lblaccountnumber"></label> </p></td>
+ 
+</div>
+ 
+<hr/>
+</div>
+ <script src="~/lib/jquery/dist/jquery.min.js"></script>
+ <script type="text/javascript"> 
+
+
+   function doSomething(event){
+        console.log ("anchor is clicked" + event);
+
+   }
+
+
+   function getAllShippers(){
+
+   $.ajax({
+
+    url:'/shipper/getallshippers',
+    dataType:"json",
+    type:"GET",
+    error:function(xhr,status,error){
+       var err = eval("(" +xhr.responseText+")");
+       tostr.error(err.message);
+       console.log(err);
+    },
+
+
+
+    success: function (data){
+
+        for (let i = 0; i < data.length; i++) {        
+                        var str="<li><a onClick='doSomething()' src=''>"+ data[i].companyName +"</a></li>";
+                        $("#lstshippers").append(str);
+                }
+               return false;
+    }
+
+   });
+
+   }
+
+
+
+
+
+function getShipperById(id){
+  //invoke REST API to fetch data by id from server  
+        $.ajax({  
+            url: '/shipper/getShipperById/'+id,  
+            dataType: "json",  
+            type: "GET",  
+            error: function(xhr, status, error) {  
+                var err = eval("(" + xhr.responseText + ")");  
+                toastr.error(err.message); 
+                console.log(err); 
+            },
+            //On Successful retriving data  perfrom callback function 
+            //Success block is automatically called when ajax call receives 
+            //data from server  
+            success: function(data) {  
+                        $("#lblcompanyname").text(data.companyName);
+                        $("#lblcontactnumber").text(data.contactNumber);
+                        $("#lblemail").text(data.email);
+                        $("#lblaccountnumber").text(data.accountNumber);
+                      
+                    
+                    
+              return false;  
+            }  
+        });  
+}
+   
+    $(document).ready(function(){
+       getAllShippers();
+       $("#btn").click( function (){
+        getShipperById(5);
+       })
+    });
+</script> 
