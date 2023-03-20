@@ -159,10 +159,17 @@ public class SupplierRepository : ISupplierRepository
         MySqlConnection connection=new MySqlConnection();
         connection.ConnectionString=_conString;
         try{
-            string query=$"INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,account_number)VALUES(@companyName,@supplierName,@supplierContactName,@supplierEmail,@supplierAddress,'{supplier.City}','{supplier.State}','{supplier.AccountNumber}')";
+            string query=$"INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,account_number)VALUES(@companyName,@supplierName,@supplierContactName,@supplierEmail,@supplierAddress,@supplierCity,@supplierState,@supplierAccountNumber";
             connection.Open();
             MySqlCommand command=new MySqlCommand(query ,connection);
-            command.Parameters.AddWithValue("@companyName")
+            command.Parameters.AddWithValue("@companyName",supplier.CompanyName);
+            command.Parameters.AddWithValue("@supplierName",supplier.SupplierName);
+            command.Parameters.AddWithValue("@supplierContactName",supplier.ContactNumber);
+            command.Parameters.AddWithValue("@supplierEmail",supplier.Email);
+            command.Parameters.AddWithValue("@supplierAddress",supplier.Address);
+            command.Parameters.AddWithValue("@supplierCity",supplier.Address);
+            command.Parameters.AddWithValue("@supplierState",supplier.Address);
+            command.Parameters.AddWithValue("@supplierAccountNumber",supplier.Address);
             command.ExecuteNonQuery();
             status=true;
         }
