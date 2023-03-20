@@ -2,7 +2,7 @@
 using ECommerceApp.Models;
 namespace ECommerceApp.Repositories.Interfaces;
 public interface ICustomerAccountRepository{
-    List<CustomerAccount> GetAllCustomersAccounts();
+    List<CustomerAccount> GetAll();
 
  }
 
