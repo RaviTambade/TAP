@@ -35,7 +35,7 @@ public class AccountsController : Controller
         return View();
     }
     [HttpGet]
-    public IActionResult Index()
+    public IActionResult AccountsIndex()
     {
         return View();
     }
@@ -58,5 +58,17 @@ public class AccountsController : Controller
     {
         bool status = _accountserv.DeleteAccount(id);
         return Json(status);
+    }
+    public IActionResult Insert()
+    {
+        return View();
+    }
+     public IActionResult Update()
+    {
+        return View();
+    }
+    public IActionResult Delete()
+    {
+       return View(); 
     }
 }
