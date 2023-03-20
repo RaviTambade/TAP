@@ -6,10 +6,13 @@ using Microsoft.Extensions.Configuration;  // set namespace
 namespace ECommerceApp.Repositories;
 public class ShipperRepository : IShipperRepository
 {
+
+    //IConfiguration interface help us to 
+    //read settings available in appsettings.json file
+    
     private IConfiguration _configuration;
     private string _conString;
   
-
     //Parameterized Constructor
     public ShipperRepository(IConfiguration configuration){
         _configuration=configuration;
