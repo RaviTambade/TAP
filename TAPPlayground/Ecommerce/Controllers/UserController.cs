@@ -19,6 +19,15 @@ public class UserController : Controller
         return View();
     }
 
+        public IActionResult Help()
+    {
+        return View();
+    }
+
+    public IActionResult Settings()
+    {
+        return View();
+    }
 
     public JsonResult ShowAllUser()
     {
