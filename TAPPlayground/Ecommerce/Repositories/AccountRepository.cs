@@ -27,8 +27,8 @@ public class AccountRepository : IAccountRepository
         try
         {
             string query = "SELECT * FROM accounts";
-            con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
+            con.Open();
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
