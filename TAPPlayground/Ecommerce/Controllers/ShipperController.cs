@@ -8,6 +8,8 @@ namespace ECommerceApp.Controllers;
 public class ShipperController : Controller
 {
     private readonly IShipperService _shippersrv;
+   
+    // set constructor level dependency injection
 
     public ShipperController(IShipperService shippersrv)
     {
@@ -15,7 +17,9 @@ public class ShipperController : Controller
     }
 
    public IActionResult Home()
-    {
+    {         
+         
+       //  Console.WriteLine(connString);
         return View();
     }
 
@@ -28,6 +32,7 @@ public class ShipperController : Controller
     [HttpGet]
     public JsonResult GetAllShippers()
     {
+
         var shippers=_shippersrv.GetAllShippers();
         return Json(shippers);
     }
@@ -48,6 +53,8 @@ public class ShipperController : Controller
         public JsonResult InsertShipper([FromBody] Shipper shipper){
              Console.WriteLine(shipper.Email);
              Console.WriteLine(shipper.AccountNumber);
+               string conString = this._configuration.GetConnectionString("DefaultConnection");
+
              bool status=_shippersrv.InsertShipper(shipper);
              return Json(status);
          
@@ -58,6 +65,7 @@ public class ShipperController : Controller
     public JsonResult UpdateShipper([FromBody]Shipper shipper)
     {
         System.Console.WriteLine(shipper);
+        string conString = this._configuration.GetConnectionString("DefaultConnection");
         bool status=_shippersrv.UpdateShipper(shipper);
         return Json(status);  
          Console.WriteLine(shipper);
@@ -68,6 +76,7 @@ public class ShipperController : Controller
    [HttpDelete]
     public JsonResult DeleteShipper(int id)
     {
+         string conString = this._configuration.GetConnectionString("DefaultConnection");
         bool status=_shippersrv.DeleteShipper(id);
         return Json(status);
     }
