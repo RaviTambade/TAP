@@ -68,9 +68,10 @@ public class OrderRepository : IOrderRepository
         con.ConnectionString = _conString;
         try
         {
-            string query = "SELECT * FROM orders where order_id=" + id;
+            string query = "SELECT * FROM orders where order_id=@orderId";
             con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
+            command.Parameters.AddWithValue("orderId",id);
             MySqlDataReader reader = command.ExecuteReader();
             if (reader.Read())
             {
@@ -110,9 +111,10 @@ public class OrderRepository : IOrderRepository
         con.ConnectionString = _conString;
         try
         {
-            string query = $"SELECT MAX(order_id) as order_id from orders where cust_id={customerId}";
+            string query = $"SELECT MAX(order_id) as order_id from orders where cust_id=@customerId";
             con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
+            command.Parameters.AddWithValue("customerId",customerId);
             MySqlDataReader reader = command.ExecuteReader();
 
             if (reader.Read())
@@ -161,9 +163,10 @@ public class OrderRepository : IOrderRepository
         con.ConnectionString = _conString;
         try
         {
-            string query = "SELECT * FROM orders where cust_id=" + custid;
+            string query = "SELECT * FROM orders where cust_id=@customerId";
             con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
+            command.Parameters.AddWithValue("customerId",custid);
             MySqlDataReader reader = command.ExecuteReader();
             if (reader.Read())
             {
@@ -201,10 +204,10 @@ public class OrderRepository : IOrderRepository
         con.ConnectionString = _conString;
         try
         {
-            string query = $"INSERT INTO orders(order_date,shipped_date,cust_id,total,status)VALUES" +
-            "('" + order.OrderDate + "','" + order.ShippedDate + "'," + order.CustomerId + "," + order.Total + ",'" + order.Status + "')";
+            string query = $"INSERT INTO orders(order_date,shipped_date,cust_id,total,status)VALUES(@orderDate,@shippedDate,@customerId,@total,@status)";
             con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
+            command.Parameters.AddWithValue("orderDate",OrderDate);
             command.ExecuteNonQuery();
             status = true;
         }
@@ -226,9 +229,10 @@ public class OrderRepository : IOrderRepository
         con.ConnectionString = _conString;
         try
         {
-            string query = "Update orders set order_date='" + order.OrderDate + "', shipped_date='" + order.ShippedDate + "',cust_id='" + order.CustomerId + "', total ='" + order.Total + "', status ='" + order.Status + "' Where order_id =" + order.OrderId;
+            string query = "Update orders set order_date=@orderDate, shipped_date=@shippedDate,cust_id=@customerId, total =@total, status =@status Where order_id =@orderId";
             con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
+            command.Parameters.AddWithValue("orderId",id);
             command.ExecuteNonQuery();
             status = true;
         }
@@ -249,9 +253,10 @@ public class OrderRepository : IOrderRepository
         con.ConnectionString = _conString;
         try
         {
-            string query = "DELETE FROM orders where order_id =" + id;
+            string query = "DELETE FROM orders where order_id =@orderId";
             con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
+            command.Parameters.AddWithValue("orderId",id);
             command.ExecuteNonQuery();
             status = true;
         }
