@@ -20,8 +20,7 @@ public class PaymentsController : Controller
         var payment=_paymentsrv.GetAllPayments();
         return Json(payment);
     }
-    
-     
+      
      
      
      public JsonResult GetPaymentById(int paymentId)
@@ -37,8 +36,6 @@ public class PaymentsController : Controller
         return Json(payment);
     }
    
-
-
    
    [HttpPost]
    public JsonResult InsertPayment([FromBody]Payment payment)
@@ -63,7 +60,6 @@ public class PaymentsController : Controller
         bool pay=_paymentsrv.DeletePayment(paymentId);
         return Json(pay);
     }
-    
     
     
     
