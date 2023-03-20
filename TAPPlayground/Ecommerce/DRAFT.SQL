@@ -1,13 +1,5 @@
-<<<<<<< HEAD
--- Active: 1678361403571@@127.0.0.1@3306@ecommerce
-=======
-<<<<<<< HEAD
--- Active: 1678859769284@@127.0.0.1@3306@ecommerce
+-- Active: 1677916902963@@127.0.0.1@3306@ecommerce
 
-=======
--- Active: 1678116914124@@127.0.0.1@3306@ecommerce
->>>>>>> 03291d46c076cd8bccac856536c5ce3851bc80c7
->>>>>>> 934ebd3ea7e61692ac5bd50891968167459a2a70
 
 -- CREATE DATABASE Ecommerce;
 -- drop DATABASE ecommerce;
@@ -51,7 +43,7 @@ DELIMITER ;
 
 
 select * from payments;
-INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546630,'MAHB0000286','2023-03-01 12:40:40',22555);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546690,'MAHB0000286','2023-03-01 12:40:40',22555);
 select * from suppliers;
 
 
@@ -67,7 +59,7 @@ INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 390
 
 
 select * from accounts;
-INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546621,'MAHB0000286','2023-03-01 12:40:40',22555);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546610,'MAHB0000286','2023-03-01 12:40:40',22555);
 
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546671,'MAHB0000286','2023-03-01 12:40:40',22555);
 
