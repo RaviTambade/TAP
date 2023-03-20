@@ -5,17 +5,15 @@ using Microsoft.Extensions.Configuration;
 namespace ECommerceApp.Repositories;
 public class EmployeeRepository : IEmployeeRepository
 {
-    private IConfiguration _configuration;
-    private string _conString;
-    
-    //parameterized Constructor
-    public EmployeeRepository(IConfiguration configuration){
+  private IConfiguration _configuration;
+  private string _conString;
+
+  public EmployeeRepository(IConfiguration configuration){
       _configuration= configuration;
       _conString=this._configuration.GetConnectionString("DefaultConnection");
     }
 
-    public List<Employee> GetAllEmployees(){
-
+  public List<Employee> GetAll(){
         List<Employee> Employees=new List<Employee>();
         MySqlConnection connection=new MySqlConnection(_conString);
         try{
@@ -64,20 +62,19 @@ public class EmployeeRepository : IEmployeeRepository
         }
       return Employees; 
     }
-
-   public Employee GetEmployeeById(int id){
+   public Employee GetById(int empId){
           Employee employee =new Employee();
-            MySqlConnection connection=new MySqlConnection(_conString);
+          MySqlConnection connection=new MySqlConnection(_conString);
           try{
               MySqlCommand command=new MySqlCommand();
               command.CommandText="SELECT * FROM employees where employee_id=@employeeId";
               command.Connection=connection;
+              command.Parameters.AddWithValue("@employeeId",empId);
               connection.Open();
-              command.Parameters.AddWithValue("@employeeId",id);
-             MySqlDataReader reader = command.ExecuteReader();
+              MySqlDataReader reader = command.ExecuteReader();
               if (reader.Read())
               {
-                id = Int32.Parse(reader["employee_id"].ToString());
+                int id = Int32.Parse(reader["employee_id"].ToString());
                 string firstname = reader["empfirst_name"].ToString();
                 string lastname = reader["emplast_name"].ToString();
                 DateTime birthdate =  DateTime.Parse(reader["birth_date"].ToString(),System.Globalization.CultureInfo.InvariantCulture);
@@ -88,8 +85,7 @@ public class EmployeeRepository : IEmployeeRepository
                 string photo =reader["photo"].ToString();
                 int reportsTo =Int32.Parse(reader["reports_to"].ToString());
                 long accountNo = long.Parse(reader["account_number"].ToString());
-                
-                  employee = new Employee
+                employee = new Employee
                   {
                     EmpId=id, 
                     EmpFirstName=firstname,
@@ -113,22 +109,7 @@ public class EmployeeRepository : IEmployeeRepository
           }
           return employee;
    }
-   
-   public  bool InsertEmp(Employee emp){
-         
-          Console.WriteLine("Printing emp Object");
-          Console.WriteLine(emp);
-          Console.WriteLine(emp.EmpId);
-          Console.WriteLine(emp.EmpFirstName);
-          Console.WriteLine(emp.EmpLastName);
-          Console.WriteLine(emp.BirthDate);
-          Console.WriteLine(emp.HireDate);
-          Console.WriteLine(emp.ContactNumber);
-          Console.WriteLine(emp.Email);
-          Console.WriteLine(emp.Password);
-          Console.WriteLine(emp.Photo);
-          Console.WriteLine(emp.ReportsTo);
-          Console.WriteLine(emp.AccountNumber);
+   public  bool Insert(Employee emp){    
           bool status = false;
           MySqlConnection con = new MySqlConnection();
           con.ConnectionString=_conString;
@@ -162,9 +143,7 @@ public class EmployeeRepository : IEmployeeRepository
           } 
           return status;
    }
-
-   public  bool UpdateEmp(Employee emp){
-          
+   public  bool Update(Employee emp){       
           Console.WriteLine(emp);
           bool status = false;
           MySqlConnection con = new MySqlConnection();
@@ -196,17 +175,14 @@ public class EmployeeRepository : IEmployeeRepository
           }
           return status;
    }
-   
- 
-
-   public  bool DeleteEmp(int id){
+   public  bool Delete(int empId){
           bool status = false;
           MySqlConnection con = new MySqlConnection();
           con.ConnectionString=_conString;
           try{
             string query = "DELETE FROM employees WHERE employee_id=@employeeId";
              MySqlCommand command=new MySqlCommand(query,con) ;
-            command.Parameters.AddWithValue("@employeeId",id);
+            command.Parameters.AddWithValue("@employeeId",empId);
              con.Open();
              command.ExecuteNonQuery();              
              status = true;
@@ -219,6 +195,4 @@ public class EmployeeRepository : IEmployeeRepository
           }
           return status;
    }
-
-
 }
