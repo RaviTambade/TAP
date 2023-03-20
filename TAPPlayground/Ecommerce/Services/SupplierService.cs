@@ -1,6 +1,5 @@
 using ECommerceApp.Models;
 using ECommerceApp.Repositories;
-using ECommerceApp.Repositories;
 using ECommerceApp.Repositories.Interfaces;
 using ECommerceApp.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
