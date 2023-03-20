@@ -10,7 +10,7 @@ public class OrderService : IOrderService{
         this._repo=repo;
     }
 
-    public List<Order> GetAllOrders() => _repo.GetAll();
+    public List<Order> GetAll() => _repo.GetAll();
 
     public List<Order> GetAllCancelled() => _repo.GetAllCancelled();
     public List<Order> GetAllDelivered() => _repo.GetAllDelivered();

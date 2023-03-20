@@ -1,5 +1,4 @@
-using System.Diagnostics;
-using ECommerceApp.Helpers;
+
 using ECommerceApp.Models;
 using ECommerceApp.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -45,9 +44,9 @@ public class OrderDetailsController : Controller
 
     //Getting all products of a order
     [HttpGet]
-    public JsonResult GetProductsOfOrder(int id)
+    public JsonResult GetOrderDetailsByOrder(int id)
     {
-        var orderDetails = _service.GetProductsOfOrder(id);
+        var orderDetails = _service.GetOrderDetailsByOrder(id);
         return Json(orderDetails);
     }
 
