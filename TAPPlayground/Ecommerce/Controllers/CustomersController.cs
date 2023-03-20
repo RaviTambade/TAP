@@ -49,7 +49,7 @@ public class CustomersController : Controller
     [HttpGet]
     public JsonResult GetAll()
     {
-        var customers=_customersSrv.GetAllCustomers();
+        var customers=_customersSrv.GetAll();
         return Json(customers);
     }
 
@@ -57,7 +57,7 @@ public class CustomersController : Controller
     public JsonResult GetById(int id)
     {
         Console.WriteLine(id);
-        var customer=_customersSrv.GetCustomerById(id);
+        var customer=_customersSrv.GetById(id);
         return Json(customer);
     }
 
@@ -65,14 +65,14 @@ public class CustomersController : Controller
     public JsonResult InsertCustomer([FromBody] Customer customer)
     {
         Console.WriteLine(customer.CustomerId+" "+ customer.FirstName);
-        bool result = _customersSrv.InsertCustomer(customer);
+        bool result = _customersSrv.Insert(customer);
         return Json(result);
     }
 
     [HttpDelete]
     public JsonResult DeleteCustomer(int id)
     {
-        bool result = _customersSrv.DeleteCustomer(id);
+        bool result = _customersSrv.Delete(id);
         return Json(result);
     }
 
@@ -80,7 +80,7 @@ public class CustomersController : Controller
     public JsonResult UpdateCustomer([FromBody]Customer customer)
     {
         Console.WriteLine("firstname "+customer.FirstName+" lastname " + customer.LastName +" id "+ customer.CustomerId);
-        bool result = _customersSrv.UpdateCustomer(customer);
+        bool result = _customersSrv.Update(customer);
         return Json(result);
     }
 

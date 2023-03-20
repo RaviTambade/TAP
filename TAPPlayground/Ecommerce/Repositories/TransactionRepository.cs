@@ -9,7 +9,6 @@ public class TransactionRepository : ITransactionRepository
 {
     private IConfiguration _configuration;
     private string _conString;
-
     public TransactionRepository(IConfiguration configuration)
     {
         _configuration = configuration;
