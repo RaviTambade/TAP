@@ -91,7 +91,7 @@ public class CustomerRepository : ICustomerRepository
 
     }
 
-    public Customer GetCustomerById(int custid)
+    public Customer GetById(int custid)
     {
         Customer customer=new Customer();
         MySqlConnection connection=new MySqlConnection(conString);

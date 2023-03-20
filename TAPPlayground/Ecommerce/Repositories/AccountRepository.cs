@@ -120,8 +120,10 @@ public class AccountRepository : IAccountRepository
             command.Parameters.AddWithValue("@balance", account.Balance);
 
             con.Open();
-            command.ExecuteNonQuery();
-            status = true;
+             int rowsAffected=command.ExecuteNonQuery();
+            if(rowsAffected >0){
+             status=true;
+            }
         }
         catch (Exception e)
         {
@@ -149,8 +151,10 @@ public class AccountRepository : IAccountRepository
             command.Parameters.AddWithValue("@balance", account.Balance);
             command.Parameters.AddWithValue("@accountId", account.AccountId);
             con.Open();
-            command.ExecuteNonQuery();
-            status = true;
+             int rowsAffected=command.ExecuteNonQuery();
+            if(rowsAffected >0){
+             status=true;
+            }
         }
         catch (Exception e)
         {
@@ -174,8 +178,10 @@ public class AccountRepository : IAccountRepository
             MySqlCommand command = new MySqlCommand(query, con);
             command.Parameters.AddWithValue("@accountId", id);
             con.Open();
-            command.ExecuteNonQuery();
-            status = true;
+             int rowsAffected=command.ExecuteNonQuery();
+            if(rowsAffected >0){
+             status=true;
+            }
         }
         catch (Exception e)
         {
