@@ -12,40 +12,39 @@ public class OrdersController : Controller
     {
         _ordersrv = ordersrv;
     }
+    
     [HttpGet]
     public JsonResult GetAll()
     {
-        var orders = _ordersrv.GetAllOrders();
+        var orders = _ordersrv.GetAll();
         return Json(orders);
     }
 
-      [HttpGet]
+    [HttpGet]
     public JsonResult GetCancelled()
     {
-        var orders = _ordersrv.GetAllCancelledOrders();
+        var orders = _ordersrv.GetAllCancelled();
         return Json(orders);
     }
 
     [HttpGet]
     public JsonResult GetDelivered()
     {
-        var orders = _ordersrv.GetAllDeliveredOrders();
+        var orders = _ordersrv.GetAllDelivered();
         return Json(orders);
     }
 
     [HttpGet]
-
     public JsonResult GetById(int id)
     {
-        var order = _ordersrv.GetOrderById(id);
+        var order = _ordersrv.GetById(id);
         return Json(order);
     }
 
     [HttpGet]
-
     public JsonResult GetOrder(int id)
     {
-        var order = _ordersrv.GetOrderByCustId(id);
+        var order = _ordersrv.GetOrder(id);
         return Json(order);
     }
     
@@ -83,7 +82,6 @@ public class OrdersController : Controller
     {
         return View();
     }
-
     public IActionResult Paymode()
     {
         return View();
@@ -103,22 +101,22 @@ public class OrdersController : Controller
    public JsonResult Insert([FromBody] Order order)
    {    
         Console.WriteLine("Order date" +order.OrderDate);
-        bool result =_ordersrv.InsertOrders(order);
+        bool result =_ordersrv.Insert(order);
         return Json(result);
    }
   
-    [HttpPut]
+   [HttpPut]
    public JsonResult Update([FromBody] Order order)
    {
         Console.WriteLine("Order date" +order.OrderDate);
-        bool result =_ordersrv.UpdateOrder(order);
+        bool result =_ordersrv.Update(order);
         return Json(result);
    }
    
    [HttpDelete]
    public JsonResult Delete(int id)
    {
-    bool result = _ordersrv.DeleteOrder(id);
+    bool result = _ordersrv.Delete(id);
     return Json(result);
    }
 

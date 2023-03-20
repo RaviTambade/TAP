@@ -46,13 +46,12 @@ public class PaymentsController : Controller
         return Json(pay);
     }
   
-  [HttpPost]
+    [HttpPost]
    public JsonResult Update([FromBody]Payment payment)
     {
         var pay=_paymentsrv.UpdatePayment(payment);
         return Json(pay);
     }
-
 
      [HttpDelete]
     public JsonResult Delete(int id)
@@ -67,7 +66,6 @@ public class PaymentsController : Controller
     {
         return View();
     }
-
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

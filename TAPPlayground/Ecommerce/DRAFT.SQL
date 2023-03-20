@@ -1,5 +1,14 @@
+<<<<<<< HEAD
 
--- CREATE DATABASE Ecommerce;
+-- Active: 1678115210596@@127.0.0.1@3306@ecommerce
+
+-- Active: 1678361403571@@127.0.0.1@3306@ecommerce
+
+=======
+>>>>>>> 9d312977bb9f52ca97e4e6faa2045d65daa576e2
+
+
+CREATE DATABASE Ecommerce;
 -- drop DATABASE ecommerce;
 USE  Ecommerce;
 
@@ -46,7 +55,7 @@ select * from suppliers;
 
 
 
-select * from orders;
+select * from employees;
 select * from payments;
 
 
