@@ -60,6 +60,16 @@ public class OrdersController : Controller
     {
         return View();
     }
+
+    public IActionResult Search()
+    {
+        return View();
+    }
+
+    public IActionResult Insert()
+    {
+        return View();
+    }
     public IActionResult Addressdetails()
     {
         return View();

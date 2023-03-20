@@ -47,6 +47,11 @@ public class ShipperController : Controller
         public JsonResult InsertShipper([FromBody] Shipper shipper){
              Console.WriteLine(shipper.Email);
              Console.WriteLine(shipper.AccountNumber);
+<<<<<<< HEAD
+=======
+              // string conString = this._configuration.GetConnectionString("DefaultConnection");
+
+>>>>>>> 40f899d9cbca70933a8189e644e89608ddadebc7
              bool status=_shippersrv.InsertShipper(shipper);
              return Json(status);
          
@@ -56,6 +61,10 @@ public class ShipperController : Controller
     public JsonResult UpdateShipper([FromBody]Shipper shipper)
     {
         System.Console.WriteLine(shipper);
+<<<<<<< HEAD
+=======
+        //string conString = this._configuration.GetConnectionString("DefaultConnection");
+>>>>>>> 40f899d9cbca70933a8189e644e89608ddadebc7
         bool status=_shippersrv.UpdateShipper(shipper);
         return Json(status);  
          Console.WriteLine(shipper);
@@ -66,6 +75,10 @@ public class ShipperController : Controller
    [HttpDelete]
     public JsonResult DeleteShipper(int id)
     {
+<<<<<<< HEAD
+=======
+         //string conString = this._configuration.GetConnectionString("DefaultConnection");
+>>>>>>> 40f899d9cbca70933a8189e644e89608ddadebc7
         bool status=_shippersrv.DeleteShipper(id);
         return Json(status);
     }

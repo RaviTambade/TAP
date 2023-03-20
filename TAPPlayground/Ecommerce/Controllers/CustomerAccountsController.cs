@@ -4,10 +4,10 @@ using ECommerceApp.Models;
 using ECommerceApp.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 namespace ECommerceApp.Controllers;
-public class CustomersAccountsController : Controller
+public class CustomerAccountsController : Controller
 {
-    private readonly ICustomersAccountsService _accountserv;
-    public CustomersAccountsController(ICustomersAccountsService accountserv){
+    private readonly ICustomerAccountService _accountserv;
+    public CustomerAccountsController(ICustomerAccountService accountserv){
      _accountserv = accountserv;
     }
     [HttpGet]

@@ -4,9 +4,9 @@ using ECommerceApp.Models;
 using ECommerceApp.Repositories.Interfaces;
 using ECommerceApp.Services.Interfaces;
 namespace ECommerceApp.Services;
-public class CustomersAccountsService:ICustomersAccountsService{
-private readonly ICustomersAccountsRepository _repo;
-public CustomersAccountsService(ICustomersAccountsRepository repo){
+public class CustomerAccountService:ICustomerAccountService{
+private readonly ICustomerAccountRepository _repo;
+public CustomerAccountService(ICustomerAccountRepository repo){
     this._repo=repo;
 
 }
