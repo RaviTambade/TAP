@@ -1,0 +1,48 @@
+
+using ECommerceApp.Context;
+using ECommerceApp.Contexts;
+using ECommerceApp.Models;
+using ECommerceApp.Repositories.Interfaces;
+
+namespace ECommerceApp.Repositories;
+
+public class ShipperORMRepository : IShipperRepository
+{
+    private IConfiguration _configuration;
+
+    public ShipperORMRepository(IConfiguration configuration)
+    {
+        _configuration = configuration;
+    }
+
+    
+    public List<Shipper> GetAll()
+    {
+        using (var context = new ShipperContext(_configuration))
+        {
+            var shippers = context.shippers.ToList();
+            return shippers;
+        }
+    }
+
+    public Shipper GetById(int id)
+    {
+        throw new NotImplementedException();
+    }
+
+    public bool Insert(Shipper shipper)
+    {
+        throw new NotImplementedException();
+    }
+
+    public bool Update(Shipper shipper)
+    {
+        throw new NotImplementedException();
+    }
+
+
+    public bool Delete(int id)
+    {
+        throw new NotImplementedException();
+    }
+}

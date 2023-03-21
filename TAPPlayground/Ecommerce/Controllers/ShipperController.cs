@@ -8,12 +8,13 @@ namespace ECommerceApp.Controllers;
 public class ShipperController : Controller
 {
     private readonly IShipperService _shippersrv;
-   
+ 
     // set constructor level dependency injection
 
     public ShipperController(IShipperService shippersrv)
     {
         _shippersrv = shippersrv;
+   
     }
 
    public IActionResult Home()
@@ -33,6 +34,7 @@ public class ShipperController : Controller
     {
         var shippers=_shippersrv.GetAll();
         return Json(shippers);
+
     }
 
     [HttpGet]
