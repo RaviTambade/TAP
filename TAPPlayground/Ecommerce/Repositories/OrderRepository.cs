@@ -157,7 +157,7 @@ public class OrderRepository : IOrderRepository
         }
         return status;
     }
-    public Order GetOrder(int id)
+    public Order GetOrderByCustId(int id)
     {
         Order order = new Order();
         MySqlConnection con = new MySqlConnection();

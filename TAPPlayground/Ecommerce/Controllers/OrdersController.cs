@@ -44,7 +44,7 @@ public class OrdersController : Controller
     [HttpGet]
     public JsonResult GetOrder(int id)
     {
-        var order = _ordersrv.GetOrder(id);
+        var order = _ordersrv.GetOrderByCustId(id);
         return Json(order);
     }
     

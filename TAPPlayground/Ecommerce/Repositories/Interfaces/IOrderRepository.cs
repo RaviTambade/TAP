@@ -13,7 +13,7 @@ public interface IOrderRepository
     int GetOrderId(int id);
     bool InsertOrder(int id);
 
-    Order GetOrder(int id);
+    Order GetOrderByCustId(int id);
 
     bool Insert(Order order);
 
