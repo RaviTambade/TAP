@@ -13,6 +13,11 @@ public class EmployeesController : Controller
         _empsrv = empsrv;
     }
 
+      public IActionResult Index()
+    {
+        return View();
+    }
+
     [HttpGet]
     public JsonResult ShowAll()
     {

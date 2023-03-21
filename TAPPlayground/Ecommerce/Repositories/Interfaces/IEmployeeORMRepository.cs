@@ -2,8 +2,8 @@ using ECommerceApp.Models;
 
 namespace ECommerceApp.Repositories.Interfaces;
 
-public interface ICustomerORMRepository{
+public interface IEmployeeORMRepository{
  
-    List<Customer> GetAll();
+    List<Employee> GetAll();
    
 }

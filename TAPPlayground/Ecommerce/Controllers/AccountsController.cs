@@ -15,6 +15,7 @@ public class AccountsController : Controller
     public JsonResult GetAll()
     {
         var accounts = _accountserv.GetAll();
+     
         return Json(accounts);
     }
     [HttpGet]
