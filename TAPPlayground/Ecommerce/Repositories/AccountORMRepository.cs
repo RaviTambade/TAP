@@ -9,27 +9,34 @@ namespace ECommerceApp.Repositories;
 
 public class AccountORMRepository : IAccountRepository
 {
+    private IConfiguration _configuration;
+
+    public AccountORMRepository(IConfiguration configuration)
+    {
+        _configuration = configuration;
+    }
     public List<Account> GetAll()
     {
-        using (var context = new AccountContext())
+        using (var context = new AccountContext(_configuration))
         {
-            var accounts = from account in context.accounts select account;
-            return accounts.ToList<Account>();
+             var accounts = context.Accounts.ToList();
+            return accounts;
         }
     }
-   public Account GetById(int accountId){
-
+   public Account GetById(int accountId)
+   {
+throw new NotImplementedException();
    }
 public bool Insert(Account account)
 {
-
+throw new NotImplementedException();
 }
 public bool Update(Account account)
 {
-
+throw new NotImplementedException();
 }
-bool Delete(int accountId)
+ public bool Delete(int accountId)
 {
-
+throw new NotImplementedException();
 }
 }
