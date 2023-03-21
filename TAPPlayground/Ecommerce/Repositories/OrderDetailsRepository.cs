@@ -128,7 +128,7 @@ public class OrderDetailsRepository : IOrderDetailsRepository
                     OrderId = orderId,
                     ProductTitle = prodctTitle,
                     Quantity = quantity,
-                    UnitPrice=unitPrice,
+                    //UnitPrice=unitPrice,
                     TotalAmount = totalAmount
                 };
                 products.Add(product);
