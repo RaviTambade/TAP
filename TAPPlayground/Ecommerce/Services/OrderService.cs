@@ -17,7 +17,7 @@ public class OrderService : IOrderService{
 
     public Order GetById(int id) => _repo.GetById(id);
 
-    public Order GetOrder(int id) => _repo.GetOrder(id);
+    public Order GetOrderByCustId(int id) => _repo.GetOrderByCustId(id);
     public int GetOrderId(int id) => _repo.GetOrderId(id);
 
     public bool InsertOrder(int id)=>_repo.InsertOrder(id);
