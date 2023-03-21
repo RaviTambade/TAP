@@ -18,7 +18,8 @@ builder.Services.AddTransient<IDashboardRepository,DashboardRepository>();
 builder.Services.AddTransient<IDashboardService,DashboardService>();
 builder.Services.AddTransient<IOrderRepository,OrderRepository>();
 builder.Services.AddTransient<IOrderService,OrderService>();
-builder.Services.AddTransient<IOrderDetailsRepository,OrderDetailsRepository>();
+// builder.Services.AddTransient<IOrderDetailsRepository,OrderDetailsRepository>();
+builder.Services.AddTransient<IOrderDetailsRepository,OrderDetailsORMRepository>();
 builder.Services.AddTransient<IOrderDetailsService,OrderDetailsService>();
 builder.Services.AddTransient<IShipperRepository,ShipperRepository>();
 builder.Services.AddTransient<IShipperService,ShipperService>();
@@ -38,6 +39,8 @@ builder.Services.AddTransient<ISecureRepository,SecureRepository>();
 builder.Services.AddTransient<ISecureService,SecureService>();
 builder.Services.AddTransient<ICustomerAccountRepository,CustomerAccountRepository>();
 builder.Services.AddTransient<ICustomerAccountService,CustomerAccountService>();
+builder.Services.AddTransient<ICustomerORMRepository,CustomerORMRepository>();
+builder.Services.AddTransient<ICustomerORMService,CustomerORMService>();
 
 builder.Services.AddSession(options =>{
     options.IdleTimeout=TimeSpan.FromMinutes(10);

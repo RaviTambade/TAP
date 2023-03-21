@@ -16,11 +16,6 @@ public class OrderDetailsService : IOrderDetailsService
         return _repo.DeleteByOrderDetailsId(orderDetailsId);
     }
 
-    public bool DeleteByOrderId(int orderId)
-    {
-        return _repo.DeleteByOrderId(orderId);
-    }
-
     public List<OrderDetails> GetAll()
     {
         return _repo.GetAll();

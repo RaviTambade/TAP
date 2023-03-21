@@ -108,7 +108,7 @@ public class OrderDetailsRepository : IOrderDetailsRepository
         con.ConnectionString = _conString;
         try
         {
-            string query = "SELECT orderdetails.order_id,products.product_title, orderdetails.quantity ," +
+            string query = "SELECT orderdetails.order_id,products.product_title,products.unit_price, orderdetails.quantity ," +
                           " (products.unit_price*orderdetails.quantity) AS total_amount FROM orderdetails, products " +
                           " WHERE  products.product_id =orderdetails.product_id AND order_id=@orderId";
             MySqlCommand command = new MySqlCommand(query, con);
@@ -120,6 +120,7 @@ public class OrderDetailsRepository : IOrderDetailsRepository
             {
                 string prodctTitle = reader["product_title"].ToString();
                 int quantity = Int32.Parse(reader["quantity"].ToString());
+                double unitPrice = double.Parse(reader["unit_price"].ToString());
                 double totalAmount = double.Parse(reader["total_amount"].ToString());
 
                 OrderDetailsOrder product = new OrderDetailsOrder()
@@ -127,6 +128,7 @@ public class OrderDetailsRepository : IOrderDetailsRepository
                     OrderId = orderId,
                     ProductTitle = prodctTitle,
                     Quantity = quantity,
+                    UnitPrice=unitPrice,
                     TotalAmount = totalAmount
                 };
                 products.Add(product);
@@ -239,12 +241,6 @@ public class OrderDetailsRepository : IOrderDetailsRepository
         return status;
     }
 
-    public bool DeleteByOrderId(int orderId){
-
-        bool status=false;
-        return status;
-    }
-
 
     public List<OrderHistory> GetOrderHistory(int customerId)
     {
@@ -260,15 +256,17 @@ public class OrderDetailsRepository : IOrderDetailsRepository
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
+                int productId=int.Parse(reader["product_id"].ToString());
                 string? title = reader["product_title"].ToString();
-                double unitprice = double.Parse(reader["unit_price"].ToString());
+                double unitPrice = double.Parse(reader["unit_price"].ToString());
                 int quantity = int.Parse(reader["quantity"].ToString());
                 DateTime date = DateTime.Parse(reader["order_date"].ToString());
 
                 OrderHistory orderhistory = new OrderHistory
                 {
+                    ProductId=productId,
                     Title = title,
-                    UnitPrice = unitprice,
+                    UnitPrice = unitPrice,
                     Quantity = quantity,
                     OrderDate = date
                 };

@@ -28,7 +28,7 @@ public class OrderDetailsController : Controller
 
     // Getting all Records of orderdetails
     [HttpGet]
-    public JsonResult AllOrderDetails()
+    public JsonResult GetAll()
     {
         var orderDetails = _service.GetAll();
         return Json(orderDetails);
@@ -46,7 +46,7 @@ public class OrderDetailsController : Controller
     [HttpGet]
     public JsonResult GetOrderDetailsByOrder(int id)
     {
-        var orderDetails = _service.GetOrderDetailsByOrder(id);
+        var orderDetails = _service.GetOrderDetailsByOrder(id);     //orderId
         return Json(orderDetails);
     }
 
@@ -78,7 +78,7 @@ public class OrderDetailsController : Controller
 
     //showing customers orderhistory
     [HttpGet]
-    public IActionResult OrderHistory(int id)  //customerId
+    public IActionResult GetOrderHistory(int id)  //customerId
     {
         // var customerId = HttpContext.Session.GetObjectFromJson<Customer>("Customer").CustomerId;
         var history = _service.GetOrderHistory(id);

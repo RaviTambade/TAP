@@ -1,27 +1,18 @@
-
-
 using ECommerceApp.Models;
 using ECommerceApp.Repositories.Interfaces;
 using ECommerceApp.Services.Interfaces;
 
 namespace ECommerceApp.Services;
-
 public class EmployeeService : IEmployeeService
 {
     private readonly IEmployeeRepository _repo;
-
     public EmployeeService(IEmployeeRepository repo)
     {
         _repo = repo;
     }
-
-    public List<Employee> GetAllEmployees() => _repo.GetAllEmployees();
-
-   public Employee GetEmployeeById(int id)=> _repo.GetEmployeeById(id);
-
-    public bool InsertEmp (Employee employee) => _repo.InsertEmp(employee);
-
-    public bool UpdateEmp(Employee emp)=> _repo.UpdateEmp(emp);
-
-    public bool DeleteEmp(int id)=>_repo.DeleteEmp(id);
+    public List<Employee> GetAll() => _repo.GetAll();
+    public Employee GetById(int empId)=> _repo.GetById(empId);
+    public bool Insert (Employee employee) => _repo.Insert(employee);
+    public bool Update(Employee emp)=> _repo.Update(emp);
+    public bool Delete(int id)=>_repo.Delete(id);
 }
