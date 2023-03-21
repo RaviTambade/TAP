@@ -4,13 +4,19 @@ using ECommerceApp.Models;
 
 namespace ECommerceApp.Repositories;
 public class UserRepository:IUserRepository{
-    public static string conString = "server=localhost;port=3306;user=root;password=Rohit@7378;database=Ecommerce";
+    private IConfiguration _configuration;
+    private string _conString;
+    public UserRepository(IConfiguration configuration)
+    {
+        _configuration = configuration;
+        _conString = this._configuration.GetConnectionString("DefaultConnection");
+    }
 
-    public List<User> GetAllUser()
+    public List<User> GetAll()
     {
        List<User> users = new List<User>();
         MySqlConnection connection = new MySqlConnection();
-        connection.ConnectionString = conString;
+        connection.ConnectionString = _conString;
         try
         {
             string query = "SELECT * FROM users";
@@ -44,16 +50,18 @@ public class UserRepository:IUserRepository{
     }
     
 
-    public bool ValidateUser(User user)
+    public bool Validate(User user)
     {
         bool status = false;
         MySqlConnection connection = new MySqlConnection();
-        connection.ConnectionString = conString;
+        connection.ConnectionString = _conString;
         try
         {
-            string query = "SELECT EXISTS(SELECT * FROM users where contact_number='" + user.ContactNumber + "' and password='" + user.Password+ "')";
+            string query = "SELECT EXISTS(SELECT * FROM users where contact_number=@contactNumber and password=@password)";
             connection.Open();
             MySqlCommand command = new MySqlCommand(query, connection);
+            command.Parameters.AddWithValue("@contactNumber",user.ContactNumber);
+            command.Parameters.AddWithValue("@password",user.Password);
             MySqlDataReader reader = command.ExecuteReader();
             reader.Read();
             if ((Int64)reader[0] == 1)
