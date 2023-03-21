@@ -1,24 +1,32 @@
 using ECommerceApp.Models;
 using ECommerceApp.Repositories.Interfaces;
 using MySql.Data.MySqlClient;
+using Microsoft.Extensions.Configuration;
 namespace ECommerceApp.Repositories;
 public class AddressRepository : IAddressRepository
 {
+    private IConfiguration _configuration;
 
-   
-    public static string conString = "server=localhost;port=3306;user=root;password=Password;database=Ecommerce";
+    private string _conString;
+
+    public AddressRepository(IConfiguration configuration)
+    {
+        _configuration = configuration;
+        _conString = this._configuration.GetConnectionString("DefaultConnection");
+    }
 
 
     public List<Address> GetAll(int id)
     {
         List<Address> addresses = new List<Address>();
         MySqlConnection con = new MySqlConnection();
-        con.ConnectionString = conString;
+        con.ConnectionString = _conString;
         try
         {
-            string query = "SELECT * FROM addresses where cust_id=" + id;
+            string query = "SELECT * FROM addresses where cust_id=@addressId";
             con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
+            command.Parameters.AddWithValue("@addressId",id);
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
@@ -60,12 +68,20 @@ public class AddressRepository : IAddressRepository
     {
         bool status = false;
         MySqlConnection con = new MySqlConnection();
-        con.ConnectionString = conString;
+        con.ConnectionString = _conString;
         try
         {
-            string query = $"INSERT INTO addresses(cust_id,address_mode,house_number,landmark,city,state,country,pincode)VALUES('{address.CustomerId}','{address.AddressMode}','{address.HouseNumber}','{address.Landmark}','{address.City}','{address.State}','{address.Country}','{address.PinCode}')";
+            string query = $"INSERT INTO addresses(cust_id,address_mode,house_number,landmark,city,state,country,pincode)VALUES(@customerId,@addressMode,@houseNumber,@landmark,@city,@state,@country,@pincode)";
             con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
+            command.Parameters.AddWithValue("@customerId",address.CustomerId);
+            command.Parameters.AddWithValue("@addressMode",address.AddressMode);
+            command.Parameters.AddWithValue("@houseNumber",address.HouseNumber);
+            command.Parameters.AddWithValue("@landmark",address.Landmark);
+            command.Parameters.AddWithValue("@city",address.City);
+            command.Parameters.AddWithValue("@state",address.State);
+            command.Parameters.AddWithValue("@country",address.Country);
+            command.Parameters.AddWithValue("@pincode",address.PinCode);
             command.ExecuteNonQuery();
             status = true;
         }
@@ -84,12 +100,13 @@ public class AddressRepository : IAddressRepository
     {
         Address address= new Address();
         MySqlConnection con = new MySqlConnection();
-        con.ConnectionString = conString;
+        con.ConnectionString = _conString;
         try
         {
-            string query = "SELECT * FROM addresses where address_id=" + addressId;
+            string query = "SELECT * FROM addresses where address_id=@addressId";
             con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
+            command.Parameters.AddWithValue("addressId",addressId);
             MySqlDataReader reader = command.ExecuteReader();
             if (reader.Read())
             {
