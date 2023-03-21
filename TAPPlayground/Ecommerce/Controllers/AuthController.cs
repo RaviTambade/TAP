@@ -36,7 +36,7 @@ public class AuthController : Controller
     [HttpPost]
     public IActionResult LogIn(User user)
     {
-        bool status = _usersrv.ValidateUser(user);
+        bool status = _usersrv.Validate(user);
         if (status)
         {
             var customer = _customersrv.GetByContactNumber(user.ContactNumber);

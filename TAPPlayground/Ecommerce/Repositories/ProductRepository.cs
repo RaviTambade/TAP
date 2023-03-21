@@ -6,7 +6,7 @@ public class ProductRepository : IProductRepository
 {
     private IConfiguration _configuration;
     private string _conString;
-    public ProductRepository(IConfiguration configuration)
+    public ProductRepository(IConfiguration configuration)  
     {
         _configuration = configuration;
         _conString = this._configuration.GetConnectionString("DefaultConnection");

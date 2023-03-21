@@ -5,9 +5,7 @@ public class Address
 {
     public int AddressId {get;set;}
     public int CustomerId {get;set;}
-
     public string? AddressMode{get;set;}
-
     public string? HouseNumber{get;set;}
     public string? Landmark{get;set;}
     public string? City{get;set;}
