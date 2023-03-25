@@ -5,6 +5,6 @@ public interface ISecureRepository{
   
 bool Register(User user);
 bool ValidateUser(Credential user);
-bool ChangePassword(ChangedCredential user);
+bool ChangePassword(User user);
 
 }

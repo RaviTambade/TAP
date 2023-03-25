@@ -24,6 +24,7 @@ export class RegisterComponent {
       this.svc.registerUser(this.user).subscribe((response) => {
         this.registered = response;
         console.log(response);
+        alert("User Registered successfully")
       })
     }
     else{

@@ -19,6 +19,10 @@ export class MembershipService {
 
     let url="http://localhost:5223/secure/register";
     return this.svc.post<any>(url,user);
+  }
 
+  changePassword(user:User):Observable<any>{
+    let url="http://localhost:5223/secure/changepassword";
+    return this.svc.put<any>(url,user);
   }
 }

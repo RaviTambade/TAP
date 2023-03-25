@@ -46,19 +46,18 @@ public class SecureRepository : ISecureRepository
 
     }
 
-    public bool ChangePassword(ChangedCredential user)
+    public bool ChangePassword(User user)
     {
         bool status = false;
         MySqlConnection con = new MySqlConnection();
         con.ConnectionString = _conString;
         try
         {
-
-            string query = $"Update users SET password =@newPassword WHERE email=@email and password=@oldPassword";
+	    
+            string query = $"Update users SET password =@newPassword WHERE email=@email";
             MySqlCommand cmd = new MySqlCommand(query, con);
-            cmd.Parameters.AddWithValue("@newPassword", user.NewPassword);
+            cmd.Parameters.AddWithValue("@newPassword", user.Password);
             cmd.Parameters.AddWithValue("@email", user.Email);
-            cmd.Parameters.AddWithValue("@oldPassword", user.OldPassword);
             con.Open();
             int rowsAffected = cmd.ExecuteNonQuery();
             if (rowsAffected >= 1)
@@ -83,7 +82,9 @@ public class SecureRepository : ISecureRepository
         MySqlConnection connection = new MySqlConnection(_conString);
         try
         {
-            user.ContactNumber="0000000001";
+            Random rnd = new Random(); 
+            int num = rnd.Next(999999999);
+            user.ContactNumber=num.ToString();
             string query = "INSERT INTO users(email,contact_number,password)VALUES(@email,@contact_number,@password)";
             MySqlCommand command = new MySqlCommand(query, connection);
             command.Connection = connection;
@@ -108,5 +109,6 @@ public class SecureRepository : ISecureRepository
         }
         return status;
     }
+
 }
 
