@@ -3,7 +3,7 @@ using ECommerceApp.Models;
 namespace ECommerceApp.Repositories.Interfaces;
 public interface ISecureRepository{
   
-bool RegisterCustomer(Customer customer);
+bool Register(User user);
 bool ValidateUser(Credential user);
 bool ChangePassword(ChangedCredential user);
 

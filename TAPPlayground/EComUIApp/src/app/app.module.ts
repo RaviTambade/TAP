@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { MembershipModule } from './membership/membership.module';
 
 //metadata
 //decorator
@@ -12,7 +13,8 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    MembershipModule
   ],
   providers: [],
   bootstrap: [AppComponent] //Root Component

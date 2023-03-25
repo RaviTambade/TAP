@@ -64,12 +64,12 @@ public class SecureController : Controller
     public JsonResult GetUserByRole(string id)
     {
         List<User> users=new List<User>{
-            new User{UserId=1 ,UserName="Sahil" ,ContactNumber="9975966045" ,Password="sahil@123",Role="Admin"},
-            new User{UserId=2 ,UserName="Shubham" ,ContactNumber="9309478546" ,Password="shubham@311",Role="Admin"},
-            new User{UserId=3 ,UserName="Abhay" ,ContactNumber="7754123965" ,Password="abhay@22",Role="Customer"},
-            new User{UserId=4 ,UserName="Rohit" ,ContactNumber="8547632598" ,Password="rohit#12",Role="Customer"},
-            new User{UserId=5 ,UserName="Akshay" ,ContactNumber="9565410237" ,Password="akshay@67",Role="Shipper"},
-            new User{UserId=6 ,UserName="Akash" ,ContactNumber="7852671645" ,Password="akash@99",Role="Shipper"},
+            new User{UserId=1 ,Email="Sahil" ,ContactNumber="9975966045" ,Password="sahil@123",Role="Admin"},
+            new User{UserId=2 ,Email="Shubham" ,ContactNumber="9309478546" ,Password="shubham@311",Role="Admin"},
+            new User{UserId=3 ,Email="Abhay" ,ContactNumber="7754123965" ,Password="abhay@22",Role="Customer"},
+            new User{UserId=4 ,Email="Rohit" ,ContactNumber="8547632598" ,Password="rohit#12",Role="Customer"},
+            new User{UserId=5 ,Email="Akshay" ,ContactNumber="9565410237" ,Password="akshay@67",Role="Shipper"},
+            new User{UserId=6 ,Email="Akash" ,ContactNumber="7852671645" ,Password="akash@99",Role="Shipper"},
 
         };
 
@@ -77,17 +77,16 @@ public class SecureController : Controller
        foreach (var user in users){
         if(user.Role ==id){
             userList.Add(user);
-         Console.WriteLine(user.UserName);
+         Console.WriteLine(user.Email);
         }
        }
         return Json(userList);
     }
 
     [HttpPost]
-    public JsonResult Register([FromBody] Customer customer)
+    public JsonResult Register([FromBody] User user)
     {
-        Console.WriteLine(customer.FirstName);
-        bool result = _securessvr.RegisterCustomer(customer);
+        bool result = _securessvr.Register(user);
         return Json(result);
     }
 

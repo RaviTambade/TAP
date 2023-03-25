@@ -14,8 +14,9 @@ public class SecureService : ISecureService
     {
         _repo = repo;
     }
-    public bool RegisterCustomer(Customer customer)=>_repo.RegisterCustomer(customer);
+       public bool Register(User user)=>_repo.Register(user);
     public bool ValidateUser(Credential user)=> _repo.ValidateUser(user);
 
     public bool ChangePassword(ChangedCredential user)=>_repo.ChangePassword(user);
+
 }
