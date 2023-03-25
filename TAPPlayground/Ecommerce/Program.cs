@@ -4,6 +4,7 @@ using ECommerceApp.Services;
 using ECommerceApp.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddCors();
 
 // Add services to the container.
 builder.Services.AddTransient<ICustomerRepository,CustomerRepository>();
@@ -63,7 +64,9 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
+app.UseCors(x => x.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader());
 app.UseRouting();
 app.UseSession();
 
