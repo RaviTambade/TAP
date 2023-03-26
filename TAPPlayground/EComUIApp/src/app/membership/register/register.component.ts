@@ -3,7 +3,7 @@ import { MembershipService } from '../membership-service.service';
 import { User } from '../user';
 
 @Component({
-  selector: 'app-register',
+  selector: 'register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
@@ -19,9 +19,18 @@ export class RegisterComponent {
 
   constructor(private svc: MembershipService) { }
 
-  onRegister() {
+  onRegister( form:any) {
+    if(this.user.email=='' || this.user.password==''){
+      alert("please give valid email or password")
+      return;
+    }
+    if(this.user.password.length < 8){
+      alert("password should be minimum 8 characters ")
+      return;
+    }
+
     if (this.user.password === this.confirmPassword) {
-      this.svc.registerUser(this.user).subscribe((response) => {
+      this.svc.registerUser(form).subscribe((response) => {
         this.registered = response;
         console.log(response);
         alert("User Registered successfully")
@@ -29,7 +38,6 @@ export class RegisterComponent {
     }
     else{
       alert("password dosen't match")
-      return;
     }
   }
 }

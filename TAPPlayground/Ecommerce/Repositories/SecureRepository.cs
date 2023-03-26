@@ -82,9 +82,7 @@ public class SecureRepository : ISecureRepository
         MySqlConnection connection = new MySqlConnection(_conString);
         try
         {
-            Random rnd = new Random(); 
-            int num = rnd.Next(999999999);
-            user.ContactNumber=num.ToString();
+            user.ContactNumber="1234567890";
             string query = "INSERT INTO users(email,contact_number,password)VALUES(@email,@contact_number,@password)";
             MySqlCommand command = new MySqlCommand(query, connection);
             command.Connection = connection;

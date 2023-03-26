@@ -3,7 +3,7 @@ import { MembershipService } from '../membership-service.service';
 import { User } from '../user';
 
 @Component({
-  selector: 'app-login',
+  selector: 'login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
@@ -15,18 +15,18 @@ export class LoginComponent {
     email: '',
     password: ''
   }
-  onLogin() {
-    console.log(this.user);
-    this.svc.validateUser(this.user).subscribe((response)=>{
-      console.log(response);
-      if(response){
-        alert("Login sucessfull")
-      }
-      else
-      {
-        alert("Login Failed")
-      }
-    })
 
+  onLogin(form:any){
+    console.log(form);
+    this.svc.validateUser(form).subscribe((response)=>{
+          console.log(response);
+          if(response){
+            alert("Login sucessfull")
+          }
+          else
+          {
+            alert("Login Failed")
+          }
+        })
   }
 }

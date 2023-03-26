@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { MembershipService } from '../membership-service.service';
 import { User } from '../user';
 
@@ -10,17 +11,27 @@ import { User } from '../user';
 export class NewPasswordComponent {
   @Input() email: any;
   password: any;
-  ConfirmPassword: any;
+  confirmPassword: any;
 
   constructor(private svc: MembershipService) { }
 
-  onSubmit() {
-    if (this.password === this.ConfirmPassword) {
-      let user: User = {
-        email: this.email,
+  onChangePassword(form:any) {
+   
+    if(this.password.length < 8){
+      console.log(form)
+      alert("password should be minimum 8 characters ")
+      return;
+    }
+
+    if (this.password === this.confirmPassword) {
+      console.log(form)
+      let user:User={
+        email:this.email,
         password: this.password
       }
+      console.log(user);
       this.svc.changePassword(user).subscribe((response) => {
+        console.log(response);
         if (response) {
           alert("Password changed")
         }
@@ -29,4 +40,4 @@ export class NewPasswordComponent {
       alert("Error while changing password")
     }
   }
-}
+}       
