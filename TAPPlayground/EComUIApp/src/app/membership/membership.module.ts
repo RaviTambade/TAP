@@ -30,14 +30,14 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forChild(routes)
   ],
   exports: [
     LoginComponent,
     RegisterComponent,
     ForgotPasswordComponent,
     AssignroleComponent,
-    MembershipRoutingComponent
+    MembershipRoutingComponent,
   ]
 })
 export class MembershipModule { }
