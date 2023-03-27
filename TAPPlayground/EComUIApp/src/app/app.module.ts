@@ -3,21 +3,29 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { Account } from './account/account';
 import { AccountModule } from './account/account.module';
-
-import { AppComponent } from './app.component';
+import { RouterModule, Routes } from '@angular/router';
+import { MembershipModule } from './membership/membership.module';
+import {AppComponent} from './app.component';
 
 //metadata
 //decorator
+
+
+const routes: Routes = [
+
+]
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
     
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AccountModule
-    
+    AccountModule, 
+    MembershipModule,
+    RouterModule.forRoot(routes)
+
   ],
   providers: [],
   bootstrap: [AppComponent] //Root Component

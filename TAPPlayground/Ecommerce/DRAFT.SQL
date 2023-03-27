@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 -- Active: 1678361403571@@127.0.0.1@3306@ecommerce
+=======
+-- Active: 1678016377342@@127.0.0.1@3306@Ecommerce
+>>>>>>> 0ee67af505ff396831d5a71e20e1a20ee56187a8
 
 
 CREATE DATABASE Ecommerce;
@@ -6,7 +10,8 @@ CREATE DATABASE Ecommerce;
 USE  Ecommerce;
 
 USE Ecommerce;
-CREATE TABLE users( user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, email VARCHAR(25) UNIQUE NOT NULL, contact_number VARCHAR(20) NOT NULL UNIQUE,password VARCHAR(15) NOT NULL);
+drop table users;
+CREATE TABLE users( user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, email VARCHAR(25) UNIQUE NOT NULL, contact_number VARCHAR(20) NOT NULL ,password VARCHAR(15) NOT NULL);
 CREATE TABLE accounts(account_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,account_number BIGINT UNIQUE, ifsc_code VARCHAR(50) ,register_date DATETIME ,balance DOUBLE);
 CREATE TABLE customers(cust_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, first_name VARCHAR(25), last_name VARCHAR(25),email VARCHAR(25) UNIQUE NOT NULL,contact_number VARCHAR(20) UNIQUE NOT NULL, password VARCHAR(15) NOT NULL,account_number BIGINT NOT NULL UNIQUE ,CONSTRAINT fk_account_no3 FOREIGN KEY(account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE);
 CREATE TABLE employees(employee_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,empfirst_name VARCHAR(100),emplast_name VARCHAR(50),birth_date DATETIME,hire_date DATETIME,contact_number VARCHAR(20),email VARCHAR(50),password VARCHAR(15) NOT NULL,photo varchar (50),reports_to INT NOT NULL,account_number BIGINT NOT NULL UNIQUE ,CONSTRAINT fk_account_no4 FOREIGN KEY(account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE);

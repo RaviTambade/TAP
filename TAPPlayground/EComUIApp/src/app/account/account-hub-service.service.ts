@@ -13,8 +13,14 @@ export class AccountHubServiceService {
 
   getAccounts():Observable<any>{
     let url =  "http://localhost:5223/accounts/getall";
-    return this.http.get<any>(url); 
-    
+    return this.http.get<any>(url);  
   }
+  
+  getById(accountId:number):Observable<any>{
+    let url= "http://localhost:5223/accounts/getbyid/"+accountId;
+    return this.http.get<any>(url);
+    
+  } 
+  
 
 }

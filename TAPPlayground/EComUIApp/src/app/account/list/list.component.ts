@@ -19,11 +19,11 @@ export class ListComponent implements OnInit{
     })
   }
 
-  getAll(): void {
-    this.svc.getAccounts().subscribe((response) => {
-      this.accounts = response;
-      console.log(this.accounts);
-    })
+  // getAll(): void {
+  //   this.svc.getAccounts().subscribe((response) => {
+  //     this.accounts = response;
+  //     console.log(this.accounts);
+  //   })
 
   }
-}
+

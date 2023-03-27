@@ -1,24 +1,6 @@
-<!-- 
-<div class="container mt-3">
-    <h2>Account Details</h2>       
-    <table class="table table-striped">
-      <thead>
-            <th ><b>IFSCCode :</b></th>
-            <th><b>AccountId :</b></th>
-            <th ><b>AccountNumber :</b></th>
-             <th ><b>RegisterDate :</b></th> 
-             <th ><b>Balance :</b></th></thead>
-<div *ngFor="let account of accounts">
-             <td>{{ account.balance}}</td>
-             <td>{{ account.accountId }}</td>
-            <td>{{ account.accountNumber }}</td>
-            <td>{{ account.ifscCode }}</td>
-            <td>{{ account.registerDate }}</td>
-           
-            <hr>
-           </div> -->
 
-           <div *ngFor="let account">
+
+           <div *ngFor="let account of accounts">
 
             <app-details [account]="account" ></app-details>
          </div> 
