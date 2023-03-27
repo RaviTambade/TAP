@@ -60,10 +60,10 @@ public class SecureController : Controller
         return View();
     }
 
-     [HttpGet]
+    [HttpGet]
     public JsonResult GetUserByRole(string id)
     {
-        List<User> users=new List<User>{
+        List<User> users = new List<User>{
             new User{UserId=1 ,Email="Sahil" ,ContactNumber="9975966045" ,Password="sahil@123",Role="Admin"},
             new User{UserId=2 ,Email="Shubham" ,ContactNumber="9309478546" ,Password="shubham@311",Role="Admin"},
             new User{UserId=3 ,Email="Abhay" ,ContactNumber="7754123965" ,Password="abhay@22",Role="Customer"},
@@ -73,13 +73,15 @@ public class SecureController : Controller
 
         };
 
-       List<User> userList=new List<User>();
-       foreach (var user in users){
-        if(user.Role ==id){
-            userList.Add(user);
-         Console.WriteLine(user.Email);
+        List<User> userList = new List<User>();
+        foreach (var user in users)
+        {
+            if (user.Role == id)
+            {
+                userList.Add(user);
+                Console.WriteLine(user.Email);
+            }
         }
-       }
         return Json(userList);
     }
 
@@ -105,7 +107,12 @@ public class SecureController : Controller
         return Json(result);
     }
 
-
+    [HttpPut]
+    public JsonResult UpdatePassword([FromBody] ChangedCredential credential)
+    {
+        bool result = _securessvr.UpdatePassword(credential);
+        return Json(result);
+    }
 
 
 }

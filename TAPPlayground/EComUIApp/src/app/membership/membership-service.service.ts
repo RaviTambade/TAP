@@ -26,4 +26,10 @@ export class MembershipService {
     console.log(user)
     return this.svc.put<any>(url,user);
   }
+
+  updatePassword(user:any):Observable<any>{
+    let url="http://localhost:5223/secure/updatepassword";
+    console.log(user)
+    return this.svc.put<any>(url,user);
+  }
 }

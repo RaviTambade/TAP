@@ -15,9 +15,9 @@ export class NewPasswordComponent {
 
   constructor(private svc: MembershipService) { }
 
-  onChangePassword(form:any) {
-   
-    if(this.password.length < 8){
+  onChangePassword(form: any) {
+
+    if (this.password.length < 8) {
       console.log(form)
       alert("password should be minimum 8 characters ")
       return;
@@ -25,8 +25,8 @@ export class NewPasswordComponent {
 
     if (this.password === this.confirmPassword) {
       console.log(form)
-      let user:User={
-        email:this.email,
+      let user: User = {
+        email: this.email,
         password: this.password
       }
       console.log(user);
@@ -34,10 +34,12 @@ export class NewPasswordComponent {
         console.log(response);
         if (response) {
           alert("Password changed")
+        } else {
+          alert("Error while changing password")
         }
-      })
+      });
     } else {
-      alert("Error while changing password")
+      alert("password dosen't match")
     }
   }
 }       
