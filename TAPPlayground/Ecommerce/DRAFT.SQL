@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 -- Active: 1678361403571@@127.0.0.1@3306@ecommerce
 =======
 -- Active: 1678016377342@@127.0.0.1@3306@Ecommerce
 >>>>>>> 0ee67af505ff396831d5a71e20e1a20ee56187a8
+=======
+-- Active: 1677916902963@@127.0.0.1@3306@ecommerce
+>>>>>>> f8c513a02366b87a8cf8ebe2bac2909b2b361984
 
 
 CREATE DATABASE Ecommerce;
@@ -48,7 +52,7 @@ DELIMITER ;
 
 
 select * from products;
-INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546690,'MAHB0000286','2023-03-01 12:40:40',22555);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546655,'MAHB0000286','2023-03-01 12:40:40',22555);
 select * from suppliers;
 
 

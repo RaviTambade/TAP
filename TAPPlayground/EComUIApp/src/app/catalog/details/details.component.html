@@ -1,0 +1,28 @@
+<input type="text" [(ngModel)]="productId">
+<button (click)="getById(productId )">Get</button>
+
+<div *ngIf="product">
+    <table>
+       <thead>
+        <tr>
+            <th>productId</th>
+            <th>productTitle</th>
+            <th>description</th>
+            <th>stockAvailable</th>
+            <th>unitprice</th>
+            <th>categoryId</th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+            <td>{{product.productId}}</td>
+            <td>{{product.productTitle}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.stockAvailable}}</td>
+            <td>{{product.unitPrice}}</td>
+            <td>{{product.categoryId}}</td>
+        </tr>
+       </tbody>
+
+    </table>
+</div>

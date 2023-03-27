@@ -1,0 +1,12 @@
+
+<div *ngFor="let product of products " >
+<p>Product Id :{{product.productId}}</p>
+<p>Product Title :{{product.productTitle}}</p>
+<p>Product Description :{{product.description}}</p>
+<img [src]= "product.imageurl" width="200" height="200"/>
+<p>Product StockAvailable :{{product.stockAvailable}}</p>
+<p>Product UnitPrice :{{product.unitPrice}}</p>
+<p>Product CategoryId:{{product.categoryId}}</p>
+<app-counter [count]="product.unitPrice" (update)="onUpdate($event)"></app-counter>
+<hr/>
+</div> 
