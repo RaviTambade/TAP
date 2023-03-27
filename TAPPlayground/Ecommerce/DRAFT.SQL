@@ -233,7 +233,7 @@ INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 15
 INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 8, 35,4);
 INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 7, 35,4);
 select * from orders;
-desc TABLE payments;
+SELECT *FROM payments;
 
 INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('2022-05-03','cash on delivery',1234,1);
 INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('2022-06-12','online payment',987514,2);
