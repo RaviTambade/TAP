@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Account } from '../account';
 import { AccountHubServiceService } from '../account-hub-service.service';
@@ -9,16 +10,18 @@ import { AccountHubServiceService } from '../account-hub-service.service';
 })
 export class AccountdetailsComponent {
     accountId:number|undefined
-    account:Account|undefined
+    account:Account|any
    
     
     @Output() sendAccount =new EventEmitter();
-    constructor(private svc: AccountHubServiceService) { }
+    constructor(private svc: AccountHubServiceService,private datepipe:DatePipe) { }
    
      getById(id:any){
        this.svc.getById(id).subscribe((response) => {
          this.account = response;
-         this.sendAccount.emit({account:this.account});
+         this.account.registerDate=this.datepipe.transform(this.account.registerDate,'yyyy-MM-dd hh.mm.ss')
+         console.log(this.account.registerDate);
+        this.sendAccount.emit({account:this.account});
          console.log(this.account);
        })
    

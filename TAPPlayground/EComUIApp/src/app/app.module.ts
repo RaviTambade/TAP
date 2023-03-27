@@ -5,9 +5,9 @@ import { Account } from './account/account';
 import { AccountModule } from './account/account.module';
 import { RouterModule, Routes } from '@angular/router';
 import { MembershipModule } from './membership/membership.module';
-import {AppComponent} from './app.component';
 import { SuppliersModule } from './suppliers/suppliers.module';
-
+import { AppComponent } from './app.component';
+import { DatePipe } from '@angular/common';
 
 //metadata
 //decorator
@@ -27,10 +27,11 @@ const routes: Routes = [
     AccountModule, 
     MembershipModule,
     SuppliersModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    DatePipe
 
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent] //Root Component
 })
 export class AppModule { } //Root Module

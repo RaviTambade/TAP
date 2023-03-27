@@ -2,7 +2,7 @@ export class Account {
        constructor(public accountId:number,
               public accountNumber:number,
               public ifscCode:string,
-              public registerDate:Date=new Date(),
+              public registerDate:string,
               public balance:number){}
 
 }
