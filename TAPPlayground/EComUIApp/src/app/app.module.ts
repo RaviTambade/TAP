@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { MembershipModule } from './membership/membership.module';
+import { SuppliersModule } from './suppliers/suppliers.module';
 
 //metadata
 //decorator
@@ -21,6 +22,7 @@ const routes: Routes = [
     BrowserModule,
     FormsModule,
     MembershipModule,
+    SuppliersModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],

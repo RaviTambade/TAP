@@ -1,0 +1,16 @@
+
+<div *ngIf="supplier && supplier.supplierId!=0">
+    <h3>Supplier Details</h3>
+  <p><label ><b>SupplierId :</b></label>{{ supplier.supplierId }}</p>
+  <p><label ><b>SupplierName :</b></label>{{ supplier.supplierName }}</p>
+  <p><label ><b>CompanyName :</b></label>{{ supplier.companyName }}</p>
+  <p><label ><b>ContactNumber :</b></label>{{ supplier.contactNumber }}</p>
+  <p><label ><b>Email :</b></label>{{ supplier.email}}</p>
+  <p><label ><b>Address :</b></label>{{ supplier.address }}</p>
+  <p><label ><b>City :</b></label>{{ supplier.city }}</p>
+  <p><label ><b>State :</b></label>{{ supplier.state}}</p>
+  <p><label ><b>AccountNumber :</b></label>{{ supplier.accountNumber}}</p>
+  <div *ngIf=" supplier && supplier.supplierId==0 ">
+    <p>Supplier not Found</p>
+    </div>
+  

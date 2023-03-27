@@ -1,0 +1,5 @@
+<p></p>
+<app-getsupplier (sendSupplier)="receiveSupplier($event)"></app-getsupplier>
+<div *ngIf="supplier">
+  <app-details [supplier]="supplier"></app-details>
+</div>

@@ -1,4 +1,4 @@
--- Active: 1678016377342@@127.0.0.1@3306@Ecommerce
+-- Active: 1677916902963@@127.0.0.1@3306@ecommerce
 
 
 CREATE DATABASE Ecommerce;
@@ -44,7 +44,7 @@ DELIMITER ;
 
 
 select * from products;
-INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546690,'MAHB0000286','2023-03-01 12:40:40',22555);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546655,'MAHB0000286','2023-03-01 12:40:40',22555);
 select * from suppliers;
 
 
