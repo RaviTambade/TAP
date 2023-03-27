@@ -1,3 +1,4 @@
+-- Active: 1678361403571@@127.0.0.1@3306@ecommerce
 
 
 CREATE DATABASE Ecommerce;
@@ -100,7 +101,7 @@ INSERT INTO transactions(from_account_number, to_account_number,transaction_date
 INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES(39025545660,39025545662,'2023-03-01 12:40:35',22500);
 INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025545659,39025545663,'2023-03-01 12:40:35',22500);
 INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025545658,39025545665,'2023-03-01 12:40:35',22500);
-SELECT * FROM suppliers;
+SELECT * FROM accounts;
 
 select * from users;
 
