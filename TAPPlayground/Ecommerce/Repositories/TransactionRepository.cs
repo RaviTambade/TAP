@@ -153,7 +153,7 @@ public class TransactionRepository : ITransactionRepository
         return status;
     }
 
-      public bool Delete(int transactionId)
+    public bool Delete(int transactionId)
     {
        bool status = false;
         MySqlConnection con = new MySqlConnection();
