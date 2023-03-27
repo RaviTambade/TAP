@@ -54,9 +54,10 @@ export class AppComponent implements OnInit {
   }
 
   onRegisterClick(){
-    console.log("Register is clicked....")
+    console.log("Register is clicked....");
   }
 
+  Name:string = 'pragati';
 
   //separation of conern
   //loosely coupled architecture
