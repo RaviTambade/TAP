@@ -21,6 +21,15 @@ export class AccountHubServiceService {
     return this.http.get<any>(url);
     
   } 
+  insert(account:Account):Observable<any>{
+    let url= "http://localhost:5223/accounts/insert";
+    return this.http.post<Account>(url,account);
+  }
+  update(account:Account):Observable<any>{
+    let url="http://localhost:5223/accounts/update";
+    return this.http.put<any>(url,account);
+   } 
+  
   
 
 }

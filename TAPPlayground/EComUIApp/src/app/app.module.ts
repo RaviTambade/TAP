@@ -5,11 +5,9 @@ import { Account } from './account/account';
 import { AccountModule } from './account/account.module';
 import { RouterModule, Routes } from '@angular/router';
 import { MembershipModule } from './membership/membership.module';
-<<<<<<< HEAD
 import {AppComponent} from './app.component';
-=======
 import { SuppliersModule } from './suppliers/suppliers.module';
->>>>>>> f8c513a02366b87a8cf8ebe2bac2909b2b361984
+import { DatePipe } from '@angular/common';
 
 //metadata
 //decorator
@@ -29,10 +27,11 @@ const routes: Routes = [
     AccountModule, 
     MembershipModule,
     SuppliersModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    DatePipe
 
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent] //Root Component
 })
 export class AppModule { } //Root Module

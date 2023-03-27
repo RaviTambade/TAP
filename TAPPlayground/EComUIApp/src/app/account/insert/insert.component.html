@@ -1,0 +1,24 @@
+<h3>Insert account</h3>
+
+<div *ngIf="account" >
+  
+<form #accountForm="ngForm" (ngSubmit)="insertAccount(accountForm.value)">
+<p><label ><b>AccountNumber :</b></label><input type="number" name="accountNumber" #accountNumber="ngModel" [(ngModel)]="account.accountNumber"></p>
+<p><label ><b>IFSCCode :</b></label><input type="text" name="ifscCode" #ifscCode="ngModel" [(ngModel)]=" account.ifscCode "></p>
+<p><label ><b>RegisterDate :</b></label><input type="text " placeholder="YYYY-MM-DD"  name="registerDate" #registerDate="ngModel" [(ngModel)]="account.registerDate "></p>
+<p><label ><b>Balance :</b></label><input type="number" name="balance" #balance="ngModel" [(ngModel)]=" account.balance"></p>
+
+<button type="submit" >Insert</button>
+</form>
+</div>
+<div *ngIf="status">
+  <p> inserted sucessfully</p>
+</div>
+
+<div *ngIf="status == false">
+  <p>Plese insert Valid information</p>
+</div>
+
+<hr>
+
+
