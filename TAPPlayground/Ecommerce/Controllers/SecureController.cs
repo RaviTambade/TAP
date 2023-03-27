@@ -114,5 +114,12 @@ public class SecureController : Controller
         return Json(result);
     }
 
+    [HttpPut]
+    public JsonResult UpdateEmail([FromBody] ChangedCredential credential)
+    {
+        bool result = _securessvr.UpdateEmail(credential);
+        return Json(result);
+    }
+
 
 }

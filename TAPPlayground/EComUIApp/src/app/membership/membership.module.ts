@@ -10,6 +10,7 @@ import { AssignroleComponent } from './assignrole/assignrole.component';
 import { MembershipRoutingComponent } from './membership-routing/membership-routing.component';
 import { Route, RouterModule, Routes } from '@angular/router';
 import { UpdatePasswordComponent } from './update-password/update-password.component';
+import { UpdateEmailComponent } from './update-email/update-email.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path:'forgot-password',component:ForgotPasswordComponent},
   {path:'assign-role',component:AssignroleComponent},
   {path:'update-password',component:UpdatePasswordComponent},
+  {path:'update-email',component:UpdateEmailComponent},
 ]
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ const routes: Routes = [
     NewPasswordComponent,
     AssignroleComponent,
     MembershipRoutingComponent,
-    UpdatePasswordComponent
+    UpdatePasswordComponent,
+    UpdateEmailComponent
   ],
   imports: [
     CommonModule,
