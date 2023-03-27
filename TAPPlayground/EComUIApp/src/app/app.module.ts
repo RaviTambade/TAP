@@ -8,6 +8,7 @@ import { MembershipModule } from './membership/membership.module';
 import { SuppliersModule } from './suppliers/suppliers.module';
 import { AppComponent } from './app.component';
 import { DatePipe } from '@angular/common';
+import { CustomerModule } from './customer/customer.module';
 
 //metadata
 //decorator
@@ -27,6 +28,8 @@ const routes: Routes = [
     AccountModule, 
     MembershipModule,
     SuppliersModule,
+    CustomerModule,
+    
     RouterModule.forRoot(routes),
     DatePipe
 
