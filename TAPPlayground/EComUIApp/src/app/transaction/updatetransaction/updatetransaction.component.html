@@ -1,0 +1,45 @@
+
+<h3>Update Transaction</h3>
+<hr/>
+
+<get-transaction (sendTransaction)="receiveTransaction($event)"></get-transaction>
+
+<div *ngIf="transaction && transaction.transactionId!=0">
+    <div *ngIf="transaction">
+        <form #updateForm="ngForm" (ngSubmit)="updateTransaction(updateForm.value)">
+         <table>
+            <tr>
+                <td><label>From Account Number</label></td>
+                <td><input type="number" name="fromAccountNumber" [(ngModel)]="transaction.fromAccountNumber"/></td>
+            </tr>
+            <tr>
+                <td><label>To Account Number</label></td>
+                <td><input type="number" name="toAccountNumber" [(ngModel)]="transaction.toAccountNumber"/></td>
+            </tr>
+            <tr>
+                <td><label>Transaction Date</label></td>
+                <td><input type="text" name="transactionDate" [(ngModel)]="transaction.transactionDate"/></td>
+            </tr>
+            <tr>
+                <td><label>Amount</label></td>
+                <td><input type="number" name="amount" [(ngModel)]="transaction.amount"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="submit">Submit</button></td>
+            </tr>
+         </table>
+    </form>
+</div>
+
+<div *ngIf="transaction && transaction.transactionId!==1">
+    <p>Transaction not Found</p>
+</div>
+
+<div *ngIf="status">
+    <p>Transaction Inserted Successfully</p>
+</div>
+
+<div *ngIf="status == false">
+    <p>Error While Inserting</p>
+</div>

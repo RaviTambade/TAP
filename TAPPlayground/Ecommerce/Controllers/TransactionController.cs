@@ -57,7 +57,6 @@ public class TransactionController : Controller
     [HttpPost]
      public JsonResult InsertTransaction([FromBody] Transaction transaction)
      {
-        Console.WriteLine(transaction); 
         bool status=_transactionsrv.Insert(transaction);
         return Json(status);
     }
@@ -65,7 +64,6 @@ public class TransactionController : Controller
     [HttpPut]
     public JsonResult UpdateTransaction([FromBody] Transaction transaction)
     {
-        Console.WriteLine(transaction);
         bool result = _transactionsrv.Update(transaction);
         return Json(result);
     }

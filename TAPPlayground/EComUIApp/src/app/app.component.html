@@ -1,37 +1,22 @@
-<!-- Presentation of component-->
 
-<!--Data Binding-->
-<h1>{{title}}</h1>
+<!--<h3>Transactions List</h3>
 <hr/>
-<input type="checkbox" [(ngModel)]="status"/> I Accept Agreement
+<transaction-list></transaction-list>-->
 
-<!--interpolation experssion-->
-<p>{{company}}</p>
-<p> First Name: {{person.firstname}}</p>
-<p> Last Name: {{person.lastname}}</p>
-<p> Email: {{person.email}}</p>
-
-<!-- product display-->
+<!--<h3>Get Transaction By Id </h3>
 <hr/>
-<p> Id: {{product.id}}</p>
-<!--Pipe Inbuilt : currency, lowercase, uppercase, etc.-->
-<p> Title: {{product.title|uppercase}}</p>
-<p id="para1"> Description: {{product.description}}</p>
-<p> Unit Price: {{product.unitprice|currency}}</p>
-<p> Quantity: {{product.quantity}}</p>
+<transactiondetails></transactiondetails>
+<hr/>-->
 
-<!--Property Binding-->
-<img [src]="product.imageurl" width="200" height="200"/>
-
-<!-- Form Data Binding-->
+<!--<h3>Insert Transaction</h3>
 <hr/>
-<div>
-    <label for="fname">Email:</label><br>
-    <!--Two way Binding-->
-    <input type="email" id="email" name="email" [(ngModel)]="email"><br>
-    <label for="lname">Password:</label><br>
-    <input type="password" id="password" name="password" [(ngModel)]="password"><br><br>
-    <!--Event Binding-->
-    <button (click)="onLoginClick()">login</button>
-    <button (click)="onRegisterClick()">register</button>
-</div>
+<inserttransaction></inserttransaction>-->
+
+<!--<h3> Get Transaction By Id</h3>
+<hr/>
+<get-transaction></get-transaction>-->
+
+<h3> Update Transaction</h3>
+<hr/>
+<updatetransaction></updatetransaction>
+

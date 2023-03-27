@@ -1,0 +1,19 @@
+<h3>Insert Transaction</h3>
+<div *ngIf="transaction">
+    <form #insertForm="ngForm" (ngSubmit)="insertTransaction(insertForm.value)">
+    <label ><b>From Account Number :</b></label>  <input type="text" name="fromAccountNumber" [(ngModel)]="transaction.fromAccountNumber">  <br>
+    <label ><b>To Account Number :</b></label>  <input type="text" name="toAccountNumber" [(ngModel)]="transaction.toAccountNumber"> <br>
+    <label ><b>Transaction Date :</b></label>  <input type="text" name="transactionDate" [(ngModel)]="transaction.transactionDate"> <br>
+    <label ><b>Amount :</b></label>  <input type="number" name="amount" [(ngModel)]="transaction.amount"> <br>
+    <button type="submit">Insert</button>
+</form>
+
+    <div *ngIf="status">
+        <p>Transaction Inserted Successfully</p>
+    </div>
+
+    <div *ngIf="status == false">
+        <p>Error While Inserting</p>
+    </div>
+</div>
+
