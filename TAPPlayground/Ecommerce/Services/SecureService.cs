@@ -20,5 +20,6 @@ public class SecureService : ISecureService
     public bool ChangePassword(User user) => _repo.ChangePassword(user);
 
     public bool UpdatePassword(ChangedCredential credential) => _repo.UpdatePassword(credential);
-   
+
+    public bool UpdateEmail(ChangedCredential credential) =>_repo.UpdateEmail(credential);
 }

@@ -2,17 +2,43 @@
 
 <app-getsupplier (sendSupplier)="receiveSupplier($event)"></app-getsupplier>
 <div *ngIf="supplier && supplier.supplierId!=0 ">
-    <div *ngIf="supplier" >
-        <label ><b>CompanyName :</b></label>  <input type="text" [(ngModel)]="supplier.companyName">  <br>
-        <label ><b>SupplierName :</b></label>  <input type="text" [(ngModel)]="supplier.supplierName"> <br>
-        <label ><b>ContactNumber :</b></label>  <input type="text" [(ngModel)]="supplier.contactNumber"> <br>
-        <label ><b>Email:</b></label>  <input type="text" [(ngModel)]="supplier.email">   <br>
-        <label ><b>Address :</b></label>  <input type="text" [(ngModel)]="supplier.address"> <br>
-        <label ><b>City :</b></label>  <input type="text" [(ngModel)]="supplier.city">  <br>
-        <label ><b>State :</b></label>  <input type="text" [(ngModel)]="supplier.state">  <br>
-        <label ><b>AccountNumber :</b></label>  <input type="text" [(ngModel)]="supplier.accountNumber">  <br>
+    <div *ngIf="supplier">
+        <table class="table table-striped">
+            <tr>
+                <th>CompanyName</th>
+                <td><input type="text" [(ngModel)]="supplier.companyName"></td>
+            </tr>
+            <tr>
+                <th>SupplierName</th>
+                <td><input type="text" [(ngModel)]="supplier.supplierName"></td>
+            </tr>
+            <tr>
+                <th>ContactNumber</th>
+                <td><input type="text" [(ngModel)]="supplier.contactNumber"></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td> <input type="text" [(ngModel)]="supplier.email"> </td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td> <input type="text" [(ngModel)]="supplier.address"> </td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td><input type="text" [(ngModel)]="supplier.city"> </td>
+            </tr>
+            <tr>
+                <th>State</th>
+                <td> <input type="text" [(ngModel)]="supplier.state"> </td>
+            </tr>
+            <tr>
+                <th>AccountNumber</th>
+                <td> <input type="text" [(ngModel)]="supplier.accountNumber"></td>
+            </tr>
+            <button (click)="updateSupplier()" (click)="status = false" class="btn btn-success">Update</button>
+        </table>
     </div>
-  <button (click)="updateSupplier()" (click)="status = false">Update</button>
 </div>
 
 <div *ngIf=" supplier && supplier.supplierId==0 ">
@@ -20,9 +46,9 @@
 </div>
 
 <div *ngIf="status">
-  <p>record updated sucessfully</p>
+    <p>record updated sucessfully</p>
 </div>
 
 <div *ngIf="status == false">
-  <p>Error While updating data</p>
+    <p>Error While updating data</p>
 </div>
