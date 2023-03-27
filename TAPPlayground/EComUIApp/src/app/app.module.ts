@@ -4,10 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { Account } from './account/account';
 import { AccountModule } from './account/account.module';
 import { RouterModule, Routes } from '@angular/router';
-<<<<<<< HEAD
-import { AppComponent } from './app.component';
-=======
->>>>>>> 7192d75a2cb5f846d4127886880d9246e3a480de
 import { MembershipModule } from './membership/membership.module';
 import {AppComponent} from './app.component';
 import { SuppliersModule } from './suppliers/suppliers.module';
