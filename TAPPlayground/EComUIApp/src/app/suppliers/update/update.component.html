@@ -1,0 +1,54 @@
+<h2>Update page</h2>
+
+<app-getsupplier (sendSupplier)="receiveSupplier($event)"></app-getsupplier>
+<div *ngIf="supplier && supplier.supplierId!=0 ">
+    <div *ngIf="supplier">
+        <table class="table table-striped">
+            <tr>
+                <th>CompanyName</th>
+                <td><input type="text" [(ngModel)]="supplier.companyName"></td>
+            </tr>
+            <tr>
+                <th>SupplierName</th>
+                <td><input type="text" [(ngModel)]="supplier.supplierName"></td>
+            </tr>
+            <tr>
+                <th>ContactNumber</th>
+                <td><input type="text" [(ngModel)]="supplier.contactNumber"></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td> <input type="text" [(ngModel)]="supplier.email"> </td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td> <input type="text" [(ngModel)]="supplier.address"> </td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td><input type="text" [(ngModel)]="supplier.city"> </td>
+            </tr>
+            <tr>
+                <th>State</th>
+                <td> <input type="text" [(ngModel)]="supplier.state"> </td>
+            </tr>
+            <tr>
+                <th>AccountNumber</th>
+                <td> <input type="text" [(ngModel)]="supplier.accountNumber"></td>
+            </tr>
+            <button (click)="updateSupplier()" (click)="status = false" class="btn btn-success">Update</button>
+        </table>
+    </div>
+</div>
+
+<div *ngIf=" supplier && supplier.supplierId==0 ">
+    <p>Supplier not Found</p>
+</div>
+
+<div *ngIf="status">
+    <p>record updated sucessfully</p>
+</div>
+
+<div *ngIf="status == false">
+    <p>Error While updating data</p>
+</div>
