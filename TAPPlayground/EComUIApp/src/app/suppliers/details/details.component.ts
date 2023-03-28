@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Supplier } from '../supplier';
+import { SupplierhubService } from '../supplierhub.service';
 
 @Component({
   selector: 'app-details',
