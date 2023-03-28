@@ -1,2 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+<<<<<<< HEAD
+@Import "~bootstrap/dist/css/bootstrap.css";
+
+
+
+=======
 @Import "~bootstrap/dist/css/bootstrap.css"
+>>>>>>> 8b9664d20ad8ffcd6a9d3aaa994654477556d1b0
