@@ -172,11 +172,8 @@ INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 12
 INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 15, 35,4);
 INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 8, 35,4);
 INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 7, 35,4);
-<<<<<<< HEAD
 select * from orders;
 SELECT *FROM payments;
-=======
->>>>>>> 5b8dfd92446919e935e6564dd47f06a76890d3ef
 
 INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('2022-05-03','cash on delivery',1234,1);
 INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('2022-06-12','online payment',987514,2);
@@ -229,6 +226,7 @@ select * from orders;
 select * from orderdetails;
 select * from categories;
 select * from accounts;
+
 select * from suppliers;
 select * from  transactions ;
 

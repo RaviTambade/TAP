@@ -31,8 +31,8 @@ export class AccountHubServiceService {
    } 
   
   delete(accountId:number):Observable<any>{
-    let url="http://localhost:5223/accounts/delete";
-    return this.http.delete<any>(url,accountId)
+    let url="http://localhost:5223/accounts/delete/"+accountId;
+    return this.http.delete<any>(url);
   }
 
 }
