@@ -148,7 +148,8 @@ public class CustomerRepository : ICustomerRepository
         MySqlConnection connection=new MySqlConnection(_conString);
         try{
             MySqlCommand command=new MySqlCommand();
-            command.CommandText=$"INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number)VALUES(@firstName,@lastName,@email,@contactNumber,@password,@accountNumber";
+            command.CommandText=$"INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number)VALUES(@firstName,@lastName,@email,@contactNumber,@password,@accountNumber)";
+        Console.WriteLine(customer.ToString());
            Console.WriteLine(command.CommandText);
             command.Connection=connection;
             command.Parameters.AddWithValue("@firstName",customer.FirstName);
