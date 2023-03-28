@@ -1,13 +1,11 @@
-
-<h3>Update Transaction</h3>
+<h2>Update Transaction</h2>
 <hr/>
-
 <get-transaction (sendTransaction)="receiveTransaction($event)"></get-transaction>
 
 <div *ngIf="transaction && transaction.transactionId!=0">
     <div *ngIf="transaction">
         <form #updateForm="ngForm" (ngSubmit)="updateTransaction(updateForm.value)">
-         <table>
+         <table class="table table-striped">
             <tr>
                 <td><label>From Account Number</label></td>
                 <td><input type="number" name="fromAccountNumber" [(ngModel)]="transaction.fromAccountNumber"/></td>
@@ -26,7 +24,7 @@
             </tr>
             <tr>
                 <td></td>
-                <td><button type="submit">Submit</button></td>
+                <td><button type="submit" class="btn btn-success">Submit</button></td>
             </tr>
          </table>
     </form>
