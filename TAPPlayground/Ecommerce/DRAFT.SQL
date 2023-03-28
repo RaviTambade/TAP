@@ -1,7 +1,13 @@
+<<<<<<< HEAD
+
+-- Active: 1677916902963@@127.0.0.1@3306@ecommerce
+
+=======
 -- Active: 1678116914124@@127.0.0.1@3306@ecommerce
+>>>>>>> 7a2de76971db2f7f8214f1b91fa894a8dbce4bc8
 
 
---  CREATE DATABASE Ecommerce;
+-- CREATE DATABASE Ecommerce;
 --  drop DATABASE ecommerce;
 --  USE  Ecommerce;
 
@@ -20,6 +26,7 @@ CREATE TABLE orderdetails(orderdetails_id INT NOT NULL AUTO_INCREMENT PRIMARY KE
 CREATE TABLE payments(payment_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,payment_date DATETIME, payment_mode ENUM('cash on delivery','online payment'),transection_id INT NOT NULL,order_id INT NOT NULL, CONSTRAINT fk_order_id_1 FOREIGN KEY (order_id) REFERENCES orders(order_id) ON UPDATE CASCADE ON DELETE CASCADE);
 CREATE TABLE shippers(shipper_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,company_name VARCHAR(25),contact_number VARCHAR (20),email VARCHAR(50),account_number BIGINT NOT NULL UNIQUE,CONSTRAINT account_number01 FOREIGN KEY(account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE);
 CREATE TABLE transactions(transaction_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,from_account_number BIGINT NOT NULL ,CONSTRAINT fk_account_no FOREIGN KEY(from_account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE,to_account_number BIGINT NOT NULL ,CONSTRAINT fk_acountno2 FOREIGN KEY(to_account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE, transaction_date DATETIME,amount DOUBLE);
+
 /*
 create table roles();
 */
@@ -226,7 +233,7 @@ select * from categories;
 select * from accounts;
 
 select * from suppliers;
-select * from  transactions ;
+select * from ;
 
 
 
@@ -429,7 +436,10 @@ select customers.first_name,customers.last_name,customers.email,customers.contac
 INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Vishwambhar','Kapare','1998-05-19','2023-03-15','70385488505','Rushi@gmail.com','Rc5269','./images/Rc.jpg',3,39025546605);
 
 select customers.first_name,customers.last_name,customers.email,customers.contact_number,accounts.account_number,accounts.ifsc_code,accounts.balance FROM customers  INNER JOIN  accounts ON accounts.account_number=customers.account_number;-- WHERE customers.cust_id=1; 
-SELECT * FROM  orderdetails;
 
+<<<<<<< HEAD
+SELECT suppliers.supplier_id,products.product_id,products.product_title,SUM(orderdetails.quantity) FROM (products INNER JOIN orderdetails ON products.product_id=orderdetails.product_id)INNER JOIN suppliers ON products.supplier_id=suppliers.supplier_id   WHERE suppliers.supplier_name="Akshay" GROUP BY products.product_id;
+=======
 SELECT * FROM transactions;
+>>>>>>> 7a2de76971db2f7f8214f1b91fa894a8dbce4bc8
 

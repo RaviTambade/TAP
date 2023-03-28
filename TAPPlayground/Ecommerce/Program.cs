@@ -5,7 +5,6 @@ using ECommerceApp.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCors();
-
 // Add services to the container.
 builder.Services.AddTransient<ICustomerRepository,CustomerRepository>();
 builder.Services.AddTransient<ICustomerService,CustomerService>();

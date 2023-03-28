@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Product } from '../product';
 import { ProductHubService } from '../producthub.service';
 
@@ -21,7 +22,7 @@ export class InsertComponent {
   status: boolean | undefined;
   
 
-  constructor(private svc: ProductHubService) { }
+  constructor(private svc: ProductHubService,private router:Router) { }
 
  
   insertProduct() {
@@ -29,6 +30,14 @@ export class InsertComponent {
     this.svc.insertProduct(this.product).subscribe((response) => {
       this.status = response;
       console.log(response);
+      if(response)
+      {
+        window.location.reload();
+        alert("record Inserted successfully")
+      }
+      else{
+        alert("Error while Inserting record")
+      }
     })
   }
 }

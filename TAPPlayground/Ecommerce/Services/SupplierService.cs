@@ -37,4 +37,8 @@ public class SupplierService : ISupplierService
     {
         return _repo.Delete(id);
     }
+
+    public List<ProductSupplier> GetProductSupplier(int id){
+        return _repo.GetProductSupplier(id);
+    }
 }

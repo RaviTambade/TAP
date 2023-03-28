@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Productsupplier } from './productsupplier';
 import { Supplier } from './supplier';
 
 @Injectable({
@@ -32,5 +33,9 @@ export class SupplierhubService {
   update(supplier:Supplier):Observable<any>{
     let url= "http://localhost:5223/suppliers/updatesupplier";
     return this.http.put<any>(url,supplier);
+  }
+  getProductSupplier(supplierId:number):Observable<Productsupplier>{
+    let url="http://localhost:5223/suppliers/getproductsupplier/"+supplierId;
+    return this.http.get<Productsupplier>(url);
   }
 }
