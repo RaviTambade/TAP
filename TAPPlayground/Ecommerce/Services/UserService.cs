@@ -11,10 +11,10 @@ public class UserService : IUserService
         this._repo = repo;
     }
 
-    public bool ValidateUser(User user) => _repo.ValidateUser(user);
+    public bool Validate(User user) => _repo.Validate(user);
 
-    public List<User> GetAllUser()
+    public List<User> GetAll()
     {
-        return _repo.GetAllUser();
+        return _repo.GetAll();
     }
 }

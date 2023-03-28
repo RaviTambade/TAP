@@ -1,0 +1,5 @@
+
+<get-transaction (sendTransaction)="receiveTransaction($event)"></get-transaction>
+<div *ngIf="transaction">
+    <details [transaction]="transaction"></details>
+</div>

@@ -33,8 +33,8 @@ builder.Services.AddTransient<IAccountRepository,AccountRepository>();
 builder.Services.AddTransient<IAccountService,AccountService>();
 builder.Services.AddTransient<IPaymentRepository,PaymentRepository>();
 builder.Services.AddTransient<IPaymentService,PaymentService>();
-//builder.Services.AddTransient<ISupplierRepository,SupplierRepository>();
-builder.Services.AddTransient<ISupplierRepository,SupplierORMRepository>();
+builder.Services.AddTransient<ISupplierRepository,SupplierRepository>();
+//builder.Services.AddTransient<ISupplierRepository,SupplierORMRepository>();
 builder.Services.AddTransient<ISupplierService,SupplierService>();
 builder.Services.AddTransient<ISecureRepository,SecureRepository>();
 builder.Services.AddTransient<ISecureService,SecureService>();
@@ -64,9 +64,8 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseCors(x => x.AllowAnyOrigin()
-                  .AllowAnyMethod()
-                  .AllowAnyHeader());
-
+                    .AllowAnyMethod()
+                    .AllowAnyHeader());
 app.UseRouting();
 app.UseSession();
 

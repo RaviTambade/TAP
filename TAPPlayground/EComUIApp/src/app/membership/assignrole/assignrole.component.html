@@ -1,0 +1,36 @@
+
+<div align="center">
+  <div class="col-md-4 mb-4 pb-2 ">
+    <div class="form-outline">
+
+      <label class="form-label"> Select Role</label>
+      <select
+        name="role"
+        id="role"
+        class="form-control form-control-lg form-select"
+        [(ngModel)]="role"
+      >
+        <option value="Admin">Admin</option>
+        <option value="Customer">Customer</option>
+        <option value="Shipper">Shipper</option>
+      </select>
+    </div>
+
+    <label for="email">Email</label>
+        
+    <input type="text" class="form-control" id="username" placeholder="name@example.com" name="email" [(ngModel)]="email">
+
+  </div>
+  
+    <div class="mt-4 pt-2">
+      <button
+        id="btn"
+        style="color: inherit; text-decoration: none; display: block"
+        class="btn btn-success fw-bold"
+        (click)="onSubmit()"
+      >
+      Assign
+      </button>
+    
+  </div>
+</div>

@@ -1,20 +1,39 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { Account } from './account/account';
+import { AccountModule } from './account/account.module';
+import { RouterModule, Routes } from '@angular/router';
+import { MembershipModule } from './membership/membership.module';
+import { SuppliersModule } from './suppliers/suppliers.module';
 import { AppComponent } from './app.component';
+import { DatePipe } from '@angular/common';
+import { OrderModule } from './order/order.module';
 
 //metadata
 //decorator
+
+
+const routes: Routes = [
+
+]
 @NgModule({
   declarations: [
     AppComponent
+    
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AccountModule, 
+    MembershipModule,
+    SuppliersModule,
+    OrderModule,
+    RouterModule.forRoot(routes),
+    DatePipe
+
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent] //Root Component
 })
 export class AppModule { } //Root Module

@@ -31,7 +31,7 @@ public class UserController : Controller
 
     public JsonResult ShowAllUser()
     {
-        var details = _usersrv.GetAllUser();
+        var details = _usersrv.GetAll();
         return Json(details);
     }
 }

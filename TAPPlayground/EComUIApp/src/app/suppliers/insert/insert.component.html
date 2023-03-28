@@ -1,0 +1,23 @@
+<h3>Insert Supplier</h3>
+    <form #supplierForm="ngForm" (ngSubmit)="insertSupplier(supplierForm.value)">
+        <div  class="mb-3">
+        <p><label class="form-label"><b>CompanyName:</b></label><input type="text" name="companyName" #companyName="ngModel" class="form-control"  [(ngModel)]="supplier.companyName"></p>
+        <p><label class="form-label"><b>SupplierName:</b></label><input type="text" name="supplierName" #supplierName="ngModel" class="form-control"  [(ngModel)]="supplier.supplierName"></p>
+        <p><label class="form-label"><b>ContactNumber:</b></label><input type="text" name="contactNumber" #contactNumber="ngModel" class="form-control"  [(ngModel)]="supplier.contactNumber"></p>
+        <p><label class="form-label"><b>Email:</b></label><input type="text" name="email" #email="ngModel" class="form-control"  [(ngModel)]="supplier.email"></p>
+        <p><label class="form-label"><b>Address:</b></label><input type="text" name="address" #address="ngModel" class="form-control"  [(ngModel)]="supplier.address"></p>
+        <p><label class="form-label"><b>City:</b></label><input type="text" name="city" #city="ngModel" class="form-control"  [(ngModel)]="supplier.city"></p>
+        <p><label class="form-label"><b>City:</b></label><input type="text" name="city" #city="ngModel" class="form-control"  [(ngModel)]="supplier.city"></p>
+        <p><label class="form-label"><b>State:</b></label><input type="text" name="state" #state="ngModel" class="form-control"  [(ngModel)]="supplier.state"></p>
+        <p><label class="form-label"><b>State:</b></label><input type="text" name="state" #state="ngModel" class="form-control"  [(ngModel)]="supplier.state"></p>
+        <p><label class="form-label"><b>AccountNumber:</b></label><input type="text" name="accountNumber" #accountNumber="ngModel" class="form-control"  [(ngModel)]="supplier.accountNumber"></p>
+        <button type="submit" class="btn btn-success">Insert</button>
+    </div>
+    </form>
+<div *ngIf="status">
+  <p>record inserted sucessfully</p>
+</div>
+
+<div *ngIf="status == false">
+  <p>Error While inserting</p>
+</div>
