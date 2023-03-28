@@ -11,14 +11,14 @@ import { ProductHubService } from '../producthub.service';
 export class ProductDetailsComponent implements OnInit {
 
   @Input() product: Product | undefined;
-  sub:any;
+  
   productId:any
   path = "assets/";
   status: boolean | undefined;
 
   constructor(private svc: ProductHubService, private route:ActivatedRoute,private router:Router) { }
   ngOnInit(): void {
-   this.sub=this.route.paramMap.subscribe((params)=>{
+   this.route.paramMap.subscribe((params)=>{
     console.log(params)
     this.productId=params.get('id');
   })
@@ -33,8 +33,8 @@ export class ProductDetailsComponent implements OnInit {
       if(confirm("Are you sure to delete "+ this.product?.productTitle)) {
     this.svc.deleteProduct(productId).subscribe((response) => {
      if(response){
+       this.router.navigate(['/products']);
       alert("Product deleted Successfully")
-      window.location.reload()
      }
      else{
       alert("Error while deleting Product  ")
@@ -44,7 +44,7 @@ export class ProductDetailsComponent implements OnInit {
 }
 
   onSelectUpdate(productId:any){
-   this.router.navigate(['/product/update',productId]);
+   this.router.navigate(['/product-update',productId]);
   }
 
  
