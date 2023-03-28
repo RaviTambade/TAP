@@ -1,0 +1,21 @@
+<!-- <div><button (click)="getAll()">GetProducts</button></div> -->
+
+<div *ngFor="let product of products">
+  <div>
+    <div
+      class="height d-flex justify-content-left align-items-center mt-2 mb-2">
+      <div class="card p-4 m-4">
+        <div class="d-flex justify-content-left align-items-center">
+          <div>
+            <img [src]="path + product.imageUrl" width="100" />
+          </div>
+          <div class="m-2 p-4">
+            <h4 class="text-uppercase" (click)="onSelect(product)">
+              <b>{{ product.productTitle }}</b>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

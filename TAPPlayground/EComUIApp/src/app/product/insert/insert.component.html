@@ -1,0 +1,152 @@
+
+
+<section class="vh-100 gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-12 col-lg-9 col-xl-7">
+        <div
+          class="card shadow-2-strong card-registration"
+          style="border-radius: 15px ">
+          <div class="card-body p-4 p-md-5">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Add Product</h3>
+            <form>
+              <div class="row">
+                <div class="col-md-8 mb-4">
+                  <div class="form-outline">
+                    <input
+                      type="text"
+                      id="productTitle"
+                      name="productTitle"
+                      class="form-control form-control-lg"
+                      [(ngModel)]="product.productTitle"
+                    />
+                    <label class="form-label" for="productTitle">Product Title</label>
+                  </div>
+                </div>
+                </div>
+               
+
+                <div class="row">
+                    <div class="col-md-8 mb-4">
+                      <div class="form-outline">
+                        <input
+                          type="text"
+                          id="productDescription"
+                          name="productDescription"
+                          class="form-control form-control-lg"
+                          [(ngModel)]="product.description"
+                        />
+                        <label class="form-label" for="productDescription">Product Description </label>
+                      </div>
+                    </div>
+                    </div>
+                    
+
+
+              <div class="row">
+                <div class="col-md-6 mb-4 pb-2">
+                  <div class="form-outline">
+                    <input
+                      type="number"
+                      id="unitPrice"
+                      name="unitPrice"
+                      class="form-control form-control-lg"
+                      [(ngModel)]="product.unitPrice"
+                      />
+                    <label class="form-label" for="unitPrice">UnitPrice</label
+                    >
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4 pb-2">
+                  <div class="form-outline">
+                    <input
+                    type="number"
+                    id="stockAvailable"
+                    name="stockAvailable"
+                    class="form-control form-control-lg"
+                    [(ngModel)]="product.stockAvailable"
+                    />
+                  <label class="form-label" for="stockAvailable">Stock Available</label
+                  >
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="row">
+                
+                <div class="col-md-6 mb-4 pb-2">
+                    <div class="form-outline ">
+                    
+                      <select   class="form-control form-control-lg form-select" name="categoryId" 
+                      [(ngModel)]="product.categoryId" required>
+                        <option [ngValue]="1">Biscuits</option>
+                        <option [ngValue]="2">ColdDrinks</option>
+                        <option [ngValue]="3">Snacks</option>
+                        <option [ngValue]="4">Electronics</option>
+                      </select>
+                      <label class="form-label "> Category</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4 pb-2">
+                    <div class="form-outline ">
+                      <select   class="form-control form-control-lg form-select" name="supplierId"
+                      [(ngModel)]="product.supplierId" >
+                        <option [ngValue]="1">Hindustan Pvt.Ltd </option>
+                        <option [ngValue]="2">Britinia Pvt.Ltd</option>
+                        <option [ngValue]="3">Surya Pvt.Ltd</option>
+                        <option [ngValue]="4">Naturals Pvt.Ltd</option>
+                        <option [ngValue]="5">Goukul Pvt.Ltd</option>
+                      </select>
+                      <label class="form-label "> supplier</label>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-8 mb-4">
+                      <div class="form-outline">
+                        <input
+                          type="text"
+                          id="imageUrl"
+                          name="imageUrl"
+                          class="form-control form-control-lg"
+                          [(ngModel)]="product.imageUrl"
+                        />
+                        <label class="form-label" for="imageUrl">Product Image</label>
+                      </div>
+                    </div>
+                    </div>
+               
+            <div class="d-grid">
+              <button class="btn btn-success fw-bold" (click)="insertProduct()" (click)="status = false" type="submit">Add </button>
+            </div>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+ 
+    
+<!-- 
+<h3>Insert Product</h3>
+
+<div *ngIf="product" >
+    <label ><b>Title :</b></label>  <input type="text" [(ngModel)]="product.productTitle">  <br>
+    <label ><b>Description :</b></label>  <input type="text" [(ngModel)]="product.description"> <br>
+    <label ><b>StockAvailable :</b></label>  <input type="number" [(ngModel)]="product.stockAvailable"> <br>
+    <label ><b>UnitPrice :</b></label>  <input type="number" [(ngModel)]="product.unitPrice">   <br>
+    <label ><b>CategoryId :</b></label>  <input type="number" [(ngModel)]="product.categoryId"> <br>
+    <label ><b>SupplierId :</b></label>  <input type="number" [(ngModel)]="product.supplierId"> <br>
+    <label ><b>Image :</b></label>  <input type="text" [(ngModel)]="product.imageUrl">  <br>
+<button (click)="insertProduct()" (click)="status = false">Insert</button>
+</div> -->
+<div *ngIf="status">
+  <p>record inserted sucessfully</p>
+</div>
+
+<div *ngIf="status == false">
+  <p>Error While inserting</p>
+</div>
