@@ -1,0 +1,30 @@
+<h3>Insert Employee</h3>
+
+<div *ngIf="employee">
+    <form #insertForm="ngForm" (ngSubmit)="insertEmployee(insertForm.value)">
+        <label><b> First Name :</b></label> <input type="text" name="empFirstName" [(ngModel)]="employee.empFirstName"><br>
+        <label ><b> Last Name :</b></label> <input type="text" name="empLastName" [(ngModel)]="employee.empLastName"><br>
+        <label><b>Birth Date :</b></label> <input type="text" name="birthDate" [(ngModel)]="employee.birthDate"><br>
+        <label><b>Hire Date :</b></label> <input type="text" name="hireDate" [(ngModel)]="employee.hireDate"><br>
+        <label><b>Contact Number :</b></label> <input type="text" name="contactNumber" [(ngModel)]="employee.contactNumber"><br>
+        <label><b>Email :</b></label> <input type="text" name="email" [(ngModel)]="employee.email"><br>
+        <label><b>Password :</b></label> <input type="text" name="password" [(ngModel)]="employee.password"><br>
+        <label><b>Photo :</b></label> <input type="text" name="photo" [(ngModel)]="employee.photo"><br>
+        <label><b>Reports To  :</b></label> <input type="number" name="reportsTo" [(ngModel)]="employee.reportsTo"><br>
+        <label><b>Account Number :</b></label> <input type="text" name="accountNumber" [(ngModel)]="employee.accountNumber"><br>
+        <button type="submit">Insert</button>
+    </form>
+ 
+       <div *ngIf="status">
+           <p>Employee Inserted Successfully</p>
+       </div>      
+
+       <div *ngIf="status == false">
+           <p>Please insert valid information</p>
+       </div>
+
+
+</div>
+
+
+

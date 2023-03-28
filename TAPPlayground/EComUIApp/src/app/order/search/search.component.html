@@ -1,0 +1,5 @@
+
+<app-getorder (sendOrder)="receiveOrder($event)"></app-getorder>
+<div *ngIf="order">
+<app-details [order]="order"></app-details>
+</div>

@@ -1,0 +1,10 @@
+
+<getproduct (sendProduct)="reciveProduct($event)"></getproduct>
+<div *ngIf="product">
+  <product-details [product]="product"></product-details>
+</div>
+
+<div *ngIf="product && product.productId==0">
+    <p style="color: rgb(241, 64, 64);">Product not found</p>
+</div>
+
