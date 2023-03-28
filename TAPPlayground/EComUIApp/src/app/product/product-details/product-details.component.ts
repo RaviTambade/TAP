@@ -30,6 +30,7 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   deleteProduct(productId: number) {
+      if(confirm("Are you sure to delete "+ this.product?.productTitle)) {
     this.svc.deleteProduct(productId).subscribe((response) => {
      if(response){
       alert("Product deleted Successfully")
@@ -40,6 +41,7 @@ export class ProductDetailsComponent implements OnInit {
      }
     })
   }
+}
 
   onSelectUpdate(productId:any){
    this.router.navigate(['/product/update',productId]);
