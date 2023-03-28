@@ -1,11 +1,6 @@
 -- Active: 1678116914124@@127.0.0.1@3306@ecommerce
 
 
-
--- Active: 1678361403571@@127.0.0.1@3306@ecommerce
-
-
-
 --  CREATE DATABASE Ecommerce;
 --  drop DATABASE ecommerce;
 --  USE  Ecommerce;
@@ -175,6 +170,8 @@ INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 12
 INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 15, 35,4);
 INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 8, 35,4);
 INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 7, 35,4);
+select * from orders;
+SELECT *FROM payments;
 
 INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('2022-05-03','cash on delivery',1234,1);
 INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('2022-06-12','online payment',987514,2);
@@ -227,6 +224,7 @@ select * from orders;
 select * from orderdetails;
 select * from categories;
 select * from accounts;
+
 select * from suppliers;
 select * from  transactions ;
 
@@ -433,4 +431,5 @@ INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_nu
 select customers.first_name,customers.last_name,customers.email,customers.contact_number,accounts.account_number,accounts.ifsc_code,accounts.balance FROM customers  INNER JOIN  accounts ON accounts.account_number=customers.account_number;-- WHERE customers.cust_id=1; 
 SELECT * FROM  orderdetails;
 
+SELECT * FROM transactions;
 

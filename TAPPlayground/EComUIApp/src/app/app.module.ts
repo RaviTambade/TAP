@@ -12,6 +12,8 @@ import { DatePipe } from '@angular/common';
 import { CustomerModule } from './customer/customer.module';
 import { ProductsModule } from './product/products.module';
 
+
+
 //metadata
 //decorator
 
@@ -22,7 +24,6 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent
-    
   ],
   imports: [
     BrowserModule,
@@ -37,7 +38,6 @@ const routes: Routes = [
     ProductsModule,
     RouterModule.forRoot(routes),
     DatePipe
-
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent] //Root Component

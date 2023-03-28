@@ -1,0 +1,39 @@
+<p>insert Payment</p>
+<form #insertForm="ngForm"
+      (ngSubmit)="insert(insertForm.value)">
+<table>
+   <tr>
+        <td><label> paymentDate </label></td>
+        <td><input type="text"  name="paymentDate"  [(ngModel)]="payment.paymentDate"></td>
+    </tr>
+    <tr>
+        <td><label> paymentMode </label></td>
+        <td><input type="text"  name="paymentMode"  [(ngModel)]="payment.paymentMode"></td>
+    </tr>
+    <tr>
+        <td><label> transactionId </label></td>
+        <td><input type="text"  name="transactionId"  [(ngModel)]="payment.transactionId"></td>
+    </tr>
+    <tr>
+        <td><label> orderId </label></td>
+        <td><input type="text"  name="orderId"  [(ngModel)]="payment.orderId"></td>
+    </tr>
+
+    <tr>
+        <button type="submit">Submit</button>
+    </tr>
+</table>    
+    
+    </form>
+
+
+    <div  *ngIf="status">
+     <p>Payment inserts successfully</p>   
+
+    </div>
+
+    <div  *ngIf="status==false">
+        <p>error while inserting</p>   
+   
+       </div>
+   

@@ -9,11 +9,13 @@ import { AccountHubServiceService } from '../account-hub-service.service';
   styleUrls: ['./accountdetails.component.css']
 })
 export class AccountdetailsComponent {
-    accountId:number|undefined
+    accountId:any|undefined
     account:Account|any
+    status: boolean | undefined;
    
     
     @Output() sendAccount =new EventEmitter();
+ 
     constructor(private svc: AccountHubServiceService,private datepipe:DatePipe) { }
    
      getById(id:any){
@@ -26,5 +28,7 @@ export class AccountdetailsComponent {
        })
    
      }
+
+    
 
 }

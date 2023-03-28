@@ -39,7 +39,10 @@ export class InsertComponent {
         this.status = response;
         console.log(response);
         
-      })
+      },(error)=>{
+        this.status=false
+      }
+      )
   
       
     }
