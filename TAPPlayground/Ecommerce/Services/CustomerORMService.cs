@@ -4,11 +4,12 @@ using ECommerceApp.Services.Interfaces;
 
 namespace ECommerceApp.Services;
 public class CustomerORMService:ICustomerORMService{
-    private readonly ICustomerRepository _repo;
-    public CustomerORMService(ICustomerRepository repo){
+    private readonly ICustomerORMRepository _repo;
+    public CustomerORMService(ICustomerORMRepository repo){
         this._repo=repo;
     }
     public List<Customer> GetAll() => _repo.GetAll();
+    public bool Insert(Customer customer)=> _repo.Insert(customer);
 }
 
  

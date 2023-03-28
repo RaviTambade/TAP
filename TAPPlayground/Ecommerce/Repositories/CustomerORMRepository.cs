@@ -17,4 +17,16 @@ public class CustomerORMRepository : ICustomerORMRepository
             return customers.ToList<Customer>();
         }
     }
+
+     public bool Insert(Customer customer)
+    {
+        Console.WriteLine(customer.ToString());
+        bool status =false;
+        using(var context = new CustomerContext()){
+            context.customers.Add(customer);
+            context.SaveChanges();
+             status=true;
+        }
+        return status;
+    }
 }
