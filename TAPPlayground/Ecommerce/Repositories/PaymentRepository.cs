@@ -34,7 +34,7 @@ public class PaymentRepository : IPaymentRepository
             while (reader.Read())
             {
                 int paymentId =int.Parse(reader["payment_id"].ToString());
-                DateTime date =  DateTime.Parse(reader["payment_date"].ToString(),CultureInfo.InvariantCulture);
+                DateTime paymentDate = DateTime.ParseExact(reader["payment_date"].ToString(), "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
                 string? payment_mode = reader["payment_mode"].ToString();
                 int transactionId =int.Parse(reader["transection_id"].ToString());
                 int orderId =int.Parse(reader["order_id"].ToString());
@@ -42,7 +42,7 @@ public class PaymentRepository : IPaymentRepository
                 Payment payment = new Payment
                 {
                     PaymentId=paymentId,
-                    PaymentDate= date.ToLongDateString(),
+                    PaymentDate=paymentDate.ToLongDateString(),
                     PaymentMode = payment_mode,
                     TransactionId = transactionId,
                     OrderId = orderId
@@ -80,7 +80,7 @@ public class PaymentRepository : IPaymentRepository
             while (reader.Read())
             {
                 //paymentId =int.Parse(reader["payment_id"].ToString());
-                DateTime date =  DateTime.Parse(reader["payment_date"].ToString(),CultureInfo.InvariantCulture);
+                DateTime paymentDate = DateTime.ParseExact(reader["payment_date"].ToString(), "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
                 string? payment_mode = reader["payment_mode"].ToString();
                 int transactionId =int.Parse(reader["transection_id"].ToString());
                 int orderId =int.Parse(reader["order_id"].ToString());
@@ -88,7 +88,7 @@ public class PaymentRepository : IPaymentRepository
                 payment = new Payment()
                 {
                     PaymentId=id,
-                    PaymentDate= date.ToLongDateString(),
+                    PaymentDate=paymentDate.ToLongDateString(),
                     PaymentMode = payment_mode,
                     TransactionId = transactionId,
                     OrderId = orderId

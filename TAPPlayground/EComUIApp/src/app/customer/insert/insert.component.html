@@ -1,0 +1,21 @@
+<h3>Insert customer</h3>
+    <form #customerForm="ngForm" (ngSubmit)="insertCustomer(customerForm.value)">
+        <div  class="mb-3">
+        <p><label class="form-label"><b>First Name:</b></label><input type="text" name="firstName" #firstName="ngModel" class="form-control"  [(ngModel)]="customer.firstName"></p>
+        <p><label class="form-label"><b>Last Name:</b></label><input type="text" name="lastName" #lastName="ngModel" class="form-control"  [(ngModel)]="customer.lastName"></p>
+        <p><label class="form-label"><b>Email:</b></label><input type="text" name="email" #email="ngModel" class="form-control"  [(ngModel)]="customer.email"></p>
+        <p><label class="form-label"><b>Contact Number:</b></label><input type="contactNumber" name="contactNumber" #contactNumber="ngModel" class="form-control"  [(ngModel)]="customer.contactNumber"></p>
+        <p><label class="form-label"><b>Account Number:</b></label><input type="accountNumber" name="accountNumber" #accountNumber="ngModel" class="form-control"  [(ngModel)]="customer.accountNumber"></p>
+        <p><label class="form-label"><b>Password:</b></label><input type="text" name="Password" #password="ngModel" class="form-control"  [(ngModel)]="customer.password"></p>
+
+        <button type="submit" class="btn btn-success">Insert</button>
+    </div>
+    </form>
+
+<div *ngIf="status">
+  <p>record inserted sucessfully</p>
+</div>
+
+<div *ngIf="status == false">
+  <p>Error While inserting</p>
+</div>

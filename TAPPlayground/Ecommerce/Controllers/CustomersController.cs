@@ -52,8 +52,8 @@ public class CustomersController : Controller
     [HttpGet]
     public JsonResult GetAll()
     {
-        //var customers=_customersSrv.GetAll();
-        var customers=_customersOrmSrv.GetAll(); 
+        var customers=_customersSrv.GetAll();
+        // var customers=_customersOrmSrv.GetAll(); 
         return Json(customers);
     }
 
@@ -68,8 +68,9 @@ public class CustomersController : Controller
     [HttpPost]
     public JsonResult InsertCustomer([FromBody] Customer customer)
     {
-        Console.WriteLine(customer.CustomerId+" "+ customer.FirstName);
+        Console.WriteLine(customer.ToString());
         bool result = _customersSrv.Insert(customer);
+        // bool result=_customersOrmSrv.Insert(customer);
         return Json(result);
     }
 
