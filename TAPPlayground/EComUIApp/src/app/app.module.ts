@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule} from '@angular/common/http';
-import { AppComponent } from './app.component';
 import { TransactionModule } from './transaction/transaction.module';
 import { AccountModule } from './account/account.module';
 import { RouterModule, Routes } from '@angular/router';
@@ -11,19 +10,18 @@ import { SuppliersModule } from './suppliers/suppliers.module';
 import { DatePipe } from '@angular/common';
 import { CustomerModule } from './customer/customer.module';
 import { ProductsModule } from './product/products.module';
-
-
+import { AppComponent } from './app.component';
+import { ShipperModule } from './shipper/shipper.module';
 
 //metadata
 //decorator
-
 
 const routes: Routes = [
 
 ]
 @NgModule({
   declarations: [
-    AppComponent
+  AppComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +31,7 @@ const routes: Routes = [
     TransactionModule,
     AccountModule, 
     MembershipModule,
+    ShipperModule,
     SuppliersModule,
     CustomerModule,
     ProductsModule,
