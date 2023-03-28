@@ -16,4 +16,8 @@ public class Transaction
     [Column("amount")]
     public double Amount{get; set;}
 
+    public override string ToString(){
+        return TransactionId + " " + FromAccountNumber + " " + ToAccountNumber + " " + TransactionDate + " " + Amount;
+    }
+
 }

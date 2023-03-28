@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'routing',
+  selector: 'transactionrouting',
   templateUrl: './routing.component.html',
   styleUrls: ['./routing.component.css']
 })

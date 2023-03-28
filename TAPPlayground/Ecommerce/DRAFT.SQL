@@ -1,12 +1,12 @@
 -- Active: 1678116914124@@127.0.0.1@3306@ecommerce
 
 
---  CREATE DATABASE Ecommerce;
---  drop DATABASE ecommerce;
---  USE  Ecommerce;
 
--- USE Ecommerce;
--- drop table users;
+ CREATE DATABASE Ecommerce;
+
+ USE  Ecommerce;
+
+
 CREATE TABLE users( user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, email VARCHAR(25) UNIQUE NOT NULL, contact_number VARCHAR(20) NOT NULL ,password VARCHAR(15) NOT NULL);
 CREATE TABLE accounts(account_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,account_number BIGINT UNIQUE, ifsc_code VARCHAR(50) ,register_date DATETIME ,balance DOUBLE);
 CREATE TABLE customers(cust_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, first_name VARCHAR(25), last_name VARCHAR(25),email VARCHAR(25) UNIQUE NOT NULL,contact_number VARCHAR(20) UNIQUE NOT NULL, password VARCHAR(15) NOT NULL,account_number BIGINT NOT NULL UNIQUE ,CONSTRAINT fk_account_no3 FOREIGN KEY(account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE);
