@@ -1,0 +1,36 @@
+
+<h2>Update Employee</h2>
+
+<getbyid (sendEmployee)="receiveEmployee($event)"></getbyid>
+<div *ngIf="employee && employee.empId !=0">
+      <div *ngIf="employee">
+        <p><label><b>First Name :</b></label><input type="text" name="firstname" #empFirstName="ngModel" [(ngModel)]="employee.empFirstName"></p>
+        <p><label><b>Last Name :</b></label><input type="text" name="lastname" #empLastName="ngModel" [(ngModel)]="employee.empLastName"></p>
+        <p><label><b>Birth date :</b></label><input type="text" name="birthdate" #birthDate="ngModel" [(ngModel)]="employee.birthDate"></p>
+        <p><label><b>hire Date :</b></label><input type="text" name="hiredate" #hireDate="ngModel" [(ngModel)]="employee.hireDate"></p>
+        <p><label><b>Contact Number :</b></label><input type="text" name="contactnumber" #contactNumber="ngModel" [(ngModel)]="employee.contactNumber"></p>
+        <p><label><b>Email :</b></label><input type="text" name="email" #email="ngModel" [(ngModel)]="employee.email"></p>
+        <p><label><b>Password :</b></label><input type="text" name="password" #password="ngModel" [(ngModel)]="employee.password"></p>
+        <p><label><b>Photo :</b></label><input type="text" name="photo" #photo="ngModel" [(ngModel)]="employee.photo"></p>
+        <p><label><b>Reports To :</b></label><input type="number" name="reportsTo" #reportsTo="ngModel" [(ngModel)]="employee.reportsTo"></p>
+        <p><label><b>Account Number :</b></label><input type="text" name="accountNumber" #accountNumber="ngModel" [(ngModel)]="employee.accountNumber"></p>
+
+        <button (click)="update()" (click)="status=false">Update</button>
+       </div>
+
+        <div *ngIf="employee && employee.empId ==0">
+            <p> Account Not Found </p>
+        </div>
+
+        <div *ngIf="status">
+             <p>Account Updated Successfully</p>
+        </div>
+
+        <div *ngIf="status == false">
+            <p>Error While Updating Data</p>
+        </div>
+
+
+</div>
+
+

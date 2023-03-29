@@ -1,0 +1,12 @@
+<h2> Details of shipper </h2>
+<input type ="number"[(ngModel)]="shipperId">
+<button (click) = "getById(shipperId)"> get Details</button>
+<div *ngIf = "shipper">
+<p>ShipperId:{{shipper.shipperId}}</p>
+<p>CompanyName:{{shipper.companyName}}</p>
+<p>Email:{{shipper.email}}</p>
+<p>ContactNumber:{{shipper.contactNumber}}</p>
+<p>AccountNumber:{{shipper.accountNumber}}</p>
+</div>
+
+

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from '../product';
 import { ProductHubService } from '../producthub.service';
 
@@ -15,7 +15,7 @@ export class UpdateComponent implements OnInit {
   productId: any;
 
  
-  constructor(private svc: ProductHubService,private route:ActivatedRoute) { }
+  constructor(private svc: ProductHubService,private route:ActivatedRoute,private router:Router) { }
   ngOnInit(): void {
    
     this.sub=this.route.paramMap.subscribe((params)=>{
@@ -28,6 +28,14 @@ export class UpdateComponent implements OnInit {
     this.svc.updateProduct(this.product).subscribe((response)=>{
       this.status = response;
       console.log(response);
+      if(response)
+      {
+        this.router.navigate(['/product',this.product.productId]);
+        alert("record updated successfully")
+      }
+      else{
+        alert("Error while updating")
+      }
     })
 
   }

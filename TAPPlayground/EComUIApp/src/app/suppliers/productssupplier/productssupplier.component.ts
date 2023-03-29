@@ -13,6 +13,7 @@ productSuppliers: any |undefined;
 constructor(private svc:SupplierhubService){}
 
 getProductSupplierById(id:any){
+  console.log(this.supplierId);
   this.svc.getProductSupplier(id).subscribe((response)=> {
     this.productSuppliers=response;
     console.log(this.productSuppliers);

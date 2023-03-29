@@ -1,4 +1,4 @@
-<getproduct [productId]="productId" (sendProduct)="reciveProduct($event)"></getproduct>
+<getproduct [productId]="productId" (sendProduct)="reciveProduct($event)" hidden></getproduct>
 <div *ngIf="product && product.productId!=0 ">
 <div class="height d-flex justify-content-left  align-items-center mt-2 mb-2">
     
@@ -32,4 +32,3 @@
 <div *ngIf=" product && product.productId==0 ">
   <p>Product not Found</p>
   </div>
-<router-outlet></router-outlet>

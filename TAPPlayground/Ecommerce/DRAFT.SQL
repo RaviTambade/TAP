@@ -1,11 +1,39 @@
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+-- Active: 1677916902963@@127.0.0.1@3306@ecommerce
 
 -- CREATE DATABASE Ecommerce;
 --  drop DATABASE ecommerce;
---  USE  Ecommerce;
+ USE  Ecommerce;
+=======
+<<<<<<< HEAD
+-- Active: 1679882750289@@127.0.0.1@3306@ecommerce
+=======
+<<<<<<< HEAD
 
--- USE Ecommerce;
--- drop table users;
+-- Active: 1677916902963@@127.0.0.1@3306@ecommerce
+
+=======
+-- Active: 1678116914124@@127.0.0.1@3306@ecommerce
+>>>>>>> 7a2de76971db2f7f8214f1b91fa894a8dbce4bc8
+>>>>>>> 351c287d7c3d43f0ef316585f784a62a731b5790
+>>>>>>> 464a845fec8f1780a35c507d2608a22a674b573f
+
+
+<<<<<<< HEAD
+=======
+-- CREATE DATABASE Ecommerce;
+--  drop DATABASE ecommerce;
+--  USE  Ecommerce;
+>>>>>>> 89407fa54058bf62e40594319b4ded7e7bbf6c3a
+
+ CREATE DATABASE Ecommerce;
+
+ USE  Ecommerce;
+
+>>>>>>> c46fc1d0830650137a35f3eac18b8e329f89bcdc
+
 CREATE TABLE users( user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, email VARCHAR(25) UNIQUE NOT NULL, contact_number VARCHAR(20) NOT NULL ,password VARCHAR(15) NOT NULL);
 CREATE TABLE accounts(account_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,account_number BIGINT UNIQUE, ifsc_code VARCHAR(50) ,register_date DATETIME ,balance DOUBLE);
 CREATE TABLE customers(cust_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, first_name VARCHAR(25), last_name VARCHAR(25),email VARCHAR(25) UNIQUE NOT NULL,contact_number VARCHAR(20) UNIQUE NOT NULL, password VARCHAR(15) NOT NULL,account_number BIGINT NOT NULL UNIQUE ,CONSTRAINT fk_account_no3 FOREIGN KEY(account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE);
@@ -41,7 +69,7 @@ BEGIN
 	INSERT INTO users(email,contact_number,password)VALUES (NEW.email,NEW.contact_number,NEW.password);
 END //
 DELIMITER ;
-INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546601,'MAHB0000286','2023-03-01 12:40:40',22555);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546628,'MAHB0000286','2023-03-01 12:40:40',22555);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546602,'MAHB0000286','2023-03-01 12:40:40',22555);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546603,'MAHB0000286','2023-03-01 12:40:40',22555);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546604,'MAHB0000286','2023-03-01 12:40:40',22555);
@@ -71,6 +99,99 @@ INSERT INTO transactions(from_account_number, to_account_number,transaction_date
 INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025546606,39025546607,'2023-03-01 12:40:35',22500);
 INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025546607,39025546608,'2023-03-01 12:40:35',22500);
 
+<<<<<<< HEAD
+select * from products;
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546694,'MAHB0000286','2023-03-01 12:40:40',22555);
+select * from suppliers;
+
+
+
+select * from employees;
+select * from payments;
+
+
+
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 44025546641,'MAHB0000286','2023-03-01 12:40:40',22555);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 41025546630,'MAHB0000286','2023-03-01 12:40:40',22555);
+
+
+
+select * from accounts;
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 38025546610,'MAHB0000286','2023-03-01 12:40:40',22555);
+
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546671,'MAHB0000286','2023-03-01 12:40:40',22555);
+
+
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 3802554668,'MAHB0000286','2023-03-01 12:40:40',22555);
+
+
+ 
+
+SELECT * from orders;
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546334,'MAHB0000286','2023-03-01 12:40:40',22555);
+
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546975,'MAHB0000286','2023-03-01 12:40:40',22555);
+
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546682,'MAHB0000286','2023-03-01 12:40:40',22555);
+
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546333,'MAHB0000286','2023-03-01 12:40:40',22555);
+
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546676,'MAHB0000286','2023-03-01 12:40:40',22555);
+
+
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545655,'MAHB0000286','2023-03-01 12:40:35',22500);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545656,'UNB0000286','2023-04-15 02:45:35',2250025);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545657,'BARBO0000286','2023-03-04 02-40-35',225700);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545658,'MAHB000299','2022-03-16  03-40-35',24540);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545659,'MAHB0000886','2022-05-01 04-50-35',454500);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545660,'AXIS0000296','2021-07-01 07-40-35',2352500);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545661,'UBIN0000286','2021-08-01 07-10-35',23500);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545662,'AXIS0000285','2021-05-02 07-40-35',232500);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545663,'MAHB0000284','2021-08-03 07-40-35',235250);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545664,'UBIN0000286','2021-08-04 07-40-35',23520);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545665,'HDFC0000286','2021-02-05 07-40-35',52500);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545666,'SBI0000286','2021-08-07 07-40-35',233500);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025545667,'AXIS0000236','2021-08-08 07-40-35',23500);
+
+INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES(39025545655,39025545658,'2023-03-01 12:40:35',22500);
+INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025545656,39025545660,'2023-03-01 12:40:35',22500);
+INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025545657,39025545659,'2023-03-01 12:40:35',22500);
+INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES(39025545660,39025545662,'2023-03-01 12:40:35',22500);
+INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025545659,39025545663,'2023-03-01 12:40:35',22500);
+INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025545658,39025545665,'2023-03-01 12:40:35',22500);
+SELECT * FROM suppliers;
+
+select * from users;
+
+select * from transactions;
+
+select * from customers;
+
+select * from suppliers;
+desc customers;
+
+
+
+
+INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Sahil','Mankar','sahil.m@gmail.com','9960916323','sahil@123',39025545656);
+INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Abhay','Navle','abhay.navale@gmail.com','9075966080','sahil@123',39025545655);
+INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Sachin','Patil','sachin.patil@gmail.com','9881723458','sahil@123',39025545658);
+INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Minal','Sagade','minal.sagade@outlook.com','9887454372','sahil@123',39025545657);
+INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Jai','Kinikar','jai.kinikar@gmail.com','98543234','sahil@123',39025545659);
+INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Rakhi','Sharma','rakhi.sharma@gmail.com','9845834534','sahil@123',39025545661);
+INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Shivam','Pethe','shivam.pethe@gmai.com','9881734798','sahil@123',39025545660);
+
+
+SELECT * FROM employees;
+INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Akash','Ajab','1999-09-15','2022-09-07','8756320150','Akjab@gmail.com','AK123654' ,'./images/crackjack.jpg', 2,39025545660);
+INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Shubham','Teli','1999-02-10','2020-07-05','9876320158','Steli@gmail.com','ST5269' ,'./images/ST.jpg', 1,39025545661);
+INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Sahil','Mankar','1997-05-19','2021-07-07','8756789158','Sahil@gmail.com','SM569654' ,'./images/SM.jpg', 1,39025545662);
+INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Shubham','Navale','1995-07-25','2020-05-04','9996320158','SNavale@gmail.com','SN56987' ,'./images/SN.jpg', 3,39025545663);
+INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Rohit','Gore','1996-05-12','2022-09-07','7776320158','RGore@gmail.com','RG123654' ,'./images/RG.jpg', 4,39025545664);
+INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Pragati','Bangar','1998-05-10','2022-11-09','9666320158','PBangar@gmail.com','PB123654' ,'./images/PB.jpg', 5,39025545665);
+
+select * from orders;
+=======
 INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Sahil','Mankar','sahil.m@gmail.com','9960916323','sahil@123',39025546601);
 INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Abhay','Navle','abhay.navale@gmail.com','9075966080','sahil@123',39025546602);
 INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Sachin','Patil','sachin.patil@gmail.com','9881723458','sahil@123',39025546603);
@@ -84,6 +205,7 @@ INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_nu
 INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Shubham','Navale','1995-07-25','2020-05-04','9996320158','SNavale@gmail.com','SN56987' ,'./images/SN.jpg', 3,39025546611);
 INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Rohit','Gore','1996-05-12','2022-09-07','7776320158','RGore@gmail.com','RG123654' ,'./images/RG.jpg', 4,39025546612);
 INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Pragati','Bangar','1998-05-10','2022-11-09','9666320158','PBangar@gmail.com','PB123654' ,'./images/PB.jpg', 5,39025546613);
+>>>>>>> 351c287d7c3d43f0ef316585f784a62a731b5790
 
 /*possible vales  for addressmode:1:only residential ,2:only delivery address,3:residentail and delivery*/
 INSERT INTO addresses(cust_id,address_mode,house_number,landmark,city,state,country,pincode)VALUES(1,'permanent','houseNo.12','Pune-Nashik Highway','Manchar','Maharashtra','India','123321');
@@ -102,26 +224,25 @@ INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,ci
 INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,account_number)VALUES('Goukul pvt.ltd','Abhay','9345632569','Abhay@gmail.com','Avasari Pune','Pune','Maharashtra',39025546618);
 
 
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id) VALUES('ParleG','tasty biscuits',20000,10,'/images/Parleg.jpg',1,1);
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('GoodDay','tasty cookies',50000,15,'/images/goodday.jpg',1,2);
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('GoodDay','tasty cookies',50000,15,'/images/goodday.jpg',1,3);
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('MariGold','tasty biscuits',40000,16,'/images/marigold.jpg',1,3);
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('20-20','tasty biscuits', 70000, 10,'/images/2020.jpg',1,1);
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('Crack-Jack','tasty biscuits',30000,10,'/images/crackjack.jpg',1,1);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id) VALUES('ParleG','tasty biscuits',20000,10,'/images/Parleg.jpg',1,5);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('GoodDay','tasty cookies',50000,15,'/images/goodday.jpg',1,6);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('GoodDay','tasty cookies',50000,15,'/images/goodday.jpg',1,7);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('MariGold','tasty biscuits',40000,16,'/images/marigold.jpg',1,8);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('20-20','tasty biscuits', 70000, 10,'/images/2020.jpg',1,9);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('Crack-Jack','tasty biscuits',30000,10,'/images/crackjack.jpg',1,5);
 
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('Pepsi','Drinks Any time',50000,40,'/images/Pepsi.jpg',2,1);
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('Fizz','Making from apple',2000,25,'/images/Fizz.jpg',2,1);
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('Slice','Making from Mangoes',10000,40,'/images/Slice.jpg',2,1);
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('coco-cola','Drinking any time',6000,40,'/images/coco_cola.jpg',2,3);
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('Maggi','Making in 2 minutes',500,12,'./images/Maggi.jpg',3,3);
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('FrenchFries','Making for instatnt eat',1000,40,'./images/Francci.jpg',3,1);
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('Idli','Light snack',20000,20,'./images/Idli.jpg',3,3);
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('Idli','Light snack',20000,20,'./images/Idli.jpg',3,2);
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('Makkesns','Fried snack',600,60,'./images/Makkens.jpg',3,4);
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('Tv','Entertenment Gadget',50,12000,'./images/samsung.jpg',4,2);
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('Mobiles','Communication Purpose',100,10,'./images/Oppo.jpg',4,2);
-INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('Fiidge','Kitchen Use',200,150,'./images/Samsung.jpg',4,4);
-
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('Pepsi','Drinks Any time',50000,40,'/images/Pepsi.jpg',2,6);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('Fizz','Making from apple',2000,25,'/images/Fizz.jpg',2,7);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('Slice','Making from Mangoes',10000,40,'/images/Slice.jpg',2,8);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('coco-cola','Drinking any time',6000,40,'/images/coco_cola.jpg',2,9);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('Maggi','Making in 2 minutes',500,12,'./images/Maggi.jpg',3,7);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('FrenchFries','Making for instatnt eat',1000,40,'./images/Francci.jpg',3,5);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('Idli','Light snack',20000,20,'./images/Idli.jpg',3,7);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('Idli','Light snack',20000,20,'./images/Idli.jpg',3,6);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('Makkesns','Fried snack',600,60,'./images/Makkens.jpg',3,8);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('Tv','Entertenment Gadget',50,12000,'./images/samsung.jpg',4,7);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('Mobiles','Communication Purpose',100,10,'./images/Oppo.jpg',4,6);
+INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('Fiidge','Kitchen Use',200,150,'./images/Samsung.jpg',4,9);
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-17  04:20:10', 1,85.00,'cancelled');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:25', 2, 82.00,'delivered');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-01-16  09:35:25', 6,20.00,'cancelled');
@@ -141,38 +262,35 @@ INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-08-25  06:35:2
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:25', 5,25.0,'delivered');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-01-16  09:35:25', 4,50.0,'cancelled');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:25', 6,80.0,'inprogress');
-
+SELECT * FROM products;
 
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-08-25  06:35:25', 1,40.0,'initiated');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:25', 3,35.0,'delivered');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-01-16  09:35:25', 6,85.00,'cancelled');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:25', 7,14.00,'inprogress');
 
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(1, 1, 70,1);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(1, 2, 700,2);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(2, 3, 78,3);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(3, 4, 78,4);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(3, 1, 78,4);
-INSERT INTO orderdetails(order_id,product_id,quantity,supplier_id) VALUES (7,2,2000,1);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(12, 1, 70,2);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(8, 2, 700,3);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(2, 3, 88,4);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(2, 4, 78,3);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 4, 90,3);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(10, 2, 45,4);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 3, 78,1);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(5, 2, 45,2);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(20, 4, 96,4);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(7, 3, 25,1);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 2, 46,4);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 3, 35,4);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 12, 35,3);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 15, 35,4);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 8, 35,4);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 7, 35,4);
-select * from orders;
-SELECT *FROM payments;
-
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(1, 19, 70,5);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(1, 20, 700,6);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(2, 21, 78,7);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(3, 22, 78,8);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(3, 23, 78,9);
+INSERT INTO orderdetails(order_id,product_id,quantity,supplier_id) VALUES (7,24,2000,6);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(7, 25, 70,7);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(8, 26, 700,6);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(2, 27, 88,5);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(2, 28, 78,5);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 29, 90,9);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(10, 30, 45,8);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 31, 78,7);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(5, 32, 45,6);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(20, 34, 96,4);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(7, 35, 25,1);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 36, 46,4);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 37, 35,4);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 38, 35,3);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 39, 35,4);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 39, 35,4);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 40, 35,4);
 INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('2022-05-03','cash on delivery',1234,1);
 INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('2022-06-12','online payment',987514,2);
 INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('2022-06-12','online payment',987514,3);
@@ -430,5 +548,10 @@ INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_nu
 
 select customers.first_name,customers.last_name,customers.email,customers.contact_number,accounts.account_number,accounts.ifsc_code,accounts.balance FROM customers  INNER JOIN  accounts ON accounts.account_number=customers.account_number;-- WHERE customers.cust_id=1; 
 
+<<<<<<< HEAD
 SELECT suppliers.supplier_id,products.product_id,products.product_title,SUM(orderdetails.quantity) FROM (products INNER JOIN orderdetails ON products.product_id=orderdetails.product_id)INNER JOIN suppliers ON products.supplier_id=suppliers.supplier_id   WHERE suppliers.supplier_name="Akshay" GROUP BY products.product_id;
 SELECT * FROM transactions;
+=======
+SELECT suppliers.supplier_id,products.product_id,products.product_title,SUM(orderdetails.quantity) FROM (products INNER JOIN orderdetails ON products.product_id=orderdetails.product_id)INNER JOIN suppliers ON products.supplier_id=suppliers.supplier_id   WHERE suppliers.supplier_id=7 GROUP BY products.product_id;
+
+>>>>>>> 464a845fec8f1780a35c507d2608a22a674b573f
