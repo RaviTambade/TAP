@@ -1,6 +1,5 @@
--- Active: 1678116914124@@127.0.0.1@3306@ecommerce
-
-
+CREATE DATABASE Ecommerce;
+USE Ecommerce;
 
 -- Active: 1678361403571@@127.0.0.1@3306@ecommerce
 

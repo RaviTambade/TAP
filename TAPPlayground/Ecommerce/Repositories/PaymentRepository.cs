@@ -34,7 +34,7 @@ public class PaymentRepository : IPaymentRepository
             while (reader.Read())
             {
                 int paymentId =int.Parse(reader["payment_id"].ToString());
-                DateTime date =  DateTime.Parse(reader["payment_date"].ToString(),CultureInfo.InvariantCulture);
+                 DateTime date = DateTime.Parse(reader["payment_date"].ToString(), CultureInfo.InvariantCulture);
                 string? payment_mode = reader["payment_mode"].ToString();
                 int transactionId =int.Parse(reader["transection_id"].ToString());
                 int orderId =int.Parse(reader["order_id"].ToString());
@@ -42,7 +42,7 @@ public class PaymentRepository : IPaymentRepository
                 Payment payment = new Payment
                 {
                     PaymentId=paymentId,
-                    PaymentDate= date.ToLongDateString(),
+                    PaymentDate= date.ToShortDateString(),
                     PaymentMode = payment_mode,
                     TransactionId = transactionId,
                     OrderId = orderId
@@ -75,12 +75,12 @@ public class PaymentRepository : IPaymentRepository
             string query = "SELECT * FROM payments where payment_id=@paymentId";
             connection.Open();
             MySqlCommand command = new MySqlCommand(query, connection);
-            command.Parameters.AddWithValue("paymentId",id);
+            command.Parameters.AddWithValue("@paymentId",id);
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
                 //paymentId =int.Parse(reader["payment_id"].ToString());
-                DateTime date =  DateTime.Parse(reader["payment_date"].ToString(),CultureInfo.InvariantCulture);
+                DateTime date = DateTime.Parse(reader["payment_date"].ToString(), CultureInfo.InvariantCulture);
                 string? payment_mode = reader["payment_mode"].ToString();
                 int transactionId =int.Parse(reader["transection_id"].ToString());
                 int orderId =int.Parse(reader["order_id"].ToString());
@@ -88,7 +88,7 @@ public class PaymentRepository : IPaymentRepository
                 payment = new Payment()
                 {
                     PaymentId=id,
-                    PaymentDate= date.ToLongDateString(),
+                    PaymentDate= date.ToShortDateString(),
                     PaymentMode = payment_mode,
                     TransactionId = transactionId,
                     OrderId = orderId
@@ -123,7 +123,7 @@ public class PaymentRepository : IPaymentRepository
             while (reader.Read())
             {
                 int paymentId =int.Parse(reader["payment_id"].ToString());
-                 DateTime date =  DateTime.Parse(reader["payment_date"].ToString(),CultureInfo.InvariantCulture);
+                DateTime date = DateTime.Parse(reader["payment_date"].ToString(), CultureInfo.InvariantCulture);
                 string? payment_mode = reader["payment_mode"].ToString();
                 int transactionId =int.Parse(reader["transection_id"].ToString());
                 int OrderId =int.Parse(reader["order_id"].ToString());
@@ -131,7 +131,7 @@ public class PaymentRepository : IPaymentRepository
                 payment = new Payment()
                 {
                     PaymentId=paymentId,
-                    PaymentDate= date.ToLongDateString(),
+                    PaymentDate= date.ToShortDateString(),
                     PaymentMode = payment_mode,
                     TransactionId = transactionId,
                     OrderId = id
