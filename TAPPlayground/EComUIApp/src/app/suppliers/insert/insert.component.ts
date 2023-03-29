@@ -24,9 +24,6 @@ export class InsertComponent {
 
   constructor(private svc: SupplierhubService) { }
 
-  receiveSupplier($event: any) {
-    this.supplier = $event.supplier;
-  }
   insertSupplier(_supplierForm:any) {
     this.svc.insert(this.supplier).subscribe((response) => {
       this.status = response;

@@ -27,10 +27,10 @@ export class InsertComponent {
   
     constructor(private svc: AccountHubServiceService) { }
   
-    reciveAccount($event: any) {
-      this.account = $event.account;
+    // reciveAccount($event: any) {
+    //   this.account = $event.account;
       
-    }
+    // }
     insertAccount(form :any) {
       console.log("Inserting Account Details");
       console.log(form);
@@ -39,7 +39,10 @@ export class InsertComponent {
         this.status = response;
         console.log(response);
         
-      })
+      },(error)=>{
+        this.status=false
+      }
+      )
   
       
     }

@@ -6,19 +6,22 @@ import { DetailsComponent } from './details/details.component';
 import { SearchComponent } from './search/search.component';
 import { InsertComponent } from './insert/insert.component';
 import { UpdateComponent } from './update/update.component';
-import { DeleteComponent } from './delete/delete.component';
 import { FormsModule } from '@angular/forms';
 import { RoutingComponent } from './routing/routing.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductssupplierComponent } from './productssupplier/productssupplier.component';
 
 
 const routes: Routes = [
   {path:'suppliers',component:ListComponent},
-  {path:'search',component:SearchComponent},
-  {path:'insert',component:InsertComponent},
-  {path:'update',component:UpdateComponent},
-  {path:'delete',component:DeleteComponent},
+  {path:'suppliers-search',component:SearchComponent},
+  {path:'suppliers/:id',component:DetailsComponent},
+  {path:'suppliers-insertsupplier',component:InsertComponent},
+  {path:'suppliers-update',component:UpdateComponent},
+  {path:'suppliers-update/:id',component:UpdateComponent},
+  {path:'suppliers-productssupplier',component:ProductssupplierComponent},
+
 ]
 
 @NgModule({
@@ -29,8 +32,8 @@ const routes: Routes = [
     SearchComponent,
     InsertComponent,
     UpdateComponent,
-    DeleteComponent,
-    RoutingComponent
+    RoutingComponent,
+    ProductssupplierComponent
   ],
   exports:[
    RoutingComponent

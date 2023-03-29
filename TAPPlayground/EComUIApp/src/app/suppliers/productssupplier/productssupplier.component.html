@@ -1,0 +1,24 @@
+<input type="number" [(ngModel)]="supplierId">
+<button (click)="getProductSupplierById(supplierId)" class="btn btn-success">Search</button>
+<div *ngFor="let productSupplier of productSuppliers">
+    <table>
+        <thead>
+            <tr>
+                <th>SupplierName:</th>
+                <th>ProductTitle:</th>
+                <th>Quantity:</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ productSupplier.supplierName }}</td>
+                <td> {{ productSupplier.productTitle}}</td>
+                <td>{{ productSupplier.quantity }}</td>
+            </tr>
+        </tbody>
+            <hr/>
+    </table>
+    <div *ngIf=" productSupplier && productSupplier.supplierId==0 ">
+        <p>Supplier not Found</p>
+    </div>
+</div>

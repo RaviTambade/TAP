@@ -8,7 +8,20 @@ import { AccountdetailsComponent } from './accountdetails/accountdetails.compone
 import { InsertComponent } from './insert/insert.component';
 import { UpdateComponent } from './update/update.component';
 import { SearchAccountComponent } from './search-account/search-account.component';
+import { AccountRoutingComponent } from './account-routing/account-routing.component';
+import { Routes,RouterModule } from '@angular/router';
 
+
+
+const routes:Routes=[
+  {path:'accountsList',component:ListComponent},
+  // {path:'account/:id',component:SearchAccountComponent},
+  {path:'account/:id',component:AccountdetailsComponent},
+  {path:'insertAccount',component:InsertComponent},
+  {path:'updateAccount',component:UpdateComponent},
+  {path:'account/update',component:UpdateComponent},
+
+]
 
 
 @NgModule({
@@ -18,22 +31,25 @@ import { SearchAccountComponent } from './search-account/search-account.componen
     AccountdetailsComponent,
     InsertComponent,
     UpdateComponent,
-    SearchAccountComponent
+    SearchAccountComponent,
+    AccountRoutingComponent
     ],
   imports: [
     CommonModule,
     HttpClientModule,
     FormsModule,
-    DatePipe
+    DatePipe,
+    RouterModule.forChild(routes),
 
   ],
   exports:[
-    ListComponent,
-    DetailsComponent,
-    AccountdetailsComponent,
-    InsertComponent,
-    UpdateComponent,
-    SearchAccountComponent
+    // ListComponent,
+    // DetailsComponent,
+    // AccountdetailsComponent,
+    // InsertComponent,
+    // UpdateComponent,
+    // SearchAccountComponent,
+    AccountRoutingComponent
     
     
   ]

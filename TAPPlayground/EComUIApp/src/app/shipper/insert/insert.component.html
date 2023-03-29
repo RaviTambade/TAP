@@ -1,0 +1,23 @@
+<h3>Insert Details</h3>
+<div *ngIf="shipper">
+    <form #insertForm="ngForm" (ngSubmit)="insertShipper(insertForm.value)">
+    
+    <label ><b> Company Name :</b></label>  <input type="text" name="companyName" [(ngModel)]="shipper.companyName"> <br>
+    <br/>
+    <label ><b>Contact Number :</b></label>  <input type="text" name="contactNumber" [(ngModel)]="shipper.contactNumber"> <br>
+    <br/>
+    <label ><b>Email :</b></label>  <input type="text" name="email" [(ngModel)]="shipper.email"> <br>
+    <br/>
+    <label ><b>Account Number :</b></label>  <input type="number" name="accountNumber" [(ngModel)]="shipper.accountNumber"> <br>
+    <br/>
+    <button type="submit">Insert</button>
+</form>
+
+    <div *ngIf="status">
+        <p>Shipper inserted Successfully</p>
+    </div>
+
+    <div *ngIf="status == false">
+        <p>Error While Inserting</p>
+    </div>
+</div>

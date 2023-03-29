@@ -1,8 +1,7 @@
 <h2>Update page</h2>
 
-<app-getsupplier (sendSupplier)="receiveSupplier($event)"></app-getsupplier>
+<app-getsupplier  [supplierId]="supplierId" (sendSupplier)="receiveSupplier($event)"></app-getsupplier>
 <div *ngIf="supplier && supplier.supplierId!=0 ">
-    <div *ngIf="supplier">
         <table class="table table-striped">
             <tr>
                 <th>CompanyName</th>
@@ -36,19 +35,7 @@
                 <th>AccountNumber</th>
                 <td> <input type="text" [(ngModel)]="supplier.accountNumber"></td>
             </tr>
-            <button (click)="updateSupplier()" (click)="status = false" class="btn btn-success">Update</button>
+            <button (click)="updateSupplier()" (click)="status = false" class="btn btn-success" type="submit">Update</button>
         </table>
     </div>
-</div>
 
-<div *ngIf=" supplier && supplier.supplierId==0 ">
-    <p>Supplier not Found</p>
-</div>
-
-<div *ngIf="status">
-    <p>record updated sucessfully</p>
-</div>
-
-<div *ngIf="status == false">
-    <p>Error While updating data</p>
-</div>

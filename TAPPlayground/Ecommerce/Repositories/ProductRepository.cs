@@ -1,4 +1,4 @@
-          using ECommerceApp.Models;
+using ECommerceApp.Models;
 using ECommerceApp.Repositories.Interfaces;
 using MySql.Data.MySqlClient;
 namespace ECommerceApp.Repositories;
@@ -30,6 +30,7 @@ public class ProductRepository : IProductRepository
                 double price = double.Parse(reader["unit_price"].ToString());
                 string? imgUrl = reader["image"].ToString();
                 int categoryId = Int32.Parse(reader["category_id"].ToString());
+                int supplierId=Int32.Parse(reader["supplier_id"].ToString());
 
 
                 Product product = new Product
@@ -40,7 +41,8 @@ public class ProductRepository : IProductRepository
                     StockAvailable=stockAvailable,
                     UnitPrice = price,
                     ImageUrl = imgUrl,
-                    CategoryId=categoryId
+                    CategoryId=categoryId,
+                    SupplierId=supplierId
                 };
 
                 products.Add(product);
@@ -76,6 +78,8 @@ public class ProductRepository : IProductRepository
                 double price = double.Parse(reader["unit_price"].ToString());
                 string? imgUrl = reader["image"].ToString();
                 int categoryId = Int32.Parse(reader["category_id"].ToString());
+                int supplierId=Int32.Parse(reader["supplier_id"].ToString());
+
 
 
                 product = new Product
@@ -86,7 +90,9 @@ public class ProductRepository : IProductRepository
                     Description = description,
                     UnitPrice = price,
                     ImageUrl = imgUrl,
-                    CategoryId=categoryId
+                    CategoryId=categoryId,
+                    SupplierId=supplierId
+
                 };
 
             }
@@ -109,7 +115,7 @@ public class ProductRepository : IProductRepository
         MySqlConnection connection = new MySqlConnection(_conString);
         try
         {
-            string query = "INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id)VALUES(@productTitle,@description,@stockAvailable,@unitPrice,@image,@categoryId)";
+            string query = "INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES(@productTitle,@description,@stockAvailable,@unitPrice,@image,@categoryId,@supplierId)";
             MySqlCommand command = new MySqlCommand(query, connection);
             command.Parameters.AddWithValue("@productTitle", product.ProductTitle);
             command.Parameters.AddWithValue("@description", product.Description);
@@ -117,6 +123,7 @@ public class ProductRepository : IProductRepository
             command.Parameters.AddWithValue("@unitPrice", product.UnitPrice);
             command.Parameters.AddWithValue("@image", product.ImageUrl);
             command.Parameters.AddWithValue("@categoryId", product.CategoryId);
+            command.Parameters.AddWithValue("@supplierId", product.SupplierId);
             connection.Open();
             int rowsAffected = command.ExecuteNonQuery();
             if (rowsAffected > 0)
@@ -140,7 +147,7 @@ public class ProductRepository : IProductRepository
         MySqlConnection connection = new MySqlConnection(_conString);
         try
         {
-            string query = "UPDATE products SET product_title=@productTitle , description=@description , stock_available=@stockAvailable , unit_price=@unitPrice , image=@imageUrl, category_id=@categoryId WHERE product_id=@productId";
+            string query = "UPDATE products SET product_title=@productTitle , description=@description , stock_available=@stockAvailable , unit_price=@unitPrice , image=@imageUrl, category_id=@categoryId, supplier_id=@supplierId  WHERE product_id=@productId";
             MySqlCommand command = new MySqlCommand(query, connection);
             command.Parameters.AddWithValue("@productId", product.ProductId);
             command.Parameters.AddWithValue("@productTitle", product.ProductTitle);
@@ -149,6 +156,8 @@ public class ProductRepository : IProductRepository
             command.Parameters.AddWithValue("@unitPrice", product.UnitPrice);
             command.Parameters.AddWithValue("@imageUrl", product.ImageUrl);
             command.Parameters.AddWithValue("@categoryId", product.CategoryId);
+            command.Parameters.AddWithValue("@supplierId", product.SupplierId);
+
             connection.Open();
             int rowsAffected = command.ExecuteNonQuery();
             if (rowsAffected > 0)

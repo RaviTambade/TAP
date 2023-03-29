@@ -1,46 +1,69 @@
+import { DatePipe } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { AccountModule } from './account/account.module';
 import { RouterModule, Routes } from '@angular/router';
+import { AppComponent } from './app.component';
+import { HRModuleModule } from './hrmodule/hrmodule.module'
+import { TransactionModule } from './transaction/transaction.module';
+import { AccountModule } from './account/account.module';
 import { MembershipModule } from './membership/membership.module';
 import { SuppliersModule } from './suppliers/suppliers.module';
-import { AppComponent } from './app.component';
-import { DatePipe } from '@angular/common';
 import { CustomerModule } from './customer/customer.module';
+<<<<<<< HEAD
 import { HttpClientModule } from '@angular/common/http';
 import { TransactionModule } from './transaction/transaction.module';
 import { PaymentModule } from './payment/payment.module';
 
+=======
+import { ProductsModule } from './product/products.module';
+
+import { ShipperModule } from './shipper/shipper.module';
+>>>>>>> 842cb4cac5546ed776c447476dffa783910db982
 
 //metadata
 //decorator
 
-
-const routes: Routes = [
-
-]
+const routes : Routes = []
 @NgModule({
   declarations: [
+<<<<<<< HEAD
     AppComponent
     
+=======
+  AppComponent
+
+>>>>>>> 842cb4cac5546ed776c447476dffa783910db982
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     DatePipe,
-    TransactionModule,
     AccountModule, 
     MembershipModule,
+    ShipperModule,
     SuppliersModule,
     CustomerModule,
+<<<<<<< HEAD
     PaymentModule,
     RouterModule.forRoot(routes),
     DatePipe,
 
+=======
+    RouterModule.forRoot(routes),
+    DatePipe,
+<<<<<<< HEAD
+    TransactionModule
+=======
+    ProductsModule,
+   
+>>>>>>> c46fc1d0830650137a35f3eac18b8e329f89bcdc
+>>>>>>> 842cb4cac5546ed776c447476dffa783910db982
   ],
   providers: [DatePipe],
+
   bootstrap: [AppComponent] //Root Component
 })
 export class AppModule { } //Root Module

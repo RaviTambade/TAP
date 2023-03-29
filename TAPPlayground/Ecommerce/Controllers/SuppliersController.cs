@@ -4,6 +4,7 @@ using ECommerceApp.Models;
 using ECommerceApp.Services.Interfaces;
 using System.Security;
 using System.Reflection.Metadata.Ecma335;
+using System.Globalization;
 
 namespace ECommerceApp.Controllers;
 
@@ -119,6 +120,13 @@ public class SuppliersController:Controller{
     {
         bool status = _srv.Delete(id);
         return Json(status);
+    }
+   
+     [HttpGet]
+      [Route("suppliers/getproductsupplier/{id}")]
+    public JsonResult GetProductSupplier(int id){
+        var suppliers=_srv.GetProductSupplier(id);
+        return Json(suppliers);
     }
 
       [HttpGet]
