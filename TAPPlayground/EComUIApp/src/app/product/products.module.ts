@@ -13,11 +13,11 @@ import { RouterModule, Routes } from '@angular/router';
 
 export const routes:Routes =[
   {path:'products' , component:ListComponent},
-  {path:'product/search',component:SearchProductComponent},
+  {path:'product-search',component:SearchProductComponent},
   {path:'product/:id',component:ProductDetailsComponent},
-  {path:'product/insert',component:InsertComponent},
-  {path:'product/update',component:UpdateComponent},
-  {path:'product/update/:id',component:UpdateComponent},
+  {path:'product-insert',component:InsertComponent},
+  {path:'product-update',component:UpdateComponent},
+  {path:'product-update/:id',component:UpdateComponent},
 ]
 
 @NgModule({

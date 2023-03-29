@@ -16,8 +16,8 @@ export class GetproductComponent implements OnInit {
   constructor(private svc: ProductHubService) { }
 
   ngOnInit(): void {
-    if(this.productId!=undefined){
-    this.svc.getProductById(this.productId).subscribe((response) => {
+      if(this.productId!=undefined){
+      this.svc.getProductById(this.productId).subscribe((response) => {
       this.product = response;
       this.sendProduct.emit({product:this.product});
       console.log(this.product);
