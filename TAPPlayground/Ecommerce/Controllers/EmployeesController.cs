@@ -33,21 +33,21 @@ public class EmployeesController : Controller
     }
 
     [HttpPost]
-    public JsonResult InsertEmp([FromBody] Employee emp)
+    public JsonResult Insert([FromBody] Employee emp)
     {
         bool result = _empsrv.Insert(emp);
         return Json(result);
     }
 
     [HttpPut]
-    public JsonResult UpdateEmp([FromBody] Employee emp)
+    public JsonResult Update([FromBody] Employee emp)
     {
         bool result = _empsrv.Update(emp);
         return Json(result);
     }
 
     [HttpDelete]
-    public JsonResult DeleteEmp(int id)
+    public JsonResult Delete(int id)
     {
         bool result = _empsrv.Delete(id);
         return Json(result);

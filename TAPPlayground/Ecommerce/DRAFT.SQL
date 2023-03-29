@@ -1,4 +1,4 @@
--- Active: 1678016377342@@127.0.0.1@3306@Ecommerce
+-- Active: 1679882750289@@127.0.0.1@3306@ecommerce
 
 
 CREATE DATABASE Ecommerce;
@@ -44,7 +44,7 @@ DELIMITER ;
 
 
 select * from products;
-INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546690,'MAHB0000286','2023-03-01 12:40:40',22555);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546694,'MAHB0000286','2023-03-01 12:40:40',22555);
 select * from suppliers;
 
 
@@ -54,21 +54,21 @@ select * from payments;
 
 
 
-INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546631,'MAHB0000286','2023-03-01 12:40:40',22555);
-INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546630,'MAHB0000286','2023-03-01 12:40:40',22555);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 44025546641,'MAHB0000286','2023-03-01 12:40:40',22555);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 41025546630,'MAHB0000286','2023-03-01 12:40:40',22555);
 
 
 
 select * from accounts;
-INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546610,'MAHB0000286','2023-03-01 12:40:40',22555);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 38025546610,'MAHB0000286','2023-03-01 12:40:40',22555);
 
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546671,'MAHB0000286','2023-03-01 12:40:40',22555);
 
 
-INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 3902554668,'MAHB0000286','2023-03-01 12:40:40',22555);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 3802554668,'MAHB0000286','2023-03-01 12:40:40',22555);
 
 
- DESC orders;
+ 
 
 SELECT * from orders;
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546334,'MAHB0000286','2023-03-01 12:40:40',22555);
