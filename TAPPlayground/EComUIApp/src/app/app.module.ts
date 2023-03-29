@@ -30,14 +30,14 @@ const routes: Routes = [
     FormsModule,
     HttpClientModule,
     DatePipe,
-    TransactionModule,
     AccountModule, 
     MembershipModule,
     SuppliersModule,
     CustomerModule,
     ProductsModule,
     RouterModule.forRoot(routes),
-    DatePipe
+    DatePipe,
+    TransactionModule
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent] //Root Component

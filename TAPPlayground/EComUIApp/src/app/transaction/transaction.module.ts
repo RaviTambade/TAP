@@ -14,7 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   {path:'transaction-list',component:TransactionListComponent},
-  {path:'search',component:SearchComponent},
+  //{path:'search',component:SearchComponent},
   {path:'inserttransaction',component:InserttransactionComponent},
   {path:'updatetransaction',component:UpdatetransactionComponent}
   // {path:'delete',component:UpdatetransactionComponent},
