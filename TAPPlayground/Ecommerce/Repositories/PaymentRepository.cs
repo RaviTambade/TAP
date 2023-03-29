@@ -34,11 +34,7 @@ public class PaymentRepository : IPaymentRepository
             while (reader.Read())
             {
                 int paymentId =int.Parse(reader["payment_id"].ToString());
-<<<<<<< HEAD
-                 DateTime date = DateTime.Parse(reader["payment_date"].ToString(), CultureInfo.InvariantCulture);
-=======
                 DateTime paymentDate = DateTime.ParseExact(reader["payment_date"].ToString(), "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
->>>>>>> 842cb4cac5546ed776c447476dffa783910db982
                 string? payment_mode = reader["payment_mode"].ToString();
                 int transactionId =int.Parse(reader["transection_id"].ToString());
                 int orderId =int.Parse(reader["order_id"].ToString());
@@ -46,11 +42,7 @@ public class PaymentRepository : IPaymentRepository
                 Payment payment = new Payment
                 {
                     PaymentId=paymentId,
-<<<<<<< HEAD
-                    PaymentDate= date.ToShortDateString(),
-=======
                     PaymentDate=paymentDate.ToLongDateString(),
->>>>>>> 842cb4cac5546ed776c447476dffa783910db982
                     PaymentMode = payment_mode,
                     TransactionId = transactionId,
                     OrderId = orderId
@@ -88,11 +80,7 @@ public class PaymentRepository : IPaymentRepository
             while (reader.Read())
             {
                 //paymentId =int.Parse(reader["payment_id"].ToString());
-<<<<<<< HEAD
-                DateTime date = DateTime.Parse(reader["payment_date"].ToString(), CultureInfo.InvariantCulture);
-=======
                 DateTime paymentDate = DateTime.ParseExact(reader["payment_date"].ToString(), "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
->>>>>>> 842cb4cac5546ed776c447476dffa783910db982
                 string? payment_mode = reader["payment_mode"].ToString();
                 int transactionId =int.Parse(reader["transection_id"].ToString());
                 int orderId =int.Parse(reader["order_id"].ToString());
@@ -100,11 +88,7 @@ public class PaymentRepository : IPaymentRepository
                 payment = new Payment()
                 {
                     PaymentId=id,
-<<<<<<< HEAD
-                    PaymentDate= date.ToShortDateString(),
-=======
                     PaymentDate=paymentDate.ToLongDateString(),
->>>>>>> 842cb4cac5546ed776c447476dffa783910db982
                     PaymentMode = payment_mode,
                     TransactionId = transactionId,
                     OrderId = orderId

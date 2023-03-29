@@ -11,16 +11,11 @@ import { AccountModule } from './account/account.module';
 import { MembershipModule } from './membership/membership.module';
 import { SuppliersModule } from './suppliers/suppliers.module';
 import { CustomerModule } from './customer/customer.module';
-<<<<<<< HEAD
-import { HttpClientModule } from '@angular/common/http';
-import { TransactionModule } from './transaction/transaction.module';
 import { PaymentModule } from './payment/payment.module';
 
-=======
 import { ProductsModule } from './product/products.module';
 
 import { ShipperModule } from './shipper/shipper.module';
->>>>>>> 842cb4cac5546ed776c447476dffa783910db982
 
 //metadata
 //decorator
@@ -28,13 +23,8 @@ import { ShipperModule } from './shipper/shipper.module';
 const routes : Routes = []
 @NgModule({
   declarations: [
-<<<<<<< HEAD
     AppComponent
     
-=======
-  AppComponent
-
->>>>>>> 842cb4cac5546ed776c447476dffa783910db982
   ],
   imports: [
     BrowserModule,
@@ -46,21 +36,12 @@ const routes : Routes = []
     ShipperModule,
     SuppliersModule,
     CustomerModule,
-<<<<<<< HEAD
     PaymentModule,
     RouterModule.forRoot(routes),
     DatePipe,
-
-=======
-    RouterModule.forRoot(routes),
-    DatePipe,
-<<<<<<< HEAD
-    TransactionModule
-=======
+    TransactionModule,
     ProductsModule,
-   
->>>>>>> c46fc1d0830650137a35f3eac18b8e329f89bcdc
->>>>>>> 842cb4cac5546ed776c447476dffa783910db982
+
   ],
   providers: [DatePipe],
 
