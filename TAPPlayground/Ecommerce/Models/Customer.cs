@@ -14,5 +14,10 @@ public class Customer{
      [Required(ErrorMessage ="please enter name")]
     public string? Password{get;set;}
     public long AccountNumber{get;set;}
+
+      public override string ToString()
+    {
+        return FirstName+" "+LastName+" "+Email+" "+Password+" "+ContactNumber+" "+AccountNumber;
+    }
     
 }

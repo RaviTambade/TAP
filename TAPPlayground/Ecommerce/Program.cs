@@ -5,7 +5,6 @@ using ECommerceApp.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCors();
-
 // Add services to the container.
 builder.Services.AddTransient<ICustomerRepository,CustomerRepository>();
 builder.Services.AddTransient<ICustomerService,CustomerService>();
@@ -34,8 +33,8 @@ builder.Services.AddTransient<IAccountRepository,AccountRepository>();
 builder.Services.AddTransient<IAccountService,AccountService>();
 builder.Services.AddTransient<IPaymentRepository,PaymentRepository>();
 builder.Services.AddTransient<IPaymentService,PaymentService>();
-//builder.Services.AddTransient<ISupplierRepository,SupplierRepository>();
-builder.Services.AddTransient<ISupplierRepository,SupplierORMRepository>();
+builder.Services.AddTransient<ISupplierRepository,SupplierRepository>();
+//builder.Services.AddTransient<ISupplierRepository,SupplierORMRepository>();
 builder.Services.AddTransient<ISupplierService,SupplierService>();
 builder.Services.AddTransient<ISecureRepository,SecureRepository>();
 builder.Services.AddTransient<ISecureService,SecureService>();

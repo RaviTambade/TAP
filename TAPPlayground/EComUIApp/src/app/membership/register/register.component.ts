@@ -24,7 +24,7 @@ export class RegisterComponent {
       alert("please give valid email or password")
       return;
     }
-    if(this.user.password.length < 8){
+    if(this.user.password.length < 8 || this.confirmPassword.length < 8){
       alert("password should be minimum 8 characters ")
       return;
     }

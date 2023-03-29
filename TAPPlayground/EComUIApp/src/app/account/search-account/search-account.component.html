@@ -1,0 +1,5 @@
+
+<app-accountdetails (sendAccount)="receiveAccount($event)"></app-accountdetails>
+<div *ngIf="account">
+    <app-details [account]="account" ></app-details>
+</div>

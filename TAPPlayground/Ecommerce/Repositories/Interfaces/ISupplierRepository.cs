@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using ECommerceApp.Models;
 namespace ECommerceApp.Repositories.Interfaces;
 public interface ISupplierRepository{
@@ -7,6 +8,9 @@ public interface ISupplierRepository{
     bool Insert(Supplier supplier);
     bool Update(Supplier supplier);
     bool Delete(int supplierId);
+    List<ProductSupplier> GetProductSupplier(int supplierId);
+
+
     
     
 }

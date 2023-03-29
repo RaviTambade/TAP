@@ -1,0 +1,53 @@
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card border-1 shadow rounded-3 my-5">
+          <div class="card-body p-6 p-sm-8">
+            <h5 class="card-title text-center mb-5 fs-5">Update Account</h5>
+
+            <app-accountdetails (sendAccount)="receiveAccount($event)"></app-accountdetails>
+            <div *ngIf="account && account.accountId!=0 ">
+              <div *ngIf="account && account.accountId==0 ">
+                <p>Account not Found</p>
+              </div>
+              <div *ngIf="account">
+                <!-- <form #accountForm="ngForm" (ngSubmit)="insertAccount(accountForm.value)"> -->
+                <div class="form-floating mb-3">
+                  <input type="number" name="accountNumber" class="form-control" placeholder="Enter Account Number"
+                    #accountNumber="ngModel" [(ngModel)]="account.accountNumber" /><label
+                    for="accountNumber">AccountNumber</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="text" name="ifscCode" class="form-control" #ifscCode="ngModel"
+                    [(ngModel)]=" account.ifscCode "><label for="ifscCode">IFSCCode</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="text" placeholder="YYYY-MM-DD" name="registerDate" class="form-control"
+                    #registerDate="ngModel" [(ngModel)]="account.registerDate "><label
+                    for="registerDate">RegisterDate</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="number" name="balance" class="form-control" #balance="ngModel"
+                    [(ngModel)]=" account.balance"><label for="balance">Balance</label>
+                </div>
+                <div>
+                  <button class="btn btn-primary fw-bold" (click)="update()" (click)="status = false">Update</button>
+                </div>
+
+
+
+                <div *ngIf="status">
+                  <p>Account updated sucessfully</p>
+                </div>
+
+                <div *ngIf="status == false">
+                  <p>Error While updating data</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

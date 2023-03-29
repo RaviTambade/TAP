@@ -53,7 +53,7 @@ public class SecureRepository : ISecureRepository
         con.ConnectionString = _conString;
         try
         {
-	    
+
             string query = $"Update users SET password =@newPassword WHERE email=@email";
             MySqlCommand cmd = new MySqlCommand(query, con);
             cmd.Parameters.AddWithValue("@newPassword", user.Password);
@@ -82,7 +82,7 @@ public class SecureRepository : ISecureRepository
         MySqlConnection connection = new MySqlConnection(_conString);
         try
         {
-            user.ContactNumber="1234567890";
+            user.ContactNumber = "1234567890";
             string query = "INSERT INTO users(email,contact_number,password)VALUES(@email,@contact_number,@password)";
             MySqlCommand command = new MySqlCommand(query, connection);
             command.Connection = connection;
@@ -108,5 +108,66 @@ public class SecureRepository : ISecureRepository
         return status;
     }
 
+    public bool UpdatePassword(ChangedCredential credential)
+    {
+        bool status = false;
+        MySqlConnection con = new MySqlConnection();
+        con.ConnectionString = _conString;
+        try
+        {
+
+            string query = $"Update users SET password =@newPassword WHERE email=@email AND password =@oldPassword";
+            MySqlCommand cmd = new MySqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@email", credential.Email);
+            cmd.Parameters.AddWithValue("@newPassword", credential.NewPassword);
+            cmd.Parameters.AddWithValue("@oldPassword", credential.OldPassword);
+            con.Open();
+            int rowsAffected = cmd.ExecuteNonQuery();
+            if (rowsAffected >= 1)
+            {
+                status = true;
+            }
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            con.Close();
+        }
+        return status;
+    }
+
+    public bool UpdateEmail(ChangedCredential credential)
+    {
+         bool status = false;
+        MySqlConnection con = new MySqlConnection();
+        con.ConnectionString = _conString;
+        try
+        {
+
+            string query = $"Update users SET email=@newemail  WHERE password =@password AND email=@email";
+            MySqlCommand cmd = new MySqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@email", credential.Email);
+            cmd.Parameters.AddWithValue("@password", credential.OldPassword);
+            cmd.Parameters.AddWithValue("@newemail", credential.NewEmail);
+            con.Open();
+            int rowsAffected = cmd.ExecuteNonQuery();
+            if (rowsAffected >= 1)
+            {
+                status = true;
+            }
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            con.Close();
+        }
+        return status;
+    }
 }
 

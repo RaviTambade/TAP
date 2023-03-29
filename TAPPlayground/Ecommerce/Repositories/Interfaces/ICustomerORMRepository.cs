@@ -6,4 +6,5 @@ public interface ICustomerORMRepository{
  
     List<Customer> GetAll();
    
+   bool Insert(Customer customer);
 }

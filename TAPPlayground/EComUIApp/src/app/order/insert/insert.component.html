@@ -1,0 +1,42 @@
+<p>insertorder</p>
+
+
+<form #insertForm ="ngForm"
+      (ngSubmit)="insertOrder(insertForm.value)">
+<table>
+    <tr>
+        <td><label>orderDate</label></td>
+        <td><input type="text" name="orderDate"  [(ngModel)]="order.orderDate"></td>
+    </tr>
+    <tr>
+        <td><label>shippedDate</label></td>
+        <td><input type="text" name="shippedDate"  [(ngModel)]="order.shippedDate"></td>
+    </tr>  
+    <tr>
+        <td><label>customerId</label></td>
+        <td><input type="number" name="customerId"  [(ngModel)]="order.customerId"></td>
+    </tr>
+    <tr>
+        <td><label>Total</label></td>
+        <td><input type="number" name="total" [(ngModel)]="order.total"></td>
+    </tr>
+    <tr>
+        <td><label>Status</label></td>
+        <td><input type="text" name="status"  [(ngModel)]="order.status"></td> 
+    </tr>
+    <tr>
+        <button type="submit" >Submit</button>
+    </tr>
+</table>    
+</form>
+
+
+<div *ngIf="status">
+    <p>order inserted successfully</p>
+</div>
+
+<div *ngIf="status==false">
+    <p>error while inserting</p>
+</div>
+
+

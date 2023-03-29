@@ -9,13 +9,17 @@ import { NewPasswordComponent } from './new-password/new-password.component';
 import { AssignroleComponent } from './assignrole/assignrole.component';
 import { MembershipRoutingComponent } from './membership-routing/membership-routing.component';
 import { Route, RouterModule, Routes } from '@angular/router';
+import { UpdatePasswordComponent } from './update-password/update-password.component';
+import { UpdateEmailComponent } from './update-email/update-email.component';
 
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
   {path:'forgot-password',component:ForgotPasswordComponent},
-  {path:'assign-role',component:AssignroleComponent}
+  {path:'assign-role',component:AssignroleComponent},
+  {path:'update-password',component:UpdatePasswordComponent},
+  {path:'update-email',component:UpdateEmailComponent},
 ]
 @NgModule({
   declarations: [
@@ -24,20 +28,22 @@ const routes: Routes = [
     ForgotPasswordComponent,
     NewPasswordComponent,
     AssignroleComponent,
-    MembershipRoutingComponent
+    MembershipRoutingComponent,
+    UpdatePasswordComponent,
+    UpdateEmailComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forChild(routes)
   ],
   exports: [
     LoginComponent,
     RegisterComponent,
     ForgotPasswordComponent,
     AssignroleComponent,
-    MembershipRoutingComponent
+    MembershipRoutingComponent,
   ]
 })
 export class MembershipModule { }

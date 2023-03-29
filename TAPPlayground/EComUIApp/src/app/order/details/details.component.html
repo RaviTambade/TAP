@@ -1,0 +1,21 @@
+
+
+
+ <!-- <input type="text" [(ngModel)]="orderId"/>
+<button (click) ="getById(orderId)">Details</button>  -->
+
+
+<div *ngIf="order && order.orderId !=0">
+<p><label>OrderId:</label>{{order.orderId}}</p>
+<p><label>OrderDate:</label>{{order.orderDate}}</p>
+<p><label>ShippedDate:</label>{{order.shippedDate}}</p>
+<p><label>CustomerId:</label>{{order.customerId}}</p>
+<p><label>Total:</label>{{order.total}}</p>
+<p><label>Status:</label>{{order.status}}</p>
+<div *ngIf=" order && order.orderId==0 ">
+    <p>order not Found</p>
+</div>
+</div>
+
+
+<!-- <button type="submit" (click)="delete(orderId)"></button> -->
