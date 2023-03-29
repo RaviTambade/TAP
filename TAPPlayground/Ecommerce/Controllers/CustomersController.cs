@@ -70,7 +70,6 @@ public class CustomersController : Controller
     {
         Console.WriteLine(customer.ToString());
         bool result = _customersSrv.Insert(customer);
-        // bool result=_customersOrmSrv.Insert(customer);
         return Json(result);
     }
 
@@ -84,7 +83,7 @@ public class CustomersController : Controller
     [HttpPut]
     public JsonResult UpdateCustomer([FromBody]Customer customer)
     {
-        Console.WriteLine("firstname "+customer.FirstName+" lastname " + customer.LastName +" id "+ customer.CustomerId);
+        Console.WriteLine(customer.ToString());
         bool result = _customersSrv.Update(customer);
         return Json(result);
     }

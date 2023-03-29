@@ -3,7 +3,7 @@ import { Customer } from '../Customer';
 import { CustomerService } from '../customer.service';
 
 @Component({
-  selector: 'update-customer',
+  selector: 'updateCustomer',
   templateUrl: './update.component.html',
   styleUrls: ['./update.component.css']
 })
@@ -16,7 +16,7 @@ export class UpdateComponent {
   updateCustomer() {
     this.svc.updateCustomer(this.customer).subscribe((response) => {
       this.status = response;
-      console.log("respon"+response);
+      console.log(response);
     })
   }
   receiveCustomer($event: any) {
