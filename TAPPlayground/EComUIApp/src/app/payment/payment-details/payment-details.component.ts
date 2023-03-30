@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { PaymenthubService } from '../paymenthub.service';
 import{Payment} from '../payment'
 @Component({
@@ -10,6 +10,8 @@ export class PaymentDetailsComponent implements OnInit{
 
 payment:Payment |undefined
 paymentId:number |undefined
+
+@Output() sendPayment=new EventEmitter();
 
 constructor(private  svc:PaymenthubService){}
   
@@ -23,6 +25,7 @@ getpaymentbyId(id:any):void{
     (response)=>{
      this.payment=response;
      console.log(response);
+     this.sendPayment.emit({payment:this.payment})
     }
   )
 

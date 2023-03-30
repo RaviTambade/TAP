@@ -46,7 +46,7 @@ public class PaymentsController : Controller
         return Json(pay);
     }
   
-    [HttpPost]
+    [HttpPut]
    public JsonResult Update([FromBody]Payment payment)
     {
         var pay=_paymentsrv.UpdatePayment(payment);

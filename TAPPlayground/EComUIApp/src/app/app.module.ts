@@ -43,6 +43,8 @@ const routes: Routes = [
     DatePipe,
     TransactionModule,
     ProductsModule,
+    HRModuleModule,
+    PaymentModule,
   
   ],
   providers: [DatePipe],

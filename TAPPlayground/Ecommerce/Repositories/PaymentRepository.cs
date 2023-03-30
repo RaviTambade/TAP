@@ -183,15 +183,19 @@ public class PaymentRepository : IPaymentRepository
           con.ConnectionString=_conString;
           try{
             
-            string query = "UPDATE payments set payment_id=@paymentId, payment_date= @paymentDate,transection_id=@transactionId,order_id=@orderId";
+            string query = "UPDATE payments set payment_date= @paymentDate,transection_id=@transactionId,order_id=@orderId where payment_id=@paymentId";
             MySqlCommand cmd=new MySqlCommand(query,con) ;
             cmd.Parameters.AddWithValue("@paymentDate",payment.PaymentDate);
             cmd.Parameters.AddWithValue("@paymentMode",payment.PaymentMode);
             cmd.Parameters.AddWithValue("@transactionId",payment.TransactionId);
             cmd.Parameters.AddWithValue("@orderId",payment.OrderId);
+            cmd.Parameters.AddWithValue("@paymentId",payment.PaymentId);
             con.Open();
-            cmd.ExecuteNonQuery();               
-
+            int rowsAffected=cmd.ExecuteNonQuery();               
+             if(rowsAffected>0){
+             status=true;
+             }
+             
           }catch(Exception e )
           {
             throw e;
