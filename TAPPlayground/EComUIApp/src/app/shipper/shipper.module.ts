@@ -12,10 +12,12 @@ import { ShipperroutingComponent} from './shipperrouting/shipperrouting.componen
 
 
 const routes: Routes = [
-  {path:'list',component:ListComponent},
+  {path:'shipperlist',component:ListComponent},
   {path:'detailsshipper',component:DetailsComponent},
+  {path:'detailsshipper/:id',component:DetailsComponent},
   {path:'insertshipper',component:InsertShipperComponent},
   {path:'updateshipper',component:UpdateComponent},
+  {path:'updateshipper/:id',component:UpdateComponent},
 ]
 
 
