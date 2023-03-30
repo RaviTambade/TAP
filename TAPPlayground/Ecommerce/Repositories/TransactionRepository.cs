@@ -32,7 +32,7 @@ public class TransactionRepository : ITransactionRepository
                 int id = int.Parse(reader["transaction_id"].ToString());
                 long fromAccountNumber = long.Parse(reader["from_account_number"].ToString());
                 long toAccountNumber = long.Parse(reader["to_account_number"].ToString());
-                DateTime transactionDate = DateTime.ParseExact(reader["transaction_date"].ToString(),"dd-MM-yyyy HH:mm:ss",System.Globalization.CultureInfo.InvariantCulture);
+                DateTime transactionDate = DateTime.Parse(reader["transaction_date"].ToString());
                 double amount = double.Parse(reader["amount"].ToString());
 
                 Transaction transaction = new Transaction
@@ -74,7 +74,7 @@ public class TransactionRepository : ITransactionRepository
                int id = int.Parse(reader["transaction_id"].ToString());
                 long fromAccountNumber = long.Parse(reader["from_account_number"].ToString());
                 long toAccountNumber = long.Parse(reader["to_account_number"].ToString());
-                DateTime transactionDate = DateTime.ParseExact(reader["transaction_date"].ToString(),"dd-MM-yyyy HH:mm:ss",System.Globalization.CultureInfo.InvariantCulture);
+                DateTime transactionDate = DateTime.Parse(reader["transaction_date"].ToString());
                 double amount = double.Parse(reader["amount"].ToString());
 
                 transaction = new Transaction()
