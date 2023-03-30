@@ -1,0 +1,12 @@
+.card {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  .card-body {
+    padding: 1.5rem;
+  }
+  

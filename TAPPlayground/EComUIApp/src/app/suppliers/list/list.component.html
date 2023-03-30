@@ -1,4 +1,9 @@
-
 <div *ngFor="let supplier of suppliers">
-<ul class="list-group" (click)="onSelect(supplier)"><li class="list-group-item list-group-item-info">{{supplier.companyName}}</li></ul>
- </div>  
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center" (click)="onSelect(supplier)">
+        {{supplier.companyName}}
+        <!-- <span class="badge bg-primary rounded-pill">{{supplier.itemCount}}</span> -->
+      </li>
+    </ul>
+  </div>
+  
