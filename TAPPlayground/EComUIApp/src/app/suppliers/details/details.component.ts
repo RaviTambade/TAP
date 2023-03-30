@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Supplier } from '../supplier';
 import { SupplierhubService } from '../supplierhub.service';
@@ -8,10 +8,9 @@ import { SupplierhubService } from '../supplierhub.service';
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.css']
 })
-export class DetailsComponent {
+export class DetailsComponent implements OnInit {
   @Input() supplier:Supplier | undefined;
   supplierId: any;
-  sub:any;
   status: boolean | undefined;
 
 
@@ -19,7 +18,7 @@ export class DetailsComponent {
   constructor(private svc:SupplierhubService,private router:Router,private route:ActivatedRoute){}
 
   ngOnInit(): void {
-   this.sub=this.route.paramMap.subscribe((params)=>{
+   this.route.paramMap.subscribe((params)=>{
     console.log(params);
     this.supplierId=params.get('id');
   })
@@ -41,7 +40,7 @@ export class DetailsComponent {
       this.router.navigate(['/suppliers']);
      }
      else{
-      alert("Error while deleting Product  ")
+      alert("Error while deleting supplier")
      }
     })
   }

@@ -36,12 +36,8 @@ const routes : Routes = []
     CustomerModule,
     RouterModule.forRoot(routes),
     DatePipe,
-<<<<<<< HEAD
-    TransactionModule
-=======
+    TransactionModule,
     ProductsModule,
-   
->>>>>>> c46fc1d0830650137a35f3eac18b8e329f89bcdc
   ],
   providers: [DatePipe],
 

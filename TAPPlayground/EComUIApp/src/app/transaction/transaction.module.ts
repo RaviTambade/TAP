@@ -13,17 +13,10 @@ import { RouterModule,Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
-<<<<<<< HEAD
   {path:'transaction-list',component:TransactionListComponent},
   //{path:'search',component:SearchComponent},
   {path:'inserttransaction',component:InserttransactionComponent},
   {path:'updatetransaction',component:UpdatetransactionComponent}
-=======
-  {path:'transactions',component:TransactionListComponent},
-  {path:'search',component:SearchComponent},
-  {path:'insert',component:InserttransactionComponent},
-  {path:'update',component:UpdatetransactionComponent}
->>>>>>> c46fc1d0830650137a35f3eac18b8e329f89bcdc
   // {path:'delete',component:UpdatetransactionComponent},
 ]
 
