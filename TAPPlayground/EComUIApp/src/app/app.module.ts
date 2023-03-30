@@ -43,8 +43,13 @@ const routes: Routes = [
     DatePipe,
     TransactionModule,
     ProductsModule,
+<<<<<<< HEAD
     HRModuleModule,
     PaymentModule,
+=======
+    HRModuleModule
+
+>>>>>>> 6f2bf5dbdde8c9b9cd4367d8c5c6b242d138910c
   
   ],
   providers: [DatePipe],

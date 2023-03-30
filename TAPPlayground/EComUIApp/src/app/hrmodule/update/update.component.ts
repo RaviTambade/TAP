@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Employee } from '../Employee';
 import { HRHUBService } from '../hrhub.service';
 
@@ -7,12 +8,20 @@ import { HRHUBService } from '../hrhub.service';
   templateUrl: './update.component.html',
   styleUrls: ['./update.component.css']
 })
-export class UpdateComponent {
+export class UpdateComponent implements OnInit {
   
     employee : Employee | any;
     status:boolean |undefined;
+    employeeId:any;
 
-    constructor(private svc:HRHUBService){}
+    constructor(private svc:HRHUBService , private  route :ActivatedRoute){}
+  ngOnInit(): void {
+    
+      this.route.paramMap.subscribe((params)=>{
+      this.employeeId=params.get('id');
+    })
+  }
+
 
     update(){
       this.svc.update(this.employee).subscribe(
