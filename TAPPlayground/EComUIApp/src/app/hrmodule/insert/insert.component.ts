@@ -4,7 +4,7 @@ import { HRHUBService } from '../hrhub.service';
 import { HRModuleModule } from '../hrmodule.module';
 
 @Component({
-  selector: 'insert',
+  selector: 'Empinsert',
   templateUrl: './insert.component.html',
   styleUrls: ['./insert.component.css']
 })

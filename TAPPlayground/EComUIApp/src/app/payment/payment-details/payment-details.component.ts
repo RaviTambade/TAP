@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { PaymenthubService } from '../paymenthub.service';
 import{Payment} from '../payment'
 @Component({
-  selector: 'app-payment-details',
+  selector: 'ap-payment-details',
   templateUrl: './payment-details.component.html',
   styleUrls: ['./payment-details.component.css']
 })

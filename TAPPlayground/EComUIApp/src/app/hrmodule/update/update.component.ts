@@ -3,7 +3,7 @@ import { Employee } from '../Employee';
 import { HRHUBService } from '../hrhub.service';
 
 @Component({
-  selector: 'update',
+  selector: 'Empupdate',
   templateUrl: './update.component.html',
   styleUrls: ['./update.component.css']
 })

@@ -3,7 +3,7 @@ import { Employee } from '../Employee';
 import { HRHUBService } from '../hrhub.service';
 
 @Component({
-  selector: 'list',
+  selector: 'Emplist',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css']
 })

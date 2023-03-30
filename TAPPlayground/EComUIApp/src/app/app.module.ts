@@ -1,24 +1,29 @@
-import { DatePipe } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-import { HRModuleModule } from './hrmodule/hrmodule.module'
+import { HRModuleModule } from './hrmodule/hrmodule.module';
+import { HttpClientModule} from '@angular/common/http';
 import { TransactionModule } from './transaction/transaction.module';
 import { AccountModule } from './account/account.module';
+import { RouterModule, Routes } from '@angular/router';
 import { MembershipModule } from './membership/membership.module';
 import { SuppliersModule } from './suppliers/suppliers.module';
 import { CustomerModule } from './customer/customer.module';
+import { PaymentModule } from './payment/payment.module';
 import { ProductsModule } from './product/products.module';
-
 import { ShipperModule } from './shipper/shipper.module';
+import { AppComponent } from './app.component';
+import { DatePipe } from '@angular/common';
+import { Employee } from './hrmodule/Employee';
+
 
 //metadata
 //decorator
 
-const routes : Routes = []
+const routes: Routes = [
+
+]
 @NgModule({
   declarations: [
   AppComponent
@@ -38,6 +43,7 @@ const routes : Routes = []
     DatePipe,
     TransactionModule,
     ProductsModule,
+  
   ],
   providers: [DatePipe],
 
