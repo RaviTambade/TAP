@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Customer } from '../Customer';
 import { CustomerService } from '../customer.service';
 
@@ -7,20 +8,46 @@ import { CustomerService } from '../customer.service';
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.css']
 })
-export class DetailsComponent {
+export class DetailsComponent implements OnInit {
   
-  @Input() customer: Customer | any;
+  @Input() customer: Customer | undefined;
+  customerId:any;
   status: boolean | undefined
-  constructor(private svc:CustomerService){}
-  deleteAccount() {
-    console.log(this.customer.customerId);
-    this.svc.deleteCustomer(this.customer.customerId).subscribe((data) => {
-      this.status = data;
-      if (data) { alert("Customer Deleted Successfully") 
-    }else{
-{alert("Error")}
+  constructor(private svc:CustomerService, private route:ActivatedRoute,private router:Router){}
+ 
+  ngOnInit(): void {
+    this.route.paramMap.subscribe((params)=>{
+     console.log(params)
+     this.customerId=params.get('id');
+   })
+   }
+
+   reciveCustomer($event: any) {
+    console.log("event catched");
+     console.log($event.customer)
+    this.customer = $event.customer;
+  }
+ 
+ 
+  deleteAccount(customerId: number) {
+    if(confirm("Are you sure to delete "+ this.customer?.firstName)) {
+  this.svc.deleteCustomer(customerId).subscribe((response) => {
+
+    if(response){
+      alert("customer deleted Successfully")
+      window.location.reload()
     }
-      console.log(data);
+    else{
+      alert("Error while deleting customer  ")
+    }
     })
+  }
+
 }
+
+onSelectUpdateCustomer(customerId:any)
+{
+  this.router.navigate(['updateCustomer', customerId])
+}
+
 }
