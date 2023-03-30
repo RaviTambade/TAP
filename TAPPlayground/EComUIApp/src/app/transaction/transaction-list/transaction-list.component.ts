@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Transaction } from '../transaction';
 import { TransactionHubService } from '../transaction-hub.service';
 
@@ -9,7 +10,7 @@ import { TransactionHubService } from '../transaction-hub.service';
 })
 export class TransactionListComponent implements OnInit {
 
-constructor(private svc:TransactionHubService){}
+constructor(private svc:TransactionHubService, private router:Router){}
 
 transactions:Transaction[]|undefined;
 
@@ -19,5 +20,9 @@ ngOnInit():void{
       this.transactions=response;
       console.log(response);
     });
+  }
+
+  onClick(tranId:number){
+    this.router.navigate(['/transacation-details', tranId]);
   }
 }
