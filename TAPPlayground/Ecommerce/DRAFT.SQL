@@ -52,7 +52,7 @@ BEGIN
 	INSERT INTO users(email,contact_number,password)VALUES (NEW.email,NEW.contact_number,NEW.password);
 END //
 DELIMITER ;
-INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546601,'MAHB0000286','2023-03-01 12:40:40',22555);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 49025546601,'MAHB0000286','2023-03-01 12:40:40',22555);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546602,'MAHB0000286','2023-03-01 12:40:40',22555);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546603,'MAHB0000286','2023-03-01 12:40:40',22555);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546604,'MAHB0000286','2023-03-01 12:40:40',22555);
@@ -82,7 +82,7 @@ INSERT INTO transactions(from_account_number, to_account_number,transaction_date
 INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025546606,39025546607,'2023-03-01 12:40:35',22500);
 INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025546607,39025546608,'2023-03-01 12:40:35',22500);
 
-<<<<<<< HEAD
+
 select * from products;
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546694,'MAHB0000286','2023-03-01 12:40:40',22555);
 select * from suppliers;
