@@ -27,8 +27,8 @@ public class EmployeeRepository : IEmployeeRepository
                  int id = Int32.Parse(reader["employee_id"].ToString());
                 string firstname = reader["empfirst_name"].ToString();
                 string lastname = reader["emplast_name"].ToString();
-                DateTime birthdate =  DateTime.Parse(reader["birth_date"].ToString(),System.Globalization.CultureInfo.InvariantCulture);
-                DateTime hiredate =DateTime.Parse(reader["hire_date"].ToString(),System.Globalization.CultureInfo.InvariantCulture);
+                DateTime birthdate =  DateTime.Parse(reader["birth_date"].ToString());
+                DateTime hiredate =DateTime.Parse(reader["hire_date"].ToString());
                 string contact=reader["contact_number"].ToString();
                 string email = reader["email"].ToString();
                 string password = reader["password"].ToString();
@@ -77,8 +77,8 @@ public class EmployeeRepository : IEmployeeRepository
                 int id = Int32.Parse(reader["employee_id"].ToString());
                 string firstname = reader["empfirst_name"].ToString();
                 string lastname = reader["emplast_name"].ToString();
-                DateTime birthdate =  DateTime.Parse(reader["birth_date"].ToString(),System.Globalization.CultureInfo.InvariantCulture);
-                DateTime hiredate =DateTime.Parse(reader["hire_date"].ToString(),System.Globalization.CultureInfo.InvariantCulture);
+                DateTime birthdate =  DateTime.Parse(reader["birth_date"].ToString());
+                DateTime hiredate =DateTime.Parse(reader["hire_date"].ToString());
                 string contact=reader["contact_number"].ToString();
                 string email = reader["email"].ToString();
                 string password = reader["password"].ToString();

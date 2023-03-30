@@ -1,4 +1,5 @@
 import { Component ,OnInit} from '@angular/core';
+import { Router } from '@angular/router';
 import { Shipper } from '../shipper';
 import { ShipperhubService } from '../shipperhub.service';
 
@@ -11,7 +12,7 @@ export class ListComponent implements OnInit {
   
   shippers:Shipper[] | undefined
 
-  constructor(private svc:ShipperhubService){ 
+  constructor(private svc:ShipperhubService,private router:Router){ 
   }
   ngOnInit(): void {
    
@@ -21,9 +22,11 @@ export class ListComponent implements OnInit {
         console.log(response);
       }
    );
-
+    }
+   onClick(shippId:any)
+   {
+    this.router.navigate(['/detailsshipper',shippId]);
+   }
   }
     
-    
 
-}

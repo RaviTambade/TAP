@@ -2,19 +2,9 @@
 
 <div *ngFor="let employee of employees">
 
-    <Emp-app-details [employee]="employee"></Emp-app-details>
-     <p><b>EmpId:</b>{{employee.empId}}</p>
-    <p><b>EmpFirstName:</b>{{employee.empFirstName}}</p>
-    <p><b>EmpLastName:</b>{{employee.empLastName}}</p>
-    <p><b>BirthDate:</b>{{employee.birthDate}}</p>
-    <p><b>HireDate:</b>{{employee.hireDate}}</p>
-    <p><b>ContactNumber:</b>{{employee.contactNumber}}</p>
-    <p><b>Email:</b>{{employee.email}}</p>
-    <p><b>Password:</b>{{employee.password}}</p>
-    <p><b>Photo:</b>{{employee.photo}}</p>
-    <p><b>ReportsTo:</b>{{employee.reportsTo}}</p>
-    <p><b>Account Number:</b>{{employee.accountNumber}}</p>
-    <hr> 
+    
+    <label (click)="onClick(employee.empId)"><b>EmpFirstName:</b>{{employee.empFirstName}}</label>
+
 </div>
 
 

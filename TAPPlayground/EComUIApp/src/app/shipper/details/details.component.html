@@ -1,4 +1,6 @@
-<h2> Details of shipper </h2>
+<getshipper [shipperId]= "shipperId" (sendShipper)="reciveShipper($event)" hidden></getshipper>
+
+<div *ngIf="shipper && shipper.shippId !=0">
 <input type ="number"[(ngModel)]="shipperId">
 <button (click) = "getById(shipperId)"> get Details</button>
 <div *ngIf = "shipper">
@@ -7,6 +9,22 @@
 <p>Email:{{shipper.email}}</p>
 <p>ContactNumber:{{shipper.contactNumber}}</p>
 <p>AccountNumber:{{shipper.accountNumber}}</p>
+
+
+<button  type="submit" (click)="delete()">Delete</button><br/>
+<p> </p>
+<button type="submit" (click)="onUpdateClick(shipper.shipperId)">Update</button>
+<hr>
+
+ <div *ngIf="shipper && shipper.shipperId ==0">
+     <p>shipper Details not Fount</p>
+ </div>
+
+
+
+
+
+
 </div>
 
 
