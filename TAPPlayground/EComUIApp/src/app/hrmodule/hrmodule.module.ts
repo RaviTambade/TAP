@@ -17,8 +17,10 @@ import { RouterModule, Routes } from '@angular/router';
 const routes:Routes=[
   {path:'Emplist',component:ListComponent},
   {path:'Empgetbyid',component:GetbyidComponent},
+  {path:'Emp-details/:id',component:DetailsComponent},
   {path:'Empinsert',component:InsertComponent},
-  {path:'Empupdate',component:UpdateComponent}
+  {path:'Empupdate',component:UpdateComponent},
+  {path:'Emp-update/:id',component:UpdateComponent},
 ]
 
 @NgModule({
