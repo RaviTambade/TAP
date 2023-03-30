@@ -12,7 +12,7 @@
 </div> -->
 
 <div *ngFor="let order of orders">
-
+   <!-- <td><a [routerLink]="['/order',order.orderId]">{{orders.customerId}} </a> </td> -->
     <app-details [order]="order" ></app-details>
     <hr>
  </div> 

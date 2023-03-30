@@ -13,8 +13,9 @@ import { RoutingComponent } from './routing/routing.component';
 import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
-  {path:'app-list',component:ListComponent},
-  {path:'app-Search',component:SearchComponent},
+  {path:'order',component:ListComponent},
+  {path:'order/:Id',component:DetailsComponent},
+  {path:'ordersearch',component:SearchComponent},
   {path:'app-insert',component:InsertComponent},
   {path:'order-update',component:UpdateComponent}
 

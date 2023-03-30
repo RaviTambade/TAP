@@ -32,9 +32,9 @@ export class OrderhubService {
     return this.http.put<any>(url,order);
   }
 
-  // public delete(orderId:number):Observable<any>{
-  //   let url = "http://localhost:5223/orders/delete" ; 
-  //   return this.http.delete<any>(url);
-  // }
+  public delete(orderId:number):Observable<any>{
+    let url = "http://localhost:5223/orders/delete/" +orderId ; 
+    return this.http.delete<any>(url);
+  }
   
 }

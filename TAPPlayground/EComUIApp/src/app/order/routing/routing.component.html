@@ -1,8 +1,10 @@
 
 <div>
-    <a [routerLink]="['app-list']">Orders</a> |
-    <a [routerLink]="['app-Search']">Search</a> |
-    <a [routerLink]="['app-insert']">Insert</a> |
-    <a [routerLink]="['order-update']">Update</a> | 
+    <ul>
+    <li><a [routerLink]="['order']">Order</a><li> |
+    <li><a [routerLink]="['ordersearch']">Search</a></li> |
+    <li><a [routerLink]="['app-insert']">Insert</a></li> |
+    <li><a [routerLink]="['order-update']">Update</a></li> | 
+    </ul>
 </div>
 <router-outlet></router-outlet>

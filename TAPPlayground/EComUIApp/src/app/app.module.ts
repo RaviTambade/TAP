@@ -11,6 +11,7 @@ import { SuppliersModule } from './suppliers/suppliers.module';
 import { DatePipe } from '@angular/common';
 import { CustomerModule } from './customer/customer.module';
 import { ProductsModule } from './product/products.module';
+import { OrderModule } from './order/order.module';
 
 
 
@@ -34,6 +35,7 @@ const routes: Routes = [
     AccountModule, 
     MembershipModule,
     SuppliersModule,
+    OrderModule,
     CustomerModule,
     ProductsModule,
     RouterModule.forRoot(routes),

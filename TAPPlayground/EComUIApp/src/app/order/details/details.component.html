@@ -12,10 +12,9 @@
 <p><label>CustomerId:</label>{{order.customerId}}</p>
 <p><label>Total:</label>{{order.total}}</p>
 <p><label>Status:</label>{{order.status}}</p>
+<button type="submit" (click)="delete(order.orderId)">Delete</button> 
 <div *ngIf=" order && order.orderId==0 ">
     <p>order not Found</p>
 </div>
 </div>
 
-
-<!-- <button type="submit" (click)="delete(orderId)"></button> -->

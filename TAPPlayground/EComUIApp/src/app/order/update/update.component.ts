@@ -15,7 +15,7 @@ import { Order } from '../order'
     constructor(private svc:OrderhubService){}
     
     update() {
-        console.log("updated");
+      console.log("updated");
       this.svc.update(this.order).subscribe(
         (res)=>{
           this.status = res;
