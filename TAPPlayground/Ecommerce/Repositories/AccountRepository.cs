@@ -36,7 +36,7 @@ public class AccountRepository : IAccountRepository
                 int accountId = int.Parse(reader["account_id"].ToString());
                 long accountNumber = long.Parse(reader["account_number"].ToString());
                 string ifscCode = reader["ifsc_code"].ToString();
-                DateTime registerDate = DateTime.ParseExact(reader["register_date"].ToString(), "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+                DateTime registerDate = DateTime.Parse(reader["register_date"].ToString());
                 double accountBalance = double.Parse(reader["balance"].ToString());
                 Account account = new Account
                 {
@@ -79,7 +79,7 @@ public class AccountRepository : IAccountRepository
                 int accountid = int.Parse(reader["account_id"].ToString());
                 long accountNumber = long.Parse(reader["account_number"].ToString());
                 string ifscCode = reader["ifsc_code"].ToString();
-                DateTime registerDate = DateTime.ParseExact(reader["register_date"].ToString(), "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+                DateTime registerDate = DateTime.Parse(reader["register_date"].ToString());
                 double accountBalance = double.Parse(reader["balance"].ToString());
                 account = new Account
                 {

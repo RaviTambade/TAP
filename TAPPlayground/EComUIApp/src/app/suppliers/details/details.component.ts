@@ -20,7 +20,7 @@ export class DetailsComponent {
 
   ngOnInit(): void {
    this.sub=this.route.paramMap.subscribe((params)=>{
-    console.log(params);
+    console.log(params);  
     this.supplierId=params.get('id');
   })
   }

@@ -1,9 +1,7 @@
-<app-accountdetails [accountId]="accountId" (sendAccount)="reciveAccount($event)"></app-accountdetails>
+<app-accountdetails [accountId]="accountId" (sendAccount)="reciveAccount($event)" hidden></app-accountdetails>
 <div *ngIf="account && account.accountId !=0">
    <li class="list-group-item list-group-item-dark">
-      <div>
-         <p><label><b>AccountNumber :</b></label>{{account.accountNumber }}</p>
-      </div>
+      
       <p><label><b>AccountId :</b></label>{{ account.accountId }}</p>
       <p><label><b>AccountNumber :</b></label>{{account.accountNumber }}</p>
       <p><label><b>IFSCCode :</b></label>{{ account.ifscCode }}</p>
@@ -11,7 +9,7 @@
       <p><label><b>Balance :</b></label>{{ account.balance}}</p>
 
       <button class="btn btn-danger" type="submit" (click)="deleteAccount()">Delete</button>
-      <button class="btn " style="background-color: #55c2da;" (click)="onSelectUpdate(accountId)">Update </button>
+      <button class="btn " style="background-color: #55c2da;" (click)="onSelectUpdate(account.accountId)">Update </button>
       <hr>
 
       <div *ngIf="account && account.accountId==0">

@@ -14,12 +14,11 @@ import { Routes,RouterModule } from '@angular/router';
 
 
 const routes:Routes=[
-  {path:'accountsList',component:ListComponent},
-  // {path:'account/:id',component:SearchAccountComponent},
-  {path:'account/:id',component:AccountdetailsComponent},
+  {path:'accounts',component:ListComponent},
+  {path:'searchAccount',component:SearchAccountComponent},
+  {path:'account/:id',component:DetailsComponent},
   {path:'insertAccount',component:InsertComponent},
-  {path:'updateAccount',component:UpdateComponent},
-  {path:'account/update',component:UpdateComponent},
+  {path:'updateAccount/:id',component:UpdateComponent},
 
 ]
 
