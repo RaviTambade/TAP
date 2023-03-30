@@ -1,5 +1,4 @@
 
 <div *ngFor="let supplier of suppliers">
-
-    <app-details [supplier]="supplier" ></app-details>
+<ul (click)="onSelect(supplier)"><li>{{supplier.companyName}}</li></ul>
  </div>  

@@ -9,11 +9,13 @@ import { AccountModule } from './account/account.module';
 import { RouterModule, Routes } from '@angular/router';
 import { MembershipModule } from './membership/membership.module';
 import { SuppliersModule } from './suppliers/suppliers.module';
-import { DatePipe } from '@angular/common';
 import { CustomerModule } from './customer/customer.module';
+import { PaymentModule } from './payment/payment.module';
 import { ProductsModule } from './product/products.module';
-import { AppComponent } from './app.component';
 import { ShipperModule } from './shipper/shipper.module';
+import { AppComponent } from './app.component';
+import { DatePipe } from '@angular/common';
+
 
 //metadata
 //decorator
@@ -22,28 +24,28 @@ const routes: Routes = [
 
 ]
 @NgModule({
-  declarations: [
-  AppComponent
-  ],
-
-  imports: [
-    BrowserModule,
-    FormsModule,
-    MembershipModule,
-    HRModuleModule,
-    HttpClientModule,
-    DatePipe,
-    TransactionModule,
-    AccountModule, 
-    ShipperModule,
-    SuppliersModule,
-    CustomerModule,
-    ProductsModule,
-    RouterModule.forRoot(routes),
-  ],
-  providers: [DatePipe],
-
-  bootstrap: [AppComponent] //Root Component
+    declarations: [
+        AppComponent
+    ],
+    providers: [DatePipe],
+    bootstrap: [AppComponent] //Root Component
+    ,
+    imports: [
+        BrowserModule,
+        FormsModule,
+        MembershipModule,
+        HRModuleModule,
+        HttpClientModule,
+        DatePipe,
+        TransactionModule,
+        AccountModule,
+        ShipperModule,
+        SuppliersModule,
+        CustomerModule,
+        PaymentModule,
+        RouterModule.forRoot(routes),
+        ProductsModule
+    ]
 })
 export class AppModule { } //Root Module
 

@@ -3,7 +3,7 @@ import { Payment } from '../payment';
 import { PaymenthubService } from '../paymenthub.service';
 
 @Component({
-  selector: 'app-insert',
+  selector: 'ap-insert',
   templateUrl: './insert.component.html',
   styleUrls: ['./insert.component.css']
 })

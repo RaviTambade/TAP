@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { TransactionListComponent } from './transaction-list/transaction-list.component';
 import { FormsModule } from '@angular/forms';
 import { TransactiondetailsComponent } from './transactiondetails/transactiondetails.component';
@@ -13,10 +13,10 @@ import { RouterModule,Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
-  {path:'transaction-list',component:TransactionListComponent},
+  {path:'transactions',component:TransactionListComponent},
   {path:'search',component:SearchComponent},
-  {path:'inserttransaction',component:InserttransactionComponent},
-  {path:'updatetransaction',component:UpdatetransactionComponent}
+  {path:'insert',component:InserttransactionComponent},
+  {path:'update',component:UpdatetransactionComponent}
   // {path:'delete',component:UpdatetransactionComponent},
 ]
 
@@ -32,12 +32,14 @@ const routes: Routes = [
     RoutingComponent,
   ],
   exports:[
-    RoutingComponent
+    RoutingComponent,
+    TransactionListComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     HttpClientModule,
+    DatePipe,
     RouterModule.forChild(routes)
   ]
 })

@@ -30,7 +30,7 @@ public class OrderRepository : IOrderRepository
             while (reader.Read())
             {
                 int id = int.Parse(reader["order_id"].ToString());
-                DateTime orderDate = DateTime.ParseExact(reader["order_date"].ToString(), "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+               DateTime orderDate = DateTime.ParseExact(reader["order_date"].ToString(), "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
                 DateTime shippedDate = DateTime.ParseExact(reader["shipped_date"].ToString(), "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
                 int customerId = int.Parse(reader["cust_id"].ToString());
                 double total = double.Parse(reader["total"].ToString());

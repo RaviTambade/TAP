@@ -4,7 +4,7 @@ import { Employee } from '../Employee';
 import { HRHUBService } from '../hrhub.service';
 
 @Component({
-  selector: 'getbyid',
+  selector: 'Empgetbyid',
   templateUrl: './getbyid.component.html',
   styleUrls: ['./getbyid.component.css']
 })

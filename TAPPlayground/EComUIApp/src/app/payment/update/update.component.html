@@ -1,0 +1,35 @@
+<h1>Update Payment</h1>
+<ap-payment-details></ap-payment-details>
+<br>
+<form >
+    <div>
+    <p>Payment Date:
+        <input type="text" placeholder="paymentDate" [(ngModel)]="payment.paymentDate" >
+    </p>
+    </div>
+    <br>
+    <div>
+        <p>Payment Mode:
+        <input type="text" placeholder="paymentMode" [(ngModel)]="payment.paymentMode">
+        </p>
+    </div>
+    <br>
+    <div>
+    <p>TransactionId:
+        <input type="number" placeholder="transactionId" [(ngModel)]="payment.transactionId" >
+        </p>
+    </div>
+    <br>
+    <div><p>OrderId:
+        <input type="number" placeholder="orderId" [(ngModel)]="payment.orderId">
+        </p>
+    </div>
+    <br>
+    <div>
+        <button (click)="update()">
+            update
+        </button >
+    </div>
+</form>
+
+
