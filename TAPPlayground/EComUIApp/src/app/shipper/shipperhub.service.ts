@@ -31,11 +31,17 @@ insertShipper(shipper:Shipper):Observable<any>{
   return this.http.post<Shipper>(url,shipper);
 }
 
-UpdateShipper(shipper:Shipper):Observable<any>{
+updateShipper(shipper:Shipper):Observable<any>{
   let url="http://localhost:5223/shipper/Updateshipper";
   console.log(shipper);
   return this.http.put<Shipper>(url,shipper);
 }
 
+delete(shipperId:number):Observable<any>{
+
+  let url ="http://localhost:5223/shipper/DeleteShipper/"+shipperId;
+  return this.http.delete<Shipper>(url);
 }
+}
+
 

@@ -11,9 +11,10 @@ import { Route, RouterModule, Routes } from '@angular/router';
 
 
 const routes: Routes = [
-  { path: 'list', component: ListComponent},
-  { path: 'insertpayment', component: InsertComponent },
-  { path: 'details', component: PaymentDetailsComponent },
+  { path: 'paymentList', component: ListComponent},
+  { path: 'insertPayment', component: InsertComponent },
+  { path: 'detailsPayment', component: PaymentDetailsComponent },
+  { path: 'updatePayment', component: UpdateComponent },
   
 ];
 
