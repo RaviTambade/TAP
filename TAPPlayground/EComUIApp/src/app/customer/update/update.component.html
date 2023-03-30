@@ -1,38 +1,51 @@
 <h2>Update page</h2>
 
-<app-get-customer (sendCustomer)="receiveCustomer($event)"></app-get-customer>
-<div *ngIf="customer && customer.customerId!==0 ">
-    <div *ngIf="customer">
-        <table class="table table-striped">
-            <tr>
-                <th>first Name</th>
-                <td><input type="text" [(ngModel)]="customer.firstName"></td>
-            </tr>
-            <tr>
-                <th>last Name</th>
-                <td><input type="text" [(ngModel)]="customer.lastName"></td>
-            </tr>
-            <tr>
-                <th>Email</th>
-                <td><input type="text" [(ngModel)]="customer.email"></td>
-            </tr>
-            <tr>
-                <th>contactNumber</th>
-                <td> <input type="text" [(ngModel)]="customer.contactNumber"> </td>
-            </tr>
-            <tr>
-                <th>AccountNumber</th>
-                <td> <input type="text" [(ngModel)]="customer.accountNumber"> </td>
-            </tr>
-            <tr>
-                <th>password</th>
-                <td><input type="text" [(ngModel)]="customer.password"> </td>
-            </tr>
-           
-            <button (click)="updateCustomer()" (click)="status = false" class="btn btn-success">Update</button>
-        </table>
+<div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card border-0 shadow rounded-3 my-5">
+          <div class="card-body p-4 p-sm-5">
+            <h5 class="card-title text-center mb-5 fs-5">Update customer From</h5>
+  
+            <app-get-customer (sendCustomer)="receiveCustomer($event)"></app-get-customer>
+            <div *ngIf="customer && customer.customerId!==0 ">
+                <div *ngIf="customer">
+                    <table class="table table-striped">
+                        <tr>
+                            <th>first Name</th>
+                            <td><input type="text" [(ngModel)]="customer.firstName"></td>
+                        </tr>
+                        <tr>
+                            <th>last Name</th>
+                            <td><input type="text" [(ngModel)]="customer.lastName"></td>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <td><input type="text" [(ngModel)]="customer.email"></td>
+                        </tr>
+                        <tr>
+                            <th>contactNumber</th>
+                            <td> <input type="text" [(ngModel)]="customer.contactNumber"> </td>
+                        </tr>
+                        <tr>
+                            <th>AccountNumber</th>
+                            <td> <input type="text" [(ngModel)]="customer.accountNumber"> </td>
+                        </tr>
+                        <tr>
+                            <th>password</th>
+                            <td><input type="text" [(ngModel)]="customer.password"> </td>
+                        </tr>
+                       
+                        <button (click)="updateCustomer()" (click)="status = false" class="btn btn-success">Update</button>
+                    </table>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
+  
 
 <div *ngIf=" customer && customer.customerId==0 ">
     <p>Supplier not Found</p>

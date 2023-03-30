@@ -1,0 +1,37 @@
+<h1>Update Payment</h1>
+<ap-payment-details (sendPayment)="recivePayment($event)"></ap-payment-details>
+<br>
+<div   *ngIf="payment && payment.paymentId!=0">
+<form >
+    <div>
+    <p>Payment Date:
+        <input type="text"  name="paymentDate" placeholder="paymentDate" [(ngModel)]="payment.paymentDate" >
+    </p>
+    </div>
+    <br>
+    <div>
+        <p>Payment Mode:
+        <input type="text" name="paymentMode" placeholder="paymentMode" [(ngModel)]="payment.paymentMode">
+        </p>
+    </div>
+    <br>
+    <div>
+    <p>TransactionId:
+        <input type="number" name="transactionId" placeholder="transactionId" [(ngModel)]="payment.transactionId" >
+        </p>
+    </div>
+    <br>
+    <div><p>OrderId:
+        <input type="number" name="orderId"  placeholder="orderId" [(ngModel)]="payment.orderId">
+        </p>
+    </div>
+    <br>
+    <div>
+        <button (click)="update()">
+            update
+        </button >
+    </div>
+</form>
+</div>
+
+

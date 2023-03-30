@@ -32,16 +32,19 @@ export class ProductDetailsComponent implements OnInit {
   deleteProduct(productId: number) {
       if(confirm("Are you sure to delete "+ this.product?.productTitle)) {
     this.svc.deleteProduct(productId).subscribe((response) => {
-     if(response){
-       this.router.navigate(['/products']);
-      alert("Product deleted Successfully")
-     }
-     else{
-      alert("Error while deleting Product  ")
-     }
-    })
+
+      if(response){
+        alert("Product deleted Successfully")
+        window.location.reload()
+      }
+      else{
+        alert("Error while deleting Product  ")
+      }
+      })
+    }
+
   }
-}
+
 
   onSelectUpdate(productId:any){
    this.router.navigate(['/product-update',productId]);

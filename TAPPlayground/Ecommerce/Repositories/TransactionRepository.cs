@@ -2,7 +2,7 @@ using ECommerceApp.Models;
 using ECommerceApp.Repositories.Interfaces;
 using MySql.Data.MySqlClient;
 using Microsoft.Extensions.Configuration;
-using System.Globalization;
+
                        
 namespace ECommerceApp.Repositories;
 
@@ -32,7 +32,7 @@ public class TransactionRepository : ITransactionRepository
                 int id = int.Parse(reader["transaction_id"].ToString());
                 long fromAccountNumber = long.Parse(reader["from_account_number"].ToString());
                 long toAccountNumber = long.Parse(reader["to_account_number"].ToString());
-                DateTime transactiondate = DateTime.ParseExact(reader["transaction_date"].ToString(),"yyyy-mm-dd HH:mm:ss",CultureInfo.InvariantCulture);
+                DateTime transactionDate = DateTime.Parse(reader["transaction_date"].ToString());
                 double amount = double.Parse(reader["amount"].ToString());
 
                 Transaction transaction = new Transaction
@@ -40,7 +40,7 @@ public class TransactionRepository : ITransactionRepository
                     TransactionId = id,
                     FromAccountNumber = fromAccountNumber,
                     ToAccountNumber = toAccountNumber,
-                    TransactionDate = transactiondate.ToLongDateString(),
+                    TransactionDate = transactionDate.ToShortDateString(),
                     Amount = amount
                 };
                 transactions.Add(transaction);
@@ -74,7 +74,7 @@ public class TransactionRepository : ITransactionRepository
                int id = int.Parse(reader["transaction_id"].ToString());
                 long fromAccountNumber = long.Parse(reader["from_account_number"].ToString());
                 long toAccountNumber = long.Parse(reader["to_account_number"].ToString());
-                DateTime transactionDate = DateTime.ParseExact(reader["transaction_date"].ToString(),"dd-MM-yyyy HH:mm:ss",System.Globalization.CultureInfo.InvariantCulture);
+                DateTime transactionDate = DateTime.Parse(reader["transaction_date"].ToString());
                 double amount = double.Parse(reader["amount"].ToString());
 
                 transaction = new Transaction()
@@ -82,7 +82,7 @@ public class TransactionRepository : ITransactionRepository
                     TransactionId = id,
                     FromAccountNumber = fromAccountNumber,
                     ToAccountNumber = toAccountNumber,
-                    TransactionDate = transactionDate.ToLongDateString(),
+                    TransactionDate = transactionDate.ToShortDateString(),
                     Amount = amount
                 };
             }
@@ -116,7 +116,7 @@ public class TransactionRepository : ITransactionRepository
             status=true;
         }
         catch(Exception e){
-             throw e;
+          throw e;
         }
         finally{
           connection.Close();
@@ -145,7 +145,6 @@ public class TransactionRepository : ITransactionRepository
         catch (Exception e)
         {
             throw e;
-
         }
         finally
         {

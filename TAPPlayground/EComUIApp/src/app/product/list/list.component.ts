@@ -20,12 +20,12 @@ export class ListComponent {
     })
   }
 
-  getAll(): void {
-    this.svc.getProducts().subscribe((response) => {
-      this.products = response;
-      console.log(this.products);
-    })
-}
+//   getAll(): void {
+//     this.svc.getProducts().subscribe((response) => {
+//       this.products = response;
+//       console.log(this.products);
+//     })
+// }
 onSelect(product:any){
   if(product!=undefined)
  this.router.navigate(['/product',product.productId]);

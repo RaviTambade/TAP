@@ -1,0 +1,18 @@
+<div *ngIf="customer && customer.customerId !=0">
+    <li class="list-group-item list-group-item-dark"alig="center">
+<p><label ><b>cCustomerId :</b></label>{{ customer.customerId }}</p>
+<p><label ><b>First Name :</b></label>{{customer.firstName}}
+<p><label ><b>Last Name :</b></label>{{ customer.lastName }}</p>
+<p><label ><b>Email :</b></label>{{ customer.email }}</p>
+<p><label ><b>Password :</b></label>{{ customer.password}}</p>
+<p><label ><b>Contact Number :</b></label>{{ customer.contactNumber}}</p>
+<p><label ><b>Account Number :</b></label>{{ customer.accountNumber}}</p>
+
+<button class="btn btn-primary fw-danger" type="submit" (click)="deleteAccount()">Delete</button>
+<hr>
+
+<div *ngIf="customer&& customer.customerId==0">
+  <p>Customer Not Found</p>
+</div>
+</li>
+</div>

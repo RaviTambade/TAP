@@ -1,7 +1,11 @@
-
-
-           <div *ngFor="let account of accounts">
-
-            <app-details [account]="account" ></app-details>
-         </div> 
-
+<div *ngFor="let account of accounts">
+  <div class="card p-4 m-4">
+    <div class="d-flex justify-content-left align-items-center">
+      <div>
+        <h4 class="text" (click)="onSelect(account)">
+          <label><b>AccountNumber :</b></label><p>{{account.accountNumber }}</p>
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>

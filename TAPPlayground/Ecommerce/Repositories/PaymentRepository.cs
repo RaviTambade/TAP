@@ -34,7 +34,7 @@ public class PaymentRepository : IPaymentRepository
             while (reader.Read())
             {
                 int paymentId =int.Parse(reader["payment_id"].ToString());
-                DateTime paymentDate = DateTime.ParseExact(reader["payment_date"].ToString(), "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+                DateTime paymentDate = DateTime.Parse(reader["payment_date"].ToString());
                 string? payment_mode = reader["payment_mode"].ToString();
                 int transactionId =int.Parse(reader["transection_id"].ToString());
                 int orderId =int.Parse(reader["order_id"].ToString());
@@ -75,12 +75,12 @@ public class PaymentRepository : IPaymentRepository
             string query = "SELECT * FROM payments where payment_id=@paymentId";
             connection.Open();
             MySqlCommand command = new MySqlCommand(query, connection);
-            command.Parameters.AddWithValue("paymentId",id);
+            command.Parameters.AddWithValue("@paymentId",id);
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
                 //paymentId =int.Parse(reader["payment_id"].ToString());
-                DateTime paymentDate = DateTime.ParseExact(reader["payment_date"].ToString(), "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+                DateTime paymentDate = DateTime.Parse(reader["payment_date"].ToString());
                 string? payment_mode = reader["payment_mode"].ToString();
                 int transactionId =int.Parse(reader["transection_id"].ToString());
                 int orderId =int.Parse(reader["order_id"].ToString());
@@ -123,7 +123,7 @@ public class PaymentRepository : IPaymentRepository
             while (reader.Read())
             {
                 int paymentId =int.Parse(reader["payment_id"].ToString());
-                 DateTime date =  DateTime.Parse(reader["payment_date"].ToString(),CultureInfo.InvariantCulture);
+                DateTime date = DateTime.Parse(reader["payment_date"].ToString(), CultureInfo.InvariantCulture);
                 string? payment_mode = reader["payment_mode"].ToString();
                 int transactionId =int.Parse(reader["transection_id"].ToString());
                 int OrderId =int.Parse(reader["order_id"].ToString());
@@ -131,7 +131,7 @@ public class PaymentRepository : IPaymentRepository
                 payment = new Payment()
                 {
                     PaymentId=paymentId,
-                    PaymentDate= date.ToLongDateString(),
+                    PaymentDate= date.ToShortDateString(),
                     PaymentMode = payment_mode,
                     TransactionId = transactionId,
                     OrderId = id
@@ -183,15 +183,19 @@ public class PaymentRepository : IPaymentRepository
           con.ConnectionString=_conString;
           try{
             
-            string query = "UPDATE payments set payment_id=@paymentId, payment_date= @paymentDate,transection_id=@transactionId,order_id=@orderId";
+            string query = "UPDATE payments set payment_date= @paymentDate,transection_id=@transactionId,order_id=@orderId where payment_id=@paymentId";
             MySqlCommand cmd=new MySqlCommand(query,con) ;
             cmd.Parameters.AddWithValue("@paymentDate",payment.PaymentDate);
             cmd.Parameters.AddWithValue("@paymentMode",payment.PaymentMode);
             cmd.Parameters.AddWithValue("@transactionId",payment.TransactionId);
             cmd.Parameters.AddWithValue("@orderId",payment.OrderId);
+            cmd.Parameters.AddWithValue("@paymentId",payment.PaymentId);
             con.Open();
-            cmd.ExecuteNonQuery();               
-
+            int rowsAffected=cmd.ExecuteNonQuery();               
+             if(rowsAffected>0){
+             status=true;
+             }
+             
           }catch(Exception e )
           {
             throw e;

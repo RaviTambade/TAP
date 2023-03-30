@@ -71,7 +71,6 @@ public class TransactionController : Controller
     [HttpDelete]
     public JsonResult DeleteTransaction(int id)
     {
-        Console.WriteLine(id);
         bool supplier = _transactionsrv.Delete(id);
         return Json(supplier);
     }

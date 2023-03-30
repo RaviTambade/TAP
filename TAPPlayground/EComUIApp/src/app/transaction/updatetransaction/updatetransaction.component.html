@@ -7,6 +7,10 @@
         <form #updateForm="ngForm" (ngSubmit)="updateTransaction(updateForm.value)">
          <table class="table table-striped">
             <tr>
+                <td><label>Transaction Id</label></td>
+                <td><input type="number" name="transactionId" [(ngModel)]="transaction.transactionId"/></td>
+            </tr>
+            <tr>
                 <td><label>From Account Number</label></td>
                 <td><input type="number" name="fromAccountNumber" [(ngModel)]="transaction.fromAccountNumber"/></td>
             </tr>
@@ -30,7 +34,7 @@
     </form>
 </div>
 
-<div *ngIf="transaction && transaction.transactionId!==0">
+<div *ngIf="transaction && transaction.transactionId==0">
     <p>Transaction not Found</p>
 </div>
 
