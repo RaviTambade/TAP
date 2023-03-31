@@ -27,8 +27,8 @@ public class EmployeeRepository : IEmployeeRepository
                  int id = Int32.Parse(reader["employee_id"].ToString());
                 string firstname = reader["empfirst_name"].ToString();
                 string lastname = reader["emplast_name"].ToString();
-                DateTime birthdate =  DateTime.Parse(reader["birth_date"].ToString(),System.Globalization.CultureInfo.InvariantCulture);
-                DateTime hiredate =DateTime.Parse(reader["hire_date"].ToString(),System.Globalization.CultureInfo.InvariantCulture);
+                DateTime birthdate =  DateTime.Parse(reader["birth_date"].ToString());
+                DateTime hiredate =DateTime.Parse(reader["hire_date"].ToString());
                 string contact=reader["contact_number"].ToString();
                 string email = reader["email"].ToString();
                 string password = reader["password"].ToString();
@@ -77,8 +77,8 @@ public class EmployeeRepository : IEmployeeRepository
                 int id = Int32.Parse(reader["employee_id"].ToString());
                 string firstname = reader["empfirst_name"].ToString();
                 string lastname = reader["emplast_name"].ToString();
-                DateTime birthdate =  DateTime.Parse(reader["birth_date"].ToString(),System.Globalization.CultureInfo.InvariantCulture);
-                DateTime hiredate =DateTime.Parse(reader["hire_date"].ToString(),System.Globalization.CultureInfo.InvariantCulture);
+                DateTime birthdate =  DateTime.Parse(reader["birth_date"].ToString());
+                DateTime hiredate =DateTime.Parse(reader["hire_date"].ToString());
                 string contact=reader["contact_number"].ToString();
                 string email = reader["email"].ToString();
                 string password = reader["password"].ToString();
@@ -145,7 +145,7 @@ public class EmployeeRepository : IEmployeeRepository
    }
    public  bool Update(Employee emp){       
           Console.WriteLine(emp);
-          bool status = false;
+          bool status=false;
           MySqlConnection con = new MySqlConnection();
           con.ConnectionString=_conString;
           try{
@@ -153,17 +153,17 @@ public class EmployeeRepository : IEmployeeRepository
              Console.WriteLine(query);
              con.Open();
              MySqlCommand command=new MySqlCommand(query,con) ;
+              command.Parameters.AddWithValue("@EmployeeId",emp.EmpId); 
              command.Parameters.AddWithValue("@EmpFirstName",emp.EmpFirstName);             
              command.Parameters.AddWithValue("@EmpLastName",emp.EmpLastName);
              command.Parameters.AddWithValue("@BirthDate",emp.BirthDate);
              command.Parameters.AddWithValue("@HireDate",emp.HireDate);
              command.Parameters.AddWithValue("@ContactNumber",emp.ContactNumber);
              command.Parameters.AddWithValue("@Email",emp.Email);
-             command.Parameters.AddWithValue("@Password",emp.Password);
+             command.Parameters.AddWithValue("@Password",emp.Password.ToString());
              command.Parameters.AddWithValue("@Photo",emp.Photo);
              command.Parameters.AddWithValue("@ReportsTo",emp.ReportsTo);
              command.Parameters.AddWithValue("@AccountNumber",emp.AccountNumber);
-             con.Open();
              command.ExecuteNonQuery();               
              status=true;
           }catch(Exception e )

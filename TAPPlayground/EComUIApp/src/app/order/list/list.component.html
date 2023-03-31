@@ -12,8 +12,7 @@
 </div> -->
 
 <div *ngFor="let order of orders">
-   <!-- <td><a [routerLink]="['/order',order.orderId]">{{orders.customerId}} </a> </td> -->
-    <app-details [order]="order" ></app-details>
-    <!-- <div (click)="onSelectOrder()"></div> -->
+   
+    <label (click)="onSelectOrder(order.orderId)"> <b>OrderId:</b>{{order.orderId}}</label>
     <hr>
  </div> 

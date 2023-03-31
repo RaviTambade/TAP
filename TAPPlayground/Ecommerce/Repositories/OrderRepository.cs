@@ -30,8 +30,8 @@ public class OrderRepository : IOrderRepository
             while (reader.Read())
             {
                 int id = int.Parse(reader["order_id"].ToString());
-                DateTime orderDate = DateTime.ParseExact(reader["order_date"].ToString(), "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
-                DateTime shippedDate = DateTime.ParseExact(reader["shipped_date"].ToString(), "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+                DateTime orderDate = DateTime.Parse(reader["order_date"].ToString());
+                DateTime shippedDate = DateTime.Parse(reader["shipped_date"].ToString());
                 int customerId = int.Parse(reader["cust_id"].ToString());
                 double total = double.Parse(reader["total"].ToString());
                 string? status = reader["status"].ToString();
@@ -76,8 +76,8 @@ public class OrderRepository : IOrderRepository
             if (reader.Read())
             {
                 //int orderId = int.Parse(reader["order_id"].ToString());
-                DateTime orderDate = DateTime.ParseExact(reader["order_date"].ToString(), "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
-                DateTime shippedDate = DateTime.ParseExact(reader["shipped_date"].ToString(), "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+                DateTime orderDate = DateTime.Parse(reader["order_date"].ToString());
+                DateTime shippedDate = DateTime.Parse(reader["shipped_date"].ToString());
                 int customerId = int.Parse(reader["cust_Id"].ToString());
                 double total = double.Parse(reader["total"].ToString());
                 string? status = reader["status"].ToString();
@@ -172,8 +172,8 @@ public class OrderRepository : IOrderRepository
             if (reader.Read())
             {
                 int orderId = int.Parse(reader["order_id"].ToString());
-                DateTime orderDate = DateTime.ParseExact(reader["order_date"].ToString(), "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
-                DateTime shippedDate = DateTime.ParseExact(reader["shipped_date"].ToString(), "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+                DateTime orderDate = DateTime.Parse(reader["order_date"].ToString());
+                DateTime shippedDate = DateTime.Parse(reader["shipped_date"].ToString());
                 double total = double.Parse(reader["total"].ToString());
                 string? status = reader["status"].ToString();
 
@@ -300,8 +300,8 @@ public class OrderRepository : IOrderRepository
             while (reader.Read())
             {
                 int id = int.Parse(reader["order_id"].ToString());
-                DateTime orderDate = DateTime.ParseExact(reader["order_date"].ToString(), "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
-                DateTime shippedDate = DateTime.ParseExact(reader["shipped_date"].ToString(), "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+                DateTime orderDate = DateTime.Parse(reader["order_date"].ToString());
+                DateTime shippedDate = DateTime.Parse(reader["shipped_date"].ToString());
                 int customerId = int.Parse(reader["cust_id"].ToString());
                 double total = double.Parse(reader["total"].ToString());
                 string? status = reader["status"].ToString();
@@ -351,8 +351,8 @@ public class OrderRepository : IOrderRepository
             while (reader.Read())
             {
                 int id = int.Parse(reader["order_id"].ToString());
-                DateTime orderDate = DateTime.ParseExact(reader["order_date"].ToString(), "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
-                DateTime shippedDate = DateTime.ParseExact(reader["shipped_date"].ToString(), "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+                DateTime orderDate = DateTime.Parse(reader["order_date"].ToString());
+                DateTime shippedDate = DateTime.Parse(reader["shipped_date"].ToString());
                 int customerId = int.Parse(reader["cust_id"].ToString());
                 double total = double.Parse(reader["total"].ToString());
                 string? status = reader["status"].ToString();

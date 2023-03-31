@@ -32,4 +32,9 @@ export class PaymenthubService {
     let url="http://localhost:5223/payments/insert";
     return this.http.post<Payment>(url,payment);
   }
+
+  public update(payment:Payment):Observable<any>{
+    let url="http://localhost:5223/payments/update";
+    return this.http.put<Payment>(url,payment);
+  }
 }

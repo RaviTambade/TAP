@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Route, Router } from '@angular/router';
 import { Supplier } from '../supplier';
 import { SupplierhubService } from '../supplierhub.service';
 
@@ -10,7 +11,7 @@ import { SupplierhubService } from '../supplierhub.service';
 export class ListComponent {
   suppliers: Supplier[] | undefined;
   
-  constructor(private svc: SupplierhubService) { }
+  constructor(private svc: SupplierhubService,private router:Router) { }
   
   ngOnInit(): void {
     this.svc.getAll().subscribe((response) => {
@@ -18,4 +19,9 @@ export class ListComponent {
       console.log(this.suppliers);
     })
   }
-}
+  onSelect(supplier:any){
+    if(supplier!=undefined)
+    this.router.navigate(['/suppliers',supplier.supplierId]); 
+   }
+  }
+

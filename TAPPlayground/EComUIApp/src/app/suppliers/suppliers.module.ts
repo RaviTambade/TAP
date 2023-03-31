@@ -15,10 +15,13 @@ import { ProductssupplierComponent } from './productssupplier/productssupplier.c
 
 const routes: Routes = [
   {path:'suppliers',component:ListComponent},
-  {path:'search',component:SearchComponent},
-  {path:'insert',component:InsertComponent},
-  {path:'update',component:UpdateComponent},
-  {path:'productsupplier',component:ProductssupplierComponent},
+  {path:'suppliers-search',component:SearchComponent},
+  {path:'suppliers/:id',component:DetailsComponent},
+  {path:'suppliers-insertsupplier',component:InsertComponent},
+  {path:'suppliers-update',component:UpdateComponent},
+  {path:'suppliers-update/:id',component:UpdateComponent},
+  {path:'suppliers-productssupplier',component:ProductssupplierComponent},
+
 ]
 
 @NgModule({

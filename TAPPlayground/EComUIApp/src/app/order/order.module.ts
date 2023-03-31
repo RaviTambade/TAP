@@ -14,10 +14,11 @@ import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
   {path:'order',component:ListComponent},
-  {path:'order/:Id',component:DetailsComponent},
+  {path:'orderdetails/:id',component:DetailsComponent},
   {path:'ordersearch',component:SearchComponent},
   {path:'app-insert',component:InsertComponent},
-  {path:'order-update',component:UpdateComponent}
+  {path:'orderupdate',component:UpdateComponent},
+  {path:'updateorder/:id',component:UpdateComponent}
 
 ]
 

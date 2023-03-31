@@ -1,7 +1,7 @@
  
 <p>update</p>
 
-<app-getorder (sendOrder)="receiveOrder($event)"></app-getorder>
+<app-getorder [orderId] = orderId (sendOrder)="receiveOrder($event)"></app-getorder>
 <div  *ngIf="order && order.orderId!=0">
 <!-- <div *ngIf="order"> -->
 <table>

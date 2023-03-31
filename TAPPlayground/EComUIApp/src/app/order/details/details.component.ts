@@ -1,6 +1,6 @@
 import { Component,Input,OnInit} from '@angular/core';
 import { OrderhubService } from '../orderhub.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute,Route,Router } from '@angular/router';
 import { Order } from '../order'
 
 @Component({
@@ -12,12 +12,15 @@ export class DetailsComponent implements OnInit{
   
   @Input() order:Order | undefined;
   //orders : any 
-  orderId : number | undefined;
+  orderId : any | undefined;
 
-  constructor(private svc : OrderhubService,private ActivatedRoute: ActivatedRoute){}
+  constructor(private svc : OrderhubService,private route: ActivatedRoute,private router:Router){}
+  
+  
   ngOnInit(): void {
-    //this.orderId = this.ActivatedRoute.snapshot.params['id'];
-    //private ActivatedRoute: ActivatedRoute
+    this.route.paramMap.subscribe((params)=>{
+    this.orderId = params.get('id');
+    })
   }
   
    getById(id:any):void{
@@ -36,8 +39,13 @@ export class DetailsComponent implements OnInit{
         console.log(res);
     });
   }
-  
-  
+   receiveOrder($event:any){
+    this.order = $event.order
+
+   }
+  onUpdateClick(orderId:number){
+    this.router.navigate(['/updateorder',orderId])
+  }
  
 }
 

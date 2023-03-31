@@ -1,0 +1,25 @@
+<Empgetbyid [empId]="empId" (sendEmployee)="reciveEmployee($event)" hidden></Empgetbyid>
+
+<div *ngIf="employee && employee.empId !=0">
+       <p><label><b> Employee Id :</b></label>{{employee.empId}}</p>
+       <p><label><b> First Name :</b></label>{{employee.empFirstName}}</p>
+       <p><label><b> Last Name :</b></label>{{employee.empLastName}}</p>
+       <p><label><b> Birth Date :</b></label>{{employee.birthDate}}</p>
+       <p><label><b> Hire Date :</b></label>{{employee.hireDate}}</p>
+       <p><label><b> Contact Number :</b></label>{{employee.contactNumber}}</p>
+       <p><label><b> Email :</b></label>{{employee.email}}</p>
+       <p><label><b> Password :</b></label>{{employee.password}}</p>
+       <p><label><b> Photo :</b></label>{{employee.photo}}</p>
+       <p><label><b> Reports To :</b></label>{{employee.reportsTo}}</p>
+       <p><label><b> Account Number :</b></label>{{employee.accountNumber}}</p>
+
+       <button  type="submit" (click)="delete()">Delete</button>
+       <button type="submit" (click)="onUpdateClick(employee.empId)">Update</button>
+       <hr>
+       
+        <div *ngIf="employee && employee.empId ==0">
+            <p>Account not Fount</p>
+        </div>
+
+</div>
+
