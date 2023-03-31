@@ -32,4 +32,9 @@ export class ProductHubService {
     let url= "http://localhost:5223/product/update"
     return this.http.put<any>(url,product);
   }
+
+  getCategories(): Observable<any>{
+    let url =  "http://localhost:5223/categories/getAll";
+    return this.http.get<any>(url);
+  }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Product } from '../product';
 import { ProductHubService } from '../producthub.service';
@@ -8,9 +8,9 @@ import { ProductHubService } from '../producthub.service';
   templateUrl: './insert.component.html',
   styleUrls: ['./insert.component.css']
 })
-export class InsertComponent {
+export class InsertComponent implements OnInit {
   product: Product = {
-    productId:0,
+    productId: 0,
     productTitle: '',
     description: '',
     stockAvailable: 0,
@@ -20,24 +20,37 @@ export class InsertComponent {
     supplierId: 0
   };
   status: boolean | undefined;
-  
+  categories:[] |any;
 
-  constructor(private svc: ProductHubService,private router:Router) { }
+  constructor(private svc: ProductHubService, private router: Router) { }
+  ngOnInit(): void {
+    //categories
+    this.svc.getCategories().subscribe((response) => {
+      this.categories = response;
+      console.log(response);
+    })
+  }
 
- 
+
   insertProduct() {
     console.log(this.product)
     this.svc.insertProduct(this.product).subscribe((response) => {
       this.status = response;
       console.log(response);
-      if(response)
-      {
+      if (response) {
         window.location.reload();
         alert("record Inserted successfully")
       }
-      else{
+      else {
         alert("Error while Inserting record")
       }
     })
   }
+
+  // getCategories() {
+  //   this.svc.getCategories().subscribe((response) => {
+  //     this.categories = response;
+  //     console.log(response);
+  //   })
+  // }
 }
