@@ -10,11 +10,12 @@ export class AuthGuard implements CanActivate {
    role=sessionStorage.getItem("role");
 
    constructor(private router:Router){}
-  canActivate(
+  canActivate()
     
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-   console.log(this.role)
+    // route: ActivatedRouteSnapshot,
+    // state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+  {
+    console.log(this.role)
       if( this.role === "admin"){
      return true;
 
