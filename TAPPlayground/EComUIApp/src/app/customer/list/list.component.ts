@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Product } from 'src/app/product/product';
 import { Customer } from '../Customer';
 import { CustomerService } from '../customer.service';
 
@@ -10,7 +12,7 @@ import { CustomerService } from '../customer.service';
 export class ListComponent implements OnInit {
   
   customers:Customer[] |undefined;
-  constructor(private svc:CustomerService){}
+  constructor(private svc:CustomerService, private router:Router){}
   
   ngOnInit(): void {
     this.svc.getAll().subscribe((response)=>
@@ -20,5 +22,10 @@ export class ListComponent implements OnInit {
     })
   }
 
-  
+  onSelectCustomer(customer:any){
+    if(customer!=undefined)
+    this.router.navigate(['/customer',customer.customerId]);
+    console.log(customer);
+  }
+
 }

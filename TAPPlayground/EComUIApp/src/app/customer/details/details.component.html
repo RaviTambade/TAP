@@ -1,3 +1,4 @@
+<app-get-customer [customerId]="customerId" (sendCustomer)="reciveCustomer($event)" hidden></app-get-customer>
 <div *ngIf="customer && customer.customerId !=0">
     <li class="list-group-item list-group-item-dark"alig="center">
 <p><label ><b>cCustomerId :</b></label>{{ customer.customerId }}</p>
@@ -8,11 +9,12 @@
 <p><label ><b>Contact Number :</b></label>{{ customer.contactNumber}}</p>
 <p><label ><b>Account Number :</b></label>{{ customer.accountNumber}}</p>
 
-<button class="btn btn-primary fw-danger" type="submit" (click)="deleteAccount()">Delete</button>
-<hr>
+<button class="btn btn-primary fw-danger" type="submit" (click)="deleteAccount(customer.customerId)">Delete</button>
+<button class="btn " style="background-color: #55c2da;" (click)="onSelectUpdateCustomer(customer.customerId)">Update </button>            
+
+</li>
+</div>
 
 <div *ngIf="customer&& customer.customerId==0">
   <p>Customer Not Found</p>
-</div>
-</li>
 </div>

@@ -1,24 +1,33 @@
-<input type="number" [(ngModel)]="supplierId">
-<button (click)="getProductSupplierById(supplierId)" class="btn btn-success">Search</button>
-<div *ngIf="supplierId">
-    <table>
-        <thead>
+<div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <label for="supplierId">Supplier ID:</label>
+        <input type="number" [(ngModel)]="supplierId" id="supplierId" class="form-control">
+      </div>
+      <div class="col-md-6">
+        <button (click)="getProductSupplierById(supplierId)" class="btn btn-success btn-block mt-4">Search</button>
+      </div>
+    </div>
+  
+    <div class="row mt-4" *ngIf="supplierId">
+      <div class="col-md-12">
+        <table class="table table-bordered table-striped">
+          <thead>
             <tr>
-                <th>SupplierName</th>
-                <th>ProductTitle</th>
-                <th>Quantity</th>
+              <th>Supplier Name</th>
+              <th>Product Title</th>
+              <th>Quantity</th>
             </tr>
-        </thead>
-        <tbody *ngFor="let productSupplier of productSuppliers">
-            <tr>
-                <td>{{ productSupplier.supplierName }}</td>
-                <td> {{ productSupplier.productTitle}}</td>
-                <td>{{ productSupplier.quantity }}</td>
+          </thead>
+          <tbody>
+            <tr *ngFor="let productSupplier of productSuppliers">
+              <td>{{ productSupplier.supplierName }}</td>
+              <td>{{ productSupplier.productTitle }}</td>
+              <td>{{ productSupplier.quantity }}</td>
             </tr>
-        </tbody>
-            <hr/>
-    </table>
-</div>
-    <!-- <div *ngIf=" productSupplier && productSupplier.supplierId==0 ">
-        <p>Supplier not Found</p>
-    </div> -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  

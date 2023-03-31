@@ -7,7 +7,7 @@
           <div class="card-body p-4 p-sm-5">
             <h5 class="card-title text-center mb-5 fs-5">Update customer From</h5>
   
-            <app-get-customer (sendCustomer)="receiveCustomer($event)"></app-get-customer>
+            <app-get-customer [customerId]="customerId" (sendCustomer)="receiveCustomer($event)"></app-get-customer>
             <div *ngIf="customer && customer.customerId!==0 ">
                 <div *ngIf="customer">
                     <table class="table table-striped">

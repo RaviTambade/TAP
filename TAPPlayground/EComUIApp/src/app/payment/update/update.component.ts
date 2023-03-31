@@ -28,4 +28,11 @@ export class UpdateComponent implements OnInit{
     })
   }
 
+
+  recivePayment($event:any){
+    
+    this.payment=$event.payment
+    
+  }
+
 }

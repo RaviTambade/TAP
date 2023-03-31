@@ -80,10 +80,12 @@
                     
                       <select   class="form-control form-control-lg form-select" name="categoryId" 
                       [(ngModel)]="product.categoryId" required>
-                        <option [ngValue]="1">Biscuits</option>
+                        <option *ngFor="let category of categories" [ngValue]="category.categoryId">
+                          {{category.categoryTitle | titlecase}}</option>
+                        <!-- <option [ngValue]="1">Biscuits</option>
                         <option [ngValue]="2">ColdDrinks</option>
                         <option [ngValue]="3">Snacks</option>
-                        <option [ngValue]="4">Electronics</option>
+                        <option [ngValue]="4">Electronics</option> -->
                       </select>
                       <label class="form-label "> Category</label>
                     </div>
