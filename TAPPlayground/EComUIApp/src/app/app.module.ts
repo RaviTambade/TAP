@@ -47,10 +47,7 @@ const routes: Routes = [
     ProductsModule,
     HRModuleModule,
     PaymentModule,
-<<<<<<< HEAD
     OrderModule
-=======
->>>>>>> 6b7d552baab0249cb53018057cc9aab557fa1444
 
   
   ],

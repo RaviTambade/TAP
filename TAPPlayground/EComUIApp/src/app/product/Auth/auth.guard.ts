@@ -16,8 +16,7 @@ export class AuthGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
    console.log(this.role)
       if( this.role === "admin"){
-    return true;
-
+     return true;
 
    }
    alert("Your Role must be Admin Plese Login")

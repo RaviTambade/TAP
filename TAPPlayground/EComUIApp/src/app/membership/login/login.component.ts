@@ -25,7 +25,6 @@ role :string |undefined
           if(response){
             if(this.role!=undefined){
             sessionStorage.setItem("role",this.role)
-
             alert("Login sucessfull")
             window.location.reload();
           }
