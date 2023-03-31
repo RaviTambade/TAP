@@ -33,7 +33,7 @@ export class CustomerService {
   }
   deleteCustomer(customerId:number):Observable<any>
   {
-    let url ="http://localhost:5223/customers/DeleteCustomer"+customerId;
+    let url ="http://localhost:5223/customers/DeleteCustomer/"+customerId;
     return this.http.delete(url);
   }
 }

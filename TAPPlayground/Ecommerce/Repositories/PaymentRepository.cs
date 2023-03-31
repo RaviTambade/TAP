@@ -34,7 +34,7 @@ public class PaymentRepository : IPaymentRepository
             while (reader.Read())
             {
                 int paymentId =int.Parse(reader["payment_id"].ToString());
-                DateTime paymentDate = DateTime.ParseExact(reader["payment_date"].ToString(), "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+                DateTime paymentDate = DateTime.Parse(reader["payment_date"].ToString());
                 string? payment_mode = reader["payment_mode"].ToString();
                 int transactionId =int.Parse(reader["transection_id"].ToString());
                 int orderId =int.Parse(reader["order_id"].ToString());
@@ -80,7 +80,7 @@ public class PaymentRepository : IPaymentRepository
             while (reader.Read())
             {
                 //paymentId =int.Parse(reader["payment_id"].ToString());
-                DateTime paymentDate = DateTime.ParseExact(reader["payment_date"].ToString(), "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+                DateTime paymentDate = DateTime.Parse(reader["payment_date"].ToString());
                 string? payment_mode = reader["payment_mode"].ToString();
                 int transactionId =int.Parse(reader["transection_id"].ToString());
                 int orderId =int.Parse(reader["order_id"].ToString());

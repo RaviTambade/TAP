@@ -9,7 +9,7 @@ import { CustomerService } from '../customer.service';
 export class InsertComponent  {
   
   customer={
-    "customerId":0,
+    "customerId":1,
     "firstName":'',
     "lastName":'',
     "email":'',
@@ -26,6 +26,7 @@ export class InsertComponent  {
   }
 
   insertCustomer(_customerForm:any){
+    console.log("sending"+this.customer.firstName);
     this.svc.insertCustomer(this.customer).subscribe((Response)=>{
       this.status=Response;
       console.log(Response);

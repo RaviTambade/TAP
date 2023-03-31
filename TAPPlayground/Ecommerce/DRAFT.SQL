@@ -1,9 +1,36 @@
+<<<<<<< HEAD
 -- Active: 1678361403571@@127.0.0.1@3306@ecommerce
+=======
+
+>>>>>>> 6f2bf5dbdde8c9b9cd4367d8c5c6b242d138910c
 
 CREATE DATABASE Ecommerce;
 USE Ecommerce;
 
+<<<<<<< HEAD
 DROP DATABASE Ecommerce;
+=======
+
+--  CREATE DATABASE Ecommerce;
+
+
+
+
+ USE  Ecommerce;
+
+
+
+
+
+
+
+
+
+ CREATE DATABASE Ecommerce;
+
+ USE  Ecommerce;
+
+>>>>>>> 6f2bf5dbdde8c9b9cd4367d8c5c6b242d138910c
 
 CREATE TABLE users( user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, email VARCHAR(25) UNIQUE NOT NULL, contact_number VARCHAR(20) NOT NULL ,password VARCHAR(15) NOT NULL);
 CREATE TABLE accounts(account_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,account_number BIGINT UNIQUE, ifsc_code VARCHAR(50) ,register_date DATETIME ,balance DOUBLE);
@@ -40,7 +67,7 @@ BEGIN
 	INSERT INTO users(email,contact_number,password)VALUES (NEW.email,NEW.contact_number,NEW.password);
 END //
 DELIMITER ;
-INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546628,'MAHB0000286','2023-03-01 12:40:40',22555);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 49025546601,'MAHB0000286','2023-03-01 12:40:40',22555);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546602,'MAHB0000286','2023-03-01 12:40:40',22555);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546603,'MAHB0000286','2023-03-01 12:40:40',22555);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546604,'MAHB0000286','2023-03-01 12:40:40',22555);
@@ -70,6 +97,10 @@ INSERT INTO transactions(from_account_number, to_account_number,transaction_date
 INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025546606,39025546607,'2023-03-01 12:40:35',22500);
 INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025546607,39025546608,'2023-03-01 12:40:35',22500);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6f2bf5dbdde8c9b9cd4367d8c5c6b242d138910c
 select * from products;
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546694,'MAHB0000286','2023-03-01 12:40:40',22555);
 select * from suppliers;
@@ -161,6 +192,21 @@ INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_nu
 INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Pragati','Bangar','1998-05-10','2022-11-09','9666320158','PBangar@gmail.com','PB123654' ,'./images/PB.jpg', 5,39025545665);
 
 select * from orders;
+
+INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Sahil','Mankar','sahil.m@gmail.com','9960916323','sahil@123',39025546601);
+INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Abhay','Navle','abhay.navale@gmail.com','9075966080','sahil@123',39025546602);
+INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Sachin','Patil','sachin.patil@gmail.com','9881723458','sahil@123',39025546603);
+INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Minal','Sagade','minal.sagade@outlook.com','9887454372','sahil@123',39025546604);
+INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Jai','Kinikar','jai.kinikar@gmail.com','98543234','sahil@123',39025546605);
+INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Rakhi','Sharma','rakhi.sharma@gmail.com','9845834534','sahil@123',39025546606);
+INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Shivam','Pethe','shivam.pethe@gmai.com','9881734798','sahil@123',39025546607);
+INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Akash','Ajab','1999-09-15','2022-09-07','8756320150','Akjab@gmail.com','AK123654' ,'./images/crackjack.jpg', 2,39025546608);
+INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Shubham','Teli','1999-02-10','2020-07-05','9876320158','Steli@gmail.com','ST5269' ,'./images/ST.jpg', 1,39025546609);
+INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Sahil','Mankar','1997-05-19','2021-07-07','8756789158','Sahil@gmail.com','SM569654' ,'./images/SM.jpg', 1,39025546610);
+INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Shubham','Navale','1995-07-25','2020-05-04','9996320158','SNavale@gmail.com','SN56987' ,'./images/SN.jpg', 3,39025546611);
+INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Rohit','Gore','1996-05-12','2022-09-07','7776320158','RGore@gmail.com','RG123654' ,'./images/RG.jpg', 4,39025546612);
+INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Pragati','Bangar','1998-05-10','2022-11-09','9666320158','PBangar@gmail.com','PB123654' ,'./images/PB.jpg', 5,39025546613);
+
 
 /*possible vales  for addressmode:1:only residential ,2:only delivery address,3:residentail and delivery*/
 INSERT INTO addresses(cust_id,address_mode,house_number,landmark,city,state,country,pincode)VALUES(1,'permanent','houseNo.12','Pune-Nashik Highway','Manchar','Maharashtra','India','123321');
@@ -505,3 +551,5 @@ select customers.first_name,customers.last_name,customers.email,customers.contac
 
 SELECT suppliers.supplier_id,products.product_id,products.product_title,SUM(orderdetails.quantity) FROM (products INNER JOIN orderdetails ON products.product_id=orderdetails.product_id)INNER JOIN suppliers ON products.supplier_id=suppliers.supplier_id   WHERE suppliers.supplier_name="Akshay" GROUP BY products.product_id;
 SELECT * FROM transactions;
+
+select customers.cust_id,customers.first_name,customers.last_name,customers.email,customers.contact_number,accounts.account_number,accounts.ifsc_code,accounts.balance FROM customers  INNER JOIN  accounts ON accounts.account_number=customers.account_number where;

@@ -15,10 +15,12 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 const routes:Routes=[
-  {path:'list',component:ListComponent},
-  {path:'getbyid',component:GetbyidComponent},
-  {path:'insert',component:InsertComponent},
-  {path:'update',component:UpdateComponent}
+  {path:'Emplist',component:ListComponent},
+  {path:'Empgetbyid',component:GetbyidComponent},
+  {path:'Emp-details/:id',component:DetailsComponent},
+  {path:'Empinsert',component:InsertComponent},
+  {path:'Empupdate',component:UpdateComponent},
+  {path:'Emp-update/:id',component:UpdateComponent},
 ]
 
 @NgModule({

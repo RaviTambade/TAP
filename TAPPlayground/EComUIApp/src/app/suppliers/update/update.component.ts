@@ -33,7 +33,7 @@ export class UpdateComponent implements OnInit {
         this.route.navigate(['/suppliers']);
        }
        else{
-        alert("Error while deleting suppliers")
+        alert("Error while updating suppliers")
        }
       })
     }

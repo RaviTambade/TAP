@@ -1,7 +1,7 @@
 
 <h2>Update Employee</h2>
 
-<getbyid (sendEmployee)="receiveEmployee($event)"></getbyid>
+<Empgetbyid [empId]="employeeId" (sendEmployee)="receiveEmployee($event)"></Empgetbyid>
 <div *ngIf="employee && employee.empId !=0">
       <div *ngIf="employee">
         <p><label><b>First Name :</b></label><input type="text" name="firstname" #empFirstName="ngModel" [(ngModel)]="employee.empFirstName"></p>

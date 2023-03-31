@@ -1,3 +1,4 @@
+<Empgetbyid [empId]="empId" (sendEmployee)="reciveEmployee($event)" hidden></Empgetbyid>
 
 <div *ngIf="employee && employee.empId !=0">
        <p><label><b> Employee Id :</b></label>{{employee.empId}}</p>
@@ -13,6 +14,7 @@
        <p><label><b> Account Number :</b></label>{{employee.accountNumber}}</p>
 
        <button  type="submit" (click)="delete()">Delete</button>
+       <button type="submit" (click)="onUpdateClick(employee.empId)">Update</button>
        <hr>
        
         <div *ngIf="employee && employee.empId ==0">
