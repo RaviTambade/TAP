@@ -1,9 +1,9 @@
  
 <p>update</p>
 
-<app-getorder (sendOrder)="receiveOrder($event)"></app-getorder>
+<app-getorder [orderId] = orderId (sendOrder)="receiveOrder($event)"></app-getorder>
 <div  *ngIf="order && order.orderId!=0">
-<div *ngIf="order">
+<!-- <div *ngIf="order"> -->
 <table>
     <tr>
         <td><label>orderDate</label></td>
@@ -30,7 +30,7 @@
     </tr>
 </table>   
 </div>
-</div> 
+<!-- </div>  -->
 
 
 <div *ngIf="order && order.orderId!==0">

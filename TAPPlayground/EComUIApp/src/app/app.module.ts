@@ -16,6 +16,7 @@ import { ShipperModule } from './shipper/shipper.module';
 import { AppComponent } from './app.component';
 import { DatePipe } from '@angular/common';
 import { Employee } from './hrmodule/Employee';
+import { OrderModule } from './order/order.module';
 
 
 //metadata
@@ -38,6 +39,7 @@ const routes: Routes = [
     MembershipModule,
     ShipperModule,
     SuppliersModule,
+    OrderModule,
     CustomerModule,
     RouterModule.forRoot(routes),
     DatePipe,
@@ -45,6 +47,10 @@ const routes: Routes = [
     ProductsModule,
     HRModuleModule,
     PaymentModule,
+<<<<<<< HEAD
+    OrderModule
+=======
+>>>>>>> 6b7d552baab0249cb53018057cc9aab557fa1444
 
   
   ],
