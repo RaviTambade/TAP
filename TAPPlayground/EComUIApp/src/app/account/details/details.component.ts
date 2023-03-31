@@ -8,20 +8,21 @@ import { AccountHubServiceService } from '../account-hub-service.service';
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.css']
 })
-export class DetailsComponent {
+export class DetailsComponent implements OnInit {
   constructor(private svc: AccountHubServiceService,private route:ActivatedRoute,private router:Router) { }
+  ngOnInit(): void {
+    console.log("hii")
+    this.route.paramMap.subscribe((params)=>{
+      console.log(params)
+      this. accountId=params.get('id');
+    })
+  }
   @Input() account: Account | any;
   status: boolean | undefined
-  sub:any;
-  accountId:any
-  path="assets/";
 
-ngOnInit(id:any){
-  this.sub=this.route.paramMap.subscribe((params)=>{
-    console.log(params)
-    this. accountId=params.get('id');
-  })
-}
+  accountId:any
+
+
 reciveAccount($event:any){
   console.log("event")
   this.account=$event.account;
@@ -41,6 +42,6 @@ reciveAccount($event:any){
     })
   }
   onSelectUpdate(accountId:any){
-    this.router.navigate(['/account/id',accountId]);
+    this.router.navigate(['updateAccount',accountId]);
   }
 }

@@ -1,14 +1,4 @@
-<!-- <p></p>
-<app-getsupplier [supplierId]="supplierId" (sendSupplier)="receiveSupplier($event)"></app-getsupplier>
-<div *ngIf="supplier && supplier.supplierId != 0">
-  <app-details [supplier]="supplier"></app-details>
-    <button (click)="deleteSupplier(supplierId)" (click)="status = false" class="btn btn-danger">Delete</button><br/><br/>
-    <button  (click)="onSelectUpdate(supplierId)"  class="btn btn-primary">Update </button>            
-  </div>
-  <router-outlet></router-outlet>
-  
 
- -->
 <app-getsupplier (sendSupplier)="receiveSupplier($event)"></app-getsupplier>
 <div *ngIf="supplier">
   <app-details [supplier]="supplier"></app-details>  

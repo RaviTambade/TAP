@@ -1,7 +1,8 @@
 
 
 <div *ngFor="let customer of customers">
-
-    <app-details [customer]="customer" ></app-details>
+    <h4 class="text-uppercase" (click)="onSelectCustomer(customer)">
+        <b>{{ customer.firstName }}</b>
+      </h4>
  </div> 
 

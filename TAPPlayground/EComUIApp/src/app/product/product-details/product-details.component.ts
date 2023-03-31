@@ -35,7 +35,7 @@ export class ProductDetailsComponent implements OnInit {
 
       if(response){
         alert("Product deleted Successfully")
-        window.location.reload()
+        this.router.navigate(['/products']);
       }
       else{
         alert("Error while deleting Product  ")

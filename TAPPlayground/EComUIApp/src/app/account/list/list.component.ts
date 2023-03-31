@@ -10,7 +10,6 @@ import {Router} from '@angular/router';
 export class ListComponent implements OnInit{
   @Output() accountId: number | undefined;
   accounts: Account[] | undefined;
-  path = "assets/";
   constructor(private svc:AccountHubServiceService,private router:Router) { }
   
   ngOnInit():void {

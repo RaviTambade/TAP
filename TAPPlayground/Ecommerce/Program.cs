@@ -42,6 +42,8 @@ builder.Services.AddTransient<ICustomerAccountRepository,CustomerAccountReposito
 builder.Services.AddTransient<ICustomerAccountService,CustomerAccountService>();
 builder.Services.AddTransient<ICustomerORMRepository,CustomerORMRepository>();
 builder.Services.AddTransient<ICustomerORMService,CustomerORMService>();
+builder.Services.AddTransient<ICategoryRepository,CategoryRepository>();
+builder.Services.AddTransient<ICategoryService,CategoryService>();
 
 builder.Services.AddSession(options =>{
     options.IdleTimeout=TimeSpan.FromMinutes(10);

@@ -12,14 +12,15 @@ export class DetailsComponent implements OnInit {
   @Input() supplier:Supplier | undefined;
   supplierId: any;
   status: boolean | undefined;
+  sub: any;
 
 
 
   constructor(private svc:SupplierhubService,private router:Router,private route:ActivatedRoute){}
 
   ngOnInit(): void {
-   this.route.paramMap.subscribe((params)=>{
-    console.log(params);
+   this.sub=this.route.paramMap.subscribe((params)=>{
+    console.log(params);  
     this.supplierId=params.get('id');
   })
   }

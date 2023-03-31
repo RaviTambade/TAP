@@ -1,41 +1,48 @@
 <h2>Update page</h2>
 
-<app-getsupplier  [supplierId]="supplierId" (sendSupplier)="receiveSupplier($event)"></app-getsupplier>
+<app-getsupplier  [supplierId]="supplierId" (sendSupplier)="receiveSupplier($event)" hidden></app-getsupplier>
 <div *ngIf="supplier && supplier.supplierId!=0 ">
+    <div class="container">
         <table class="table table-striped">
+          <tbody>
             <tr>
-                <th>CompanyName</th>
-                <td><input type="text" [(ngModel)]="supplier.companyName"></td>
+              <th>Company Name</th>
+              <td><input type="text" [(ngModel)]="supplier.companyName" class="form-control"></td>
             </tr>
             <tr>
-                <th>SupplierName</th>
-                <td><input type="text" [(ngModel)]="supplier.supplierName"></td>
+              <th>Supplier Name</th>
+              <td><input type="text" [(ngModel)]="supplier.supplierName" class="form-control"></td>
             </tr>
             <tr>
-                <th>ContactNumber</th>
-                <td><input type="text" [(ngModel)]="supplier.contactNumber"></td>
+              <th>Contact Number</th>
+              <td><input type="text" [(ngModel)]="supplier.contactNumber" class="form-control"></td>
             </tr>
             <tr>
-                <th>Email</th>
-                <td> <input type="text" [(ngModel)]="supplier.email"> </td>
+              <th>Email</th>
+              <td><input type="text" [(ngModel)]="supplier.email" class="form-control"></td>
             </tr>
             <tr>
-                <th>Address</th>
-                <td> <input type="text" [(ngModel)]="supplier.address"> </td>
+              <th>Address</th>
+              <td><input type="text" [(ngModel)]="supplier.address" class="form-control"></td>
             </tr>
             <tr>
-                <th>City</th>
-                <td><input type="text" [(ngModel)]="supplier.city"> </td>
+              <th>City</th>
+              <td><input type="text" [(ngModel)]="supplier.city" class="form-control"></td>
             </tr>
             <tr>
-                <th>State</th>
-                <td> <input type="text" [(ngModel)]="supplier.state"> </td>
+              <th>State</th>
+              <td><input type="text" [(ngModel)]="supplier.state" class="form-control"></td>
             </tr>
             <tr>
-                <th>AccountNumber</th>
-                <td> <input type="text" [(ngModel)]="supplier.accountNumber"></td>
+              <th>Account Number</th>
+              <td><input type="text" [(ngModel)]="supplier.accountNumber" class="form-control"></td>
             </tr>
-            <button (click)="updateSupplier()" (click)="status = false" class="btn btn-success" type="submit">Update</button>
+          </tbody>
         </table>
+        <div class="d-grid gap-2">
+          <button class="btn btn-success" (click)="updateSupplier()">Update</button>
+        </div>
+      </div>
+      
     </div>
 
