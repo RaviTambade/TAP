@@ -35,7 +35,7 @@ export class ProductDetailsComponent implements OnInit {
 
       if(response){
         alert("Product deleted Successfully")
-        this.router.navigate(['/products']);
+        this.router.navigate(['Catalog/products']);
       }
       else{
         alert("Error while deleting Product  ")
@@ -47,7 +47,7 @@ export class ProductDetailsComponent implements OnInit {
 
 
   onSelectUpdate(productId:any){
-   this.router.navigate(['/product-update',productId]);
+   this.router.navigate(['Catalog/product-update',productId]);
   }
 
  

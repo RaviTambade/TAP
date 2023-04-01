@@ -9,25 +9,47 @@ import { AccountModule } from './account/account.module';
 import { RouterModule, Routes } from '@angular/router';
 import { MembershipModule } from './membership/membership.module';
 import { SuppliersModule } from './suppliers/suppliers.module';
-import { CustomerModule } from './customer/customer.module';
+import { CustomerModule ,customerRoutes} from './customer/customer.module';
 import { PaymentModule } from './payment/payment.module';
-import { ProductsModule } from './product/products.module';
+import { ProductsModule, productRoutes } from './product/products.module';
 import { ShipperModule } from './shipper/shipper.module';
 import { AppComponent } from './app.component';
 import { DatePipe } from '@angular/common';
-import { Employee } from './hrmodule/Employee';
+import { HomeComponent } from './home/home.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactComponent } from './contact/contact.component';
+
+import { SearchProductComponent } from './product/search-product/search-product.component';
+import { ProductDetailsComponent } from './product/product-details/product-details.component';
+import { UpdateComponent } from './product/update/update.component';
+import { ListComponent } from './product/list/list.component';
+import { InsertComponent } from './product/insert/insert.component';
 import { OrderModule } from './order/order.module';
+import { CatalogComponent } from './product/catalog/catalog.component';
+import { RouteComponent } from './customer/route/route.component';
 
 
 //metadata
 //decorator
 
 const routes: Routes = [
+  {path:'Home' , component:HomeComponent},
+  {path:'Aboutus',component:AboutusComponent},
+  {path:'Contact',component:ContactComponent},
+  {path:'Catalog',component:CatalogComponent,children:productRoutes},
+  //{path:'Cart',component:CartComponent},
+  // {path:'Orders',component:OrdersComponent},
+ {path:'Customer',component:RouteComponent,children:customerRoutes},
+  
 
 ]
 @NgModule({
   declarations: [
-  AppComponent
+  AppComponent,
+  HomeComponent,
+  AboutusComponent,
+  ContactComponent,
+
 
   ],
   imports: [
@@ -39,7 +61,6 @@ const routes: Routes = [
     MembershipModule,
     ShipperModule,
     SuppliersModule,
-    OrderModule,
     CustomerModule,
     RouterModule.forRoot(routes),
     DatePipe,
@@ -47,7 +68,7 @@ const routes: Routes = [
     ProductsModule,
     HRModuleModule,
     PaymentModule,
-    OrderModule
+    OrderModule,
 
   
   ],

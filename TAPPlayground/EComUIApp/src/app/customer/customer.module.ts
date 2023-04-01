@@ -9,7 +9,7 @@ import { RouteComponent } from './route/route.component';
 import { ListComponent } from './list/list.component';
 import { DetailsComponent } from './details/details.component';
 
-const routes: Routes = [
+export const customerRoutes: Routes = [
   {path:'insertCustomer',component:InsertComponent},
   {path:'updateCustomer',component:UpdateComponent},
   {path:'list-Customers',component:ListComponent},
@@ -30,7 +30,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     FormsModule,
-    RouterModule.forChild(routes)
+    RouterModule,
   ],
   exports:[
     InsertComponent,

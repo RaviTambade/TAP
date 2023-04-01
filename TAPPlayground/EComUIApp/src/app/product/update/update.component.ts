@@ -30,7 +30,7 @@ export class UpdateComponent implements OnInit {
       console.log(response);
       if(response)
       {
-        this.router.navigate(['/product',this.product.productId]);
+        this.router.navigate(['Catalog/product',this.product.productId]);
         alert("record updated successfully")
       }
       else{
