@@ -2,7 +2,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { HRModuleModule } from './hrmodule/hrmodule.module';
+import { HRModuleModule, employeeRoutes } from './hrmodule/hrmodule.module';
 import { HttpClientModule} from '@angular/common/http';
 import { TransactionModule, transacationRoutes } from './transaction/transaction.module';
 import { AccountModule } from './account/account.module';
@@ -20,8 +20,10 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactComponent } from './contact/contact.component';
 import { OrderModule } from './order/order.module';
 import { RouteComponent } from './customer/route/route.component';
-import { MembershipRoutingComponent } from './membership/membership-routing/membership-routing.component';
+import { EmployeeRoutingComponent } from './hrmodule/employee-routing/employee-routing.component';
 import { ProductRoutingComponent } from './product/product-routing/product-routing.component';
+import { MembershipRoutingComponent } from './membership/membership-routing/membership-routing.component';
+
 import { RoutingComponent } from './transaction/routing/routing.component';
 import { SupplierRoutingComponent } from './suppliers/supplier-routing/supplier-routing.component';
 
@@ -39,6 +41,8 @@ const routes: Routes = [
   //{path:'Cart',component:CartComponent},
   // {path:'Orders',component:OrdersComponent},
  {path:'Customer',component:RouteComponent,children:customerRoutes},
+ {path:'supplier',component:SupplierRoutingComponent,children:supplierRoutes},
+ {path:'Employee',component:EmployeeRoutingComponent,children:employeeRoutes},
  {path:'supplier',component:SupplierRoutingComponent,children:supplierRoutes},
  {path:'Payment',component:RoutingComponent,children:PaymentRoutes},
  {path:'Transaction',component:RoutingComponent,children:transacationRoutes},

@@ -1,7 +1,9 @@
--- Active: 1678361403571@@127.0.0.1@3306@ecommerce
- CREATE DATABASE Ecommerce;
- USE Ecommerce;
--- DROP DATABASE Ecommerce;
+
+-- Active: 1679882750289@@127.0.0.1@3306@ecommerce
+CREATE DATABASE Ecommerce;
+USE Ecommerce;
+
+
 
 CREATE TABLE users( user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, email VARCHAR(25) UNIQUE NOT NULL, contact_number VARCHAR(20) NOT NULL ,password VARCHAR(15) NOT NULL);
 CREATE TABLE accounts(account_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,account_number BIGINT UNIQUE, ifsc_code VARCHAR(50) ,register_date DATETIME ,balance DOUBLE);
@@ -59,7 +61,7 @@ INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 390
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546619,'UBIN0000286','2021-08-04 07-40-35',23520);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546620,'HDFC0000286','2021-02-05 07-40-35',52500);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546621,'SBI0000286','2021-08-07 07-40-35',233500);
-INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546622,'AXIS0000236','2021-08-08 07-40-35',23500);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546623,'AXIS0000236','2021-08-08 07-40-35',23500);
 
 INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES(39025546601,39025546602,'2023-03-01 12:40:35',22500);
 INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025546602,39025546603,'2023-03-01 12:40:35',22500);
@@ -172,6 +174,7 @@ INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('
 INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('2022-08-07','online payment',953125,5);
 INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('2023-08-07','online payment',953125,6);
 INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('2022-09-10','cash on delivery',43210,7);
+
 INSERT INTO shippers(company_name,contact_number,email,account_number)VALUES('Flipcart','69825645987','flipcart@gmail.com',39025546619);
 INSERT INTO shippers(company_name,contact_number,email,account_number)VALUES('Bluedrt','6912545987','bluedart@gmail.com',39025546620);
 INSERT INTO shippers(company_name,contact_number,email,account_number)VALUES('Essar Shipping Ltd','6982345987','essar@gmail.com',39025546621);

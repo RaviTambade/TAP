@@ -1,13 +1,7 @@
-<h1>employee details</h1>
+
 
 <div *ngFor="let employee of employees">
-
-    
-    <label (click)="onClick(employee.empId)"><b>EmpFirstName:</b>{{employee.empFirstName}}</label>
-
+    <li><label (click)="onClick(employee.empId)">{{employee.empFirstName}}</label></li>
 </div>
-
-
-
 
 
