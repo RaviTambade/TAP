@@ -22,7 +22,7 @@ export class ListComponent implements OnInit{
   onSelect(account:any){
     if(account!=undefined)
 
-    this.router.navigate(['/account',account.accountId])
+    this.router.navigate(['Account/account',account.accountId])
   }
 
   }

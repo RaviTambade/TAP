@@ -13,7 +13,7 @@ import { Routes,RouterModule } from '@angular/router';
 
 
 
-const routes:Routes=[
+export const accountRoutes:Routes=[
   {path:'accounts',component:ListComponent},
   {path:'searchAccount',component:SearchAccountComponent},
   {path:'account/:id',component:DetailsComponent},
@@ -31,14 +31,15 @@ const routes:Routes=[
     InsertComponent,
     UpdateComponent,
     SearchAccountComponent,
-    AccountRoutingComponent
+    AccountRoutingComponent,
+    
     ],
   imports: [
     CommonModule,
     HttpClientModule,
     FormsModule,
     DatePipe,
-    RouterModule.forChild(routes),
+    RouterModule,
 
   ],
   exports:[

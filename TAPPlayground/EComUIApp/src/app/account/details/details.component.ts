@@ -42,6 +42,6 @@ reciveAccount($event:any){
     })
   }
   onSelectUpdate(accountId:any){
-    this.router.navigate(['updateAccount',accountId]);
+    this.router.navigate(['Account/updateAccount',accountId]);
   }
 }

@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HRModuleModule, employeeRoutes } from './hrmodule/hrmodule.module';
 import { HttpClientModule} from '@angular/common/http';
 import { TransactionModule, transacationRoutes } from './transaction/transaction.module';
-import { AccountModule } from './account/account.module';
+import { AccountModule,accountRoutes } from './account/account.module';
 import { RouterModule, Routes } from '@angular/router';
 import { MembershipModule, membershipRoutes } from './membership/membership.module';
 import { SuppliersModule,supplierRoutes } from './suppliers/suppliers.module';
@@ -27,6 +27,7 @@ import { MembershipRoutingComponent } from './membership/membership-routing/memb
 import { RoutingComponent } from './transaction/routing/routing.component';
 import { SupplierRoutingComponent } from './suppliers/supplier-routing/supplier-routing.component';
 import { ShipperroutingComponent } from './shipper/shipperrouting/shipperrouting.component';
+import { AccountRoutingComponent } from './account/account-routing/account-routing.component';
 
 
 
@@ -48,7 +49,7 @@ const routes: Routes = [
 
  {path:'Payment',component:RoutingComponent,children:PaymentRoutes},
  {path:'Transaction',component:RoutingComponent,children:transacationRoutes},
-
+{path:'Account',component:AccountRoutingComponent,children:accountRoutes},
 ]
 @NgModule({
   declarations: [
