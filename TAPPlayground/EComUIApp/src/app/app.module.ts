@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HRModuleModule } from './hrmodule/hrmodule.module';
 import { HttpClientModule} from '@angular/common/http';
-import { TransactionModule } from './transaction/transaction.module';
+import { TransactionModule, transacationRoutes } from './transaction/transaction.module';
 import { AccountModule } from './account/account.module';
 import { RouterModule, Routes } from '@angular/router';
 import { MembershipModule ,membershipRoutes } from './membership/membership.module';
@@ -22,6 +22,7 @@ import { OrderModule } from './order/order.module';
 import { RouteComponent } from './customer/route/route.component';
 import { MembershipRoutingComponent } from './membership/membership-routing/membership-routing.component';
 import { ProductRoutingComponent } from './product/product-routing/product-routing.component';
+import { RoutingComponent } from './transaction/routing/routing.component';
 
 
 //metadata
@@ -36,6 +37,7 @@ const routes: Routes = [
   //{path:'Cart',component:CartComponent},
   // {path:'Orders',component:OrdersComponent},
  {path:'Customer',component:RouteComponent,children:customerRoutes},
+ {path:'Transaction',component:RoutingComponent,children:transacationRoutes},
   
 
 ]

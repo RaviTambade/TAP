@@ -11,7 +11,7 @@ import { RoutingComponent } from './routing/routing.component';
 import { RouterModule,Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
-const routes: Routes = [
+export const transacationRoutes: Routes = [
   {path:'transaction-list',component:TransactionListComponent},
   {path:'transactiongetbyid',component:GetTransactionComponent},
   {path:'transacation-details/:id',component:DetailsComponent},
@@ -39,7 +39,7 @@ const routes: Routes = [
     FormsModule,
     HttpClientModule,
     DatePipe,
-    RouterModule.forChild(routes)
+    RouterModule,
   ]
 })
 export class TransactionModule { }

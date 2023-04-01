@@ -41,7 +41,7 @@ export class DetailsComponent implements OnInit {
  }
 
  onUpdateClick(transactionId:number){
-  this.router.navigate(['/transaction-update',transactionId]);
+  this.router.navigate(['Transaction/transaction-update',transactionId]);
  }
  
 
