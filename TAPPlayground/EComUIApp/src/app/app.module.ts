@@ -12,7 +12,7 @@ import { SuppliersModule,supplierRoutes } from './suppliers/suppliers.module';
 import { CustomerModule ,customerRoutes} from './customer/customer.module';
 import { PaymentModule, PaymentRoutes } from './payment/payment.module';
 import { ProductsModule, productRoutes } from './product/products.module';
-import { ShipperModule } from './shipper/shipper.module';
+import { ShipperModule, shipperRoutes } from './shipper/shipper.module';
 import { AppComponent } from './app.component';
 import { DatePipe } from '@angular/common';
 import { HomeComponent } from './home/home.component';
@@ -26,6 +26,7 @@ import { MembershipRoutingComponent } from './membership/membership-routing/memb
 
 import { RoutingComponent } from './transaction/routing/routing.component';
 import { SupplierRoutingComponent } from './suppliers/supplier-routing/supplier-routing.component';
+import { ShipperroutingComponent } from './shipper/shipperrouting/shipperrouting.component';
 
 
 
@@ -43,7 +44,8 @@ const routes: Routes = [
  {path:'Customer',component:RouteComponent,children:customerRoutes},
  {path:'supplier',component:SupplierRoutingComponent,children:supplierRoutes},
  {path:'Employee',component:EmployeeRoutingComponent,children:employeeRoutes},
- {path:'supplier',component:SupplierRoutingComponent,children:supplierRoutes},
+ {path:'Shipper',component:ShipperroutingComponent,children:shipperRoutes},
+
  {path:'Payment',component:RoutingComponent,children:PaymentRoutes},
  {path:'Transaction',component:RoutingComponent,children:transacationRoutes},
 

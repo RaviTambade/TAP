@@ -11,7 +11,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ShipperroutingComponent} from './shipperrouting/shipperrouting.component';
 
 
-const routes: Routes = [
+export const shipperRoutes: Routes = [
   {path:'shipperlist',component:ListComponent},
   {path:'detailsshipper',component:DetailsComponent},
   {path:'detailsshipper/:id',component:DetailsComponent},
@@ -48,7 +48,7 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forChild(routes)
+    RouterModule,
   
   ]
 })

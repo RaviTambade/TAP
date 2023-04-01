@@ -57,7 +57,7 @@ export class DetailsComponent implements OnInit {
   }
 
     onUpdateClick(shipperId:any) {
-      this.router.navigate(['/updateshipper',shipperId]);
+      this.router.navigate(['Shipper/updateshipper',shipperId]);
       }
 }
   
