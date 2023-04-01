@@ -38,7 +38,7 @@ export class DetailsComponent implements OnInit {
     // })
     if(response){
       alert("Supplier deleted Successfully")
-      this.router.navigate(['/suppliers']);
+      this.router.navigate(['Supplier/suppliers']);
      }
      else{
       alert("Error while deleting supplier")
@@ -47,7 +47,7 @@ export class DetailsComponent implements OnInit {
   }
 
   onSelectUpdate(supplierId:any){
-    this.router.navigate(['/suppliers-update',supplierId]);
+    this.router.navigate(['Supplier/suppliers-update',supplierId]);
    }
  
 }

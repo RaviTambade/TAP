@@ -13,7 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductssupplierComponent } from './productssupplier/productssupplier.component';
 
 
-const routes: Routes = [
+export const supplierRoutes: Routes = [
   {path:'suppliers',component:ListComponent},
   {path:'suppliers-search',component:SearchComponent},
   {path:'suppliers/:id',component:DetailsComponent},
@@ -42,7 +42,7 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forChild(routes)
+    RouterModule
 
   ]
 })
