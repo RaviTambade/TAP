@@ -32,6 +32,6 @@ export class InsertComponent {
     })
   }
   insert(){
-    this.router.navigate(['Supplier/suppliers']);
+    this.router.navigate(['supplier/suppliers']);
   }
 }

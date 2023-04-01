@@ -47,7 +47,7 @@ export class DetailsComponent implements OnInit {
 
 onSelectUpdateCustomer(customerId:any)
 {
-  this.router.navigate(['updateCustomer', customerId])
+  this.router.navigate(['Customer/updateCustomer', customerId])
 }
 
 }

@@ -7,7 +7,7 @@ import { HttpClientModule} from '@angular/common/http';
 import { TransactionModule } from './transaction/transaction.module';
 import { AccountModule } from './account/account.module';
 import { RouterModule, Routes } from '@angular/router';
-import { MembershipModule } from './membership/membership.module';
+import { MembershipModule, membershipRoutes } from './membership/membership.module';
 import { SuppliersModule,supplierRoutes } from './suppliers/suppliers.module';
 import { CustomerModule ,customerRoutes} from './customer/customer.module';
 import { PaymentModule } from './payment/payment.module';
@@ -18,16 +18,12 @@ import { DatePipe } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactComponent } from './contact/contact.component';
-
-import { SearchProductComponent } from './product/search-product/search-product.component';
-import { ProductDetailsComponent } from './product/product-details/product-details.component';
-import { UpdateComponent } from './product/update/update.component';
-import { ListComponent } from './product/list/list.component';
-import { InsertComponent } from './product/insert/insert.component';
 import { OrderModule } from './order/order.module';
-import { CatalogComponent } from './product/catalog/catalog.component';
 import { RouteComponent } from './customer/route/route.component';
 import { RoutingComponent } from './suppliers/routing/routing.component';
+import { MembershipRoutingComponent } from './membership/membership-routing/membership-routing.component';
+import { ProductRoutingComponent } from './product/product-routing/product-routing.component';
+
 
 
 //metadata
@@ -37,11 +33,12 @@ const routes: Routes = [
   {path:'Home' , component:HomeComponent},
   {path:'Aboutus',component:AboutusComponent},
   {path:'Contact',component:ContactComponent},
-  {path:'Catalog',component:CatalogComponent,children:productRoutes},
+  {path:'Catalog',component:ProductRoutingComponent,children:productRoutes},
+  {path:'membership',component:MembershipRoutingComponent,children:membershipRoutes },
   //{path:'Cart',component:CartComponent},
   // {path:'Orders',component:OrdersComponent},
  {path:'Customer',component:RouteComponent,children:customerRoutes},
- {path:'Supplier',component:RoutingComponent,children:supplierRoutes}
+ {path:'supplier',component:RoutingComponent,children:supplierRoutes}
   
 
 ]

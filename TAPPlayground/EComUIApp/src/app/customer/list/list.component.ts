@@ -24,8 +24,9 @@ export class ListComponent implements OnInit {
 
   onSelectCustomer(customer:any){
     if(customer!=undefined)
-    this.router.navigate(['/customer',customer.customerId]);
+    this.router.navigate(['Customer/customer',customer.customerId]);
     console.log(customer);
   }
+  
 
 }
