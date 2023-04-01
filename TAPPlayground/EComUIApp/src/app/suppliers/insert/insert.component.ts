@@ -29,9 +29,14 @@ export class InsertComponent {
     this.svc.insert(this.supplier).subscribe((response) => {
       this.status = response;
       console.log(response);
+      if(response){
+        alert("Supplier inserted Successfully")
+        this.router.navigate(['supplier/suppliers']);
+       }
+       else{
+        alert("Error while inserting supplier")
+       }
     })
   }
-  insert(){
-    this.router.navigate(['supplier/suppliers']);
-  }
+ 
 }

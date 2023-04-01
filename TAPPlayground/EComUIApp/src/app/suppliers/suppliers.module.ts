@@ -7,10 +7,10 @@ import { SearchComponent } from './search/search.component';
 import { InsertComponent } from './insert/insert.component';
 import { UpdateComponent } from './update/update.component';
 import { FormsModule } from '@angular/forms';
-import { RoutingComponent } from './routing/routing.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductssupplierComponent } from './productssupplier/productssupplier.component';
+import { SupplierRoutingComponent } from './supplier-routing/supplier-routing.component';
 
 
 export const supplierRoutes: Routes = [
@@ -32,11 +32,11 @@ export const supplierRoutes: Routes = [
     SearchComponent,
     InsertComponent,
     UpdateComponent,
-    RoutingComponent,
-    ProductssupplierComponent
+    ProductssupplierComponent,
+    SupplierRoutingComponent,
+    SupplierRoutingComponent
   ],
   exports:[
-   RoutingComponent
   ],
   imports: [
     CommonModule,

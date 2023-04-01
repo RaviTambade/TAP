@@ -30,7 +30,7 @@ export class UpdateComponent implements OnInit {
       this.status = response;
       if(response){
         alert("Supplier updated Successfully")
-        this.route.navigate(['Supplier/suppliers']);
+        this.route.navigate(['supplier/suppliers']);
        }
        else{
         alert("Error while updating suppliers")
