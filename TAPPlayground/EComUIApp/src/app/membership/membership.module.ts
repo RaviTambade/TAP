@@ -13,7 +13,7 @@ import { UpdatePasswordComponent } from './update-password/update-password.compo
 import { UpdateEmailComponent } from './update-email/update-email.component';
 
 
-const routes: Routes = [
+ export const membershipRoutes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
   {path:'forgot-password',component:ForgotPasswordComponent},
@@ -36,7 +36,7 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forChild(routes)
+    RouterModule
   ],
   exports: [
     LoginComponent,
