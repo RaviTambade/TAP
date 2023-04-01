@@ -12,7 +12,7 @@ import { RouterModule,Routes } from '@angular/router';
 import { RoutingComponent } from './routing/routing.component';
 import { SearchComponent } from './search/search.component';
 
-const routes: Routes = [
+export const orderRoutes : Routes = [
   {path:'order',component:ListComponent},
   {path:'orderdetails/:id',component:DetailsComponent},
   {path:'ordersearch',component:SearchComponent},
@@ -37,7 +37,7 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forChild(routes)
+    RouterModule,
   ],
   exports: [
     ListComponent,

@@ -32,7 +32,7 @@ export class ListComponent implements OnInit{
 
   // }
   onSelectOrder(orderId:number){
-    this.router.navigate(['/orderdetails',orderId])
+    this.router.navigate(['order/orderdetails',orderId])
   }
 
   

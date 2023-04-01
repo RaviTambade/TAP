@@ -44,7 +44,7 @@ export class DetailsComponent implements OnInit{
 
    }
   onUpdateClick(orderId:number){
-    this.router.navigate(['/updateorder',orderId])
+    this.router.navigate(['order/updateorder',orderId])
   }
  
 }

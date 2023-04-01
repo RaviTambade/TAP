@@ -18,10 +18,11 @@ import { DatePipe } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactComponent } from './contact/contact.component';
-import { OrderModule } from './order/order.module';
+import { OrderModule, orderRoutes } from './order/order.module';
 import { RouteComponent } from './customer/route/route.component';
 import { MembershipRoutingComponent } from './membership/membership-routing/membership-routing.component';
 import { ProductRoutingComponent } from './product/product-routing/product-routing.component';
+import { RoutingComponent } from './order/routing/routing.component';
 
 
 //metadata
@@ -34,8 +35,8 @@ const routes: Routes = [
   {path:'Catalog',component:ProductRoutingComponent,children:productRoutes},
   {path:'membership',component:MembershipRoutingComponent,children:membershipRoutes },
   //{path:'Cart',component:CartComponent},
-  // {path:'Orders',component:OrdersComponent},
- {path:'Customer',component:RouteComponent,children:customerRoutes},
+  {path:'order',component:RoutingComponent,children: orderRoutes},
+  {path:'Customer',component:RouteComponent,children:customerRoutes},
   
 
 ]
