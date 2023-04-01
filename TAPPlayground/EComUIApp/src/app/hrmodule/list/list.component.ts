@@ -26,7 +26,7 @@ export class ListComponent implements OnInit{
 
   onClick(empId:number) {
     
-    this.router.navigate(['/Emp-details',empId]);
+    this.router.navigate(['Employee/Emp-details',empId]);
     }
 
 }

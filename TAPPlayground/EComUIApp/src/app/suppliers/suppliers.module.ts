@@ -7,13 +7,13 @@ import { SearchComponent } from './search/search.component';
 import { InsertComponent } from './insert/insert.component';
 import { UpdateComponent } from './update/update.component';
 import { FormsModule } from '@angular/forms';
-import { RoutingComponent } from './routing/routing.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductssupplierComponent } from './productssupplier/productssupplier.component';
+import { SupplierRoutingComponent } from './supplier-routing/supplier-routing.component';
 
 
-const routes: Routes = [
+export const supplierRoutes: Routes = [
   {path:'suppliers',component:ListComponent},
   {path:'suppliers-search',component:SearchComponent},
   {path:'suppliers/:id',component:DetailsComponent},
@@ -32,17 +32,17 @@ const routes: Routes = [
     SearchComponent,
     InsertComponent,
     UpdateComponent,
-    RoutingComponent,
-    ProductssupplierComponent
+    ProductssupplierComponent,
+    SupplierRoutingComponent,
+    SupplierRoutingComponent
   ],
   exports:[
-   RoutingComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forChild(routes)
+    RouterModule
 
   ]
 })

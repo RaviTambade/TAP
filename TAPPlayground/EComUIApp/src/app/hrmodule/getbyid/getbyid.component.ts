@@ -22,8 +22,8 @@ export class GetbyidComponent implements OnInit {
     this.svc.getById(this.empId).subscribe(
       (response)=>{
         this.employee=response;
-        // this.employee.birthDate=this.datepipe.transform(this.employee.birthDate,'yyyy-MM-dd hh.mm.ss');
-        // this.employee.hireDate=this.datepipe.transform(this.employee.hireDate,'yyyy-MM-dd hh.mm.ss');
+         this.employee.birthDate=this.datepipe.transform(this.employee.birthDate,'yyyy-MM-dd hh.mm.ss');
+         this.employee.hireDate=this.datepipe.transform(this.employee.hireDate,'yyyy-MM-dd hh.mm.ss');
         console.log(this.employee.birthDate);
         console.log(this.employee.hireDate);
         console.log(response);

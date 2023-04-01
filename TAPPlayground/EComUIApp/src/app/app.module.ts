@@ -2,15 +2,15 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { HRModuleModule } from './hrmodule/hrmodule.module';
+import { HRModuleModule, employeeRoutes } from './hrmodule/hrmodule.module';
 import { HttpClientModule} from '@angular/common/http';
-import { TransactionModule } from './transaction/transaction.module';
+import { TransactionModule, transacationRoutes } from './transaction/transaction.module';
 import { AccountModule } from './account/account.module';
 import { RouterModule, Routes } from '@angular/router';
-import { MembershipModule ,membershipRoutes } from './membership/membership.module';
-import { SuppliersModule } from './suppliers/suppliers.module';
+import { MembershipModule, membershipRoutes } from './membership/membership.module';
+import { SuppliersModule,supplierRoutes } from './suppliers/suppliers.module';
 import { CustomerModule ,customerRoutes} from './customer/customer.module';
-import { PaymentModule } from './payment/payment.module';
+import { PaymentModule, PaymentRoutes } from './payment/payment.module';
 import { ProductsModule, productRoutes } from './product/products.module';
 import { ShipperModule } from './shipper/shipper.module';
 import { AppComponent } from './app.component';
@@ -20,9 +20,13 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactComponent } from './contact/contact.component';
 import { OrderModule, orderRoutes } from './order/order.module';
 import { RouteComponent } from './customer/route/route.component';
-import { MembershipRoutingComponent } from './membership/membership-routing/membership-routing.component';
+import { EmployeeRoutingComponent } from './hrmodule/employee-routing/employee-routing.component';
 import { ProductRoutingComponent } from './product/product-routing/product-routing.component';
-import { RoutingComponent } from './order/routing/routing.component';
+import { MembershipRoutingComponent } from './membership/membership-routing/membership-routing.component';
+
+import { RoutingComponent } from './transaction/routing/routing.component';
+import { SupplierRoutingComponent } from './suppliers/supplier-routing/supplier-routing.component';
+
 
 
 //metadata
@@ -35,9 +39,13 @@ const routes: Routes = [
   {path:'Catalog',component:ProductRoutingComponent,children:productRoutes},
   {path:'membership',component:MembershipRoutingComponent,children:membershipRoutes },
   //{path:'Cart',component:CartComponent},
-  {path:'order',component:RoutingComponent,children: orderRoutes},
-  {path:'Customer',component:RouteComponent,children:customerRoutes},
-  
+  // {path:'Orders',component:OrdersComponent},
+ {path:'Customer',component:RouteComponent,children:customerRoutes},
+ {path:'supplier',component:SupplierRoutingComponent,children:supplierRoutes},
+ {path:'Employee',component:EmployeeRoutingComponent,children:employeeRoutes},
+ {path:'supplier',component:SupplierRoutingComponent,children:supplierRoutes},
+ {path:'Payment',component:RoutingComponent,children:PaymentRoutes},
+ {path:'Transaction',component:RoutingComponent,children:transacationRoutes},
 
 ]
 @NgModule({

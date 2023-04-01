@@ -23,6 +23,6 @@ ngOnInit():void{
   }
 
   onClick(tranId:number){
-    this.router.navigate(['/transacation-details', tranId]);
+    this.router.navigate(['Transaction/transacation-details', tranId]);
   }
 }

@@ -10,7 +10,7 @@ import { RoutingComponent } from './routing/routing.component';
 import { Route, RouterModule, Routes } from '@angular/router';
 
 
-const routes: Routes = [
+ export const PaymentRoutes: Routes = [
   { path: 'paymentList', component: ListComponent},
   { path: 'insertPayment', component: InsertComponent },
   { path: 'detailsPayment', component: PaymentDetailsComponent },
@@ -30,7 +30,7 @@ const routes: Routes = [
     CommonModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forChild(routes)
+    RouterModule,
   ],
   exports:[
     InsertComponent,
