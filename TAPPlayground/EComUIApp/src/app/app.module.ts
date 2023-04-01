@@ -10,7 +10,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MembershipModule ,membershipRoutes } from './membership/membership.module';
 import { SuppliersModule } from './suppliers/suppliers.module';
 import { CustomerModule ,customerRoutes} from './customer/customer.module';
-import { PaymentModule } from './payment/payment.module';
+import { PaymentModule, PaymentRoutes } from './payment/payment.module';
 import { ProductsModule, productRoutes } from './product/products.module';
 import { ShipperModule } from './shipper/shipper.module';
 import { AppComponent } from './app.component';
@@ -22,6 +22,7 @@ import { OrderModule } from './order/order.module';
 import { RouteComponent } from './customer/route/route.component';
 import { MembershipRoutingComponent } from './membership/membership-routing/membership-routing.component';
 import { ProductRoutingComponent } from './product/product-routing/product-routing.component';
+import { RoutingComponent } from './payment/routing/routing.component';
 
 
 //metadata
@@ -36,6 +37,7 @@ const routes: Routes = [
   //{path:'Cart',component:CartComponent},
   // {path:'Orders',component:OrdersComponent},
  {path:'Customer',component:RouteComponent,children:customerRoutes},
+ {path:'Payment',component:RoutingComponent,children:PaymentRoutes},
   
 
 ]
