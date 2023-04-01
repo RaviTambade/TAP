@@ -1,3 +1,4 @@
+-- Active: 1679882750289@@127.0.0.1@3306@ecommerce
 
 
 CREATE DATABASE Ecommerce;
@@ -288,6 +289,7 @@ INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('
 INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('2022-08-07','online payment',953125,5);
 INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('2023-08-07','online payment',953125,6);
 INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('2022-09-10','cash on delivery',43210,7);
+
 INSERT INTO shippers(company_name,contact_number,email,account_number)VALUES('Flipcart','69825645987','flipcart@gmail.com',39025546619);
 INSERT INTO shippers(company_name,contact_number,email,account_number)VALUES('Bluedrt','6912545987','bluedart@gmail.com',39025546620);
 INSERT INTO shippers(company_name,contact_number,email,account_number)VALUES('Essar Shipping Ltd','6982345987','essar@gmail.com',39025546621);
