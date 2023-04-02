@@ -10,7 +10,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MembershipModule ,membershipRoutes } from './membership/membership.module';
 import { SuppliersModule } from './suppliers/suppliers.module';
 import { CustomerModule ,customerRoutes} from './customer/customer.module';
-import { PaymentModule } from './payment/payment.module';
+import { PaymentModule, PaymentRoutes } from './payment/payment.module';
 import { ProductsModule, productRoutes } from './product/products.module';
 import { ShipperModule } from './shipper/shipper.module';
 import { AppComponent } from './app.component';
