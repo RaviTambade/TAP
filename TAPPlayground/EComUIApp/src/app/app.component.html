@@ -1,11 +1,19 @@
 
-<label><b>Membership Module :</b> </label><membership-routing></membership-routing><br/>
+<!-- <label><b>Membership Module :</b> </label><membership-routing></membership-routing><br/>
 <label><b>Product Module :</b> </label> <product-routing></product-routing><br/>
-<label><b>Employee Details :</b></label><employee-routing></employee-routing><br/>
- <label><b>Suppliers Module :</b> </label><app-routing></app-routing><br/>
+<label><b>Employee Details :</b></label><employee-routing></employee-routing><br/> -->
+ <!-- <label><b>Suppliers Module :</b> </label><app-routing></app-routing><br/>
  <label><b>Account Module :</b></label><app-account-routing></app-account-routing><br/>
  <label><b>Customer Module :</b></label><customer-route></customer-route><br/>
  <label><b>Transaction Module :</b></label><transactionrouting></transactionrouting> <br/>
 <label><b>Shipper Details :</b></label><shipperrouting> </shipperrouting><br/>
 <label><b>PaymentDetails:</b></label> <payment-routing></payment-routing><br/>
-<label><b>Order Details:</b></label> <orderrouting></orderrouting><br/>
+<label><b>Order Details:</b></label> <orderrouting></orderrouting><br/> -->
+
+<a [routerLink]="['Home']">Home</a> |<a [routerLink]="['Aboutus']">Aboutus</a> |<a [routerLink]="['Contact']">Contact</a> |<a [routerLink]="['Catalog']">Catalog</a>|<a [routerLink]="['Customer']">Customer</a>
+<!-- <a [routerLink]="['assign-role']"> Assign Role </a> |
+<a [routerLink]="['update-password']"> Update Password </a> |
+<a [routerLink]="['update-email']"> Update Email </a> |
+ -->
+ <hr/>
+ <router-outlet></router-outlet>

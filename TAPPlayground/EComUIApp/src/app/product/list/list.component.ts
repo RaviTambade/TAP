@@ -28,6 +28,6 @@ export class ListComponent {
 // }
 onSelect(product:any){
   if(product!=undefined)
- this.router.navigate(['/product',product.productId]);
+ this.router.navigate(['Catalog/product',product.productId]);
 }
 }
