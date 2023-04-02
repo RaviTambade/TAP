@@ -2,7 +2,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { HRModuleModule } from './hrmodule/hrmodule.module';
+import { HRModuleModule, employeeRoutes } from './hrmodule/hrmodule.module';
 import { HttpClientModule} from '@angular/common/http';
 import { TransactionModule } from './transaction/transaction.module';
 import { AccountModule } from './account/account.module';
@@ -27,6 +27,7 @@ import { InsertComponent } from './product/insert/insert.component';
 import { OrderModule } from './order/order.module';
 import { CatalogComponent } from './product/catalog/catalog.component';
 import { RouteComponent } from './customer/route/route.component';
+import { EmployeeRoutingComponent } from './hrmodule/employee-routing/employee-routing.component';
 
 
 //metadata
@@ -40,6 +41,7 @@ const routes: Routes = [
   //{path:'Cart',component:CartComponent},
   // {path:'Orders',component:OrdersComponent},
  {path:'Customer',component:RouteComponent,children:customerRoutes},
+ {path:'Employee',component:EmployeeRoutingComponent,children:employeeRoutes}
   
 
 ]

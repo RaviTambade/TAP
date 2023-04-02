@@ -45,6 +45,6 @@ export class DetailsComponent implements OnInit {
     }
 
     onUpdateClick(employeeId:any) {
-      this.router.navigate(['/Emp-update',employeeId]);
+      this.router.navigate(['Employee/Emp-update',employeeId]);
       }
 }

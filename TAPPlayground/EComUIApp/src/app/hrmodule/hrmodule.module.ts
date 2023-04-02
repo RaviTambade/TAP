@@ -14,9 +14,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 
-const routes:Routes=[
+export const employeeRoutes:Routes =[
   {path:'Emplist',component:ListComponent},
-  {path:'Empgetbyid',component:GetbyidComponent},
+  {path:'Empgetbyid',component:SearchComponent},
   {path:'Emp-details/:id',component:DetailsComponent},
   {path:'Empinsert',component:InsertComponent},
   {path:'Empupdate',component:UpdateComponent},
@@ -49,7 +49,7 @@ const routes:Routes=[
     FormsModule,
     HttpClientModule,
     DatePipe,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(employeeRoutes)
   ]
 })
 export class HRModuleModule {

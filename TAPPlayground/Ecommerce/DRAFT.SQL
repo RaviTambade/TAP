@@ -61,7 +61,7 @@ INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 390
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546619,'UBIN0000286','2021-08-04 07-40-35',23520);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546620,'HDFC0000286','2021-02-05 07-40-35',52500);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546621,'SBI0000286','2021-08-07 07-40-35',233500);
-INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546622,'AXIS0000236','2021-08-08 07-40-35',23500);
+INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546623,'AXIS0000236','2021-08-08 07-40-35',23500);
 
 INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES(39025546601,39025546602,'2023-03-01 12:40:35',22500);
 INSERT INTO transactions(from_account_number, to_account_number,transaction_date,amount) VALUES( 39025546602,39025546603,'2023-03-01 12:40:35',22500);
