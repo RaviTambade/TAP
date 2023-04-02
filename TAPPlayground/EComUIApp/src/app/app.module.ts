@@ -4,11 +4,11 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HRModuleModule, employeeRoutes } from './hrmodule/hrmodule.module';
 import { HttpClientModule} from '@angular/common/http';
-import { TransactionModule } from './transaction/transaction.module';
+import { TransactionModule, transacationRoutes } from './transaction/transaction.module';
 import { AccountModule } from './account/account.module';
 import { RouterModule, Routes } from '@angular/router';
-import { MembershipModule ,membershipRoutes } from './membership/membership.module';
-import { SuppliersModule } from './suppliers/suppliers.module';
+import { MembershipModule, membershipRoutes } from './membership/membership.module';
+import { SuppliersModule,supplierRoutes } from './suppliers/suppliers.module';
 import { CustomerModule ,customerRoutes} from './customer/customer.module';
 import { PaymentModule, PaymentRoutes } from './payment/payment.module';
 import { ProductsModule, productRoutes } from './product/products.module';
@@ -22,7 +22,12 @@ import { OrderModule } from './order/order.module';
 import { RouteComponent } from './customer/route/route.component';
 import { EmployeeRoutingComponent } from './hrmodule/employee-routing/employee-routing.component';
 import { ProductRoutingComponent } from './product/product-routing/product-routing.component';
+<<<<<<< HEAD
 import { MembershipRoutingComponent } from './membership/membership-routing/membership-routing.component';
+=======
+import { RoutingComponent } from './transaction/routing/routing.component';
+
+>>>>>>> 07d8506c9ba7dca0ba7c28d18477157997104fdb
 
 
 //metadata
@@ -37,8 +42,14 @@ const routes: Routes = [
   //{path:'Cart',component:CartComponent},
   // {path:'Orders',component:OrdersComponent},
  {path:'Customer',component:RouteComponent,children:customerRoutes},
+<<<<<<< HEAD
  {path:'Employee',component:EmployeeRoutingComponent,children:employeeRoutes}
   
+=======
+ {path:'supplier',component:RoutingComponent,children:supplierRoutes},
+ {path:'Payment',component:RoutingComponent,children:PaymentRoutes},
+ {path:'Transaction',component:RoutingComponent,children:transacationRoutes},
+>>>>>>> 07d8506c9ba7dca0ba7c28d18477157997104fdb
 
 ]
 @NgModule({

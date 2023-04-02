@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { SupplierhubService } from '../supplierhub.service';
 
 @Component({
@@ -22,12 +23,15 @@ export class InsertComponent {
   status: boolean | undefined;
   
 
-  constructor(private svc: SupplierhubService) { }
+  constructor(private svc: SupplierhubService,private router:Router) { }
 
   insertSupplier(_supplierForm:any) {
     this.svc.insert(this.supplier).subscribe((response) => {
       this.status = response;
       console.log(response);
     })
+  }
+  insert(){
+    this.router.navigate(['supplier/suppliers']);
   }
 }

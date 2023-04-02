@@ -21,7 +21,7 @@ export class ListComponent {
   }
   onSelect(supplier:any){
     if(supplier!=undefined)
-    this.router.navigate(['/suppliers',supplier.supplierId]); 
+    this.router.navigate(['supplier/suppliers',supplier.supplierId]); 
    }
   }
 
