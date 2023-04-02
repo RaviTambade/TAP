@@ -82,10 +82,6 @@
                       [(ngModel)]="product.categoryId" required>
                         <option *ngFor="let category of categories" [ngValue]="category.categoryId">
                           {{category.categoryTitle | titlecase}}</option>
-                        <!-- <option [ngValue]="1">Biscuits</option>
-                        <option [ngValue]="2">ColdDrinks</option>
-                        <option [ngValue]="3">Snacks</option>
-                        <option [ngValue]="4">Electronics</option> -->
                       </select>
                       <label class="form-label "> Category</label>
                     </div>
@@ -93,12 +89,9 @@
                   <div class="col-md-6 mb-4 pb-2">
                     <div class="form-outline ">
                       <select   class="form-control form-control-lg form-select" name="supplierId"
-                      [(ngModel)]="product.supplierId" >
-                        <option [ngValue]="1">Hindustan Pvt.Ltd </option>
-                        <option [ngValue]="2">Britinia Pvt.Ltd</option>
-                        <option [ngValue]="3">Surya Pvt.Ltd</option>
-                        <option [ngValue]="4">Naturals Pvt.Ltd</option>
-                        <option [ngValue]="5">Goukul Pvt.Ltd</option>
+                      [(ngModel)]="product.supplierId" required >
+                      <option *ngFor="let supplier of suppliers " [ngValue]="supplier.supplierId">
+                        {{supplier.companyName | titlecase}}</option>
                       </select>
                       <label class="form-label "> supplier</label>
                     </div>

@@ -37,4 +37,9 @@ export class ProductHubService {
     let url =  "http://localhost:5223/categories/getAll";
     return this.http.get<any>(url);
   }
+
+  getSuppliers(): Observable<any>{
+    let url =  "http://localhost:5223/suppliers/GetAllSuppliers";
+    return this.http.get<any>(url);
+  }
 }

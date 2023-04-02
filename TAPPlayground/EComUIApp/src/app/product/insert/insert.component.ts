@@ -21,6 +21,7 @@ export class InsertComponent implements OnInit {
   };
   status: boolean | undefined;
   categories:[] |any;
+  suppliers:[]|any;
 
   constructor(private svc: ProductHubService, private router: Router) { }
   ngOnInit(): void {
@@ -28,7 +29,12 @@ export class InsertComponent implements OnInit {
     this.svc.getCategories().subscribe((response) => {
       this.categories = response;
       console.log(response);
-    })
+    });
+    // suppliers
+    this.svc.getSuppliers().subscribe((response) => {
+      this.suppliers = response;
+      console.log(response);
+    });
   }
 
 
@@ -47,10 +53,5 @@ export class InsertComponent implements OnInit {
     })
   }
 
-  // getCategories() {
-  //   this.svc.getCategories().subscribe((response) => {
-  //     this.categories = response;
-  //     console.log(response);
-  //   })
-  // }
+
 }
