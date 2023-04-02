@@ -12,7 +12,9 @@ import { DetailsComponent } from './details/details.component';
 const routes: Routes = [
   {path:'insertCustomer',component:InsertComponent},
   {path:'updateCustomer',component:UpdateComponent},
-  {path:'list-Customers',component:ListComponent}
+  {path:'list-Customers',component:ListComponent},
+  {path:'customer/:id',component:DetailsComponent},
+  {path:'updateCustomer/:id',component:UpdateComponent},
 ]
 
 @NgModule({

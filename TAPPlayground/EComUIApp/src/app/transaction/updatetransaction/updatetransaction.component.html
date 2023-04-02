@@ -1,6 +1,6 @@
 <h2>Update Transaction</h2>
 <hr/>
-<get-transaction (sendTransaction)="receiveTransaction($event)"></get-transaction>
+<get-transaction [transactionId]="transactionId"(sendTransaction)="receiveTransaction($event)" hidden></get-transaction>
 
 <div *ngIf="transaction && transaction.transactionId!=0">
     <div *ngIf="transaction">
@@ -34,14 +34,3 @@
     </form>
 </div>
 
-<div *ngIf="transaction && transaction.transactionId==0">
-    <p>Transaction not Found</p>
-</div>
-
-<div *ngIf="status">
-    <p>Transaction Inserted Successfully</p>
-</div>
-
-<div *ngIf="status == false">
-    <p>Error While Inserting</p>
-</div>

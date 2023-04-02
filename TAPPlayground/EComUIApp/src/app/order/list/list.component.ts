@@ -1,6 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { Order } from '../order';
 import { OrderhubService } from '../orderhub.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list',
@@ -10,7 +11,7 @@ import { OrderhubService } from '../orderhub.service';
 export class ListComponent implements OnInit{
 
   orders : Order[] | undefined
-  constructor(private svc :OrderhubService){
+  constructor(private svc :OrderhubService, private router:Router){
 
   }
   ngOnInit(): void {
@@ -30,5 +31,12 @@ export class ListComponent implements OnInit{
   // );
 
   // }
+  onSelectOrder(orderId:number){
+    this.router.navigate(['/orderdetails',orderId])
+  }
 
+  
 }
+ 
+
+

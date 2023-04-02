@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule, DatePipe } from '@angular/common';
 import { TransactionListComponent } from './transaction-list/transaction-list.component';
 import { FormsModule } from '@angular/forms';
-import { TransactiondetailsComponent } from './transactiondetails/transactiondetails.component';
 import { InserttransactionComponent } from './inserttransaction/inserttransaction.component';
 import { UpdatetransactionComponent } from './updatetransaction/updatetransaction.component';
 import { GetTransactionComponent } from './get-transaction/get-transaction.component';
@@ -14,16 +13,16 @@ import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   {path:'transaction-list',component:TransactionListComponent},
-  //{path:'search',component:SearchComponent},
+  {path:'transactiongetbyid',component:GetTransactionComponent},
+  {path:'transacation-details/:id',component:DetailsComponent},
   {path:'inserttransaction',component:InserttransactionComponent},
-  {path:'updatetransaction',component:UpdatetransactionComponent}
-  // {path:'delete',component:UpdatetransactionComponent},
+  {path:'updatetransaction',component:UpdatetransactionComponent},
+  {path:'transaction-update/:id',component:UpdatetransactionComponent}
 ]
 
 @NgModule({
   declarations: [
     TransactionListComponent,
-    TransactiondetailsComponent,
     InserttransactionComponent,
     UpdatetransactionComponent,
     GetTransactionComponent,

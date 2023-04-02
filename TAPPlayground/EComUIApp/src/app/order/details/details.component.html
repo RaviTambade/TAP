@@ -3,7 +3,7 @@
 
  <!-- <input type="text" [(ngModel)]="orderId"/>
 <button (click) ="getById(orderId)">Details</button>  -->
-
+<app-getorder [orderId] = "orderId" (sendOrder)="receiveOrder($event)" hidden></app-getorder>
 
 <div *ngIf="order && order.orderId !=0">
 <p><label>OrderId:</label>{{order.orderId}}</p>
@@ -12,10 +12,10 @@
 <p><label>CustomerId:</label>{{order.customerId}}</p>
 <p><label>Total:</label>{{order.total}}</p>
 <p><label>Status:</label>{{order.status}}</p>
+<button type="submit" (click)="delete(order.orderId)">Delete</button> 
+<button type="submit" (click)="onUpdateClick(order.orderId)">Update</button>
 <div *ngIf=" order && order.orderId==0 ">
     <p>order not Found</p>
 </div>
 </div>
 
-
-<!-- <button type="submit" (click)="delete(orderId)"></button> -->

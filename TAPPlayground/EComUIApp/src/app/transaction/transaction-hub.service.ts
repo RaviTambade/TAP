@@ -7,6 +7,7 @@ import { Transaction } from './transaction';
 })
 export class TransactionHubService {
 
+
   constructor(private http:HttpClient) { }
 
   getAllTransactions():Observable<any>{
@@ -28,5 +29,10 @@ export class TransactionHubService {
   updateTransaction(transaction:Transaction):Observable<any>{
     let url="http://localhost:5223/transaction/updatetransaction";
     return this.http.put<any>(url,transaction);
+  }
+
+  deleteTransaction(transactionId: number): Observable<any> {
+    let url="http://localhost:5223/transaction/deletetransaction/"+transactionId;
+    return this.http.delete<any>(url);
   }
 }

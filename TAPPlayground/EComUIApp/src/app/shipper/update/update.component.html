@@ -1,25 +1,13 @@
 
 <h2>Update Shipper</h2>
-<getshipper  (sendShipper)="receiveShipper($event)"></getshipper>
-<div *ngIf="shipper && shipper.shipperId!=0 ">
+
+<getshipper [shipperId]="shipperId" (sendShipper)="receiveShipper($event)" hidden></getshipper>
+<div *ngIf="shipper && shipper.shipperId !=0">
     <div *ngIf="shipper" >
         <label ><b>CompanyName :</b></label>  <input type="text" [(ngModel)]="shipper.companyName">  <br>
         <label ><b>ContactNumber :</b></label>  <input type="text" [(ngModel)]="shipper.contactNumber"> <br>
         <label ><b>Email:</b></label>  <input type="text" [(ngModel)]="shipper.email">   <br>
         <label ><b>AccountNumber :</b></label>  <input type="text" [(ngModel)]="shipper.accountNumber">  <br>
     </div>
-  <button (click)="updateShipper()" (click)="status = false">Update</button>
-</div>
-
-
-<div *ngIf=" shipper && shipper.shipperId==0 ">
-    <p>Shipper not Found</p>
-</div>
-
-<div *ngIf="status">
-  <p>record updated sucessfully</p>
-</div>
-
-<div *ngIf="status == false">
-  <p>Updating record is Unsucessful </p>
+  <button (click)="updateShipper()"(click)="status = false">Update</button>
 </div>

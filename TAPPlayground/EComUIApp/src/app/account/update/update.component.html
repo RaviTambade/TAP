@@ -1,3 +1,6 @@
+
+
+<app-accountdetails [accountId]="accountId" (sendAccount)="receiveAccount($event)" ></app-accountdetails>
 <body>
   <div class="container">
     <div class="row">
@@ -5,14 +8,11 @@
         <div class="card border-1 shadow rounded-3 my-5">
           <div class="card-body p-6 p-sm-8">
             <h5 class="card-title text-center mb-5 fs-5">Update Account</h5>
-
-            <app-accountdetails (sendAccount)="receiveAccount($event)"></app-accountdetails>
             <div *ngIf="account && account.accountId!=0 ">
               <div *ngIf="account && account.accountId==0 ">
                 <p>Account not Found</p>
               </div>
               <div *ngIf="account">
-                <!-- <form #accountForm="ngForm" (ngSubmit)="insertAccount(accountForm.value)"> -->
                 <div class="form-floating mb-3">
                   <input type="number" name="accountNumber" class="form-control" placeholder="Enter Account Number"
                     #accountNumber="ngModel" [(ngModel)]="account.accountNumber" /><label

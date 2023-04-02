@@ -2,10 +2,14 @@
 <h1> Shippers Details </h1>
 <hr/>
 <div *ngFor ="let shipper of shippers">
-<br/><p> ShipperId :{{shipper.shipperId}}</p>
+<label (click)="onClick(shipper.shipperId)"><b>CompanyName:</b>{{shipper.companyName}}</label>
+
+</div>
+
+
+<!-- <br/><p> ShipperId :{{shipper.shipperId}}</p>
 <p> CompanyName :{{shipper.companyName}}</p>
 <p> ContactNumber :{{shipper.contactNumber}}</p>
 <p> Email :{{shipper.email}}</p>
 <p> AccountNumber :{{shipper.accountNumber}}</p>
-<br/>
-</div>
+<br/> -->

@@ -12,7 +12,7 @@
 </div> -->
 
 <div *ngFor="let order of orders">
-
-    <app-details [order]="order" ></app-details>
+   
+    <label (click)="onSelectOrder(order.orderId)"> <b>OrderId:</b>{{order.orderId}}</label>
     <hr>
  </div> 

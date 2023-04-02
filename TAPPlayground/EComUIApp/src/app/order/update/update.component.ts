@@ -1,21 +1,22 @@
-import { Component} from '@angular/core';
+import { Component,OnInit} from '@angular/core';
 import { OrderhubService } from '../orderhub.service';
 import { Order } from '../order'
+import { ActivatedRoute } from '@angular/router';
 
  @Component({
    selector: 'app-update',
     templateUrl: './update.component.html',
     styleUrls: ['./update.component.css']
   })
-  export class UpdateComponent{
+  export class UpdateComponent implements OnInit{
 
     order: Order | any;
     status:boolean | undefined;
-
-    constructor(private svc:OrderhubService){}
+    orderId:any;
+    constructor(private svc:OrderhubService,private route:ActivatedRoute){}
     
     update() {
-        console.log("updated");
+      console.log("updated");
       this.svc.update(this.order).subscribe(
         (res)=>{
           this.status = res;
@@ -24,7 +25,11 @@ import { Order } from '../order'
       )
     }
     
-
+  ngOnInit(): void {
+      this.route.paramMap.subscribe((param)=>{
+        this.orderId = param.get('id');
+      })
+  }
     //from getbyid
     receiveOrder($event:any){
     this.order = $event.order
