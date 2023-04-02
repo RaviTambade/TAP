@@ -11,7 +11,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductRoutingComponent } from './product-routing/product-routing.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './Auth/auth.guard';
-import { CatalogComponent } from './catalog/catalog.component';
 // import { MatSelectModule } from '@angular/material/select';
 // import { MatButtonModule } from '@angular/material/button';
 // import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
@@ -35,7 +34,6 @@ export const productRoutes:Routes =[
     SearchProductComponent,
     GetproductComponent,
     ProductRoutingComponent,
-    CatalogComponent,
     
   ],
   imports: [
