@@ -1,6 +1,7 @@
 using JwtTokan.Helpers;
 using JwtTokan.Models;
 using JwtTokan.Services;
+using JwtTokan.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JwtTokan.Controllers{
@@ -33,7 +34,7 @@ namespace JwtTokan.Controllers{
         }
 
 
-        [Authorize(Roles=Role.Admin)]
+        [Authorize(Roles=Role.Customer +","+Role.Employee)]
         [HttpGet ("users/GetAll")]
         public IActionResult GetAll(){
 

@@ -1,7 +1,0 @@
-C:\Tap\tap\TAPPlayground\JwtTokan\JwtTokan\obj\Debug\net6.0\JwtTokan.csproj.AssemblyReference.cache
-C:\Tap\tap\TAPPlayground\JwtTokan\JwtTokan\obj\Debug\net6.0\JwtTokan.GeneratedMSBuildEditorConfig.editorconfig
-C:\Tap\tap\TAPPlayground\JwtTokan\JwtTokan\obj\Debug\net6.0\JwtTokan.AssemblyInfoInputs.cache
-C:\Tap\tap\TAPPlayground\JwtTokan\JwtTokan\obj\Debug\net6.0\JwtTokan.AssemblyInfo.cs
-C:\Tap\tap\TAPPlayground\JwtTokan\JwtTokan\obj\Debug\net6.0\JwtTokan.csproj.CoreCompileInputs.cache
-C:\Tap\tap\TAPPlayground\JwtTokan\JwtTokan\obj\Debug\net6.0\JwtTokan.MvcApplicationPartsAssemblyInfo.cs
-C:\Tap\tap\TAPPlayground\JwtTokan\JwtTokan\obj\Debug\net6.0\JwtTokan.MvcApplicationPartsAssemblyInfo.cache

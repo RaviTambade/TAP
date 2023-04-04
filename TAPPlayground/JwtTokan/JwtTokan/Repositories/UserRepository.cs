@@ -154,6 +154,7 @@ public class UserRepository : IUserRepository
         con.ConnectionString = _conString;
         try
         {
+        
 
             string query = "SELECT * FROM users where email=@email AND password =@password";
             Console.WriteLine(query);
@@ -165,7 +166,7 @@ public class UserRepository : IUserRepository
             command.Parameters.AddWithValue("@password", request.Password);
             MySqlDataReader reader = command.ExecuteReader();
 
-            while (reader.Read())
+            if (reader.Read())
             {
 
                 int userId = int.Parse(reader["user_id"].ToString());
@@ -217,7 +218,8 @@ public List<string> GetRolesOfUser(int userId)
         try
         {
 
-            string query ="SELECT role from roles where role_id in  (select role_id from userroles where user_id=@userId";
+            string query ="SELECT role from roles where role_id in  (select role_id from userroles where user_id=@userId)";
+            Console.WriteLine(query);
             con.Open();
             MySqlCommand cmd = new MySqlCommand(query, con);
             cmd.Parameters.AddWithValue("@userId",userId);
@@ -227,6 +229,7 @@ public List<string> GetRolesOfUser(int userId)
             {
 
                 string roleName = reader["role"].ToString();
+                Console.WriteLine(roleName);
 
                  roles.Add(roleName);
             }
@@ -259,7 +262,7 @@ public List<string> GetRolesOfUser(int userId)
 
         {
 
-            Subject = new ClaimsIdentity(AllClaims(user.userId)),
+            Subject = new ClaimsIdentity(AllClaims(user)),
              
             Expires = DateTime.UtcNow.AddDays(7),
 
@@ -273,11 +276,11 @@ public List<string> GetRolesOfUser(int userId)
 
     }
 
-      List<Claim> AllClaims(int id){
+      List<Claim> AllClaims(User user){
 
             List<Claim> claims =new List<Claim>();
             claims.Add( new Claim("id", user.UserId.ToString()) );
-            List<string> roles=  GetRolesOfUser(id);
+            List<string> roles=  GetRolesOfUser(user.UserId);
          
 
          foreach(string role in roles){

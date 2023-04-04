@@ -1,4 +1,5 @@
-CREATE DATABASE Authentication;
+
+-- CREATE DATABASE Authentication;
 USE Authentication;
 
 CREATE TABLE roles (role_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, role varchar(25));
@@ -25,12 +26,13 @@ INSERT INTO userroles( user_id,role_id) VALUES (5,2);
 INSERT INTO userroles( user_id,role_id) VALUES (4,1);
 INSERT INTO userroles( user_id,role_id) VALUES (2,2);
 INSERT INTO userroles( user_id,role_id) VALUES (1,4);
+INSERT INTO userroles( user_id,role_id) VALUES (3,5);
 SELECT * from users;
 SELECT * FROM userroles;
 SELECT * FROM roles;
 
 
 
+SELECT role from roles where role_id in  (select role_id from userroles where user_id=4);
 
-
-
+SELECT * FROM users where email='akshay@gmail.com' AND password ='akshay123';

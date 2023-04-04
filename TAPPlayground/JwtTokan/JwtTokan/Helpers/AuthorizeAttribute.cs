@@ -19,15 +19,14 @@ namespace JwtTokan.Helpers
             var user = (User)context.HttpContext.Items["User"];
             var userRoles =(List<string>)context.HttpContext.Items["userRoles"];
             
-            bool status = true;
+            bool status = false;
             
             if (this.Roles!=null){
                 var requiredRoles=this.Roles.Split(',').ToList();
 
             foreach (var role in requiredRoles){
-                if(userRoles.Contains(role)){continue;}
-
-                else status= false;
+                if(userRoles.Contains(role))
+                {status=true;}              
             }
             
             }
