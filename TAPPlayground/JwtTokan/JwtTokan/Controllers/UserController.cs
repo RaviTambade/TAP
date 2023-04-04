@@ -33,7 +33,7 @@ namespace JwtTokan.Controllers{
         }
 
 
-        [Authorize]
+        [Authorize(Roles=Role.Admin)]
         [HttpGet ("users/GetAll")]
         public IActionResult GetAll(){
 

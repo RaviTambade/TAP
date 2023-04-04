@@ -1,32 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "D:\\JwtTokkenApp\\JwtTokan\\JwtTokan.csproj": {}
+    "C:\\Tap\\tap\\TAPPlayground\\JwtTokan\\JwtTokan\\JwtTokan.csproj": {}
   },
   "projects": {
-    "D:\\JwtTokkenApp\\JwtTokan\\JwtTokan.csproj": {
+    "C:\\Tap\\tap\\TAPPlayground\\JwtTokan\\JwtTokan\\JwtTokan.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\JwtTokkenApp\\JwtTokan\\JwtTokan.csproj",
+        "projectUniqueName": "C:\\Tap\\tap\\TAPPlayground\\JwtTokan\\JwtTokan\\JwtTokan.csproj",
         "projectName": "JwtTokan",
-        "projectPath": "D:\\JwtTokkenApp\\JwtTokan\\JwtTokan.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\JwtTokkenApp\\JwtTokan\\obj\\",
+        "projectPath": "C:\\Tap\\tap\\TAPPlayground\\JwtTokan\\JwtTokan\\JwtTokan.csproj",
+        "packagesPath": "C:\\Users\\Akash\\.nuget\\packages\\",
+        "outputPath": "C:\\Tap\\tap\\TAPPlayground\\JwtTokan\\JwtTokan\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Akash\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net7.0"
+          "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -37,17 +35,9 @@
         }
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.AspNetCore.Authentication.JwtBearer": {
-              "target": "Package",
-              "version": "[7.0.4, )"
-            },
-            "Microsoft.AspNetCore.OpenApi": {
-              "target": "Package",
-              "version": "[7.0.3, )"
-            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
@@ -80,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

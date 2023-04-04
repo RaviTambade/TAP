@@ -74,13 +74,13 @@ namespace JwtTokan.Helpers
 
                 var userId = int.Parse(jwtToken.Claims.First(x => x.Type == "id").Value);
 
-
+                var userRoles = jwtToken.Claims.Where(x => x.Type =="role").Select(c =>c.Value).ToList();
 
 
                 // attach user to context on successful jwt validation
 
                 context.Items["User"] = userService.GetById(userId);
-
+                context.Items["userRoles"]= userRoles;
             }
 
             catch

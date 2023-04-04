@@ -203,6 +203,51 @@ public class UserRepository : IUserRepository
         return user;
 
     }
+
+
+public List<string> GetRolesOfUser(int userId)
+    {
+        List<string> roles = new List<string>();
+
+        MySqlConnection con = new MySqlConnection();
+
+        con.ConnectionString = _conString;
+
+
+        try
+        {
+
+            string query ="SELECT role from roles where role_id in  (select role_id from userroles where user_id=@userId";
+            con.Open();
+            MySqlCommand cmd = new MySqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@userId",userId);
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+
+                string roleName = reader["role"].ToString();
+
+                 roles.Add(roleName);
+            }
+           
+            
+            reader.Close();
+
+        }
+        catch (Exception ee)
+        {
+            throw ee;
+        }
+        finally
+        {
+
+            con.Close();
+        }
+        return roles;
+    }
+
+
     private string generateJwtToken(User user)
 
     {
@@ -214,8 +259,8 @@ public class UserRepository : IUserRepository
 
         {
 
-            Subject = new ClaimsIdentity(new[] { new Claim("id", user.UserId.ToString()) }),
-
+            Subject = new ClaimsIdentity(AllClaims(user.userId)),
+             
             Expires = DateTime.UtcNow.AddDays(7),
 
             SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key),
@@ -227,4 +272,20 @@ public class UserRepository : IUserRepository
         return tokenHandler.WriteToken(token);
 
     }
+
+      List<Claim> AllClaims(int id){
+
+            List<Claim> claims =new List<Claim>();
+            claims.Add( new Claim("id", user.UserId.ToString()) );
+            List<string> roles=  GetRolesOfUser(id);
+         
+
+         foreach(string role in roles){
+
+            claims.Add(new Claim("role",role));
+         }
+          return claims;
+      }
+
+
 }

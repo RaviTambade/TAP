@@ -12,11 +12,28 @@ namespace JwtTokan.Helpers
 
     public class AuthorizeAttribute : Attribute, IAuthorizationFilter
     {
+
+        public string Roles{get; set;}
         public void OnAuthorization(AuthorizationFilterContext context)
         {
             var user = (User)context.HttpContext.Items["User"];
+            var userRoles =(List<string>)context.HttpContext.Items["userRoles"];
+            
+            bool status = true;
+            
+            if (this.Roles!=null){
+                var requiredRoles=this.Roles.Split(',').ToList();
 
-            if (user == null)
+            foreach (var role in requiredRoles){
+                if(userRoles.Contains(role)){continue;}
+
+                else status= false;
+            }
+            
+            }
+            
+            
+            if (user == null || status==false) 
             {
                 context.Result = new JsonResult(new { message = "Unauthorized" })
                 {
