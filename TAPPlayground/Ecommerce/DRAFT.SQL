@@ -11,19 +11,24 @@ CREATE TABLE customers(cust_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, first_na
 CREATE TABLE employees(employee_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,empfirst_name VARCHAR(100),emplast_name VARCHAR(50),birth_date DATETIME,hire_date DATETIME,contact_number VARCHAR(20),email VARCHAR(50),password VARCHAR(15) NOT NULL,photo varchar (50),reports_to INT NOT NULL,account_number BIGINT NOT NULL UNIQUE ,CONSTRAINT fk_account_no4 FOREIGN KEY(account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE);
 CREATE TABLE addresses(address_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,cust_id INT NOT NULL, CONSTRAINT fk_customer_id_2 FOREIGN KEY(cust_id) REFERENCES customers(cust_id) ON UPDATE CASCADE ON DELETE CASCADE,address_mode ENUM('permanent', 'billing') NOT NULL,house_number VARCHAR(20),landmark VARCHAR(25) NOT NULL,city VARCHAR(25) NOT NULL,state VARCHAR(25) NOT NULL,country VARCHAR(25) NOT NULL,pincode VARCHAR(25) NOT NULL);
 CREATE TABLE categories(category_id INT PRIMARY KEY AUTO_INCREMENT, category_title VARCHAR(20),description VARCHAR (100),image VARCHAR(50)) ;
-CREATE TABLE suppliers(supplier_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,company_name VARCHAR (50),supplier_name VARCHAR (20),contact_number VARCHAR (20),email VARCHAR(20),address VARCHAR(200),city VARCHAR(50),state VARCHAR(20),account_number BIGINT NOT NULL UNIQUE,CONSTRAINT fk_account_no5 FOREIGN KEY(account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE); 
+CREATE TABLE suppliers(supplier_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,company_name VARCHAR (50),supplier_name VARCHAR (20),contact_number VARCHAR (20),email VARCHAR(20),address VARCHAR(200),city VARCHAR(50),state VARCHAR(20),password VARCHAR(20) NOT NULL,account_number BIGINT NOT NULL UNIQUE,CONSTRAINT fk_account_no5 FOREIGN KEY(account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE);
 CREATE TABLE products (product_id INT PRIMARY KEY AUTO_INCREMENT,product_title VARCHAR(20) NOT NULL,description VARCHAR(50),stock_available INT NOT NULL,unit_price DOUBLE NOT NULL,image VARCHAR(40),category_id INT NOT NULL, CONSTRAINT fk_category_id FOREIGN KEY(category_id) REFERENCES categories(category_id) ON UPDATE CASCADE ON DELETE CASCADE,supplier_id INT NOT NULL, CONSTRAINT fk_supplier_id FOREIGN KEY(supplier_id) REFERENCES suppliers(supplier_id) ON UPDATE CASCADE ON DELETE CASCADE);
 CREATE TABLE orders(order_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,order_date DATETIME DEFAULT CURRENT_TIMESTAMP,shipped_date DATETIME DEFAULT CURRENT_TIMESTAMP,cust_id INT NOT NULL,CONSTRAINT fk_customer_id FOREIGN KEY (cust_id) REFERENCES customers(cust_id) ON UPDATE CASCADE ON DELETE CASCADE,total double ,status ENUM('delivered','initiated','inprogress','cancelled','approved') NOT NULL);
 CREATE TABLE orderdetails(orderdetails_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,order_id INT NOT NULL,CONSTRAINT fk_order_id FOREIGN KEY (order_id) REFERENCES orders(order_id) ON UPDATE CASCADE ON DELETE CASCADE,product_id INT NOT NULL,CONSTRAINT fk_product_id FOREIGN KEY (product_id) REFERENCES products(product_id) ON UPDATE CASCADE ON DELETE CASCADE,supplier_id INT NOT NULL,CONSTRAINT fk_supplier2_id FOREIGN KEY (supplier_id) REFERENCES suppliers(supplier_id) ON UPDATE CASCADE ON DELETE CASCADE,quantity INT NOT NULL,discount float default 0);  
 CREATE TABLE payments(payment_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,payment_date DATETIME, payment_mode ENUM('cash on delivery','online payment'),transection_id INT NOT NULL,order_id INT NOT NULL, CONSTRAINT fk_order_id_1 FOREIGN KEY (order_id) REFERENCES orders(order_id) ON UPDATE CASCADE ON DELETE CASCADE);
-CREATE TABLE shippers(shipper_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,company_name VARCHAR(25),contact_number VARCHAR (20),email VARCHAR(50),account_number BIGINT NOT NULL UNIQUE,CONSTRAINT account_number01 FOREIGN KEY(account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE);
+CREATE TABLE shippers(shipper_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,company_name VARCHAR(25),contact_number VARCHAR (20),email VARCHAR(50),password VARCHAR(15) NOT NULL,account_number BIGINT NOT NULL UNIQUE,CONSTRAINT account_number01 FOREIGN KEY(account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE);
 CREATE TABLE transactions(transaction_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,from_account_number BIGINT NOT NULL ,CONSTRAINT fk_account_no FOREIGN KEY(from_account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE,to_account_number BIGINT NOT NULL ,CONSTRAINT fk_acountno2 FOREIGN KEY(to_account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE, transaction_date DATETIME,amount DOUBLE);
+CREATE TABLE roles(role_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, role varchar(50));
+CREATE TABLE user_roles(id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,CONSTRAINT fk_user_id FOREIGN KEY(user_id) REFERENCES users(user_id) ON UPDATE CASCADE ON DELETE CASCADE ,role_id INT NOT NULL,CONSTRAINT fk_role_id FOREIGN KEY(role_id) REFERENCES roles(role_id) ON UPDATE CASCADE ON DELETE CASCADE);
+
+
 
 /*
 create table roles();
 */
 SELECT suppliers.supplier_id,suppliers.company_name,suppliers.supplier_name,orderdetails.orderdetails_id,orderdetails.order_id,orderdetails.product_id FROM suppliers INNER JOIN orderdetails ON suppliers.supplier_id=orderdetails.supplier_id WHERE product_id=1;
 /*trigger for customer in users*/
+
 DELIMITER //
 CREATE TRIGGER insert_user AFTER INSERT ON customers 
 FOR EACH ROW 
@@ -40,6 +45,24 @@ BEGIN
 	INSERT INTO users(email,contact_number,password)VALUES (NEW.email,NEW.contact_number,NEW.password);
 END //
 DELIMITER ;
+
+DELIMITER //
+CREATE TRIGGER insert_supplier AFTER INSERT ON suppliers
+FOR EACH ROW 
+BEGIN 
+	INSERT INTO users(email,contact_number,password)VALUES (NEW.email,NEW.contact_number,NEW.password);
+END //
+DELIMITER ;
+
+DELIMITER //
+CREATE TRIGGER insert_shipper AFTER INSERT ON shippers
+FOR EACH ROW 
+BEGIN 
+	INSERT INTO users(email,contact_number,password)VALUES (NEW.email,NEW.contact_number,NEW.password);
+END //
+DELIMITER ;
+
+
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546601,'MAHB0000286','2023-03-01 12:40:40',22555);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546602,'MAHB0000286','2023-03-01 12:40:40',22555);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546603,'MAHB0000286','2023-03-01 12:40:40',22555);
@@ -94,11 +117,11 @@ INSERT INTO categories(category_title,description,image)values('colddrinks','Sum
 INSERT INTO categories(category_title,description,image)values('snacks','For daily Breakfast','./images/crackjack.jpg');
 INSERT INTO categories(category_title,description,image)values('electronics','Domastic Equipments','./images/crackjack.jpg');
 
-INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,account_number)VALUES('Hindustan pvt.ltd','Pragati','7845632569','pragati@gmail.com','Sinhagad Road Pune','Pune','Maharashtra',39025546614);
-INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,account_number)VALUES('Britinia pvt.ltd','Akash','9945632569','Akash@gmail.com','Hadapsar  Pune','Pune','Maharashtra',39025546615);
-INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,account_number)VALUES('Surya pvt.ltd','Akshay','9645632569','Akshay@gmail.com','Rajgurunagar Pune','Pune','Maharashtra',39025546616);
-INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,account_number)VALUES('Naturals pvt.ltd','Rohit','9855632569','Rohit@gmail.com','Wanavdi Fatima nagar Pune','Pune','Maharashtra',39025546617);
-INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,account_number)VALUES('Goukul pvt.ltd','Abhay','9345632569','Abhay@gmail.com','Avasari Pune','Pune','Maharashtra',39025546618);
+INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,password,account_number)VALUES('Hindustan pvt.ltd','Pragati','7845632569','pragati@gmail.com','Sinhagad Road Pune','Pune','Maharashtra','pragati@123',39025546614);
+INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,password,account_number)VALUES('Britinia pvt.ltd','Akash','9945632569','Akash@gmail.com','Hadapsar  Pune','Pune','Maharashtra','akash@123',39025546615);
+INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,password,account_number)VALUES('Surya pvt.ltd','Akshay','9645632569','Akshay@gmail.com','Rajgurunagar Pune','Pune','Maharashtra','akshay@123',39025546616);
+INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,password,account_number)VALUES('Naturals pvt.ltd','Rohit','9855632569','Rohit@gmail.com','Wanavdi Fatima nagar Pune','Pune','Maharashtra','rohit@123',39025546617);
+INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,password,account_number)VALUES('Goukul pvt.ltd','Abhay','9345632569','Abhay@gmail.com','Avasari Pune','Pune','Maharashtra','abhay@123',39025546618); 
 
 
 INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id) VALUES('ParleG','tasty biscuits',20000,10,'/images/Parleg.jpg',1,1);
@@ -175,12 +198,24 @@ INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('
 INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('2023-08-07','online payment',953125,6);
 INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('2022-09-10','cash on delivery',43210,7);
 
-INSERT INTO shippers(company_name,contact_number,email,account_number)VALUES('Flipcart','69825645987','flipcart@gmail.com',39025546619);
-INSERT INTO shippers(company_name,contact_number,email,account_number)VALUES('Bluedrt','6912545987','bluedart@gmail.com',39025546620);
-INSERT INTO shippers(company_name,contact_number,email,account_number)VALUES('Essar Shipping Ltd','6982345987','essar@gmail.com',39025546621);
-INSERT INTO shippers(company_name,contact_number,email,account_number)VALUES('Greatship India Ltd','6985645697','greatship@gmail.com',39025546622);
+INSERT INTO shippers(company_name,contact_number,email,password,account_number)VALUES('Flipcart','69825645987','flipcart@gmail.com','flipcart@123',39025546619);
+INSERT INTO shippers(company_name,contact_number,email,password,account_number)VALUES('Bluedrt','6912545987','bluedart@gmail.com','bluedart@123',39025546620);
+INSERT INTO shippers(company_name,contact_number,email,password,account_number)VALUES('Essar Shipping Ltd','6982345987','essar@gmail.com','essar@123',39025546621);
+INSERT INTO shippers(company_name,contact_number,email,password,account_number)VALUES('Greatship India Ltd','6985645697','greatship@gmail.com','greatship@123',39025546623);
 
 
+INSERT INTO roles(role) VALUES("Admin");
+INSERT INTO roles(role) VALUES("Employee");
+INSERT INTO roles(role) VALUES("Customer");
+INSERT INTO roles(role) VALUES("Shipper");
+INSERT INTO roles(role) VALUES("Supplier");
+
+INSERT INTO user_roles(user_id,role_id) VALUES(1,2);
+INSERT INTO user_roles(user_id,role_id) VALUES(1,4);
+INSERT INTO user_roles(user_id,role_id) VALUES(2,1);
+INSERT INTO user_roles(user_id,role_id) VALUES(3,5);
+INSERT INTO user_roles(user_id,role_id) VALUES(5,2);
+INSERT INTO user_roles(user_id,role_id) VALUES(4,3);
 /*   
 Daily Completed Tasks
 1)Retrive List of Customers that made purcheses after the date 2023-03-03 ?                                -----completed
@@ -220,8 +255,8 @@ select * from orders;
 select * from orderdetails;
 select * from categories;
 select * from accounts;
-select * from categories;
-
+select * from roles;
+select * from user_roles;
 
 /*1)Retrive List of Customers that made purcheses after the date 2023-03-03 */
 SELECT customers.cust_id,customers.first_name, customers.last_name,orders.order_date FROM orders 
@@ -425,4 +460,55 @@ select customers.first_name,customers.last_name,customers.email,customers.contac
 
 SELECT suppliers.supplier_id,products.product_id,products.product_title,SUM(orderdetails.quantity) FROM (products INNER JOIN orderdetails ON products.product_id=orderdetails.product_id)INNER JOIN suppliers ON products.supplier_id=suppliers.supplier_id   WHERE suppliers.supplier_name="Akshay" GROUP BY products.product_id;
 
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
