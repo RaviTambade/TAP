@@ -109,13 +109,14 @@ public class ShipperRepository : IShipperRepository
         MySqlConnection connection=new MySqlConnection();
         connection.ConnectionString=_conString;
         try{
-            string query=$"INSERT INTO shippers(company_name,contact_number,email,account_number)VALUES(@companyName, @contactNumber,@email, @accountNumber)";
+            string query=$"INSERT INTO shippers(company_name,contact_number,email,password,account_number)VALUES(@companyName, @contactNumber,@email,@password, @accountNumber)";
             Console.WriteLine(query);
           
             MySqlCommand command=new MySqlCommand(query ,connection);
             command.Parameters.AddWithValue("@companyName",shipper.CompanyName);
             command.Parameters.AddWithValue("@contactNumber",shipper.ContactNumber);
             command.Parameters.AddWithValue("@email",shipper.Email);
+            command.Parameters.AddWithValue("@password",shipper.Password);
             command.Parameters.AddWithValue("@accountNumber",shipper.AccountNumber);
             connection.Open();
               int rowsAffected=command.ExecuteNonQuery();
@@ -139,12 +140,13 @@ public class ShipperRepository : IShipperRepository
         connection.ConnectionString = _conString;
         try
         {
-            string query = "UPDATE shippers SET company_name=@companyname, contact_number=@contactNumber,email=@email,account_number=@accountNumber WHERE shipper_id =@shipperId";
+            string query = "UPDATE shippers SET company_name=@companyname, contact_number=@contactNumber,email=@email,password=@password,account_number=@accountNumber WHERE shipper_id =@shipperId";
             MySqlCommand command = new MySqlCommand(query, connection);
             command.Parameters.AddWithValue("@shipperId",shipper.ShipperId);
             command.Parameters.AddWithValue("@companyName",shipper.CompanyName);
             command.Parameters.AddWithValue("@contactNumber",shipper.ContactNumber);
             command.Parameters.AddWithValue("@email",shipper.Email);
+            command.Parameters.AddWithValue("@password",shipper.Password);
             command.Parameters.AddWithValue("@accountNumber",shipper.AccountNumber);
             connection.Open();
             int rowsAffected=command.ExecuteNonQuery();
