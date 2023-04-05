@@ -1,10 +1,10 @@
-using JwtTokan.Entities;
-using JwtTokan.Helpers;
-using JwtTokan.Models;
-using JwtTokan.Repositories;
+using ECommerceApp.Entities;
+using ECommerceApp.Helpers;
+using ECommerceApp.Models;
+using ECommerceApp.Repositories;
 using System.Linq;
 
-namespace JwtTokan.Services{
+namespace ECommerceApp.Services{
 
 
 

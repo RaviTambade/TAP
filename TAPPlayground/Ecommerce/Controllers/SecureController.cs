@@ -92,7 +92,7 @@ public class SecureController : Controller
         return Json(result);
     }
 
-    [HttpPost]
+    [HttpPost("Secure/login")]
     public JsonResult Validate([FromBody] Credential user)
     {
         Console.WriteLine("user email" + user.Email);

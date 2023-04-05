@@ -1,5 +1,5 @@
-using JwtTokan.Entities;
-namespace JwtTokan.Models
+using ECommerceApp.Entities;
+namespace ECommerceApp.Models
 
 {
 

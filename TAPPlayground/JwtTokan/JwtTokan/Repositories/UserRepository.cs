@@ -1,12 +1,12 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
-using JwtTokan.Entities;
-using JwtTokan.Helpers;
-using JwtTokan.Models;
+using ECommerceApp.Entities;
+using ECommerceApp.Helpers;
+using ECommerceApp.Models;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using MySql.Data.MySqlClient;
-namespace JwtTokan.Repositories;
+namespace ECommerceApp.Repositories;
 public class UserRepository : IUserRepository
 {
 
@@ -218,7 +218,7 @@ public List<string> GetRolesOfUser(int userId)
         try
         {
 
-            string query ="SELECT role from roles where role_id in  (select role_id from userroles where user_id=@userId)";
+            string query ="SELECT role from roles where role_id in  (select role_id from user_roles where user_id=@userId)";
             Console.WriteLine(query);
             con.Open();
             MySqlCommand cmd = new MySqlCommand(query, con);

@@ -1,4 +1,4 @@
-namespace JwtTokan.Entities{
+namespace ECommerceApp.Entities{
 
    public class User{
        

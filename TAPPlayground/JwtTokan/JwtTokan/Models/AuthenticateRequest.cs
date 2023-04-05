@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace JwtTokan.Models
+namespace ECommerceApp.Models
 {
 
     public class AuthenticateRequest{

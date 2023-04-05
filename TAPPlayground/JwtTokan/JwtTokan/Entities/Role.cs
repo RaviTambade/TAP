@@ -1,9 +1,9 @@
-namespace JwtTokan.Entities;
+namespace ECommerceApp.Entities;
 public  static class Role{
 
-    public const string Admin="admin";
-    public const string Supplier="supplier";
-    public const string Shipper="shipper";
-    public const string Customer="customer";
-    public const string Employee="employee";
+    public const string Admin="Admin";
+    public const string Supplier="Supplier";
+    public const string Shipper="Shipper";
+    public const string Customer="Customer";
+    public const string Employee="Employee";
 }

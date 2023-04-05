@@ -1,9 +1,9 @@
 
-using JwtTokan.Entities;
+using ECommerceApp.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace JwtTokan.Helpers
+namespace ECommerceApp.Helpers
 {
 
 

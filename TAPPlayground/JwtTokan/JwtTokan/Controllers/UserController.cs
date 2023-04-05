@@ -1,10 +1,10 @@
-using JwtTokan.Helpers;
-using JwtTokan.Models;
-using JwtTokan.Services;
-using JwtTokan.Entities;
+using ECommerceApp.Helpers;
+using ECommerceApp.Models;
+using ECommerceApp.Services;
+using ECommerceApp.Entities;
 using Microsoft.AspNetCore.Mvc;
 
-namespace JwtTokan.Controllers{
+namespace ECommerceApp.Controllers{
 
 
     public class UsersController:ControllerBase

@@ -1,11 +1,11 @@
 
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
-using JwtTokan.Services;
+using ECommerceApp.Services;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
-namespace JwtTokan.Helpers
+namespace ECommerceApp.Helpers
 {
 
     public class JwtMiddleware
