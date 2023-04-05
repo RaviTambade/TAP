@@ -31,7 +31,6 @@ namespace ECommerceApp.Helpers
             
             }
             
-            
             if (user == null || status==false) 
             {
                 context.Result = new JsonResult(new { message = "Unauthorized" })

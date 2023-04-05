@@ -1,5 +1,5 @@
 
--- CREATE DATABASE Authentication;
+
 USE Authentication;
 
 CREATE TABLE roles (role_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, role varchar(25));
