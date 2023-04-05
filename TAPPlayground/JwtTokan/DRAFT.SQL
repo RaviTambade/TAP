@@ -1,14 +1,9 @@
 
-<<<<<<< HEAD
 
-USE Authentication;
-=======
- --CREATE DATABASE Ecommerce;
-
+-- CREATE DATABASE Ecommerce;
 USE Ecommerce;
 
 
->>>>>>> fca85422def9e57b886919f82d8eabbc8088b701
 
 CREATE TABLE users( user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, email VARCHAR(25) UNIQUE NOT NULL, contact_number VARCHAR(20) NOT NULL ,password VARCHAR(15) NOT NULL);
 CREATE TABLE accounts(account_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,account_number BIGINT UNIQUE, ifsc_code VARCHAR(50) ,register_date DATETIME ,balance DOUBLE);
@@ -26,6 +21,11 @@ CREATE TABLE transactions(transaction_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY
 CREATE TABLE roles(role_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, role varchar(50));
 CREATE TABLE user_roles(id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,CONSTRAINT fk_user_id FOREIGN KEY(user_id) REFERENCES users(user_id) ON UPDATE CASCADE ON DELETE CASCADE ,role_id INT NOT NULL,CONSTRAINT fk_role_id FOREIGN KEY(role_id) REFERENCES roles(role_id) ON UPDATE CASCADE ON DELETE CASCADE);
 
+INSERT INTO roles(role) VALUES("Admin");
+INSERT INTO roles(role) VALUES("Employee");
+INSERT INTO roles(role) VALUES("Customer");
+INSERT INTO roles(role) VALUES("Shipper");
+INSERT INTO roles(role) VALUES("Supplier");
 
 
 /*
@@ -35,10 +35,13 @@ SELECT suppliers.supplier_id,suppliers.company_name,suppliers.supplier_name,orde
 /*trigger for customer in users*/
 
 DELIMITER //
-CREATE TRIGGER insert_user AFTER INSERT ON customers 
+CREATE TRIGGER insert_customer AFTER INSERT ON customers 
 FOR EACH ROW 
 BEGIN 
+    DECLARE userId INT;
 	INSERT INTO users(email,contact_number,password)VALUES (NEW.email,NEW.contact_number,NEW.password);
+    SELECT user_id INTO userId FROM users where email=NEW.email;
+    INSERT INTO user_roles(user_id,role_id) VALUES(userId,3);
 END //
 DELIMITER ;
 
@@ -47,15 +50,22 @@ DELIMITER //
 CREATE TRIGGER insert_employee AFTER INSERT ON employees 
 FOR EACH ROW 
 BEGIN 
+    DECLARE userId INT;
 	INSERT INTO users(email,contact_number,password)VALUES (NEW.email,NEW.contact_number,NEW.password);
+    SELECT user_id INTO userId FROM users where email=NEW.email;
+    INSERT INTO user_roles(user_id,role_id) VALUES(userId,2);
 END //
 DELIMITER ;
+
 
 DELIMITER //
 CREATE TRIGGER insert_supplier AFTER INSERT ON suppliers
 FOR EACH ROW 
 BEGIN 
+    DECLARE userId INT;
 	INSERT INTO users(email,contact_number,password)VALUES (NEW.email,NEW.contact_number,NEW.password);
+    SELECT user_id INTO userId FROM users where email=NEW.email;
+    INSERT INTO user_roles(user_id,role_id) VALUES(userId,5);
 END //
 DELIMITER ;
 
@@ -63,7 +73,10 @@ DELIMITER //
 CREATE TRIGGER insert_shipper AFTER INSERT ON shippers
 FOR EACH ROW 
 BEGIN 
+    DECLARE userId INT;
 	INSERT INTO users(email,contact_number,password)VALUES (NEW.email,NEW.contact_number,NEW.password);
+    SELECT user_id INTO userId FROM users where email=NEW.email;
+    INSERT INTO user_roles(user_id,role_id) VALUES(userId,4);
 END //
 DELIMITER ;
 
@@ -107,7 +120,7 @@ INSERT INTO customers(first_name,last_name,email,contact_number,password,account
 INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Shivam','Pethe','shivam.pethe@gmai.com','9881734798','sahil@123',39025546607);
 INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Akash','Ajab','1999-09-15','2022-09-07','8756320150','Akjab@gmail.com','AK123654' ,'./images/crackjack.jpg', 2,39025546608);
 INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Shubham','Teli','1999-02-10','2020-07-05','9876320158','Steli@gmail.com','ST5269' ,'./images/ST.jpg', 1,39025546609);
-INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Sahil','Mankar','1997-05-19','2021-07-07','8756789158','Sahil@gmail.com','SM569654' ,'./images/SM.jpg', 1,39025546610);
+INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Sahil','Mankar','1997-05-19','2021-07-07','8756789158','Sahil22@gmail.com','SM569654' ,'./images/SM.jpg', 1,39025546610);
 INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Shubham','Navale','1995-07-25','2020-05-04','9996320158','SNavale@gmail.com','SN56987' ,'./images/SN.jpg', 3,39025546611);
 INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Rohit','Gore','1996-05-12','2022-09-07','7776320158','RGore@gmail.com','RG123654' ,'./images/RG.jpg', 4,39025546612);
 INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Pragati','Bangar','1998-05-10','2022-11-09','9666320158','PBangar@gmail.com','PB123654' ,'./images/PB.jpg', 5,39025546613);
@@ -123,7 +136,7 @@ INSERT INTO categories(category_title,description,image)values('snacks','For dai
 INSERT INTO categories(category_title,description,image)values('electronics','Domastic Equipments','./images/crackjack.jpg');
 
 INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,password,account_number)VALUES('Hindustan pvt.ltd','Pragati','7845632569','pragati@gmail.com','Sinhagad Road Pune','Pune','Maharashtra','pragati@123',39025546614);
-INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,password,account_number)VALUES('Britinia pvt.ltd','Akash','9945632569','Akash@gmail.com','Hadapsar  Pune','Pune','Maharashtra','akash@123',39025546615);
+INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,password,account_number)VALUES('Britinia pvt.ltd','Akash','9945632569','Akash@gmail.com','Hadapsar  Pune','Pune','Maharashtra','akash@123',39025546615);
 INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,password,account_number)VALUES('Surya pvt.ltd','Akshay','9645632569','Akshay@gmail.com','Rajgurunagar Pune','Pune','Maharashtra','akshay@123',39025546616);
 INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,password,account_number)VALUES('Naturals pvt.ltd','Rohit','9855632569','Rohit@gmail.com','Wanavdi Fatima nagar Pune','Pune','Maharashtra','rohit@123',39025546617);
 INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,password,account_number)VALUES('Goukul pvt.ltd','Abhay','9345632569','Abhay@gmail.com','Avasari Pune','Pune','Maharashtra','abhay@123',39025546618); 
@@ -209,19 +222,16 @@ INSERT INTO shippers(company_name,contact_number,email,password,account_number)V
 INSERT INTO shippers(company_name,contact_number,email,password,account_number)VALUES('Greatship India Ltd','6985645697','greatship@gmail.com','greatship@123',39025546623);
 
 
-INSERT INTO roles(role) VALUES("Admin");
-INSERT INTO roles(role) VALUES("Employee");
-INSERT INTO roles(role) VALUES("Customer");
-INSERT INTO roles(role) VALUES("Shipper");
-INSERT INTO roles(role) VALUES("Supplier");
+/* 
 
-INSERT INTO user_roles(user_id,role_id) VALUES(1,2);
+
+ INSERT INTO user_roles(user_id,role_id) VALUES(1,2);
 INSERT INTO user_roles(user_id,role_id) VALUES(1,4);
 INSERT INTO user_roles(user_id,role_id) VALUES(2,1);
 INSERT INTO user_roles(user_id,role_id) VALUES(3,5);
 INSERT INTO user_roles(user_id,role_id) VALUES(5,2);
 INSERT INTO user_roles(user_id,role_id) VALUES(4,3);
-/*   
+;
 Daily Completed Tasks
 1)Retrive List of Customers that made purcheses after the date 2023-03-03 ?                                -----completed
 2)Available products in stock ?                                                                           ------completed
@@ -260,10 +270,6 @@ select * from orders;
 select * from orderdetails;
 select * from categories;
 select * from accounts;
-
-select * from suppliers;
-
-select * from shippers;
 select * from roles;
 select * from user_roles;
 
@@ -520,51 +526,4 @@ SELECT suppliers.supplier_id,products.product_id,products.product_title,SUM(orde
 
 
 
-
-
-
-
--- USE Authentication;
-
--- CREATE TABLE roles (role_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, role varchar(25));
--- CREATE TABLE users( user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, email VARCHAR(25) UNIQUE NOT NULL, contact_number VARCHAR(20) NOT NULL ,password VARCHAR(15) NOT NULL);
--- CREATE TABLE IF NOT EXISTS userroles(id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,user_id INT,role_id INT,CONSTRAINT fk_Users FOREIGN KEY(user_id) REFERENCES users(user_id) ON UPDATE CASCADE ON DELETE CASCADE,CONSTRAINT fk_Roles FOREIGN KEY(role_id) REFERENCES roles(role_id) ON UPDATE CASCADE ON DELETE CASCADE);
-
--- INSERT INTO roles (role) VALUES ("admin");
--- INSERT INTO roles (role) VALUES ("shipper");
--- INSERT INTO roles (role) VALUES ("supplier");
--- INSERT INTO roles (role) VALUES ("customer");
--- INSERT INTO roles (role) VALUES ("employee");
-
--- INSERT INTO users (email,contact_number,password) VALUES ("akash@gmail.com",9881571268,"akash@123");
--- INSERT INTO users (email,contact_number,password) VALUES ("veadnt@gmail.com",9881571267,"vedant@123");
--- INSERT INTO users (email,contact_number,password) VALUES ("akshay@gmail.com",9881571256,"akshay123");
--- INSERT INTO users (email,contact_number,password) VALUES ("pragati@gmail.com",9881571212,"pragati@123");
--- INSERT INTO users (email,contact_number,password) VALUES ("abhay@ajabgmail.com",9881571225,"abhay@123");
--- INSERT INTO users (email,contact_number,password) VALUES ("rohit@ajabgmail.com",9881571223,"rohit@123");
  
--- INSERT INTO userroles( user_id,role_id) VALUES (1,2);
--- INSERT INTO userroles( user_id,role_id) VALUES (1,3);
--- INSERT INTO userroles( user_id,role_id) VALUES (3,2);
--- INSERT INTO userroles( user_id,role_id) VALUES (5,2);
--- INSERT INTO userroles( user_id,role_id) VALUES (4,1);
--- INSERT INTO userroles( user_id,role_id) VALUES (2,2);
--- INSERT INTO userroles( user_id,role_id) VALUES (1,4);
--- INSERT INTO userroles( user_id,role_id) VALUES (3,5);
--- SELECT * from users;
--- SELECT * FROM userroles;
--- SELECT * FROM roles;
-
-
-
--- SELECT role from roles where role_id in  (select role_id from userroles where user_id=4);
-
--- SELECT * FROM users where email='akshay@gmail.com' AND password ='akshay123';
-
-
-
-
-
-
-
-
