@@ -1,8 +1,5 @@
-using ECommerceApp.Entities;
-using ECommerceApp.Helpers;
 using ECommerceApp.Models;
 using ECommerceApp.Repositories;
-using System.Linq;
 
 namespace ECommerceApp.Services{
 

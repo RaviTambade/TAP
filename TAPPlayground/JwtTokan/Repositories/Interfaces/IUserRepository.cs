@@ -1,4 +1,3 @@
-using ECommerceApp.Entities;
 using ECommerceApp.Models;
 
 namespace ECommerceApp.Repositories

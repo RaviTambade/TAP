@@ -1,12 +1,8 @@
-using System.Collections.Generic;
-using ECommerceApp.Entities;
 using ECommerceApp.Helpers;
 using ECommerceApp.Models;
-using ECommerceApp.Services;
 using ECommerceApp.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
-using MySql.Data.MySqlClient;
 
 namespace ECommerceApp.Controllers
 {
