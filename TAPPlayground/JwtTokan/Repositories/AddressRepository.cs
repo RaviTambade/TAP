@@ -153,10 +153,11 @@ public class AddressRepository : IAddressRepository
           con.ConnectionString=_conString;
         try{
             
-            string query = $"Update addresses SET cust_id=@customerId, address_mode =@addressMode,house_number=@housseNumber,landmark=@landmark,city=@city,state=@state,country=@country,pincode=@pincode WHERE address_id=@addressId ";
+            string query = $"Update addresses SET cust_id=@customerId, address_mode =@addressMode,house_number=@houseNumber,landmark=@landmark,city=@city,state=@state,country=@country,pincode=@pincode WHERE address_id=@addressId ";
             Console.WriteLine(query);
             con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
+            command.Parameters.AddWithValue("@addressId",address.AddressId);
             command.Parameters.AddWithValue("@customerId",address.CustomerId);
             command.Parameters.AddWithValue("@addressMode",address.AddressMode);
             command.Parameters.AddWithValue("@houseNumber",address.HouseNumber);
