@@ -18,13 +18,13 @@ namespace ECommerceApp.Controllers
             _cartsrv = cartService;
         }
 
-        // [HttpGet]
-        // [Route("/api/cart/")]
-        // public IEnumerable<Item> GetAllCartItems()
-        // {
-        //     List<Product> items = _productsrv.GetAll();
-        //     return products;
-        // }
+        [HttpGet]
+        [Route("/api/cart/GetAllCartItems")]
+        public IEnumerable<Cart> GetAllCartItems()
+        {
+            List<Cart> carts = _cartsrv.GetAll();
+            return carts;
+        }
 
         [HttpGet]
         [Route("/api/cart/GetCartDetails/{id}")]

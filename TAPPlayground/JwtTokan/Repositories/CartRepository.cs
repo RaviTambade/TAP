@@ -14,46 +14,39 @@ public class CartRepository : ICartRepository
         _conString = this._configuration.GetConnectionString("DefaultConnection");
     }
 
-    // public List<Cart> GetAll()
-    // {
-    //    List<Cart> carts = new List<Cart>();
-    //     MySqlConnection con = new MySqlConnection();
-    //     con.ConnectionString = _conString;
-    //     try
-    //     {
-    //         string query = "select * from carts";
-    //         MySqlCommand command = new MySqlCommand(query, con);
-    //         con.Open();
-    //         MySqlDataReader reader = command.ExecuteReader();
-    //         while (reader.Read())
-    //         {
-    //             int id = int.Parse(reader["category_id"].ToString());
-    //             string? categoryTitle = reader["category_title"].ToString();
-    //             string? description = reader["description"].ToString();
-    //             string? imageUrl = reader["image"].ToString();
-              
-    //           Category category=new Category()
-    //             {
-    //               CategoryId=id,
-    //               CategoryTitle=categoryTitle,
-    //               Description=description,
-    //               ImageUrl=imageUrl
-    //             };
-    //             categories.Add(category);
-    //         }
-    //         reader.Close();
-    //     }
-    //     catch (Exception e)
-    //     {
-    //         throw e;
-    //     }
-    //     finally
-    //     {
-    //         con.Close();
-    //     }
-    //     return categories;
+    public List<Cart> GetAll()
+    {
+       List<Cart> carts = new List<Cart>();
+        MySqlConnection con = new MySqlConnection();
+        con.ConnectionString = _conString;
+        try
+        {
+            string query = "select * from cart_items";
+            MySqlCommand command = new MySqlCommand(query, con);
+            con.Open();
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
 
-    // }
+                int cartId = int.Parse(reader["cart_id"].ToString());
+
+                Cart cart = Get(cartId);
+
+                carts.Add(cart);
+            }
+            reader.Close();
+          }
+        catch (Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            con.Close();
+        }
+        return carts;
+
+    }
 
       public Cart Get(int id)
     {
@@ -83,7 +76,6 @@ public class CartRepository : ICartRepository
                 {
                     CartId = id,
                     Items = items
-
                 };
             
 

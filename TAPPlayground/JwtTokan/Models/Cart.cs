@@ -4,7 +4,7 @@ namespace ECommerceApp.Models;
  
  public class Cart
  {
-     public List<Item> Items { get; set; }
+    public List<Item> Items { get; set; }
 
     public int CartId {get; set;}
      public void AddToCart(Item item)
