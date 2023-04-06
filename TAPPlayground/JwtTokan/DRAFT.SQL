@@ -1,6 +1,6 @@
+-- Active: 1678262628722@@127.0.0.1@3306@ecommerce
 --  CREATE DATABASE Ecommerce;
-
--- USE Ecommerce;
+USE Ecommerce;
 
 
 
@@ -13,7 +13,13 @@ CREATE TABLE employees(employee_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,empfi
 CREATE TABLE addresses(address_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,cust_id INT NOT NULL, CONSTRAINT fk_customer_id_2 FOREIGN KEY(cust_id) REFERENCES customers(cust_id) ON UPDATE CASCADE ON DELETE CASCADE,address_mode ENUM('permanent', 'billing') NOT NULL,house_number VARCHAR(20),landmark VARCHAR(25) NOT NULL,city VARCHAR(25) NOT NULL,state VARCHAR(25) NOT NULL,country VARCHAR(25) NOT NULL,pincode VARCHAR(25) NOT NULL);
 CREATE TABLE categories(category_id INT PRIMARY KEY AUTO_INCREMENT, category_title VARCHAR(20),description VARCHAR (100),image VARCHAR(50)) ;
 CREATE TABLE suppliers(supplier_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,company_name VARCHAR (50),supplier_name VARCHAR (20),contact_number VARCHAR (20),email VARCHAR(20),address VARCHAR(200),city VARCHAR(50),state VARCHAR(20),password VARCHAR(20) NOT NULL,account_number BIGINT NOT NULL UNIQUE,CONSTRAINT fk_account_no5 FOREIGN KEY(account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE);
-CREATE TABLE products (product_id INT PRIMARY KEY AUTO_INCREMENT,product_title VARCHAR(20) NOT NULL,description VARCHAR(50),stock_available INT NOT NULL,unit_price DOUBLE NOT NULL,image VARCHAR(40),category_id INT NOT NULL, CONSTRAINT fk_category_id FOREIGN KEY(category_id) REFERENCES categories(category_id) ON UPDATE CASCADE ON DELETE CASCADE,supplier_id INT NOT NULL, CONSTRAINT fk_supplier_id FOREIGN KEY(supplier_id) REFERENCES suppliers(supplier_id) ON UPDATE CASCADE ON DELETE CASCADE);
+
+-- Create Tables  to store shopping cart related information
+
+CREATE TABLE carts( cart_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, user_id INT NOT NULL,CONSTRAINT fk_user_id_3 FOREIGN KEY (user_id) REFERENCES users(user_id) ON UPDATE CASCADE ON DELETE CASCADE);
+CREATE TABLE cart_items( item_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, cart_id INT NOT NULL,CONSTRAINT fk_cart_id_3 FOREIGN KEY (cart_id) REFERENCES carts(cart_id) ON UPDATE CASCADE ON DELETE CASCADE, product_id INT NOT NULL,CONSTRAINT fk_product_id_3 FOREIGN KEY (product_id) REFERENCES products(product_id) ON UPDATE CASCADE ON DELETE CASCADE, quantity INT);
+
+
 CREATE TABLE orders(order_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,order_date DATETIME DEFAULT CURRENT_TIMESTAMP,shipped_date DATETIME DEFAULT CURRENT_TIMESTAMP,cust_id INT NOT NULL,CONSTRAINT fk_customer_id FOREIGN KEY (cust_id) REFERENCES customers(cust_id) ON UPDATE CASCADE ON DELETE CASCADE,total double ,status ENUM('delivered','initiated','inprogress','cancelled','approved') NOT NULL);
 CREATE TABLE orderdetails(orderdetails_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,order_id INT NOT NULL,CONSTRAINT fk_order_id FOREIGN KEY (order_id) REFERENCES orders(order_id) ON UPDATE CASCADE ON DELETE CASCADE,product_id INT NOT NULL,CONSTRAINT fk_product_id FOREIGN KEY (product_id) REFERENCES products(product_id) ON UPDATE CASCADE ON DELETE CASCADE,supplier_id INT NOT NULL,CONSTRAINT fk_supplier2_id FOREIGN KEY (supplier_id) REFERENCES suppliers(supplier_id) ON UPDATE CASCADE ON DELETE CASCADE,quantity INT NOT NULL,discount float default 0);  
 CREATE TABLE payments(payment_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,payment_date DATETIME, payment_mode ENUM('cash on delivery','online payment'),transection_id INT NOT NULL,order_id INT NOT NULL, CONSTRAINT fk_order_id_1 FOREIGN KEY (order_id) REFERENCES orders(order_id) ON UPDATE CASCADE ON DELETE CASCADE);
@@ -163,6 +169,25 @@ INSERT INTO products(product_title,description,stock_available,unit_price,image,
 INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('Tv','Entertenment Gadget',50,12000,'./images/samsung.jpg',4,2);
 INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('Mobiles','Communication Purpose',100,10,'./images/Oppo.jpg',4,2);
 INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('Firdge','Kitchen Use',200,150,'./images/Samsung.jpg',4,4);
+
+
+INSERT INTO carts(user_id) VALUES (1);
+INSERT INTO carts(user_id) VALUES (2);
+INSERT INTO carts(user_id) VALUES (3);
+INSERT INTO carts(user_id) VALUES (4);
+INSERT INTO carts(user_id) VALUES (5);
+
+INSERT INTO cart_items(cart_id,product_id,quantity) VALUES (1,2,5);
+
+INSERT INTO cart_items(cart_id,product_id,quantity) VALUES (1,5,50);
+INSERT INTO cart_items(cart_id,product_id,quantity) VALUES (1,3,100);
+
+INSERT INTO cart_items(cart_id,product_id,quantity) VALUES (2,7,15);
+INSERT INTO cart_items(cart_id,product_id,quantity) VALUES (2,8,25);
+INSERT INTO cart_items(cart_id,product_id,quantity) VALUES (2,3,5);
+INSERT INTO cart_items(cart_id,product_id,quantity) VALUES (3,2,5);
+INSERT INTO cart_items(cart_id,product_id,quantity) VALUES (4,2,5);
+
 
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-17  04:20:10', 1,85.00,'cancelled');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:25', 2, 82.00,'delivered');
