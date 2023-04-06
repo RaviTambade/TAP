@@ -55,7 +55,8 @@ builder.Services.AddTransient<ICustomerORMRepository,CustomerORMRepository>();
 builder.Services.AddTransient<ICustomerORMService,CustomerORMService>();
 builder.Services.AddTransient<ICategoryRepository,CategoryRepository>();
 builder.Services.AddTransient<ICategoryService,CategoryService>();
-
+builder.Services.AddTransient<ICartRepository,CartRepository>();
+builder.Services.AddTransient<ICartService,CartService>();
 // builder.Services.AddSession(options =>{
 //     options.IdleTimeout=TimeSpan.FromMinutes(10);
 //     options.Cookie.HttpOnly=true;
