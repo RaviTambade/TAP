@@ -1,21 +1,19 @@
--- CREATE DATABASE Ecommerce;
+--  CREATE DATABASE Ecommerce;
 
-USE Ecommerce;
+-- USE Ecommerce;
+
 
 
 CREATE TABLE users( user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, email VARCHAR(25) UNIQUE NOT NULL, contact_number VARCHAR(20) NOT NULL ,password VARCHAR(15) NOT NULL);
 CREATE TABLE roles(role_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, role varchar(50));
 CREATE TABLE user_roles(id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,CONSTRAINT fk_user_id FOREIGN KEY(user_id) REFERENCES users(user_id) ON UPDATE CASCADE ON DELETE CASCADE ,role_id INT NOT NULL,CONSTRAINT fk_role_id FOREIGN KEY(role_id) REFERENCES roles(role_id) ON UPDATE CASCADE ON DELETE CASCADE);
-
 CREATE TABLE accounts(account_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,account_number BIGINT UNIQUE, ifsc_code VARCHAR(50) ,register_date DATETIME ,balance DOUBLE);
 CREATE TABLE customers(cust_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, first_name VARCHAR(25), last_name VARCHAR(25),email VARCHAR(25) UNIQUE NOT NULL,contact_number VARCHAR(20) UNIQUE NOT NULL, password VARCHAR(15) NOT NULL,account_number BIGINT NOT NULL UNIQUE ,CONSTRAINT fk_account_no3 FOREIGN KEY(account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE);
 CREATE TABLE employees(employee_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,empfirst_name VARCHAR(100),emplast_name VARCHAR(50),birth_date DATETIME,hire_date DATETIME,contact_number VARCHAR(20),email VARCHAR(50),password VARCHAR(15) NOT NULL,photo varchar (50),reports_to INT NOT NULL,account_number BIGINT NOT NULL UNIQUE ,CONSTRAINT fk_account_no4 FOREIGN KEY(account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE);
 CREATE TABLE addresses(address_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,cust_id INT NOT NULL, CONSTRAINT fk_customer_id_2 FOREIGN KEY(cust_id) REFERENCES customers(cust_id) ON UPDATE CASCADE ON DELETE CASCADE,address_mode ENUM('permanent', 'billing') NOT NULL,house_number VARCHAR(20),landmark VARCHAR(25) NOT NULL,city VARCHAR(25) NOT NULL,state VARCHAR(25) NOT NULL,country VARCHAR(25) NOT NULL,pincode VARCHAR(25) NOT NULL);
 CREATE TABLE categories(category_id INT PRIMARY KEY AUTO_INCREMENT, category_title VARCHAR(20),description VARCHAR (100),image VARCHAR(50)) ;
-CREATE TABLE products (product_id INT PRIMARY KEY AUTO_INCREMENT,product_title VARCHAR(20) NOT NULL,description VARCHAR(50),stock_available INT NOT NULL,unit_price DOUBLE NOT NULL,image VARCHAR(40),category_id INT NOT NULL, CONSTRAINT fk_category_id FOREIGN KEY(category_id) REFERENCES categories(category_id) ON UPDATE CASCADE ON DELETE CASCADE,supplier_id INT NOT NULL, CONSTRAINT fk_supplier_id FOREIGN KEY(supplier_id) REFERENCES suppliers(supplier_id) ON UPDATE CASCADE ON DELETE CASCADE);
 CREATE TABLE suppliers(supplier_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,company_name VARCHAR (50),supplier_name VARCHAR (20),contact_number VARCHAR (20),email VARCHAR(20),address VARCHAR(200),city VARCHAR(50),state VARCHAR(20),password VARCHAR(20) NOT NULL,account_number BIGINT NOT NULL UNIQUE,CONSTRAINT fk_account_no5 FOREIGN KEY(account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE);
-
-
+CREATE TABLE products (product_id INT PRIMARY KEY AUTO_INCREMENT,product_title VARCHAR(20) NOT NULL,description VARCHAR(50),stock_available INT NOT NULL,unit_price DOUBLE NOT NULL,image VARCHAR(40),category_id INT NOT NULL, CONSTRAINT fk_category_id FOREIGN KEY(category_id) REFERENCES categories(category_id) ON UPDATE CASCADE ON DELETE CASCADE,supplier_id INT NOT NULL, CONSTRAINT fk_supplier_id FOREIGN KEY(supplier_id) REFERENCES suppliers(supplier_id) ON UPDATE CASCADE ON DELETE CASCADE);
 CREATE TABLE orders(order_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,order_date DATETIME DEFAULT CURRENT_TIMESTAMP,shipped_date DATETIME DEFAULT CURRENT_TIMESTAMP,cust_id INT NOT NULL,CONSTRAINT fk_customer_id FOREIGN KEY (cust_id) REFERENCES customers(cust_id) ON UPDATE CASCADE ON DELETE CASCADE,total double ,status ENUM('delivered','initiated','inprogress','cancelled','approved') NOT NULL);
 CREATE TABLE orderdetails(orderdetails_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,order_id INT NOT NULL,CONSTRAINT fk_order_id FOREIGN KEY (order_id) REFERENCES orders(order_id) ON UPDATE CASCADE ON DELETE CASCADE,product_id INT NOT NULL,CONSTRAINT fk_product_id FOREIGN KEY (product_id) REFERENCES products(product_id) ON UPDATE CASCADE ON DELETE CASCADE,supplier_id INT NOT NULL,CONSTRAINT fk_supplier2_id FOREIGN KEY (supplier_id) REFERENCES suppliers(supplier_id) ON UPDATE CASCADE ON DELETE CASCADE,quantity INT NOT NULL,discount float default 0);  
 CREATE TABLE payments(payment_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,payment_date DATETIME, payment_mode ENUM('cash on delivery','online payment'),transection_id INT NOT NULL,order_id INT NOT NULL, CONSTRAINT fk_order_id_1 FOREIGN KEY (order_id) REFERENCES orders(order_id) ON UPDATE CASCADE ON DELETE CASCADE);
@@ -72,6 +70,10 @@ END //
 DELIMITER ;
 
 
+
+INSERT INTO users(email,contact_number,password) VALUES ('pragatibangar12@gmail.com','7498035690','pragati@123');
+
+
 /*Sample Data Entry for database*/
 
 INSERT INTO roles(role) VALUES("Admin");
@@ -80,6 +82,7 @@ INSERT INTO roles(role) VALUES("Customer");
 INSERT INTO roles(role) VALUES("Shipper");
 INSERT INTO roles(role) VALUES("Supplier");
 
+INSERT INTO user_roles(user_id,role_id) VALUES (1,1);
 
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546601,'MAHB0000286','2023-03-01 12:40:40',22555);
 INSERT INTO accounts(account_number,ifsc_code,register_date,balance) VALUES( 39025546602,'MAHB0000286','2023-03-01 12:40:40',22555);
@@ -220,96 +223,6 @@ INSERT INTO shippers(company_name,contact_number,email,password,account_number)V
 INSERT INTO shippers(company_name,contact_number,email,password,account_number)VALUES('Greatship India Ltd','6985645697','greatship@gmail.com','greatship@123',39025546623);
 
 
-
-DESC employees;
-select * from users;
-select * from roles;
-select * from user_roles;
-
-select * from employees;
-select * from customers;
-select * from orders;
-select * from orderdetails;
-select * from categories;
-select * from accounts;
-
-
-SELECT suppliers.supplier_id,suppliers.company_name,suppliers.supplier_name,orderdetails.orderdetails_id,orderdetails.order_id,orderdetails.product_id FROM suppliers INNER JOIN orderdetails ON suppliers.supplier_id=orderdetails.supplier_id WHERE product_id=1;
-
-
-/*1)Retrive List of Customers that made purcheses after the date 2023-03-03 */
-SELECT customers.cust_id,customers.first_name, customers.last_name,orders.order_date FROM orders 
-INNER JOIN customers ON orders.cust_id=customers.cust_id 
-WHERE order_date > '2023-03-03';
-
-/*2)Available products in stock*/
-select product_id,product_title, stock_available from products;
-
-/*3)view Sells  by category*/
-SELECT   categories.category_title, SUM(orderdetails.quantity) 
-FROM orderdetails, products,categories
-WHERE orderdetails.product_id = products.product_id and products.category_id=categories.category_id 
-GROUP BY categories.category_title  ;
-
-/*4) Creating  View products price above than average price*/
-create or replace view vw_products_above_avgprice
-as select product_title , unit_price from products
-where  unit_price  > (select avg(unit_price) from products)
-order by unit_price; 
-
-select * from vw_products_above_avgprice;
-
-/*5)average price from all products*/
-select avg(unit_price) from products;
-
-
-  /* Products SQL's */
-select * from products where category_id =1;
-
-/*6)getting all products by category id, category_title,products_title*/
-SELECT categories.category_id,categories.category_title,products.product_title 
-FROM products INNER JOIN categories ON products.category_id=categories.category_id;
-
-/*7)getting  products from which category is given */
-SELECT product_title  
-FROM products 
-where category_id in (select category_id from categories where category_title='colddrinks');
-
-/*8)getting all products by category id, category_title,products_title from which category is given*/
-SELECT categories.category_id,categories.category_title, products.product_title FROM categories 
-INNER JOIN products ON products.category_id=categories.category_id 
-WHERE categories.category_title='colddrinks';  /* biscuits,snacks,colddrinks,electronics*/
-
-
-   
-/*select month(order_date),sum(unit_price*quantity) from orders,products,orderdetails where products.product_id=orderdetails.product_id and order_date > now() - INTERVAL 12 month group by month(order_date);*/
-
-/*9)This query will give products information present in  a order by giving order_id  */
-SELECT orderdetails.product_id, products.product_title,products.description,products.unit_price, products.image, orderdetails.order_id,orderdetails.quantity,(products.unit_price*orderdetails.quantity) as  totalprice
-FROM products
-INNER JOIN orderdetails ON products.product_id =  orderdetails.product_id 
-WHERE orderdetails.order_id=1;
-    
-/*10)This query  returns totalamount of a order   */
-SELECT SUM(products.unit_price*orderdetails.quantity) as totalamount  from products
-INNER JOIN orderdetails ON products.product_id =  orderdetails.product_id 
-WHERE orderdetails.order_id=1 ;  
-
-/* 11) This query give totalamount of sold products from orderdetails table of each product  */
-/*  Used in dashboard */
-SELECT orderdetails.product_id,products.product_title, SUM(orderdetails.quantity) * products.unit_price 
-FROM orderdetails, products
-WHERE orderdetails.product_id = products.product_id
-GROUP BY product_id;
-
-/*12) This query give order history of customer */
-SELECT products.product_id,products.product_title , products.unit_price, orderdetails.quantity,customers.cust_id,orders.order_id,orders.order_date 
-FROM products,customers, orders INNER JOIN orderdetails on orderdetails.order_id=orders.order_id 
-WHERE  products.product_id=orderdetails.product_id AND customers.cust_id=orders.cust_id 
-AND customers.cust_id=1 order by orders.order_id;
-
-
-
 /*13) This procedure insert products of  order in orderdetails table 
     and then updating stock_available of product by substracting  quantity of product bought by customer   */
 
@@ -378,6 +291,104 @@ CALL get_order_by_cust (1,@delivered,@cancelled,@inprogress,@initiated);
 
 SELECT @delivered , @cancelled ,@inprogress, @initiated;
 
+/*18)This Store procedure show Transaction History*/
+DELIMITER $$
+CREATE PROCEDURE TransferMoney(IN from_account_number BIGINT ,IN to_account_number BIGINT, IN transaction_date DATETIME,IN amount DOUBLE )
+BEGIN 
+DECLARE Debit double;
+START TRANSACTION;
+UPDATE accounts SET balance=balance-amount WHERE account_number = from_account_number;
+UPDATE accounts SET balance=balance+amount WHERE account_number = to_account_number;
+INSERT INTO transactions(from_account_number,to_account_number,transaction_date,amount) VALUES(from_account_number,to_account_number,transaction_date,amount);
+COMMIT;
+END $$
+DELIMITER ;
+
+DESC employees;
+select * from users;
+select * from roles;
+select * from user_roles;
+
+select * from employees;
+select * from customers;
+select * from orders;
+select * from orderdetails;
+select * from categories;
+select * from accounts;
+
+
+SELECT suppliers.supplier_id,suppliers.company_name,suppliers.supplier_name,orderdetails.orderdetails_id,orderdetails.order_id,orderdetails.product_id FROM suppliers INNER JOIN orderdetails ON suppliers.supplier_id=orderdetails.supplier_id WHERE product_id=1;
+
+
+/*1)Retrive List of Customers that made purcheses after the date 2023-03-03 */
+SELECT customers.cust_id,customers.first_name, customers.last_name,orders.order_date FROM orders 
+INNER JOIN customers ON orders.cust_id=customers.cust_id 
+WHERE order_date > '2023-03-03';
+
+/*2)Available products in stock*/
+select product_id,product_title, stock_available from products;
+
+/*3)view Sells  by category*/
+SELECT   categories.category_title, SUM(orderdetails.quantity) 
+FROM orderdetails, products,categories
+WHERE orderdetails.product_id = products.product_id and products.category_id=categories.category_id 
+GROUP BY categories.category_title  ;
+
+/*4) Creating  View products price above than average price*/
+create or replace view vw_products_above_avgprice
+as select product_title , unit_price from products
+where  unit_price  > (select avg(unit_price) from products)
+order by unit_price; 
+
+select * from vw_products_above_avgprice;
+
+/*5)average price from all products*/
+select avg(unit_price) from products;
+
+
+  /* Products SQL's */
+select * from products where category_id =1;
+
+/*6)getting all products by category id, category_title,products_title*/
+SELECT categories.category_id,categories.category_title,products.product_title 
+FROM products INNER JOIN categories ON products.category_id=categories.category_id;
+
+/*7)getting  products from which category is given */
+SELECT product_title  
+FROM products 
+where category_id in (select category_id from categories where category_title='colddrinks');
+
+/*8)getting all products by category id, category_title,products_title from which category is given*/
+SELECT categories.category_id,categories.category_title, products.product_title FROM categories 
+INNER JOIN products ON products.category_id=categories.category_id 
+WHERE categories.category_title='colddrinks';  /* biscuits,snacks,colddrinks,electronics*/
+
+/*select month(order_date),sum(unit_price*quantity) from orders,products,orderdetails where products.product_id=orderdetails.product_id and order_date > now() - INTERVAL 12 month group by month(order_date);*/
+
+/*9)This query will give products information present in  a order by giving order_id  */
+SELECT orderdetails.product_id, products.product_title,products.description,products.unit_price, products.image, orderdetails.order_id,orderdetails.quantity,(products.unit_price*orderdetails.quantity) as  totalprice
+FROM products
+INNER JOIN orderdetails ON products.product_id =  orderdetails.product_id 
+WHERE orderdetails.order_id=1;
+    
+/*10)This query  returns totalamount of a order   */
+SELECT SUM(products.unit_price*orderdetails.quantity) as totalamount  from products
+INNER JOIN orderdetails ON products.product_id =  orderdetails.product_id 
+WHERE orderdetails.order_id=1 ;  
+
+/* 11) This query give totalamount of sold products from orderdetails table of each product  */
+/*  Used in dashboard */
+SELECT orderdetails.product_id,products.product_title, SUM(orderdetails.quantity) * products.unit_price 
+FROM orderdetails, products
+WHERE orderdetails.product_id = products.product_id
+GROUP BY product_id;
+
+/*12) This query give order history of customer */
+SELECT products.product_id,products.product_title , products.unit_price, orderdetails.quantity,customers.cust_id,orders.order_id,orders.order_date 
+FROM products,customers, orders INNER JOIN orderdetails on orderdetails.order_id=orders.order_id 
+WHERE  products.product_id=orderdetails.product_id AND customers.cust_id=orders.cust_id 
+AND customers.cust_id=1 order by orders.order_id;
+
 
 /* 15)shows all list of orders on the basis of status =cancelled */
 SELECT * FROM orders WHERE status = "cancelled";
@@ -393,19 +404,6 @@ SELECT orderdetails.order_id,products.product_title, orderdetails.quantity ,(pro
 FROM orderdetails, products 
 WHERE  products.product_id =orderdetails.product_id 
 AND order_id= 4;
-
-/*18)This Store procedure show Transaction History*/
-DELIMITER $$
-CREATE PROCEDURE TransferMoney(IN from_account_number BIGINT ,IN to_account_number BIGINT, IN transaction_date DATETIME,IN amount DOUBLE )
-BEGIN 
-DECLARE Debit double;
-START TRANSACTION;
-UPDATE accounts SET balance=balance-amount WHERE account_number = from_account_number;
-UPDATE accounts SET balance=balance+amount WHERE account_number = to_account_number;
-INSERT INTO transactions(from_account_number,to_account_number,transaction_date,amount) VALUES(from_account_number,to_account_number,transaction_date,amount);
-COMMIT;
-END $$
-DELIMITER ;
 
 /*19) This Query show how many times Money credited or debited in customers account */
 select transactions.transaction_id,transactions.amount,transactions.transaction_date,
