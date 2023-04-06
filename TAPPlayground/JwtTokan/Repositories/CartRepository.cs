@@ -16,32 +16,38 @@ public class CartRepository : ICartRepository
 
     // public List<Cart> GetAll()
     // {
+    //    Cart cart = new Cart();
     //    List<Cart> carts = new List<Cart>();
+
     //     MySqlConnection con = new MySqlConnection();
     //     con.ConnectionString = _conString;
     //     try
     //     {
-    //         string query = "select * from carts";
+    //         string query = "select * from cart_items";
     //         MySqlCommand command = new MySqlCommand(query, con);
     //         con.Open();
     //         MySqlDataReader reader = command.ExecuteReader();
     //         while (reader.Read())
     //         {
-    //             int id = int.Parse(reader["category_id"].ToString());
-    //             string? categoryTitle = reader["category_title"].ToString();
-    //             string? description = reader["description"].ToString();
-    //             string? imageUrl = reader["image"].ToString();
-              
-    //           Category category=new Category()
-    //             {
-    //               CategoryId=id,
-    //               CategoryTitle=categoryTitle,
-    //               Description=description,
-    //               ImageUrl=imageUrl
-    //             };
-    //             categories.Add(category);
+    //             int itemId = int.Parse(reader["item_id"].ToString());
+    //             int cartId = int.Parse(reader["cart_id"].ToString());
+    //             int productId = int.Parse(reader["product_id"].ToString());
+    //             int quantity = int.Parse(reader["quantity"].ToString());
+    //         Item item = new Item(){
+    //             itemId=itemId,
+    //             CartId = cartId,
+    //             ProductId = productId,
+    //             Quantity = quantity
+    //         };
+    //         carts.Add(item);
     //         }
     //         reader.Close();
+    //          cart = new Cart
+    //             {
+    //                 CartId = id,
+    //                 Items = items
+
+    //             };
     //     }
     //     catch (Exception e)
     //     {
