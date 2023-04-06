@@ -1,8 +1,7 @@
--- Active: 1678262628722@@127.0.0.1@3306@ecommerce
+
 --  CREATE DATABASE Ecommerce;
+drop database Ecommerce
 USE Ecommerce;
-
-
 
 CREATE TABLE users( user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, email VARCHAR(25) UNIQUE NOT NULL, contact_number VARCHAR(20) NOT NULL ,password VARCHAR(15) NOT NULL);
 CREATE TABLE roles(role_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, role varchar(50));
@@ -28,7 +27,6 @@ CREATE TABLE transactions(transaction_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY
 
 
 /*trigger for customer in users*/
-
 DELIMITER //
 CREATE TRIGGER insert_customer AFTER INSERT ON customers 
 FOR EACH ROW 
@@ -78,7 +76,6 @@ DELIMITER ;
 
 
 INSERT INTO users(email,contact_number,password) VALUES ('pragatibangar12@gmail.com','7498035690','pragati@123');
-
 
 /*Sample Data Entry for database*/
 
@@ -178,16 +175,13 @@ INSERT INTO carts(user_id) VALUES (4);
 INSERT INTO carts(user_id) VALUES (5);
 
 INSERT INTO cart_items(cart_id,product_id,quantity) VALUES (1,2,5);
-
 INSERT INTO cart_items(cart_id,product_id,quantity) VALUES (1,5,50);
 INSERT INTO cart_items(cart_id,product_id,quantity) VALUES (1,3,100);
-
 INSERT INTO cart_items(cart_id,product_id,quantity) VALUES (2,7,15);
 INSERT INTO cart_items(cart_id,product_id,quantity) VALUES (2,8,25);
 INSERT INTO cart_items(cart_id,product_id,quantity) VALUES (2,3,5);
 INSERT INTO cart_items(cart_id,product_id,quantity) VALUES (3,2,5);
 INSERT INTO cart_items(cart_id,product_id,quantity) VALUES (4,2,5);
-
 
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-17  04:20:10', 1,85.00,'cancelled');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:25', 2, 82.00,'delivered');
@@ -209,7 +203,6 @@ INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-08-25  06:35:2
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:25', 3,35.0,'delivered');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-01-16  09:35:25', 6,85.00,'cancelled');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:25', 7,14.00,'inprogress');
-
 
 INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(1, 1, 70,1);
 INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(1, 2, 700,2);
@@ -306,13 +299,10 @@ BEGIN
         WHERE
             cust_id = cust_no
                 AND status = 'initiated';
-
 END $$
 DELIMITER ;
 
-
 CALL get_order_by_cust (1,@delivered,@cancelled,@inprogress,@initiated);
-
 
 SELECT @delivered , @cancelled ,@inprogress, @initiated;
 

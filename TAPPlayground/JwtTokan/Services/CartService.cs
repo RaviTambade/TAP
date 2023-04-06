@@ -8,9 +8,17 @@ public class CartService:ICartService{
     public CartService(ICartRepository repo){
         this._repo=repo;
     }
+
+    public List<Cart> GetAll(){
+      return _repo.GetAll();
+     }
     public Cart Get(int id)
     {
         return _repo.Get(id);
+    }
+    public bool AddToCart(Cart cart)
+    {
+        return _repo.AddToCart(cart);
     }
 }
 
