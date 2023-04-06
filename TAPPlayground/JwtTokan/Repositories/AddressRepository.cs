@@ -16,22 +16,23 @@ public class AddressRepository : IAddressRepository
     }
 
 
-    public List<Address> GetAll(int id)
+    public List<Address> GetAll()
     {
         List<Address> addresses = new List<Address>();
         MySqlConnection con = new MySqlConnection();
         con.ConnectionString = _conString;
         try
         {
-            string query = "SELECT * FROM addresses where cust_id=@addressId";
+            string query = "SELECT * FROM addresses";
             con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
-            command.Parameters.AddWithValue("@addressId",id);
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
                 int addressId=int.Parse(reader["address_id"].ToString());
+                int custId=int.Parse(reader["cust_id"].ToString());
                 string? houseNumber = reader["house_number"].ToString();
+                string? addressMode = reader["address_mode"].ToString();
                 string? landmark = reader["landmark"].ToString();
                 string? city = reader["city"].ToString();
                 string? state = reader["state"].ToString();
@@ -41,6 +42,8 @@ public class AddressRepository : IAddressRepository
                 Address address = new Address
                 {
                     AddressId = addressId,
+                    CustomerId=custId,
+                    AddressMode=addressMode,
                     HouseNumber = houseNumber,
                     Landmark = landmark,
                     City = city,
@@ -106,11 +109,13 @@ public class AddressRepository : IAddressRepository
             string query = "SELECT * FROM addresses where address_id=@addressId";
             con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
-            command.Parameters.AddWithValue("addressId",addressId);
+            command.Parameters.AddWithValue("@addressId",addressId);
             MySqlDataReader reader = command.ExecuteReader();
             if (reader.Read())
             {
                 string? houseNumber = reader["house_number"].ToString();
+                int custId=int.Parse(reader["cust_id"].ToString());
+                string? addressMode = reader["address_mode"].ToString();
                 string? landmark = reader["landmark"].ToString();
                 string? city = reader["city"].ToString();
                 string? state = reader["state"].ToString();
@@ -120,7 +125,9 @@ public class AddressRepository : IAddressRepository
                  address = new Address
                 {
                     AddressId = addressId,
+                    CustomerId = custId,
                     HouseNumber = houseNumber,
+                    AddressMode =addressMode,
                     Landmark = landmark,
                     City = city,
                     State = state,
@@ -140,5 +147,60 @@ public class AddressRepository : IAddressRepository
         }
         return address;
     }
+          public  bool Update(Address address){
+          bool status = false;
+          MySqlConnection con = new MySqlConnection();
+          con.ConnectionString=_conString;
+        try{
+            
+            string query = $"Update addresses SET cust_id=@customerId, address_mode =@addressMode,house_number=@houseNumber,landmark=@landmark,city=@city,state=@state,country=@country,pincode=@pincode WHERE address_id=@addressId ";
+            Console.WriteLine(query);
+            con.Open();
+            MySqlCommand command = new MySqlCommand(query, con);
+            command.Parameters.AddWithValue("@addressId",address.AddressId);
+            command.Parameters.AddWithValue("@customerId",address.CustomerId);
+            command.Parameters.AddWithValue("@addressMode",address.AddressMode);
+            command.Parameters.AddWithValue("@houseNumber",address.HouseNumber);
+            command.Parameters.AddWithValue("@landmark",address.Landmark);
+            command.Parameters.AddWithValue("@city",address.City);
+            command.Parameters.AddWithValue("@state",address.State);
+            command.Parameters.AddWithValue("@country",address.Country);
+            command.Parameters.AddWithValue("@pincode",address.PinCode);
+            command.ExecuteNonQuery();
+            status = true;
+            
+          }
+        catch(Exception e )
+          {
+            throw e;
+          }
+          finally {
+            con.Close();
+          }
+          return status;
+   }
+   
+   public  bool Delete(int addressId){
+          bool status = false;
+          MySqlConnection con = new MySqlConnection();
+          con.ConnectionString=_conString;
+          try{
+            
+            string query = "DELETE FROM addresses WHERE address_id=@addressId";
+            MySqlCommand cmd=new MySqlCommand(query,con) ;
+            cmd.Parameters.AddWithValue("@addressId",addressId);
+            con.Open();
+            cmd.ExecuteNonQuery();  
+            status=true;            
+
+          }catch(Exception e )
+          {
+            throw e;
+          }
+          finally {
+            con.Close();
+          }
+          return status;
+   }
 
 }

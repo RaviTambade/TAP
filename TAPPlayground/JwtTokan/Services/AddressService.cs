@@ -11,7 +11,12 @@ public class AddressService:IAddressService{
 
     public Address GetById(int addressId)=>_repo.GetById(addressId);
 
-    public List<Address> GetAll(int id) => _repo.GetAll(id);
+    public List<Address> GetAll() => _repo.GetAll();
 
     public bool Insert(Address address)=>_repo.Insert(address);
+
+     public bool Update(Address address)=> _repo.Update(address);
+     public bool Delete(int id)=>_repo.Delete(id);
 }
+
+
