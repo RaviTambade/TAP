@@ -1,18 +1,18 @@
-// namespace ECommerceApp.Models;
-// public class Cart
-// {
-//     public List<Product> Products { get; set; }
+using System.Text;
 
-//     public void RemoveProduct(Product product)
-//     {
-//         Products.Remove(product);
-//     }
+namespace ECommerceApp.Models;
+ 
+ public class Cart
+ {
+     public List<Item> Items { get; set; }
+
+     public void AddToCart(Item item)
+    {
+         Items.Add(item);
+    }
      
-    
-//     public double TotalAmount
-//     {
-//         get { return Products.Sum(p => p.BuyQuantity * p.UnitPrice); }
-//     }
-
-
-// }
+     public  Cart()
+     {
+        this.Items=new List<Item>();
+     }
+ }
