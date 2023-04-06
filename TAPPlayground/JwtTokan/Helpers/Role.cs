@@ -1,4 +1,4 @@
-namespace ECommerceApp.Entities;
+namespace ECommerceApp.Helpers;
 public  static class Role{
 
     public const string Admin="Admin";

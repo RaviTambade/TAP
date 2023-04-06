@@ -1,7 +1,6 @@
 using ECommerceApp.Helpers;
 using ECommerceApp.Models;
 using ECommerceApp.Services;
-using ECommerceApp.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ECommerceApp.Controllers{

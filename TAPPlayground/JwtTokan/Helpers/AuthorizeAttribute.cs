@@ -1,5 +1,5 @@
 
-using ECommerceApp.Entities;
+using ECommerceApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
@@ -13,26 +13,30 @@ namespace ECommerceApp.Helpers
     public class AuthorizeAttribute : Attribute, IAuthorizationFilter
     {
 
-        public string Roles{get; set;}
+        public string Roles { get; set; }
         public void OnAuthorization(AuthorizationFilterContext context)
         {
             var user = (User)context.HttpContext.Items["User"];
-            var userRoles =(List<string>)context.HttpContext.Items["userRoles"];
-            
-            bool status = false;
-            
-            if (this.Roles!=null){
-                var requiredRoles=this.Roles.Split(',').ToList();
+            var userRoles = (List<string>)context.HttpContext.Items["userRoles"];
 
-            foreach (var role in requiredRoles){
-                if(userRoles.Contains(role))
-                {status=true;}              
+            bool status = false;
+
+            if (this.Roles != null)
+            {
+                var requiredRoles = this.Roles.Split(',').ToList();
+
+                foreach (var role in requiredRoles)
+                {
+                    if (userRoles.Contains(role))
+                    {
+                        status = true;
+                        break;
+                    }
+                }
+
             }
-            
-            }
-            
-            
-            if (user == null || status==false) 
+
+            if (user == null || status == false)
             {
                 context.Result = new JsonResult(new { message = "Unauthorized" })
                 {
