@@ -26,6 +26,7 @@ public class UserRepository : IUserRepository
     public AuthenticateResponse Authenticate(AuthenticateRequest request)
     {
         User user = GetUser(request);
+        Console.WriteLine(request.Email+","+request.Password);
         // return null if user not found
         if (user == null){ return null;}
         // authentication successful so generate jwt token
@@ -157,6 +158,8 @@ public class UserRepository : IUserRepository
 
             string query = "SELECT * FROM users where email=@email AND password =@password";
             Console.WriteLine(query);
+            Console.WriteLine(request.Email);
+             Console.WriteLine(request.Password);
             con.Open();
             
             MySqlCommand command = new MySqlCommand(query, con);

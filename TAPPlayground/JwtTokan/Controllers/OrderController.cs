@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using ECommerceApp.Entities;
 using ECommerceApp.Helpers;
 using ECommerceApp.Models;
 using ECommerceApp.Services;

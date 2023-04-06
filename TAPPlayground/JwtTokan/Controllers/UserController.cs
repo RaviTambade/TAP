@@ -23,7 +23,7 @@ namespace ECommerceApp.Controllers{
         public IActionResult Authenticate([FromBody]AuthenticateRequest request)
         {
             Console.WriteLine("authenticate is called.");
-            
+            Console.WriteLine(request.Email+","+request.Password);
             var user = _svc.Authenticate(request);
 
             if (user == null)
