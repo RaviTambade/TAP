@@ -20,6 +20,10 @@ public class CartService:ICartService{
     {
         return _repo.AddToCart(cart);
     }
+    public bool Update(Cart cart)
+    {
+        return _repo.Update(cart);
+    }
 }
 
     

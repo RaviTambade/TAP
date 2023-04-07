@@ -7,5 +7,6 @@ public interface ICartRepository{
     Cart Get(int id);
     bool AddToCart(Cart cart);
     //bool RemoveFromCart(Item item);
+    bool Update(Cart cart);
 
 }

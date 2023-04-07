@@ -41,6 +41,20 @@ namespace ECommerceApp.Controllers
             bool status = _cartsrv.AddToCart(cart);
             return status;
         }
+
+        [HttpPut]
+        [Route("/api/cart/update/{id}")]
+        public bool Update(int id ,[FromBody]Cart cart)
+        {
+            Cart oldcart = _cartsrv.Get(id);
+            if(oldcart.CartId==0){
+                return false;
+                
+            }
+            cart.CartId=id;
+            bool status = _cartsrv.Update(cart);
+            return status;
+        }
     }
 }
 
