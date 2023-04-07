@@ -8,7 +8,8 @@ public interface ICartRepository{
     bool AddItem(Cart cart, Item item);
     bool UpdateItem(Cart cart, Item item);
     bool RemoveItem(Cart cart, Item item);
-    //bool RemoveFromCart(Item item);
+
+    bool CreateOrder(int cartId);
 
 
 }

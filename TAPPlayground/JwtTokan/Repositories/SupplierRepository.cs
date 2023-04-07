@@ -87,6 +87,7 @@ public class SupplierRepository : ISupplierRepository
                 string contactNumber = reader["contact_number"].ToString();
                 string email = reader["email"].ToString();
                 string address = reader["address"].ToString();
+                string password = reader["password"].ToString();
                 string city = reader["city"].ToString();
                 string state = reader["state"].ToString();
                 long accountNumber = long.Parse(reader["account_number"].ToString());
@@ -99,6 +100,7 @@ public class SupplierRepository : ISupplierRepository
                     ContactNumber = contactNumber,
                     Email = email,
                     Address = address,
+                    Password=password,
                     City = city,
                     State = state,
                     AccountNumber = accountNumber
@@ -159,19 +161,14 @@ public class SupplierRepository : ISupplierRepository
         connection.ConnectionString = _conString;
         try
         {
-            string query = "INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,city,state,account_number)VALUES(@companyName,@supplierName,@contactNumber,@email,@address,@city,@state,@accountNumber)";
+            string query = "INSERT INTO suppliers(company_name,supplier_name,contact_number,email,address,password,city,state,account_number)VALUES(@companyName,@supplierName,@contactNumber,@email,@address,@password,@city,@state,@accountNumber)";
             MySqlCommand command = new MySqlCommand(query, connection);
             command.Parameters.AddWithValue("@companyName", supplier.CompanyName);
             command.Parameters.AddWithValue("@supplierName", supplier.SupplierName);
-            command.Parameters.AddWithValue("@supplierContactName", supplier.ContactNumber);
-            command.Parameters.AddWithValue("@supplierEmail", supplier.Email);
-            command.Parameters.AddWithValue("@supplierAddress", supplier.Address);
-            command.Parameters.AddWithValue("@supplierCity", supplier.Address);
-            command.Parameters.AddWithValue("@supplierState", supplier.Address);
-            command.Parameters.AddWithValue("@supplierAccountNumber", supplier.Address);
-            command.Parameters.AddWithValue("@contactNumber", supplier.ContactNumber);
+            command.Parameters.AddWithValue("@contactName", supplier.ContactNumber);
             command.Parameters.AddWithValue("@email", supplier.Email);
             command.Parameters.AddWithValue("@address", supplier.Address);
+            command.Parameters.AddWithValue("@password", supplier.Password);
             command.Parameters.AddWithValue("@city", supplier.City);
             command.Parameters.AddWithValue("@state", supplier.State);
             command.Parameters.AddWithValue("@accountNumber", supplier.AccountNumber);
@@ -199,7 +196,7 @@ public class SupplierRepository : ISupplierRepository
         connection.ConnectionString = _conString;
         try
         {
-            string query = "UPDATE suppliers SET company_name=@companyName , supplier_name=@supplierName , contact_number=@contactNumber , email=@email , address=@address , city=@city , state=@state , account_number=@accountNumber WHERE supplier_id=@supplierId";
+            string query = "UPDATE suppliers SET company_name=@companyName , supplier_name=@supplierName , contact_number=@contactNumber , email=@email , address=@address ,password=@password, city=@city , state=@state , account_number=@accountNumber WHERE supplier_id=@supplierId";
             Console.WriteLine(query);
             MySqlCommand command = new MySqlCommand(query, connection);
             command.Parameters.AddWithValue("@supplierId", supplier.SupplierId);
@@ -208,6 +205,7 @@ public class SupplierRepository : ISupplierRepository
             command.Parameters.AddWithValue("@contactNumber", supplier.ContactNumber);
             command.Parameters.AddWithValue("@email", supplier.Email);
             command.Parameters.AddWithValue("@address", supplier.Address);
+            command.Parameters.AddWithValue("@password", supplier.Password);
             command.Parameters.AddWithValue("@city", supplier.City);
             command.Parameters.AddWithValue("@state", supplier.State);
             command.Parameters.AddWithValue("@accountNumber", supplier.AccountNumber);

@@ -1,6 +1,7 @@
 using ECommerceApp.Models;
 using ECommerceApp.Repositories.Interfaces;
 using MySql.Data.MySqlClient;
+using System.Data;
 namespace ECommerceApp.Repositories;
 public class CartRepository : ICartRepository
 {
@@ -109,8 +110,10 @@ public class CartRepository : ICartRepository
             command.Parameters.AddWithValue("@cartId",theCart.CartId);
             command.Parameters.AddWithValue("@productId",item.ProductId);
             command.Parameters.AddWithValue("@quantity",item.Quantity);
-            command.ExecuteNonQuery();
+            int rowsAffected=command.ExecuteNonQuery();
+            if(rowsAffected>=1){
             status = true;
+            }
         }
         catch(Exception e){
             throw e;
@@ -132,8 +135,10 @@ public class CartRepository : ICartRepository
             command.Parameters.AddWithValue("@cartId",theCart.CartId);
             command.Parameters.AddWithValue("@quantity",item.Quantity);
             con.Open();
-            command.ExecuteNonQuery();
+            int rowsAffected=command.ExecuteNonQuery();
+            if(rowsAffected>=1){
             status = true;
+            }
         }
         catch(Exception e){
             throw e;
@@ -153,8 +158,10 @@ public class CartRepository : ICartRepository
             MySqlCommand command = new MySqlCommand(query,con);
             command.Parameters.AddWithValue("@cartId",theCart.CartId);
             command.Parameters.AddWithValue("@productId",item.ProductId);
-            command.ExecuteNonQuery();
+            int rowsAffected=command.ExecuteNonQuery();
+            if(rowsAffected>=1){
             status = true;
+            }
         }
         catch(Exception e){
             throw e;
@@ -164,4 +171,32 @@ public class CartRepository : ICartRepository
         }
         return status;
     }
-}
+   
+    public bool CreateOrder(int cartId){
+   
+        bool status=false; 
+        MySqlConnection connection = new MySqlConnection(_conString);
+        try
+        {
+                MySqlCommand command = new MySqlCommand("CreateOrder", connection);             //create new mysqlcommand object to call the createorder stored procedure
+                command.CommandType = CommandType.StoredProcedure;                             
+                command.Parameters.AddWithValue("@cartId",cartId);     //set the cartid input parameter for the stored procedure
+                connection.Open();
+                command.ExecuteNonQuery();
+                status=true;                       
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            connection.Close();
+        }
+        return status;
+    }
+
+    }
+
+
+

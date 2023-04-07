@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using ECommerceApp.Models;
 using ECommerceApp.Repositories.Interfaces;
 using ECommerceApp.Services.Interfaces;
@@ -29,6 +30,10 @@ public class CartService:ICartService{
     public bool RemoveItem(Cart cart, Item item)
     {
         return _repo.RemoveItem(cart,item);
+    }
+
+    public bool CreateOrder(int cartId){
+       return _repo.CreateOrder(cartId);
     }
 
 }
