@@ -100,7 +100,6 @@ public class CartRepository : ICartRepository
     public bool AddItem(Cart theCart,Item item) 
     {
         bool status = false;
-        theCart.Items.Add(item);  
         MySqlConnection con = new MySqlConnection();
         try{   
             con.ConnectionString = _conString;
@@ -123,7 +122,6 @@ public class CartRepository : ICartRepository
     }
     public  bool UpdateItem(Cart theCart,Item item) {
        bool status = false;
-        theCart.Items.Add(item); 
          MySqlConnection con = new MySqlConnection(); 
         try{
             con.ConnectionString = _conString;    
@@ -147,7 +145,6 @@ public class CartRepository : ICartRepository
     }
     public  bool RemoveItem(Cart theCart,Item item) {
         bool status = false;
-        theCart.Items.Add(item);  
         MySqlConnection con = new MySqlConnection();
         try{
             con.ConnectionString = _conString;
