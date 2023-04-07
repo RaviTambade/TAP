@@ -1,6 +1,7 @@
+-- Active: 1678361403571@@127.0.0.1@3306@ecommerce
 
---  CREATE DATABASE Ecommerce;
-drop database Ecommerce
+  CREATE DATABASE Ecommerce;
+ --drop database Ecommerce;
 USE Ecommerce;
 
 CREATE TABLE users( user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, email VARCHAR(25) UNIQUE NOT NULL, contact_number VARCHAR(20) NOT NULL ,password VARCHAR(15) NOT NULL);
@@ -12,6 +13,7 @@ CREATE TABLE employees(employee_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,empfi
 CREATE TABLE addresses(address_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,cust_id INT NOT NULL, CONSTRAINT fk_customer_id_2 FOREIGN KEY(cust_id) REFERENCES customers(cust_id) ON UPDATE CASCADE ON DELETE CASCADE,address_mode ENUM('permanent', 'billing') NOT NULL,house_number VARCHAR(20),landmark VARCHAR(25) NOT NULL,city VARCHAR(25) NOT NULL,state VARCHAR(25) NOT NULL,country VARCHAR(25) NOT NULL,pincode VARCHAR(25) NOT NULL);
 CREATE TABLE categories(category_id INT PRIMARY KEY AUTO_INCREMENT, category_title VARCHAR(20),description VARCHAR (100),image VARCHAR(50)) ;
 CREATE TABLE suppliers(supplier_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,company_name VARCHAR (50),supplier_name VARCHAR (20),contact_number VARCHAR (20),email VARCHAR(20),address VARCHAR(200),city VARCHAR(50),state VARCHAR(20),password VARCHAR(20) NOT NULL,account_number BIGINT NOT NULL UNIQUE,CONSTRAINT fk_account_no5 FOREIGN KEY(account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE);
+CREATE TABLE products (product_id INT PRIMARY KEY AUTO_INCREMENT,product_title VARCHAR(20) NOT NULL,description VARCHAR(50),stock_available INT NOT NULL,unit_price DOUBLE NOT NULL,image VARCHAR(40),category_id INT NOT NULL, CONSTRAINT fk_category_id FOREIGN KEY(category_id) REFERENCES categories(category_id) ON UPDATE CASCADE ON DELETE CASCADE,supplier_id INT NOT NULL, CONSTRAINT fk_supplier_id FOREIGN KEY(supplier_id) REFERENCES suppliers(supplier_id) ON UPDATE CASCADE ON DELETE CASCADE);
 
 -- Create Tables  to store shopping cart related information
 
