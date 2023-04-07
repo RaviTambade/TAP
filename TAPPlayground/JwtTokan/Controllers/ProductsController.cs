@@ -19,7 +19,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpGet]
-        [Route("/api/products/GetAllProducts")]
+        [Route("/api/products/getallproducts")]
         public IEnumerable<Product> GetAllProducts()
         {
             List<Product> products = _productsrv.GetAll();
@@ -27,7 +27,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpGet]
-        [Route("/api/products/GetProductDetails/{id}")]
+        [Route("/api/products/getproductdetails/{id}")]
         public Product GetById(int id)
         {
             Product product = _productsrv.GetById(id);
@@ -50,7 +50,7 @@ namespace ECommerceApp.Controllers
 
         [Authorize(Roles = Role.Admin+","+Role.Customer)]
         [HttpPost]
-        [Route("/api/products/Addproduct/")]
+        [Route("/api/products/addproduct/")]
         public bool Insert([FromBody] Product product)
         {
             bool status = _productsrv.Insert(product);
