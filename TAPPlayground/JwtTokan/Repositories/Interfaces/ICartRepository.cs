@@ -3,9 +3,11 @@ using ECommerceApp.Models;
 namespace ECommerceApp.Repositories.Interfaces;
 public interface ICartRepository{
 
-    List<Cart> GetAll();
-    Cart Get(int id);
-    bool AddToCart(Cart cart);
+    List<Cart> GetAllCarts();
+    Cart GetCart(int id);
+    bool AddItem(Cart cart, Item item);
+    bool UpdateItem(Cart cart, Item item);
+    bool RemoveItem(Cart cart, Item item);
     //bool RemoveFromCart(Item item);
 
 }
