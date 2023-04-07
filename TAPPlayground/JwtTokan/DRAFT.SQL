@@ -308,7 +308,35 @@ CALL get_order_by_cust (1,@delivered,@cancelled,@inprogress,@initiated);
 
 SELECT @delivered , @cancelled ,@inprogress, @initiated;
 
-/*18)This Store procedure show Transaction History*/
+
+
+/*18)This Store procedure Coneverts ShoppingCart into New Order*/
+DELIMITER $$
+CREATE PROCEDURE CreateOrder(IN cartId BIGINT )
+BEGIN 
+DECLARE Debit double;
+START TRANSACTION;
+/*
+ Get cart details  from both tables
+ Insert new order into Orders
+ get orderid which created just now.
+
+ get all Items from cart_items
+ insert all items to order_items with order id and date current with time
+
+ it these insertions work
+ then remove all items entries from cart_items tables
+ then remove cart entry from cart table
+
+ */
+
+COMMIT;
+END $$
+DELIMITER ;
+
+
+
+/*19)This Store procedure show Transaction History*/
 DELIMITER $$
 CREATE PROCEDURE TransferMoney(IN from_account_number BIGINT ,IN to_account_number BIGINT, IN transaction_date DATETIME,IN amount DOUBLE )
 BEGIN 

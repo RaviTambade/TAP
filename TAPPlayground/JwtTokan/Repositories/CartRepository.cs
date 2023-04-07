@@ -102,8 +102,7 @@ public class CartRepository : ICartRepository
         bool status = false;
         theCart.Items.Add(item);  
         MySqlConnection con = new MySqlConnection();
-        try{
-            
+        try{   
             con.ConnectionString = _conString;
             con.Open(); 
             string query ="INSERT into cart_items(cart_id,product_id,quantity) VALUES (@cartId, @productId,@quantity)";
