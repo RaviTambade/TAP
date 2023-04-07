@@ -3,14 +3,11 @@ using ECommerceApp.Models;
 using ECommerceApp.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
-
 namespace ECommerceApp.Controllers
 {
-
     [ApiController]
     [Route("api/[controller]")]
     public class CartController : ControllerBase
-
     {
         private readonly ICartService _cartsrv;
         public CartController(ICartService cartService)
@@ -20,41 +17,47 @@ namespace ECommerceApp.Controllers
 
         [HttpGet]
         [Route("/api/cart/GetAllCartItems")]
-        public IEnumerable<Cart> GetAllCartItems()
+        public IEnumerable<Cart> GetAllCarts()
         {
-            List<Cart> carts = _cartsrv.GetAll();
+            List<Cart> carts = _cartsrv.GetAllCarts();
             return carts;
         }
 
         [HttpGet]
         [Route("/api/cart/GetCartDetails/{id}")]
-        public Cart GetById(int id)
+        public Cart GetCart(int id)
         {
-            Cart cart = _cartsrv.Get(id);
+            Cart cart = _cartsrv.GetCart(id);
             return cart;
         }
 
         [HttpPost]
-        [Route("/api/cart/Addtocart")]
-        public bool AddToCart(Cart cart)
+        [Route("/api/cart/Addtocart/{id}")]
+        public bool AddToCart(int id,Item item)
         {
-            bool status = _cartsrv.AddToCart(cart);
+            Cart theCart=_cartsrv.GetCart(id);
+            bool status = _cartsrv.AddItem(theCart,item);
             return status;
         }
 
         [HttpPut]
         [Route("/api/cart/update/{id}")]
-        public bool Update(int id ,[FromBody]Cart cart)
+        public bool UpdateCart(int id,Item item)
         {
-            Cart oldcart = _cartsrv.Get(id);
-            if(oldcart.CartId==0){
-                return false;
-                
-            }
-            cart.CartId=id;
-            bool status = _cartsrv.Update(cart);
+            Cart theCart=_cartsrv.GetCart(id);
+            bool status = _cartsrv.UpdateItem(theCart,item);
             return status;
         }
+
+        [HttpPost]
+        [Route("/api/cart/delete/{id}")]
+        public bool RemoveFromCart(int id,Item item)
+        {
+            Cart theCart=_cartsrv.GetCart(id);
+            bool status = _cartsrv.RemoveItem(theCart,item);
+            return status;
+        }
+
     }
 }
 

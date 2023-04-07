@@ -14,7 +14,7 @@ public class UserRepository : IUserRepository
 
     private readonly AppSettings _appsettings;
 
-    public UserRepository(IConfiguration configuration,IOptions<AppSettings> appSettings)
+    public UserRepository(IConfiguration configuration, IOptions<AppSettings> appSettings)
     {
 
         _configuration = configuration;
@@ -26,13 +26,15 @@ public class UserRepository : IUserRepository
     public AuthenticateResponse Authenticate(AuthenticateRequest request)
     {
         User user = GetUser(request);
-        Console.WriteLine(request.Email+","+request.Password);
+        Console.WriteLine(request.Email + "," + request.Password);
         // return null if user not found
-        if (user == null){ return null;}
+        if (user == null) { return null; }
         // authentication successful so generate jwt token
         var token = generateJwtToken(user);
         return new AuthenticateResponse(user, token);
     }
+
+    
     public List<User> GetAll()
     {
         List<User> users = new List<User>();
@@ -91,7 +93,100 @@ public class UserRepository : IUserRepository
         return users;
     }
 
- public User GetById(int id)
+    public bool ForgotPassword(User user)
+    {
+        bool status = false;
+        MySqlConnection con = new MySqlConnection();
+        con.ConnectionString = _conString;
+        try
+        {
+
+            string query = $"Update users SET password =@newPassword WHERE email=@email";
+            MySqlCommand cmd = new MySqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@newPassword", user.Password);
+            cmd.Parameters.AddWithValue("@email", user.Email);
+            con.Open();
+            int rowsAffected = cmd.ExecuteNonQuery();
+            if (rowsAffected >= 1)
+            {
+                status = true;
+            }
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            con.Close();
+        }
+        return status;
+    }
+
+    public bool UpdatePassword(ChangedCredential credential)
+    {
+        bool status = false;
+        MySqlConnection con = new MySqlConnection();
+        con.ConnectionString = _conString;
+        try
+        {
+
+            string query = $"Update users SET password =@newPassword WHERE email=@email AND password =@oldPassword";
+            MySqlCommand cmd = new MySqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@email", credential.Email);
+            cmd.Parameters.AddWithValue("@newPassword", credential.NewPassword);
+            cmd.Parameters.AddWithValue("@oldPassword", credential.OldPassword);
+            con.Open();
+            int rowsAffected = cmd.ExecuteNonQuery();
+            if (rowsAffected >= 1)
+            {
+                status = true;
+            }
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            con.Close();
+        }
+        return status;
+    }
+
+    public bool UpdateEmail(ChangedCredential credential)
+    {
+        bool status = false;
+        MySqlConnection con = new MySqlConnection();
+        con.ConnectionString = _conString;
+        try
+        {
+
+            string query = $"Update users SET email=@newemail  WHERE password =@password AND email=@email";
+            MySqlCommand cmd = new MySqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@email", credential.Email);
+            cmd.Parameters.AddWithValue("@password", credential.OldPassword);
+            cmd.Parameters.AddWithValue("@newemail", credential.NewEmail);
+            con.Open();
+            int rowsAffected = cmd.ExecuteNonQuery();
+            if (rowsAffected >= 1)
+            {
+                status = true;
+            }
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            con.Close();
+        }
+        return status;
+    }
+
+
+    public User GetById(int id)
     {
         User user = new User();
         MySqlConnection con = new MySqlConnection();
@@ -104,7 +199,7 @@ public class UserRepository : IUserRepository
             MySqlCommand command = new MySqlCommand(query, con);
 
             command.Parameters.AddWithValue("@id", id);
-           
+
             MySqlDataReader reader = command.ExecuteReader();
 
             if (reader.Read())
@@ -149,19 +244,19 @@ public class UserRepository : IUserRepository
 
     public User GetUser(AuthenticateRequest request)
     {
-        User user = new User();
+        User user = null;
         MySqlConnection con = new MySqlConnection();
         con.ConnectionString = _conString;
         try
         {
-        
+
 
             string query = "SELECT * FROM users where email=@email AND password =@password";
             Console.WriteLine(query);
             Console.WriteLine(request.Email);
-             Console.WriteLine(request.Password);
+            Console.WriteLine(request.Password);
             con.Open();
-            
+
             MySqlCommand command = new MySqlCommand(query, con);
 
             command.Parameters.AddWithValue("@email", request.Email);
@@ -208,7 +303,7 @@ public class UserRepository : IUserRepository
     }
 
 
-public List<string> GetRolesOfUser(int userId)
+    public List<string> GetRolesOfUser(int userId)
     {
         List<string> roles = new List<string>();
 
@@ -220,11 +315,11 @@ public List<string> GetRolesOfUser(int userId)
         try
         {
 
-            string query ="SELECT role from roles where role_id in  (select role_id from user_roles where user_id=@userId)";
+            string query = "SELECT role from roles where role_id in  (select role_id from user_roles where user_id=@userId)";
             Console.WriteLine(query);
             con.Open();
             MySqlCommand cmd = new MySqlCommand(query, con);
-            cmd.Parameters.AddWithValue("@userId",userId);
+            cmd.Parameters.AddWithValue("@userId", userId);
             MySqlDataReader reader = cmd.ExecuteReader();
 
             while (reader.Read())
@@ -233,10 +328,10 @@ public List<string> GetRolesOfUser(int userId)
                 string roleName = reader["role"].ToString();
                 Console.WriteLine(roleName);
 
-                 roles.Add(roleName);
+                roles.Add(roleName);
             }
-           
-            
+
+
             reader.Close();
 
         }
@@ -265,7 +360,7 @@ public List<string> GetRolesOfUser(int userId)
         {
 
             Subject = new ClaimsIdentity(AllClaims(user)),
-             
+
             Expires = DateTime.UtcNow.AddDays(7),
 
             SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key),
@@ -278,19 +373,19 @@ public List<string> GetRolesOfUser(int userId)
 
     }
 
-      List<Claim> AllClaims(User user){
+    List<Claim> AllClaims(User user)
+    {
 
-            List<Claim> claims =new List<Claim>();
-            claims.Add( new Claim("id", user.UserId.ToString()) );
-            List<string> roles=  GetRolesOfUser(user.UserId);
-         
-
-         foreach(string role in roles){
-
-            claims.Add(new Claim("role",role));
-         }
-          return claims;
-      }
+        List<Claim> claims = new List<Claim>();
+        claims.Add(new Claim("id", user.UserId.ToString()));
+        List<string> roles = GetRolesOfUser(user.UserId);
 
 
+        foreach (string role in roles)
+        {
+
+            claims.Add(new Claim("role", role));
+        }
+        return claims;
+    }
 }

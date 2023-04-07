@@ -9,21 +9,28 @@ public class CartService:ICartService{
         this._repo=repo;
     }
 
-    public List<Cart> GetAll(){
-      return _repo.GetAll();
+    public List<Cart> GetAllCarts(){
+      return _repo.GetAllCarts();
      }
-    public Cart Get(int id)
+    public Cart GetCart(int id)
     {
-        return _repo.Get(id);
+        return _repo.GetCart(id);
     }
-    public bool AddToCart(Cart cart)
+    public bool AddItem(Cart cart, Item item)
     {
-        return _repo.AddToCart(cart);
+        return _repo.AddItem(cart,item);
     }
-    public bool Update(Cart cart)
+    
+
+    public bool UpdateItem(Cart cart, Item item)
     {
-        return _repo.Update(cart);
+        return _repo.UpdateItem(cart,item);
     }
+    public bool RemoveItem(Cart cart, Item item)
+    {
+        return _repo.RemoveItem(cart,item);
+    }
+
 }
 
     

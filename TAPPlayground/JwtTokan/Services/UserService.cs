@@ -1,39 +1,54 @@
 using ECommerceApp.Models;
 using ECommerceApp.Repositories;
 
-namespace ECommerceApp.Services{
+namespace ECommerceApp.Services
+{
 
 
 
     public class UserService : IUserService
     {
 
-        private readonly IUserRepository _userRepo;
-        public UserService(IUserRepository userRepo){
+        private readonly IUserRepository _userrepo;
+        public UserService(IUserRepository userrepo)
+        {
 
-         _userRepo =userRepo;
+            _userrepo = userrepo;
         }
 
 
         public AuthenticateResponse Authenticate(AuthenticateRequest request)
         {
-              return _userRepo.Authenticate(request);
+            return _userrepo.Authenticate(request);
         }
 
         public List<User> GetAll()
         {
-              return _userRepo.GetAll();
+            return _userrepo.GetAll();
         }
         public User GetUser(AuthenticateRequest request)
         {
-             return _userRepo.GetUser(request);
+            return _userrepo.GetUser(request);
         }
 
-           public User GetById(int id)
+        public User GetById(int id)
         {
-             return _userRepo.GetById(id);
+            return _userrepo.GetById(id);
         }
 
+        public bool ForgotPassword(User user)
+        {
+            return _userrepo.ForgotPassword(user);
+        }
 
+        public bool UpdatePassword(ChangedCredential credential)
+        {
+            return _userrepo.UpdatePassword(credential);
+        }
+
+        public bool UpdateEmail(ChangedCredential credential)
+        {
+            return _userrepo.UpdateEmail(credential);
+        }
     }
 }
