@@ -19,7 +19,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpGet]
-        [Route("getall")]
+        [Route("/getall")]
         public IEnumerable<OrderDetails> GetAll()
         {
             List<OrderDetails> orderDetails = _srv.GetAll();
@@ -27,7 +27,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpGet]
-        [Route("getorderdetails/{id}")]
+        [Route("/getorderdetails/{id}")]
         public OrderDetails GetById(int id)
         {
             OrderDetails orderDetail = _srv.GetById(id);
@@ -36,7 +36,7 @@ namespace ECommerceApp.Controllers
 
         [Authorize(Roles = Role.Customer)]
         [HttpPut]
-        [Route("update/{id}")]
+        [Route("/update/{id}")]
         public bool Update( int id,[FromBody] OrderDetails orderDetail)
         {
             OrderDetails oldOrderDetail = _srv.GetById(id);
@@ -50,7 +50,7 @@ namespace ECommerceApp.Controllers
 
         [Authorize(Roles = Role.Customer)]
         [HttpPost]
-        [Route("addorderdetails/")]
+        [Route("/addorderdetails/")]
         public bool Insert([FromBody] OrderDetails orderDetail)
         {
             bool status = _srv.Insert(orderDetail);
@@ -59,7 +59,7 @@ namespace ECommerceApp.Controllers
 
         [Authorize(Roles = Role.Customer)]
         [HttpDelete]
-        [Route("delete/{id}")]
+        [Route("/delete/{id}")]
         public bool Delete(int id)
         {
             bool status = _srv.DeleteByOrderDetailsId(id);

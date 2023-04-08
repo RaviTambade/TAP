@@ -8,7 +8,7 @@ namespace ECommerceApp.Controllers
 {
 
     [ApiController]
-    [Route("/api/[controller]")]
+    [Route("/api/[controller]")]     
     public class ProductsController : ControllerBase
 
     {
@@ -19,7 +19,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpGet]
-        [Route("getallproducts")] 
+        [Route("/getallproducts")] 
         public IEnumerable<Product> GetAllProducts()
         {
             List<Product> products = _productsrv.GetAll();
@@ -27,7 +27,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpGet]
-        [Route("getproductdetails/{id}")]
+        [Route("/getproductdetails/{id}")]
         public Product GetById(int id)
         {
             Product product = _productsrv.GetById(id);
@@ -36,7 +36,7 @@ namespace ECommerceApp.Controllers
 
         [Authorize(Roles = Role.Admin)]
         [HttpPut]
-        [Route("update/{id}")]
+        [Route("/update/{id}")]
         public bool Update(int id, [FromBody] Product product)
         {
             Product oldProduct = _productsrv.GetById(id);
@@ -51,7 +51,7 @@ namespace ECommerceApp.Controllers
 
         [Authorize(Roles = Role.Admin + "," + Role.Customer)]
         [HttpPost]
-        [Route("addproduct")]
+        [Route("/addproduct")]
         public bool Insert([FromBody] Product product)
         {
             bool status = _productsrv.Insert(product);
@@ -68,7 +68,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpPut]
-        [Route("hikeprice/{id}")]
+        [Route("/hikeprice/{id}")]
         public bool HikePrice(double id)
         {
             return _productsrv.HikePrice(id);
