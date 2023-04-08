@@ -1,5 +1,5 @@
 
-DROP database Ecommerce;
+DROP DATABASE IF EXISTS Ecommerce;
 CREATE DATABASE Ecommerce;
 USE Ecommerce;
 
@@ -343,7 +343,7 @@ select * from cart_items where cart_id=1;
 -- Logic for hiking price of each product in products table
 
 DELIMITER $$
-CREATE PROCEDURE hike_price(IN percentage decimal(5,2))
+CREATE PROCEDURE hike_price(IN percentage DOUBLE)
 BEGIN
 DECLARE nomorerows int default 0 ;
 DECLARE productId INT;
@@ -362,9 +362,8 @@ END LOOP hike_price;
 CLOSE hike_percent_cursor;
 END $$
 DELIMITER ;
-CALL hike_price(25);
+CALL hike_price(5.5);
 select * from products;
-
 
 ---------------------------------------------------------------------------------
 
