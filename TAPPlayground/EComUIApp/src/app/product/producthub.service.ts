@@ -42,4 +42,9 @@ export class ProductHubService {
     let url =  "http://localhost:5223/suppliers/GetAllSuppliers";
     return this.http.get<any>(url);
   }
+
+  hikePrice(id:number):Observable<any>{
+    let url= "http://localhost:5235/api/products/hikeprice/"+ id;
+    return this.http.put<any>(url,null);
+  }
 }

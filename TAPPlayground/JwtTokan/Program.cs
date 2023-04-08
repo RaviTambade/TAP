@@ -5,7 +5,7 @@ using ECommerceApp.Services;
 using ECommerceApp.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddCors();
 // Add services to the container.
   
 
@@ -76,7 +76,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseCors(x => x.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader());
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.UseAuthentication();      
