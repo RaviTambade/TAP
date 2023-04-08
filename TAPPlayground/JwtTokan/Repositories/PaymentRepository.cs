@@ -228,10 +228,10 @@ public class PaymentRepository : IPaymentRepository
           return status;
    }
 
-
-
-
-
+    public List<Payment> GetAllPayments(int id)
+    {
+        throw new NotImplementedException();
+    }
 }
 
 
