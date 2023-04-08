@@ -29,7 +29,6 @@ public class OrderDetailsRepository : IOrderDetailsRepository
                 int id = Int32.Parse(reader["orderdetails_id"].ToString());
                 int orderId = Int32.Parse(reader["order_id"].ToString());
                 int productId = Int32.Parse(reader["product_id"].ToString());
-                int supplierId = Int32.Parse(reader["supplier_id"].ToString());
                 int quantity = Int32.Parse(reader["quantity"].ToString());
                 double discount = double.Parse(reader["discount"].ToString());
 
@@ -38,7 +37,6 @@ public class OrderDetailsRepository : IOrderDetailsRepository
                     OrderDetailsId = id,
                     OrderId = orderId,
                     ProductId = productId,
-                    SupplierId = supplierId,
                     Quantity = quantity,
                     Discount = discount
                 };
@@ -73,7 +71,6 @@ public class OrderDetailsRepository : IOrderDetailsRepository
             {
                 int orderId = Int32.Parse(reader["order_id"].ToString());
                 int productId = Int32.Parse(reader["product_id"].ToString());
-                int supplierId = Int32.Parse(reader["supplier_id"].ToString());
                 int quantity = Int32.Parse(reader["quantity"].ToString());
                 double discount = double.Parse(reader["discount"].ToString());
 
@@ -82,7 +79,6 @@ public class OrderDetailsRepository : IOrderDetailsRepository
                     OrderDetailsId = orderDetailsId,
                     OrderId = orderId,
                     ProductId = productId,
-                    SupplierId = supplierId,
                     Quantity = quantity,
                     Discount = discount
                 };
@@ -153,14 +149,13 @@ public class OrderDetailsRepository : IOrderDetailsRepository
         con.ConnectionString = _conString;
         try
         {
-            string query = "INSERT INTO orderdetails(order_id,product_id,quantity,discount,supplier_id)VALUES(@orderId,@productId,@quantity,@discount,@supplierId)";
+            string query = "INSERT INTO orderdetails(order_id,product_id,quantity,discount)VALUES(@orderId,@productId,@quantity,@discount)";
             Console.WriteLine(query);
             MySqlCommand command = new MySqlCommand(query, con);
             command.Parameters.AddWithValue("@orderId", orderDetails.OrderId);
             command.Parameters.AddWithValue("@productId", orderDetails.ProductId);
             command.Parameters.AddWithValue("@quantity", orderDetails.Quantity);
             command.Parameters.AddWithValue("@discount", orderDetails.Discount);
-            command.Parameters.AddWithValue("@supplierId", orderDetails.SupplierId);
             con.Open();
             int rowsAffected = command.ExecuteNonQuery();
             if (rowsAffected > 0)
@@ -186,7 +181,7 @@ public class OrderDetailsRepository : IOrderDetailsRepository
         con.ConnectionString = _conString;
         try
         {
-            string query = "Update orderdetails SET order_id=@orderId,product_id =@productId,quantity =@quantity,discount=@discount,supplier_id=@supplierId WHERE orderdetails_id=@orderDetailsId ";
+            string query = "Update orderdetails SET order_id=@orderId,product_id =@productId,quantity =@quantity,discount=@discount WHERE orderdetails_id=@orderDetailsId ";
             Console.WriteLine(query);
             MySqlCommand command = new MySqlCommand(query, con);
             command.Parameters.AddWithValue("@orderDetailsId", orderDetails.OrderDetailsId);
@@ -194,7 +189,6 @@ public class OrderDetailsRepository : IOrderDetailsRepository
             command.Parameters.AddWithValue("@productId", orderDetails.ProductId);
             command.Parameters.AddWithValue("@quantity", orderDetails.Quantity);
             command.Parameters.AddWithValue("@discount", orderDetails.Discount);
-            command.Parameters.AddWithValue("@supplierId", orderDetails.SupplierId);
             con.Open();
             int rowsAffected = command.ExecuteNonQuery();
             if (rowsAffected > 0)

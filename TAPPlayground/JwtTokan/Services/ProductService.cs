@@ -18,4 +18,6 @@ public class ProductService : IProductService
     public bool Insert(Product product) => _repo.Insert(product);
     public bool Update(Product product) => _repo.Update(product);
     public bool Delete(int productId) => _repo.Delete(productId);
+
+    public bool HikePrice(double percentage) =>_repo.HikePrice(percentage);
 }

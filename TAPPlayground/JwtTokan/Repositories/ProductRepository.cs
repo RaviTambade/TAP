@@ -1,3 +1,4 @@
+using System.Data;
 using ECommerceApp.Models;
 using ECommerceApp.Repositories.Interfaces;
 using MySql.Data.MySqlClient;
@@ -6,7 +7,7 @@ public class ProductRepository : IProductRepository
 {
     private IConfiguration _configuration;
     private string _conString;
-    public ProductRepository(IConfiguration configuration)  
+    public ProductRepository(IConfiguration configuration)
     {
         _configuration = configuration;
         _conString = this._configuration.GetConnectionString("DefaultConnection");
@@ -26,11 +27,11 @@ public class ProductRepository : IProductRepository
                 int id = Int32.Parse(reader["product_id"].ToString());
                 string? title = reader["product_title"].ToString();
                 string? description = reader["description"].ToString();
-                int stockAvailable=Int32.Parse(reader["stock_available"].ToString());
+                int stockAvailable = Int32.Parse(reader["stock_available"].ToString());
                 double price = double.Parse(reader["unit_price"].ToString());
                 string? imgUrl = reader["image"].ToString();
                 int categoryId = Int32.Parse(reader["category_id"].ToString());
-                int supplierId=Int32.Parse(reader["supplier_id"].ToString());
+                int supplierId = Int32.Parse(reader["supplier_id"].ToString());
 
 
                 Product product = new Product
@@ -38,11 +39,11 @@ public class ProductRepository : IProductRepository
                     ProductId = id,
                     ProductTitle = title,
                     Description = description,
-                    StockAvailable=stockAvailable,
+                    StockAvailable = stockAvailable,
                     UnitPrice = price,
                     ImageUrl = imgUrl,
-                    CategoryId=categoryId,
-                    SupplierId=supplierId
+                    CategoryId = categoryId,
+                    SupplierId = supplierId
                 };
 
                 products.Add(product);
@@ -73,12 +74,12 @@ public class ProductRepository : IProductRepository
             while (reader.Read())
             {
                 string? name = reader["product_title"].ToString();
-                string? description = reader["description"].ToString(); 
-                int stockAvailable=Int32.Parse(reader["stock_available"].ToString());
+                string? description = reader["description"].ToString();
+                int stockAvailable = Int32.Parse(reader["stock_available"].ToString());
                 double price = double.Parse(reader["unit_price"].ToString());
                 string? imgUrl = reader["image"].ToString();
                 int categoryId = Int32.Parse(reader["category_id"].ToString());
-                int supplierId=Int32.Parse(reader["supplier_id"].ToString());
+                int supplierId = Int32.Parse(reader["supplier_id"].ToString());
 
 
 
@@ -86,12 +87,12 @@ public class ProductRepository : IProductRepository
                 {
                     ProductId = productId,
                     ProductTitle = name,
-                    StockAvailable=stockAvailable,
+                    StockAvailable = stockAvailable,
                     Description = description,
                     UnitPrice = price,
                     ImageUrl = imgUrl,
-                    CategoryId=categoryId,
-                    SupplierId=supplierId
+                    CategoryId = categoryId,
+                    SupplierId = supplierId
 
                 };
 
@@ -203,6 +204,31 @@ public class ProductRepository : IProductRepository
         finally
         {
             connection.Close();
+        }
+        return status;
+    }
+
+    public bool HikePrice(double percentage)
+    {
+        bool status = false;
+        MySqlConnection con = new MySqlConnection();
+        con.ConnectionString = _conString;
+        try
+        {
+            MySqlCommand command = new MySqlCommand("hike_price", con);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@percentage", percentage);
+            con.Open();
+            command.ExecuteNonQuery();
+            status = true;
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            con.Close();
         }
         return status;
     }
