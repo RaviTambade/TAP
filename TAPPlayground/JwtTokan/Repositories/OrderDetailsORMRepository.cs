@@ -113,7 +113,6 @@ public class OrderDetailsORMRepository : IOrderDetailsRepository
                     oldOrderDetails.OrderId=orderDetails.OrderId;
                     oldOrderDetails.ProductId=orderDetails.ProductId;
                     oldOrderDetails.Quantity=orderDetails.Quantity;
-                    oldOrderDetails.SupplierId=orderDetails.SupplierId;
                     oldOrderDetails.Discount=orderDetails.Discount;
                     context.SaveChanges();
                     status = true;

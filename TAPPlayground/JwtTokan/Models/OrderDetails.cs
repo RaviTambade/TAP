@@ -20,7 +20,5 @@ public class OrderDetails
     [Column("discount")]
     public double Discount { get; set; }
 
-    [Column("supplier_id")]
-    public int SupplierId { get; set; }
 
 }

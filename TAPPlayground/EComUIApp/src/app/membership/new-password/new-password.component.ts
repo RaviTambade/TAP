@@ -15,7 +15,7 @@ export class NewPasswordComponent {
 
   constructor(private svc: MembershipService) { }
 
-  onChangePassword(form: any) {
+  onForgotPassword(form: any) {
 
     if (this.password.length < 8) {
       console.log(form)
@@ -30,7 +30,7 @@ export class NewPasswordComponent {
         password: this.password
       }
       console.log(user);
-      this.svc.changePassword(user).subscribe((response) => {
+      this.svc.forgotPassword(user).subscribe((response) => {
         console.log(response);
         if (response) {
           alert("Password changed")

@@ -7,15 +7,14 @@ import { ProductHubService } from '../producthub.service';
   styleUrls: ['./hikeprice.component.css']
 })
 export class HikepriceComponent  {
-percentage:number |undefined;
+percentage:number =0;
 status:boolean |undefined;
 constructor(private svc:ProductHubService){}
-hikePrice(id: any) {
+hikePrice(id: number) {
   this.svc.hikePrice(id).subscribe((response) => {
     this.status= response;
     console.log(response);
     if (response) {
-      window.location.reload();
       alert("price hiked successfully")
     }
     else {
