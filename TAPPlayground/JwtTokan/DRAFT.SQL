@@ -343,6 +343,34 @@ select * from  orderdetails;
 select * from cart_items where cart_id=1;
 
 
+-- Logic for hiking price of each product in products table
+
+DELIMITER $$
+CREATE PROCEDURE HikePrice(IN pricePercentage BIGINT )
+BEGIN
+DECLARE noMoreRow INT default 0; 
+DECLARE orderId INT;
+DECLARE productId INT;
+DECLARE quantity INT;
+DECLARE custId INT;
+DECLARE products_cursor CURSOR  FOR SELECT unitprice FROM products; 
+DECLARE CONTINUE HANDLER FOR NOT FOUND SET noMoreRow = 1;
+ SELECT unit_Price INTO currentPrice FR
+ Udpate INTO orders (order_date, cust_id,total,status) VALUES (now(),custId,0,'initiated');
+ SET orderId=last_insert_id();
+OPEN cart_cursor ;
+cart_items:LOOP
+    FETCH cart_cursor INTO productId,quantity;
+    IF noMoreRow=1 THEN 
+		LEAVE cart_items;
+    END IF;
+     INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(orderId,productId,quantity); 
+END LOOP cart_items;
+CLOSE cart_cursor;
+END $$
+DELIMITER ;
+
+
 
 /*19)This Store procedure show Transaction History*/
 DELIMITER $$
