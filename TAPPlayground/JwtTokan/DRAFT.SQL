@@ -333,11 +333,9 @@ END LOOP cart_items;
 CLOSE cart_cursor;
 END $$
 DELIMITER ;
-
-
 CALL CreateOrder(1);
 
-DROP PROCEDURE CreateOrder;
+
 select * from orders;
 select * from  orderdetails;
 select * from cart_items where cart_id=1;
@@ -346,31 +344,26 @@ select * from cart_items where cart_id=1;
 -- Logic for hiking price of each product in products table
 
 DELIMITER $$
-CREATE PROCEDURE HikePrice(IN pricePercentage BIGINT )
+CREATE PROCEDURE hike_price(IN percentage decimal(5,2))
 BEGIN
-DECLARE noMoreRow INT default 0; 
-DECLARE orderId INT;
+DECLARE nomorerows int default 0 ;
 DECLARE productId INT;
-DECLARE quantity INT;
-DECLARE custId INT;
-DECLARE products_cursor CURSOR  FOR SELECT unitprice FROM products; 
-DECLARE CONTINUE HANDLER FOR NOT FOUND SET noMoreRow = 1;
- SELECT unit_Price INTO currentPrice FR
- Udpate INTO orders (order_date, cust_id,total,status) VALUES (now(),custId,0,'initiated');
- SET orderId=last_insert_id();
-OPEN cart_cursor ;
-cart_items:LOOP
-    FETCH cart_cursor INTO productId,quantity;
-    IF noMoreRow=1 THEN 
-		LEAVE cart_items;
+DECLARE unitPrice double;
+DECLARE hike_percent_cursor CURSOR  FOR SELECT unit_price,product_id FROM products ; 
+ DECLARE CONTINUE HANDLER FOR NOT FOUND SET nomorerows= 1;
+OPEN hike_percent_cursor ;
+hike_price:LOOP
+    FETCH hike_percent_cursor INTO unitPrice,productId;
+    IF nomorerows THEN 
+		LEAVE hike_price;
     END IF;
-     INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(orderId,productId,quantity); 
-END LOOP cart_items;
-CLOSE cart_cursor;
+    SET unitPrice=unitPrice+(unitPrice*percentage/100);
+    UPDATE products SET unit_price=unitPrice WHERE product_id=productId;
+END LOOP hike_price;
+CLOSE hike_percent_cursor;
 END $$
 DELIMITER ;
-
-CALL HikePrice(0.25);
+CALL hike_price(25);
 select * from proucts;
 
 
