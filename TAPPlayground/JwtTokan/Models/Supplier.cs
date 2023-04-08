@@ -14,6 +14,8 @@ public string CompanyName{get;set;}
 public string SupplierName{get;set;}
     [Column("contact_number")]
 public string ContactNumber{get;set;}
+public string Password{get;set;}
+
     [Column("email")]
 public string Email{get;set;}
     [Column("address")]

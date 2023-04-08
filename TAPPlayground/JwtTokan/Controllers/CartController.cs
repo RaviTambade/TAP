@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace ECommerceApp.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("/api/[controller]")]
     public class CartController : ControllerBase
     {
         private readonly ICartService _cartsrv;
@@ -16,7 +16,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpGet]
-        [Route("/api/cart/GetAllCartItems")]
+        [Route("getallcartitems")]
         public IEnumerable<Cart> GetAllCarts()
         {
             List<Cart> carts = _cartsrv.GetAllCarts();
@@ -24,7 +24,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpGet]
-        [Route("/api/cart/GetCartDetails/{id}")]
+        [Route("getcartdetails/{id}")]
         public Cart GetCart(int id)
         {
             Cart cart = _cartsrv.GetCart(id);
@@ -32,7 +32,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpPost]
-        [Route("/api/cart/Addtocart/{id}")]
+        [Route("addtocart/{id}")]
         public bool AddToCart(int id,Item item)
         {
             Cart theCart=_cartsrv.GetCart(id);
@@ -41,7 +41,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpPut]
-        [Route("/api/cart/update/{id}")]
+        [Route("update/{id}")]
         public bool UpdateCart(int id,Item item)
         {
             Cart theCart=_cartsrv.GetCart(id);
@@ -50,11 +50,18 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpPost]
-        [Route("/api/cart/delete/{id}")]
+        [Route("delete/{id}")]
         public bool RemoveFromCart(int id,Item item)
         {
             Cart theCart=_cartsrv.GetCart(id);
             bool status = _cartsrv.RemoveItem(theCart,item);
+            return status;
+        }
+
+          [HttpPost]
+        [Route("createorder/{id}")]
+        public  bool CreateOrder(int id){
+            bool status=_cartsrv.CreateOrder(id);
             return status;
         }
 

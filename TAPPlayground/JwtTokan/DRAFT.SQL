@@ -1,8 +1,8 @@
--- Active: 1678361403571@@127.0.0.1@3306@ecommerce
+-- Active: 1677916902963@@127.0.0.1@3306@ecommerce
 
-  CREATE DATABASE Ecommerce;
- --drop database Ecommerce;
-USE Ecommerce;
+--   CREATE DATABASE Ecommerce;
+--  drop database Ecommerce;
+-- USE Ecommerce;
 
 CREATE TABLE users( user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, email VARCHAR(25) UNIQUE NOT NULL, contact_number VARCHAR(20) NOT NULL ,password VARCHAR(15) NOT NULL);
 CREATE TABLE roles(role_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, role varchar(50));
@@ -17,12 +17,12 @@ CREATE TABLE products (product_id INT PRIMARY KEY AUTO_INCREMENT,product_title V
 
 -- Create Tables  to store shopping cart related information
 
-CREATE TABLE carts( cart_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, user_id INT NOT NULL,CONSTRAINT fk_user_id_3 FOREIGN KEY (user_id) REFERENCES users(user_id) ON UPDATE CASCADE ON DELETE CASCADE);
+CREATE TABLE carts( cart_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, cust_id INT NOT NULL,CONSTRAINT fk_cust_id_3 FOREIGN KEY (cust_id) REFERENCES customers(cust_id) ON UPDATE CASCADE ON DELETE CASCADE);
 CREATE TABLE cart_items( item_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, cart_id INT NOT NULL,CONSTRAINT fk_cart_id_3 FOREIGN KEY (cart_id) REFERENCES carts(cart_id) ON UPDATE CASCADE ON DELETE CASCADE, product_id INT NOT NULL,CONSTRAINT fk_product_id_3 FOREIGN KEY (product_id) REFERENCES products(product_id) ON UPDATE CASCADE ON DELETE CASCADE, quantity INT);
 
 
 CREATE TABLE orders(order_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,order_date DATETIME DEFAULT CURRENT_TIMESTAMP,shipped_date DATETIME DEFAULT CURRENT_TIMESTAMP,cust_id INT NOT NULL,CONSTRAINT fk_customer_id FOREIGN KEY (cust_id) REFERENCES customers(cust_id) ON UPDATE CASCADE ON DELETE CASCADE,total double ,status ENUM('delivered','initiated','inprogress','cancelled','approved') NOT NULL);
-CREATE TABLE orderdetails(orderdetails_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,order_id INT NOT NULL,CONSTRAINT fk_order_id FOREIGN KEY (order_id) REFERENCES orders(order_id) ON UPDATE CASCADE ON DELETE CASCADE,product_id INT NOT NULL,CONSTRAINT fk_product_id FOREIGN KEY (product_id) REFERENCES products(product_id) ON UPDATE CASCADE ON DELETE CASCADE,supplier_id INT NOT NULL,CONSTRAINT fk_supplier2_id FOREIGN KEY (supplier_id) REFERENCES suppliers(supplier_id) ON UPDATE CASCADE ON DELETE CASCADE,quantity INT NOT NULL,discount float default 0);  
+CREATE TABLE orderdetails(orderdetails_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,order_id INT NOT NULL,CONSTRAINT fk_order_id FOREIGN KEY (order_id) REFERENCES orders(order_id) ON UPDATE CASCADE ON DELETE CASCADE,product_id INT NOT NULL,CONSTRAINT fk_product_id FOREIGN KEY (product_id) REFERENCES products(product_id) ON UPDATE CASCADE ON DELETE CASCADE,quantity INT NOT NULL,discount float default 0);  
 CREATE TABLE payments(payment_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,payment_date DATETIME, payment_mode ENUM('cash on delivery','online payment'),transection_id INT NOT NULL,order_id INT NOT NULL, CONSTRAINT fk_order_id_1 FOREIGN KEY (order_id) REFERENCES orders(order_id) ON UPDATE CASCADE ON DELETE CASCADE);
 CREATE TABLE shippers(shipper_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,company_name VARCHAR(25),contact_number VARCHAR (20),email VARCHAR(50),password VARCHAR(15) NOT NULL,account_number BIGINT NOT NULL UNIQUE,CONSTRAINT account_number01 FOREIGN KEY(account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE);
 CREATE TABLE transactions(transaction_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,from_account_number BIGINT NOT NULL ,CONSTRAINT fk_account_no FOREIGN KEY(from_account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE,to_account_number BIGINT NOT NULL ,CONSTRAINT fk_acountno2 FOREIGN KEY(to_account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE, transaction_date DATETIME,amount DOUBLE);
@@ -170,11 +170,11 @@ INSERT INTO products(product_title,description,stock_available,unit_price,image,
 INSERT INTO products(product_title,description,stock_available,unit_price,image,category_id,supplier_id)VALUES('Firdge','Kitchen Use',200,150,'./images/Samsung.jpg',4,4);
 
 
-INSERT INTO carts(user_id) VALUES (1);
-INSERT INTO carts(user_id) VALUES (2);
-INSERT INTO carts(user_id) VALUES (3);
-INSERT INTO carts(user_id) VALUES (4);
-INSERT INTO carts(user_id) VALUES (5);
+INSERT INTO carts(cust_id) VALUES (1);
+INSERT INTO carts(cust_id) VALUES (2);
+INSERT INTO carts(cust_id) VALUES (3);
+INSERT INTO carts(cust_id) VALUES (4);
+INSERT INTO carts(cust_id) VALUES (5);
 
 INSERT INTO cart_items(cart_id,product_id,quantity) VALUES (1,2,5);
 INSERT INTO cart_items(cart_id,product_id,quantity) VALUES (1,5,50);
@@ -206,28 +206,28 @@ INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-06-04  08:35:2
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-01-16  09:35:25', 6,85.00,'cancelled');
 INSERT INTO orders(order_date, cust_id,total,status)VALUES ('2023-05-15  11:35:25', 7,14.00,'inprogress');
 
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(1, 1, 70,1);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(1, 2, 700,2);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(2, 3, 78,3);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(3, 4, 78,4);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(3, 1, 78,4);
-INSERT INTO orderdetails(order_id,product_id,quantity,supplier_id) VALUES (7,2,2000,1);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(12, 1, 70,2);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(8, 2, 700,3);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(2, 3, 88,4);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(2, 4, 78,3);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 4, 90,3);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(10, 2, 45,4);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 3, 78,1);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(5, 2, 45,2);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(20, 4, 96,4);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(7, 3, 25,1);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 2, 46,4);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 3, 35,4);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 12, 35,3);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 15, 35,4);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 8, 35,4);
-INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(4, 7, 35,4);
+INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(1, 1, 70);
+INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(1, 2, 700);
+INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(2, 3, 78);
+INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(3, 4, 78);
+INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(3, 1, 78);
+INSERT INTO orderdetails(order_id,product_id,quantity) VALUES (7,2,2000);
+INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(12, 1, 70);
+INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(8, 2, 700);
+INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(2, 3, 88);
+INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(2, 4, 78);
+INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(4, 4, 90);
+INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(10, 2, 45);
+INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(4, 3, 78);
+INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(5, 2, 45);
+INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(20, 4, 96);
+INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(7, 3, 25);
+INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(4, 2, 46);
+INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(4, 3, 35);
+INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(4, 12, 35);
+INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(4, 15, 35);
+INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(4, 8, 35);
+INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(4, 7, 35);
 
 INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('2022-05-03','cash on delivery',1234,1);
 INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('2022-06-12','online payment',987514,2);
@@ -308,7 +308,43 @@ CALL get_order_by_cust (1,@delivered,@cancelled,@inprogress,@initiated);
 
 SELECT @delivered , @cancelled ,@inprogress, @initiated;
 
-/*18)This Store procedure show Transaction History*/
+
+DELIMITER $$
+CREATE PROCEDURE CreateOrder(IN cartId BIGINT )
+BEGIN
+DECLARE noMoreRow INT default 0; 
+DECLARE orderId INT;
+DECLARE productId INT;
+DECLARE quantity INT;
+DECLARE custId INT;
+DECLARE cart_cursor CURSOR  FOR SELECT cart_items.product_id,cart_items.quantity FROM cart_items WHERE cart_id=cartId; 
+DECLARE CONTINUE HANDLER FOR NOT FOUND SET noMoreRow = 1;
+ SELECT cust_id INTO custId FROM carts WHERE cart_id=cartId;
+ INSERT INTO orders (order_date, cust_id,total,status) VALUES (now(),custId,0,'initiated');
+ SET orderId=last_insert_id();
+OPEN cart_cursor ;
+cart_items:LOOP
+    FETCH cart_cursor INTO productId,quantity;
+    IF noMoreRow=1 THEN 
+		LEAVE cart_items;
+    END IF;
+     INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(orderId,productId,quantity); 
+END LOOP cart_items;
+CLOSE cart_cursor;
+END $$
+DELIMITER ;
+
+
+CALL CreateOrder(1);
+
+DROP PROCEDURE CreateOrder;
+select * from orders;
+select * from  orderdetails;
+select * from cart_items where cart_id=1;
+
+
+
+/*19)This Store procedure show Transaction History*/
 DELIMITER $$
 CREATE PROCEDURE TransferMoney(IN from_account_number BIGINT ,IN to_account_number BIGINT, IN transaction_date DATETIME,IN amount DOUBLE )
 BEGIN 
@@ -454,3 +490,4 @@ select customers.first_name,customers.last_name,customers.email,customers.contac
 select customers.first_name,customers.last_name,customers.email,customers.contact_number,accounts.account_number,accounts.ifsc_code,accounts.balance FROM customers  INNER JOIN  accounts ON accounts.account_number=customers.account_number;-- WHERE customers.cust_id=1; 
 
 SELECT suppliers.supplier_id,products.product_id,products.product_title,SUM(orderdetails.quantity) FROM (products INNER JOIN orderdetails ON products.product_id=orderdetails.product_id)INNER JOIN suppliers ON products.supplier_id=suppliers.supplier_id   WHERE suppliers.supplier_name="Akshay" GROUP BY products.product_id;
+SELECT * FROM cart_items;

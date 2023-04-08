@@ -22,7 +22,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpGet]
-        [Route("/api/suppliers/getallsuppliers")]
+        [Route("getallsuppliers")]
         public IEnumerable<Supplier> GetAllSuppliers()
         {
             List<Supplier> suppliers = _srv.GetAll();
@@ -30,7 +30,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpGet]
-        [Route("/api/suppliers/getdetails/{id}")]
+        [Route("getdetails/{id}")]
         public Supplier GetById(int id)
         {
             Supplier supplier = _srv.GetById(id);
@@ -39,7 +39,7 @@ namespace ECommerceApp.Controllers
 
         [Authorize(Roles = Role.Admin)]
         [HttpPut]
-        [Route("/api/suppliers/update/{id}")]
+        [Route("update/{id}")]
         public bool Update( int id,[FromBody] Supplier supplier)
         {
             Supplier oldSupplier = _srv.GetById(id);
@@ -53,7 +53,7 @@ namespace ECommerceApp.Controllers
 
         [Authorize(Roles = Role.Admin)]
         [HttpPost]
-        [Route("/api/suppliers/addsupplier")]
+        [Route("addsupplier")]
         public bool Insert([FromBody] Supplier supplier)
         {
             bool status = _srv.Insert(supplier);
@@ -62,7 +62,7 @@ namespace ECommerceApp.Controllers
 
         [Authorize(Roles = Role.Admin)]
         [HttpDelete]
-        [Route("/api/suppliers/delete/{id}")]
+        [Route("delete/{id}")]
         public bool Delete(int id)
         {
             bool status = _srv.Delete(id);
