@@ -8,7 +8,7 @@ namespace ECommerceApp.Controllers
 {
 
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("/api/[controller]")]
     public class ProductsController : ControllerBase
 
     {
@@ -19,7 +19,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpGet]
-        [Route("/api/products/getallproducts")]
+        [Route("getallproducts")] 
         public IEnumerable<Product> GetAllProducts()
         {
             List<Product> products = _productsrv.GetAll();
@@ -27,7 +27,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpGet]
-        [Route("/api/products/getproductdetails/{id}")]
+        [Route("getproductdetails/{id}")]
         public Product GetById(int id)
         {
             Product product = _productsrv.GetById(id);
@@ -36,21 +36,22 @@ namespace ECommerceApp.Controllers
 
         [Authorize(Roles = Role.Admin)]
         [HttpPut]
-        [Route("/api/products/update/{id}")]
-        public bool Update( int id,[FromBody] Product product)
+        [Route("update/{id}")]
+        public bool Update(int id, [FromBody] Product product)
         {
             Product oldProduct = _productsrv.GetById(id);
-            if(oldProduct.ProductId==0){
+            if (oldProduct.ProductId == 0)
+            {
                 return false;
             }
-            product.ProductId=id;
+            product.ProductId = id;
             bool status = _productsrv.Update(product);
             return status;
         }
 
-        [Authorize(Roles = Role.Admin+","+Role.Customer)]
+        [Authorize(Roles = Role.Admin + "," + Role.Customer)]
         [HttpPost]
-        [Route("/api/products/addproduct/")]
+        [Route("addproduct")]
         public bool Insert([FromBody] Product product)
         {
             bool status = _productsrv.Insert(product);
@@ -59,11 +60,18 @@ namespace ECommerceApp.Controllers
 
         [Authorize(Roles = Role.Admin)]
         [HttpDelete]
-        [Route("/api/products/delete/{id}")]
+        [Route("delete/{id}")]
         public bool Delete(int id)
         {
             bool status = _productsrv.Delete(id);
             return status;
+        }
+
+        [HttpPut]
+        [Route("hikeprice/{id}")]
+        public bool HikePrice(double id)
+        {
+            return _productsrv.HikePrice(id);
         }
     }
 }

@@ -7,4 +7,6 @@ public interface IProductRepository{
     bool Insert(Product product);
     bool Update(Product product);
     bool Delete(int ProductId);
+
+    bool HikePrice(double percentage);
 }
