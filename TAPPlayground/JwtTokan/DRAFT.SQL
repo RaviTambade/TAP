@@ -370,6 +370,11 @@ CLOSE cart_cursor;
 END $$
 DELIMITER ;
 
+CALL HikePrice(0.25);
+select * from proucts;
+
+
+---------------------------------------------------------------------------------
 
 
 /*19)This Store procedure show Transaction History*/
