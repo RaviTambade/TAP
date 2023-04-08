@@ -1,46 +1,60 @@
 # Day - 21/02/2023
 
 Assigning Projects to Every one 
+Project and team Identification
+Identification of each project
 1)Rohit Gore - Ticket Booking App
 2)Akshay Tanpure - Time Sheet management
 3)Rushikesh Chikane - Task Management
 4)Vedant Yadav - WearHouse Management System
 5)Akash Ajab / Pragati Bangar - ESeva Krushi Kendra
-6)Abhay + Sahil + Shubham -
+6)Abhay + Sahil + Shubham - E_AgroServices
 
-# Day - 22-23-24/02/2023
-         
-1)Discussion on how our projects to ddo work? 
-2)Writing setups of projects in text file and drawings also.
-3)dooing small type of srs documentation of our projects
+# Day - 22
+1)Discussion on how our projects to do work? 
+2)Defining scope of Project
+
+2)Setting Roadmap for project execution.
+)Creating SRS( System Requirement Specification) Document
+
+
+# 23/02/2033
+2)Writing setups of projects in text file 
+)SRS Document correction.
+)Mockup Screen for project
+)SRS Document correction.
+
+24/042/023
+)Database Design with ER Diagrams
 
 # Day -25/02/2023
 
 1)Creating Tables for our project in Database.
+Basic skeleton MVC application
+
 2)create mvc application
 3)Create Show all function in application
 4)Auth Controller (for that purpose new application was created , name was authcontroller)
-5)Inb this Auth Controller Login and Registration process wasd done
+5)In this Auth Controller Login and Registration process was done
 
 # Day - 26/02/2023
-
+Gettogether at Transflower Farms
 The great Meeting with all Tap Members and Mentor in Tambade Mala.
 
 # Day - 27/02/2023
- 
-1)Dooing Crud Operations for Classes in our projects
+ 1)Dooing Crud Operations for Classes in our projects
 
 # Day - 28/02/2023
-
+State Management in asp.net application
 1)Creating new project for session Management
 2)Learning and Understanding Session and Cokies from sir and team mambers
 
 # Day - 01/03/2023
-
-1)Dooing peactice and hands-on on session management processing
-2)Discussion on Ecommerce application
+1)Dooing practice and hands-on on session management processing
+____________________________________________________________________________________________________________
+2)Discussion on ECommerce application
 3)Discussion on OrderProcession for Ecommerce Projcet
-4)Today dooing orderprocession and shoping cart process on Abhays pc while screen shearing.
+4)Today doing orderprocessing and shoping cart process on Abhays pc while screen shearing.
 4)Ravi sir Assigning us task for gooing through notes of Agile Methodology and Scrum Framework.
 
 # Day - 02-03-04-05/03/2023
@@ -54,8 +68,8 @@ The great Meeting with all Tap Members and Mentor in Tambade Mala.
 2)Implementing Trigger and store proceduers.
 
 # Day - 08/03/2023
-
-1) Creating Transaction Table in Ecommerce project
+1:Database Designing 
+2) Creating Transaction Table in Ecommerce project
  
 # Day - 09/03/2023
 
@@ -80,12 +94,16 @@ The great Meeting with all Tap Members and Mentor in Tambade Mala.
 1) Today Backend Process of Ecommerce project will start (dotnet)
 2) Every one have assigned by a controller like (rohits- Transcation, Akshay- shipper, Pragati- Products etc)
 3) ans starting doing crud operation api's like getall, getby id, insert , update
+____________________________________________________________________________________________________________
+
+
+
 
 # Day - 14/03/2023
 
 1) Completing rest api task .
 2)solving dateTime problem by using -- ToString(,system.Globalization.CulturalInfo.InverientCulture.
-3) .ToShort Date();
+3) .ToShort Date();/ToLong Date();
 
 # DAy - 15/03/2023
 
@@ -101,8 +119,9 @@ Day - 16-17-18-19/03/2023
 
 # Day - 20/03/2023
 
-1) Task - Connection String Dependincy Injection - changes in appsetting.Json/Employee Repositories
-2) Task - Parameterized Qursy - Changes in every query
+1: Redisgning code with the help of Design patterns clean code statergy & SOLID principle.
+2: Task - Connection String Dependincy Injection - changes in appsetting.Json/Employee Repositories
+3: Task - Parameterized Qursy - Changes in every query
 
 # Day - 21/03/2023
 
@@ -110,6 +129,8 @@ Day - 16-17-18-19/03/2023
 2) Entity framework in Employee class - model - Repositories - Services
 3) After that Ravi sir Shows small demo on angular and then share a tutorials of angular
 4) Today Rohit givs a 10 minute disussion on their topic for soft skill developement
+
+_____________________________________________________________________________________________________
 
 # Day - 22-23-24/03/2023
 
@@ -157,6 +178,10 @@ Day - 16-17-18-19/03/2023
 3) Routing used for mapping ore pages in single page web server
 4) Nested routing is also used for nesting our pages one by one 
 
+
+____________________________________________________________________________________________________________
+
+
 # Day - 02/04/2023
 
 1) Task - JWTToken , Rolls Management
@@ -176,4 +201,24 @@ Day - 16-17-18-19/03/2023
 3) Creating Rest Api for rolls in jwt token 
 4) Understanding Debuging process for web app from sahil
 
- 
+# Day - 06/04/2023
+
+1) Creating Cart CVontroller in jwt token
+2) Creating Cart Controller CRUD Operations
+3) Creating Cart Controller Repo + Services.
+
+
+_____________________________________________________________________________________________________
+
+
+# Day - 07/04/2023
+
+1) Creating Store procedure for Cart in Database  
+2:Using CURSOR in Sql proceduers.
+
+
+
+08/04/2023
+Write a stored procedure to hike price of each product by some percentage
+
+
