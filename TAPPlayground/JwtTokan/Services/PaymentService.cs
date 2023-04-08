@@ -15,4 +15,9 @@ public class PaymentService:IPaymentService{
     public bool InsertPayments(Payment payment)=>_repo.InsertPayments(payment);
     public bool UpdatePayment(Payment payment)=>_repo.UpdatePayment(payment);
     public bool DeletePayment(int id)=>_repo.DeletePayment(id);
+
+    public List<Payment> GetAllPayments(int id)
+    {
+        throw new NotImplementedException();
+    }
 }

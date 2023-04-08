@@ -1,8 +1,7 @@
--- Active: 1677916902963@@127.0.0.1@3306@ecommerce
 
---   CREATE DATABASE Ecommerce;
---  drop database Ecommerce;
--- USE Ecommerce;
+DROP database Ecommerce;
+CREATE DATABASE Ecommerce;
+USE Ecommerce;
 
 CREATE TABLE users( user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, email VARCHAR(25) UNIQUE NOT NULL, contact_number VARCHAR(20) NOT NULL ,password VARCHAR(15) NOT NULL);
 CREATE TABLE roles(role_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, role varchar(50));
@@ -247,16 +246,16 @@ INSERT INTO shippers(company_name,contact_number,email,password,account_number)V
     and then updating stock_available of product by substracting  quantity of product bought by customer   */
 
 DELIMITER $$
-CREATE PROCEDURE UpdateInventory(IN order_id INT ,IN product_id INT, IN quantity INT,IN supplier_id INT)
+CREATE PROCEDURE UpdateInventory(IN order_id INT ,IN product_id INT, IN quantity INT)
 BEGIN 
 START TRANSACTION;
-INSERT INTO orderdetails(order_id,product_id,quantity,supplier_id) VALUES(order_id,product_id,quantity,supplier_id);
+INSERT INTO orderdetails(order_id,product_id,quantity) VALUES(order_id,product_id,quantity);
 UPDATE products SET stock_available=stock_available-quantity WHERE products.product_id = product_id;
 COMMIT;
 END $$
 DELIMITER ;
 
-CALL UpdateInventory(1,4,5000,1);
+CALL UpdateInventory(1,4,5000);
 /*  This procedure return count of orders by its status (delivered,cancelled,inprogress,initiated) of a customer*/
 
 
@@ -333,15 +332,41 @@ END LOOP cart_items;
 CLOSE cart_cursor;
 END $$
 DELIMITER ;
-
-
 CALL CreateOrder(1);
 
-DROP PROCEDURE CreateOrder;
+
 select * from orders;
 select * from  orderdetails;
 select * from cart_items where cart_id=1;
 
+
+-- Logic for hiking price of each product in products table
+
+DELIMITER $$
+CREATE PROCEDURE hike_price(IN percentage decimal(5,2))
+BEGIN
+DECLARE nomorerows int default 0 ;
+DECLARE productId INT;
+DECLARE unitPrice double;
+DECLARE hike_percent_cursor CURSOR  FOR SELECT unit_price,product_id FROM products ; 
+ DECLARE CONTINUE HANDLER FOR NOT FOUND SET nomorerows= 1;
+OPEN hike_percent_cursor ;
+hike_price:LOOP
+    FETCH hike_percent_cursor INTO unitPrice,productId;
+    IF nomorerows THEN 
+		LEAVE hike_price;
+    END IF;
+    SET unitPrice=unitPrice+(unitPrice*percentage/100);
+    UPDATE products SET unit_price=unitPrice WHERE product_id=productId;
+END LOOP hike_price;
+CLOSE hike_percent_cursor;
+END $$
+DELIMITER ;
+CALL hike_price(25);
+select * from products;
+
+
+---------------------------------------------------------------------------------
 
 
 /*19)This Store procedure show Transaction History*/
@@ -370,7 +395,6 @@ select * from categories;
 select * from accounts;
 
 
-SELECT suppliers.supplier_id,suppliers.company_name,suppliers.supplier_name,orderdetails.orderdetails_id,orderdetails.order_id,orderdetails.product_id FROM suppliers INNER JOIN orderdetails ON suppliers.supplier_id=orderdetails.supplier_id WHERE product_id=1;
 
 
 /*1)Retrive List of Customers that made purcheses after the date 2023-03-03 */
