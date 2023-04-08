@@ -6,7 +6,7 @@ Assigning Projects to Every one
 3)Rushikesh Chikane - Task Management
 4)Vedant Yadav - WearHouse Management System
 5)Akash Ajab / Pragati Bangar - ESeva Krushi Kendra
-6)Abhay + Sahil + Shubham -
+6)Abhay + Sahil + Shubham - E_AgroServices
 
 # Day - 22-23-24/02/2023
          
@@ -20,7 +20,7 @@ Assigning Projects to Every one
 2)create mvc application
 3)Create Show all function in application
 4)Auth Controller (for that purpose new application was created , name was authcontroller)
-5)Inb this Auth Controller Login and Registration process wasd done
+5)In this Auth Controller Login and Registration process was done
 
 # Day - 26/02/2023
 
@@ -54,8 +54,8 @@ The great Meeting with all Tap Members and Mentor in Tambade Mala.
 2)Implementing Trigger and store proceduers.
 
 # Day - 08/03/2023
-
-1) Creating Transaction Table in Ecommerce project
+1:Database Designing 
+2) Creating Transaction Table in Ecommerce project
  
 # Day - 09/03/2023
 
@@ -85,7 +85,7 @@ The great Meeting with all Tap Members and Mentor in Tambade Mala.
 
 1) Completing rest api task .
 2)solving dateTime problem by using -- ToString(,system.Globalization.CulturalInfo.InverientCulture.
-3) .ToShort Date();
+3) .ToShort Date();/ToLong Date();
 
 # DAy - 15/03/2023
 
@@ -101,8 +101,9 @@ Day - 16-17-18-19/03/2023
 
 # Day - 20/03/2023
 
-1) Task - Connection String Dependincy Injection - changes in appsetting.Json/Employee Repositories
-2) Task - Parameterized Qursy - Changes in every query
+1: Redisgning code with the help of Design patterns clean code statergy & SOLID principle.
+2: Task - Connection String Dependincy Injection - changes in appsetting.Json/Employee Repositories
+3: Task - Parameterized Qursy - Changes in every query
 
 # Day - 21/03/2023
 
@@ -185,3 +186,4 @@ Day - 16-17-18-19/03/2023
 # Day - 07/04/2023
 
 1) Creating Store procedure for Cart in Database  
+2:Using CURSOR in Sql proceduers.
