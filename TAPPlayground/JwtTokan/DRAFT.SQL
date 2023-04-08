@@ -342,7 +342,6 @@ select * from cart_items where cart_id=1;
 
 
 -- Logic for hiking price of each product in products table
-
 DELIMITER $$
 CREATE PROCEDURE hike_price(IN percentage decimal(5,2))
 BEGIN
@@ -350,7 +349,7 @@ DECLARE nomorerows int default 0 ;
 DECLARE productId INT;
 DECLARE unitPrice double;
 DECLARE hike_percent_cursor CURSOR  FOR SELECT unit_price,product_id FROM products ; 
- DECLARE CONTINUE HANDLER FOR NOT FOUND SET nomorerows= 1;
+DECLARE CONTINUE HANDLER FOR NOT FOUND SET nomorerows= 1;
 OPEN hike_percent_cursor ;
 hike_price:LOOP
     FETCH hike_percent_cursor INTO unitPrice,productId;

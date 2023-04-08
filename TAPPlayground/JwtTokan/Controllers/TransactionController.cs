@@ -8,7 +8,7 @@ namespace ECommerceApp.Controllers
 {
 
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("/api/[controller]")]
     public class TransactionController : ControllerBase
     {
         private readonly ITransactionService _transactionsrv;
@@ -18,7 +18,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpGet]
-        [Route("/api/transactions/GetAllTransactions")]
+        [Route("gettransactions")]
         public IEnumerable<Transaction> GetAllTransactions()
         {
             List<Transaction> transactions = _transactionsrv.GetAll();
@@ -26,7 +26,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpGet]
-        [Route("/api/transactions/GetTransactionDetails/{id}")]
+        [Route("gettransactiondetails/{id}")]
         public Transaction GetById(int id)
         {
             Transaction transaction = _transactionsrv.GetById(id);
@@ -35,7 +35,7 @@ namespace ECommerceApp.Controllers
 
         [Authorize(Roles = Role.Admin)]
         [HttpPut]
-        [Route("/api/transactions/update/{id}")]
+        [Route("update/{id}")]
         public bool Update( int id,[FromBody] Transaction transaction)
         {
             Transaction oldTransaction = _transactionsrv.GetById(id);
@@ -49,7 +49,7 @@ namespace ECommerceApp.Controllers
 
         [Authorize(Roles = Role.Admin+","+Role.Customer)]
         [HttpPost]
-        [Route("/api/products/Addproduct/")]
+        [Route("addtransaction")]
         public bool Insert([FromBody] Transaction transaction)
         {
             bool status = _transactionsrv.Insert(transaction);
@@ -58,7 +58,7 @@ namespace ECommerceApp.Controllers
 
         [Authorize(Roles = Role.Admin)]
         [HttpDelete]
-        [Route("/api/products/delete/{id}")]
+        [Route("delete/{id}")]
         public bool Delete(int id)
         {
             bool status = _transactionsrv.Delete(id);
