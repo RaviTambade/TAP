@@ -10,6 +10,9 @@ import { ViewcartComponent } from './viewcart/viewcart.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports:[
+    ViewcartComponent
   ]
 })
 export class CartModule { }

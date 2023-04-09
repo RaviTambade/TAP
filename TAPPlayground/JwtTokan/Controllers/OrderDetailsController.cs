@@ -18,7 +18,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpGet]
-        [Route("/getallorderdetails")]
+        [Route("getallorderdetails")]
         public IEnumerable<OrderDetails> GetAll()
         {
             List<OrderDetails> orderDetails = _srv.GetAll();
