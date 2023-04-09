@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductRoutingComponent } from './product-routing/product-routing.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './Auth/auth.guard';
+import { HikepriceComponent } from './hikeprice/hikeprice.component';
 // import { MatSelectModule } from '@angular/material/select';
 // import { MatButtonModule } from '@angular/material/button';
 // import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
@@ -22,6 +23,8 @@ export const productRoutes:Routes =[
   {path:'product-insert',component:InsertComponent},
   {path:'product-update',component:UpdateComponent},
   {path:'product-update/:id',component:UpdateComponent},
+  {path:'product-hikeprice',component:HikepriceComponent},
+  {path:'product-hikeprice/:id',component:HikepriceComponent}
   
 ]
 
@@ -34,6 +37,7 @@ export const productRoutes:Routes =[
     SearchProductComponent,
     GetproductComponent,
     ProductRoutingComponent,
+    HikepriceComponent,
     
   ],
   imports: [

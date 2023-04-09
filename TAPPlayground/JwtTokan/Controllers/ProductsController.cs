@@ -8,7 +8,7 @@ namespace ECommerceApp.Controllers
 {
 
     [ApiController]
-    [Route("/api/[controller]")]
+    [Route("/api/[controller]")]     
     public class ProductsController : ControllerBase
 
     {
@@ -60,7 +60,7 @@ namespace ECommerceApp.Controllers
 
         [Authorize(Roles = Role.Admin)]
         [HttpDelete]
-        [Route("delete/{id}")]
+        [Route("/delete/{id}")]
         public bool Delete(int id)
         {
             bool status = _productsrv.Delete(id);

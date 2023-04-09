@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace ECommerceApp.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("/api/[controller]")]
 public class PaymentsController : Controller
 {
     private readonly IPaymentService _paymentsrv;
@@ -18,7 +18,7 @@ public class PaymentsController : Controller
     }
 
     [HttpGet]
-    [Route("/api/payments/GetAllPayments")]
+    [Route("/getallpayments")]
     public  IEnumerable<Payment> GetAll()
     {
         List<Payment> payment=_paymentsrv.GetAllPayments();
@@ -27,19 +27,15 @@ public class PaymentsController : Controller
       
      
      [HttpGet]
-    [Route("/api/payments/GetPaymentById/{id}")]     
+    [Route("/getpaymentdetails/{id}")]     
      public Payment GetById(int id)
     {
         var payment=_paymentsrv.GetPaymentById(id);
         return payment;
     }
-   
-   
-    
-   
-   
+
    [HttpPost]
-   [Route("/api/payments/AddPayment")]
+   [Route("/addpayment")]
    public bool Insert([FromBody]Payment payment)
     {
         Console.WriteLine("In controller");
@@ -49,7 +45,7 @@ public class PaymentsController : Controller
     }
   
     [HttpPut]
-    [Route("/api/payments/Update/{id}")]
+    [Route("/update/{id}")]
    public bool Update(int id,[FromBody]Payment payment)
     {
         Payment payments=_paymentsrv.GetPaymentById(id);
@@ -61,10 +57,8 @@ public class PaymentsController : Controller
         return status;
     }
 
-    
-    
     [HttpDelete]
-    [Route("/api/payments/delete/{id}")]
+    [Route("/delete/{id}")]
     public bool Delete(int id)
     {
         bool status=_paymentsrv.DeletePayment(id);

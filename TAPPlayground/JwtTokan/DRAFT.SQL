@@ -1,4 +1,9 @@
+<<<<<<< HEAD
+ 
+=======
+-- Active: 1677916902963@@127.0.0.1@3306@ecommerce
 
+>>>>>>> 686042d36a6e437c901a6a8a914b0695d90e46c3
 DROP DATABASE IF EXISTS Ecommerce;
 CREATE DATABASE Ecommerce;
 USE Ecommerce;

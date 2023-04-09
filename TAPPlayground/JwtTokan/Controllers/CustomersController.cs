@@ -11,7 +11,7 @@ namespace ECommerceApp.Controllers
 {
 
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("/api/[controller]")]
     public class CustomersController : ControllerBase
 
     {
@@ -22,7 +22,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpGet]
-        [Route("/api/customers/GetAllCustomers")]
+        [Route("/getallcustomers")]
         public IEnumerable<Customer> GetAllCustomers()
         {
             Console.WriteLine("getALl");
@@ -31,7 +31,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpGet]
-        [Route("/api/Customers/GetCustomerDetails/{id}")]
+        [Route("/getcustomerdetails/{id}")]
         public Customer GetById(int id)
         {
             Customer customer = _custsrv.GetById(id);
@@ -40,7 +40,7 @@ namespace ECommerceApp.Controllers
 
         [Authorize(Roles = Role.Employee)]
         [HttpPut]
-        [Route("/api/Customers/update/{id}")]
+        [Route("/update/{id}")]
         public bool Update( int id,[FromBody] Customer customer)
         {
             Customer oldCustomer = _custsrv.GetById(id);
@@ -54,7 +54,7 @@ namespace ECommerceApp.Controllers
 
         [Authorize(Roles = Role.Employee)]
         [HttpPost]
-        [Route("/api/Customers/AddCustomer/")]
+        [Route("/addcustomer")]
         public bool Insert([FromBody] Customer customer)
         {
             bool status = _custsrv.Insert(customer);
@@ -63,7 +63,7 @@ namespace ECommerceApp.Controllers
 
         [Authorize(Roles = Role.Employee)]
         [HttpDelete]
-        [Route("/api/Customers/delete/{id}")]
+        [Route("/delete/{id}")]
         public bool Delete(int id)
         {
             bool status = _custsrv.Delete(id);

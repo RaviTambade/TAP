@@ -7,7 +7,7 @@ namespace ECommerceApp.Controllers
 {
 
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("/api/[controller]")]
     public class AuthController : ControllerBase
     {
         private readonly IUserService _svc;
@@ -17,7 +17,7 @@ namespace ECommerceApp.Controllers
 
         }
 
-        [HttpPost("/api/auth/users/login")]
+        [HttpPost("/login")]
         public IActionResult Authenticate([FromBody] AuthenticateRequest request)
         {
             Console.WriteLine("authenticate is called.");
@@ -32,26 +32,26 @@ namespace ECommerceApp.Controllers
 
 
         [Authorize(Roles = Role.Admin)]
-        [HttpGet("/api/auth/users/getall")]
+        [HttpGet("/getall")]
         public IEnumerable<User> GetAll()
         {
             var users = _svc.GetAll();
             return users;
         }
 
-        [HttpPut("/api/auth/users/update-email")]
+        [HttpPut("/update-email")]
         public bool UpdateEmail([FromBody] ChangedCredential credential)
         {
             return _svc.UpdateEmail(credential);
         }
 
-        [HttpPut("/api/auth/users/forgot-password")]
+        [HttpPut("/forgot-password")]
         public bool ForgotPassword([FromBody] User user)
         {
             return _svc.ForgotPassword(user);
         }
 
-        [HttpPut("/api/auth/users/update-password")]
+        [HttpPut("/update-password")]
         public bool UpdatePassword([FromBody] ChangedCredential credential)
         {
             return _svc.UpdatePassword(credential);

@@ -10,7 +10,7 @@ import { User } from '../user';
 export class LoginComponent {
 
   constructor(private svc:MembershipService){}
-role :string |undefined
+// role :string |undefined
   user:User = {
     email: '',
     password: ''
@@ -20,14 +20,10 @@ role :string |undefined
     console.log(form);
     this.svc.validateUser(form).subscribe((response)=>{
           console.log(response);
-          console.log(this.role)
           
           if(response){
-            if(this.role!=undefined){
-            sessionStorage.setItem("role",this.role)
             alert("Login sucessfull")
             window.location.reload();
-          }
           }
           else
           {

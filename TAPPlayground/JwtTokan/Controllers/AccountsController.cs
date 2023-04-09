@@ -11,7 +11,7 @@ namespace ECommerceApp.Controllers
 {
 
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("/api/[controller]")]
     public class AccountsController : ControllerBase
 
     {
@@ -22,7 +22,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpGet]
-        [Route("/api/accounts/GetAllAccounts")]
+        [Route("/getallaccounts")]
         public IEnumerable<Account> GetAllAccount()
         {
             List<Account> accounts = _accountsrv.GetAll();
@@ -30,7 +30,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpGet]
-        [Route("/api/accounts/GetAccountDetails/{id}")]
+        [Route("/getaccountdetails/{id}")]
         public Account GetById(int id)
         {
             Account account = _accountsrv.GetById(id);
@@ -41,7 +41,7 @@ namespace ECommerceApp.Controllers
 
         [Authorize(Roles = Role.Admin)]
         [HttpPost]
-        [Route("/api/accounts/Addaccount")]
+        [Route("/addaccount")]
         public bool Insert([FromBody] Account account)
         {
             bool status = _accountsrv.Insert(account);
@@ -50,7 +50,7 @@ namespace ECommerceApp.Controllers
 
         [Authorize(Roles = Role.Admin)]
         [HttpDelete]
-        [Route("/api/accounts/delete/{id}")]
+        [Route("/delete/{id}")]
         public bool Delete(int id)
         {
             bool status = _accountsrv.Delete(id);
@@ -58,7 +58,7 @@ namespace ECommerceApp.Controllers
         }
         [Authorize(Roles = Role.Admin)]
         [HttpPut]
-        [Route("/api/accounts/update/{id}")]
+        [Route("/update/{id}")]
         public bool Update(Account account)
         {
             bool status = _accountsrv.Update(account);

@@ -9,37 +9,42 @@ import { Product } from './product';
 export class ProductHubService {
 
   constructor(private http:HttpClient) { }
-  getProducts():Observable<any>{
-    let url =  "http://localhost:5223/product/getall";
-    return this.http.get<any>(url);
+  getProducts():Observable<Product[]>{
+    let url =  "http://localhost:5235/api/products/getallproducts";
+    return this.http.get<Product[]>(url);
   }
 
   getProductById(productId:number):Observable<Product>{
-    let url= "http://localhost:5223/product/getbyid/"+productId;
+    let url= "http://localhost:5235/api/products/getproductdetails/"+productId;
     return this.http.get<Product>(url);
   }
   insertProduct(product:Product):Observable<any>{
-    let url= "http://localhost:5223/product/insert";
+    let url= "http://localhost:5235/api/products/addproduct";
     return this.http.post<Product>(url,product);
   }
 
   deleteProduct(productId:number):Observable<any>{
-    let url= "http://localhost:5223/product/delete/"+productId;
+    let url= "http://localhost:5235/api/products/delete/"+productId;
     return this.http.delete<any>(url);
   }
 
-  updateProduct(product:Product):Observable<any>{
-    let url= "http://localhost:5223/product/update"
+  updateProduct(product:Product,productId:number):Observable<any>{
+    let url= "http://localhost:5235/api/products/update/"+productId
     return this.http.put<any>(url,product);
   }
 
   getCategories(): Observable<any>{
-    let url =  "http://localhost:5223/categories/getAll";
+    let url =  "http://localhost:5235/api/categories/getAll";
     return this.http.get<any>(url);
   }
 
   getSuppliers(): Observable<any>{
-    let url =  "http://localhost:5223/suppliers/GetAllSuppliers";
+    let url =  "http://localhost:5235/api/suppliers/GetAllSuppliers";
     return this.http.get<any>(url);
+  }
+
+  hikePrice(id:number):Observable<any>{
+    let url= "http://localhost:5235/api/products/hikeprice/"+ id;
+    return this.http.put<any>(url,null);
   }
 }

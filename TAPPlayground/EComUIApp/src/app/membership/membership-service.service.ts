@@ -11,30 +11,30 @@ export class MembershipService {
   constructor(private svc:HttpClient) { }
 
   validateUser(form:any):Observable<any>{
-    let url="http://localhost:5223/secure/validate";
+    let url="http://localhost:5235/api/auth/users/login";
     return this.svc.post<any>(url,form);
   }
 
   registerUser(form:any):Observable<any>{
 
-    let url="http://localhost:5223/secure/register";
+    let url="http://localhost:5235/api/auth/users/register";
     return this.svc.post<any>(url,form);
   }
 
-  changePassword(user:any):Observable<any>{
-    let url="http://localhost:5223/secure/changepassword";
+  forgotPassword(user:any):Observable<any>{
+    let url="http://localhost:5235/api/auth/users/forgot-password";
     console.log(user)
     return this.svc.put<any>(url,user);
   }
 
   updatePassword(user:any):Observable<any>{
-    let url="http://localhost:5223/secure/updatepassword";
+    let url="http://localhost:5235/api/auth/users/update-password";
     console.log(user)
     return this.svc.put<any>(url,user);
   }
 
   updateEmail(user:any):Observable<any>{
-    let url="http://localhost:5223/secure/updateemail";
+    let url="http://localhost:5235/api/auth/users/update-email";
     console.log(user)
     return this.svc.put<any>(url,user);
   }
