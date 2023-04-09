@@ -7,6 +7,7 @@ namespace ECommerceApp.Contexts;
 public class TransactionContext : DbContext
 {
     public DbSet<Transaction> Transaction {get; set;}
+
     private IConfiguration _configuration;
     private string _conString;
 

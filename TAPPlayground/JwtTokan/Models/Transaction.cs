@@ -5,6 +5,8 @@ namespace ECommerceApp.Models;
 
 public class Transaction
 {
+    internal object transactionId;
+
     [Column("transaction_id")]
     public int TransactionId{get; set;}
     [Column("from_account_number")]
@@ -15,9 +17,5 @@ public class Transaction
     public string? TransactionDate{get; set;}
     [Column("amount")]
     public double Amount{get; set;}
-
-    public override string ToString(){
-        return TransactionId + " " + FromAccountNumber + " " + ToAccountNumber + " " + TransactionDate + " " + Amount;
-    }
 
 }

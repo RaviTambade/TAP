@@ -13,7 +13,7 @@ public class TransactionService : ITransactionService
         _transactionRepo=transactionRepo;
     }
 
-    public List<Transaction> GetAll()=>_transactionRepo.GetAll();
+    public List<Transaction> GetAllTransactions()=>_transactionRepo.GetAllTransactions();
     
      public Transaction GetById(int transactionId)
     {

@@ -1,7 +1,7 @@
+using System.Data;
 using ECommerceApp.Models;
 using ECommerceApp.Repositories.Interfaces;
 using MySql.Data.MySqlClient;
-using System.Data;
 namespace ECommerceApp.Repositories;
 public class CartRepository : ICartRepository
 {
@@ -18,7 +18,7 @@ public class CartRepository : ICartRepository
         MySqlConnection con = new MySqlConnection();
         try
         {
-            con.ConnectionString =  _conString;
+            con.ConnectionString = _conString;
             string query = "select DISTINCT(cart_id) from cart_items";
             Console.WriteLine(query);
             MySqlCommand command = new MySqlCommand(query, con);
@@ -27,36 +27,39 @@ public class CartRepository : ICartRepository
             while (reader.Read())
             {
                 int cartId = int.Parse(reader["cart_id"].ToString());
-                Cart theCart=new Cart();
-                theCart.CartId=cartId;
+                Cart theCart = new Cart();
+                theCart.CartId = cartId;
                 carts.Add(theCart);
             }
-            reader.Close();   
-            foreach( Cart theCart in carts){
-                string secondQuery = "select * from cart_items WHERE cart_id="+ theCart.CartId;
+            reader.Close();
+            foreach (Cart theCart in carts)
+            {
+                string secondQuery = "select * from cart_items WHERE cart_id=" + theCart.CartId;
                 MySqlCommand command2 = new MySqlCommand(secondQuery, con);
                 MySqlDataReader readerItems = command2.ExecuteReader();
                 while (readerItems.Read())
                 {
                     int productId = int.Parse(readerItems["product_id"].ToString());
-                    int quantity = int.Parse(readerItems["quantity"].ToString());    
-                    Item item = new Item(){
+                    int quantity = int.Parse(readerItems["quantity"].ToString());
+                    Item item = new Item()
+                    {
                         ProductId = productId,
                         Quantity = quantity
                     };
                     theCart.Items.Add(item);
                 }
                 readerItems.Close();
-                }
-            }  
-            catch (Exception e)
-            {
-                throw e;
             }
-            finally{
-                con.Close();
-            }
-            return carts;
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            con.Close();
+        }
+        return carts;
     }
     public Cart GetCart(int cartId)
     {
@@ -66,27 +69,36 @@ public class CartRepository : ICartRepository
         con.ConnectionString = _conString;
         try
         {
-            string query = "SELECT * FROM cart_items where cart_id=@cartId";
+            string query = "SELECT products.product_id,products.product_title,products.image," +
+                           " products.unit_price,cart_items.quantity FROM products,cart_items " +
+                           " WHERE products.product_id=cart_items.product_id AND cart_id=@cartId";
             con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
-            command.Parameters.AddWithValue("@cartId",cartId);
+            command.Parameters.AddWithValue("@cartId", cartId);
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
                 int productId = int.Parse(reader["product_id"].ToString());
+                string productTitle = reader["product_title"].ToString();
+                string imageURL = reader["image"].ToString();
                 int quantity = int.Parse(reader["quantity"].ToString());
-                Item item = new Item(){
+                double unitPrice = double.Parse(reader["unit_price"].ToString());
+                Item item = new Item()
+                {
                     ProductId = productId,
-                    Quantity = quantity
+                    ProductTitle = productTitle,
+                    ImageURL = imageURL,
+                    Quantity = quantity,
+                    UnitPrice = unitPrice
                 };
-            items.Add(item);
+                items.Add(item);
             }
             reader.Close();
-             cart = new Cart
-                {
-                    CartId = cartId,
-                    Items = items
-                };
+            cart = new Cart
+            {
+                CartId = cartId,
+                Items = items
+            };
         }
         catch (Exception e)
         {
@@ -98,92 +110,107 @@ public class CartRepository : ICartRepository
         }
         return cart;
     }
-    public bool AddItem(Cart theCart,Item item) 
+    public bool AddItem(Cart theCart, Item item)
     {
         bool status = false;
         MySqlConnection con = new MySqlConnection();
-        try{   
+        try
+        {
             con.ConnectionString = _conString;
-            con.Open(); 
-            string query ="INSERT into cart_items(cart_id,product_id,quantity) VALUES (@cartId, @productId,@quantity)";
-            MySqlCommand command = new MySqlCommand(query,con);
-            command.Parameters.AddWithValue("@cartId",theCart.CartId);
-            command.Parameters.AddWithValue("@productId",item.ProductId);
-            command.Parameters.AddWithValue("@quantity",item.Quantity);
-            int rowsAffected=command.ExecuteNonQuery();
-            if(rowsAffected>=1){
-            status = true;
+            con.Open();
+            string query = "INSERT into cart_items(cart_id,product_id,quantity) VALUES (@cartId, @productId,@quantity)";
+            MySqlCommand command = new MySqlCommand(query, con);
+            command.Parameters.AddWithValue("@cartId", theCart.CartId);
+            command.Parameters.AddWithValue("@productId", item.ProductId);
+            command.Parameters.AddWithValue("@quantity", item.Quantity);
+            int rowsAffected = command.ExecuteNonQuery();
+            if (rowsAffected >= 1)
+            {
+                status = true;
             }
         }
-        catch(Exception e){
+        catch (Exception e)
+        {
             throw e;
         }
-        finally{
+        finally
+        {
             con.Close();
         }
         return status;
     }
-    public  bool UpdateItem(Cart theCart,Item item) {
-       bool status = false;
-         MySqlConnection con = new MySqlConnection(); 
-        try{
-            con.ConnectionString = _conString;    
+    public bool UpdateItem(Cart theCart, Item item)
+    {
+        bool status = false;
+        MySqlConnection con = new MySqlConnection();
+        try
+        {
+            con.ConnectionString = _conString;
             string query = $"Update cart_items SET quantity =@quantity WHERE cart_id=@cartId AND product_id=@productId";
             Console.WriteLine(query);
             MySqlCommand command = new MySqlCommand(query, con);
-            command.Parameters.AddWithValue("@productId",item.ProductId);
-            command.Parameters.AddWithValue("@cartId",theCart.CartId);
-            command.Parameters.AddWithValue("@quantity",item.Quantity);
+            command.Parameters.AddWithValue("@productId", item.ProductId);
+            command.Parameters.AddWithValue("@cartId", theCart.CartId);
+            command.Parameters.AddWithValue("@quantity", item.Quantity);
             con.Open();
-            int rowsAffected=command.ExecuteNonQuery();
-            if(rowsAffected>=1){
-            status = true;
+            int rowsAffected = command.ExecuteNonQuery();
+            if (rowsAffected >= 1)
+            {
+                status = true;
             }
         }
-        catch(Exception e){
+        catch (Exception e)
+        {
             throw e;
         }
-        finally{
+        finally
+        {
             con.Close();
         }
         return status;
     }
-    public  bool RemoveItem(Cart theCart,Item item) {
+    public bool RemoveItem(Cart theCart, Item item)
+    {
         bool status = false;
         MySqlConnection con = new MySqlConnection();
-        try{
+        try
+        {
             con.ConnectionString = _conString;
-            con.Open(); 
-            string query ="DELETE from cart_items WHERE cart_id=@cartId AND product_id=@productId";
-            MySqlCommand command = new MySqlCommand(query,con);
-            command.Parameters.AddWithValue("@cartId",theCart.CartId);
-            command.Parameters.AddWithValue("@productId",item.ProductId);
-            int rowsAffected=command.ExecuteNonQuery();
-            if(rowsAffected>=1){
-            status = true;
+            con.Open();
+            string query = "DELETE from cart_items WHERE cart_id=@cartId AND product_id=@productId";
+            MySqlCommand command = new MySqlCommand(query, con);
+            command.Parameters.AddWithValue("@cartId", theCart.CartId);
+            command.Parameters.AddWithValue("@productId", item.ProductId);
+            int rowsAffected = command.ExecuteNonQuery();
+            if (rowsAffected >= 1)
+            {
+                status = true;
             }
         }
-        catch(Exception e){
+        catch (Exception e)
+        {
             throw e;
         }
-        finally{
+        finally
+        {
             con.Close();
         }
         return status;
     }
-   
-    public bool CreateOrder(int cartId){
-   
-        bool status=false; 
+
+    public bool CreateOrder(int cartId)
+    {
+
+        bool status = false;
         MySqlConnection connection = new MySqlConnection(_conString);
         try
         {
-                MySqlCommand command = new MySqlCommand("CreateOrder", connection);             //create new mysqlcommand object to call the createorder stored procedure
-                command.CommandType = CommandType.StoredProcedure;                             
-                command.Parameters.AddWithValue("@cartId",cartId);     //set the cartid input parameter for the stored procedure
-                connection.Open();
-                command.ExecuteNonQuery();
-                status=true;                       
+            MySqlCommand command = new MySqlCommand("CreateOrder", connection);             //create new mysqlcommand object to call the createorder stored procedure
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@cartId", cartId);     //set the cartid input parameter for the stored procedure
+            connection.Open();
+            command.ExecuteNonQuery();
+            status = true;
         }
         catch (Exception e)
         {
@@ -196,7 +223,7 @@ public class CartRepository : ICartRepository
         return status;
     }
 
-    }
+}
 
 
 

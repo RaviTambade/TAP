@@ -28,6 +28,7 @@ import { RoutingComponent } from './transaction/routing/routing.component';
 import { SupplierRoutingComponent } from './suppliers/supplier-routing/supplier-routing.component';
 import { ShipperroutingComponent } from './shipper/shipperrouting/shipperrouting.component';
 import { AccountRoutingComponent } from './account/account-routing/account-routing.component';
+import { CartModule } from './cart/cart.module';
 
 
 
@@ -77,6 +78,7 @@ const routes: Routes = [
     HRModuleModule,
     PaymentModule,
     OrderModule,
+    CartModule
 
   
   ],

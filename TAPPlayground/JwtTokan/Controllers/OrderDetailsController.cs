@@ -8,11 +8,7 @@ namespace ECommerceApp.Controllers
 {
     [ApiController]
     [Route("/api/[controller]")]
-<<<<<<< HEAD
-    public class OrderDetailssController : ControllerBase
-=======
     public class OrderDetailsController : ControllerBase
->>>>>>> 686042d36a6e437c901a6a8a914b0695d90e46c3
 
     {
         private readonly IOrderDetailsService _srv;
@@ -22,11 +18,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpGet]
-<<<<<<< HEAD
-        [Route("/getallorderdetails")]
-=======
-        [Route("getall")]
->>>>>>> 686042d36a6e437c901a6a8a914b0695d90e46c3
+        [Route("getallorderdetails")]
         public IEnumerable<OrderDetails> GetAll()
         {
             List<OrderDetails> orderDetails = _srv.GetAll();

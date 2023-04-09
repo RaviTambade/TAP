@@ -16,7 +16,7 @@ public class TransactionRepository : ITransactionRepository
         _conString = this._configuration.GetConnectionString("DefaultConnection");
     }
 
-    public List<Transaction> GetAll()
+    public List<Transaction> GetAllTransactions()
     {
         List<Transaction> transactions = new List<Transaction>();
         MySqlConnection connection = new MySqlConnection();

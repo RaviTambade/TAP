@@ -19,7 +19,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpGet]
-        [Route("/getallshippers")]
+        [Route("getallshippers")]
         public IEnumerable<Shipper> GetAllShippers()
         {
             List<Shipper> shippers = _shippersrv.GetAll();
