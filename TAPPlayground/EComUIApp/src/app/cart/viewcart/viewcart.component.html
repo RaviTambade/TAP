@@ -1,0 +1,7 @@
+<div *ngIf="cart">
+<label>cartid:</label>{{cart?.cartId}}
+<div *ngFor="let item of cart?.items">
+    <label >ProductId:</label>{{item.productId}}
+    <label>Quantity:<label>{{item.quantity}}    
+</div>
+</div>
