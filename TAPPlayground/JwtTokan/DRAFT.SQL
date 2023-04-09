@@ -309,7 +309,8 @@ CALL get_order_by_cust (1,@delivered,@cancelled,@inprogress,@initiated);
 
 SELECT @delivered , @cancelled ,@inprogress, @initiated;
 
-
+  -- we give cart items with the help of cart Id and insert order in orders table as well as orders details table and 
+--   then we delete this record from cart items table
 DELIMITER $$
 CREATE PROCEDURE CreateOrder(IN cartId BIGINT )
 BEGIN
