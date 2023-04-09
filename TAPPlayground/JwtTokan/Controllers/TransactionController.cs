@@ -21,7 +21,7 @@ namespace ECommerceApp.Controllers
         [Route("/gettransactions")]
         public IEnumerable<Transaction> GetAllTransactions()
         {
-            List<Transaction> transactions = _transactionsrv.GetAll();
+            List<Transaction> transactions = _transactionsrv.GetAllTransactions();
             return transactions;
         }
 
