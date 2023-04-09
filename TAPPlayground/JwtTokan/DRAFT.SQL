@@ -1,10 +1,7 @@
-<<<<<<< HEAD
  
-=======
--- Active: 1677916902963@@127.0.0.1@3306@ecommerce
+-- Active: 1679914443657@@127.0.0.1@3306@ecommerce
 
->>>>>>> 686042d36a6e437c901a6a8a914b0695d90e46c3
-DROP DATABASE IF EXISTS Ecommerce;
+
 CREATE DATABASE Ecommerce;
 USE Ecommerce;
 
@@ -323,9 +320,9 @@ DECLARE quantity INT;
 DECLARE custId INT;
 DECLARE cart_cursor CURSOR  FOR SELECT cart_items.product_id,cart_items.quantity FROM cart_items WHERE cart_id=cartId; 
 DECLARE CONTINUE HANDLER FOR NOT FOUND SET noMoreRow = 1;
- SELECT cust_id INTO custId FROM carts WHERE cart_id=cartId;
- INSERT INTO orders (order_date, cust_id,total,status) VALUES (now(),custId,0,'initiated');
- SET orderId=last_insert_id();
+SELECT cust_id INTO custId FROM carts WHERE cart_id=cartId;
+INSERT INTO orders (order_date, cust_id,total,status) VALUES (now(),custId,0,'initiated');
+SET orderId=last_insert_id();
 OPEN cart_cursor ;
 cart_items:LOOP
     FETCH cart_cursor INTO productId,quantity;
@@ -334,10 +331,11 @@ cart_items:LOOP
     END IF;
      INSERT INTO orderdetails(order_id, product_id, quantity)VALUES(orderId,productId,quantity); 
 END LOOP cart_items;
+DELETE FROM cart_items WHERE cart_id=cartId;
 CLOSE cart_cursor;
 END $$
 DELIMITER ;
-CALL CreateOrder(1);
+CALL CreateOrder();
 
 
 select * from orders;
@@ -366,7 +364,7 @@ END LOOP hike_price;
 CLOSE hike_percent_cursor;
 END $$
 DELIMITER ;
-CALL hike_price(5.5);
+CALL hike_price();
 select * from products;
 
 ---------------------------------------------------------------------------------
@@ -518,3 +516,4 @@ select customers.first_name,customers.last_name,customers.email,customers.contac
 
 SELECT suppliers.supplier_id,products.product_id,products.product_title,SUM(orderdetails.quantity) FROM (products INNER JOIN orderdetails ON products.product_id=orderdetails.product_id)INNER JOIN suppliers ON products.supplier_id=suppliers.supplier_id   WHERE suppliers.supplier_name="Akshay" GROUP BY products.product_id;
 SELECT * FROM cart_items;
+SELECT * FROM  orderDetails;
