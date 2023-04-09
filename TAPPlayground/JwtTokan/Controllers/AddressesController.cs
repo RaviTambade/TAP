@@ -8,7 +8,7 @@ namespace ECommerceApp.Controllers
 {
 
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("/api/[controller]")]
     public class AddressesController : ControllerBase
 
     {
@@ -19,7 +19,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpGet]
-        [Route("/api/address/GetAlladdresses")]
+        [Route("/getalladdresses")]
         public IEnumerable<Address> GetAllAddress()
         {
             List<Address> addresses = _addresssrv.GetAll();
@@ -27,7 +27,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpGet]
-        [Route("/api/address/Getaddress/{id}")]
+        [Route("/getaddressdetails/{id}")]
         public Address GetById(int id)
         {
             Address address = _addresssrv.GetById(id);
@@ -36,7 +36,7 @@ namespace ECommerceApp.Controllers
 
         [Authorize(Roles = Role.Employee)]
         [HttpPut]
-        [Route("/api/address/update/{id}")]
+        [Route("/update/{id}")]
         public bool Update( int id,[FromBody] Address address)
         {
             Address oldAddress = _addresssrv.GetById(id);
@@ -50,7 +50,7 @@ namespace ECommerceApp.Controllers
 
         [Authorize(Roles = Role.Employee)]
         [HttpPost]
-        [Route("/api/adress/InsertAddress/")]
+        [Route("/insertaddress")]
         public bool Insert([FromBody] Address address)
         {
             bool status = _addresssrv.Insert(address);
@@ -59,7 +59,7 @@ namespace ECommerceApp.Controllers
 
         [Authorize(Roles = Role.Employee)]
         [HttpDelete]
-        [Route("/api/address/delete/{id}")]
+        [Route("/delete/{id}")]
         public bool Delete(int id)
         {
             bool status = _addresssrv.Delete(id);

@@ -8,7 +8,7 @@ namespace ECommerceApp.Controllers
 {
 
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("/api/[controller]")]
     public class ShippersController : ControllerBase
 
     {
@@ -19,7 +19,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpGet]
-        [Route("/api/shippers/GetAllShippers")]
+        [Route("/getallshippers")]
         public IEnumerable<Shipper> GetAllShippers()
         {
             List<Shipper> shippers = _shippersrv.GetAll();
@@ -27,7 +27,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpGet]
-        [Route("/api/shippers/GetShipperDetails/{id}")]
+        [Route("/getshipperdetails/{id}")]
         public Shipper GetById(int id)
         {
             Shipper shipper = _shippersrv.GetById(id);
@@ -36,7 +36,7 @@ namespace ECommerceApp.Controllers
 
         [Authorize(Roles = Role.Admin)]
         [HttpPut]
-        [Route("/api/shipper/update/{id}")]
+        [Route("/update/{id}")]
         public bool Update( int id,[FromBody] Shipper shipper)
         {
             Shipper oldShipper = _shippersrv.GetById(id);
@@ -50,7 +50,7 @@ namespace ECommerceApp.Controllers
 
         [Authorize(Roles = Role.Admin)]
         [HttpPost]
-        [Route("/api/shipper/Addshipper/")]
+        [Route("/addshipper/")]
         public bool Insert([FromBody] Shipper shipper)
         {
             bool status = _shippersrv.Insert(shipper);
@@ -59,7 +59,7 @@ namespace ECommerceApp.Controllers
 
         [Authorize(Roles = Role.Admin)]
         [HttpDelete]
-        [Route("/api/shippers/delete/{id}")]
+        [Route("/delete/{id}")]
         public bool Delete(int id)
         {
             bool status = _shippersrv.Delete(id);

@@ -16,7 +16,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpGet]
-        [Route("getallcartitems")]
+        [Route("/getallcartitems")]
         public IEnumerable<Cart> GetAllCarts()
         {
             List<Cart> carts = _cartsrv.GetAllCarts();
@@ -24,7 +24,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpGet]
-        [Route("getcartdetails/{id}")]
+        [Route("/getcartdetails/{id}")]
         public Cart GetCart(int id)
         {
             Cart cart = _cartsrv.GetCart(id);
@@ -32,7 +32,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpPost]
-        [Route("addtocart/{id}")]
+        [Route("/addtocart/{id}")]
         public bool AddToCart(int id,Item item)
         {
             Cart theCart=_cartsrv.GetCart(id);
@@ -41,7 +41,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpPut]
-        [Route("update/{id}")]
+        [Route("/update/{id}")]
         public bool UpdateCart(int id,Item item)
         {
             Cart theCart=_cartsrv.GetCart(id);
@@ -50,7 +50,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpPost]
-        [Route("delete/{id}")]
+        [Route("/delete/{id}")]
         public bool RemoveFromCart(int id,Item item)
         {
             Cart theCart=_cartsrv.GetCart(id);
@@ -59,7 +59,7 @@ namespace ECommerceApp.Controllers
         }
 
           [HttpPost]
-        [Route("createorder/{id}")]
+        [Route("/createorder/{id}")]
         public  bool CreateOrder(int id){
             bool status=_cartsrv.CreateOrder(id);
             return status;
@@ -68,41 +68,7 @@ namespace ECommerceApp.Controllers
     }
 }
 
-         
-//         [HttpPut]
-//         [Route("/api/cart/update/{id}")]
-//         public bool UpdateCartItem( int id,[FromBody] Product product)
-//         {
-//             Product oldProduct = _productsrv.GetById(id);
-//             if(oldProduct.ProductId==0){
-//                 return false;
-//             }
-//             product.ProductId=id;
-//             bool status = _productsrv.Update(product);
-//             return status;
-//         }
-
-         
-//         [HttpPost]
-//         [Route("/api/cart/add/")]
-//         public bool AddToCart([FromBody] Item item)
-//         {
-//             bool status = _productsrv.Insert(product);
-//             return status;
-//         }
-
-//         [Authorize(Roles = Role.Admin)]
-//         [HttpDelete]
-//         [Route("/api/Cart/delete/{id}")]
-//         public bool DeleteCartItem(int id)
-//         {
-//             bool status = _productsrv.Delete(id);
-//             return status;
-//         }
-//     }
-// }
-
-    
+   
 
 
 

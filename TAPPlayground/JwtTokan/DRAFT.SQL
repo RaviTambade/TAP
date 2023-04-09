@@ -1,5 +1,4 @@
--- Active: 1678361403571@@127.0.0.1@3306@ecommerce
-
+ 
 DROP DATABASE IF EXISTS Ecommerce;
 CREATE DATABASE Ecommerce;
 USE Ecommerce;

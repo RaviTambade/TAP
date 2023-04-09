@@ -9,7 +9,7 @@ using MySql.Data.MySqlClient;
 namespace ECommerceApp.Controllers{
 
     [ApiController]
-    [Route("api/[Controller]")]
+    [Route("/api/[Controller]")]
     public class OrdersController : ControllerBase
     {
         private readonly IOrderService _ordersvc;
@@ -19,7 +19,7 @@ namespace ECommerceApp.Controllers{
            } 
 
            [HttpGet]
-           [Route("/api/orders/Getallorders")]
+           [Route("/getallorders")]
            public IEnumerable<Order> GetAllOrders()
            {
             List<Order> orders = _ordersvc.GetAll();
@@ -27,7 +27,7 @@ namespace ECommerceApp.Controllers{
            }
 
         [HttpGet]
-        [Route("/api/orders/getorderdetails/{id}")]
+        [Route("/getorderdetails/{id}")]
         public Order GetById(int id)
         {
             Order order = _ordersvc.GetById(id);
@@ -35,7 +35,7 @@ namespace ECommerceApp.Controllers{
         }
 
         [HttpPost]
-        [Route("/api/orders/insert")]
+        [Route("/addorder")]
         public bool Insert([FromBody] Order order)
         {
             bool status = _ordersvc.Insert(order);
@@ -44,7 +44,7 @@ namespace ECommerceApp.Controllers{
 
         [Authorize(Roles= Role.Admin)]
         [HttpPut]
-        [Route("/api/orders/update/{id}")]
+        [Route("/update/{id}")]
         public bool Update(int id,[FromBody] Order order)
         {
         Order oldOrder = _ordersvc.GetById(id);
@@ -58,7 +58,7 @@ namespace ECommerceApp.Controllers{
         }
 
         [HttpDelete]
-        [Route("/api/orders/delete/{id}")]
+        [Route("/delete/{id}")]
         public bool Delete(int id)
         {
             bool status = _ordersvc.Delete(id);

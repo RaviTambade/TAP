@@ -8,7 +8,7 @@ namespace ECommerceApp.Controllers
 {
 
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("/api/[controller]")]
     public class OrderDetailssController : ControllerBase
 
     {
@@ -19,7 +19,7 @@ namespace ECommerceApp.Controllers
         }
 
         [HttpGet]
-        [Route("/getall")]
+        [Route("/getallorderdetails")]
         public IEnumerable<OrderDetails> GetAll()
         {
             List<OrderDetails> orderDetails = _srv.GetAll();
