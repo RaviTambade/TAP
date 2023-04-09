@@ -11,21 +11,20 @@ import { ProductHubService } from '../producthub.service';
 export class UpdateComponent implements OnInit {
   product: Product|any;
   status: boolean | undefined;
-  sub: any;
   productId: any;
 
  
   constructor(private svc: ProductHubService,private route:ActivatedRoute,private router:Router) { }
   ngOnInit(): void {
    
-    this.sub=this.route.paramMap.subscribe((params)=>{
+    this.route.paramMap.subscribe((params)=>{
       console.log(params)
       this.productId=params.get('id');
   })
   }
 
   updateProduct() {
-    this.svc.updateProduct(this.product).subscribe((response)=>{
+    this.svc.updateProduct(this.product,this.productId).subscribe((response)=>{
       this.status = response;
       console.log(response);
       if(response)

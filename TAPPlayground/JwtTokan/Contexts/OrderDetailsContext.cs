@@ -31,7 +31,6 @@ public class OrderDetailsContext : DbContext
             entity.Property(e => e.OrderId);
             entity.Property(e => e.ProductId);
             entity.Property(e => e.Quantity);
-            entity.Property(e => e.SupplierId);
             entity.Property(e => e.Discount);
         });
        modelBuilder.Entity<OrderDetails>().ToTable("orderdetails");

@@ -5,7 +5,7 @@ using ECommerceApp.Services;
 using ECommerceApp.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddCors();
 // Add services to the container.
   
 
@@ -29,8 +29,8 @@ builder.Services.AddTransient<IDashboardRepository,DashboardRepository>();
 builder.Services.AddTransient<IDashboardService,DashboardService>();
 builder.Services.AddTransient<IOrderRepository,OrderRepository>();
 builder.Services.AddTransient<IOrderService,OrderService>();
-// builder.Services.AddTransient<IOrderDetailsRepository,OrderDetailsRepository>();
-builder.Services.AddTransient<IOrderDetailsRepository,OrderDetailsORMRepository>();
+builder.Services.AddTransient<IOrderDetailsRepository,OrderDetailsRepository>();
+// builder.Services.AddTransient<IOrderDetailsRepository,OrderDetailsORMRepository>();
 builder.Services.AddTransient<IOrderDetailsService,OrderDetailsService>();
 builder.Services.AddTransient<IShipperRepository,ShipperRepository>();
 builder.Services.AddTransient<IShipperService,ShipperService>();
@@ -76,7 +76,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseCors(x => x.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader());
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.UseAuthentication();      
