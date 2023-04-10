@@ -290,10 +290,6 @@ public class OrderRepository : IOrderRepository
         {
 
             string query = " SELECT * FROM orders WHERE cust_id=1 and status='cancelled' ";
-            //"SELECT * FROM orders WHERE status= cancelled" ;
-
-
-            Console.WriteLine(query);
             con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
             MySqlDataReader reader = command.ExecuteReader();
@@ -341,10 +337,6 @@ public class OrderRepository : IOrderRepository
         {
 
             string query = " SELECT * FROM orders WHERE cust_id=1 and status='delivered' ";
-            //"SELECT * FROM orders WHERE status= cancelled" ;
-
-
-            Console.WriteLine(query);
             con.Open();
             MySqlCommand command = new MySqlCommand(query, con);
             MySqlDataReader reader = command.ExecuteReader();
@@ -381,6 +373,4 @@ public class OrderRepository : IOrderRepository
         }
         return orders;
     }
-
-
 }

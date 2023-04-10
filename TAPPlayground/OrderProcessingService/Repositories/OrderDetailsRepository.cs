@@ -4,10 +4,8 @@ using MySql.Data.MySqlClient;
 namespace OrderProcessingService.Repositories;
 public class OrderDetailsRepository : IOrderDetailsRepository
 {
-
     private IConfiguration _configuration;
     private string _conString;
-
     public OrderDetailsRepository(IConfiguration configuration)
     {
         _configuration = configuration;
@@ -73,7 +71,6 @@ public class OrderDetailsRepository : IOrderDetailsRepository
                 int productId = Int32.Parse(reader["product_id"].ToString());
                 int quantity = Int32.Parse(reader["quantity"].ToString());
                 double discount = double.Parse(reader["discount"].ToString());
-
                 orderDetail = new OrderDetails()
                 {
                     OrderDetailsId = orderDetailsId,
@@ -95,7 +92,6 @@ public class OrderDetailsRepository : IOrderDetailsRepository
         }
         return orderDetail;
     }
-
 
     public List<OrderDetailsOrder> GetOrderDetailsByOrder(int orderId)
     {
@@ -140,7 +136,6 @@ public class OrderDetailsRepository : IOrderDetailsRepository
         }
         return products;
     }
-
 
     public bool Insert(OrderDetails orderDetails)
     {
@@ -206,7 +201,6 @@ public class OrderDetailsRepository : IOrderDetailsRepository
         }
         return status;
     }
-
     public bool DeleteByOrderDetailsId(int orderDetailsId)
     {
         bool status = false;
@@ -234,7 +228,6 @@ public class OrderDetailsRepository : IOrderDetailsRepository
         }
         return status;
     }
-
 
     public List<OrderHistory> GetOrderHistory(int customerId)
     {
@@ -276,10 +269,5 @@ public class OrderDetailsRepository : IOrderDetailsRepository
             con.Close();
         }
         return orderHistories;
-
     }
-
-    
 }
-
-

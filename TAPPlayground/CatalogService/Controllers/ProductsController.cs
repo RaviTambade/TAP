@@ -2,14 +2,11 @@ using CatalogService.Models;
 using CatalogService.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
-
 namespace CatalogService.Controllers
 {
-
     [ApiController]
     [Route("/api/[controller]")]
     public class ProductsController : ControllerBase
-
     {
         private readonly IProductService _productsrv;
         public ProductsController(IProductService productsrv)
@@ -74,10 +71,3 @@ namespace CatalogService.Controllers
         }
     }
 }
-
-
-
-
-
-
-

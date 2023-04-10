@@ -66,6 +66,3 @@ namespace CatalogService.Controllers
         }
     }
 }
-
-
-

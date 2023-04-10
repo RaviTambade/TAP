@@ -16,3 +16,14 @@ public class EmployeeService : IEmployeeService
     public bool Update(Employee emp)=> _repo.Update(emp);
     public bool Delete(int id)=>_repo.Delete(id);
 }
+
+
+
+//Departments Table
+//deptId pk
+//name
+//location
+
+
+//Employees
+//deptId foreign key

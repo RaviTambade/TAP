@@ -1,20 +1,15 @@
 using System.Collections.Generic;
-//using ECommerceApp.Entities;
-//using ECommerceApp.Helpers;
 using HRService.Models;
 using HRService.Services;
 using HRService.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-
 using MySql.Data.MySqlClient;
 
 namespace HRService.Controllers
 {
-
-    [ApiController]
+   [ApiController]
     [Route("/api/[controller]")]
     public class EmployeesController : ControllerBase
-
     {
         private readonly IEmployeeService _empsrv;
         public EmployeesController(IEmployeeService empsrv)
