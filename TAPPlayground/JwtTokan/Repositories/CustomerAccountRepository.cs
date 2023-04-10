@@ -64,6 +64,4 @@ public class CustomerAccountRepository : ICustomerAccountRepository
         return customeraccounts;
 
     }
-    
-
 }

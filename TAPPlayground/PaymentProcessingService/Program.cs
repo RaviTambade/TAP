@@ -1,17 +1,15 @@
-using CRMService.Repositories;
-using CRMService.Repositories.Interfaces;
-using CRMService.Services;
-using CRMService.Services.Interfaces;
-
-
+using PaymentProcessingService.Repositories;
+using PaymentProcessingService.Repositories.Interfaces;
+using PaymentProcessingService.Services;
+using PaymentProcessingService.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
-builder.Services.AddTransient<ICustomerRepository,CustomerRepository>();
-builder.Services.AddTransient<ICustomerService,CustomerService>();
+builder.Services.AddTransient<IPaymentRepository,PaymentRepository>();
+builder.Services.AddTransient<IPaymentService,PaymentService>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
