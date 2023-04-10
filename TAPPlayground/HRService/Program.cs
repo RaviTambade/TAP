@@ -9,6 +9,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddTransient<IEmployeeRepository,EmployeeRepository>();
 builder.Services.AddTransient<IEmployeeService,EmployeeService>();
 
+builder.Services.AddTransient<IDepartmentRepository,DepartmentRepository>();
+builder.Services.AddTransient<IDepartmentService,DepartmentService>();
+
 // Add services to the container.
 
 builder.Services.AddControllers();
