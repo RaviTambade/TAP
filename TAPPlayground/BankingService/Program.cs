@@ -1,3 +1,10 @@
+using BankingService.Repositories;
+using BankingService.Repositories.Interfaces;
+using BankingService.Services;
+using BankingService.Services.Interfaces;
+
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,6 +14,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddTransient<IAccountRepository,AccountRepository>();
+builder.Services.AddTransient<IAccountService,AccountService>();
+builder.Services.AddTransient<ITransactionRepository,TransactionRepository>();
+builder.Services.AddTransient<ITransactionService,TransactionService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
