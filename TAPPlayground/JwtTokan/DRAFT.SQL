@@ -1,5 +1,5 @@
  
--- Active: 1679914443657@@127.0.0.1@3306@ecommerce
+-- Active: 1678361403571@@127.0.0.1@3306@ecommerce
 
 
 CREATE DATABASE Ecommerce;
@@ -518,3 +518,5 @@ select customers.first_name,customers.last_name,customers.email,customers.contac
 SELECT suppliers.supplier_id,products.product_id,products.product_title,SUM(orderdetails.quantity) FROM (products INNER JOIN orderdetails ON products.product_id=orderdetails.product_id)INNER JOIN suppliers ON products.supplier_id=suppliers.supplier_id   WHERE suppliers.supplier_name="Akshay" GROUP BY products.product_id;
 SELECT * FROM cart_items;
 SELECT * FROM  orderDetails;
+
+SELECT customers.cust_id, customers.first_name, customers.last_name, transactions.amount,transactions.transaction_date,CASE WHEN transactions.from_account_number=customers.account_number THEN 'debit' WHEN transactions.to_account_number=customers.account_number THEN 'credit' END AS MODETYPE FROM transactions,customers WHERE ( transactions.from_account_number=(SELECT account_number FROM customers WHERE cust_id=@customerid) AND customers.cust_id=2) OR  (transactions.to_account_number=(SELECT account_number FROM customers WHERE cust_id=2)  AND customers.cust_id=2);

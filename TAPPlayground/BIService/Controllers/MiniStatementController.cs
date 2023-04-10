@@ -18,7 +18,7 @@ namespace BIService.Controllers
         }
 
         [HttpGet]
-        [Route("/getMiniStatements")]
+        [Route("/getMiniStatements/{id}")]
         public IEnumerable<MiniStatement> GetMiniStatements(int id)
         {
             List<MiniStatement> miniStatement = _MSsrv.GetMiniStatement(id);
