@@ -1,0 +1,22 @@
+using PaymentProcessingService.Models;
+using PaymentProcessingService.Repositories.Interfaces;
+using PaymentProcessingService.Services.Interfaces;
+namespace PaymentProcessingService.Services;
+public class PaymentServices:IPaymentService{
+    private readonly IPaymentRepository _repo;
+    public PaymentServices(IPaymentRepository repo){
+        this._repo=repo;
+    }
+
+    public List<Payment> GetAllPayments() => _repo.GetAllPayments();
+    public Payment GetPaymentById( int id) =>_repo.GetPaymentById(id);
+    public Payment GetPaymentByOrderId( int id) =>_repo.GetPaymentById(id);
+    public bool InsertPayments(Payment payment)=>_repo.InsertPayments(payment);
+    public bool UpdatePayment(Payment payment)=>_repo.UpdatePayment(payment);
+    public bool DeletePayment(int id)=>_repo.DeletePayment(id);
+
+    public List<Payment> GetAllPayments(int id)
+    {
+        throw new NotImplementedException();
+    }
+}
