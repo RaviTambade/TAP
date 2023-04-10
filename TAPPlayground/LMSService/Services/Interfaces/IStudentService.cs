@@ -4,5 +4,6 @@ namespace LMSService.Services.Interface;
 
 public interface IStudentService : IStudentRepository
 {
+    
 
 }

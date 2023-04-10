@@ -10,7 +10,6 @@ namespace OrderProcessingService.Controllers
     [ApiController]
     [Route("/api/[controller]")]
     public class OrderDetailsController : ControllerBase
-
     {
         private readonly IOrderDetailsService _srv;
         public OrderDetailsController(IOrderDetailsService srv)
@@ -46,8 +45,7 @@ namespace OrderProcessingService.Controllers
             bool status = _srv.Update(orderDetail);
             return status;
         }
-
-        
+ 
         [HttpPost]
         [Route("/addorderdetails")]
         public bool Insert([FromBody] OrderDetails orderDetail)
@@ -55,8 +53,7 @@ namespace OrderProcessingService.Controllers
             bool status = _srv.Insert(orderDetail);
             return status;
         }
-
-        
+   
         [HttpDelete]
         [Route("/deleteorderdetails/{id}")]
         public bool Delete(int id)
@@ -66,10 +63,3 @@ namespace OrderProcessingService.Controllers
         }
     }
 }
-
-
-
-
-
-
-

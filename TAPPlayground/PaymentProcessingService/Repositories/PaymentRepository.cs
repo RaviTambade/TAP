@@ -6,7 +6,6 @@ namespace PaymentProcessingService.Repositories;
 public class PaymentRepository : IPaymentRepository
 {
     private IConfiguration _configuration;
-
     private string _conString;
 
     public PaymentRepository(IConfiguration configuration)
@@ -16,9 +15,6 @@ public class PaymentRepository : IPaymentRepository
 
     }
       
-
-    
-
     public List<Payment> GetAllPayments()
     {
         List<Payment> payments = new List<Payment>();
@@ -61,7 +57,6 @@ public class PaymentRepository : IPaymentRepository
         }
         return payments;
     }
-
 
 
     public Payment GetPaymentById(int id)
@@ -231,8 +226,4 @@ public class PaymentRepository : IPaymentRepository
     {
         throw new NotImplementedException();
     }
-}
-
-
-
-    
+} 

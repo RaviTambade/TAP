@@ -3,7 +3,6 @@ public class OrderHistory
 {
     private int quantity;
     private double unitPrice;
-
     public string Title { get; set; }
     public int ProductId{get;set;}
     public double UnitPrice { get => unitPrice; set => unitPrice = value; }

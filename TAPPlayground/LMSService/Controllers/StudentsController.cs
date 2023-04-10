@@ -29,8 +29,7 @@ public class StudentsController : ControllerBase
     [Route("/api/students/GetStudentDetails/{id}")]
     public  Student GetById(int id)
     { 
-        Student student=_studentSrv.GetById();
-         
+      Student student=_studentSrv.GetById();
       return student; 
     }
 

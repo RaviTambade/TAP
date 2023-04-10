@@ -1,6 +1,4 @@
-
 namespace CatalogService.Models;
-
 public class Supplier
 {
     public int SupplierId { get; set; }
