@@ -4,5 +4,5 @@ using PaymentProcessingService.Repositories.Interfaces;
 namespace PaymentProcessingService.Services.Interfaces;
 public interface IPaymentService : IPaymentRepository
 {
-    List<Payment> GetAllPayments();
+
 }

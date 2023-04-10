@@ -34,6 +34,15 @@ public class PaymentsController : Controller
         return payment;
     }
 
+   [HttpGet]
+    [Route("/GetPaymentByOrder/{id}")]     
+     public List<Payment> GetPaymentByOrderId(int id)
+    {
+        var payment=_paymentsrv.GetPaymentByOrderId(id);
+        return payment;
+    }
+
+
    [HttpPost]
    [Route("/addpayment")]
    public bool Insert([FromBody]Payment payment)
@@ -48,12 +57,12 @@ public class PaymentsController : Controller
     [Route("/update/{id}")]
    public bool Update(int id,[FromBody]Payment payment)
     {
-        Payment payments=_paymentsrv.GetPaymentById(id);
-        if(payment.payments==0){
+        Payment oldpayment=_paymentsrv.GetPaymentById(id);
+        if(oldpayment.PaymentId==0){
         return false;
         }
-       payment.payments=id;
-        var status=_paymentsrv.UpdatePayment(payment);
+       payment.PaymentId=id;
+        bool status=_paymentsrv.UpdatePayment(payment);
         return status;
     }
 
@@ -64,6 +73,17 @@ public class PaymentsController : Controller
         bool status=_paymentsrv.DeletePayment(id);
         return status;
     }
+
+    
+    [HttpGet]
+    [Route("/GetPaymentByCustomer/{id}")]     
+     public List<Payment> GetPaymentByCustomer(int id)
+    {
+        var payment=_paymentsrv.GetPaymentByCustomer(id);
+        return payment;
+    }
+
+
     
 }  
     
