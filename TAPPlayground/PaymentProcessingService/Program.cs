@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddTransient<IPaymentRepository,PaymentRepository>();
-builder.Services.AddTransient<IPaymentService,PaymentServices>();
+builder.Services.AddTransient<IPaymentService,PaymentService>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

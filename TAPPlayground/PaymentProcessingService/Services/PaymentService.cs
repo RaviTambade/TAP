@@ -2,9 +2,9 @@ using PaymentProcessingService.Models;
 using PaymentProcessingService.Repositories.Interfaces;
 using PaymentProcessingService.Services.Interfaces;
 namespace PaymentProcessingService.Services;
-public class PaymentServices:IPaymentService{
+public class PaymentService:IPaymentService{
     private readonly IPaymentRepository _repo;
-    public PaymentServices(IPaymentRepository repo){
+    public PaymentService(IPaymentRepository repo){
         this._repo=repo;
     }
 
