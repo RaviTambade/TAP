@@ -20,7 +20,7 @@ public class MiniStatementRepository : IMiniStatementRepository
         connection.ConnectionString = _conString;
         try
         {
-            string query = "SELECT customers.cust_id, customers.first_name, customers.last_name, transactions.amount,transactions.transaction_date,CASE WHEN transactions.from_account_number=customers.account_number THEN 'debit' WHEN transactions.to_account_number=customers.account_number THEN 'credit' END AS MODETYPE FROM transactions,customers WHERE ( transactions.from_account_number=(SELECT account_number FROM customers WHERE cust_id=@customerid) AND customers.cust_id=@customerid) OR  (transactions.to_account_number=(SELECT account_number FROM customers WHERE cust_id=@customerid)  AND customers.cust_id=@customerid";
+            string query = "SELECT customers.cust_id, customers.first_name, customers.last_name, transactions.amount,transactions.transaction_date,CASE WHEN transactions.from_account_number=customers.account_number THEN 'debit' WHEN transactions.to_account_number=customers.account_number THEN 'credit' END AS MODETYPE FROM transactions,customers WHERE ( transactions.from_account_number=(SELECT account_number FROM customers WHERE cust_id=@customerid) AND customers.cust_id=@customerid) OR  (transactions.to_account_number=(SELECT account_number FROM customers WHERE cust_id=@customerid)  AND customers.cust_id=@customerid)";
             connection.Open();
             MySqlCommand command = new MySqlCommand(query, connection);
             command.Parameters.AddWithValue("@customerid",custId);
