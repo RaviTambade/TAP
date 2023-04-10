@@ -1,16 +1,12 @@
-//using ECommerceApp.Helpers;
 using DeliveryService.Models;
 using DeliveryService.Services.Interface;
 using Microsoft.AspNetCore.Mvc;
 
-
 namespace DeliveryService.Controllers
 {
-
     [ApiController]
     [Route("/api/[controller]")]
     public class DeliveryController : ControllerBase
-
     {
         private readonly IDeliveryService _deliverysrv;
         public DeliveryController(IDeliveryService deliverysrv)
@@ -22,8 +18,8 @@ namespace DeliveryService.Controllers
         [Route("getalldeliveries")]
         public IEnumerable<Delivery> GetAllShippers()
         {
-            List<Delivery> diliveries = _deliverysrv.GetAll();
-            return diliveries;
+            List<Delivery> deliveries = _deliverysrv.GetAll();
+            return deliveries;
         }
 
         [HttpGet]
