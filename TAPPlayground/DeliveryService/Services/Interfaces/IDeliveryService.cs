@@ -1,6 +1,6 @@
 using DeliveryService.Repositories.Interfaces;
 
-namespace DeliveryService.Services.Interface;
+namespace DeliveryService.Services.Interfaces;
 
 public interface IDeliveryService : IDeliveryRepository
 {

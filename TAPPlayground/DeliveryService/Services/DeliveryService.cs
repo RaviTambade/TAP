@@ -2,7 +2,7 @@
 
 using DeliveryService.Models;
 using DeliveryService.Repositories.Interfaces;
-using DeliveryService.Services.Interface;
+using DeliveryService.Services.Interfaces;
 
 namespace DeliveryService.Services;
 

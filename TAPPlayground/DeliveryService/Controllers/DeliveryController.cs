@@ -1,6 +1,6 @@
 //using ECommerceApp.Helpers;
 using DeliveryService.Models;
-using DeliveryService.Services.Interface;
+using DeliveryService.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -22,8 +22,8 @@ namespace DeliveryService.Controllers
         [Route("getalldeliveries")]
         public IEnumerable<Delivery> GetAllShippers()
         {
-            List<Delivery> diliveries = _deliverysrv.GetAll();
-            return diliveries;
+            List<Delivery> deliveries = _deliverysrv.GetAll();
+            return deliveries;
         }
 
         [HttpGet]
@@ -36,7 +36,7 @@ namespace DeliveryService.Controllers
 
      //   [Authorize(Roles = Role.Admin)]
         [HttpPut]
-        [Route("update/{id}")]
+        [Route("updateDelivery/{id}")]
         public bool Update( int id,[FromBody] Delivery delivery)
         {
             Delivery oldDilivery = _deliverysrv.GetById(id);
@@ -59,7 +59,7 @@ namespace DeliveryService.Controllers
 
       //  [Authorize(Roles = Role.Admin)]
         [HttpDelete]
-        [Route("delete/{id}")]
+        [Route("deleteDelivery/{id}")]
         public bool Delete(int id)
         {
             bool status = _deliverysrv.Delete(id);

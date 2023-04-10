@@ -1,7 +1,7 @@
 using DeliveryService.Repositories;
 using DeliveryService.Repositories.Interfaces;
 using DeliveryService.Services;
-using DeliveryService.Services.Interface;
+using DeliveryService.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
