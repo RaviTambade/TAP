@@ -35,7 +35,8 @@ public class CartRepository : ICartRepository
             foreach (Cart theCart in carts)
             {
                 string secondQuery = "SELECT products.product_id,products.product_title,products.image," +
-                                     " products.unit_price,cart_items.quantity FROM products,cart_items " +
+                                     "products.unit_price,cart_items.quantity"+
+                                     "FROM products, cart_items " +
                                      " WHERE products.product_id=cart_items.product_id AND cart_id=@cartId";
                 MySqlCommand command2 = new MySqlCommand(secondQuery, con);
                 command2.Parameters.AddWithValue("@cartId", theCart.CartId);

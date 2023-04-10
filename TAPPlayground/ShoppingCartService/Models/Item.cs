@@ -7,5 +7,4 @@ public class Item
     public string?  ImageURL {get;set;}
     public int Quantity {get;set;}
     public double UnitPrice {get;set;}
-
 }
