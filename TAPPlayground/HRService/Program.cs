@@ -1,4 +1,13 @@
+//using HRService.Helpers;
+using HRService.Repositories;
+using HRService.Repositories.Interfaces;
+using HRService.Services;
+using HRService.Services.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddTransient<IEmployeeRepository,EmployeeRepository>();
+builder.Services.AddTransient<IEmployeeService,EmployeeService>();
 
 // Add services to the container.
 

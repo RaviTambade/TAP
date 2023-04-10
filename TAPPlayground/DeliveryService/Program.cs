@@ -1,3 +1,8 @@
+using DeliveryService.Repositories;
+using DeliveryService.Repositories.Interfaces;
+using DeliveryService.Services;
+using DeliveryService.Services.Interface;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +11,12 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+
+builder.Services.AddTransient<IDeliveryRepository,DeliveryRepository>();
+builder.Services.AddTransient<IDeliveryService,DeliveryServices>();
+
+
 
 var app = builder.Build();
 
