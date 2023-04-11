@@ -133,6 +133,90 @@
         ],
         "UpstreamPathTemplate": "/customers/delete/{id}",
         "UpstreamHttpMethod":["DELETE"]
+    },
+    {
+        "DownstreamPathTemplate":"/api/payments/getallpayments",
+        "DownstreamScheme":"http",
+        "DownstreamHostAndPorts":[
+            {
+                "Host":"localhost",
+                "Port":5054
+            }
+        ],
+        "UpstreamPathTemplate": "/payments/getallpayments",
+        "UpstreamHttpMethod":["GET"]
+    },
+    {
+        "DownstreamPathTemplate":"/api/payments/getpaymentdetails/{id}",
+        "DownstreamScheme":"http",
+        "DownstreamHostAndPorts":[
+            {
+                "Host":"localhost",
+                "Port":5054
+            }
+        ],
+        "UpstreamPathTemplate": "/payments/getpaymentdetails/{id}",
+        "UpstreamHttpMethod":["GET"]
+    },
+    {
+        "DownstreamPathTemplate":"/api/payments/GetPaymentByOrder/{id}",
+        "DownstreamScheme":"http",
+        "DownstreamHostAndPorts":[
+            {
+                "Host":"localhost",
+                "Port":5054
+            }
+        ],
+        "UpstreamPathTemplate": "/payments/GetPaymentByOrder/{id}",
+        "UpstreamHttpMethod":["GET"]
+    },
+    {
+        "DownstreamPathTemplate":"/api/payments/addpayment",
+        "DownstreamScheme":"http",
+        "DownstreamHostAndPorts":[
+            {
+                "Host":"localhost",
+                "Port":5054
+            }
+        ],
+        "UpstreamPathTemplate": "/payments/addpayment",
+        "UpstreamHttpMethod":["POST"]
+    },
+    {
+        "DownstreamPathTemplate":"/api/payments/update/{id}",
+        "DownstreamScheme":"http",
+        "DownstreamHostAndPorts":[
+            {
+                "Host":"localhost",
+                "Port":5054
+            }
+        ],
+        "UpstreamPathTemplate": "/payments/update/{id}",
+        "UpstreamHttpMethod":["PUT"]
+    },
+    {
+        "DownstreamPathTemplate":"/api/payments/delete/{id}",
+        "DownstreamScheme":"http",
+        "DownstreamHostAndPorts":[
+            {
+                "Host":"localhost",
+                "Port":5054
+            }
+        ],
+        "UpstreamPathTemplate": "/payments/delete/{id}",
+        "UpstreamHttpMethod":["DELETE"]
+    },
+    {
+        "DownstreamPathTemplate":"/api/payments/GetPaymentByCustomer/{id}",
+        "DownstreamScheme":"http",
+        "DownstreamHostAndPorts":[
+            {
+                "Host":"localhost",
+                "Port":5054
+            }
+        ],
+        "UpstreamPathTemplate": "/payments/GetPaymentByCustomer/{id}",
+        "UpstreamHttpMethod":["GET"]
     }
  ]
 }
