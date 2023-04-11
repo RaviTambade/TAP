@@ -4,77 +4,137 @@
 
  "Routes":[
     {
-        "DownstreamPathTemplate":"/api/products",
+        "DownstreamPathTemplate":"/api/products/getallproducts",
         "DownstreamScheme":"http",
         "DownstreamHostAndPorts":[
             {
                 "Host":"localhost",
-                "Port":5080
+                "Port":4001
             }
         ],
-        "UpstreamPathTemplate": "/products",
+        "UpstreamPathTemplate": "/products/getallproducts",
         "UpstreamHttpMethod":["GET"]
     },
     {
-        "DownstreamPathTemplate":"/api/products/{id}",
+        "DownstreamPathTemplate":"/api/products/getproductdetails/{id}",
         "DownstreamScheme":"http",
         "DownstreamHostAndPorts":[
             {
                 "Host":"localhost",
-                "Port":5080
+                "Port":4001
             }
         ],
-        "UpstreamPathTemplate": "/products/{id}",
-        "UpstreamHttpMethod":["GET","DELETE"]
+        "UpstreamPathTemplate": "/products/getproductdetails/{id}",
+        "UpstreamHttpMethod":["GET"]
     },
-        {
-        "DownstreamPathTemplate":"/api/products/appproduct",
+    {
+        "DownstreamPathTemplate":"/api/products/update/{id}",
         "DownstreamScheme":"http",
         "DownstreamHostAndPorts":[
             {
                 "Host":"localhost",
-                "Port":5080
+                "Port":4001
+            }
+        ],
+        "UpstreamPathTemplate": "/products/update/{id}",
+        "UpstreamHttpMethod":["PUT"]
+    },
+    {
+        "DownstreamPathTemplate":"/api/products/delete/{id}",
+        "DownstreamScheme":"http",
+        "DownstreamHostAndPorts":[
+            {
+                "Host":"localhost",
+                "Port":4001
+            }
+        ],
+        "UpstreamPathTemplate": "/products/delete/{id}",
+        "UpstreamHttpMethod":["DELETE"]
+    },
+    {
+        "DownstreamPathTemplate":"/api/products/hikeprice/{id}",
+        "DownstreamScheme":"http",
+        "DownstreamHostAndPorts":[
+            {
+                "Host":"localhost",
+                "Port":4001
+            }
+        ],
+        "UpstreamPathTemplate": "/products/hikeprice/{id}",
+        "UpstreamHttpMethod":["PUT"]
+    },
+    {
+        "DownstreamPathTemplate":"/api/products/addproduct",
+        "DownstreamScheme":"http",
+        "DownstreamHostAndPorts":[
+            {
+                "Host":"localhost",
+                "Port":4001
             }
         ],
         "UpstreamPathTemplate": "/products/addproduct",
         "UpstreamHttpMethod":["POST"]
     },
     {
-        "DownstreamPathTemplate":"//{id}",
+        "DownstreamPathTemplate":"/api/customers/getallcustomers",
         "DownstreamScheme":"http",
         "DownstreamHostAndPorts":[
             {
                 "Host":"localhost",
-                "Port":
+                "Port":4002
             }
         ],
-        "UpstreamPathTemplate": "/api//{id}",
-        "UpstreamHttpMethod":["GET","DELETE"]
-    },
-        {
-        "DownstreamPathTemplate":"/",
-        "DownstreamScheme":"http",
-        "DownstreamHostAndPorts":[
-            {
-                "Host":"localhost",
-                "Port":
-            }
-        ],
-        "UpstreamPathTemplate": "/api/",
-        "UpstreamHttpMethod":["","",""]
+        "UpstreamPathTemplate": "/customers/getallcustomers",
+        "UpstreamHttpMethod":["GET"]
     },
     {
-        "DownstreamPathTemplate":"//{id}",
+        "DownstreamPathTemplate":"/api/customers/getcustomerdetails/{id}",
         "DownstreamScheme":"http",
         "DownstreamHostAndPorts":[
             {
                 "Host":"localhost",
-                "Port":
+                "Port":4002
             }
         ],
-        "UpstreamPathTemplate": "/api//{id}",
-        "UpstreamHttpMethod":["GET","DELETE"]
+        "UpstreamPathTemplate": "/customers/getcustomerdetails/{id}",
+        "UpstreamHttpMethod":["GET"]
     },
+    {
+        "DownstreamPathTemplate":"/api/customers/update/{id}",
+        "DownstreamScheme":"http",
+        "DownstreamHostAndPorts":[
+            {
+                "Host":"localhost",
+                "Port":4002
+            }
+        ],
+        "UpstreamPathTemplate": "/customers/update/{id}",
+        "UpstreamHttpMethod":["PUT"]
+    },
+    {
+        "DownstreamPathTemplate":"/api/customers/addcustomer",
+        "DownstreamScheme":"http",
+        "DownstreamHostAndPorts":[
+            {
+                "Host":"localhost",
+                "Port":4002
+            }
+        ],
+        "UpstreamPathTemplate": "/customers/addcustomer",
+        "UpstreamHttpMethod":["POST"]
+    },
+    {
+        "DownstreamPathTemplate":"/api/customers/delete/{id}",
+        "DownstreamScheme":"http",
+        "DownstreamHostAndPorts":[
+            {
+                "Host":"localhost",
+                "Port":4002
+            }
+        ],
+        "UpstreamPathTemplate": "/customers/delete/{id}",
+        "UpstreamHttpMethod":["DELETE"]
+    }
  ]
 
 }
