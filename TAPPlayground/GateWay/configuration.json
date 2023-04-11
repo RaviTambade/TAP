@@ -1,7 +1,6 @@
 {"Global Configuration" :{
     "Baseurl":"http://localhost:4000"
 },
-
  "Routes":[
     {
         "DownstreamPathTemplate":"/api/products/getallproducts",
@@ -136,5 +135,4 @@
         "UpstreamHttpMethod":["DELETE"]
     }
  ]
-
 }
