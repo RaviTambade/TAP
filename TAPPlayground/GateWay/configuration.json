@@ -1,0 +1,80 @@
+{"Global Configuration" :{
+    "Baseurl":"http://localhost:4000"
+},
+
+ "Routes":[
+    {
+        "DownstreamPathTemplate":"/api/products",
+        "DownstreamScheme":"http",
+        "DownstreamHostAndPorts":[
+            {
+                "Host":"localhost",
+                "Port":5080
+            }
+        ],
+        "UpstreamPathTemplate": "/products",
+        "UpstreamHttpMethod":["GET"]
+    },
+    {
+        "DownstreamPathTemplate":"/api/products/{id}",
+        "DownstreamScheme":"http",
+        "DownstreamHostAndPorts":[
+            {
+                "Host":"localhost",
+                "Port":5080
+            }
+        ],
+        "UpstreamPathTemplate": "/products/{id}",
+        "UpstreamHttpMethod":["GET","DELETE"]
+    },
+        {
+        "DownstreamPathTemplate":"/api/products/appproduct",
+        "DownstreamScheme":"http",
+        "DownstreamHostAndPorts":[
+            {
+                "Host":"localhost",
+                "Port":5080
+            }
+        ],
+        "UpstreamPathTemplate": "/products/addproduct",
+        "UpstreamHttpMethod":["POST"]
+    },
+    {
+        "DownstreamPathTemplate":"//{id}",
+        "DownstreamScheme":"http",
+        "DownstreamHostAndPorts":[
+            {
+                "Host":"localhost",
+                "Port":
+            }
+        ],
+        "UpstreamPathTemplate": "/api//{id}",
+        "UpstreamHttpMethod":["GET","DELETE"]
+    },
+        {
+        "DownstreamPathTemplate":"/",
+        "DownstreamScheme":"http",
+        "DownstreamHostAndPorts":[
+            {
+                "Host":"localhost",
+                "Port":
+            }
+        ],
+        "UpstreamPathTemplate": "/api/",
+        "UpstreamHttpMethod":["","",""]
+    },
+    {
+        "DownstreamPathTemplate":"//{id}",
+        "DownstreamScheme":"http",
+        "DownstreamHostAndPorts":[
+            {
+                "Host":"localhost",
+                "Port":
+            }
+        ],
+        "UpstreamPathTemplate": "/api//{id}",
+        "UpstreamHttpMethod":["GET","DELETE"]
+    },
+ ]
+
+}

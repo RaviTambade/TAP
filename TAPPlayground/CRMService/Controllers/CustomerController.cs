@@ -21,7 +21,7 @@ namespace CRMService.Controllers
         }
 
         [HttpGet]
-        [Route("/getallcustomers")]
+        [Route("getallcustomers")]
         public IEnumerable<Customer> GetAllCustomers()
         {
             List<Customer> customers = _custsrv.GetAll();
@@ -29,7 +29,7 @@ namespace CRMService.Controllers
         }
 
         [HttpGet]
-        [Route("/getcustomerdetails/{id}")]
+        [Route("getcustomerdetails/{id}")]
         public Customer GetById(int id)
         {
             Customer customer = _custsrv.GetById(id);
@@ -38,7 +38,7 @@ namespace CRMService.Controllers
 
         // [Authorize(Roles = Role.Employee)]
         [HttpPut]
-        [Route("/update/{id}")]
+        [Route("update/{id}")]
         public bool Update( int id,[FromBody] Customer customer)
         {
             Customer oldCustomer = _custsrv.GetById(id);
@@ -52,7 +52,7 @@ namespace CRMService.Controllers
 
         // [Authorize(Roles = Role.Employee)]
         [HttpPost]
-        [Route("/addcustomer")]
+        [Route("addcustomer")]
         public bool Insert([FromBody] Customer customer)
         {
             bool status = _custsrv.Insert(customer);
@@ -61,7 +61,7 @@ namespace CRMService.Controllers
 
         // [Authorize(Roles = Role.Employee)]
         [HttpDelete]
-        [Route("/delete/{id}")]
+        [Route("delete/{id}")]
         public bool Delete(int id)
         {
             bool status = _custsrv.Delete(id);
