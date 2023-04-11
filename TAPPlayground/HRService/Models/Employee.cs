@@ -12,9 +12,10 @@ public class Employee
     public string? Photo{get;set;}
     public int ReportsTo{get;set;}
     public long AccountNumber{get;set;}
+    public int DeptId{get;set;}
 
     public override string ToString()
     {
-        return EmpId+" "+EmpFirstName+" "+EmpLastName+" "+BirthDate+" "+HireDate+" "+ContactNumber+" "+Email+" "+Password+" "+Photo+" "+ReportsTo+" "+AccountNumber;
+        return EmpId+" "+EmpFirstName+" "+EmpLastName+" "+BirthDate+" "+HireDate+" "+ContactNumber+" "+Email+" "+Password+" "+Photo+" "+ReportsTo+" "+AccountNumber+" "+DeptId;
     }
 }

@@ -1,7 +1,3 @@
- 
--- Active: 1678361403571@@127.0.0.1@3306@ecommerce
-
-
 CREATE DATABASE Ecommerce;
 USE Ecommerce;
 
@@ -10,7 +6,8 @@ CREATE TABLE roles(role_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, role varchar
 CREATE TABLE user_roles(id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,CONSTRAINT fk_user_id FOREIGN KEY(user_id) REFERENCES users(user_id) ON UPDATE CASCADE ON DELETE CASCADE ,role_id INT NOT NULL,CONSTRAINT fk_role_id FOREIGN KEY(role_id) REFERENCES roles(role_id) ON UPDATE CASCADE ON DELETE CASCADE);
 CREATE TABLE accounts(account_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,account_number BIGINT UNIQUE, ifsc_code VARCHAR(50) ,register_date DATETIME ,balance DOUBLE);
 CREATE TABLE customers(cust_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, first_name VARCHAR(25), last_name VARCHAR(25),email VARCHAR(25) UNIQUE NOT NULL,contact_number VARCHAR(20) UNIQUE NOT NULL, password VARCHAR(15) NOT NULL,account_number BIGINT NOT NULL UNIQUE ,CONSTRAINT fk_account_no3 FOREIGN KEY(account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE);
-CREATE TABLE employees(employee_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,empfirst_name VARCHAR(100),emplast_name VARCHAR(50),birth_date DATETIME,hire_date DATETIME,contact_number VARCHAR(20),email VARCHAR(50),password VARCHAR(15) NOT NULL,photo varchar (50),reports_to INT NOT NULL,account_number BIGINT NOT NULL UNIQUE ,CONSTRAINT fk_account_no4 FOREIGN KEY(account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE);
+CREATE TABLE departments(dept_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, dept_name VARCHAR(50), location VARCHAR(50)); 
+CREATE TABLE employees(employee_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,empfirst_name VARCHAR(100),emplast_name VARCHAR(50),birth_date DATETIME,hire_date DATETIME,contact_number VARCHAR(20),email VARCHAR(50),password VARCHAR(15) NOT NULL,photo varchar (50),reports_to INT NOT NULL,account_number BIGINT NOT NULL UNIQUE ,CONSTRAINT fk_account_no4 FOREIGN KEY(account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE, dept_id INT NOT NULL ,CONSTRAINT fk_dept_id_no5 FOREIGN KEY(dept_id) REFERENCES departments(dept_id) ON UPDATE CASCADE ON DELETE CASCADE);
 CREATE TABLE addresses(address_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,cust_id INT NOT NULL, CONSTRAINT fk_customer_id_2 FOREIGN KEY(cust_id) REFERENCES customers(cust_id) ON UPDATE CASCADE ON DELETE CASCADE,address_mode ENUM('permanent', 'billing') NOT NULL,house_number VARCHAR(20),landmark VARCHAR(25) NOT NULL,city VARCHAR(25) NOT NULL,state VARCHAR(25) NOT NULL,country VARCHAR(25) NOT NULL,pincode VARCHAR(25) NOT NULL);
 CREATE TABLE categories(category_id INT PRIMARY KEY AUTO_INCREMENT, category_title VARCHAR(20),description VARCHAR (100),image VARCHAR(50)) ;
 CREATE TABLE suppliers(supplier_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,company_name VARCHAR (50),supplier_name VARCHAR (20),contact_number VARCHAR (20),email VARCHAR(20),address VARCHAR(200),city VARCHAR(50),state VARCHAR(20),password VARCHAR(20) NOT NULL,account_number BIGINT NOT NULL UNIQUE,CONSTRAINT fk_account_no5 FOREIGN KEY(account_number) REFERENCES accounts(account_number) ON UPDATE CASCADE ON DELETE CASCADE);
@@ -20,8 +17,6 @@ CREATE TABLE products (product_id INT PRIMARY KEY AUTO_INCREMENT,product_title V
 
 CREATE TABLE carts( cart_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, cust_id INT NOT NULL,CONSTRAINT fk_cust_id_3 FOREIGN KEY (cust_id) REFERENCES customers(cust_id) ON UPDATE CASCADE ON DELETE CASCADE);
 CREATE TABLE cart_items( item_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, cart_id INT NOT NULL,CONSTRAINT fk_cart_id_3 FOREIGN KEY (cart_id) REFERENCES carts(cart_id) ON UPDATE CASCADE ON DELETE CASCADE, product_id INT NOT NULL,CONSTRAINT fk_product_id_3 FOREIGN KEY (product_id) REFERENCES products(product_id) ON UPDATE CASCADE ON DELETE CASCADE, quantity INT);
-
-
 CREATE TABLE orders(order_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,order_date DATETIME DEFAULT CURRENT_TIMESTAMP,shipped_date DATETIME DEFAULT CURRENT_TIMESTAMP,cust_id INT NOT NULL,CONSTRAINT fk_customer_id FOREIGN KEY (cust_id) REFERENCES customers(cust_id) ON UPDATE CASCADE ON DELETE CASCADE,total double ,status ENUM('delivered','initiated','inprogress','cancelled','approved') NOT NULL);
 CREATE TABLE orderdetails(orderdetails_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,order_id INT NOT NULL,CONSTRAINT fk_order_id FOREIGN KEY (order_id) REFERENCES orders(order_id) ON UPDATE CASCADE ON DELETE CASCADE,product_id INT NOT NULL,CONSTRAINT fk_product_id FOREIGN KEY (product_id) REFERENCES products(product_id) ON UPDATE CASCADE ON DELETE CASCADE,quantity INT NOT NULL,discount float default 0);  
 CREATE TABLE payments(payment_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,payment_date DATETIME, payment_mode ENUM('cash on delivery','online payment'),transection_id INT NOT NULL,order_id INT NOT NULL, CONSTRAINT fk_order_id_1 FOREIGN KEY (order_id) REFERENCES orders(order_id) ON UPDATE CASCADE ON DELETE CASCADE);
@@ -128,13 +123,18 @@ INSERT INTO customers(first_name,last_name,email,contact_number,password,account
 INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Rakhi','Sharma','rakhi.sharma@gmail.com','9845834534','sahil@123',39025546606);
 INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number) VALUES ('Shivam','Pethe','shivam.pethe@gmai.com','9881734798','sahil@123',39025546607);
 
-INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Akash','Ajab','1999-09-15','2022-09-07','8756320150','Akjab@gmail.com','AK123654' ,'./images/crackjack.jpg', 2,39025546608);
-INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Shubham','Teli','1999-02-10','2020-07-05','9876320158','Steli@gmail.com','ST5269' ,'./images/ST.jpg', 1,39025546609);
-INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Sahil','Mankar','1997-05-19','2021-07-07','8756789158','Sahil22@gmail.com','SM569654' ,'./images/SM.jpg', 1,39025546610);
-INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Shubham','Navale','1995-07-25','2020-05-04','9996320158','SNavale@gmail.com','SN56987' ,'./images/SN.jpg', 3,39025546611);
-INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Rohit','Gore','1996-05-12','2022-09-07','7776320158','RGore@gmail.com','RG123654' ,'./images/RG.jpg', 4,39025546612);
-INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Pragati','Bangar','1998-05-10','2022-11-09','9666320158','PBangar@gmail.com','PB123654' ,'./images/PB.jpg', 5,39025546613);
-INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES('Vishwambhar','Kapare','1998-05-19','2023-03-15','70385488505','Rushi@gmail.com','Rc5269','./images/Rc.jpg',3,39025546605);
+INSERT INTO departments(dept_name,location) VALUES('HR','Satara');
+INSERT INTO departments(dept_name,location) VALUES('Finance','Pune');
+INSERT INTO departments(dept_name,location) VALUES('Account','Mumbai');
+INSERT INTO departments(dept_name,location) VALUES('Sales','Kolhapur');
+
+INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number,dept_id)VALUES('Akash','Ajab','1999-09-15','2022-09-07','8756320150','Akjab@gmail.com','AK123654' ,'./images/crackjack.jpg', 2,39025546608,2);
+INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number,dept_id)VALUES('Shubham','Teli','1999-02-10','2020-07-05','9876320158','Steli@gmail.com','ST5269' ,'./images/ST.jpg', 1,39025546609,1);
+INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number,dept_id)VALUES('Sahil','Mankar','1997-05-19','2021-07-07','8756789158','Sahil22@gmail.com','SM569654' ,'./images/SM.jpg', 1,39025546610,3);
+INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number,dept_id)VALUES('Shubham','Navale','1995-07-25','2020-05-04','9996320158','SNavale@gmail.com','SN56987' ,'./images/SN.jpg', 3,39025546611,4);
+INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number,dept_id)VALUES('Rohit','Gore','1996-05-12','2022-09-07','7776320158','RGore@gmail.com','RG123654' ,'./images/RG.jpg', 4,39025546612,2);
+INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number,dept_id)VALUES('Pragati','Bangar','1998-05-10','2022-11-09','9666320158','PBangar@gmail.com','PB123654' ,'./images/PB.jpg', 5,39025546613,3);
+INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number,dept_id)VALUES('Vishwambhar','Kapare','1998-05-19','2023-03-15','70385488505','Rushi@gmail.com','Rc5269','./images/Rc.jpg',3,39025546605,2);
 
 /*possible vales  for addressmode:1:only residential ,2:only delivery address,3:residentail and delivery*/
 INSERT INTO addresses(cust_id,address_mode,house_number,landmark,city,state,country,pincode)VALUES(1,'permanent','houseNo.12','Pune-Nashik Highway','Manchar','Maharashtra','India','123321');
@@ -336,7 +336,7 @@ DELETE FROM cart_items WHERE cart_id=cartId;
 CLOSE cart_cursor;
 END $$
 DELIMITER ;
-CALL CreateOrder();
+-- CALL CreateOrder();
 
 
 select * from orders;
@@ -365,7 +365,7 @@ END LOOP hike_price;
 CLOSE hike_percent_cursor;
 END $$
 DELIMITER ;
-CALL hike_price();
+-- CALL hike_price();
 select * from products;
 
 ---------------------------------------------------------------------------------
@@ -388,7 +388,7 @@ DESC employees;
 select * from users;
 select * from roles;
 select * from user_roles;
-
+select * from departments;
 select * from employees;
 select * from customers;
 select * from orders;
@@ -518,5 +518,3 @@ select customers.first_name,customers.last_name,customers.email,customers.contac
 SELECT suppliers.supplier_id,products.product_id,products.product_title,SUM(orderdetails.quantity) FROM (products INNER JOIN orderdetails ON products.product_id=orderdetails.product_id)INNER JOIN suppliers ON products.supplier_id=suppliers.supplier_id   WHERE suppliers.supplier_name="Akshay" GROUP BY products.product_id;
 SELECT * FROM cart_items;
 SELECT * FROM  orderDetails;
-
-SELECT customers.cust_id, customers.first_name, customers.last_name, transactions.amount,transactions.transaction_date,CASE WHEN transactions.from_account_number=customers.account_number THEN 'debit' WHEN transactions.to_account_number=customers.account_number THEN 'credit' END AS MODETYPE FROM transactions,customers WHERE ( transactions.from_account_number=(SELECT account_number FROM customers WHERE cust_id=@customerid) AND customers.cust_id=2) OR  (transactions.to_account_number=(SELECT account_number FROM customers WHERE cust_id=2)  AND customers.cust_id=2);

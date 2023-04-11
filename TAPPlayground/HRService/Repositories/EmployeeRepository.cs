@@ -35,6 +35,7 @@ public class EmployeeRepository : IEmployeeRepository
                 string photo =reader["photo"].ToString();
                 int reportsTo =Int32.Parse(reader["reports_to"].ToString());
                 long accountNo = long.Parse(reader["account_number"].ToString());
+                int deptid = Int32.Parse(reader["dept_id"].ToString());
 
                Employee employee = new Employee
                 {
@@ -48,7 +49,8 @@ public class EmployeeRepository : IEmployeeRepository
                     Password=password,
                     Photo=photo,
                     ReportsTo=reportsTo,
-                    AccountNumber=accountNo
+                    AccountNumber=accountNo,
+                    DeptId = deptid
                    
                 };
                 Employees.Add(employee);
@@ -85,6 +87,7 @@ public class EmployeeRepository : IEmployeeRepository
                 string photo =reader["photo"].ToString();
                 int reportsTo =Int32.Parse(reader["reports_to"].ToString());
                 long accountNo = long.Parse(reader["account_number"].ToString());
+                int deptid = Int32.Parse(reader["dept_id"].ToString());
                 employee = new Employee
                   {
                     EmpId=id, 
@@ -97,7 +100,8 @@ public class EmployeeRepository : IEmployeeRepository
                     Password=password,
                     Photo=photo,
                     ReportsTo=reportsTo,
-                    AccountNumber=accountNo                     
+                    AccountNumber=accountNo,
+                    DeptId=deptid                     
                   };
               }
           }
@@ -114,10 +118,8 @@ public class EmployeeRepository : IEmployeeRepository
           MySqlConnection con = new MySqlConnection();
           con.ConnectionString=_conString;
           try{
-            
-
-              string query =$"INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number)VALUES"+
-                                                  "(@EmpFirstName,@EmpLastName,@BirthDate,@HireDate,@ContactNumber,@Email,@Password,@Photo,@ReportsTo,@AccountNumber)";
+              string query =$"INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number,dept_id)VALUES"+
+                                                  "(@EmpFirstName,@EmpLastName,@BirthDate,@HireDate,@ContactNumber,@Email,@Password,@Photo,@ReportsTo,@AccountNumber,@DeptId)";
              Console.WriteLine(query);
              con.Open();
              MySqlCommand command=new MySqlCommand(query,con) ;
@@ -131,6 +133,7 @@ public class EmployeeRepository : IEmployeeRepository
              command.Parameters.AddWithValue("@Photo",emp.Photo);
              command.Parameters.AddWithValue("@ReportsTo",emp.ReportsTo);
              command.Parameters.AddWithValue("@AccountNumber",emp.AccountNumber);
+             command.Parameters.AddWithValue("@DeptId",emp.DeptId);
              command.ExecuteNonQuery(); 
              status=true;              
 
@@ -149,7 +152,7 @@ public class EmployeeRepository : IEmployeeRepository
           MySqlConnection con = new MySqlConnection();
           con.ConnectionString=_conString;
           try{
-            string query = "UPDATE employees SET empfirst_name=@EmpFirstName, emplast_name=@EmpLastName, birth_date=@BirthDate, hire_date=@HireDate, contact_number=@ContactNumber, email=@Email, password=@Password, photo=@Photo, reports_to=@ReportsTo, account_number=@AccountNumber WHERE employee_id=@EmployeeId";   
+            string query = "UPDATE employees SET empfirst_name=@EmpFirstName, emplast_name=@EmpLastName, birth_date=@BirthDate, hire_date=@HireDate, contact_number=@ContactNumber, email=@Email, password=@Password, photo=@Photo, reports_to=@ReportsTo, account_number=@AccountNumber, dept_id=@DeptId WHERE employee_id=@EmployeeId";   
              Console.WriteLine(query);
              con.Open();
              MySqlCommand command=new MySqlCommand(query,con) ;
@@ -164,6 +167,7 @@ public class EmployeeRepository : IEmployeeRepository
              command.Parameters.AddWithValue("@Photo",emp.Photo);
              command.Parameters.AddWithValue("@ReportsTo",emp.ReportsTo);
              command.Parameters.AddWithValue("@AccountNumber",emp.AccountNumber);
+             command.Parameters.AddWithValue("@DeptId",emp.DeptId);
              command.ExecuteNonQuery();               
              status=true;
           }catch(Exception e )

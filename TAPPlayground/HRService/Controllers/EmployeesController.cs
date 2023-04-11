@@ -18,7 +18,7 @@ namespace HRService.Controllers
         }
 
         [HttpGet]
-        [Route("/getallemployees")]
+        [Route("getallemployees")]
         public IEnumerable<Employee> GetAllEmployees()
         {
             List<Employee> employees = _empsrv.GetAll();
@@ -26,7 +26,7 @@ namespace HRService.Controllers
         }
 
         [HttpGet]
-        [Route("/getemployeedetails/{id}")]
+        [Route("getemployeedetails/{id}")]
         public Employee GetById(int id)
         {
             Employee employee = _empsrv.GetById(id);
@@ -35,7 +35,7 @@ namespace HRService.Controllers
 
         //[Authorize(Roles = Role.Employee)]
         [HttpPut]
-        [Route("/update/{id}")]
+        [Route("update/{id}")]
         public bool Update( int id,[FromBody] Employee employee)
         {
             Employee oldEmployee = _empsrv.GetById(id);
@@ -49,7 +49,7 @@ namespace HRService.Controllers
 
         //[Authorize(Roles = Role.Employee)]
         [HttpPost]
-        [Route("/addemployee/")]
+        [Route("addemployee")]
         public bool Insert([FromBody] Employee employee)
         {
             bool status = _empsrv.Insert(employee);
@@ -58,7 +58,7 @@ namespace HRService.Controllers
 
         //[Authorize(Roles = Role.Employee)]
         [HttpDelete]
-        [Route("/delete/{id}")]
+        [Route("delete/{id}")]
         public bool Delete(int id)
         {
             bool status = _empsrv.Delete(id);

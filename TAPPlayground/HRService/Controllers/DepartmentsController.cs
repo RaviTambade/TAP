@@ -18,7 +18,7 @@ namespace HRService.Controllers
         }
 
         [HttpGet]
-        [Route("/getalldepartments")]
+        [Route("getalldepartments")]
         public IEnumerable<Department> GetAllDepartments()
         {
             List<Department> departments = _deptsrv.GetAll();
@@ -26,7 +26,7 @@ namespace HRService.Controllers
         }
 
         [HttpGet]
-        [Route("/getdepartmentdetails/{id}")]
+        [Route("getdepartmentdetails/{id}")]
         public Department GetById(int id)
         {
             Department department = _deptsrv.GetById(id);
@@ -49,7 +49,7 @@ namespace HRService.Controllers
 
         //[Authorize(Roles = Role.Employee)]
         [HttpPost]
-        [Route("/adddepartment")]
+        [Route("adddepartment")]
         public bool Insert([FromBody] Department department)
         {
             bool status = _deptsrv.Insert(department);
