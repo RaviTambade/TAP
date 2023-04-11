@@ -33,6 +33,14 @@ namespace HRService.Controllers
             return employee;
         }
 
+        [HttpGet]
+        [Route("employeesbydeparment/{id}")]
+        public IEnumerable<Employee> GetEmployeesByDepartmentId(int id)
+        {
+            List<Employee> employees = _empsrv.GetAllEmployeesByDepatmentId(id);
+            return employees;
+        }
+
         //[Authorize(Roles = Role.Employee)]
         [HttpPut]
         [Route("update/{id}")]

@@ -19,11 +19,20 @@ namespace BankingService.Controllers
 
         [HttpGet]
         [Route("/getallaccounts")]
-        public IEnumerable<Account> GetAllAccount()
+        public IEnumerable<Account> GetAllAccounts()
         {
             List<Account> accounts = _accountsrv.GetAll();
             return accounts;
         }
+
+        [HttpGet]
+        [Route("/getallaccountsbycustomerid")]
+        public IEnumerable<Account> GetAllAccounts(int customerId)
+        {
+            List<Account> accounts = _accountsrv.getallAccountsByCustomerId(customerId);
+            return accounts;
+        }
+
 
         [HttpGet]
         [Route("/getaccountdetails/{id}")]
@@ -32,6 +41,8 @@ namespace BankingService.Controllers
             Account account = _accountsrv.GetById(id);
             return account;
         }
+
+        
          //[Authorize(Roles = Role.Admin)]
         [HttpPost]
         [Route("/addaccount")]

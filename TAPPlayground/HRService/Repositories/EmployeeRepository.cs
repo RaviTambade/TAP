@@ -64,6 +64,62 @@ public class EmployeeRepository : IEmployeeRepository
         }
       return Employees; 
     }
+
+
+    public List<Employee> GetEmployeesByDepartmentId(int deptId){
+      List<Employee> Employees=new List<Employee>();
+        MySqlConnection connection=new MySqlConnection(_conString);
+        try{
+            MySqlCommand command=new MySqlCommand();
+            //set parameterized query using @
+            command.CommandText="SELECT * FROM employees WHERE dept_id="+deptId;
+            command.Connection= connection;
+            connection.Open();
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                 int id = Int32.Parse(reader["employee_id"].ToString());
+                string firstname = reader["empfirst_name"].ToString();
+                string lastname = reader["emplast_name"].ToString();
+                DateTime birthdate =  DateTime.Parse(reader["birth_date"].ToString());
+                DateTime hiredate =DateTime.Parse(reader["hire_date"].ToString());
+                string contact=reader["contact_number"].ToString();
+                string email = reader["email"].ToString();
+                string password = reader["password"].ToString();
+                string photo =reader["photo"].ToString();
+                int reportsTo =Int32.Parse(reader["reports_to"].ToString());
+                long accountNo = long.Parse(reader["account_number"].ToString());
+                int deptid = Int32.Parse(reader["dept_id"].ToString());
+
+               Employee employee = new Employee
+                {
+                    EmpId=id,
+                    EmpFirstName=firstname,
+                    EmpLastName=lastname,
+                    BirthDate=birthdate.ToShortDateString(),
+                    HireDate=hiredate.ToShortDateString(),
+                    ContactNumber=contact,
+                    Email=email,
+                    Password=password,
+                    Photo=photo,
+                    ReportsTo=reportsTo,
+                    AccountNumber=accountNo,
+                    DeptId = deptid
+                   
+                };
+                Employees.Add(employee);
+            }
+        }
+        catch(Exception e){
+            throw e;
+        }
+        finally{
+            connection.Close();
+        }
+      return Employees;
+
+    }
+
    public Employee GetById(int empId){
           Employee employee =new Employee();
           MySqlConnection connection=new MySqlConnection(_conString);

@@ -11,6 +11,7 @@ public class EmployeeService : IEmployeeService
         _repo = repo;
     }
     public List<Employee> GetAll() => _repo.GetAll();
+    List<Employee> GetEmployeesByDepartmentId(int deptId)=>_repo.GetEmployeesByDepartmentId(deptId);
     public Employee GetById(int empId)=> _repo.GetById(empId);
     public bool Insert (Employee employee) => _repo.Insert(employee);
     public bool Update(Employee emp)=> _repo.Update(emp);
