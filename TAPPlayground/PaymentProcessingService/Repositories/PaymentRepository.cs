@@ -57,9 +57,7 @@ public class PaymentRepository : IPaymentRepository
         }
         return payments;
     }
-
-
-    public Payment GetPaymentById(int id)
+   public Payment GetPaymentById(int id)
     {
         Payment payment = new Payment();
         MySqlConnection connection = new MySqlConnection();
@@ -100,11 +98,9 @@ public class PaymentRepository : IPaymentRepository
         }
         return payment;
     }
-
-
-    public Payment GetPaymentByOrderId(int id)
+    public List<Payment> GetPaymentByOrderId(int id)
     {
-        Payment payment = new Payment();
+        List<Payment> payments = new List<Payment>();
         MySqlConnection connection = new MySqlConnection();
         connection.ConnectionString = _conString;
         try
@@ -112,7 +108,7 @@ public class PaymentRepository : IPaymentRepository
             string query = "SELECT * FROM payments where order_id=@orderId";
             connection.Open();
             MySqlCommand command = new MySqlCommand(query, connection);
-            command.Parameters.AddWithValue("orderId",id);
+            command.Parameters.AddWithValue("@orderId",id);
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
@@ -122,7 +118,7 @@ public class PaymentRepository : IPaymentRepository
                 int transactionId =int.Parse(reader["transection_id"].ToString());
                 int OrderId =int.Parse(reader["order_id"].ToString());
 
-                payment = new Payment()
+              Payment  payment= new Payment()
                 {
                     PaymentId=paymentId,
                     PaymentDate= date.ToShortDateString(),
@@ -130,6 +126,9 @@ public class PaymentRepository : IPaymentRepository
                     TransactionId = transactionId,
                     OrderId = id
                 };
+
+
+            payments.Add(payment);
             }
             reader.Close();
         }
@@ -141,11 +140,8 @@ public class PaymentRepository : IPaymentRepository
         {
             connection.Close();
         }
-        return payment;
+        return payments;
     }
-
-
-
     public  bool InsertPayments(Payment payment){
           bool status = false;
           MySqlConnection con = new MySqlConnection();
@@ -170,7 +166,6 @@ public class PaymentRepository : IPaymentRepository
           }
           return status;
    }
-   
    public  bool UpdatePayment(Payment payment){
           bool status = false;
           MySqlConnection con = new MySqlConnection();
@@ -199,8 +194,7 @@ public class PaymentRepository : IPaymentRepository
           }
           return status;
    }
-   
-   public  bool DeletePayment(int id){
+      public  bool DeletePayment(int id){
           bool status = false;
           MySqlConnection con = new MySqlConnection();
           con.ConnectionString=_conString;
@@ -221,9 +215,51 @@ public class PaymentRepository : IPaymentRepository
           }
           return status;
    }
-
-    public List<Payment> GetAllPayments(int id)
+    public List<Payment> GetPaymentByCustomer(int customerId)
     {
-        throw new NotImplementedException();
+    
+        List<Payment> payments = new List<Payment>();
+        MySqlConnection connection = new MySqlConnection();
+        connection.ConnectionString = _conString;
+        try
+        {
+            string query = "select * from payments where order_id in (select order_id from orders  where cust_id=@customerId);";
+            connection.Open();
+            MySqlCommand command = new MySqlCommand(query, connection);
+            command.Parameters.AddWithValue("@customerId",customerId);
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                int paymentId =int.Parse(reader["payment_id"].ToString());
+                DateTime date = DateTime.Parse(reader["payment_date"].ToString(), CultureInfo.InvariantCulture);
+                string? payment_mode = reader["payment_mode"].ToString();
+                int transactionId =int.Parse(reader["transection_id"].ToString());
+                int OrderId =int.Parse(reader["order_id"].ToString());
+
+              Payment  payment= new Payment()
+                {
+                    PaymentId=paymentId,
+                    PaymentDate= date.ToShortDateString(),
+                    PaymentMode = payment_mode,
+                    TransactionId = transactionId,
+                    OrderId = OrderId
+                };
+
+
+            payments.Add(payment);
+            }
+            reader.Close();
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            connection.Close();
+        }
+        return payments;
     }
+
+    
 } 

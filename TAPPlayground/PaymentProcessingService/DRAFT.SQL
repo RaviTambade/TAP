@@ -237,6 +237,7 @@ INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('
 INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('2022-08-07','online payment',953125,5);
 INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('2023-08-07','online payment',953125,6);
 INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('2022-09-10','cash on delivery',43210,7);
+INSERT INTO payments(payment_date,payment_mode,transection_id,order_id) VALUES('2023-04-10','cash on delivery',12,1);
 
 INSERT INTO shippers(company_name,contact_number,email,password,account_number)VALUES('Flipcart','69825645987','flipcart@gmail.com','flipcart@123',39025546619);
 INSERT INTO shippers(company_name,contact_number,email,password,account_number)VALUES('Bluedrt','6912545987','bluedart@gmail.com','bluedart@123',39025546620);
@@ -518,3 +519,7 @@ select customers.first_name,customers.last_name,customers.email,customers.contac
 SELECT suppliers.supplier_id,products.product_id,products.product_title,SUM(orderdetails.quantity) FROM (products INNER JOIN orderdetails ON products.product_id=orderdetails.product_id)INNER JOIN suppliers ON products.supplier_id=suppliers.supplier_id   WHERE suppliers.supplier_name="Akshay" GROUP BY products.product_id;
 SELECT * FROM cart_items;
 SELECT * FROM  orderDetails;
+
+SELECT * FROM  payments WHERE order_id IN (SELECT order_id FROM orders  WHERE cust_id=1);
+
+SELECT * FROM payments WHERE order_id=1;
