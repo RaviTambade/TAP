@@ -64,21 +64,20 @@ public class EmployeeRepository : IEmployeeRepository
         }
       return Employees; 
     }
-
-
     public List<Employee> GetEmployeesByDepartmentId(int deptId){
       List<Employee> Employees=new List<Employee>();
         MySqlConnection connection=new MySqlConnection(_conString);
         try{
             MySqlCommand command=new MySqlCommand();
             //set parameterized query using @
-            command.CommandText="SELECT * FROM employees WHERE dept_id="+deptId;
+            command.CommandText="SELECT * FROM employees WHERE dept_id=@deptId";
             command.Connection= connection;
+            command.Parameters.AddWithValue("@deptId",deptId);
             connection.Open();
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
-                 int id = Int32.Parse(reader["employee_id"].ToString());
+                int id = Int32.Parse(reader["employee_id"].ToString());
                 string firstname = reader["empfirst_name"].ToString();
                 string lastname = reader["emplast_name"].ToString();
                 DateTime birthdate =  DateTime.Parse(reader["birth_date"].ToString());
@@ -119,7 +118,6 @@ public class EmployeeRepository : IEmployeeRepository
       return Employees;
 
     }
-
    public Employee GetById(int empId){
           Employee employee =new Employee();
           MySqlConnection connection=new MySqlConnection(_conString);

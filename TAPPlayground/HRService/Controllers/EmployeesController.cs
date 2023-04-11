@@ -37,7 +37,7 @@ namespace HRService.Controllers
         [Route("employeesbydeparment/{id}")]
         public IEnumerable<Employee> GetEmployeesByDepartmentId(int id)
         {
-            List<Employee> employees = _empsrv.GetAllEmployeesByDepatmentId(id);
+            List<Employee> employees = _empsrv.GetEmployeesByDepartmentId(id);
             return employees;
         }
 
