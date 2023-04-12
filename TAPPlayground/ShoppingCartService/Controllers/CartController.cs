@@ -35,7 +35,10 @@ namespace ShoppingCartService.Controllers
         public async Task<bool> AddToCart(int id, Item item)
         {
             Cart theCart =await _cartSrv.GetCart(id);
-            bool status =await _cartSrv.AddItem(theCart, item);
+            if(theCart.CartId==0){
+                return false;
+            }
+            bool status =await _cartSrv.AddItem(theCart.CartId, item);
             return status;
         }
 
@@ -44,7 +47,10 @@ namespace ShoppingCartService.Controllers
         public async Task<bool> UpdateCart(int id, Item item)
         {
             Cart theCart =await _cartSrv.GetCart(id);
-            bool status =await _cartSrv.UpdateItem(theCart, item);
+            if(theCart.CartId==0){
+                return false;
+            }
+            bool status =await _cartSrv.UpdateItem(theCart.CartId, item);
             return status;
         }
 
@@ -53,7 +59,10 @@ namespace ShoppingCartService.Controllers
         public async Task<bool> RemoveFromCart(int id, Item item)
         {
             Cart theCart =await _cartSrv.GetCart(id);
-            bool status =await _cartSrv.RemoveItem(theCart, item);
+            if(theCart.CartId==0){
+                return false;
+            }
+            bool status =await _cartSrv.RemoveItem(theCart.CartId, item);
             return status;
         }
 
@@ -64,13 +73,5 @@ namespace ShoppingCartService.Controllers
             bool status =await _cartSrv.CreateOrder(id);
             return status;
         }
-
     }
 }
-
-
-
-
-
-
-
