@@ -8,12 +8,12 @@ public class PaymentService:IPaymentService{
         this._repo=repo;
     }
 
-    public List<Payment> GetAllPayments() => _repo.GetAllPayments();
-    public Payment GetPaymentById( int id) =>_repo.GetPaymentById(id);
-    public List<Payment> GetPaymentByOrderId( int id) =>_repo.GetPaymentByOrderId(id);
-    public bool InsertPayments(Payment payment)=>_repo.InsertPayments(payment);
-    public bool UpdatePayment(Payment payment)=>_repo.UpdatePayment(payment);
-    public bool DeletePayment(int id)=>_repo.DeletePayment(id);
-    public List<Payment> GetPaymentByCustomer( int id) =>_repo.GetPaymentByCustomer(id);
+    public async Task<IEnumerable<Payment>> GetAllPayments() => await _repo.GetAllPayments();
+    public async Task<Payment> GetPaymentById( int id) =>await _repo.GetPaymentById(id);
+    public async Task<IEnumerable<Payment>> GetPaymentByOrderId( int id) =>await _repo.GetPaymentByOrderId(id);
+    public async Task<bool> InsertPayments(Payment payment)=>await _repo.InsertPayments(payment);
+    public async Task<bool>  UpdatePayment(Payment payment)=>await _repo.UpdatePayment(payment);
+    public async Task<bool>  DeletePayment(int id)=>await _repo.DeletePayment(id);
+    public async Task<IEnumerable<Payment>> GetPaymentByCustomer( int id) =>await _repo.GetPaymentByCustomer(id);
    
 }
