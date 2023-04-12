@@ -18,7 +18,7 @@ public class PaymentsController : Controller
     }
 
     [HttpGet]
-    [Route("/getallpayments")]
+    [Route("/api/payments/getallpayments")]
     public  IEnumerable<Payment> GetAll()
     {
         List<Payment> payment=_paymentsrv.GetAllPayments();
@@ -27,7 +27,7 @@ public class PaymentsController : Controller
       
      
      [HttpGet]
-    [Route("/getpaymentdetails/{id}")]     
+    [Route("/api/payments/getpaymentdetails/{id}")]     
      public Payment GetById(int id)
     {
         var payment=_paymentsrv.GetPaymentById(id);
@@ -35,7 +35,7 @@ public class PaymentsController : Controller
     }
 
    [HttpGet]
-    [Route("/GetPaymentByOrder/{id}")]     
+    [Route("/api/payments/GetPaymentByOrder/{id}")]     
      public List<Payment> GetPaymentByOrderId(int id)
     {
         var payment=_paymentsrv.GetPaymentByOrderId(id);
@@ -44,7 +44,7 @@ public class PaymentsController : Controller
 
 
    [HttpPost]
-   [Route("/addpayment")]
+   [Route("/api/payments/addpayment")]
    public bool Insert([FromBody]Payment payment)
     {
         Console.WriteLine("In controller");
@@ -54,7 +54,7 @@ public class PaymentsController : Controller
     }
   
     [HttpPut]
-    [Route("/update/{id}")]
+    [Route("/api/payments/update/{id}")]
    public bool Update(int id,[FromBody]Payment payment)
     {
         Payment oldpayment=_paymentsrv.GetPaymentById(id);
@@ -67,7 +67,7 @@ public class PaymentsController : Controller
     }
 
     [HttpDelete]
-    [Route("/delete/{id}")]
+    [Route("/api/payments/delete/{id}")]
     public bool Delete(int id)
     {
         bool status=_paymentsrv.DeletePayment(id);
@@ -76,7 +76,7 @@ public class PaymentsController : Controller
 
     
     [HttpGet]
-    [Route("/GetPaymentByCustomer/{id}")]     
+    [Route("/api/payments/GetPaymentByCustomer/{id}")]     
      public List<Payment> GetPaymentByCustomer(int id)
     {
         var payment=_paymentsrv.GetPaymentByCustomer(id);
