@@ -2,14 +2,14 @@ using PaymentProcessingService.Models;
 namespace PaymentProcessingService.Repositories.Interfaces;
 public interface IPaymentRepository
 {
-     List<Payment> GetAllPayments();
-    Payment GetPaymentById(int id);
-    List<Payment> GetPaymentByOrderId(int id);
-    bool InsertPayments(Payment payment);
-    bool UpdatePayment(Payment payment);
-    bool DeletePayment(int id);
+   Task<IEnumerable<Payment>> GetAllPayments();
+    Task<Payment> GetPaymentById(int id);
+   Task<IEnumerable<Payment>> GetPaymentByOrderId(int id);
+     Task<bool> InsertPayments(Payment payment);
+    Task<bool> UpdatePayment(Payment payment);
+    Task<bool>  DeletePayment(int id);
    
     
-     List<Payment> GetPaymentByCustomer(int id);
+   Task<IEnumerable<Payment>> GetPaymentByCustomer(int id);
 
 }
