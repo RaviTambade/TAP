@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using OrderProcessingService.Models;
-using OrderProcessingService.Services;
 using OrderProcessingService.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using MySql.Data.MySqlClient;
@@ -19,46 +18,46 @@ namespace OrderProcessingService.Controllers
 
         [HttpGet]
         [Route("/getallorderdetails")]
-        public IEnumerable<OrderDetails> GetAll()
+        public async Task<IEnumerable<OrderDetails>> GetAll()
         {
-            List<OrderDetails> orderDetails = _srv.GetAll();
+            IEnumerable<OrderDetails> orderDetails = await _srv.GetAll();
             return orderDetails;
         }
 
         [HttpGet]
         [Route("/getorderdetails/{id}")]
-        public OrderDetails GetById(int id)
+        public async Task<OrderDetails> GetById(int id)
         {
-            OrderDetails orderDetail = _srv.GetById(id);
+            OrderDetails orderDetail = await _srv.GetById(id);
             return orderDetail;
         }
 
         [HttpPut]
         [Route("/updateorderdetails/{id}")]
-        public bool Update( int id,[FromBody] OrderDetails orderDetail)
+        public async Task<bool> Update( int id,[FromBody] OrderDetails orderDetail)
         {
-            OrderDetails oldOrderDetail = _srv.GetById(id);
+            OrderDetails oldOrderDetail = await _srv.GetById(id);
             if(oldOrderDetail.OrderDetailsId==0){
                 return false;
             }
             orderDetail.OrderDetailsId=id;
-            bool status = _srv.Update(orderDetail);
+            bool status = await _srv.Update(orderDetail);
             return status;
         }
  
         [HttpPost]
         [Route("/addorderdetails")]
-        public bool Insert([FromBody] OrderDetails orderDetail)
+        public async Task<bool> Insert([FromBody] OrderDetails orderDetail)
         {
-            bool status = _srv.Insert(orderDetail);
+            bool status =await _srv.Insert(orderDetail);
             return status;
         }
    
         [HttpDelete]
         [Route("/deleteorderdetails/{id}")]
-        public bool Delete(int id)
+        public async Task<bool> Delete(int id)
         {
-            bool status = _srv.DeleteByOrderDetailsId(id);
+            bool status = await  _srv.DeleteByOrderDetailsId(id);
             return status;
         }
     }
