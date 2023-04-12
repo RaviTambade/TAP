@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Threading.Tasks;
 using CatalogService.Models;
 using CatalogService.Repositories.Interfaces;
 using CatalogService.Services.Interfaces;
@@ -9,8 +11,12 @@ public class ProductService : IProductService
     {
         _repo = repo;
     }
-    public List<Product> GetAll() => _repo.GetAll();
-    public Product GetById(int productId) => _repo.GetById(productId);
+    public async Task<IEnumerable<Product>> GetAll(){
+         var products= _repo.GetAll();
+         Console.WriteLine("service");
+         return await products;
+    }
+    public async Task<Product> GetById(int productId) =>await  _repo.GetById(productId);
     public bool Insert(Product product) => _repo.Insert(product);
     public bool Update(Product product) => _repo.Update(product);
     public bool Delete(int productId) => _repo.Delete(productId);

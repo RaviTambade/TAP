@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Data;
 using CatalogService.Models;
 using CatalogService.Repositories.Interfaces;
@@ -12,17 +13,18 @@ public class ProductRepository : IProductRepository
         _configuration = configuration;
         _conString = this._configuration.GetConnectionString("DefaultConnection");
     }
-    public List<Product> GetAll()
+    public async Task<IEnumerable<Product>> GetAll()
     {
+        await Task.Delay(3000);
         List<Product> products = new List<Product>();
         MySqlConnection connection = new MySqlConnection(_conString);
         try
         {
             string query = "SELECT * FROM products";
             MySqlCommand command = new MySqlCommand(query, connection);
-            connection.Open();
-            MySqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
+            await connection.OpenAsync();
+            MySqlDataReader reader =command.ExecuteReader();
+            while (await reader.ReadAsync())
             {
                 int id = Int32.Parse(reader["product_id"].ToString());
                 string? title = reader["product_title"].ToString();
@@ -60,7 +62,7 @@ public class ProductRepository : IProductRepository
         }
         return products;
     }
-    public Product GetById(int productId)
+    public async Task<Product> GetById(int productId)
     {
         Product product = new Product();
         MySqlConnection connection = new MySqlConnection(_conString);
@@ -69,9 +71,9 @@ public class ProductRepository : IProductRepository
             string query = "SELECT * FROM products where product_id=@productId";
             MySqlCommand command = new MySqlCommand(query, connection);
             command.Parameters.AddWithValue("@productId", productId);
-            connection.Open();
+            await connection.OpenAsync();
             MySqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
+            while (await reader.ReadAsync())
             {
                 string? name = reader["product_title"].ToString();
                 string? description = reader["description"].ToString();

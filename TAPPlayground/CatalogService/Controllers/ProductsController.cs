@@ -16,26 +16,26 @@ namespace CatalogService.Controllers
 
         [HttpGet]
         [Route("getallproducts")]
-        public IEnumerable<Product> GetAllProducts()
+        public async Task<IEnumerable<Product>> GetAllProducts()
         {
-            List<Product> products = _productsrv.GetAll();
+            IEnumerable<Product> products =await _productsrv.GetAll();
             return products;
         }
 
         [HttpGet]
         [Route("getproductdetails/{id}")]
-        public Product GetById(int id)
+        public async Task<Product> GetById(int id)
         {
-            Product product = _productsrv.GetById(id);
+            Product product = await _productsrv.GetById(id);
             return product;
         }
 
         // [Authorize(Roles = Role.Admin)]
         [HttpPut]
         [Route("update/{id}")]
-        public bool Update(int id, [FromBody] Product product)
+        public async Task<bool> UpdateAsync(int id, [FromBody] Product product)
         {
-            Product oldProduct = _productsrv.GetById(id);
+            Product oldProduct =await _productsrv.GetById(id);
             if (oldProduct.ProductId == 0)
             {
                 return false;
