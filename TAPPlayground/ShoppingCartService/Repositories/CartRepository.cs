@@ -12,8 +12,9 @@ public class CartRepository : ICartRepository
         _configuration = configuration;
         _conString = this._configuration.GetConnectionString("DefaultConnection");
     }
-    public List<Cart> GetAllCarts()
+    public async Task<List<Cart>> GetAllCarts()
     {
+        await Task.Delay(3000);
         List<Cart> carts = new List<Cart>();
         MySqlConnection con = new MySqlConnection();
         try
@@ -22,9 +23,9 @@ public class CartRepository : ICartRepository
             string query = "select DISTINCT(cart_id) from cart_items";
             Console.WriteLine(query);
             MySqlCommand command = new MySqlCommand(query, con);
-            con.Open();
+            await con.OpenAsync();
             MySqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
+            while (await reader.ReadAsync())
             {
                 int cartId = int.Parse(reader["cart_id"].ToString());
                 Cart theCart = new Cart();
@@ -38,8 +39,10 @@ public class CartRepository : ICartRepository
                                      "products.unit_price,cart_items.quantity"+
                                      "FROM products, cart_items " +
                                      " WHERE products.product_id=cart_items.product_id AND cart_id=@cartId";
+            
                 MySqlCommand command2 = new MySqlCommand(secondQuery, con);
                 command2.Parameters.AddWithValue("@cartId", theCart.CartId);
+                Console.WriteLine(secondQuery);
                 MySqlDataReader readerItems = command2.ExecuteReader();
                 while (readerItems.Read())
                 {
@@ -60,6 +63,7 @@ public class CartRepository : ICartRepository
                 }
                 readerItems.Close();
             }
+        
         }
         catch (Exception e)
         {
@@ -71,7 +75,7 @@ public class CartRepository : ICartRepository
         }
         return carts;
     }
-    public Cart GetCart(int cartId)
+    public async Task<Cart> GetCart(int cartId)
     {
         Cart cart = new Cart();
         MySqlConnection con = new MySqlConnection();
@@ -81,11 +85,11 @@ public class CartRepository : ICartRepository
             string query = "SELECT products.product_id,products.product_title,products.image," +
                            " products.unit_price,cart_items.quantity FROM products,cart_items " +
                            " WHERE products.product_id=cart_items.product_id AND cart_id=@cartId";
-            con.Open();
+            await con.OpenAsync();
             MySqlCommand command = new MySqlCommand(query, con);
             command.Parameters.AddWithValue("@cartId", cartId);
             MySqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
+            while (await reader.ReadAsync())
             {
                 int productId = int.Parse(reader["product_id"].ToString());
                 string productTitle = reader["product_title"].ToString();
@@ -115,14 +119,14 @@ public class CartRepository : ICartRepository
         }
         return cart;
     }
-    public bool AddItem(Cart theCart, Item item)
+    public async Task<bool> AddItem(Cart theCart, Item item)
     {
         bool status = false;
         MySqlConnection con = new MySqlConnection();
         try
         {
             con.ConnectionString = _conString;
-            con.Open();
+            await con.OpenAsync();
             string query = "INSERT into cart_items(cart_id,product_id,quantity) VALUES (@cartId, @productId,@quantity)";
             MySqlCommand command = new MySqlCommand(query, con);
             command.Parameters.AddWithValue("@cartId", theCart.CartId);
@@ -144,7 +148,7 @@ public class CartRepository : ICartRepository
         }
         return status;
     }
-    public bool UpdateItem(Cart theCart, Item item)
+    public async Task<bool> UpdateItem(Cart theCart, Item item)
     {
         bool status = false;
         MySqlConnection con = new MySqlConnection();
@@ -157,7 +161,7 @@ public class CartRepository : ICartRepository
             command.Parameters.AddWithValue("@productId", item.ProductId);
             command.Parameters.AddWithValue("@cartId", theCart.CartId);
             command.Parameters.AddWithValue("@quantity", item.Quantity);
-            con.Open();
+            await con.OpenAsync();
             int rowsAffected = command.ExecuteNonQuery();
             if (rowsAffected >= 1)
             {
@@ -174,14 +178,14 @@ public class CartRepository : ICartRepository
         }
         return status;
     }
-    public bool RemoveItem(Cart theCart, Item item)
+    public async Task<bool> RemoveItem(Cart theCart, Item item)
     {
         bool status = false;
         MySqlConnection con = new MySqlConnection();
         try
         {
             con.ConnectionString = _conString;
-            con.Open();
+            await con.OpenAsync();
             string query = "DELETE from cart_items WHERE cart_id=@cartId AND product_id=@productId";
             MySqlCommand command = new MySqlCommand(query, con);
             command.Parameters.AddWithValue("@cartId", theCart.CartId);
@@ -202,18 +206,17 @@ public class CartRepository : ICartRepository
         }
         return status;
     }
-
-    public bool CreateOrder(int cartId)
+    public async Task<bool> CreateOrder(int cartId)
     {
 
         bool status = false;
-        MySqlConnection connection = new MySqlConnection(_conString);
+        MySqlConnection con = new MySqlConnection(_conString);
         try
         {
-            MySqlCommand command = new MySqlCommand("CreateOrder", connection);             //create new mysqlcommand object to call the createorder stored procedure
+            MySqlCommand command = new MySqlCommand("CreateOrder", con);             //create new mysqlcommand object to call the createorder stored procedure
             command.CommandType = CommandType.StoredProcedure;
             command.Parameters.AddWithValue("@cartId", cartId);     //set the cartid input parameter for the stored procedure
-            connection.Open();
+            await con.OpenAsync();
             command.ExecuteNonQuery();
             status = true;
         }
@@ -223,7 +226,7 @@ public class CartRepository : ICartRepository
         }
         finally
         {
-            connection.Close();
+            con.Close();
         }
         return status;
     }

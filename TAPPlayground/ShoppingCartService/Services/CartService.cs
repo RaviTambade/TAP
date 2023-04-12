@@ -10,30 +10,30 @@ public class CartService:ICartService{
         this._repo=repo;
     }
 
-    public List<Cart> GetAllCarts(){
-      return _repo.GetAllCarts();
+    public async Task<List<Cart>> GetAllCarts(){
+      return await _repo.GetAllCarts();
      }
-    public Cart GetCart(int id)
+    public async Task<Cart> GetCart(int id)
     {
-        return _repo.GetCart(id);
+        return await _repo.GetCart(id);
     }
-    public bool AddItem(Cart cart, Item item)
+    public async Task<bool> AddItem(Cart cart, Item item)
     {
-        return _repo.AddItem(cart,item);
+        return await _repo.AddItem(cart,item);
     }
     
 
-    public bool UpdateItem(Cart cart, Item item)
+    public async Task<bool> UpdateItem(Cart cart, Item item)
     {
-        return _repo.UpdateItem(cart,item);
+        return await _repo.UpdateItem(cart,item);
     }
-    public bool RemoveItem(Cart cart, Item item)
+    public async Task<bool> RemoveItem(Cart cart, Item item)
     {
-        return _repo.RemoveItem(cart,item);
+        return await _repo.RemoveItem(cart,item);
     }
 
-    public bool CreateOrder(int cartId){
-       return _repo.CreateOrder(cartId);
+    public async Task<bool> CreateOrder(int cartId){
+       return await _repo.CreateOrder(cartId);
     }
 
 }

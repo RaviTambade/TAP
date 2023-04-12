@@ -16,52 +16,52 @@ namespace ShoppingCartService.Controllers
 
         [HttpGet]
         [Route("getallcartitems")]
-        public IEnumerable<Cart> GetAllCarts()
+        public async Task<IEnumerable<Cart>> GetAllCarts()
         {
-            List<Cart> carts = _cartSrv.GetAllCarts();
+            List<Cart> carts =await _cartSrv.GetAllCarts();
             return carts;
         }
 
         [HttpGet]
         [Route("getcartdetails/{id}")]
-        public Cart GetCart(int id)
+        public async Task<Cart> GetCart(int id)
         {
-            Cart cart = _cartSrv.GetCart(id);
+            Cart cart = await _cartSrv.GetCart(id);
             return cart;
         }
 
         [HttpPost]
         [Route("addtocart/{id}")]
-        public bool AddToCart(int id, Item item)
+        public async Task<bool> AddToCart(int id, Item item)
         {
-            Cart theCart = _cartSrv.GetCart(id);
-            bool status = _cartSrv.AddItem(theCart, item);
+            Cart theCart =await _cartSrv.GetCart(id);
+            bool status =await _cartSrv.AddItem(theCart, item);
             return status;
         }
 
         [HttpPut]
         [Route("update/{id}")]
-        public bool UpdateCart(int id, Item item)
+        public async Task<bool> UpdateCart(int id, Item item)
         {
-            Cart theCart = _cartSrv.GetCart(id);
-            bool status = _cartSrv.UpdateItem(theCart, item);
+            Cart theCart =await _cartSrv.GetCart(id);
+            bool status =await _cartSrv.UpdateItem(theCart, item);
             return status;
         }
 
         [HttpPost]
         [Route("delete/{id}")]
-        public bool RemoveFromCart(int id, Item item)
+        public async Task<bool> RemoveFromCart(int id, Item item)
         {
-            Cart theCart = _cartSrv.GetCart(id);
-            bool status = _cartSrv.RemoveItem(theCart, item);
+            Cart theCart =await _cartSrv.GetCart(id);
+            bool status =await _cartSrv.RemoveItem(theCart, item);
             return status;
         }
 
         [HttpPost]
         [Route("createorder/{id}")]
-        public bool CreateOrder(int id)
+        public async Task<bool> CreateOrder(int id)
         {
-            bool status = _cartSrv.CreateOrder(id);
+            bool status =await _cartSrv.CreateOrder(id);
             return status;
         }
 
