@@ -15,7 +15,7 @@ public class PaymentRepository : IPaymentRepository
 
     }
       
-    public List<Payment> GetAllPayments()
+    public async Task<IEnumerable<Payment>> GetAllPayments()
     {
         List<Payment> payments = new List<Payment>();
         MySqlConnection connection = new MySqlConnection();
@@ -23,10 +23,10 @@ public class PaymentRepository : IPaymentRepository
         try
         {
             string query = "SELECT * FROM payments";
-            connection.Open();
+            await connection.OpenAsync();
             MySqlCommand command = new MySqlCommand(query, connection);
             MySqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
+            while (await reader.ReadAsync())
             {
                 int paymentId =int.Parse(reader["payment_id"].ToString());
                 DateTime paymentDate = DateTime.Parse(reader["payment_date"].ToString());
@@ -57,7 +57,7 @@ public class PaymentRepository : IPaymentRepository
         }
         return payments;
     }
-   public Payment GetPaymentById(int id)
+   public async Task<Payment> GetPaymentById(int id)
     {
         Payment payment = new Payment();
         MySqlConnection connection = new MySqlConnection();
@@ -65,11 +65,11 @@ public class PaymentRepository : IPaymentRepository
         try
         {
             string query = "SELECT * FROM payments where payment_id=@paymentId";
-            connection.Open();
+            await connection.OpenAsync();
             MySqlCommand command = new MySqlCommand(query, connection);
             command.Parameters.AddWithValue("@paymentId",id);
             MySqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
+            while (await reader.ReadAsync())
             {
                 //paymentId =int.Parse(reader["payment_id"].ToString());
                 DateTime paymentDate = DateTime.Parse(reader["payment_date"].ToString());
@@ -98,7 +98,7 @@ public class PaymentRepository : IPaymentRepository
         }
         return payment;
     }
-    public List<Payment> GetPaymentByOrderId(int id)
+    public async Task<IEnumerable<Payment>> GetPaymentByOrderId(int id)
     {
         List<Payment> payments = new List<Payment>();
         MySqlConnection connection = new MySqlConnection();
@@ -106,11 +106,11 @@ public class PaymentRepository : IPaymentRepository
         try
         {
             string query = "SELECT * FROM payments where order_id=@orderId";
-            connection.Open();
+            await connection.OpenAsync();
             MySqlCommand command = new MySqlCommand(query, connection);
             command.Parameters.AddWithValue("@orderId",id);
             MySqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
+            while ( await reader.ReadAsync())
             {
                 int paymentId =int.Parse(reader["payment_id"].ToString());
                 DateTime date = DateTime.Parse(reader["payment_date"].ToString(), CultureInfo.InvariantCulture);
@@ -142,7 +142,7 @@ public class PaymentRepository : IPaymentRepository
         }
         return payments;
     }
-    public  bool InsertPayments(Payment payment){
+    public  async Task<bool>  InsertPayments(Payment payment){
           bool status = false;
           MySqlConnection con = new MySqlConnection();
           con.ConnectionString=_conString;
@@ -154,7 +154,7 @@ public class PaymentRepository : IPaymentRepository
             cmd.Parameters.AddWithValue("@paymentMode",payment.PaymentMode);
             cmd.Parameters.AddWithValue("@transactionId",payment.TransactionId);
             cmd.Parameters.AddWithValue("@orderId",payment.OrderId);
-             con.Open();
+              await con.OpenAsync();
              cmd.ExecuteNonQuery();               
            status=true;
           }catch(Exception e )
@@ -166,7 +166,7 @@ public class PaymentRepository : IPaymentRepository
           }
           return status;
    }
-   public  bool UpdatePayment(Payment payment){
+   public async Task<bool> UpdatePayment(Payment payment){
           bool status = false;
           MySqlConnection con = new MySqlConnection();
           con.ConnectionString=_conString;
@@ -179,7 +179,7 @@ public class PaymentRepository : IPaymentRepository
             cmd.Parameters.AddWithValue("@transactionId",payment.TransactionId);
             cmd.Parameters.AddWithValue("@orderId",payment.OrderId);
             cmd.Parameters.AddWithValue("@paymentId",payment.PaymentId);
-            con.Open();
+             await con.OpenAsync();
             int rowsAffected=cmd.ExecuteNonQuery();               
              if(rowsAffected>0){
              status=true;
@@ -194,7 +194,7 @@ public class PaymentRepository : IPaymentRepository
           }
           return status;
    }
-      public  bool DeletePayment(int id){
+      public  async Task<bool>  DeletePayment(int id){
           bool status = false;
           MySqlConnection con = new MySqlConnection();
           con.ConnectionString=_conString;
@@ -203,7 +203,7 @@ public class PaymentRepository : IPaymentRepository
             string query = "DELETE FROM payments WHERE payment_id=@paymentId";
              MySqlCommand cmd=new MySqlCommand(query,con) ;
              cmd.Parameters.AddWithValue("@paymentId",id);
-             con.Open();
+              await con.OpenAsync();
              cmd.ExecuteNonQuery();              
            status=true;
           }catch(Exception e )
@@ -215,7 +215,7 @@ public class PaymentRepository : IPaymentRepository
           }
           return status;
    }
-    public List<Payment> GetPaymentByCustomer(int customerId)
+    public async Task<IEnumerable<Payment>> GetPaymentByCustomer(int customerId)
     {
     
         List<Payment> payments = new List<Payment>();
@@ -224,11 +224,11 @@ public class PaymentRepository : IPaymentRepository
         try
         {
             string query = "select * from payments where order_id in (select order_id from orders  where cust_id=@customerId);";
-            connection.Open();
+           await connection.OpenAsync();
             MySqlCommand command = new MySqlCommand(query, connection);
             command.Parameters.AddWithValue("@customerId",customerId);
             MySqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
+            while (await reader.ReadAsync())
             {
                 int paymentId =int.Parse(reader["payment_id"].ToString());
                 DateTime date = DateTime.Parse(reader["payment_date"].ToString(), CultureInfo.InvariantCulture);

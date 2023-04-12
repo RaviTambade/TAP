@@ -1,14 +1,15 @@
+using System.Threading.Tasks;
 using BankingService.Models;
 
 namespace BankingService.Repositories.Interfaces;
 public interface IAccountRepository{
 
-    List<Account> GetAll();
+    Task <List<Account>> GetAll();
 
-    Account GetById(int accountId);
+   Task <Account> GetById(int accountId);
 
-   bool Insert(Account account);
-   bool Update(Account account);
-   bool Delete(int accountId);
+  Task <bool> Insert(Account account);
+  Task <bool> Update(Account account);
+  Task <bool> Delete(int accountId);
    
 }
