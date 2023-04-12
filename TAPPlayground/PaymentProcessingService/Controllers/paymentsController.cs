@@ -19,67 +19,67 @@ public class PaymentsController : Controller
 
     [HttpGet]
     [Route("/api/payments/getallpayments")]
-    public  IEnumerable<Payment> GetAll()
+    public async Task<IEnumerable<Payment>> GetAll()
     {
-        List<Payment> payment=_paymentsrv.GetAllPayments();
+       IEnumerable<Payment> payment=await _paymentsrv.GetAllPayments();
         return payment;
     }
       
      
      [HttpGet]
     [Route("/api/payments/getpaymentdetails/{id}")]     
-     public Payment GetById(int id)
+     public async Task<Payment> GetById(int id)
     {
-        var payment=_paymentsrv.GetPaymentById(id);
+        var payment= await _paymentsrv.GetPaymentById(id);
         return payment;
     }
 
    [HttpGet]
     [Route("/api/payments/GetPaymentByOrder/{id}")]     
-     public List<Payment> GetPaymentByOrderId(int id)
+     public async Task<IEnumerable<Payment>> GetPaymentByOrderId(int id)
     {
-        var payment=_paymentsrv.GetPaymentByOrderId(id);
+        var payment=await _paymentsrv.GetPaymentByOrderId(id);
         return payment;
     }
 
 
    [HttpPost]
    [Route("/api/payments/addpayment")]
-   public bool Insert([FromBody]Payment payment)
+   public async Task<bool> Insert([FromBody]Payment payment)
     {
         Console.WriteLine("In controller");
         Console.WriteLine(payment);
-        var pay=_paymentsrv.InsertPayments(payment);
+        var pay=await _paymentsrv.InsertPayments(payment);
         return pay;
     }
   
     [HttpPut]
     [Route("/api/payments/update/{id}")]
-   public bool Update(int id,[FromBody]Payment payment)
+   public async Task<bool> Update(int id,[FromBody]Payment payment)
     {
-        Payment oldpayment=_paymentsrv.GetPaymentById(id);
+        Payment oldpayment=await _paymentsrv.GetPaymentById(id);
         if(oldpayment.PaymentId==0){
         return false;
         }
        payment.PaymentId=id;
-        bool status=_paymentsrv.UpdatePayment(payment);
+        bool status=await _paymentsrv.UpdatePayment(payment);
         return status;
     }
 
     [HttpDelete]
     [Route("/api/payments/delete/{id}")]
-    public bool Delete(int id)
+    public async Task<bool> Delete(int id)
     {
-        bool status=_paymentsrv.DeletePayment(id);
+        bool status=await _paymentsrv.DeletePayment(id);
         return status;
     }
 
     
     [HttpGet]
     [Route("/api/payments/GetPaymentByCustomer/{id}")]     
-     public List<Payment> GetPaymentByCustomer(int id)
+     public async Task<IEnumerable<Payment>> GetPaymentByCustomer(int id)
     {
-        var payment=_paymentsrv.GetPaymentByCustomer(id);
+        var payment= await _paymentsrv.GetPaymentByCustomer(id);
         return payment;
     }
 
