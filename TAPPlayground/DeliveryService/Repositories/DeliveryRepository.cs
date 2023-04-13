@@ -19,18 +19,19 @@ public class DeliveryRepository : IDeliveryRepository
         _conString= this._configuration.GetConnectionString("DefaultConnection");
     }
 
-    public List<Delivery> GetAll()
+    public async Task<IEnumerable<Delivery>>  GetAll()
     {
+        await Task.Delay(10000);
         List<Delivery> deliveries = new List<Delivery>();
         MySqlConnection connection = new MySqlConnection();
         connection.ConnectionString = _conString;
         try
         {
             string query = "SELECT * FROM shippers";
-            connection.Open();
+            await connection.OpenAsync();
             MySqlCommand command = new MySqlCommand(query, connection);
             MySqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
+            while (await reader.ReadAsync())
             {
                     int id = int.Parse(reader["shipper_id"].ToString());
                     string? companyName = reader["company_name"].ToString();
@@ -64,18 +65,18 @@ public class DeliveryRepository : IDeliveryRepository
     }
     
 
-    public Delivery GetById(int id)
+    public async Task<Delivery>  GetById(int id)
     {
         Delivery delivery = new Delivery();
         MySqlConnection connection = new MySqlConnection(_conString);
         try
         {
             string query = "SELECT * FROM shippers WHERE shipper_id= @shipperId";
-            connection.Open();
+            await connection.OpenAsync();
             MySqlCommand command = new MySqlCommand(query, connection);
             command.Parameters.AddWithValue("@shipperId", id);
             MySqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
+            while (await reader.ReadAsync())
             {
                     id = int.Parse(reader["shipper_id"].ToString());
                     string companyName = reader["company_name"].ToString();
@@ -108,7 +109,7 @@ public class DeliveryRepository : IDeliveryRepository
     }
 
 
-   public bool Insert(Delivery delivery){
+   public async Task<bool>  Insert(Delivery delivery){
         bool status=false;
         MySqlConnection connection=new MySqlConnection();
         connection.ConnectionString=_conString;
@@ -122,7 +123,7 @@ public class DeliveryRepository : IDeliveryRepository
             command.Parameters.AddWithValue("@email",delivery.Email);
             command.Parameters.AddWithValue("@password",delivery.Password);
             command.Parameters.AddWithValue("@accountNumber",delivery.AccountNumber);
-            connection.Open();
+             await connection.OpenAsync();
               int rowsAffected=command.ExecuteNonQuery();
             if(rowsAffected >0){
              status=true;
@@ -137,7 +138,7 @@ public class DeliveryRepository : IDeliveryRepository
         return status;
     }
 
- public bool Update(Delivery delivery)
+ public async Task<bool> Update(Delivery delivery)
     {
         bool status = false;
         MySqlConnection connection = new MySqlConnection();
@@ -152,7 +153,7 @@ public class DeliveryRepository : IDeliveryRepository
             command.Parameters.AddWithValue("@email",delivery.Email);
             command.Parameters.AddWithValue("@password",delivery.Password);
             command.Parameters.AddWithValue("@accountNumber",delivery.AccountNumber);
-            connection.Open();
+            await connection.OpenAsync();
             int rowsAffected=command.ExecuteNonQuery();
             if(rowsAffected >0){
              status=true;
@@ -171,7 +172,7 @@ public class DeliveryRepository : IDeliveryRepository
 
     }
 
-    public bool Delete(int id)
+    public async Task<bool> Delete(int id)
     {
         bool status = false;
         MySqlConnection con = new MySqlConnection();
@@ -179,7 +180,7 @@ public class DeliveryRepository : IDeliveryRepository
         try
         {
             string query = "DELETE FROM shippers WHERE shipper_id=@shipperId";
-            con.Open();
+            await con.OpenAsync();
             MySqlCommand command = new MySqlCommand(query, con);
             command.Parameters.AddWithValue("@shipperId", id);
             command.ExecuteNonQuery();

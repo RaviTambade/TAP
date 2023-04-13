@@ -1,6 +1,6 @@
 
-
 using DeliveryService.Models;
+
 using DeliveryService.Repositories.Interfaces;
 using DeliveryService.Services.Interfaces;
 
@@ -15,26 +15,29 @@ public class DeliveryServices : IDeliveryService
         _repo = repo;
     }
 
-    public List<Delivery> GetAll() => _repo.GetAll();
-
-
-    public Delivery GetById(int id)
-    {
-        return _repo.GetById(id);
+    public async Task <IEnumerable<Delivery>> GetAll(){
+        var delivery= _repo.GetAll();
+         Console.WriteLine("service");
+         return await delivery;
     }
 
-   public bool Insert(Delivery delivery)
+    public async Task<Delivery> GetById(int id)
     {
-        return _repo.Insert(delivery);
+        return await _repo.GetById(id);
     }
 
-   public bool Update(Delivery delivery)
+   public async Task<bool> Insert(Delivery delivery)
     {
-        return _repo.Update(delivery);
+        return await _repo.Insert(delivery);
     }
-   public bool Delete(int id)
+
+   public async Task<bool> Update(Delivery delivery)
     {
-        return _repo.Delete(id);
+        return await _repo.Update(delivery);
+    }
+   public async Task<bool> Delete(int id)
+    {
+        return await _repo.Delete(id);
     }
     
 }

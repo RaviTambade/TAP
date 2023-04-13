@@ -4,13 +4,13 @@ namespace DeliveryService.Repositories.Interfaces;
 
 public interface IDeliveryRepository{
 
- public List<Delivery> GetAll();
+Task<IEnumerable<Delivery>> GetAll();
 
 
-    Delivery GetById(int id);
+      Task<Delivery>  GetById(int id);
 
-    bool Insert(Delivery delivery);
-    bool Update(Delivery delivery);
-    bool Delete(int id);
+      Task<bool> Insert(Delivery delivery);
+      Task<bool> Update(Delivery delivery);
+      Task<bool> Delete(int id);
     
 }
