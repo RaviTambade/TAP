@@ -12,8 +12,10 @@ namespace HRService.Controllers
     public class EmployeesController : ControllerBase
     {
         private readonly IEmployeeService _empsrv;
-        public EmployeesController(IEmployeeService empsrv)
+        private readonly ILogger<EmployeesController> _logger;
+        public EmployeesController(ILogger<EmployeesController> logger,IEmployeeService empsrv)
         {
+            _logger = logger;
             _empsrv = empsrv;
         }
 
@@ -22,6 +24,7 @@ namespace HRService.Controllers
         public async Task<IEnumerable<Employee>> GetAllEmployees()
         {
             List<Employee> employees =await _empsrv.GetAll();
+            _logger.LogInformation("Get All method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
             return employees;
         }
 
@@ -30,6 +33,7 @@ namespace HRService.Controllers
         public async Task<Employee> GetById(int id)
         {
             Employee employee =await _empsrv.GetById(id);
+             _logger.LogInformation("Get Employee By ID method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
             return employee;
         }
 
@@ -38,6 +42,7 @@ namespace HRService.Controllers
         public IEnumerable<Employee> GetEmployeesByDepartmentId(int id)
         {
             List<Employee> employees = _empsrv.GetEmployeesByDepartmentId(id);
+             _logger.LogInformation("Get Employee By Dept ID method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
             return employees;
         }
 
@@ -52,6 +57,7 @@ namespace HRService.Controllers
             }
             employee.EmpId=id;
             bool status =await _empsrv.Update(employee);
+             _logger.LogInformation("Employee update is invoked");
             return status;
         }
 
@@ -61,6 +67,7 @@ namespace HRService.Controllers
         public async Task<bool> Insert([FromBody] Employee employee)
         {
             bool status =await _empsrv.Insert(employee);
+             _logger.LogInformation("employee data  is inserted");  
             return status;
         }
 
@@ -70,6 +77,7 @@ namespace HRService.Controllers
         public async Task <bool> Delete(int id)
         {
             bool status =await _empsrv.Delete(id);
+            _logger.LogInformation("employee data  is deleted");   
             return status;
         }
     }
