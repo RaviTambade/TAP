@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Threading.Tasks;
 using OrderProcessingService.Models;
 using OrderProcessingService.Repositories.Interfaces;
 using OrderProcessingService.Services.Interfaces;
@@ -11,38 +13,41 @@ public class OrderDetailsService : IOrderDetailsService
         this._repo = repo;
     }
 
-    public bool DeleteByOrderDetailsId(int orderDetailsId)
+    public async Task<bool> DeleteByOrderDetailsId(int orderDetailsId)
     {
-        return _repo.DeleteByOrderDetailsId(orderDetailsId);
+        return await _repo.DeleteByOrderDetailsId(orderDetailsId);
     }
 
-    public List<OrderDetails> GetAll()
+    public async Task<IEnumerable<OrderDetails>> GetAll()
     {
-        return _repo.GetAll();
+        var orderdetails = _repo.GetAll();
+        Console.WriteLine("service");
+        return await orderdetails;
     }
 
-    public OrderDetails GetById(int orderDetailsId)
+    public async Task<OrderDetails> GetById(int orderDetailsId)
     {
-        return _repo.GetById(orderDetailsId);
+        return await _repo.GetById(orderDetailsId);
     }
 
-    public List<OrderDetailsOrder> GetOrderDetailsByOrder(int orderId)
+    public async Task<IEnumerable<OrderDetailsOrder>> GetOrderDetailsByOrder(int orderId)
     {
-        return _repo.GetOrderDetailsByOrder(orderId);
+        var orderDetails = _repo.GetOrderDetailsByOrder(orderId);
+        return await orderDetails;
     }
 
-    public List<OrderHistory> GetOrderHistory(int customerId)
+    public async Task<IEnumerable<OrderHistory>> GetOrderHistory(int customerId)
     {
-        return _repo.GetOrderHistory(customerId);
+        return await _repo.GetOrderHistory(customerId);
     }
 
-    public bool Insert(OrderDetails orderDetails)
+    public async Task<bool> Insert(OrderDetails orderDetails)
     {
-        return _repo.Insert(orderDetails);
+        return await _repo.Insert(orderDetails);
     }
 
-    public bool Update(OrderDetails orderDetails)
+    public async Task<bool> Update(OrderDetails orderDetails)
     {
-      return _repo.Update(orderDetails);
+      return await _repo.Update(orderDetails);
     }
 }

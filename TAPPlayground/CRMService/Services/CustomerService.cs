@@ -9,12 +9,12 @@ public class CustomerService:ICustomerService{
         this._repo=repo;
     }
 
-    public List<Customer> GetAll() => _repo.GetAll();
+    public async Task<IEnumerable<Customer>> GetAll() => await _repo.GetAll();
     public Customer GetByContactNumber(string contact_number) => _repo.GetByContactNumber(contact_number);
-    public Customer GetById(int id)=> _repo.GetById(id);
-    public bool Insert(Customer customer)=>_repo.Insert(customer);
-    public bool Update(Customer customer)=> _repo.Update(customer);
-    public bool Delete(int id)=>_repo.Delete(id);
+    public async Task<Customer> GetById(int id)=>await _repo.GetById(id);
+    public async Task<bool> Insert(Customer customer)=>await _repo.Insert(customer);
+    public async Task<bool> Update(Customer customer)=>await  _repo.Update(customer);
+    public async Task<bool>  Delete(int id)=>await _repo.Delete(id);
 }
 
  

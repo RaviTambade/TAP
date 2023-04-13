@@ -6,8 +6,8 @@ public interface IProductRepository
 {
     Task<IEnumerable<Product>> GetAll();
     Task<Product> GetById(int productId);
-    bool Insert(Product product);
-    bool Update(Product product);
-    bool Delete(int ProductId);
-    bool HikePrice(double percentage);
+    Task<bool> Insert(Product product);
+    Task<bool> Update(Product product);
+    Task<bool> Delete(int ProductId);
+    Task<bool> HikePrice(double percentage);
 }

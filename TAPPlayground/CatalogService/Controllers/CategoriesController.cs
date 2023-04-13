@@ -15,44 +15,44 @@ namespace CatalogService.Controllers
         }
         [HttpGet]
         [Route("getallcategories")]
-        public IEnumerable<Category> GetAllCategories()
+        public async Task<IEnumerable<Category>> GetAllCategories()
         {
-            List<Category> categories = _categorysrv.GetAll();
+            IEnumerable<Category> categories =await _categorysrv.GetAll();
             return categories;
         }
         [HttpGet]
         [Route("getdetails/{id}")]
-        public Category GetDetails(int id)
+        public async Task<Category> GetDetails(int id)
         {
-            Category category = _categorysrv.GetDetails(id);
+            Category category =await _categorysrv.GetDetails(id);
             return category;
         }
         [HttpPost]
         [Route("insert")]
-        public bool Insert([FromBody] Category category)
+        public async Task<bool> Insert([FromBody] Category category)
         {
-            bool status = _categorysrv.Insert(category);
+            bool status =await _categorysrv.Insert(category);
             return status;
         }
 
         [HttpPut]
         [Route("update/{id}")]
-        public bool Update(int id, [FromBody] Category category)
+        public async Task<bool> Update(int id, [FromBody] Category category)
         {
-            Category oldCategory = _categorysrv.GetDetails(id);
+            Category oldCategory =await _categorysrv.GetDetails(id);
             if (oldCategory.CategoryId == 0)
             {
                 return false;
             }
             category.CategoryId = id;
-            bool status = _categorysrv.Update(category);
+            bool status =await _categorysrv.Update(category);
             return status;
         }
         [HttpDelete]
         [Route("delete/{id}")]
-        public bool Delete(int id)
+        public async Task<bool> Delete(int id)
         {
-            bool status = _categorysrv.Delete(id);
+            bool status =await _categorysrv.Delete(id);
             return status;
         }
     }
