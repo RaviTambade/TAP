@@ -16,11 +16,8 @@ namespace OrderProcessingService.Helpers
         public string Roles { get; set; }
         public void OnAuthorization(AuthorizationFilterContext context)
         {
-           // var user = (User)context.HttpContext.Items["User"];
             var userRoles = (List<string>)context.HttpContext.Items["userRoles"];
-
             bool status = false;
-
             if (this.Roles != null)
             {
                 var requiredRoles = this.Roles.Split(',').ToList();
