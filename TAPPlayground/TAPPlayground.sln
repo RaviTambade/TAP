@@ -11,11 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderProcessingService", "O
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsoleApp", "TestConsoleApp\TestConsoleApp.csproj", "{1BC5BAE7-E8BF-4C9E-A686-CEB657BFE0D4}"
 EndProject
-<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRServiceTestApp", "HRServiceTestApp\HRServiceTestApp.csproj", "{F4BC34ED-6802-479E-BF7F-5542FE5828DB}"
-=======
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRMTestApp", "CRMTestApp\CRMTestApp.csproj", "{83AEF101-6E6E-49CB-8E72-D77E984C89CD}"
->>>>>>> 4f9aa44f612d8f4eb8443e9c8f1f1342ad115ca2
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,20 +46,9 @@ Global
 		{1BC5BAE7-E8BF-4C9E-A686-CEB657BFE0D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BC5BAE7-E8BF-4C9E-A686-CEB657BFE0D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BC5BAE7-E8BF-4C9E-A686-CEB657BFE0D4}.Release|Any CPU.Build.0 = Release|Any CPU
-<<<<<<< HEAD
 		{F4BC34ED-6802-479E-BF7F-5542FE5828DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F4BC34ED-6802-479E-BF7F-5542FE5828DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4BC34ED-6802-479E-BF7F-5542FE5828DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4BC34ED-6802-479E-BF7F-5542FE5828DB}.Release|Any CPU.Build.0 = Release|Any CPU
-=======
-		{092468F6-E381-4ACC-9248-1189F5FB4EFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{092468F6-E381-4ACC-9248-1189F5FB4EFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{092468F6-E381-4ACC-9248-1189F5FB4EFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{092468F6-E381-4ACC-9248-1189F5FB4EFD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{83AEF101-6E6E-49CB-8E72-D77E984C89CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{83AEF101-6E6E-49CB-8E72-D77E984C89CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{83AEF101-6E6E-49CB-8E72-D77E984C89CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{83AEF101-6E6E-49CB-8E72-D77E984C89CD}.Release|Any CPU.Build.0 = Release|Any CPU
->>>>>>> 4f9aa44f612d8f4eb8443e9c8f1f1342ad115ca2
 	EndGlobalSection
 EndGlobal
