@@ -19,17 +19,17 @@ namespace HRService.Controllers
 
         [HttpGet]
         [Route("getallemployees")]
-        public IEnumerable<Employee> GetAllEmployees()
+        public async Task<IEnumerable<Employee>> GetAllEmployees()
         {
-            List<Employee> employees = _empsrv.GetAll();
+            List<Employee> employees =await _empsrv.GetAll();
             return employees;
         }
 
         [HttpGet]
         [Route("getemployeedetails/{id}")]
-        public Employee GetById(int id)
+        public async Task<Employee> GetById(int id)
         {
-            Employee employee = _empsrv.GetById(id);
+            Employee employee =await _empsrv.GetById(id);
             return employee;
         }
 
@@ -44,32 +44,32 @@ namespace HRService.Controllers
         //[Authorize(Roles = Role.Employee)]
         [HttpPut]
         [Route("update/{id}")]
-        public bool Update( int id,[FromBody] Employee employee)
+        public async Task <bool> Update( int id,[FromBody] Employee employee)
         {
-            Employee oldEmployee = _empsrv.GetById(id);
+            Employee oldEmployee = await _empsrv.GetById(id);
             if(oldEmployee.EmpId==0){
                 return false;
             }
             employee.EmpId=id;
-            bool status = _empsrv.Update(employee);
+            bool status =await _empsrv.Update(employee);
             return status;
         }
 
         //[Authorize(Roles = Role.Employee)]
         [HttpPost]
         [Route("addemployee")]
-        public bool Insert([FromBody] Employee employee)
+        public async Task<bool> Insert([FromBody] Employee employee)
         {
-            bool status = _empsrv.Insert(employee);
+            bool status =await _empsrv.Insert(employee);
             return status;
         }
 
         //[Authorize(Roles = Role.Employee)]
         [HttpDelete]
         [Route("delete/{id}")]
-        public bool Delete(int id)
+        public async Task <bool> Delete(int id)
         {
-            bool status = _empsrv.Delete(id);
+            bool status =await _empsrv.Delete(id);
             return status;
         }
     }

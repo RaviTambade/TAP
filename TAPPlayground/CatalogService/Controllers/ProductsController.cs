@@ -41,33 +41,33 @@ namespace CatalogService.Controllers
                 return false;
             }
             product.ProductId = id;
-            bool status = _productsrv.Update(product);
+            bool status = await _productsrv.Update(product);
             return status;
         }
 
         //[Authorize(Roles = Role.Admin + "," + Role.Customer)]
         [HttpPost]
         [Route("addproduct")]
-        public bool Insert([FromBody] Product product)
+        public async Task<bool> Insert([FromBody] Product product)
         {
-            bool status = _productsrv.Insert(product);
+            bool status =await  _productsrv.Insert(product);
             return status;
         }
 
         // [Authorize(Roles = Role.Admin)]
         [HttpDelete]
         [Route("delete/{id}")]
-        public bool Delete(int id)
+        public async Task<bool> Delete(int id)
         {
-            bool status = _productsrv.Delete(id);
+            bool status =await _productsrv.Delete(id);
             return status;
         }
 
         [HttpPut]
         [Route("hikeprice/{id}")]
-        public bool HikePrice(double id)
+        public async Task<bool> HikePrice(double id)
         {
-            return _productsrv.HikePrice(id);
+            return await _productsrv.HikePrice(id);
         }
     }
 }

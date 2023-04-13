@@ -3,11 +3,11 @@ using CatalogService.Models;
 namespace CatalogService.Repositories.Interfaces;
 public interface ISupplierRepository
 {
-    List<Supplier> GetAll();
-    Supplier GetById(int supplierId);
-    List<Supplier> GetSuppliers(int productId);
-    bool Insert(Supplier supplier);
-    bool Update(Supplier supplier);
-    bool Delete(int supplierId);
-    List<ProductSupplier> GetProductSupplier(int supplierId);
+     Task<IEnumerable<Supplier>> GetAll();
+     Task<Supplier> GetById(int supplierId);
+     Task<IEnumerable<Supplier>> GetSuppliers(int productId);
+     Task<bool> Insert(Supplier supplier);
+     Task<bool>  Update(Supplier supplier);
+     Task<bool>  Delete(int supplierId);
+    Task<IEnumerable<ProductSupplier>> GetProductSupplier(int supplierId);
 }

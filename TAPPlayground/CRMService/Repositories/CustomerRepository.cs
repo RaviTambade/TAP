@@ -14,19 +14,18 @@ public class CustomerRepository : ICustomerRepository
         _conString = this._configuration.GetConnectionString("DefaultConnection");
     }
 
-    public List<Customer> GetAll(){
-
+    public async Task<IEnumerable<Customer>> GetAll(){
+ 
+        await Task.Delay(3000);
         List<Customer> customers=new List<Customer>();
-
-        Customer customer=new Customer();
         MySqlConnection connection=new MySqlConnection(_conString);
         try{
             MySqlCommand command=new MySqlCommand();
             command.CommandText=$"SELECT * FROM customers";
             command.Connection=connection;
-            connection.Open();
+            await connection.OpenAsync();
             MySqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
+            while (await reader.ReadAsync())
             {
                  int id = Int32.Parse(reader["cust_id"].ToString());
                 string? firstname = reader["first_name"].ToString();
@@ -35,7 +34,7 @@ public class CustomerRepository : ICustomerRepository
                 string? contact=reader["contact_number"].ToString();
                 long accountnumber= long.Parse(reader["account_number"].ToString());
                 string password= reader["password"].ToString();
-                customer = new Customer
+                Customer customer = new Customer
                 {
                    CustomerId=id,
                    FirstName=firstname,
@@ -55,8 +54,6 @@ public class CustomerRepository : ICustomerRepository
             connection.Close();
         }
       return customers; 
-
-
     }
 
     public Customer GetByContactNumber(string contact)
@@ -100,7 +97,7 @@ public class CustomerRepository : ICustomerRepository
     }
 
 
-    public Customer GetById(int custId)
+    public async Task<Customer> GetById(int custId)
     {
         Customer customer=new Customer();
         MySqlConnection connection=new MySqlConnection(_conString);
@@ -109,9 +106,9 @@ public class CustomerRepository : ICustomerRepository
             command.CommandText=$"SELECT * FROM customers where cust_id=@customerId";
             command.Connection=connection;
             command.Parameters.AddWithValue("@customerId",custId);
-            connection.Open();
+            await connection.OpenAsync();
            MySqlDataReader reader = command.ExecuteReader();
-            if (reader.Read())
+            if (await reader.ReadAsync())
             {
                 int id = Int32.Parse(reader["cust_id"].ToString());
                 string? firstname = reader["first_name"].ToString();
@@ -143,14 +140,12 @@ public class CustomerRepository : ICustomerRepository
       return customer; 
     }
 
-    public bool Insert(Customer customer){
+    public async Task<bool> Insert(Customer customer){
         bool status=false;
         MySqlConnection connection=new MySqlConnection(_conString);
         try{
             MySqlCommand command=new MySqlCommand();
             command.CommandText=$"INSERT INTO customers(first_name,last_name,email,contact_number,password,account_number)VALUES(@firstName,@lastName,@email,@contactNumber,@password,@accountNumber)";
-        Console.WriteLine(customer.ToString());
-           Console.WriteLine(command.CommandText);
             command.Connection=connection;
             command.Parameters.AddWithValue("@firstName",customer.FirstName);
             command.Parameters.AddWithValue("@lastName",customer.LastName);
@@ -158,8 +153,8 @@ public class CustomerRepository : ICustomerRepository
             command.Parameters.AddWithValue("@contactNumber",customer.ContactNumber);
             command.Parameters.AddWithValue("@password",customer.Password);
             command.Parameters.AddWithValue("@accountNumber",customer.AccountNumber);
-            connection.Open();
-            command.ExecuteNonQuery();
+            await connection.OpenAsync();
+            await command.ExecuteNonQueryAsync();
             status=true;
         }
         catch(Exception e){
@@ -171,7 +166,7 @@ public class CustomerRepository : ICustomerRepository
       return status;      
     }
 
-       public  bool Update(Customer customer){
+       public async Task<bool> Update(Customer customer){
           bool status = false;
           MySqlConnection con = new MySqlConnection();
           con.ConnectionString=_conString;
@@ -186,8 +181,8 @@ public class CustomerRepository : ICustomerRepository
             cmd.Parameters.AddWithValue("@contactNumber",customer.ContactNumber);
             cmd.Parameters.AddWithValue("@password",customer.Password);
             cmd.Parameters.AddWithValue("@accountNumber",customer.AccountNumber);
-            con.Open();
-            cmd.ExecuteNonQuery();               
+            await con.OpenAsync();
+            cmd.ExecuteNonQueryAsync();               
             status=true;
           }
         catch(Exception e )
@@ -200,7 +195,7 @@ public class CustomerRepository : ICustomerRepository
           return status;
    }
    
-   public  bool Delete(int customerId){
+   public async Task<bool> Delete(int customerId){
           bool status = false;
           MySqlConnection con = new MySqlConnection();
           con.ConnectionString=_conString;

@@ -1,10 +1,8 @@
-using StudentService.Models;
-using StudentService.Repositories.Interfaces;
-using StudentService.Services.Interface;
-using StudentService.Models;
-using StudentService.Repositories.Interfaces;
-using StudentService.Services.Interface;
-namespace StudentService.Services;
+using LMSService.Models;
+using LMSService.Services.Interfaces;
+using LMSService.Repositories.Interfaces;
+
+namespace LMSService.Services;
 
 public class StudentService : IStudentService
 {
@@ -25,12 +23,12 @@ public class StudentService : IStudentService
 
    public bool Insert(Student student)
     {
-        return _repo.Insert(Student);
+        return _repo.Insert(student);
     }
 
    public bool Update(Student student)
     {
-        return _repo.Update(Student);
+        return _repo.Update(student);
     }
    public bool Delete(int id)
     {

@@ -9,4 +9,7 @@ public class Student{
     public string Email{get;set;}
     public DateTime DateOfBirth{get;set;}
     public string PhoneNo{get;set;}
+    public Student(){
+        
+    }
 }

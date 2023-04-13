@@ -1,9 +1,9 @@
-using StudentService.Models;
-using StudentService.Repositories.Interfaces;
+using LMSService.Models;
+using LMSService.Repositories.Interfaces;
 using MySql.Data.MySqlClient;
 
 using Microsoft.Extensions.Configuration;  // set namespace 
-namespace StudentService.Repositories;
+namespace LMSService.Repositories;
 public class StudentRepository : IStudentRepository
 {
 
@@ -21,7 +21,7 @@ public class StudentRepository : IStudentRepository
 
     public List<Student> GetAll()
     {
-        List<Student> deliveries = new List<Student>();
+        List<Student> students = new List<Student>();
         MySqlConnection connection = new MySqlConnection();
         connection.ConnectionString = _conString;
         MySqlCommand command=new MySqlCommand();
@@ -70,7 +70,7 @@ public class StudentRepository : IStudentRepository
     public Student GetById(int id)
     {
          Student student=null;
-        MySqlConnection connection=new MySqlConnection(constring);
+        MySqlConnection connection=new MySqlConnection(_conString);
         try{
             MySqlCommand command=new MySqlCommand();
             command.CommandText="SELECT * FROM students WHERE id="+id;

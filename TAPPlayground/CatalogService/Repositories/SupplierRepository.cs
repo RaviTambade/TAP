@@ -19,7 +19,7 @@ public class SupplierRepository : ISupplierRepository
         _conString = this._configuration.GetConnectionString("DefaultConnection");
     }
 
-    public List<Supplier> GetAll()
+    public async Task<IEnumerable<Supplier>> GetAll()
     {
         List<Supplier> suppliers = new List<Supplier>();
         MySqlConnection connection = new MySqlConnection(_conString);
@@ -27,9 +27,9 @@ public class SupplierRepository : ISupplierRepository
         {
             string query = "SELECT * FROM suppliers";
             MySqlCommand command = new MySqlCommand(query, connection);
-            connection.Open();
+            await connection.OpenAsync();
             MySqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
+            while (await reader.ReadAsync())
             {
                 int id = int.Parse(reader["supplier_id"].ToString());
                 string companyName = reader["company_name"].ToString();
@@ -67,7 +67,7 @@ public class SupplierRepository : ISupplierRepository
         }
         return suppliers;
     }
-    public Supplier GetById(int id)
+    public async Task<Supplier> GetById(int id)
     {
         Supplier supplier = new Supplier();
         MySqlConnection connection = new MySqlConnection(_conString);
@@ -76,9 +76,9 @@ public class SupplierRepository : ISupplierRepository
             string query = "SELECT * FROM suppliers WHERE supplier_id=@supplierId";
             MySqlCommand command = new MySqlCommand(query, connection);
             command.Parameters.AddWithValue("@supplierId", id);
-            connection.Open();
+            await connection.OpenAsync();
             MySqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
+            while (await reader.ReadAsync())
             {
                 id = int.Parse(reader["supplier_id"].ToString());
                 string companyName = reader["company_name"].ToString();
@@ -117,7 +117,7 @@ public class SupplierRepository : ISupplierRepository
         }
         return supplier;
     }
-    public List<Supplier> GetSuppliers(int productId)
+    public async Task<IEnumerable<Supplier>> GetSuppliers(int productId)
     {
         List<Supplier> suppliers = new List<Supplier>();
         MySqlConnection connection = new MySqlConnection(_conString);
@@ -126,9 +126,9 @@ public class SupplierRepository : ISupplierRepository
             string query = " SELECT suppliers.supplier_id,suppliers.company_name,suppliers.supplier_name FROM suppliers INNER JOIN orderdetails ON suppliers.supplier_id=orderdetails.supplier_id WHERE product_id=@productId";
             MySqlCommand command = new MySqlCommand(query, connection);
             command.Parameters.AddWithValue("productId", productId);
-            connection.Open();
+            await connection.OpenAsync();
             MySqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
+            while (await reader.ReadAsync())
             {
                 int supplierid = int.Parse(reader["supplier_id"].ToString());
                 string companyName = reader["company_name"].ToString();
@@ -153,7 +153,7 @@ public class SupplierRepository : ISupplierRepository
         }
         return suppliers;
     }
-    public bool Insert(Supplier supplier)
+    public async Task<bool> Insert(Supplier supplier)
     {
         bool status = false;
         MySqlConnection connection = new MySqlConnection();
@@ -171,8 +171,8 @@ public class SupplierRepository : ISupplierRepository
             command.Parameters.AddWithValue("@city", supplier.City);
             command.Parameters.AddWithValue("@state", supplier.State);
             command.Parameters.AddWithValue("@accountNumber", supplier.AccountNumber);
-            connection.Open();
-            int rowsAffected = command.ExecuteNonQuery();
+            await connection.OpenAsync();
+            int rowsAffected =await command.ExecuteNonQueryAsync();
             if (rowsAffected > 0)
             {
                 status = true;
@@ -188,7 +188,7 @@ public class SupplierRepository : ISupplierRepository
         }
         return status;
     }
-    public bool Update(Supplier supplier)
+    public async Task<bool> Update(Supplier supplier)
     {
         bool status = false;
         MySqlConnection connection = new MySqlConnection();
@@ -208,8 +208,8 @@ public class SupplierRepository : ISupplierRepository
             command.Parameters.AddWithValue("@city", supplier.City);
             command.Parameters.AddWithValue("@state", supplier.State);
             command.Parameters.AddWithValue("@accountNumber", supplier.AccountNumber);
-            connection.Open();
-            int rowsAffected = command.ExecuteNonQuery();
+            await connection.OpenAsync();
+            int rowsAffected =await command.ExecuteNonQueryAsync();
             if (rowsAffected > 0)
             {
                 status = true;
@@ -227,7 +227,7 @@ public class SupplierRepository : ISupplierRepository
         return status;
 
     }
-    public bool Delete(int id)
+    public async Task<bool> Delete(int id)
     {
         bool status = false;
         MySqlConnection connection = new MySqlConnection();
@@ -237,8 +237,8 @@ public class SupplierRepository : ISupplierRepository
             string query = "DELETE FROM suppliers WHERE supplier_id=@supplierId";
             MySqlCommand command = new MySqlCommand(query, connection);
             command.Parameters.AddWithValue("@supplierId", id);
-            connection.Open();
-            int rowsAffected = command.ExecuteNonQuery();
+            await connection.OpenAsync();
+            int rowsAffected =await command.ExecuteNonQueryAsync();
             if (rowsAffected > 0)
             {
                 status = true;
@@ -255,7 +255,7 @@ public class SupplierRepository : ISupplierRepository
         return status;
     }
 
-    public List<ProductSupplier> GetProductSupplier(int id)
+    public async Task<IEnumerable<ProductSupplier>> GetProductSupplier(int id)
     {
         List<ProductSupplier> productSuppliers = new List<ProductSupplier>();
         MySqlConnection connection = new MySqlConnection(_conString);
@@ -264,9 +264,9 @@ public class SupplierRepository : ISupplierRepository
             string query = "SELECT products.product_title,SUM(orderdetails.quantity) AS total_quantity,suppliers.supplier_name FROM (products INNER JOIN orderdetails ON products.product_id=orderdetails.product_id)INNER JOIN suppliers ON products.supplier_id=suppliers.supplier_id   WHERE suppliers.supplier_id=@supplierId GROUP BY products.product_id";
             MySqlCommand command = new MySqlCommand(query, connection);
             command.Parameters.AddWithValue("@supplierId", id);
-            connection.Open();
+            await connection.OpenAsync();
             MySqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
+            while (await reader.ReadAsync())
             {
                 string supplierName = reader["supplier_name"].ToString();
                 string productTitle = reader["product_title"].ToString();

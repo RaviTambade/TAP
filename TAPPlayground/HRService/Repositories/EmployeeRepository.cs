@@ -13,16 +13,17 @@ public class EmployeeRepository : IEmployeeRepository
       _conString=this._configuration.GetConnectionString("DefaultConnection");
     }
 
-  public List<Employee> GetAll(){
+  public async Task<List<Employee>> GetAll(){
+        await Task.Delay(3000);
         List<Employee> Employees=new List<Employee>();
         MySqlConnection connection=new MySqlConnection(_conString);
         try{
             MySqlCommand command=new MySqlCommand();
             command.CommandText="SELECT * FROM employees";
             command.Connection= connection;
-            connection.Open();
+            await connection.OpenAsync();
             MySqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
+            while (await reader.ReadAsync())
             {
                  int id = Int32.Parse(reader["employee_id"].ToString());
                 string firstname = reader["empfirst_name"].ToString();
@@ -55,6 +56,7 @@ public class EmployeeRepository : IEmployeeRepository
                 };
                 Employees.Add(employee);
             }
+            reader.Close();
         }
         catch(Exception e){
             throw e;
@@ -118,7 +120,8 @@ public class EmployeeRepository : IEmployeeRepository
       return Employees;
 
     }
-   public Employee GetById(int empId){
+   public async Task<Employee> GetById(int empId)
+   {
           Employee employee =new Employee();
           MySqlConnection connection=new MySqlConnection(_conString);
           try{
@@ -126,7 +129,7 @@ public class EmployeeRepository : IEmployeeRepository
               command.CommandText="SELECT * FROM employees where employee_id=@employeeId";
               command.Connection=connection;
               command.Parameters.AddWithValue("@employeeId",empId);
-              connection.Open();
+              await connection.OpenAsync();
               MySqlDataReader reader = command.ExecuteReader();
               if (reader.Read())
               {
@@ -158,6 +161,7 @@ public class EmployeeRepository : IEmployeeRepository
                     DeptId=deptid                     
                   };
               }
+              reader.Close();
           }
           catch(Exception e){
               throw e;
@@ -167,7 +171,7 @@ public class EmployeeRepository : IEmployeeRepository
           }
           return employee;
    }
-   public  bool Insert(Employee emp){    
+   public  async Task<bool> Insert(Employee emp){    
           bool status = false;
           MySqlConnection con = new MySqlConnection();
           con.ConnectionString=_conString;
@@ -175,7 +179,7 @@ public class EmployeeRepository : IEmployeeRepository
               string query =$"INSERT INTO employees(empfirst_name,emplast_name,birth_date,hire_date,contact_number,email,password,photo,reports_to,account_number,dept_id)VALUES"+
                                                   "(@EmpFirstName,@EmpLastName,@BirthDate,@HireDate,@ContactNumber,@Email,@Password,@Photo,@ReportsTo,@AccountNumber,@DeptId)";
              Console.WriteLine(query);
-             con.Open();
+             await con.OpenAsync();
              MySqlCommand command=new MySqlCommand(query,con) ;
              command.Parameters.AddWithValue("@EmpFirstName",emp.EmpFirstName);             
              command.Parameters.AddWithValue("@EmpLastName",emp.EmpLastName);
@@ -188,7 +192,7 @@ public class EmployeeRepository : IEmployeeRepository
              command.Parameters.AddWithValue("@ReportsTo",emp.ReportsTo);
              command.Parameters.AddWithValue("@AccountNumber",emp.AccountNumber);
              command.Parameters.AddWithValue("@DeptId",emp.DeptId);
-             command.ExecuteNonQuery(); 
+             await command.ExecuteNonQueryAsync(); 
              status=true;              
 
           }catch(Exception e )
@@ -200,7 +204,7 @@ public class EmployeeRepository : IEmployeeRepository
           } 
           return status;
    }
-   public  bool Update(Employee emp){       
+   public async Task<bool> Update(Employee emp){       
           Console.WriteLine(emp);
           bool status=false;
           MySqlConnection con = new MySqlConnection();
@@ -208,7 +212,7 @@ public class EmployeeRepository : IEmployeeRepository
           try{
             string query = "UPDATE employees SET empfirst_name=@EmpFirstName, emplast_name=@EmpLastName, birth_date=@BirthDate, hire_date=@HireDate, contact_number=@ContactNumber, email=@Email, password=@Password, photo=@Photo, reports_to=@ReportsTo, account_number=@AccountNumber, dept_id=@DeptId WHERE employee_id=@EmployeeId";   
              Console.WriteLine(query);
-             con.Open();
+             await con.OpenAsync();
              MySqlCommand command=new MySqlCommand(query,con) ;
               command.Parameters.AddWithValue("@EmployeeId",emp.EmpId); 
              command.Parameters.AddWithValue("@EmpFirstName",emp.EmpFirstName);             
@@ -222,7 +226,7 @@ public class EmployeeRepository : IEmployeeRepository
              command.Parameters.AddWithValue("@ReportsTo",emp.ReportsTo);
              command.Parameters.AddWithValue("@AccountNumber",emp.AccountNumber);
              command.Parameters.AddWithValue("@DeptId",emp.DeptId);
-             command.ExecuteNonQuery();               
+             await command.ExecuteNonQueryAsync();               
              status=true;
           }catch(Exception e )
           {
@@ -233,7 +237,7 @@ public class EmployeeRepository : IEmployeeRepository
           }
           return status;
    }
-   public  bool Delete(int empId){
+   public async Task<bool> Delete(int empId){
           bool status = false;
           MySqlConnection con = new MySqlConnection();
           con.ConnectionString=_conString;
