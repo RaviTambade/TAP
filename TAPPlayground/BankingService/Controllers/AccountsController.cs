@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using BankingService.Models;
+using BankingService.Helpers;
 using BankingService.Services;
 using BankingService.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -24,6 +25,7 @@ namespace BankingService.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles=Role.Admin)]
         [Route("getallaccounts")]
         public async Task<IEnumerable<Account>> GetAllAccounts()
         {
