@@ -1,4 +1,5 @@
-using System.Collections.Generic;
+using System.Collections;
+using System.Threading.Tasks;
 using OrderProcessingService.Models;
 using OrderProcessingService.Repositories.Interfaces;
 using OrderProcessingService.Services.Interfaces;
@@ -10,21 +11,31 @@ public class OrderService : IOrderService{
         this._repo=repo;
     }
 
-    public List<Order> GetAll() => _repo.GetAll();
+    public async Task<IEnumerable<Order>> GetAll(){
+        var orders= _repo.GetAll();
+        return await orders;
+    } 
 
-    public List<Order> GetAllCancelled() => _repo.GetAllCancelled();
-    public List<Order> GetAllDelivered() => _repo.GetAllDelivered();
+    public async Task<IEnumerable<Order>> GetAllCancelled(){
+       var orders= _repo.GetAllCancelled();
+       return await orders;
 
-    public Order GetById(int id) => _repo.GetById(id);
+    }
+    public async Task<IEnumerable<Order>> GetAllDelivered(){
+        var orders= _repo.GetAllDelivered();
+        return await orders;
+    }
 
-    public Order GetOrderByCustId(int id) => _repo.GetOrderByCustId(id);
-    public int GetOrderId(int id) => _repo.GetOrderId(id);
+    public async Task<Order> GetById(int id) => await _repo.GetById(id);
 
-    public bool InsertOrder(int id)=>_repo.InsertOrder(id);
+    public async Task<Order> GetOrderByCustId(int id) => await _repo.GetOrderByCustId(id);
+    public async Task<int> GetOrderId(int id) => await _repo.GetOrderId(id);
 
-    public bool Insert(Order order)=>_repo.Insert(order);
+    public async Task<bool> InsertOrder(int id)=> await _repo.InsertOrder(id);
 
-    public bool Update(Order order)=>_repo.Update(order);
+    public async Task<bool> Insert(Order order)=> await _repo.Insert(order);
 
-    public bool Delete(int id)=>_repo.Delete(id);
+    public async Task<bool> Update(Order order)=> await _repo.Update(order);
+
+    public async Task<bool> Delete(int id)=> await _repo.Delete(id);
 }

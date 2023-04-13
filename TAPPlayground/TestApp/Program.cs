@@ -60,10 +60,10 @@ foreach(Cart theCart in carts){
     }
 }
 
-    MySqlConnection con = new MySqlConnection();
-    try
-    {
+    // MySqlConnection con = new MySqlConnection();
+    // try
+    // {
        
-    con.ConnectionString = "server=localhost; database=Ecommerce; user=root; password=Password";
-    string query ="Update cart_items set order_date=@orderDate, shipped_date=@shippedDate,cust_id=@customerId, total =@total, status =@status Where order_id =@orderId""
-    }
+    // con.ConnectionString = "server=localhost; database=Ecommerce; user=root; password=Password";
+    // string query ="Update cart_items set order_date=@orderDate, shipped_date=@shippedDate,cust_id=@customerId, total =@total, status =@status Where order_id =@orderId""
+    // }

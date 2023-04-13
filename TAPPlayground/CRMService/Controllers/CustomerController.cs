@@ -22,49 +22,49 @@ namespace CRMService.Controllers
 
         [HttpGet]
         [Route("getallcustomers")]
-        public IEnumerable<Customer> GetAllCustomers()
+        public async Task<IEnumerable<Customer>> GetAllCustomers()
         {
-            List<Customer> customers = _custsrv.GetAll();
+            IEnumerable<Customer> customers = await _custsrv.GetAll();
             return customers;
         }
 
         [HttpGet]
         [Route("getcustomerdetails/{id}")]
-        public Customer GetById(int id)
+        public async Task<Customer> GetById(int id)
         {
-            Customer customer = _custsrv.GetById(id);
+            Customer customer =await _custsrv.GetById(id);
             return customer;
         }
 
         // [Authorize(Roles = Role.Employee)]
         [HttpPut]
         [Route("update/{id}")]
-        public bool Update( int id,[FromBody] Customer customer)
+        public async Task<bool> Update( int id,[FromBody] Customer customer)
         {
-            Customer oldCustomer = _custsrv.GetById(id);
+            Customer oldCustomer =await _custsrv.GetById(id);
             if(oldCustomer.CustomerId==0){
                 return false;
             }
             customer.CustomerId=id;
-            bool status = _custsrv.Update(customer);
+            bool status =await _custsrv.Update(customer);
             return status;
         }
 
         // [Authorize(Roles = Role.Employee)]
         [HttpPost]
         [Route("addcustomer")]
-        public bool Insert([FromBody] Customer customer)
+        public async Task<bool> Insert([FromBody] Customer customer)
         {
-            bool status = _custsrv.Insert(customer);
+            bool status = await _custsrv.Insert(customer);
             return status;
         }
 
         // [Authorize(Roles = Role.Employee)]
         [HttpDelete]
         [Route("delete/{id}")]
-        public bool Delete(int id)
+        public async Task<bool> Delete(int id)
         {
-            bool status = _custsrv.Delete(id);
+            bool status = await _custsrv.Delete(id);
             return status;
         }
     }

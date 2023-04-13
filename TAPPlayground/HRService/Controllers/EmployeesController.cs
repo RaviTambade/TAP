@@ -19,17 +19,17 @@ namespace HRService.Controllers
 
         [HttpGet]
         [Route("getallemployees")]
-        public IEnumerable<Employee> GetAllEmployees()
+        public async Task<IEnumerable<Employee>> GetAllEmployees()
         {
-            List<Employee> employees = _empsrv.GetAll();
+            List<Employee> employees =await _empsrv.GetAll();
             return employees;
         }
 
         [HttpGet]
         [Route("getemployeedetails/{id}")]
-        public Employee GetById(int id)
+        public async Task<Employee> GetById(int id)
         {
-            Employee employee = _empsrv.GetById(id);
+            Employee employee =await _empsrv.GetById(id);
             return employee;
         }
 
@@ -44,9 +44,9 @@ namespace HRService.Controllers
         //[Authorize(Roles = Role.Employee)]
         [HttpPut]
         [Route("update/{id}")]
-        public bool Update( int id,[FromBody] Employee employee)
+        public async Task <bool> Update( int id,[FromBody] Employee employee)
         {
-            Employee oldEmployee = _empsrv.GetById(id);
+            Employee oldEmployee = await _empsrv.GetById(id);
             if(oldEmployee.EmpId==0){
                 return false;
             }

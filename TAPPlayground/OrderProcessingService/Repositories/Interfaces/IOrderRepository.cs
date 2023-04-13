@@ -1,16 +1,17 @@
-using System.Collections.Generic;
+using System.Collections;
+using System.Net.Http.Headers;
 using OrderProcessingService.Models;
 namespace OrderProcessingService.Repositories.Interfaces;
 public interface IOrderRepository
 {
-    List<Order> GetAll();
-    List<Order> GetAllCancelled();
-    List<Order> GetAllDelivered();
-    Order GetById(int id);
-    int GetOrderId(int id);
-    bool InsertOrder(int id);
-    Order GetOrderByCustId(int id);
-    bool Insert(Order order);
-    bool Update(Order order);
-    bool Delete(int id);
+    Task<IEnumerable<Order>> GetAll();
+    Task<IEnumerable<Order>> GetAllCancelled();
+    Task<IEnumerable<Order>> GetAllDelivered();
+    Task<Order> GetById(int id);
+    Task<int> GetOrderId(int id);
+    Task<bool> InsertOrder(int id);
+    Task<Order> GetOrderByCustId(int id);
+    Task<bool> Insert(Order order);
+    Task<bool> Update(Order order);
+    Task<bool> Delete(int id);
 }

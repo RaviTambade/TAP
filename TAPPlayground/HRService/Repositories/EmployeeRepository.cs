@@ -13,16 +13,17 @@ public class EmployeeRepository : IEmployeeRepository
       _conString=this._configuration.GetConnectionString("DefaultConnection");
     }
 
-  public List<Employee> GetAll(){
+  public async Task<List<Employee>> GetAll(){
+        await Task.Delay(3000);
         List<Employee> Employees=new List<Employee>();
         MySqlConnection connection=new MySqlConnection(_conString);
         try{
             MySqlCommand command=new MySqlCommand();
             command.CommandText="SELECT * FROM employees";
             command.Connection= connection;
-            connection.Open();
+            await connection.OpenAsync();
             MySqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
+            while (await reader.ReadAsync())
             {
                  int id = Int32.Parse(reader["employee_id"].ToString());
                 string firstname = reader["empfirst_name"].ToString();
@@ -55,6 +56,7 @@ public class EmployeeRepository : IEmployeeRepository
                 };
                 Employees.Add(employee);
             }
+            reader.Close();
         }
         catch(Exception e){
             throw e;
@@ -118,7 +120,8 @@ public class EmployeeRepository : IEmployeeRepository
       return Employees;
 
     }
-   public Employee GetById(int empId){
+   public async Task<Employee> GetById(int empId)
+   {
           Employee employee =new Employee();
           MySqlConnection connection=new MySqlConnection(_conString);
           try{
@@ -126,7 +129,7 @@ public class EmployeeRepository : IEmployeeRepository
               command.CommandText="SELECT * FROM employees where employee_id=@employeeId";
               command.Connection=connection;
               command.Parameters.AddWithValue("@employeeId",empId);
-              connection.Open();
+              await connection.OpenAsync();
               MySqlDataReader reader = command.ExecuteReader();
               if (reader.Read())
               {
@@ -158,6 +161,7 @@ public class EmployeeRepository : IEmployeeRepository
                     DeptId=deptid                     
                   };
               }
+              reader.Close();
           }
           catch(Exception e){
               throw e;
