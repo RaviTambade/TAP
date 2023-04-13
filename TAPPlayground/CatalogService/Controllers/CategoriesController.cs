@@ -8,9 +8,11 @@ namespace CatalogService.Controllers
     [Route("/api/[controller]")]
     public class CategoriesController : ControllerBase
     {
+        private readonly ILogger<CategoriesController> _logger;
         private readonly ICategoryService _categorysrv;
-        public CategoriesController(ICategoryService categorysrv)
+        public CategoriesController(ICategoryService categorysrv,ILogger<CategoriesController> logger)
         {
+            _logger=logger;
             _categorysrv = categorysrv;
         }
         [HttpGet]
@@ -18,6 +20,7 @@ namespace CatalogService.Controllers
         public async Task<IEnumerable<Category>> GetAllCategories()
         {
             IEnumerable<Category> categories =await _categorysrv.GetAll();
+            _logger.LogInformation("Get all categories method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
             return categories;
         }
         [HttpGet]
@@ -25,6 +28,7 @@ namespace CatalogService.Controllers
         public async Task<Category> GetDetails(int id)
         {
             Category category =await _categorysrv.GetDetails(id);
+            _logger.LogInformation("Get details of category method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
             return category;
         }
         [HttpPost]
@@ -32,6 +36,7 @@ namespace CatalogService.Controllers
         public async Task<bool> Insert([FromBody] Category category)
         {
             bool status =await _categorysrv.Insert(category);
+            _logger.LogInformation("Insert category method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
             return status;
         }
 
@@ -46,6 +51,7 @@ namespace CatalogService.Controllers
             }
             category.CategoryId = id;
             bool status =await _categorysrv.Update(category);
+            _logger.LogInformation("Update category method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
             return status;
         }
         [HttpDelete]
@@ -53,6 +59,7 @@ namespace CatalogService.Controllers
         public async Task<bool> Delete(int id)
         {
             bool status =await _categorysrv.Delete(id);
+            _logger.LogInformation("Delete category method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
             return status;
         }
     }
