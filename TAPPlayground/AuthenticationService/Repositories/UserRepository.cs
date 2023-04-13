@@ -22,18 +22,18 @@ public class UserRepository : IUserRepository
     }
 
 
-    public AuthenticateResponse Authenticate(AuthenticateRequest request)
+    public async Task<AuthenticateResponse> Authenticate(AuthenticateRequest request)
     {
-        User user = GetUser(request);
-        Console.WriteLine(request.Email + "," + request.Password);
+        User user = await GetUser(request);
+
         // return null if user not found
         if (user == null) { return null; }
         // authentication successful so generate jwt token
-        var token = generateJwtToken(user);
+        var token = await generateJwtToken(user);
         return new AuthenticateResponse(user, token);
     }
 
-    private string generateJwtToken(User user)
+    private async Task<string> generateJwtToken(User user)
 
     {
         // generate token that is valid for 7 days
@@ -41,7 +41,7 @@ public class UserRepository : IUserRepository
         var key = System.Text.Encoding.ASCII.GetBytes(_appsettings.Secret);
         var tokenDescriptor = new SecurityTokenDescriptor
         {
-            Subject = new ClaimsIdentity(AllClaims(user)),
+            Subject = new ClaimsIdentity(await AllClaims(user)),
             Expires = DateTime.UtcNow.AddDays(7),
             SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key),
        SecurityAlgorithms.HmacSha256Signature)
@@ -50,12 +50,12 @@ public class UserRepository : IUserRepository
         return tokenHandler.WriteToken(token);
     }
 
-    private List<Claim> AllClaims(User user)
+    private async Task<List<Claim>> AllClaims(User user)
     {
         List<Claim> claims = new List<Claim>();
         //you can add custom Claims here
         claims.Add(new Claim("id", user.UserId.ToString()));
-        List<string> roles = GetRolesOfUser(user.UserId);
+        List<string> roles = await GetRolesOfUser(user.UserId);
         foreach (string role in roles)
         {
             claims.Add(new Claim("Roles", role));
@@ -63,7 +63,7 @@ public class UserRepository : IUserRepository
         return claims;
     }
 
-    private User GetUser(AuthenticateRequest request)
+    private async Task<User> GetUser(AuthenticateRequest request)
     {
         User user = null;
         MySqlConnection con = new MySqlConnection();
@@ -71,16 +71,13 @@ public class UserRepository : IUserRepository
         try
         {
             string query = "SELECT * FROM users where email=@email AND password =@password";
-            // Console.WriteLine(query);
-            // Console.WriteLine(request.Email);
-            // Console.WriteLine(request.Password);
-            con.Open();
+            await con.OpenAsync();
             MySqlCommand command = new MySqlCommand(query, con);
             command.Parameters.AddWithValue("@email", request.Email);
             command.Parameters.AddWithValue("@password", request.Password);
             MySqlDataReader reader = command.ExecuteReader();
 
-            if (reader.Read())
+            if (await reader.ReadAsync())
             {
                 int userId = int.Parse(reader["user_id"].ToString());
                 string userEmail = reader["email"].ToString();
@@ -92,7 +89,7 @@ public class UserRepository : IUserRepository
                     Password = userPassword
                 };
             }
-            reader.Close();
+            await reader.CloseAsync();
         }
         catch (Exception ee)
         {
@@ -101,13 +98,13 @@ public class UserRepository : IUserRepository
         }
         finally
         {
-            con.Close();
+            await con.CloseAsync();
         }
         return user;
 
     }
 
-    private List<string> GetRolesOfUser(int userId)
+    private async Task<List<string>> GetRolesOfUser(int userId)
     {
         List<string> roles = new List<string>();
         MySqlConnection con = new MySqlConnection();
@@ -116,17 +113,17 @@ public class UserRepository : IUserRepository
         {
             string query = "SELECT role from roles where role_id in  (select role_id from user_roles where user_id=@userId)";
             Console.WriteLine(query);
-            con.Open();
+            await con.OpenAsync();
             MySqlCommand cmd = new MySqlCommand(query, con);
             cmd.Parameters.AddWithValue("@userId", userId);
             MySqlDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
+            while (await reader.ReadAsync())
             {
                 string roleName = reader["role"].ToString();
                 // Console.WriteLine(roleName);
                 roles.Add(roleName);
             }
-            reader.Close();
+            await reader.CloseAsync();
         }
         catch (Exception ee)
         {
@@ -134,12 +131,12 @@ public class UserRepository : IUserRepository
         }
         finally
         {
-            con.Close();
+            await con.CloseAsync();
         }
         return roles;
     }
 
-    public List<User> GetAll()
+    public async Task<List<User>> GetAll()
     {
         List<User> users = new List<User>();
         MySqlConnection con = new MySqlConnection();
@@ -147,10 +144,10 @@ public class UserRepository : IUserRepository
         try
         {
             string query = "SELECT * FROM users";
-            con.Open();
+            await con.OpenAsync();
             MySqlCommand cmd = new MySqlCommand(query, con);
             MySqlDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
+            while (await reader.ReadAsync())
             {
                 int userId = int.Parse(reader["user_id"].ToString());
                 string email = reader["email"].ToString();
@@ -163,7 +160,7 @@ public class UserRepository : IUserRepository
                 };
                 users.Add(user);
             }
-            reader.Close();
+            await reader.CloseAsync();
         }
         catch (Exception ee)
         {
@@ -171,7 +168,7 @@ public class UserRepository : IUserRepository
         }
         finally
         {
-            con.Close();
+            await con.CloseAsync();
         }
         return users;
     }

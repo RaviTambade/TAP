@@ -1,7 +1,7 @@
 
-using OrderProcessingService.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using OrderProcessingService.Models;
 
 namespace OrderProcessingService.Helpers
 {
@@ -16,21 +16,17 @@ namespace OrderProcessingService.Helpers
         public string Roles { get; set; }
         public void OnAuthorization(AuthorizationFilterContext context)
         {
-            var userRoles = (List<string>)context.HttpContext.Items["userRoles"];
+            List<string> userRoles = (List<string>)context.HttpContext.Items["userRoles"];
             bool status = false;
-            if (this.Roles != null)
+
+            if (this.Roles != null && userRoles != null)
             {
-                var requiredRoles = this.Roles.Split(',').ToList();
-
-                foreach (var role in requiredRoles)
+                List<string> requiredRoles = this.Roles.Split(',').ToList();
+                bool result = requiredRoles.Intersect(userRoles).Count() >= 1;
+                if (result)
                 {
-                    if (userRoles.Contains(role))
-                    {
-                        status = true;
-                        break;
-                    }
+                    status = true;
                 }
-
             }
 
             if (status == false)
@@ -41,10 +37,6 @@ namespace OrderProcessingService.Helpers
                 };
 
             }
-
-
         }
     }
-
-
 }
