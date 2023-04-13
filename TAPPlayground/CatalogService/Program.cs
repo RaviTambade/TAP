@@ -8,6 +8,7 @@ builder.Host.ConfigureLogging(logging =>
     logging.ClearProviders();
     logging.AddConsole();
 });
+builder.Services.AddMemoryCache();           //This adds the in-memory cache service to the dependency injection container.
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddScoped<IProductRepository,ProductRepository>();
@@ -25,6 +26,7 @@ if (app.Environment.IsDevelopment())
 {
 }
 app.UseHttpsRedirection();
+app.UseResponseCaching();       //Added caching middleware pipeline and configures it to cache responses
 app.UseAuthorization();
 app.MapControllers();
 app.Run();
