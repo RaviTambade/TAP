@@ -12,8 +12,10 @@ namespace BankingService.Controllers
     public class TransactionController : ControllerBase
     {
         private readonly ITransactionService _transactionsrv;
-        public TransactionController(ITransactionService transactionsrv)
+        private readonly ILogger<TransactionController> _logger;
+        public TransactionController(ILogger<TransactionController> logger, ITransactionService transactionsrv)
         {
+            _logger=logger;
             _transactionsrv = transactionsrv;
         }
 
@@ -22,6 +24,8 @@ namespace BankingService.Controllers
         public IEnumerable<Transaction> GetAllTransactions()
         {
             List<Transaction> transactions = _transactionsrv.GetAllTransactions();
+      _logger.LogInformation("Get All method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
+
             return transactions;
         }
 
@@ -30,6 +34,8 @@ namespace BankingService.Controllers
         public Transaction GetById(int id)
         {
             Transaction transaction = _transactionsrv.GetById(id);
+      _logger.LogInformation("Get By Id method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
+
             return transaction;
         }
 
@@ -39,6 +45,8 @@ namespace BankingService.Controllers
         public bool Update( int id,[FromBody] Transaction transaction)
         {
             Transaction oldTransaction = _transactionsrv.GetById(id);
+      _logger.LogInformation("Update method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
+
             if(oldTransaction.TransactionId==0){
                 return false;
             }
@@ -53,6 +61,8 @@ namespace BankingService.Controllers
         public bool Insert([FromBody] Transaction transaction)
         {
             bool status = _transactionsrv.Insert(transaction);
+      _logger.LogInformation("Insert method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
+
             return status;
         }
 
@@ -62,6 +72,8 @@ namespace BankingService.Controllers
         public bool Delete(int id)
         {
             bool status = _transactionsrv.Delete(id);
+      _logger.LogInformation("Delete method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
+
             return status;
         }
     }
