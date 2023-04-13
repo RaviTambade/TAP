@@ -1,3 +1,4 @@
+-- Active: 1678361403571@@127.0.0.1@3306@ecommerce
 CREATE DATABASE Ecommerce;
 USE Ecommerce;
 
@@ -340,7 +341,7 @@ DELIMITER ;
 
 
 select * from orders;
-select * from  orderdetails;
+select * from accounts;
 select * from cart_items where cart_id=1;
 
 

@@ -2,7 +2,9 @@ using Microsoft.AspNetCore.Mvc;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 using LMSService.Models;
+using LMSService.Services.Interfaces;
 using LMSService.Services;
+
 namespace LMSService.Controllers;
 
 [ApiController]
@@ -22,14 +24,17 @@ public class StudentsController : ControllerBase
     public IEnumerable<Student> GetAll()
     { 
       List<Student> students=new List<Student>();
-      students=_studentSrv.GetAll();
+     // students=_studentSrv.GetAll();
+      _logger.LogInformation("Get All method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
       return students; 
     }
 
     [Route("/api/students/GetStudentDetails/{id}")]
     public  Student GetById(int id)
     { 
-      Student student=_studentSrv.GetById();
+
+      Student student=_studentSrv.GetById(id);
+      _logger.LogInformation("Get By ID method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
       return student; 
     }
 
@@ -38,7 +43,8 @@ public class StudentsController : ControllerBase
      [Route("/api/students/update/{id}")]
     public  IActionResult UpdateStudentDetails(Student studentToUpdate)
     {   
-        Console.WriteLine("student update is invoked");    
+        _logger.LogInformation("student update is invoked");
+       
         return NoContent();
     }
 
@@ -47,7 +53,7 @@ public class StudentsController : ControllerBase
     [Route("/api/students/insert/")]
     public IActionResult Insert(Student studentToUpdate)
     {   
-        Console.WriteLine("student insert is invoked");          
+        _logger.LogInformation("student data  is inserted");     
         return NoContent();
     }
 
@@ -56,7 +62,7 @@ public class StudentsController : ControllerBase
     [Route("/api/students/delete/{id}")]
     public IActionResult RemoveStudent(int id)
     {
-        Console.WriteLine("student delete is invoked"); 
+       _logger.LogInformation("student data  is deketed");     
         return NoContent();
     }
 
