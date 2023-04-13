@@ -7,7 +7,13 @@ using OrderProcessingService.Services.Interfaces;
 
 
 var builder = WebApplication.CreateBuilder(args);
+//Configure logging
 
+builder.Host.ConfigureLogging(logging =>
+{
+    logging.ClearProviders();
+    logging.AddConsole();
+});
 // Add services to the container.
 builder.Services.AddCors();
 builder.Services.AddControllers();

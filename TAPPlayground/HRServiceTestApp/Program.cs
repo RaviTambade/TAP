@@ -64,10 +64,10 @@ class Program{
         string empLastName = Console.ReadLine();
 
         Console.WriteLine("Enter Employee BirthDate:");
-        string empBirthDate = Console.ReadLine();
+        DateTime empBirthDate =Convert.ToDateTime(Console.ReadLine());
 
         Console.WriteLine("Enter Employee Hire Date:");
-        string empHireDate = Console.ReadLine();
+        DateTime empHireDate =Convert.ToDateTime(Console.ReadLine());
 
         Console.WriteLine("Enter Employee Contact Number:");
         string empContactNumber = Console.ReadLine();
@@ -121,7 +121,7 @@ class Program{
 
     public static async Task UpdateEmployee()
     {
-           Console.WriteLine("Enter Employee Id Yu Want to Update");
+           Console.WriteLine("Enter Employee Id You Want to Update");
            int empId=int.Parse(Console.ReadLine());
            Employee employee = new Employee();
            using (var httpClient= new HttpClient())
@@ -133,38 +133,39 @@ class Program{
             }
            }
 
+    
         Console.WriteLine("Enter Employee First Name:");
-        string empFirstName = Console.ReadLine();
+        employee.EmpFirstName = Console.ReadLine();
 
         Console.WriteLine("Enter Employee Last Name:");
-        string empLastName = Console.ReadLine();
+        employee.EmpLastName = Console.ReadLine();
 
         Console.WriteLine("Enter Employee BirthDate:");
-        string empBirthDate = Console.ReadLine();
+        employee.BirthDate =Convert.ToDateTime(Console.ReadLine());
 
         Console.WriteLine("Enter Employee Hire Date:");
-        string empHireDate = Console.ReadLine();
+        employee.HireDate =Convert.ToDateTime(Console.ReadLine());
 
         Console.WriteLine("Enter Employee Contact Number:");
-        string empContactNumber = Console.ReadLine();
+        employee.ContactNumber = Console.ReadLine();
 
          Console.WriteLine("Enter Employee Email:");
-        string empEmail = Console.ReadLine();
+        employee.Email = Console.ReadLine();
 
          Console.WriteLine("Enter Employee Password:");
-        string empPassword = Console.ReadLine();
+        employee.Password = Console.ReadLine();
 
         Console.WriteLine("Enter Employee Photo:");
-        string empPhoto = Console.ReadLine();
+        employee.Photo = Console.ReadLine();
 
         Console.WriteLine("Enter Employee Reports To:");
-        int empReportsTo = int.Parse(Console.ReadLine());
+        employee.ReportsTo = int.Parse(Console.ReadLine());
 
         Console.WriteLine("Enter Employee Account Number:");
-        long empAccountNumber = long.Parse(Console.ReadLine());
+        employee.AccountNumber = long.Parse(Console.ReadLine());
 
         Console.WriteLine("Enter Employee DeptId:");
-        int empDeptId = int.Parse(Console.ReadLine());
+        employee.DeptId = int.Parse(Console.ReadLine());
 
         string jsonEmployee= System.Text.Json.JsonSerializer.Serialize(employee);
         var requestContent=new StringContent(jsonEmployee, Encoding.UTF8,"application/json");

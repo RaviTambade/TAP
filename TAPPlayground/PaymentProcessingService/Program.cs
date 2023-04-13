@@ -4,6 +4,11 @@ using PaymentProcessingService.Services;
 using PaymentProcessingService.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Host.ConfigureLogging(logging =>
+{
+    logging.ClearProviders();
+    logging.AddConsole();
+});
 
 // Add services to the container.
 

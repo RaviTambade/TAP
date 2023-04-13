@@ -3,17 +3,21 @@ using PaymentProcessingService.Models;
 using PaymentProcessingService.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using Microsoft.Extensions.Logging;
+
 namespace PaymentProcessingService.Controllers;
 
 [ApiController]
 [Route("/api/[controller]")]
 public class PaymentsController : Controller
 {
+     private readonly ILogger<PaymentsController> _logger;
     private readonly IPaymentService _paymentsrv;
 
     
-    public PaymentsController(IPaymentService paymentsrv)
+    public PaymentsController(ILogger<PaymentsController> logger,IPaymentService paymentsrv)
     {
+        _logger = logger;
         _paymentsrv = paymentsrv;
     }
 
@@ -22,6 +26,7 @@ public class PaymentsController : Controller
     public async Task<IEnumerable<Payment>> GetAll()
     {
        IEnumerable<Payment> payment=await _paymentsrv.GetAllPayments();
+        _logger.LogInformation("Get All method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
         return payment;
     }
       
@@ -31,6 +36,7 @@ public class PaymentsController : Controller
      public async Task<Payment> GetById(int id)
     {
         var payment= await _paymentsrv.GetPaymentById(id);
+         _logger.LogInformation("Get All method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
         return payment;
     }
 
@@ -39,6 +45,7 @@ public class PaymentsController : Controller
      public async Task<IEnumerable<Payment>> GetPaymentByOrderId(int id)
     {
         var payment=await _paymentsrv.GetPaymentByOrderId(id);
+         _logger.LogInformation("Get All method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
         return payment;
     }
 
@@ -50,6 +57,7 @@ public class PaymentsController : Controller
         Console.WriteLine("In controller");
         Console.WriteLine(payment);
         var pay=await _paymentsrv.InsertPayments(payment);
+         _logger.LogInformation("Payment data is inserted");
         return pay;
     }
   
@@ -63,6 +71,7 @@ public class PaymentsController : Controller
         }
        payment.PaymentId=id;
         bool status=await _paymentsrv.UpdatePayment(payment);
+         _logger.LogInformation("Payment data is updeted");
         return status;
     }
 
@@ -71,6 +80,7 @@ public class PaymentsController : Controller
     public async Task<bool> Delete(int id)
     {
         bool status=await _paymentsrv.DeletePayment(id);
+         _logger.LogInformation("Payment data is deleted");
         return status;
     }
 
@@ -80,6 +90,7 @@ public class PaymentsController : Controller
      public async Task<IEnumerable<Payment>> GetPaymentByCustomer(int id)
     {
         var payment= await _paymentsrv.GetPaymentByCustomer(id);
+         _logger.LogInformation("Get All method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
         return payment;
     }
 

@@ -9,11 +9,11 @@ public class program
 
     public static async Task Main(string[] args)
     {
-         await FetchCustomersFromRestAPI();
-        // await FetchCustomerDetails();
-        // await InsertCustomer();
-        //await UpdateCustomer();
-        //await DeleteProduct();
+        await FetchCustomersFromRestAPI();
+        await FetchCustomerDetails();
+        await InsertCustomer();
+        await UpdateCustomer();
+        await DeleteProduct();
     }
 
     public static async Task FetchCustomersFromRestAPI()
@@ -107,22 +107,22 @@ public class program
         }
             
         Console.WriteLine("Enter customer First Name:");
-        string firstName = Console.ReadLine();
+        customer.FirstName = Console.ReadLine();
 
         Console.WriteLine("Enter Customer Last Name");
-        string lastName = Console.ReadLine();
+        customer.LastName = Console.ReadLine();
 
         Console.WriteLine("Enter Customer Email");
-        string email = Console.ReadLine();
+        customer.Email = Console.ReadLine();
 
         Console.WriteLine("Enter Customer Contact Number");
-        string contactNumber = Console.ReadLine();
+        customer.ContactNumber = Console.ReadLine();
 
         Console.WriteLine("Enter Customer Password");
-        string password = Console.ReadLine();
+        customer.Password = Console.ReadLine();
 
         Console.WriteLine("Enter Customer Account Number");
-        long accountNumber = long.Parse(Console.ReadLine());
+        customer.AccountNumber = long.Parse(Console.ReadLine());
 
         string jsonCustomer = System.Text.Json.JsonSerializer.Serialize(customer);
         var requestContent = new StringContent(jsonCustomer, Encoding.UTF8,"application/json");
