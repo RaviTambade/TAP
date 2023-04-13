@@ -9,11 +9,11 @@ public class program
 
     public static async Task Main(string[] args)
     {
-         await FetchCustomersFromRestAPI();
-        // await FetchCustomerDetails();
-        // await InsertCustomer();
-        //await UpdateCustomer();
-        //await DeleteProduct();
+        await FetchCustomersFromRestAPI();
+        await FetchCustomerDetails();
+        await InsertCustomer();
+        await UpdateCustomer();
+        await DeleteProduct();
     }
 
     public static async Task FetchCustomersFromRestAPI()
