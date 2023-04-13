@@ -12,8 +12,10 @@ namespace HRService.Controllers
     public class DepartmentsController : ControllerBase
     {
         private readonly IDepartmentService _deptsrv;
-        public DepartmentsController(IDepartmentService deptsrv)
+         private readonly ILogger<DepartmentsController> _logger;
+        public DepartmentsController(ILogger<DepartmentsController> logger,IDepartmentService deptsrv)
         {
+            _logger = logger;
             _deptsrv = deptsrv;
         }
 
@@ -22,6 +24,7 @@ namespace HRService.Controllers
         public IEnumerable<Department> GetAllDepartments()
         {
             List<Department> departments = _deptsrv.GetAll();
+             _logger.LogInformation("Get All Dept method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
             return departments;
         }
 
@@ -30,6 +33,7 @@ namespace HRService.Controllers
         public Department GetById(int id)
         {
             Department department = _deptsrv.GetById(id);
+             _logger.LogInformation("Get Dept By ID method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
             return department;
         }
 
@@ -44,6 +48,7 @@ namespace HRService.Controllers
             }
             department.DeptId=id;
             bool status = _deptsrv.Update(department);
+            _logger.LogInformation("department update is invoked");
             return status;
         }
 
@@ -53,6 +58,7 @@ namespace HRService.Controllers
         public bool Insert([FromBody] Department department)
         {
             bool status = _deptsrv.Insert(department);
+            _logger.LogInformation("department data  is inserted"); 
             return status;
         }
 
@@ -62,6 +68,7 @@ namespace HRService.Controllers
         public bool Delete(int id)
         {
             bool status = _deptsrv.Delete(id);
+            _logger.LogInformation("department data  is deleted"); 
             return status;
         }
     }
