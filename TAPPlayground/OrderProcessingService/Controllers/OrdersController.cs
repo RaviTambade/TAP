@@ -9,9 +9,11 @@ namespace OrderProcessingService.Controllers
     [Route("/api/[Controller]")]
     public class OrdersController : ControllerBase
     {
+        private readonly ILogger<OrdersController> _logger;
         private readonly IOrderService _ordersvc;
-        public OrdersController(IOrderService ordersvc)
+        public OrdersController(ILogger<OrdersController> logger,IOrderService ordersvc)
         {
+        _logger = logger;
         _ordersvc = ordersvc;
         } 
 
@@ -20,6 +22,7 @@ namespace OrderProcessingService.Controllers
         public async Task<IEnumerable<Order>> GetAllOrders()
         {
             IEnumerable<Order> orders = await _ordersvc.GetAll();
+            _logger.LogInformation("Get All method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
             return orders;
         }
 
@@ -28,6 +31,7 @@ namespace OrderProcessingService.Controllers
         public async Task<Order> GetById(int id)
         {
             Order order = await _ordersvc.GetById(id);
+            _logger.LogInformation("Get by id method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
             return order;
         }
 
@@ -36,6 +40,7 @@ namespace OrderProcessingService.Controllers
         public async Task<bool> Insert([FromBody] Order order)
         {
             bool status = await _ordersvc.Insert(order);
+            _logger.LogInformation("insert method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
             return status;
         }
 
@@ -50,6 +55,7 @@ namespace OrderProcessingService.Controllers
             }
             order.OrderId =id;
             bool status = await _ordersvc.Update(order);
+            _logger.LogInformation("update method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
             return status;
         }
 
@@ -58,6 +64,7 @@ namespace OrderProcessingService.Controllers
         public async Task<bool> Delete(int id)
         {
             bool status =await _ordersvc.Delete(id);
+            _logger.LogInformation("delete method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
             return status;
         }
     }
