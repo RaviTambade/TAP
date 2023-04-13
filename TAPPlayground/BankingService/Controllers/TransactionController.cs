@@ -18,7 +18,7 @@ namespace BankingService.Controllers
         }
 
         [HttpGet]
-        [Route("/gettransactions")]
+        [Route("gettransactions")]
         public IEnumerable<Transaction> GetAllTransactions()
         {
             List<Transaction> transactions = _transactionsrv.GetAllTransactions();
@@ -26,7 +26,7 @@ namespace BankingService.Controllers
         }
 
         [HttpGet]
-        [Route("/gettransactiondetails/{id}")]
+        [Route("gettransactiondetails/{id}")]
         public Transaction GetById(int id)
         {
             Transaction transaction = _transactionsrv.GetById(id);
@@ -35,7 +35,7 @@ namespace BankingService.Controllers
 
        // [Authorize(Roles = Role.Admin)]
         [HttpPut]
-        [Route("/update/{id}")]
+        [Route("update/{id}")]
         public bool Update( int id,[FromBody] Transaction transaction)
         {
             Transaction oldTransaction = _transactionsrv.GetById(id);
@@ -49,7 +49,7 @@ namespace BankingService.Controllers
 
         //[Authorize(Roles = Role.Admin+","+Role.Customer)]
         [HttpPost]
-        [Route("/addtransaction")]
+        [Route("addtransaction")]
         public bool Insert([FromBody] Transaction transaction)
         {
             bool status = _transactionsrv.Insert(transaction);
@@ -58,7 +58,7 @@ namespace BankingService.Controllers
 
        // [Authorize(Roles = Role.Admin)]
         [HttpDelete]
-        [Route("/delete/{id}")]
+        [Route("delete/{id}")]
         public bool Delete(int id)
         {
             bool status = _transactionsrv.Delete(id);
