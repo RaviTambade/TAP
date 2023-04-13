@@ -250,8 +250,7 @@ public class OrderDetailsRepository : IOrderDetailsRepository
                 string? title = reader["product_title"].ToString();
                 double unitPrice = double.Parse(reader["unit_price"].ToString());
                 int quantity = int.Parse(reader["quantity"].ToString());
-                DateTime date = DateTime.Parse(reader["order_date"].ToString());
-
+                DateTime date = Convert.ToDateTime(reader["order_date"].ToString());
                 OrderHistory orderhistory = new OrderHistory
                 {
                     ProductId=productId,
