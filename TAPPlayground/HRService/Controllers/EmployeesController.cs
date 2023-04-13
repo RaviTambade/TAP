@@ -51,25 +51,25 @@ namespace HRService.Controllers
                 return false;
             }
             employee.EmpId=id;
-            bool status = _empsrv.Update(employee);
+            bool status =await _empsrv.Update(employee);
             return status;
         }
 
         //[Authorize(Roles = Role.Employee)]
         [HttpPost]
         [Route("addemployee")]
-        public bool Insert([FromBody] Employee employee)
+        public async Task<bool> Insert([FromBody] Employee employee)
         {
-            bool status = _empsrv.Insert(employee);
+            bool status =await _empsrv.Insert(employee);
             return status;
         }
 
         //[Authorize(Roles = Role.Employee)]
         [HttpDelete]
         [Route("delete/{id}")]
-        public bool Delete(int id)
+        public async Task <bool> Delete(int id)
         {
-            bool status = _empsrv.Delete(id);
+            bool status =await _empsrv.Delete(id);
             return status;
         }
     }
