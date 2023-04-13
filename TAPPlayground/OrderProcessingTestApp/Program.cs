@@ -45,15 +45,46 @@ class Program
             }
         }
     }
-
-    private static async Task InsertOrder()
+      private static async Task InsertOrder()
     {
-        Console.WriteLine("Enter your Orderdate:");
-        string OrderDate = Console.ReadLine();
+        Console.WriteLine("Enter OrderDate:");
+        string orderDate = Console.ReadLine();
 
-        Console.WriteLine("Enter your Shippeddate:");
-        string ShippedDate = Console.ReadLine();
+        Console.WriteLine("Enter ShiipedDate:");
+        string shippedDate = Console.ReadLine();
 
+        Console.WriteLine("Enter Customer Email");
+        string email = Console.ReadLine();
+
+        Console.WriteLine("Enter Customer Contact Number");
+        string contactNumber = Console.ReadLine();
+
+        Console.WriteLine("Enter Customer Password");
+        string password = Console.ReadLine();
+
+        Console.WriteLine("Enter Customer Account Number");
+        long accountNumber = long.Parse(Console.ReadLine());
+
+        Customer customer = new Customer()
+        {
+            FirstName = firstName,
+            LastName = lastName,
+            Email = email,
+            ContactNumber = contactNumber,
+            Password = password,
+            AccountNumber = accountNumber
+        };
+        string jsonCustomer = System.Text.Json.JsonSerializer.Serialize(customer);
+        var requestContent = new StringContent(jsonCustomer, Encoding.UTF8,"application/json");
+        using (var httpClient = new HttpClient())
+        {
+            string apiUrl = "http://localhost:4002/api/customers/addcustomer";
+            using (var response = await httpClient.PostAsync(apiUrl, requestContent))
+            {
+               response.EnsureSuccessStatusCode();
+               var content = await response.Content.ReadAsStringAsync();
+            }
+        }
     }
 }
 
