@@ -12,33 +12,41 @@ namespace BankingService.Controllers
     public class TransactionController : ControllerBase
     {
         private readonly ITransactionService _transactionsrv;
-        public TransactionController(ITransactionService transactionsrv)
+        private readonly ILogger<TransactionController> _logger;
+        public TransactionController(ILogger<TransactionController> logger, ITransactionService transactionsrv)
         {
+            _logger=logger;
             _transactionsrv = transactionsrv;
         }
 
         [HttpGet]
-        [Route("/gettransactions")]
+        [Route("gettransactions")]
         public IEnumerable<Transaction> GetAllTransactions()
         {
             List<Transaction> transactions = _transactionsrv.GetAllTransactions();
+      _logger.LogInformation("Get All method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
+
             return transactions;
         }
 
         [HttpGet]
-        [Route("/gettransactiondetails/{id}")]
+        [Route("gettransactiondetails/{id}")]
         public Transaction GetById(int id)
         {
             Transaction transaction = _transactionsrv.GetById(id);
+      _logger.LogInformation("Get By Id method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
+
             return transaction;
         }
 
        // [Authorize(Roles = Role.Admin)]
         [HttpPut]
-        [Route("/update/{id}")]
+        [Route("update/{id}")]
         public bool Update( int id,[FromBody] Transaction transaction)
         {
             Transaction oldTransaction = _transactionsrv.GetById(id);
+      _logger.LogInformation("Update method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
+
             if(oldTransaction.TransactionId==0){
                 return false;
             }
@@ -49,19 +57,23 @@ namespace BankingService.Controllers
 
         //[Authorize(Roles = Role.Admin+","+Role.Customer)]
         [HttpPost]
-        [Route("/addtransaction")]
+        [Route("addtransaction")]
         public bool Insert([FromBody] Transaction transaction)
         {
             bool status = _transactionsrv.Insert(transaction);
+      _logger.LogInformation("Insert method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
+
             return status;
         }
 
        // [Authorize(Roles = Role.Admin)]
         [HttpDelete]
-        [Route("/delete/{id}")]
+        [Route("delete/{id}")]
         public bool Delete(int id)
         {
             bool status = _transactionsrv.Delete(id);
+      _logger.LogInformation("Delete method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
+
             return status;
         }
     }

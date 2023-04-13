@@ -40,7 +40,7 @@ public class TransactionRepository : ITransactionRepository
                     TransactionId = id,
                     FromAccountNumber = fromAccountNumber,
                     ToAccountNumber = toAccountNumber,
-                    TransactionDate = transactionDate.ToShortDateString(),
+                    TransactionDate = transactionDate,
                     Amount = amount
                 };
                 transactions.Add(transaction);
@@ -82,7 +82,7 @@ public class TransactionRepository : ITransactionRepository
                     TransactionId = id,
                     FromAccountNumber = fromAccountNumber,
                     ToAccountNumber = toAccountNumber,
-                    TransactionDate = transactionDate.ToShortDateString(),
+                    TransactionDate = transactionDate,
                     Amount = amount
                 };
             }

@@ -1,4 +1,3 @@
-using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
 
@@ -15,7 +14,7 @@ public class Transaction
     [Column("to_account_number")]
     public long ToAccountNumber{get; set;}
     [Column("transaction_date")]
-    public DateTime TransactionDate{get; set;}
+    public string? TransactionDate{get; set;}
     [Column("amount")]
     public double Amount{get; set;}
 
