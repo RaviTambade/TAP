@@ -37,7 +37,7 @@ public class PaymentRepository : IPaymentRepository
                 Payment payment = new Payment
                 {
                     PaymentId=paymentId,
-                    PaymentDate=paymentDate.ToLongDateString(),
+                    PaymentDate=paymentDate,
                     PaymentMode = payment_mode,
                     TransactionId = transactionId,
                     OrderId = orderId
@@ -80,7 +80,7 @@ public class PaymentRepository : IPaymentRepository
                 payment = new Payment()
                 {
                     PaymentId=id,
-                    PaymentDate=paymentDate.ToLongDateString(),
+                    PaymentDate=paymentDate,
                     PaymentMode = payment_mode,
                     TransactionId = transactionId,
                     OrderId = orderId
@@ -121,7 +121,7 @@ public class PaymentRepository : IPaymentRepository
               Payment  payment= new Payment()
                 {
                     PaymentId=paymentId,
-                    PaymentDate= date.ToShortDateString(),
+                    PaymentDate= date,
                     PaymentMode = payment_mode,
                     TransactionId = transactionId,
                     OrderId = id
@@ -239,7 +239,7 @@ public class PaymentRepository : IPaymentRepository
               Payment  payment= new Payment()
                 {
                     PaymentId=paymentId,
-                    PaymentDate= date.ToShortDateString(),
+                    PaymentDate= date,
                     PaymentMode = payment_mode,
                     TransactionId = transactionId,
                     OrderId = OrderId
