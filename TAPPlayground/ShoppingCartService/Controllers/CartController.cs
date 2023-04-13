@@ -9,16 +9,19 @@ namespace ShoppingCartService.Controllers
     public class CartController : ControllerBase
     {
         private readonly ICartService _cartSrv;
-        public CartController(ICartService cartService)
+        private readonly ILogger<CartController> _logger;
+        public CartController(ICartService cartService, ILogger<CartController> logger)
         {
             _cartSrv = cartService;
+            _logger = logger;
         }
 
         [HttpGet]
         [Route("getallcartitems")]
         public async Task<IEnumerable<Cart>> GetAllCarts()
         {
-            List<Cart> carts =await _cartSrv.GetAllCarts();
+            _logger.LogInformation("Get all products method invoked at  {DT}", DateTime.UtcNow.ToLongTimeString());
+            List<Cart> carts = await _cartSrv.GetAllCarts();
             return carts;
         }
 
@@ -34,11 +37,12 @@ namespace ShoppingCartService.Controllers
         [Route("addtocart/{id}")]
         public async Task<bool> AddToCart(int id, Item item)
         {
-            Cart theCart =await _cartSrv.GetCart(id);
-            if(theCart.CartId==0){
+            Cart theCart = await _cartSrv.GetCart(id);
+            if (theCart.CartId == 0)
+            {
                 return false;
             }
-            bool status =await _cartSrv.AddItem(theCart.CartId, item);
+            bool status = await _cartSrv.AddItem(theCart.CartId, item);
             return status;
         }
 
@@ -46,11 +50,12 @@ namespace ShoppingCartService.Controllers
         [Route("update/{id}")]
         public async Task<bool> UpdateCart(int id, Item item)
         {
-            Cart theCart =await _cartSrv.GetCart(id);
-            if(theCart.CartId==0){
+            Cart theCart = await _cartSrv.GetCart(id);
+            if (theCart.CartId == 0)
+            {
                 return false;
             }
-            bool status =await _cartSrv.UpdateItem(theCart.CartId, item);
+            bool status = await _cartSrv.UpdateItem(theCart.CartId, item);
             return status;
         }
 
@@ -58,11 +63,12 @@ namespace ShoppingCartService.Controllers
         [Route("delete/{id}")]
         public async Task<bool> RemoveFromCart(int id, Item item)
         {
-            Cart theCart =await _cartSrv.GetCart(id);
-            if(theCart.CartId==0){
+            Cart theCart = await _cartSrv.GetCart(id);
+            if (theCart.CartId == 0)
+            {
                 return false;
             }
-            bool status =await _cartSrv.RemoveItem(theCart.CartId, item);
+            bool status = await _cartSrv.RemoveItem(theCart.CartId, item);
             return status;
         }
 
@@ -70,7 +76,7 @@ namespace ShoppingCartService.Controllers
         [Route("createorder/{id}")]
         public async Task<bool> CreateOrder(int id)
         {
-            bool status =await _cartSrv.CreateOrder(id);
+            bool status = await _cartSrv.CreateOrder(id);
             return status;
         }
     }

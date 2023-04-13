@@ -1,4 +1,5 @@
 
+using OrderProcessingService.Helpers;
 using OrderProcessingService.Repositories;
 using OrderProcessingService.Repositories.Interfaces;
 using OrderProcessingService.Services;
@@ -16,6 +17,8 @@ builder.Host.ConfigureLogging(logging =>
 // Add services to the container.
 builder.Services.AddCors();
 builder.Services.AddControllers();
+builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
+
 builder.Services.AddTransient<IOrderRepository,OrderRepository>();
 builder.Services.AddTransient<IOrderService,OrderService>();
 builder.Services.AddTransient<IOrderDetailsRepository,OrderDetailsRepository>();
@@ -39,7 +42,8 @@ app.UseCors(x => x.AllowAnyOrigin()
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
-
+app.UseAuthentication();
+app.UseMiddleware<JwtMiddleware>();
 app.MapControllers();
 
 app.Run();

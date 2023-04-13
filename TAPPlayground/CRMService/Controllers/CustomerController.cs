@@ -3,6 +3,7 @@ using CRMService.Models;
 using CRMService.Services;
 using CRMService.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 
 using MySql.Data.MySqlClient;
 
@@ -14,21 +15,36 @@ namespace CRMService.Controllers
     public class CustomersController : ControllerBase
 
     {
+        private readonly IMemoryCache _memoryCache;
         private readonly ILogger<CustomersController> _logger;
         private readonly ICustomerService _custsrv;
-        public CustomersController(ICustomerService custsrv, ILogger<CustomersController> logger )
+        public CustomersController(ICustomerService custsrv, ILogger<CustomersController> logger, IMemoryCache memoryCache )
         {
             _custsrv = custsrv;
             _logger = logger;
+            _memoryCache = memoryCache;
         }
 
         [HttpGet]
         [Route("getallcustomers")]
         public async Task<IEnumerable<Customer>> GetAllCustomers()
         {
-            IEnumerable<Customer> customers = await _custsrv.GetAll();
-            _logger.LogInformation("Get All method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
-            return customers;
+            var cacheKey="customerList";    //checks if cache entries exists
+            if(!_memoryCache.TryGetValue(cacheKey, out IEnumerable<Customer> customerList))
+            {
+              customerList = await _custsrv.GetAll();
+             _logger.LogInformation("Get All method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
+            //setting up cache options
+             var cacheExpiryOptions = new MemoryCacheEntryOptions
+             {
+                AbsoluteExpiration = DateTime.Now.AddSeconds(50),
+                Priority = CacheItemPriority.High,
+                SlidingExpiration = TimeSpan.FromSeconds(20)
+             };
+             //setting cache entries
+             _memoryCache.Set(cacheKey, customerList, cacheExpiryOptions);
+            }
+            return customerList;
         }
 
         [HttpGet]

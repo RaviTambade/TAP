@@ -6,6 +6,7 @@ CREATE DATABASE Ecommerce;
 
 USE Ecommerce;
 
+
 CREATE TABLE users( user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, email VARCHAR(25) UNIQUE NOT NULL, contact_number VARCHAR(20) NOT NULL ,password VARCHAR(15) NOT NULL);
 CREATE TABLE roles(role_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, role varchar(50));
 CREATE TABLE user_roles(id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,CONSTRAINT fk_user_id FOREIGN KEY(user_id) REFERENCES users(user_id) ON UPDATE CASCADE ON DELETE CASCADE ,role_id INT NOT NULL,CONSTRAINT fk_role_id FOREIGN KEY(role_id) REFERENCES roles(role_id) ON UPDATE CASCADE ON DELETE CASCADE);
@@ -400,6 +401,8 @@ select * from orders;
 select * from orderdetails;
 select * from categories;
 select * from accounts;
+SELECT * FROM transactions;
+
 
 
 /*1)Retrive List of Customers that made purcheses after the date 2023-03-03 */

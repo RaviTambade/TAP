@@ -1,8 +1,7 @@
-using System.Collections.Generic;
 using OrderProcessingService.Models;
 using OrderProcessingService.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using MySql.Data.MySqlClient;
+using OrderProcessingService.Helpers;
 
 namespace OrderProcessingService.Controllers
 {
@@ -19,6 +18,7 @@ namespace OrderProcessingService.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles=Role.Admin)]
         [Route("/getallorderdetails")]
         public async Task<IEnumerable<OrderDetails>> GetAll()
         {
