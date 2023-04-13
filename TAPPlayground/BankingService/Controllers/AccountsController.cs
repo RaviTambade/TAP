@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using BankingService.Models;
 using BankingService.Services;
 using BankingService.Services.Interfaces;
@@ -18,54 +19,54 @@ namespace BankingService.Controllers
         }
 
         [HttpGet]
-        [Route("/getallaccounts")]
-        public IEnumerable<Account> GetAllAccounts()
+        [Route("getallaccounts")]
+        public async Task<IEnumerable<Account>> GetAllAccounts()
         {
-            List<Account> accounts = _accountsrv.GetAll();
+            List<Account> accounts = await _accountsrv.GetAll();
             return accounts;
         }
 
-        [HttpGet]
-        [Route("/getallaccountsbycustomerid")]
-        public IEnumerable<Account> GetAllAccounts(int customerId)
-        {
-            List<Account> accounts = _accountsrv.getallAccountsByCustomerId(customerId);
-            return accounts;
-        }
+        // [HttpGet]
+        // [Route("/getallaccountsbycustomerid")]
+        // public IEnumerable<Account> GetAllAccounts(int customerId)
+        // {
+        //     List<Account> accounts = _accountsrv.getallAccountsByCustomerId(customerId);
+        //     return accounts;
+        // }
 
 
         [HttpGet]
-        [Route("/getaccountdetails/{id}")]
-        public Account GetById(int id)
+        [Route("getaccountdetails/{id}")]
+        public async Task< Account> GetById(int id)
         {
-            Account account = _accountsrv.GetById(id);
+            Account account = await _accountsrv.GetById(id);
             return account;
         }
 
         
          //[Authorize(Roles = Role.Admin)]
         [HttpPost]
-        [Route("/addaccount")]
-        public bool Insert([FromBody] Account account)
+        [Route("addaccount")]
+        public async Task<bool> Insert([FromBody] Account account)
         {
-            bool status = _accountsrv.Insert(account);
+            bool status =await _accountsrv.Insert(account);
             return status;
         }
 
         //[Authorize(Roles = Role.Admin)]
         [HttpDelete]
-        [Route("/delete/{id}")]
-        public bool Delete(int id)
+        [Route("delete/{id}")]
+        public async Task<bool> Delete(int id)
         {
-            bool status = _accountsrv.Delete(id);
+            bool status =  await _accountsrv.Delete(id);
             return status;
         }
         //[Authorize(Roles = Role.Admin)]
         [HttpPut]
-        [Route("/update/{id}")]
-        public bool Update(Account account)
+        [Route("update/{id}")]
+        public async Task <bool> Update(Account account)
         {
-            bool status = _accountsrv.Update(account);
+            bool status = await _accountsrv.Update(account);
             return status;
         }
     }

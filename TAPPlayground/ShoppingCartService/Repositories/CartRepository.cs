@@ -12,58 +12,72 @@ public class CartRepository : ICartRepository
         _configuration = configuration;
         _conString = this._configuration.GetConnectionString("DefaultConnection");
     }
-    public async Task<List<Cart>> GetAllCarts()
+
+      public async Task<List<Cart>> GetAllCarts()
     {
-        await Task.Delay(3000);
         List<Cart> carts = new List<Cart>();
+        List<Cart> newcarts = new List<Cart>();
         MySqlConnection con = new MySqlConnection();
         try
         {
             con.ConnectionString = _conString;
-            string query = "select DISTINCT(cart_id) from cart_items";
-            Console.WriteLine(query);
+            string query =" SELECT cart_items.cart_id, products.product_id,products.product_title,products.image," +
+                           " products.unit_price,cart_items.quantity FROM products,cart_items " +
+                           " WHERE products.product_id=cart_items.product_id order by cart_items.cart_id";
             MySqlCommand command = new MySqlCommand(query, con);
             await con.OpenAsync();
             MySqlDataReader reader = command.ExecuteReader();
             while (await reader.ReadAsync())
             {
-                int cartId = int.Parse(reader["cart_id"].ToString());
                 Cart theCart = new Cart();
-                theCart.CartId = cartId;
+                int cartId = int.Parse(reader["cart_id"].ToString());
+                int productId = int.Parse(reader["product_id"].ToString());
+                string productTitle = reader["product_title"].ToString();
+                string imageURL = reader["image"].ToString();
+                int quantity = int.Parse(reader["quantity"].ToString());
+                double unitPrice = double.Parse(reader["unit_price"].ToString());
+                Item item = new Item()
+                {
+                    ProductId = productId,
+                    ProductTitle = productTitle,
+                    ImageURL = imageURL,
+                    Quantity = quantity,
+                    UnitPrice = unitPrice
+                };
+                theCart.Items.Add(item);
+                theCart.CartId=cartId;
                 carts.Add(theCart);
             }
-            reader.Close();
-            foreach (Cart theCart in carts)
+
+            await reader.CloseAsync();
+            await con.CloseAsync();
+            var groupedCarts = carts.GroupBy(cart => cart.CartId).ToList();
+            // var groupedCarts = from cart in carts group cart by cart.CartId;
+            foreach (var cartGroup in groupedCarts)
             {
-                string secondQuery = "SELECT products.product_id,products.product_title,products.image," +
-                                     "products.unit_price,cart_items.quantity"+
-                                     "FROM products, cart_items " +
-                                     " WHERE products.product_id=cart_items.product_id AND cart_id=@cartId";
-            
-                MySqlCommand command2 = new MySqlCommand(secondQuery, con);
-                command2.Parameters.AddWithValue("@cartId", theCart.CartId);
-                Console.WriteLine(secondQuery);
-                MySqlDataReader readerItems = command2.ExecuteReader();
-                while (readerItems.Read())
+                Cart cart = new Cart();
+                // Console.WriteLine("CartId=" + cartGroup.Key);
+                cart.CartId = cartGroup.Key;
+                foreach (var cart1 in cartGroup)
                 {
-                    int productId = int.Parse(readerItems["product_id"].ToString());
-                    string productTitle = readerItems["product_title"].ToString();
-                    string imageURL = readerItems["image"].ToString();
-                    int quantity = int.Parse(readerItems["quantity"].ToString());
-                    double unitPrice = double.Parse(readerItems["unit_price"].ToString());
-                    Item item = new Item()
+                    foreach (var item in cart1.Items)
                     {
-                        ProductId = productId,
-                        ProductTitle = productTitle,
-                        ImageURL = imageURL,
-                        Quantity = quantity,
-                        UnitPrice = unitPrice
-                    };
-                    theCart.Items.Add(item);
+                        // Console.WriteLine("productid=" + item.ProductId);
+                        // Console.WriteLine("quantity=" + item.Quantity);
+                        // Console.WriteLine();
+                        Item item1 = new Item()
+                        {
+                            ProductId = item.ProductId,
+                            ProductTitle = item.ProductTitle,
+                            ImageURL = item.ImageURL,
+                            Quantity = item.Quantity,
+                            UnitPrice = item.UnitPrice
+                        };
+                        cart.Items.Add(item1);
+                    }
                 }
-                readerItems.Close();
+                newcarts.Add(cart);
             }
-        
         }
         catch (Exception e)
         {
@@ -71,10 +85,73 @@ public class CartRepository : ICartRepository
         }
         finally
         {
-            con.Close();
+            await con.CloseAsync();
         }
-        return carts;
+        return newcarts;
     }
+
+    // public async Task<List<Cart>> GetAllCarts()
+    // {
+    //     List<Cart> carts = new List<Cart>();
+    //     MySqlConnection con = new MySqlConnection();
+    //     try
+    //     {
+    //         con.ConnectionString = _conString;
+    //         string query = "select DISTINCT(cart_id) from cart_items";
+    //         Console.WriteLine(query);
+    //         MySqlCommand command = new MySqlCommand(query, con);
+    //         await con.OpenAsync();
+    //         MySqlDataReader reader = command.ExecuteReader();
+    //         while (await reader.ReadAsync())
+    //         {
+    //             int cartId = int.Parse(reader["cart_id"].ToString());
+    //             Cart theCart = new Cart();
+    //             theCart.CartId = cartId;
+    //             carts.Add(theCart);
+    //         }
+    //         await reader.CloseAsync();
+    //         foreach (Cart theCart in carts)
+    //         {
+    //             string secondQuery = "SELECT products.product_id,products.product_title,products.image," +
+    //                                  " products.unit_price,cart_items.quantity" +
+    //                                  " FROM products, cart_items " +
+    //                                  " WHERE products.product_id=cart_items.product_id AND cart_id=@cartId";
+
+    //             MySqlCommand command2 = new MySqlCommand(secondQuery, con);
+    //             command2.Parameters.AddWithValue("@cartId", theCart.CartId);
+    //             Console.WriteLine(secondQuery);
+    //             MySqlDataReader readerItems = command2.ExecuteReader();
+    //             while (await readerItems.ReadAsync())
+    //             {
+    //                 int productId = int.Parse(readerItems["product_id"].ToString());
+    //                 string productTitle = readerItems["product_title"].ToString();
+    //                 string imageURL = readerItems["image"].ToString();
+    //                 int quantity = int.Parse(readerItems["quantity"].ToString());
+    //                 double unitPrice = double.Parse(readerItems["unit_price"].ToString());
+    //                 Item item = new Item()
+    //                 {
+    //                     ProductId = productId,
+    //                     ProductTitle = productTitle,
+    //                     ImageURL = imageURL,
+    //                     Quantity = quantity,
+    //                     UnitPrice = unitPrice
+    //                 };
+    //                 theCart.Items.Add(item);
+    //             }
+    //             await readerItems.CloseAsync();
+    //         }
+
+    //     }
+    //     catch (Exception e)
+    //     {
+    //         throw e;
+    //     }
+    //     finally
+    //     {
+    //         await con.CloseAsync();
+    //     }
+    //     return carts;
+    // }
     public async Task<Cart> GetCart(int cartId)
     {
         Cart cart = new Cart();
@@ -107,7 +184,7 @@ public class CartRepository : ICartRepository
                 cart.Items.Add(item);
                 cart.CartId = cartId;
             }
-            reader.Close();
+            await reader.CloseAsync();
         }
         catch (Exception e)
         {
@@ -115,11 +192,11 @@ public class CartRepository : ICartRepository
         }
         finally
         {
-            con.Close();
+            await con.CloseAsync();
         }
         return cart;
     }
-    public async Task<bool> AddItem(Cart theCart, Item item)
+    public async Task<bool> AddItem(int cartId, Item item)
     {
         bool status = false;
         MySqlConnection con = new MySqlConnection();
@@ -129,10 +206,10 @@ public class CartRepository : ICartRepository
             await con.OpenAsync();
             string query = "INSERT into cart_items(cart_id,product_id,quantity) VALUES (@cartId, @productId,@quantity)";
             MySqlCommand command = new MySqlCommand(query, con);
-            command.Parameters.AddWithValue("@cartId", theCart.CartId);
+            command.Parameters.AddWithValue("@cartId", cartId);
             command.Parameters.AddWithValue("@productId", item.ProductId);
             command.Parameters.AddWithValue("@quantity", item.Quantity);
-            int rowsAffected = command.ExecuteNonQuery();
+            int rowsAffected = await command.ExecuteNonQueryAsync();
             if (rowsAffected >= 1)
             {
                 status = true;
@@ -144,11 +221,11 @@ public class CartRepository : ICartRepository
         }
         finally
         {
-            con.Close();
+            await con.CloseAsync();
         }
         return status;
     }
-    public async Task<bool> UpdateItem(Cart theCart, Item item)
+    public async Task<bool> UpdateItem(int cartId, Item item)
     {
         bool status = false;
         MySqlConnection con = new MySqlConnection();
@@ -159,10 +236,10 @@ public class CartRepository : ICartRepository
             Console.WriteLine(query);
             MySqlCommand command = new MySqlCommand(query, con);
             command.Parameters.AddWithValue("@productId", item.ProductId);
-            command.Parameters.AddWithValue("@cartId", theCart.CartId);
+            command.Parameters.AddWithValue("@cartId", cartId);
             command.Parameters.AddWithValue("@quantity", item.Quantity);
             await con.OpenAsync();
-            int rowsAffected = command.ExecuteNonQuery();
+            int rowsAffected = await command.ExecuteNonQueryAsync();
             if (rowsAffected >= 1)
             {
                 status = true;
@@ -174,11 +251,11 @@ public class CartRepository : ICartRepository
         }
         finally
         {
-            con.Close();
+            await con.CloseAsync();
         }
         return status;
     }
-    public async Task<bool> RemoveItem(Cart theCart, Item item)
+    public async Task<bool> RemoveItem(int cartId, Item item)
     {
         bool status = false;
         MySqlConnection con = new MySqlConnection();
@@ -188,9 +265,9 @@ public class CartRepository : ICartRepository
             await con.OpenAsync();
             string query = "DELETE from cart_items WHERE cart_id=@cartId AND product_id=@productId";
             MySqlCommand command = new MySqlCommand(query, con);
-            command.Parameters.AddWithValue("@cartId", theCart.CartId);
+            command.Parameters.AddWithValue("@cartId", cartId);
             command.Parameters.AddWithValue("@productId", item.ProductId);
-            int rowsAffected = command.ExecuteNonQuery();
+            int rowsAffected = await command.ExecuteNonQueryAsync();
             if (rowsAffected >= 1)
             {
                 status = true;
@@ -202,13 +279,12 @@ public class CartRepository : ICartRepository
         }
         finally
         {
-            con.Close();
+            await con.CloseAsync();
         }
         return status;
     }
     public async Task<bool> CreateOrder(int cartId)
     {
-
         bool status = false;
         MySqlConnection con = new MySqlConnection(_conString);
         try
@@ -217,7 +293,7 @@ public class CartRepository : ICartRepository
             command.CommandType = CommandType.StoredProcedure;
             command.Parameters.AddWithValue("@cartId", cartId);     //set the cartid input parameter for the stored procedure
             await con.OpenAsync();
-            command.ExecuteNonQuery();
+            await command.ExecuteNonQueryAsync();
             status = true;
         }
         catch (Exception e)
@@ -230,8 +306,4 @@ public class CartRepository : ICartRepository
         }
         return status;
     }
-
 }
-
-
-

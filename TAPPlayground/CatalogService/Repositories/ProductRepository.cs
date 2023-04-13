@@ -112,7 +112,7 @@ public class ProductRepository : IProductRepository
 
         return product;
     }
-    public bool Insert(Product product)
+    public async Task<bool> Insert(Product product)
     {
         bool status = false;
         MySqlConnection connection = new MySqlConnection(_conString);
@@ -127,8 +127,8 @@ public class ProductRepository : IProductRepository
             command.Parameters.AddWithValue("@image", product.ImageUrl);
             command.Parameters.AddWithValue("@categoryId", product.CategoryId);
             command.Parameters.AddWithValue("@supplierId", product.SupplierId);
-            connection.Open();
-            int rowsAffected = command.ExecuteNonQuery();
+            await connection.OpenAsync();
+            int rowsAffected = await command.ExecuteNonQueryAsync();
             if (rowsAffected > 0)
             {
                 status = true;
@@ -144,7 +144,7 @@ public class ProductRepository : IProductRepository
         }
         return status;
     }
-    public bool Update(Product product)
+    public async Task<bool> Update(Product product)
     {
         bool status = false;
         MySqlConnection connection = new MySqlConnection(_conString);
@@ -160,13 +160,11 @@ public class ProductRepository : IProductRepository
             command.Parameters.AddWithValue("@imageUrl", product.ImageUrl);
             command.Parameters.AddWithValue("@categoryId", product.CategoryId);
             command.Parameters.AddWithValue("@supplierId", product.SupplierId);
-
             Console.WriteLine(query);
             Console.WriteLine(product.ProductId);
             Console.WriteLine(product.ProductTitle);
-
-            connection.Open();
-            int rowsAffected = command.ExecuteNonQuery();
+            await connection.OpenAsync();
+            int rowsAffected = await command.ExecuteNonQueryAsync();
             if (rowsAffected > 0)
             {
                 status = true;
@@ -183,7 +181,7 @@ public class ProductRepository : IProductRepository
         }
         return status;
     }
-    public bool Delete(int productId)
+    public async Task<bool> Delete(int productId)
     {
         bool status = false;
         MySqlConnection connection = new MySqlConnection(_conString);
@@ -192,8 +190,8 @@ public class ProductRepository : IProductRepository
             string query = "DELETE FROM products WHERE product_id=@productId";
             MySqlCommand command = new MySqlCommand(query, connection);
             command.Parameters.AddWithValue("@productId", productId);
-            connection.Open();
-            int rowsAffected = command.ExecuteNonQuery();
+            await connection.OpenAsync();
+            int rowsAffected =await command.ExecuteNonQueryAsync();
             if (rowsAffected > 0)
             {
                 status = true;
@@ -210,7 +208,7 @@ public class ProductRepository : IProductRepository
         return status;
     }
 
-    public bool HikePrice(double percentage)
+    public async Task<bool> HikePrice(double percentage)
     {
         bool status = false;
         MySqlConnection con = new MySqlConnection();

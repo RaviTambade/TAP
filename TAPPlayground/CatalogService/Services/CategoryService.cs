@@ -10,9 +10,9 @@ public class CategoryService : ICategoryService
     {
         this._repo = repo;
     }
-    public List<Category> GetAll() => _repo.GetAll();
-    public Category GetDetails(int categoryId) => _repo.GetDetails(categoryId);
-    public bool Insert(Category category) => _repo.Insert(category);
-    public bool Update(Category category) => _repo.Update(category);
-    public bool Delete(int categoryId) => _repo.Delete(categoryId);
+    public async Task<IEnumerable<Category>> GetAll() =>await _repo.GetAll();
+    public async Task<Category> GetDetails(int categoryId) =>await _repo.GetDetails(categoryId);
+    public async Task<bool> Insert(Category category) =>await _repo.Insert(category);
+    public async Task<bool> Update(Category category) =>await _repo.Update(category);
+    public async Task<bool> Delete(int categoryId) =>await _repo.Delete(categoryId);
 }

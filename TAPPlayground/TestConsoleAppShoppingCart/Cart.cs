@@ -8,8 +8,4 @@ namespace ShoppingCartService.Models;
    {
       this.Items=new List<Item>();
    }
-   public void AddToCart(Item item)
-   {
-      Items.Add(item);
-   } 
  }

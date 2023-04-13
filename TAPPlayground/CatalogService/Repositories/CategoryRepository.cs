@@ -13,7 +13,7 @@ public class CategoryRepository : ICategoryRepository
         _conString = this._configuration.GetConnectionString("DefaultConnection");
     }
 
-    public List<Category> GetAll()
+    public async Task<IEnumerable<Category>> GetAll()
     {
         List<Category> categories = new List<Category>();
         MySqlConnection con = new MySqlConnection();
@@ -22,9 +22,9 @@ public class CategoryRepository : ICategoryRepository
         {
             string query = "select * from categories";
             MySqlCommand command = new MySqlCommand(query, con);
-            con.Open();
+            await con.OpenAsync();
             MySqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
+            while (await reader.ReadAsync())
             {
                 int id = int.Parse(reader["category_id"].ToString());
                 string? categoryTitle = reader["category_title"].ToString();
@@ -52,7 +52,7 @@ public class CategoryRepository : ICategoryRepository
         }
         return categories;
     }
-    public Category GetDetails(int categoryId)
+    public async Task<Category> GetDetails(int categoryId)
     {
         Category category = new Category();
         MySqlConnection connection = new MySqlConnection(_conString);
@@ -61,9 +61,9 @@ public class CategoryRepository : ICategoryRepository
             string query = "SELECT * FROM categories WHERE category_id=@categoryId";
             MySqlCommand command = new MySqlCommand(query, connection);
             command.Parameters.AddWithValue("@categoryId", categoryId);
-            connection.Open();
+            await connection.OpenAsync();
             MySqlDataReader reader = command.ExecuteReader();
-            if (reader.Read())
+            if (await reader.ReadAsync())
             {
                 int id = int.Parse(reader["category_id"].ToString());
                 string? categoryTitle = reader["category_title"].ToString();
@@ -89,7 +89,7 @@ public class CategoryRepository : ICategoryRepository
         }
         return category;
     }
-    public bool Insert(Category category)
+    public async Task<bool> Insert(Category category)
     {
         bool status = false;
         MySqlConnection connection = new MySqlConnection(_conString);
@@ -101,8 +101,8 @@ public class CategoryRepository : ICategoryRepository
             command.Parameters.AddWithValue("@description", category.Description);
             command.Parameters.AddWithValue("@imageurl", category.ImageUrl);
             command.Connection = connection;
-            connection.Open();
-            int rowsAffected = command.ExecuteNonQuery();
+            await connection.OpenAsync();
+            int rowsAffected =await command.ExecuteNonQueryAsync();
             if (rowsAffected > 0)
             {
                 status = true;
@@ -118,7 +118,7 @@ public class CategoryRepository : ICategoryRepository
         }
         return status;
     }
-    public bool Update(Category category)
+    public async Task<bool> Update(Category category)
     {
         bool status = false;
         MySqlConnection connection = new MySqlConnection(_conString);
@@ -131,8 +131,8 @@ public class CategoryRepository : ICategoryRepository
             command.Parameters.AddWithValue("@description", category.Description);
             command.Parameters.AddWithValue("@imageurl", category.ImageUrl);
             command.Connection = connection;
-            connection.Open();
-            int rowsAffected = command.ExecuteNonQuery();
+            await connection.OpenAsync();
+            int rowsAffected =await command.ExecuteNonQueryAsync();
             if (rowsAffected > 0)
             {
                 status = true;
@@ -148,7 +148,7 @@ public class CategoryRepository : ICategoryRepository
         }
         return status;
     }
-    public bool Delete(int categoryId)
+    public async Task<bool> Delete(int categoryId)
     {
         bool status = false;
         MySqlConnection connection = new MySqlConnection(_conString);
@@ -158,8 +158,8 @@ public class CategoryRepository : ICategoryRepository
             command.CommandText = "DELETE FROM categories WHERE category_id=@categoryId";
             command.Parameters.AddWithValue("@categoryId", categoryId);
             command.Connection = connection;
-            connection.Open();
-            int rowsAffected = command.ExecuteNonQuery();
+            await connection.OpenAsync();
+            int rowsAffected =await command.ExecuteNonQueryAsync();
             if (rowsAffected > 0)
             {
                 status = true;
