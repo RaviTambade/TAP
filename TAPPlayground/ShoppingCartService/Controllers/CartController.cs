@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Distributed;
 using Newtonsoft.Json;
 using ShoppingCartService.Models;
+using ShoppingCartService.Extensions;
 using ShoppingCartService.Services.Interfaces;
 
 namespace ShoppingCartService.Controllers
