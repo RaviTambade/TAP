@@ -11,9 +11,11 @@ namespace CatalogService.Controllers
     public class SuppliersController : ControllerBase
     {
         private readonly ISupplierService _srv;
-        public SuppliersController(ISupplierService srv)
+        private readonly ILogger<SuppliersController> _logger;
+        public SuppliersController(ISupplierService srv,ILogger<SuppliersController> logger)
         {
             _srv = srv;
+            _logger=logger;
         }
 
         [HttpGet]
@@ -21,6 +23,7 @@ namespace CatalogService.Controllers
         public async Task<IEnumerable<Supplier>> GetAllSuppliers()
         {
             IEnumerable<Supplier> suppliers =await _srv.GetAll();
+            _logger.LogInformation("Get all suppliers method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
             return suppliers;
         }
 
@@ -29,6 +32,7 @@ namespace CatalogService.Controllers
         public async Task<Supplier> GetById(int id)
         {
             Supplier supplier =await _srv.GetById(id);
+            _logger.LogInformation("Get details of supplier method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
             return supplier;
         }
 
@@ -44,6 +48,7 @@ namespace CatalogService.Controllers
             }
             supplier.SupplierId = id;
             bool status =await _srv.Update(supplier);
+            _logger.LogInformation("Update supplier method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
             return status;
         }
 
@@ -53,6 +58,7 @@ namespace CatalogService.Controllers
         public async Task<bool> Insert([FromBody] Supplier supplier)
         {
             bool status =await _srv.Insert(supplier);
+            _logger.LogInformation("Insert supplier method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
             return status;
         }
 
@@ -62,6 +68,7 @@ namespace CatalogService.Controllers
         public async Task<bool> Delete(int id)
         {
             bool status =await _srv.Delete(id);
+            _logger.LogInformation("Delete supplier method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
             return status;
         }
     }

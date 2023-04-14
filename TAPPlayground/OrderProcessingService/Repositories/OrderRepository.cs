@@ -32,8 +32,8 @@ public class OrderRepository : IOrderRepository
             while (await reader.ReadAsync())
             {
                 int id = int.Parse(reader["order_id"].ToString());
-                DateTime orderDate = DateTime.Parse(reader["order_date"].ToString());
-                DateTime shippedDate = DateTime.Parse(reader["shipped_date"].ToString());
+                DateTime orderDate = Convert.ToDateTime(reader["order_date"].ToString());
+                DateTime shippedDate = Convert.ToDateTime(reader["shipped_date"].ToString());
                 int customerId = int.Parse(reader["cust_id"].ToString());
                 double total = double.Parse(reader["total"].ToString());
                 string? status = reader["status"].ToString();
@@ -41,8 +41,8 @@ public class OrderRepository : IOrderRepository
                 Order order = new Order()
                 {
                     OrderId = id,
-                    OrderDate = orderDate.ToLongDateString(),
-                    ShippedDate = shippedDate.ToLongDateString(),
+                    OrderDate = orderDate,
+                    ShippedDate = shippedDate,
                     CustomerId = customerId,
                     Total = total,
                     Status = status
@@ -78,8 +78,8 @@ public class OrderRepository : IOrderRepository
             if (await reader.ReadAsync())
             {
                 //int orderId = int.Parse(reader["order_id"].ToString());
-                DateTime orderDate = DateTime.Parse(reader["order_date"].ToString());
-                DateTime shippedDate = DateTime.Parse(reader["shipped_date"].ToString());
+                DateTime orderDate = Convert.ToDateTime(reader["order_date"].ToString());
+                DateTime shippedDate = Convert.ToDateTime(reader["shipped_date"].ToString());
                 int customerId = int.Parse(reader["cust_Id"].ToString());
                 double total = double.Parse(reader["total"].ToString());
                 string? status = reader["status"].ToString();
@@ -87,8 +87,8 @@ public class OrderRepository : IOrderRepository
                 order = new Order()
                 {
                     OrderId = id,
-                    OrderDate = orderDate.ToShortDateString(),
-                    ShippedDate = shippedDate.ToShortDateString(),
+                    OrderDate = orderDate,
+                    ShippedDate = shippedDate,
                     CustomerId = customerId,
                     Total = total,
                     Status = status
@@ -174,8 +174,8 @@ public class OrderRepository : IOrderRepository
             if (await reader.ReadAsync())
             {
                 int orderId = int.Parse(reader["order_id"].ToString());
-                DateTime orderDate = DateTime.Parse(reader["order_date"].ToString());
-                DateTime shippedDate = DateTime.Parse(reader["shipped_date"].ToString());
+                DateTime orderDate = Convert.ToDateTime(reader["order_date"].ToString());
+                DateTime shippedDate = Convert.ToDateTime(reader["shipped_date"].ToString());
                 double total = double.Parse(reader["total"].ToString());
                 string? status = reader["status"].ToString();
 
@@ -183,8 +183,8 @@ public class OrderRepository : IOrderRepository
                 {
                     OrderId = orderId,
                     CustomerId = id,
-                    OrderDate = orderDate.ToLongDateString(),
-                    ShippedDate = shippedDate.ToLongDateString(),
+                    OrderDate = orderDate,
+                    ShippedDate = shippedDate,
                     Total = total,
                     Status = status
                 };
@@ -298,8 +298,8 @@ public class OrderRepository : IOrderRepository
             while (await reader.ReadAsync())
             {
                 int id = int.Parse(reader["order_id"].ToString());
-                DateTime orderDate = DateTime.Parse(reader["order_date"].ToString());
-                DateTime shippedDate = DateTime.Parse(reader["shipped_date"].ToString());
+                DateTime orderDate = Convert.ToDateTime(reader["order_date"].ToString());
+                DateTime shippedDate = Convert.ToDateTime(reader["shipped_date"].ToString());
                 int customerId = int.Parse(reader["cust_id"].ToString());
                 double total = double.Parse(reader["total"].ToString());
                 string? status = reader["status"].ToString();
@@ -307,8 +307,8 @@ public class OrderRepository : IOrderRepository
                 Order order = new Order()
                 {
                     OrderId = id,
-                    OrderDate = orderDate.ToLongDateString(),
-                    ShippedDate = shippedDate.ToLongDateString(),
+                    OrderDate = orderDate,
+                    ShippedDate = shippedDate,
                     CustomerId = customerId,
                     Total = total,
                     Status = status
@@ -345,8 +345,8 @@ public class OrderRepository : IOrderRepository
             while (await reader.ReadAsync())
             {
                 int id = int.Parse(reader["order_id"].ToString());
-                DateTime orderDate = DateTime.Parse(reader["order_date"].ToString());
-                DateTime shippedDate = DateTime.Parse(reader["shipped_date"].ToString());
+                DateTime orderDate = Convert.ToDateTime(reader["order_date"].ToString());
+                DateTime shippedDate = Convert.ToDateTime(reader["shipped_date"].ToString());
                 int customerId = int.Parse(reader["cust_id"].ToString());
                 double total = double.Parse(reader["total"].ToString());
                 string? status = reader["status"].ToString();
@@ -354,8 +354,8 @@ public class OrderRepository : IOrderRepository
                 Order order = new Order()
                 {
                     OrderId = id,
-                    OrderDate = orderDate.ToLongDateString(),
-                    ShippedDate = shippedDate.ToLongDateString(),
+                    OrderDate = orderDate,
+                    ShippedDate = shippedDate,
                     CustomerId = customerId,
                     Total = total,
                     Status = status
