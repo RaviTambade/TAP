@@ -8,8 +8,6 @@ namespace CatalogService.Controllers
     [Route("/api/[controller]")]
     public class ProductsController : ControllerBase
     {
-
-        
         private readonly IProductService _productsrv;
         private readonly ILogger<ProductsController> _logger;
         public ProductsController(IProductService productsrv,ILogger<ProductsController> logger)
@@ -76,10 +74,17 @@ namespace CatalogService.Controllers
         [Route("hikeprice/{id}")]
         public async Task<bool> HikePrice(double id)
         {
+<<<<<<< HEAD
             bool status= await _productsrv.HikePrice(id);
             _logger.LogInformation("Hike price of products method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
             return status;
 
+=======
+            return await _productsrv.HikePrice(id);
+            bool status= await _productsrv.HikePrice(id);
+            _logger.LogInformation("Hike price of products method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
+            return status;
+>>>>>>> b3b00cbceffbabcdb619c0001153550a2024f8fe
         }
     }
 }
