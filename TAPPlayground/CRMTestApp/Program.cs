@@ -144,7 +144,7 @@ public class program
         using (var httpClient = new HttpClient())
         {
             using (var response = await httpClient.DeleteAsync("http://localhost:4002/api/customers/delete/" + custId))
-             {
+            {
                 response.EnsureSuccessStatusCode();
                 var content = await response.Content.ReadAsStringAsync();
             }

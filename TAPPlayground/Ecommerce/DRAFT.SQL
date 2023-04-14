@@ -1,5 +1,5 @@
 
--- Active: 1678016377342@@127.0.0.1@3306@Ecommerce
+--Active: 1678016377342@@127.0.0.1@3306@Ecommerce
 -- CREATE DATABASE Ecommerce;
 USE Ecommerce;
 
@@ -172,7 +172,7 @@ INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(1, 2,
 INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(2, 3, 78,3);
 INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(3, 4, 78,4);
 INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(3, 1, 78,4);
-INSERT INTO orderdetails(order_id,product_id,quantity,supplier_id) VALUES (7,2,2000,1);
+INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id) VALUES (7,2,2000,1);
 INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(12, 1, 70,2);
 INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(8, 2, 700,3);
 INSERT INTO orderdetails(order_id, product_id, quantity,supplier_id)VALUES(2, 3, 88,4);

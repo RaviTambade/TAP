@@ -9,9 +9,9 @@ class Program
     {
         //await FetchOrdersFromRESTAPI();
         //await FetchOrderDetails();
-        await InsertOrder();
+        //await InsertOrder();
         await UpdateOrder();
-       
+        //await DeleteOrder();
     }
      public static async Task FetchOrdersFromRESTAPI()
     {
@@ -87,29 +87,60 @@ class Program
             }
         }
     }
-    // private static async Task UpdateOrder()
-    // {
-    //     Console.WriteLine("Enter your OrderId for updating");
-    //     int OrderId = int.Parse(Console.ReadLine());
-    //     Order order = new Order();
+    private static async Task UpdateOrder()
+    {
+        Console.WriteLine("Enter your OrderId for updating");
+        int orderId = Convert.ToInt32(Console.ReadLine());
+        Order order = new Order();
+        using(var httpClient = new HttpClient())
+        {
+            using(var response = await httpClient.GetAsync("http://localhost:5158/getorder/" +orderId))
+            {
+                string apiResponse= await response.Content.ReadAsStringAsync();
+                order = JsonConvert.DeserializeObject<Order>(apiResponse);
+            }
+        }
 
-    //     Console.WriteLine("enter new orderdate:");
-    //     DateTime orderDate = Convert.ToDateTime(Console.ReadLine());
+        Console.WriteLine("enter new orderdate:");
+        order.OrderDate = Convert.ToDateTime(Console.ReadLine());
 
-    //     Console.WriteLine("enter new shippeddate:");
-    //     DateTime shippedDate = Convert.ToDateTime(Console.ReadLine());
+        Console.WriteLine("enter new shippeddate:");
+        order.ShippedDate = Convert.ToDateTime(Console.ReadLine());
 
-    //     Console.WriteLine("enter new customerId:");
-    //     int customerId = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("enter new customerId:");
+        order.CustomerId = Convert.ToInt32(Console.ReadLine());
 
-    //     Console.WriteLine("enter new customerId:");
-    //     double total = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("enter new total:");
+        order.Total = Convert.ToInt32(Console.ReadLine());
 
-    //     Console.WriteLine("enter new order status:");
-    //     string status = Console.ReadLine();
+        Console.WriteLine("enter new order status:");
+        order.Status = Console.ReadLine();
         
-
-
-    // }
+        string jsonOrder = System.Text.Json.JsonSerializer.Serialize(order);
+        var requestContent = new StringContent(jsonOrder,Encoding.UTF8,"application/json" );
+        using(var httpClient = new HttpClient())
+        {
+            string apiUrl = "http://localhost:5158/update/"+order.OrderId;
+            using(var response = await httpClient.PutAsync(apiUrl, requestContent))
+            {
+                response.EnsureSuccessStatusCode();
+                var content = await response.Content.ReadAsStringAsync();
+            }
+            
+        }
+    }
+    private static async Task DeleteOrder()
+    {
+        Console.WriteLine("Enter the Order Id:");
+        int orderId = int.Parse(Console.ReadLine());
+        using(var httpClient = new HttpClient())
+        {
+            using(var response = await httpClient.DeleteAsync("http://localhost:5158/delete/" + orderId))
+            {
+                response.EnsureSuccessStatusCode();
+                var content = await response.Content.ReadAsStringAsync();
+            }
+        }
+    }
 }
 
