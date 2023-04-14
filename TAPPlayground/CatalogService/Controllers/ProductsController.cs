@@ -8,6 +8,8 @@ namespace CatalogService.Controllers
     [Route("/api/[controller]")]
     public class ProductsController : ControllerBase
     {
+
+        
         private readonly IProductService _productsrv;
         public ProductsController(IProductService productsrv)
         {
@@ -19,6 +21,7 @@ namespace CatalogService.Controllers
         public async Task<IEnumerable<Product>> GetAllProducts()
         {
             IEnumerable<Product> products =await _productsrv.GetAll();
+            
             return products;
         }
 
@@ -27,6 +30,7 @@ namespace CatalogService.Controllers
         public async Task<Product> GetById(int id)
         {
             Product product = await _productsrv.GetById(id);
+            
             return product;
         }
 
@@ -42,6 +46,7 @@ namespace CatalogService.Controllers
             }
             product.ProductId = id;
             bool status = await _productsrv.Update(product);
+           
             return status;
         }
 
@@ -51,6 +56,7 @@ namespace CatalogService.Controllers
         public async Task<bool> Insert([FromBody] Product product)
         {
             bool status =await  _productsrv.Insert(product);
+             
             return status;
         }
 
@@ -60,6 +66,7 @@ namespace CatalogService.Controllers
         public async Task<bool> Delete(int id)
         {
             bool status =await _productsrv.Delete(id);
+          
             return status;
         }
 
@@ -68,6 +75,7 @@ namespace CatalogService.Controllers
         public async Task<bool> HikePrice(double id)
         {
             return await _productsrv.HikePrice(id);
+           
         }
     }
 }
