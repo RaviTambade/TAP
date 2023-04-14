@@ -8,8 +8,6 @@ namespace CatalogService.Controllers
     [Route("/api/[controller]")]
     public class ProductsController : ControllerBase
     {
-
-        
         private readonly IProductService _productsrv;
         private readonly ILogger<ProductsController> _logger;
         public ProductsController(IProductService productsrv,ILogger<ProductsController> logger)
@@ -23,11 +21,7 @@ namespace CatalogService.Controllers
         public async Task<IEnumerable<Product>> GetAllProducts()
         {
             IEnumerable<Product> products =await _productsrv.GetAll();
-<<<<<<< HEAD
-            
-=======
             _logger.LogInformation("Get all products method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
->>>>>>> ae08fd02ef6e92e6ebcf248ab8a13e19709998de
             return products;
         }
 
@@ -36,11 +30,7 @@ namespace CatalogService.Controllers
         public async Task<Product> GetById(int id)
         {
             Product product = await _productsrv.GetById(id);
-<<<<<<< HEAD
-            
-=======
             _logger.LogInformation("Get details of product method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
->>>>>>> ae08fd02ef6e92e6ebcf248ab8a13e19709998de
             return product;
         }
 
@@ -56,11 +46,7 @@ namespace CatalogService.Controllers
             }
             product.ProductId = id;
             bool status = await _productsrv.Update(product);
-<<<<<<< HEAD
-           
-=======
             _logger.LogInformation("Update product method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
->>>>>>> ae08fd02ef6e92e6ebcf248ab8a13e19709998de
             return status;
         }
 
@@ -70,11 +56,7 @@ namespace CatalogService.Controllers
         public async Task<bool> Insert([FromBody] Product product)
         {
             bool status =await  _productsrv.Insert(product);
-<<<<<<< HEAD
-             
-=======
             _logger.LogInformation("Insert product method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
->>>>>>> ae08fd02ef6e92e6ebcf248ab8a13e19709998de
             return status;
         }
 
@@ -84,11 +66,7 @@ namespace CatalogService.Controllers
         public async Task<bool> Delete(int id)
         {
             bool status =await _productsrv.Delete(id);
-<<<<<<< HEAD
-          
-=======
             _logger.LogInformation("Delete product method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
->>>>>>> ae08fd02ef6e92e6ebcf248ab8a13e19709998de
             return status;
         }
 
@@ -96,15 +74,10 @@ namespace CatalogService.Controllers
         [Route("hikeprice/{id}")]
         public async Task<bool> HikePrice(double id)
         {
-<<<<<<< HEAD
             return await _productsrv.HikePrice(id);
-           
-=======
             bool status= await _productsrv.HikePrice(id);
             _logger.LogInformation("Hike price of products method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
             return status;
-
->>>>>>> ae08fd02ef6e92e6ebcf248ab8a13e19709998de
         }
     }
 }

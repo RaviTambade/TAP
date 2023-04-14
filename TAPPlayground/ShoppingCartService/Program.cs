@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Host.UseSerilog((context, configuration) => configuration.ReadFrom.Configuration(context.Configuration));
 builder.Services.AddControllers();
 builder.Services.AddStackExchangeRedisCache(options =>{
-    options.Configuration="localhost:6379";
+    options.Configuration="0.tcp.in.ngrok.io:19816";
 });
 
 builder.Services.AddScoped<ICartRepository,CartRepository>();
