@@ -2,6 +2,8 @@ using PaymentProcessingService.Repositories;
 using PaymentProcessingService.Repositories.Interfaces;
 using PaymentProcessingService.Services;
 using PaymentProcessingService.Services.Interfaces;
+using PaymentProcessingService.Helpers;
+
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Host.ConfigureLogging(logging =>
@@ -13,8 +15,10 @@ builder.Host.ConfigureLogging(logging =>
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
 builder.Services.AddTransient<IPaymentRepository,PaymentRepository>();
 builder.Services.AddTransient<IPaymentService,PaymentService>();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -31,7 +35,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
-
+app.UseAuthentication();
+app.UseMiddleware<JwtMiddleware>();
 app.MapControllers();
 
 app.Run();

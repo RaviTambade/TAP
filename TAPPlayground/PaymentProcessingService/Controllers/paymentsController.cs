@@ -4,6 +4,7 @@ using PaymentProcessingService.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using Microsoft.Extensions.Logging;
+using PaymentProcessingService.Helpers;
 
 namespace PaymentProcessingService.Controllers;
 
@@ -21,6 +22,9 @@ public class PaymentsController : Controller
         _paymentsrv = paymentsrv;
     }
 
+
+
+    [Authorize(Roles=Role.Admin)]
     [HttpGet]
     [Route("/api/payments/getallpayments")]
     public async Task<IEnumerable<Payment>> GetAll()
