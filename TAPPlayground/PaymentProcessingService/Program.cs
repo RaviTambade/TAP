@@ -3,7 +3,7 @@ using PaymentProcessingService.Repositories.Interfaces;
 using PaymentProcessingService.Services;
 using PaymentProcessingService.Services.Interfaces;
 using PaymentProcessingService.Helpers;
-
+using Microsoft.Extensions.Caching.Memory;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Host.ConfigureLogging(logging =>
@@ -22,7 +22,7 @@ builder.Services.AddTransient<IPaymentService,PaymentService>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+builder. Services.AddMemoryCache();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
