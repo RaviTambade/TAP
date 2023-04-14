@@ -24,7 +24,7 @@ public class PaymentsController : Controller
 
 
 
-    [Authorize(Roles=Role.Admin)]
+    //[Authorize(Roles=Role.Admin)]
     [HttpGet]
     [Route("/api/payments/getallpayments")]
     public async Task<IEnumerable<Payment>> GetAll()
