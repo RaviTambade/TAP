@@ -1,7 +1,8 @@
 
--- Active: 1677916902963@@127.0.0.1@3306@ecommerce
+-- Active: 1680703777390@@127.0.0.1@3306@ecommerce
 --CREATE DATABASE Ecommerce;
--- Active: 1678361403571@@127.0.0.1@3306@ecommerce
+
+
 CREATE DATABASE Ecommerce;
 
 USE Ecommerce;
@@ -345,7 +346,7 @@ DELIMITER ;
 -- CALL CreateOrder();
 
 
-select * from orders;
+select * from users;
 select * from accounts;
 select * from cart_items where cart_id=1;
 
