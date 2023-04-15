@@ -4,6 +4,8 @@ using PaymentProcessingService.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using Microsoft.Extensions.Logging;
+using PaymentProcessingService.Helpers;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace PaymentProcessingService.Controllers;
 
@@ -11,23 +13,40 @@ namespace PaymentProcessingService.Controllers;
 [Route("/api/[controller]")]
 public class PaymentsController : Controller
 {
+     private readonly IMemoryCache _memoryCache;
      private readonly ILogger<PaymentsController> _logger;
     private readonly IPaymentService _paymentsrv;
+    private object memoryCache;
 
-    
-    public PaymentsController(ILogger<PaymentsController> logger,IPaymentService paymentsrv)
+    public PaymentsController(IMemoryCache memoryCache,ILogger<PaymentsController> logger,IPaymentService paymentsrv)
     {
+        _memoryCache = memoryCache;
         _logger = logger;
         _paymentsrv = paymentsrv;
     }
 
+
+
+    //[Authorize(Roles=Role.Admin)]
     [HttpGet]
     [Route("/api/payments/getallpayments")]
     public async Task<IEnumerable<Payment>> GetAll()
     {
-       IEnumerable<Payment> payment=await _paymentsrv.GetAllPayments();
+    var cacheKey = "paymentList";
+    if(!_memoryCache.TryGetValue(cacheKey, out IEnumerable<Payment> paymentList))
+         {
+         paymentList=await _paymentsrv.GetAllPayments();
+       var cacheExpiryOptions = new MemoryCacheEntryOptions
+            {
+                AbsoluteExpiration = DateTime.Now.AddSeconds(50),
+                Priority = CacheItemPriority.High,
+                SlidingExpiration = TimeSpan.FromSeconds(20)
+            };
+            _memoryCache.Set(cacheKey, paymentList, cacheExpiryOptions);
         _logger.LogInformation("Get All method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
-        return payment;
+
+         }
+        return paymentList;
     }
       
      

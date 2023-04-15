@@ -1,9 +1,5 @@
 ﻿using PaymentProcessing;
-using System;
-using System.Threading.Tasks;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Collections.Generic;
+using System.Text;
 using Newtonsoft.Json;
 
 
@@ -18,7 +14,7 @@ namespace ConsoleUsersClientApp
         static async  Task Main(string[] args)
         {
 
-           await FetchPaymentsFromRESTAPI();
+           await DeletePayment();
            Console.WriteLine("All Payment Details");
         }
 
@@ -26,7 +22,7 @@ namespace ConsoleUsersClientApp
         public static async  Task  FetchPaymentsFromRESTAPI(){
         
         //consume REST API 
-        List<Payment> reservationList = new List<Payment>();
+        IEnumerable<Payment> reservationList = new List<Payment>();
         //access data from rest api using asynchronous
         using (var httpClient = new HttpClient())
         {
@@ -34,45 +30,45 @@ namespace ConsoleUsersClientApp
                 {
                     string apiResponse = await response.Content.ReadAsStringAsync();
                    
-                    reservationList = JsonConvert.DeserializeObject<List<Payment>>(apiResponse);
+                    reservationList = JsonConvert.DeserializeObject<IEnumerable<Payment>>(apiResponse);
 
-                  foreach (var repo in reservationList)
+                  foreach (var repo in reservationList){
                         Console.WriteLine(repo.PaymentId + " ," + repo.PaymentDate +" ,"+repo.PaymentMode+" ,"+repo.TransactionId+" ,"+repo.OrderId );
-
+                  }
                 }
         }
         }
 
 
 
-        public async Task InsertPayment(){
+        public  static async Task InsertPayment(){
 
             Console.WriteLine("Insert new Payment=>");
             Console.WriteLine("Insert payment date=>");
-            string PaymentDate= Console.ReadLine();
+            DateTime paymentDate=DateTime.Parse(Console.ReadLine());
 
 
             Console.WriteLine("Insert paymentMode=>");
-            string PaymentMode= Console.ReadLine();
+            string paymentMode= Console.ReadLine();
 
             Console.WriteLine("Insert transactionId=>");
-            int TransactionId= int.Parse(Console.ReadLine());
+            int transactionId= int.Parse(Console.ReadLine());
 
             Console.WriteLine("Insert OrderId=>");
-            int OrderId= int.Parse(Console.ReadLine());
+            int orderId= int.Parse(Console.ReadLine());
 
 
 
             Payment payment = new Payment(){
 
-                 PaymentDate=PaymentDate,
-                 PaymentMode=PaymentMode,
-                 TransactionId=TransactionId,
-                 OrderId=OrderId
+                 PaymentDate=paymentDate,
+                 PaymentMode=paymentMode,
+                 TransactionId=transactionId,
+                 OrderId=orderId
                  };
 
-             string jsonPayment=System.Text.JsonSerializer.Serilize(payment);
-             var requestContent=new StringContent(jsonPayment,encoding.UTF8,"application/json");
+             string jsonPayment=System.Text.Json.JsonSerializer.Serialize(payment);
+             var requestContent=new StringContent(jsonPayment,Encoding.UTF8,"application/json");
              using(var httpClient=new HttpClient())
              {
                 string apiUrl="http://localhost:5054/api/payments/addpayment";
@@ -89,42 +85,42 @@ namespace ConsoleUsersClientApp
 
 
 
-        public async Task UpdatePayment(){
+        public static async Task UpdatePayment(){
 
          Console.WriteLine("Update payment by Id=>");
-         int PaymentId= int.Parse(Console.ReadLine());
+         int paymentId= int.Parse(Console.ReadLine());
 
-         
+         Payment payment =new Payment();
 
          using (var httpClient = new HttpClient())
         {
-            using (var response = await httpClient.GetAsync("http://localhost:5054/api/payments/getpaymentbyid"))
+            using (var response = await httpClient.GetAsync("http://localhost:5054/api/payments/getpaymentdetails/"+paymentId))
                 {
                     string apiResponse = await response.Content.ReadAsStringAsync();
                    
-                    payment = JsonConvert.DeserializeObject<List<Payment>>(apiResponse);
+                    payment = JsonConvert.DeserializeObject<Payment>(apiResponse);
                 }
                }
 
             Console.WriteLine("Insert payment date=>");
-            string PaymentDate= Console.ReadLine();
+             payment.PaymentDate=DateTime.Parse(Console.ReadLine());
 
 
             Console.WriteLine("Insert paymentMode=>");
-            string PaymentMode= Console.ReadLine();
+             payment.PaymentMode= Console.ReadLine();
 
             Console.WriteLine("Insert transactionId=>");
-            int TransactionId= int.Parse(Console.ReadLine());
+            payment.TransactionId= int.Parse(Console.ReadLine());
 
             Console.WriteLine("Insert OrderId=>");
-            int OrderId= int.Parse(Console.ReadLine());
+            payment.OrderId= int.Parse(Console.ReadLine());
             
 
-            string jsonPayment=System.Text.JsonSerializer.Serilize(payment);
-             var requestContent=new StringContent(jsonPayment,encoding.UTF8,"application/json");
+            string jsonPayment=System.Text.Json.JsonSerializer.Serialize(payment);
+             var requestContent=new StringContent(jsonPayment,Encoding.UTF8,"application/json");
              using(var httpClient=new HttpClient())
              {
-                string apiUrl="http://localhost:5054/api/payments/update";
+                string apiUrl="http://localhost:5054/api/payments/update/"+payment.PaymentId;
                 using( var response= await httpClient.PutAsync(apiUrl,requestContent))
                 {
                     response.EnsureSuccessStatusCode();
@@ -132,7 +128,7 @@ namespace ConsoleUsersClientApp
                 }
              }
 
-           Console.WriteLine("Payment updated succesfully")
+           Console.WriteLine("Payment updated succesfully");
 
 
         }
@@ -141,12 +137,12 @@ namespace ConsoleUsersClientApp
 
         private static async Task DeletePayment(){
              Console.WriteLine(" Delete payment by Id=>");
-             int PaymentId= int.Parse(Console.ReadLine());
+             int paymentId= int.Parse(Console.ReadLine());
 
              using(var httpClient=new HttpClient())
              {
-                string apiUrl="http://localhost:5054/api/payments/delete";
-                using( var response= await httpClient.DeleteAsync(apiUrl,requestContent))
+                string apiUrl="http://localhost:5054/api/payments/delete/"+paymentId;
+                using( var response= await httpClient.DeleteAsync(apiUrl))
                 {
                     response.EnsureSuccessStatusCode();
                     var Content= await response.Content.ReadAsStringAsync();
