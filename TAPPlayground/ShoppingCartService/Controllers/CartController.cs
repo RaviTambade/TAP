@@ -12,12 +12,12 @@ namespace ShoppingCartService.Controllers
     [Route("/api/[controller]")]
     public class CartController : ControllerBase
     {
-        private readonly ICartService _cartSrv;
+        //private readonly ICartService _cartSrv;
         private readonly IDistributedCache _distributedCache;
         private readonly ILogger<CartController> _logger;
-        public CartController(ICartService cartService, ILogger<CartController> logger, IDistributedCache distributedCache)
+        public CartController(ILogger<CartController> logger, IDistributedCache distributedCache)
         {
-            _cartSrv = cartService;
+           // _cartSrv = cartService;
             _logger = logger;
             _distributedCache = distributedCache;
         }
@@ -173,7 +173,6 @@ namespace ShoppingCartService.Controllers
            _logger.LogInformation($" data fetch from cache");
             cart.Items.Clear();
             //Invoice dataservice method to clear all items from shopping cart whose id is macthing
-
             status=true;
             return status;
         }
@@ -191,8 +190,7 @@ namespace ShoppingCartService.Controllers
             //clear shopping cart Items
             //Clear Cache for shopping cart which has been maintained
 
-
-             bool status=false;
+            bool status=false;
             string cacheKey = $"Cart{id}";
             Cart cart = await _distributedCache.GetDataAsync<Cart>(cacheKey);           
             if (cart == null)

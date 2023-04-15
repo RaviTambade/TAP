@@ -3,9 +3,6 @@ using CRMService.Repositories.Interfaces;
 using CRMService.Services;
 using CRMService.Services.Interfaces;
 
-
-
-
 var builder = WebApplication.CreateBuilder(args);
 builder.Host.ConfigureLogging(logging =>
 {
