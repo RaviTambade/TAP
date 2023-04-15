@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.configuration.SetBasePath(hostingContext.HostingEnvironment.ContentRootPath);
+builder.Configuration.SetBasePath(hostingContext.hostingEnvironment.ContentRootPath);
 builder.Configuration.AddJsonFile("configuration.json", optional:false, reloadOnChange: true);
 builder.Services.AddOcelot(builder.Configuration);
 var app = builder.Build();

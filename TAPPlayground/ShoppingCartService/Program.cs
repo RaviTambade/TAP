@@ -2,12 +2,16 @@ using ShoppingCartService.Repositories;
 using ShoppingCartService.Repositories.Interfaces;
 using ShoppingCartService.Services;
 using ShoppingCartService.Services.Interfaces;
+using Serilog;
+
+
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-
+builder.Host.UseSerilog((context, configuration) => configuration.ReadFrom.Configuration(context.Configuration));
 builder.Services.AddControllers();
+builder.Services.AddStackExchangeRedisCache(options =>{
+    options.Configuration="0.tcp.in.ngrok.io:19816";
+});
 
 builder.Services.AddScoped<ICartRepository,CartRepository>();
 builder.Services.AddScoped<ICartService,CartService>();
@@ -25,7 +29,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseSerilogRequestLogging();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

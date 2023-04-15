@@ -8,7 +8,11 @@ builder.Host.ConfigureLogging(logging =>
     logging.ClearProviders();
     logging.AddConsole();
 });
+builder.Services.AddMemoryCache();           //This adds the in-memory cache service to the dependency injection container.
 // Add services to the container.
+builder.Services.AddStackExchangeRedisCache(options =>{
+    options.Configuration="localhost:6379";
+});
 builder.Services.AddControllers();
 builder.Services.AddScoped<IProductRepository,ProductRepository>();
 builder.Services.AddScoped<IProductService,ProductService>();
@@ -25,6 +29,7 @@ if (app.Environment.IsDevelopment())
 {
 }
 app.UseHttpsRedirection();
+app.UseResponseCaching();       //Added caching middleware pipeline and configures it to cache responses
 app.UseAuthorization();
 app.MapControllers();
 app.Run();
