@@ -103,7 +103,7 @@ namespace ShoppingCartService.Controllers
              3.if Cache consist of cart then  update existing item with new quantity
             */
 
-            bool status=false;
+            
             string cacheKey = $"Cart{id}";
             Cart cart = await _distributedCache.GetDataAsync<Cart>(cacheKey);      
             if (cart == null)
@@ -113,13 +113,13 @@ namespace ShoppingCartService.Controllers
                 //update data into cached cart
                   cart.Items = cart.Items.Where(x => x.ProductId != item.ProductId).ToList();
                   cart.Items.Add(item);
-                  status=true;
+                  
             }
             else{
                 //Get all items excluding item whose ProductId matches with item  ID
                   cart.Items = cart.Items.Where(x => x.ProductId != item.ProductId).ToList();
                   cart.Items.Add(item);
-                  status=true;
+                
             }
 
             bool status = await _cartSrv.UpdateItem(cart.CartId, item);
