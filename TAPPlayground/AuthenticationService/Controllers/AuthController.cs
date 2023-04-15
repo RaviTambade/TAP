@@ -16,10 +16,10 @@ namespace AuthenticationService.Controllers
 
         }
 
-        [HttpPost("login")] 
-        public IActionResult Authenticate([FromBody] AuthenticateRequest request)
+        [HttpPost("authenticate")] 
+        public async Task<IActionResult> Authenticate([FromBody] AuthenticateRequest request)
         {
-            var user = _svc.Authenticate(request);
+            var user =await _svc.Authenticate(request);
 
             if (user == null)
                 return BadRequest(new { message = "Username or password is incorrect" });
@@ -27,13 +27,13 @@ namespace AuthenticationService.Controllers
             return Ok(user);
         }
 
-        // This method is not reuired 
+        
 
-        [HttpGet("/getall")]  
-        public IEnumerable<User> GetAll()
+        [HttpGet("getall")]  
+        public async Task<IEnumerable<User>> GetAll()
         {
             var users = _svc.GetAll();
-            return users;
+            return await users;
         }
     }
 }

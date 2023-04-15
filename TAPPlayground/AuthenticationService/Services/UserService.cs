@@ -11,13 +11,13 @@ namespace AuthenticationService.Services
         {
             _userrepo = userrepo;
         }
-        public AuthenticateResponse Authenticate(AuthenticateRequest request)
+        public async Task<AuthenticateResponse> Authenticate(AuthenticateRequest request)
         {
-            return _userrepo.Authenticate(request);
+            return await _userrepo.Authenticate(request);
         }
-        public List<User> GetAll()
+        public async Task<List<User>> GetAll()
         {
-            return _userrepo.GetAll();
+            return await _userrepo.GetAll();
         }
     }
 }

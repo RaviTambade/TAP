@@ -1,9 +1,9 @@
 
+using BankingService.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using OrderProcessingService.Models;
 
-namespace OrderProcessingService.Helpers
+namespace BankingService.Helpers
 {
 
 
@@ -16,17 +16,21 @@ namespace OrderProcessingService.Helpers
         public string Roles { get; set; }
         public void OnAuthorization(AuthorizationFilterContext context)
         {
-            List<string> userRoles = (List<string>)context.HttpContext.Items["userRoles"];
+            var userRoles = (List<string>)context.HttpContext.Items["userRoles"];
             bool status = false;
-
-            if (this.Roles != null && userRoles != null)
+            if (this.Roles != null)
             {
-                List<string> requiredRoles = this.Roles.Split(',').ToList();
-                bool result = requiredRoles.Intersect(userRoles).Count() >= 1;
-                if (result)
+                var requiredRoles = this.Roles.Split(',').ToList();
+
+                foreach (var role in requiredRoles)
                 {
-                    status = true;
+                    if (userRoles.Contains(role))
+                    {
+                        status = true;
+                        break;
+                    }
                 }
+
             }
 
             if (status == false)
@@ -37,6 +41,10 @@ namespace OrderProcessingService.Helpers
                 };
 
             }
+
+
         }
     }
+
+
 }

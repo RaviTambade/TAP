@@ -172,7 +172,7 @@ public class PaymentRepository : IPaymentRepository
           con.ConnectionString=_conString;
           try{
             
-            string query = "UPDATE payments set payment_date= @paymentDate,transection_id=@transactionId,order_id=@orderId where payment_id=@paymentId";
+            string query = "UPDATE payments set payment_date= @paymentDate,payment_mode=@paymentMode,transection_id=@transactionId,order_id=@orderId where payment_id=@paymentId";
             MySqlCommand cmd=new MySqlCommand(query,con) ;
             cmd.Parameters.AddWithValue("@paymentDate",payment.PaymentDate);
             cmd.Parameters.AddWithValue("@paymentMode",payment.PaymentMode);

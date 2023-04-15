@@ -1,9 +1,9 @@
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using OrderProcessingService.Models;
+using PaymentProcessingService.Models;
 
-namespace OrderProcessingService.Helpers
+namespace PaymentProcessingService.Helpers
 {
 
 
