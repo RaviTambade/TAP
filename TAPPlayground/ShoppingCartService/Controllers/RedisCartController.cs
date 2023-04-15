@@ -21,8 +21,6 @@ namespace ShoppingCartService.Controllers
             _logger = logger;
             _distributedCache = distributedCache;
         }
-
-      
         [HttpGet]
         [Route("getallcartitems")]
         public async Task<List<Cart>> GetAllCarts()
@@ -33,17 +31,19 @@ namespace ShoppingCartService.Controllers
             {
                 _logger.LogInformation($" data fetch from cache");
             }
-
             if (carts == null)
-            {
-               
+            {    
                 _logger.LogInformation($"data fetching  from database");
-                await _distributedCache.SetDataAsync(cacheKey, carts, TimeSpan.FromMinutes(1), TimeSpan.FromHours(1));
-
+                carts= await _cartSrv.GetAllCarts();
+                await _distributedCache.SetDataAsync(cacheKey, carts, TimeSpan.FromMinutes(10), TimeSpan.FromHours(1));
             }
             return carts;
         }
-
+        // [Route("setallcartitems")]
+        // public async Task  SetAllCarts( List<Cart> carts){
+        //      string cacheKey = "AllCarts";
+        //     await _distributedCache.SetDataAsync(cacheKey, carts, TimeSpan.FromMinutes(10), TimeSpan.FromHours(1));
+        // }
 
         [HttpGet]
         [Route("getcartdetails/{id}")]
@@ -51,7 +51,7 @@ namespace ShoppingCartService.Controllers
         { 
             string cacheKey = "AllCarts";
             List<Cart> carts = await _distributedCache.GetDataAsync<List<Cart>>(cacheKey);
-            Cart  cart  = (Cart) carts.Where(x => x.CartId == id);
+            Cart  cart  =  carts.Where(x => x.CartId == id).FirstOrDefault();
             return cart;
         }
 
@@ -61,11 +61,11 @@ namespace ShoppingCartService.Controllers
         {  
             string cacheKey = "AllCarts";
             List<Cart> carts = await _distributedCache.GetDataAsync<List<Cart>>(cacheKey);
-            Cart  cart  = (Cart) carts.Where(x => x.CartId == id);
+            Cart  cart  =  carts.Where(x => x.CartId == id).FirstOrDefault();
             cart.Items.Add(item);
             List<Cart> remainingCarts=carts.Where(x => x.CartId != id).ToList();
             remainingCarts.Add(cart);
-            await _distributedCache.SetDataAsync(cacheKey, carts, TimeSpan.FromMinutes(1), TimeSpan.FromHours(1));   
+            await _distributedCache.SetDataAsync(cacheKey, carts, TimeSpan.FromMinutes(10), TimeSpan.FromHours(1));   
             Boolean status=true;  
             return status;
         }
@@ -76,7 +76,7 @@ namespace ShoppingCartService.Controllers
         {
             string cacheKey = "AllCarts";
             List<Cart> carts = await _distributedCache.GetDataAsync<List<Cart>>(cacheKey);
-            Cart  cart  = (Cart) carts.Where(x => x.CartId == id);
+            Cart  cart  =  carts.Where(x => x.CartId == id).FirstOrDefault();
             cart.Items = cart.Items.Where(x => x.ProductId != item.ProductId).ToList();
             cart.Items.Add(item);
             List<Cart> remainingCarts=carts.Where(x => x.CartId != id).ToList();
@@ -92,33 +92,30 @@ namespace ShoppingCartService.Controllers
         {
             string cacheKey = "AllCarts";
             List<Cart> carts = await _distributedCache.GetDataAsync<List<Cart>>(cacheKey);   
-            Cart foundCart=(Cart )carts.Where(x => x.CartId == id);
+            Cart foundCart=carts.Where(x => x.CartId == id).FirstOrDefault();
             List<Item> remainingItems=foundCart.Items.Where(x => x.ProductId != item.ProductId).ToList();
-            foundCart.Items=remainingItems as List<Item>;
-            List<Cart> remainingCarts =(List<Cart>) carts.Where(x => x.CartId != id);
+            foundCart.Items=remainingItems ;
+            List<Cart> remainingCarts = carts.Where(x => x.CartId != id).ToList();
             remainingCarts.Add(foundCart);
             await _distributedCache.SetDataAsync(cacheKey, remainingCarts, TimeSpan.FromMinutes(1), TimeSpan.FromHours(1));   
             Boolean status=true;  
             return status;
         }
 
-
-
-        [HttpGet]
+        [HttpDelete]
         [Route("emptycart/{id}")]
         public async Task<bool> EmptyCart(int id)
         {
             string cacheKey = "AllCarts";
             List<Cart> carts = await _distributedCache.GetDataAsync<List<Cart>>(cacheKey);   
-            Cart foundCart=(Cart )carts.Where(x => x.CartId == id);
+            Cart foundCart=carts.Where(x => x.CartId == id).FirstOrDefault();
             foundCart.Items.Clear(); 
-            List<Cart> remainingCarts =(List<Cart>) carts.Where(x => x.CartId != id);
+            List<Cart> remainingCarts = carts.Where(x => x.CartId != id).ToList();
             remainingCarts.Add(foundCart);
             await _distributedCache.SetDataAsync(cacheKey, remainingCarts, TimeSpan.FromMinutes(1), TimeSpan.FromHours(1));   
             Boolean status=true;  
             return status;
         }
-
 
         [HttpPost]
         [Route("createorder/{id}")]
@@ -126,9 +123,10 @@ namespace ShoppingCartService.Controllers
         {
             string cacheKey = "AllCarts";
             List<Cart> carts = await _distributedCache.GetDataAsync<List<Cart>>(cacheKey);   
-            Cart foundCart=(Cart )carts.Where(x => x.CartId == id);
+            Cart foundCart=carts.Where(x => x.CartId == id).FirstOrDefault();
             bool  status = await _cartSrv.CreateOrder(foundCart.CartId);
-            List<Cart> remainingCarts =(List<Cart>) carts.Where(x => x.CartId != id);
+            foundCart.Items.Clear(); 
+            List<Cart> remainingCarts = carts.Where(x => x.CartId != id).ToList();
             remainingCarts.Add(foundCart);
             await _distributedCache.SetDataAsync(cacheKey, remainingCarts, TimeSpan.FromMinutes(1), TimeSpan.FromHours(1));   
             return status;

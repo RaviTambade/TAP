@@ -12,34 +12,28 @@ namespace ShoppingCartService.Controllers
     [Route("/api/[controller]")]
     public class CartController : ControllerBase
     {
-        //private readonly ICartService _cartSrv;
+        private readonly RedisCartController _redisCartController;
+        private readonly ICartService _cartSrv;
         private readonly IDistributedCache _distributedCache;
         private readonly ILogger<CartController> _logger;
-        public CartController(ILogger<CartController> logger, IDistributedCache distributedCache)
+        public CartController(ILogger<CartController> logger, IDistributedCache distributedCache, ICartService cartService, RedisCartController redisCartController)
         {
-           // _cartSrv = cartService;
+            _redisCartController = redisCartController;
+            _cartSrv = cartService;
             _logger = logger;
             _distributedCache = distributedCache;
         }
 
-      
+
         [HttpGet]
         [Route("getallcartitems")]
         public async Task<List<Cart>> GetAllCarts()
         {
-            string cacheKey = "AllCarts";
-            List<Cart> carts = await _distributedCache.GetDataAsync<List<Cart>>(cacheKey);
-            if (carts != null)
-            {
-                _logger.LogInformation($" data fetch from cache");
-            }
-
+            List<Cart> carts = await _redisCartController.GetAllCarts();
             if (carts == null)
             {
                 carts = await _cartSrv.GetAllCarts();
-                _logger.LogInformation($"data fetching  from database");
-                await _distributedCache.SetDataAsync(cacheKey, carts, TimeSpan.FromMinutes(1), TimeSpan.FromHours(1));
-
+                // await _redisCartController.SetAllCarts(carts);
             }
             return carts;
         }
@@ -49,8 +43,7 @@ namespace ShoppingCartService.Controllers
         [Route("getcartdetails/{id}")]
         public async Task<Cart> GetCart(int id)
         {
-            string cacheKey = $"Cart{id}";
-            Cart cart = await _distributedCache.GetDataAsync<Cart>(cacheKey);
+            Cart cart = await _redisCartController.GetCart(id);
             if (cart != null)
             {
                 _logger.LogInformation($" data fetch from cache");
@@ -59,7 +52,6 @@ namespace ShoppingCartService.Controllers
             {
                 cart = await _cartSrv.GetCart(id);
                 _logger.LogInformation($"data fetching  from database");
-                await _distributedCache.SetDataAsync(cacheKey, cart, TimeSpan.FromMinutes(1), TimeSpan.FromHours(1));
             }
             return cart;
         }
@@ -80,11 +72,11 @@ namespace ShoppingCartService.Controllers
             }
             else
             {
-                 cart.Items.Add(item);
+                cart.Items.Add(item);
                 _logger.LogInformation($" item is added to cart " + id);
             }
-           
-            
+
+
             bool status = await _cartSrv.AddItem(cart.CartId, item);
             if (status)
             {
@@ -103,23 +95,24 @@ namespace ShoppingCartService.Controllers
              3.if Cache consist of cart then  update existing item with new quantity
             */
 
-            
+
             string cacheKey = $"Cart{id}";
-            Cart cart = await _distributedCache.GetDataAsync<Cart>(cacheKey);      
+            Cart cart = await _distributedCache.GetDataAsync<Cart>(cacheKey);
             if (cart == null)
             {
                 cart = await _cartSrv.GetCart(id);
                 await _distributedCache.SetDataAsync(cacheKey, cart, TimeSpan.FromMinutes(1), TimeSpan.FromHours(1));
                 //update data into cached cart
-                  cart.Items = cart.Items.Where(x => x.ProductId != item.ProductId).ToList();
-                  cart.Items.Add(item);
-                  
+                cart.Items = cart.Items.Where(x => x.ProductId != item.ProductId).ToList();
+                cart.Items.Add(item);
+
             }
-            else{
+            else
+            {
                 //Get all items excluding item whose ProductId matches with item  ID
-                  cart.Items = cart.Items.Where(x => x.ProductId != item.ProductId).ToList();
-                  cart.Items.Add(item);
-                
+                cart.Items = cart.Items.Where(x => x.ProductId != item.ProductId).ToList();
+                cart.Items.Add(item);
+
             }
 
             bool status = await _cartSrv.UpdateItem(cart.CartId, item);
@@ -150,30 +143,30 @@ namespace ShoppingCartService.Controllers
 
 
 
-         [HttpGet]
+        [HttpGet]
         [Route("emptycart/{id}")]
         public async Task<bool> EmptyCart(int id)
         {
-           /*
-             1.Get cart from cache
-             2.If Cache does not contain cart retrive cart data from  Data service.
-             3.Remove all items from cart
-             4.Update items into database
-            */      
+            /*
+              1.Get cart from cache
+              2.If Cache does not contain cart retrive cart data from  Data service.
+              3.Remove all items from cart
+              4.Update items into database
+             */
 
-            bool status=false;
+            bool status = false;
             string cacheKey = $"Cart{id}";
-            Cart cart = await _distributedCache.GetDataAsync<Cart>(cacheKey);           
+            Cart cart = await _distributedCache.GetDataAsync<Cart>(cacheKey);
             if (cart == null)
             {
                 cart = await _cartSrv.GetCart(id);
                 _logger.LogInformation($"data fetching  from database");
                 await _distributedCache.SetDataAsync(cacheKey, cart, TimeSpan.FromMinutes(1), TimeSpan.FromHours(1));
             }
-           _logger.LogInformation($" data fetch from cache");
+            _logger.LogInformation($" data fetch from cache");
             cart.Items.Clear();
             //Invoice dataservice method to clear all items from shopping cart whose id is macthing
-            status=true;
+            status = true;
             return status;
         }
 
@@ -190,29 +183,29 @@ namespace ShoppingCartService.Controllers
             //clear shopping cart Items
             //Clear Cache for shopping cart which has been maintained
 
-            bool status=false;
+            bool status = false;
             string cacheKey = $"Cart{id}";
-            Cart cart = await _distributedCache.GetDataAsync<Cart>(cacheKey);           
+            Cart cart = await _distributedCache.GetDataAsync<Cart>(cacheKey);
             if (cart == null)
             {
                 cart = await _cartSrv.GetCart(id);
                 _logger.LogInformation($"data fetching  from database");
                 await _distributedCache.SetDataAsync(cacheKey, cart, TimeSpan.FromMinutes(1), TimeSpan.FromHours(1));
             }
-           _logger.LogInformation($" data fetch from cache");
+            _logger.LogInformation($" data fetch from cache");
             cart.Items.Clear();
 
             //Invoice dataservice method to clear all items from shopping cart whose id is macthing
             status = await _cartSrv.CreateOrder(id);
-            if(status)
+            if (status)
             {
-                    status = await _cartSrv.CreateOrder(cart.CartId);
-                    if (status)
-                        {
-                                await _distributedCache.RemoveAsync(cacheKey);
-                                _logger.LogInformation($"Shpping cart is removed due to order creattion");
-                        }
-            }            
+                status = await _cartSrv.CreateOrder(cart.CartId);
+                if (status)
+                {
+                    await _distributedCache.RemoveAsync(cacheKey);
+                    _logger.LogInformation($"Shpping cart is removed due to order creattion");
+                }
+            }
             return status;
         }
     }
