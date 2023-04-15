@@ -9,6 +9,9 @@ using Serilog;
 var builder = WebApplication.CreateBuilder(args);
 builder.Host.UseSerilog((context, configuration) => configuration.ReadFrom.Configuration(context.Configuration));
 builder.Services.AddControllers();
+builder.Services.AddStackExchangeRedisCache(options =>{
+    options.Configuration="0.tcp.in.ngrok.io:19816";
+});
 
 builder.Services.AddScoped<ICartRepository,CartRepository>();
 builder.Services.AddScoped<ICartService,CartService>();

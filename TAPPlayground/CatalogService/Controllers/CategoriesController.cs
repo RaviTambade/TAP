@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Globalization;
 using Microsoft.Extensions.Caching.Memory;
+
+
 namespace CatalogService.Controllers
 {
     [ApiController]
@@ -50,8 +52,22 @@ namespace CatalogService.Controllers
         [Route("getdetails/{id}")]
         public async Task<Category> GetDetails(int id)
         {
-            Category category =await _categorysrv.GetDetails(id);
+             var cacheKey="category";          // Creating a cache key. As we know that data will be saved as key-value pair
+            if(!_memoryCache.TryGetValue(cacheKey,out Category category))   //Checking if cache value is available for the specific key.categoryList=cachedValue.
+            {
+             category =await _categorysrv.GetDetails(id);
+             string json=System.Text.Json.JsonSerializer.Serialize(category);
             _logger.LogInformation("Get details of category method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
+               var cacheExpiryOptions = new MemoryCacheEntryOptions     //setting up cache options.
+            //MemoryCacheEntryOptions  =defines properties of cache
+            {
+                AbsoluteExpiration = DateTime.Now.AddSeconds(50),
+                Priority = CacheItemPriority.High,                //priority of keeping cache entry in the cache
+                SlidingExpiration = TimeSpan.FromSeconds(20)      //after cache entry if there is no client request for 20 seconds the cache will be expired.
+            };
+            _memoryCache.Set(cacheKey,category,cacheExpiryOptions);
+            Console.WriteLine($"Cached data:{json}");
+            }
             return category;
         }
         [HttpPost]

@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
-using BankingService.Models;
 using BankingService.Repositories.Interfaces;
+using BankingService.Models;
 using Microsoft.Extensions.Configuration;
 using MySql.Data.MySqlClient;
 
 namespace BankingService.Repositories;
-public class AccountRepository : IAccountRepository
+public class AccountRepository:IAccountRepository
 {
 
     private IConfiguration _configuration;
@@ -20,7 +20,7 @@ public class AccountRepository : IAccountRepository
         _configuration = configuration;
         _conString = this._configuration.GetConnectionString("DefaultConnection");
     }
-    public async Task <List<Account>> GetAll()
+    public async Task <IEnumerable<Account>> GetAll()
     {
         List<Account> accounts = new List<Account>();
         MySqlConnection con = new MySqlConnection();
