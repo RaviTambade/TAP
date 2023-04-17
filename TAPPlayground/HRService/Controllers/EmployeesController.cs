@@ -4,6 +4,8 @@ using HRService.Services;
 using HRService.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using MySql.Data.MySqlClient;
+using Microsoft.Extensions.Caching.Memory;
+
 
 namespace HRService.Controllers
 {
@@ -11,21 +13,38 @@ namespace HRService.Controllers
     [Route("/api/[controller]")]
     public class EmployeesController : ControllerBase
     {
+        private readonly IMemoryCache _memoryCache;
         private readonly IEmployeeService _empsrv;
         private readonly ILogger<EmployeesController> _logger;
-        public EmployeesController(ILogger<EmployeesController> logger,IEmployeeService empsrv)
+        public EmployeesController(ILogger<EmployeesController> logger,IEmployeeService empsrv,IMemoryCache memoryCache)
         {
+            _memoryCache = memoryCache;
             _logger = logger;
             _empsrv = empsrv;
         }
+
+
 
         [HttpGet]
         [Route("getallemployees")]
         public async Task<IEnumerable<Employee>> GetAllEmployees()
         {
-            List<Employee> employees =await _empsrv.GetAll();
-            _logger.LogInformation("Get All method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
-            return employees;
+            var cacheKey = "employeeList";  // check if cache entries exist
+            if(!_memoryCache.TryGetValue(cacheKey,out IEnumerable<Employee> employeeList)) 
+            {
+                employeeList = await _empsrv.GetAll();
+                 _logger.LogInformation("Get All method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
+               // setting to cache options
+               var cacheExpiryOptions = new MemoryCacheEntryOptions
+               {
+                AbsoluteExpiration = DateTime.Now.AddSeconds(50),
+                Priority = CacheItemPriority.High,
+                SlidingExpiration = TimeSpan.FromSeconds(20)
+               };
+               //setting cache entries
+               _memoryCache.Set(cacheKey, employeeList,cacheExpiryOptions);
+            }
+            return employeeList;
         }
 
         [HttpGet]

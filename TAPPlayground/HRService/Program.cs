@@ -12,6 +12,8 @@ builder.Host.ConfigureLogging(logging =>
     logging.AddConsole();
 });
 
+builder.Services.AddMemoryCache();
+
 
 builder.Services.AddTransient<IEmployeeRepository,EmployeeRepository>();
 builder.Services.AddTransient<IEmployeeService,EmployeeService>();
@@ -36,9 +38,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseResponseCaching();
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();

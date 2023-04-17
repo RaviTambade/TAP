@@ -26,7 +26,7 @@ namespace CatalogService.Controllers
         public async Task<IEnumerable<Category>> GetAllCategories()
         {
             var cacheKey="categoryList";          // Creating a cache key. As we know that data will be saved as key-value pair
-            if(!_memoryCache.TryGetValue(cacheKey,out IEnumexrable<Category> categoryList))   //Checking if cache value is available for the specific key.categoryList=cachedValue.
+            if(!_memoryCache.TryGetValue(cacheKey,out IEnumerable<Category> categoryList))   //Checking if cache value is available for the specific key.categoryList=cachedValue.
             {
             categoryList =await _categorysrv.GetAll();
             _logger.LogInformation("Get all categories method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());

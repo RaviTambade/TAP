@@ -2,9 +2,9 @@ using HRService.Models;
 namespace HRService.Repositories.Interfaces;
 public interface IDepartmentRepository
 {
-    List<Department> GetAll();
-    Department GetById(int deptId);
-    bool Insert(Department dept);
-    bool Update(Department dept);
-    bool Delete(int deptId);
+    Task<List<Department>> GetAll();
+    Task<Department> GetById(int deptId);
+    Task<bool> Insert(Department dept);
+    Task<bool> Update(Department dept);
+    Task<bool> Delete(int deptId);
 }

@@ -171,7 +171,8 @@ public class EmployeeRepository : IEmployeeRepository
           }
           return employee;
    }
-   public  async Task<bool> Insert(Employee emp){    
+   public  async Task<bool> Insert(Employee emp)
+   {    
           bool status = false;
           MySqlConnection con = new MySqlConnection();
           con.ConnectionString=_conString;

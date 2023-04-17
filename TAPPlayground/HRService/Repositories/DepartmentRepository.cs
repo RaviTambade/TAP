@@ -13,7 +13,8 @@ public class DepartmentRepository : IDepartmentRepository
       _conString=this._configuration.GetConnectionString("DefaultConnection");
     }
 
-  public List<Department> GetAll(){
+  public async Task<List<Department>> GetAll(){
+        await Task.Delay(5000);
         List<Department> departments=new List<Department>();
         MySqlConnection connection=new MySqlConnection(_conString);
         try{
@@ -45,7 +46,8 @@ public class DepartmentRepository : IDepartmentRepository
         }
       return departments; 
     }
-   public Department GetById(int deptId){
+   public async Task< Department> GetById(int deptId)
+   {
           Department department =new Department();
           MySqlConnection connection=new MySqlConnection(_conString);
           try{
@@ -77,7 +79,8 @@ public class DepartmentRepository : IDepartmentRepository
           }
           return department;
    }
-   public  bool Insert(Department dept){    
+   public async Task< bool> Insert(Department dept)
+   {    
           bool status = false;
           MySqlConnection con = new MySqlConnection();
           con.ConnectionString=_conString;
@@ -101,7 +104,7 @@ public class DepartmentRepository : IDepartmentRepository
           } 
           return status;
    }
-   public  bool Update(Department dept){       
+   public async Task <bool> Update(Department dept){       
           Console.WriteLine(dept);
           bool status=false;
           MySqlConnection con = new MySqlConnection();
@@ -126,7 +129,7 @@ public class DepartmentRepository : IDepartmentRepository
           }
           return status;
    }
-   public  bool Delete(int deptId){
+   public async Task<bool> Delete(int deptId){
           bool status = false;
           MySqlConnection con = new MySqlConnection();
           con.ConnectionString=_conString;
