@@ -11,7 +11,7 @@ public AccountService(IAccountRepository repo){
     this._repo=repo;
 
 }
-public async Task<List<Account>> GetAll()=> await _repo.GetAll();
+public async Task<IEnumerable<Account>> GetAll()=> await _repo.GetAll();
 public async Task <Account> GetById(int accountId)=>await _repo.GetById(accountId);
 public async Task <bool> Insert(Account account)=> await _repo.Insert(account);
 public async Task <bool> Update(Account account)=>await _repo.Update(account);

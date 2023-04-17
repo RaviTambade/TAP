@@ -2,8 +2,7 @@ using BankingService.Models;
 using BankingService.Repositories.Interfaces;
 using MySql.Data.MySqlClient;
 using Microsoft.Extensions.Configuration;
-
-                       
+                    
 namespace BankingService.Repositories;
 
 public class TransactionRepository : ITransactionRepository

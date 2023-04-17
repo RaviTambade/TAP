@@ -9,7 +9,27 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/Ecommerce/bin/Debug/net7.0/ECommerceApp.dll",
+            "program": "${workspaceFolder}/ShoppingCartService/bin/Debug/net7.0/ShoppingCartService.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": ".NET Core Launch (web)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/ShoppingCartService/bin/Debug/net7.0/ShoppingCartService.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,

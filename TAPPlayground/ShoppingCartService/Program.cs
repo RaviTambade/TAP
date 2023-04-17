@@ -3,24 +3,30 @@ using ShoppingCartService.Repositories.Interfaces;
 using ShoppingCartService.Services;
 using ShoppingCartService.Services.Interfaces;
 using Serilog;
-
-
+using ShoppingCartService.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
+
 builder.Host.UseSerilog((context, configuration) => configuration.ReadFrom.Configuration(context.Configuration));
+
 builder.Services.AddControllers();
+
+
+builder.Services.AddStackExchangeRedisCache(options =>{
+    options.Configuration="localhost:6379";
+});
 
 builder.Services.AddScoped<ICartRepository,CartRepository>();
 builder.Services.AddScoped<ICartService,CartService>();
+builder.Services.AddScoped<RedisCartController>();
 
 
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -28,9 +34,6 @@ if (app.Environment.IsDevelopment())
 }
 app.UseSerilogRequestLogging();
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();

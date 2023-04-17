@@ -1,10 +1,11 @@
+using System.Collections;
 using System.Threading.Tasks;
 using BankingService.Models;
 
 namespace BankingService.Repositories.Interfaces;
 public interface IAccountRepository{
 
-    Task <List<Account>> GetAll();
+    Task <IEnumerable<Account>> GetAll();
 
    Task <Account> GetById(int accountId);
 

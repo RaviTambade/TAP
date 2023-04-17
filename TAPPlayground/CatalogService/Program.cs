@@ -10,6 +10,9 @@ builder.Host.ConfigureLogging(logging =>
 });
 builder.Services.AddMemoryCache();           //This adds the in-memory cache service to the dependency injection container.
 // Add services to the container.
+builder.Services.AddStackExchangeRedisCache(options =>{
+    options.Configuration="localhost:6379";
+});
 builder.Services.AddControllers();
 builder.Services.AddScoped<IProductRepository,ProductRepository>();
 builder.Services.AddScoped<IProductService,ProductService>();

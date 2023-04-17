@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using Microsoft.Extensions.Caching.Memory;
 
+
 namespace CatalogService.Controllers
 {
     [ApiController]
@@ -29,6 +30,7 @@ namespace CatalogService.Controllers
             if(!_memoryCache.TryGetValue(cacheKey,out IEnumerable<Category> categoryList))   //Checking if cache value is available for the specific key.categoryList=cachedValue.
             {
             categoryList =await _categorysrv.GetAll();
+            string json=System.Text.Json.JsonSerializer.Serialize(categoryList);
             _logger.LogInformation("Get all categories method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
               var cacheExpiryOptions = new MemoryCacheEntryOptions     //setting up cache options.
             //MemoryCacheEntryOptions  =defines properties of cache
@@ -39,6 +41,7 @@ namespace CatalogService.Controllers
             };
             //setting cache entries
             _memoryCache.Set(cacheKey, categoryList, cacheExpiryOptions);
+            Console.WriteLine($"Cached data:{json}");
         }
         return categoryList;
         }
@@ -49,17 +52,44 @@ namespace CatalogService.Controllers
         [Route("getdetails/{id}")]
         public async Task<Category> GetDetails(int id)
         {
-            Category category =await _categorysrv.GetDetails(id);
+             var cacheKey="category";          // Creating a cache key. As we know that data will be saved as key-value pair
+            if(!_memoryCache.TryGetValue(cacheKey,out Category category))   //Checking if cache value is available for the specific key.categoryList=cachedValue.
+            {
+             category =await _categorysrv.GetDetails(id);
+             string json=System.Text.Json.JsonSerializer.Serialize(category);
             _logger.LogInformation("Get details of category method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
+               var cacheExpiryOptions = new MemoryCacheEntryOptions     //setting up cache options.
+            //MemoryCacheEntryOptions  =defines properties of cache
+            {
+                AbsoluteExpiration = DateTime.Now.AddSeconds(50),
+                Priority = CacheItemPriority.High,                //priority of keeping cache entry in the cache
+                SlidingExpiration = TimeSpan.FromSeconds(20)      //after cache entry if there is no client request for 20 seconds the cache will be expired.
+            };
+            _memoryCache.Set(cacheKey,category,cacheExpiryOptions);
+            Console.WriteLine($"Cached data:{json}");
+            }
             return category;
         }
         [HttpPost]
         [Route("insert")]
         public async Task<bool> Insert([FromBody] Category category)
         {
-            bool status =await _categorysrv.Insert(category);
+            var cacheKey="insertCategory";
+            if(!_memoryCache.TryGetValue(cacheKey,out bool insertCategory)){
+            insertCategory =await _categorysrv.Insert(category);
             _logger.LogInformation("Insert category method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
-            return status;
+            var cacheExpiryOptions = new MemoryCacheEntryOptions     //setting up cache options.
+            //MemoryCacheEntryOptions  =defines properties of cache
+            {
+                AbsoluteExpiration = DateTime.Now.AddSeconds(50),
+                Priority = CacheItemPriority.High,                //priority of keeping cache entry in the cache
+                SlidingExpiration = TimeSpan.FromSeconds(20)      //after cache entry if there is no client request for 20 seconds the cache will be expired.
+            };
+            //setting cache entries
+            _memoryCache.Set(cacheKey, insertCategory, cacheExpiryOptions);
+            }
+            Console.WriteLine($"Cached Data:{insertCategory}");
+            return insertCategory;
         }
 
         [HttpPut]
