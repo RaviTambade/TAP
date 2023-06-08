@@ -10,20 +10,16 @@ public class DepartmentService : IDepartmentService
     {
         _repo = repo;
     }
-    public List<Department> GetAll() => _repo.GetAll();
-    public Department GetById(int deptId)=> _repo.GetById(deptId);
-    public bool Insert (Department department) => _repo.Insert(department);
-    public bool Update(Department dept)=> _repo.Update(dept);
-    public bool Delete(int id)=>_repo.Delete(id);
+    public async Task< List<Department>> GetAll(){
+        var departments = _repo.GetAll();
+        return await departments;
+    } 
+
+    public async Task<Department> GetById(int deptId)=>await _repo.GetById(deptId);
+    public async Task<bool> Insert (Department department) =>await  _repo.Insert(department);
+    public async Task<bool> Update(Department dept)=>await _repo.Update(dept);
+    public async Task<bool> Delete(int id)=>await _repo.Delete(id);
 }
 
 
 
-//Departments Table
-//deptId pk
-//name
-//location
-
-
-//Employees
-//deptId foreign key

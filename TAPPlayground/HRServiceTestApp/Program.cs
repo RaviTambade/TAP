@@ -11,8 +11,16 @@ class Program{
         //await FetchEmployeesFromRESTAPI();
         //await FetchEmployeeDetails();
         //await InsertEmployee();
-        await UpdateEmployee();
+        //await UpdateEmployee();
         //await DeleteEmployee();
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        await FetchDepartmentsFromRESTAPI();
+        //await FetchDepartmentDetails();
+        //await InsertDepartment();
+        //await UpdateDepartment();
+        //await DeleteDepartment();
 
     }
 
@@ -132,8 +140,6 @@ class Program{
                   employee  = JsonConvert.DeserializeObject<Employee>(apiResponse);   
             }
            }
-
-    
         Console.WriteLine("Enter Employee First Name:");
         employee.EmpFirstName = Console.ReadLine();
 
@@ -194,6 +200,124 @@ class Program{
             }
         }
         Console.WriteLine("Employee Deleted Succefully");
+    }
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+       private static async Task FetchDepartmentsFromRESTAPI()
+    {
+        //consume Rest aapi
+        List<Department> departments = new List<Department>();
+        //access data from rest api using asynchronous
+        using (var httpClient = new HttpClient())
+        {
+           using (var response =await httpClient.GetAsync("http://localhost:5259/api/departments/getalldepartments"))
+           {
+            string apiResponse = await response.Content.ReadAsStringAsync();
+
+            departments = JsonConvert.DeserializeObject<List<Department>>(apiResponse);
+            
+            foreach(var department in departments)
+            Console.WriteLine(department.DeptId+" "+department.DeptName+" "+department.Location);
+           }
+        }
+    }
+
+       private static async Task FetchDepartmentDetails()
+    {
+        Console.WriteLine("Enter The Department Id:");
+        int deptId = Convert.ToInt32(Console.ReadLine());
+        Department department = new Department();
+        using (var httpClient = new HttpClient())
+        {
+            using (var response = await httpClient.GetAsync("http://localhost:5259/api/departments/getdepartmentdetails/"+deptId))
+            {
+                  string apiResponse = await response.Content.ReadAsStringAsync();
+                  department = JsonConvert.DeserializeObject<Department>(apiResponse);
+                  Console.WriteLine(department.DeptId+" "+department.DeptName+" "+department.Location);            
+            }
+        }
+    }
+
+
+     private static async Task InsertDepartment()
+    {
+        Console.WriteLine("Insert new Department =>");
+        Console.WriteLine("Enter Department Name:");
+        string deptName = Console.ReadLine();
+
+        Console.WriteLine("Enter Department Location :");
+        string deptLocation = Console.ReadLine();
+
+        Department department = new Department()
+        {
+            DeptName=deptName,
+            Location=deptLocation
+        };
+        string jsonEmployee = System.Text.Json.JsonSerializer.Serialize(department);
+        var requestContent = new StringContent(jsonEmployee,Encoding.UTF8,"application/json");
+        using (var httpClient=new HttpClient())
+        {
+            string apiUrl="http://localhost:5259/api/departments/adddepartment";
+            using(var response = await httpClient.PostAsync(apiUrl,requestContent))
+            {
+                response.EnsureSuccessStatusCode();
+                var content = await response.Content.ReadAsStringAsync();
+            }
+        }
+        Console.WriteLine("Department Added SuccessFully");
+
+    }
+
+    public static async Task UpdateDepartment()
+    {
+           Console.WriteLine("Enter Department Id You Want to Update");
+           int deptId=int.Parse(Console.ReadLine());
+           Department department = new Department();
+           using (var httpClient= new HttpClient())
+           {
+           using(var response = await httpClient.GetAsync("http://localhost:5259/api/departments/getdepartmentdetails/" + deptId))
+            {
+                  string apiResponse= await response.Content.ReadAsStringAsync();
+                  department  = JsonConvert.DeserializeObject<Department>(apiResponse);   
+            }
+           }
+        Console.WriteLine("Enter Department Name:");
+        department.DeptName = Console.ReadLine();
+
+        Console.WriteLine("Enter Department Location:");
+        department.Location = Console.ReadLine();
+
+
+        string jsonDepartment= System.Text.Json.JsonSerializer.Serialize(department);
+        var requestContent=new StringContent(jsonDepartment, Encoding.UTF8,"application/json");
+        using (var httpClient = new HttpClient())
+        {
+            string apiUrl = "http://localhost:5259/api/departments/update/"+department.DeptId;
+            using (var response = await httpClient.PutAsync(apiUrl,requestContent))
+            {
+                response.EnsureSuccessStatusCode();
+                var content = await response.Content.ReadAsStringAsync();
+            }
+        }
+        Console.WriteLine("Departments Updated Succefully");
+    }
+
+      private static async Task DeleteDepartment()
+    {
+        Console.WriteLine("Enter Department Id :");
+        int deptId = int.Parse(Console.ReadLine());
+        using(var httpClient= new HttpClient())
+        {
+            using(var response = await httpClient.DeleteAsync(" http://localhost:5259/api/departments/delete/"+ deptId))
+            {
+                response.EnsureSuccessStatusCode();
+                var content = await response.Content.ReadAsStringAsync();
+            }
+        }
+        Console.WriteLine("Departments Deleted Succefully");
     }
 
 

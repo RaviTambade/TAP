@@ -2,6 +2,7 @@ using OrderProcessingService.Models;
 using OrderProcessingService.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using MySql.Data.MySqlClient;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace OrderProcessingService.Controllers
 {
@@ -9,10 +10,12 @@ namespace OrderProcessingService.Controllers
     [Route("/api/[Controller]")]
     public class OrdersController : ControllerBase
     {
+        private readonly IMemoryCache _memoryCache;
         private readonly ILogger<OrdersController> _logger;
         private readonly IOrderService _ordersvc;
-        public OrdersController(ILogger<OrdersController> logger,IOrderService ordersvc)
+        public OrdersController(IMemoryCache memoryCache,ILogger<OrdersController> logger,IOrderService ordersvc)
         {
+        _memoryCache=memoryCache;
         _logger = logger;
         _ordersvc = ordersvc;
         } 
@@ -21,9 +24,21 @@ namespace OrderProcessingService.Controllers
         [Route("/getallorders")]
         public async Task<IEnumerable<Order>> GetAllOrders()
         {
-            IEnumerable<Order> orders = await _ordersvc.GetAll();
+            var cacheKey ="orderList";
+            if(!_memoryCache.TryGetValue(cacheKey, out IEnumerable<Order> orderList))
+            {
+
+            orderList = await _ordersvc.GetAll();
             _logger.LogInformation("Get All method invoked at  {DT}",  DateTime.UtcNow.ToLongTimeString());
-            return orders;
+            var cacheExpiryOptions = new MemoryCacheEntryOptions
+            {
+                AbsoluteExpiration = DateTime.Now.AddSeconds(50),
+                Priority = CacheItemPriority.High,
+                SlidingExpiration = TimeSpan.FromSeconds(20)
+            };
+            _memoryCache.Set(cacheKey,orderList,cacheExpiryOptions);
+            }
+            return orderList;
         }
 
         [HttpGet]

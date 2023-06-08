@@ -12,6 +12,7 @@ namespace CatalogService.Controllers
     {
         private readonly ISupplierService _srv;
         private readonly ILogger<SuppliersController> _logger;
+        //store data
         public SuppliersController(ISupplierService srv,ILogger<SuppliersController> logger)
         {
             _srv = srv;

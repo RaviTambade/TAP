@@ -14,6 +14,7 @@ builder.Host.ConfigureLogging(logging =>
     logging.ClearProviders();
     logging.AddConsole();
 });
+builder.Services.AddMemoryCache();
 // Add services to the container.
 builder.Services.AddCors();
 builder.Services.AddControllers();

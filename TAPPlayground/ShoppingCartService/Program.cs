@@ -3,6 +3,7 @@ using ShoppingCartService.Repositories.Interfaces;
 using ShoppingCartService.Services;
 using ShoppingCartService.Services.Interfaces;
 using Serilog;
+using ShoppingCartService.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,7 @@ builder.Services.AddStackExchangeRedisCache(options =>{
 
 builder.Services.AddScoped<ICartRepository,CartRepository>();
 builder.Services.AddScoped<ICartService,CartService>();
+builder.Services.AddScoped<RedisCartController>();
 
 
 builder.Services.AddEndpointsApiExplorer();
