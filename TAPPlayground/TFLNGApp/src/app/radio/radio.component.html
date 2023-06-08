@@ -1,0 +1,24 @@
+<div>    
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <div>
+            <label for="gender">Gender:</label>
+            <div>
+              <input id="male" type="radio" value="male" name="gender" formControlName="gender" (change)="changeGender($event)">
+              <label for="male">Male</label>
+          
+              <input id="female" type="radio" value="female" name="gender" formControlName="gender" (change)="changeGender($event)">
+              <label for="female">Female</label>
+           </div>
+              
+            <div *ngIf="f.gender.touched && f.gender.invalid" class="alert alert-danger">
+            </div> </div>
+        
+            <button c type="submit" [disabled]="!form.valid">Submit</button>
+        
+            <div>
+                <ul id="list" name="list">
+                    <li *ngFor="let name of  names"> {{name}}</li>
+                </ul>
+            </div>
+        </form>
+    </div>

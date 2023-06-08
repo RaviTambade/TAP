@@ -1,0 +1,24 @@
+<h1>Insert Product</h1>
+
+<form #productForm="ngForm" (ngSubmit)="insertProduct(productForm.value)">
+
+  <div class="mb-3">
+    <label><b>Product Title:</b></label>
+    <input type="text" name="title" [(ngModel)]="product.title"/>
+    <br>
+    <label><b>UnitPrice:</b></label>
+    <input type="number" name="unitPrice" [(ngModel)]="product.unitPrice"/>
+    <br>
+    <label><b>Stock Available:</b></label>
+    <input type="number" name="stockAvailable" [(ngModel)]="product.stockAvailable"/>
+    <br>
+    <label><b>image:</b></label>
+    <input type="text" name="image" [(ngModel)]="product.image"/>
+    <br>
+    <label><b>Category Id:</b></label>
+    <input type="number" name="categoryId" [(ngModel)]="product.categoryId"/>
+    <br>
+    <button class="btn btn-success " type="submit">Add</button>
+  </div>
+</form>
+
