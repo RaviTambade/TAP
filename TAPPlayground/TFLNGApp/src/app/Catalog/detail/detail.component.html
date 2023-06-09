@@ -1,0 +1,10 @@
+<h1>Product Details</h1>
+<h2>{{title}}</h2>
+<hr/>
+<p> Description: {{description}}</p>
+<p> Quantity: {{quantity}}</p>
+<p> Unit Price: {{unitPrice}}</p>
+<p> Likes: {{likes}}</p>
+<app-counter [count]="likes"   (update)="onUpdate($event)">
+</app-counter>
+<img [src]="imageUrl" width="100" height="100"/>

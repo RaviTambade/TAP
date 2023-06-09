@@ -1,0 +1,17 @@
+<h1>Products available </h1>
+<div>
+  <ul *ngFor="let product of products">
+     <!-- <li>{{product.title|uppercase}} | {{product.description}} | {{product.quantity}}</li>-->
+<li>
+  <app-detail  [title] ="product.title" 
+               [description] ="product.description"
+               
+               imageUrl="{{product.imageUrl}}">
+  </app-detail>
+</li> 
+
+     
+  </ul>
+</div>
+<!--[unitPrice]="product.unitPrice|currency: 'INR':true"
+               [likes]="product.likes"-->

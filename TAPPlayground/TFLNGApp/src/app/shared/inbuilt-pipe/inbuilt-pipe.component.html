@@ -1,0 +1,14 @@
+<h1> Inbuilt-pipe </h1>
+
+<p>Flower: <b>{{flower | uppercase}} </b>
+<p>Greenhouse: {{greenhouse | lowercase}}
+    
+<p>Unit Price: {{unitprice | currency: 'INR':true}}</p>
+<p>Total: {{total | currency: 'INR':true}}</p>
+<p>Plantation Date: {{today | date}}</p>
+<p>Plantation Date:  {{today | date:'fullDate'}}</p>
+
+<div>
+    <p>A: {{a | percent}}</p>
+    <p>B: {{b | percent:'4.3-5'}}</p>
+</div>

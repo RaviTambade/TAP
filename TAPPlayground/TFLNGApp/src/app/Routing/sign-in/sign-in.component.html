@@ -1,0 +1,26 @@
+<h2>Login</h2>
+<div *ngIf="message"> {{ message }}</div>
+    <form  *ngIf="!authService.getUser()">
+      <table>
+        <tr>
+            <td><label for="username">User:</label></td>
+            <td><input  name="username" #username></td>
+        </tr>
+        <tr>
+            <td> <label for="password">Password:</label></td>
+            <td> <input  type="password" name="password" #password></td>
+        </tr>
+        <tr>
+            <td>Action</td>
+            <td><a (click)="login(username.value, password.value)" href=""> Login </a></td>
+        </tr>
+        </table>
+
+      
+    </form>
+
+    <div  *ngIf="authService.getUser()">
+      <br/>
+      Logged in as <b>{{authService.getUser() }}</b>
+      <a href (click)="logout()">Log out</a>
+    </div>

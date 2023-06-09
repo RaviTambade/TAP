@@ -1,0 +1,21 @@
+
+<div *ngIf="true">Welcome to Transflower</div>
+      <div *ngIf="productionCost > billingPrice">  Cheap Product !</div>
+      <div *ngIf="productionCost > billingPrice; then thenBlock else elseBlock"></div>
+
+            <ng-template #thenBlock>  Product is  Cheap </ng-template>
+            <ng-template #elseBlock> Product is  Costly</ng-template>  
+    
+  <div *ngIf="flower == 'gerbera'">Gerbera</div> 
+  <div *ngIf="isFlowerAvailable()"> Requested flower is available</div> 
+ 
+  <h1>ngSwitch </h1>
+  <div [ngSwitch]="bestflower">
+      <div *ngSwitchCase="'gerbera'">Best Flower :gerbera</div>
+      <div *ngSwitchCase="'rose'">
+        <img src="./assets/images/gerbera.jpg" width="100" height="100"/> 
+         
+    </div>
+      <div *ngSwitchCase="'lotus'">Best Flower :lotus</div>
+      <div *ngSwitchDefault>Best Flower is something else</div>
+  </div>

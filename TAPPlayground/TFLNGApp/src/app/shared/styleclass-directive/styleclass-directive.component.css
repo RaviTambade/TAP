@@ -1,0 +1,17 @@
+.bordered {
+  border: 2px dashed #214AED;
+  background-color: #E1AE7E; 
+  font-style: italic; 
+}
+
+.bold-text { font-weight:bold; }
+.green { color: green;  }
+.blue_class { color:blue; font-size:26px ;
+        font-style: italic;}
+
+.red { color: red;   font-size:45px ;
+       font-style: italic; }
+.show-class {visibility: visible;}
+.hide-class {visibility: hidden;}
+.italic-text {font-style: italic;}
+.small-text {font-size: 5px;}
