@@ -1,0 +1,23 @@
+<table> 
+    <thead> 
+       <tr> 
+          <th>Item</th>
+          <th>Amount</th> 
+          <th>Category</th> 
+          <th>Location</th> 
+          <th>Spent On</th> 
+          <th>View</th> 
+       </tr> 
+    </thead> 
+    <tbody> 
+     <tr *ngFor="let entry of selectedItems"> 
+        <th scope="row">{{ entry.item }}</th> 
+        <th>{{ entry.amount }}</th> 
+        <td>{{ entry.category }}</td> 
+        <td>{{ entry.location }}</td> 
+        <td>{{ entry.spendOn | date: 'medium' }}</td> 
+        <td><a href="">View</a> |<a href="">Remove</a>|<a href="">Update</a></td> 
+     </tr> 
+  </tbody> 
+ </table>
+<button (click)="onPrevious()"><<</button><button (click)="onNext()">>></button>

@@ -16,6 +16,7 @@ import { MutipleSelectListBoxComponent } from './mutiple-select-list-box/mutiple
  
 import { CategoryproductComponent } from './categoryproduct/categoryproduct.component';
 import { TflGridComponent } from './tfl-grid/tfl-grid.component';
+import { PaggingComponent } from './pagging/pagging.component';
  
 
 
@@ -29,7 +30,8 @@ import { TflGridComponent } from './tfl-grid/tfl-grid.component';
     CheckBoxComponent,
     FileUploadComponent,
     MutipleSelectListBoxComponent,
-    TflGridComponent
+    TflGridComponent,
+    PaggingComponent
   
   ],
   imports: [
