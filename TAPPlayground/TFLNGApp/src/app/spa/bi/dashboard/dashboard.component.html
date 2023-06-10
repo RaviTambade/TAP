@@ -1,0 +1,17 @@
+
+
+<h2>DashBoard</h2>
+
+<div>
+  <a [routerLink]="['./bar']">Bar Chart</a> |
+  <a [routerLink]="['./pie']">Pie Chart</a> 
+ <!-- Enter id: <input #id size="6">
+  <button (click)="goToProduct(id.value)">Go</button>-->
+</div>
+
+<div>
+  <p>Charts </p>
+
+  <hr/>
+  <router-outlet></router-outlet>  <!-- Dynamice component Container-->
+</div>

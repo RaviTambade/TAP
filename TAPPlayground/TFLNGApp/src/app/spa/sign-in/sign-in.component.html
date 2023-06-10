@@ -1,0 +1,19 @@
+<div class="right">
+  <div *ngIf="message"  > {{ message }} </div>
+  <div>
+    <form  *ngIf="!authService.getUser()">
+      <table>
+        <tr> 
+            <td><input  name="username" #username placeholder="User Name"></td>
+            <td> <input  type="password" name="password" #password placeholder="password"> </td>
+            <td><a (click)="login(username.value, password.value)" href=""> Login </a></td>
+        </tr>  
+        </table>
+  </form>
+  </div>   
+  
+    <div  *ngIf="authService.getUser()">
+       Welcome <b>{{authService.getUser() |uppercase}}</b>
+        <a href (click)="logout()">Log out</a>
+    </div>
+</div>

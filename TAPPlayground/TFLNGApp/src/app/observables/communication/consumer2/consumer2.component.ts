@@ -16,7 +16,7 @@ export class Consumer2Component implements OnInit {
 
   ngOnInit() {
   let theObservable:Observable<any> = this.messageService.getMessage();
-  this.subscription =theObservable .subscribe(msg => { this.message = msg; });
+  this.subscription =theObservable .subscribe(msg => { this.message = msg.text; });
    }
 
   ngOnDestroy() {

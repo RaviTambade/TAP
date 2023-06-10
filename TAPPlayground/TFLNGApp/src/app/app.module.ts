@@ -7,11 +7,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { CatalogModuleModule } from './Catalog/catalog-module/catalog-module.module';
 import { SharedModule } from './shared/sharedmodule';
 import { MembershipModule } from './membership/membership.module';
-import { SPAModule } from './Routing/SPAModule';
+//import { SPAModule } from './Routing/SPAModule';
 import { GraphicsModule } from './graphics/graphics.module';
 import { TemplateFormsModule } from './forms/templateforms.module';
 import { ReusableModule } from './reusable/reusable.module';
 import { ObservableModule } from './observables/observable.module';
+import { SPAModule } from './spa/spa.module';
+
 
 @NgModule({
   declarations: [
@@ -25,11 +27,11 @@ import { ObservableModule } from './observables/observable.module';
    CatalogModuleModule,
     SharedModule,
     MembershipModule,
-    SPAModule,
     GraphicsModule,
     TemplateFormsModule,
     ReusableModule,
-    ObservableModule
+    ObservableModule,
+    SPAModule
    
   ],
   

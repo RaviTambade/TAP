@@ -12,8 +12,6 @@ export class GithubAPIService {
   constructor(private http: HttpClient) {  }
 
   getUser (name:string): Observable<User> {
-
-   
     return this.http.get<User>(this.userUrl+name).pipe(
         tap(users => console.log(`fetched users*********` +users))
       );

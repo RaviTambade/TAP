@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class HoverableComponent {
 
+  cities=["Nashik", "Manchar", "Sangamner","Junnar", "Pimpalgaon"];
 }

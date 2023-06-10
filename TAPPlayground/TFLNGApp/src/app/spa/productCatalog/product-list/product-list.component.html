@@ -1,0 +1,9 @@
+<h2>Product Catalog</h2>
+<a [routerLink]= "['/create']">New Product</a>
+<br/>
+
+<div>
+  <div *ngFor="let product of products">
+    <button  (click)="goToProduct(product.ID)">{{product.title}}</button>    
+  </div>
+</div>
