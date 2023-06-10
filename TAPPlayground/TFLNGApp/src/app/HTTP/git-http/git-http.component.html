@@ -1,0 +1,13 @@
+<h2>Search Git User</h2>
+<input type="text" [(ngModel)]="userName"/>
+<button type="button" (click)="makeRequest()">Request</button>
+
+<div *ngIf="loading">
+    <p> Name: {{user.name}}</p>
+    <p> Company: {{user.company}}</p>
+    <p> Blog URL: {{user.blog}}</p>
+</div>
+
+<hr/>
+
+<p>{{data | json}}</p>

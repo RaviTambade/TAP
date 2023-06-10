@@ -1,0 +1,21 @@
+<div >
+  <h1>Login</h1>
+   <p *ngIf="isValidUser">Valid User</p> 
+
+ 
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)">
+ <table>
+      <tr>
+        <td><label>Email:</label></td>
+        <td><input type="email" name="email" Required [(ngModel)]="user.email"></td>
+      </tr>
+      <tr>
+        <td><label>Password:</label></td>
+        <td><input type="password" name="password" Required [(ngModel)]="user.password"></td>
+      </tr>        
+      <tr>
+        <td><button type="submit" [disabled] = "!loginForm.form.valid">login</button></td>
+      </tr>
+  </table>
+</form>
+</div>

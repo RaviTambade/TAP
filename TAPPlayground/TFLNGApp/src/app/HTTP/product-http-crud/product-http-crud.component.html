@@ -1,0 +1,7 @@
+<h2>REST API CRUD Requests</h2>
+<button type="button" (click)="Post()"> Post</button>
+<button type="button" (click)="Update()">Update</button>
+<button type="button" (click)="Delete()">Delete</button>
+<button type="button" (click)="Headers()">Headers</button>
+<div *ngIf="loading">loading...</div>
+<pre>{{data | json}}</pre>

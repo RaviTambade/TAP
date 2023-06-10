@@ -9,11 +9,13 @@ import {RouterContainerComponent} from "./router-container/router-container.comp
 import {BarChartComponent } from "./bar-chart/bar-chart.component";
 import {PieChartComponent} from "./pie-chart/pie-chart.component";
 import { DashboardComponent} from "./dashboard/dashboard.component";
+import { LineChartComponent } from "./line-chart/line-chart.component";
 //import {AuthService} from "./AuthService";
 
 export const  childRoutes: Routes = [
     { path: '', redirectTo:'dashboard', pathMatch: 'full'},
     { path: 'bar', component: BarChartComponent },
+    { path: 'line', component: LineChartComponent},
     { path: 'pie', component: PieChartComponent},
   ];
 

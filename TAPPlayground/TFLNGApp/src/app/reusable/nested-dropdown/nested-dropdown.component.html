@@ -1,0 +1,48 @@
+
+<form [formGroup]="form">
+    <h4>Nested Selects: Country-State-City</h4>
+    <table>
+        <tr>
+            <td>
+                <label>Country</label>
+            </td>
+            <td>
+                <label>State</label>
+            </td>
+            <td>
+                <label>City</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <select  [formControl]="country"  name="country">
+                <option *ngFor="let country of countries" [value]="country.name">
+                {{ country.name }}
+                </option>
+                </select>
+            </td>
+            <td>
+                <select  [formControl]="state"  name="state">
+                <option *ngFor="let state of states" [value]="state">
+                {{ state }}
+                </option>
+                </select>
+            </td>
+            <td>
+                <label>City</label>
+            </td>
+            <td>
+                <select  [formControl]="city"  name="city">
+                <option *ngFor="let city of cities" [value]="city">
+                {{ city }}
+                </option>
+                </select>
+            </td>
+
+        </tr>
+    </table>
+   
+    <p>Country: {{ country.value }}</p>
+    <p>State: {{ state.value }}</p>
+    <p>Cite: {{ city.value }}</p>
+  </form>
