@@ -8,7 +8,7 @@ import { AccountService } from '../accountservice';
 })
 export class AccountComponent implements OnInit {
   ngOnInit() {  }
-  amount:number;
+  amount:number=0;
 
   constructor(private svc: AccountService) {}
   

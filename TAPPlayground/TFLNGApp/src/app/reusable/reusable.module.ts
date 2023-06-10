@@ -15,6 +15,7 @@ import { AppService } from './aap.service';
 import { NestedDropdownComponent } from './nested-dropdown/nested-dropdown.component';
 import { CustomerlistDetailsComponent } from './customerlist-details/customerlist-details.component';
 import { CustomerService } from './customer.service';
+import { HoverableComponent } from './hoverable/hoverable.component';
 
 
 
@@ -29,7 +30,8 @@ import { CustomerService } from './customer.service';
     PaggingComponent,
     SortedListComponent,
     NestedDropdownComponent,
-    CustomerlistDetailsComponent
+    CustomerlistDetailsComponent,
+    HoverableComponent
   ],
   exports:[
     InsertComponent,
@@ -41,7 +43,8 @@ import { CustomerService } from './customer.service';
     PaggingComponent,
     SortedListComponent,
     NestedDropdownComponent,
-    CustomerlistDetailsComponent
+    CustomerlistDetailsComponent,
+    HoverableComponent
   ],
 providers:[ProductService,AppService,CustomerService],
 

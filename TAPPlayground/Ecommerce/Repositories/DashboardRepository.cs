@@ -8,7 +8,7 @@ namespace ECommerceApp.Repositories;
 public class DashboardRepository : IDashboardRepository
 {
 
-    public static string conString = "server=localhost;port=3306;user=root;password=Password;database=Ecommerce";
+    public static string conString = "server=localhost;port=3306;user=root;password=password;database=Ecommerce";
 
     // public List<object> GetProductsData(List<Product> products)
     // {
@@ -57,14 +57,14 @@ public class DashboardRepository : IDashboardRepository
         MySqlConnection connection = new MySqlConnection(conString);
         try
         {
-            string query = "SELECT orderdetails.product_id,products.title, SUM(orderdetails.quantity) * products.unit_price AS totalrevenue FROM orderdetails, products WHERE orderdetails.product_id = products.product_id GROUP BY product_id";
+            string query = "SELECT orderdetails.product_id,products.product_title, SUM(orderdetails.quantity) * products.unit_price AS totalrevenue FROM orderdetails, products WHERE orderdetails.product_id = products.product_id GROUP BY product_id";
             connection.Open();
             MySqlCommand command = new MySqlCommand(query, connection);
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
                 int id = int.Parse(reader["product_id"].ToString());
-                string title = reader["title"].ToString();
+                string title = reader["product_title"].ToString();
                 double totalrevenue = double.Parse(reader["totalrevenue"].ToString());
                 RevenueModel revenue = new RevenueModel
                 {

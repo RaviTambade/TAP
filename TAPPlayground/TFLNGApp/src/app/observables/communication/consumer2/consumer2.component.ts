@@ -9,8 +9,8 @@ import { MessageService } from '../../messageservice';
 })
 export class Consumer2Component implements OnInit {
 
-  message: string;
-  subscription: Subscription;
+  message: string|undefined;
+  subscription: Subscription|undefined;
 
   constructor(private messageService: MessageService) {  }
 
@@ -20,7 +20,8 @@ export class Consumer2Component implements OnInit {
    }
 
   ngOnDestroy() {
-    this.subscription.unsubscribe();
+    if(this.subscription !==undefined){
+      this.subscription.unsubscribe();
+    }
   }
-
 }

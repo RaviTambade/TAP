@@ -3,13 +3,13 @@ import { Subscription, Observable } from 'rxjs';
 import { MessageService } from '../../messageservice';
 
 @Component({
-  selector: 'app-detail',
+  selector: 'app-comm-detail',
   templateUrl: './detail.component.html',
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent implements OnInit,OnDestroy {
-  subscription: Subscription;
-  message: string;
+  subscription: Subscription|undefined;
+  message: string="";
 
   constructor(private messageService: MessageService) {  }
   
@@ -17,12 +17,15 @@ export class DetailComponent implements OnInit,OnDestroy {
   let theObservable:Observable<any> = this.messageService.getMessage();
   this.subscription =theObservable .subscribe(
     msg => { 
-      this.message = msg;
+      this.message = msg.text;
+      console.log(this.message);
       console.log(" Detail Component :event handler is called")
    });
   }
 
   ngOnDestroy() {
-    this.subscription.unsubscribe();
+    if(this.subscription!=undefined){
+      this.subscription.unsubscribe();
+    }
   }
 }

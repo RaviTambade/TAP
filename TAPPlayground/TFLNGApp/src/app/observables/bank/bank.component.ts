@@ -10,9 +10,9 @@ import { AccountService } from '../accountservice';
 export class BankComponent implements OnInit {
 
   package: any;
-  subscriptionTDS: Subscription;
-  subscriptionGST: Subscription;
-  subscriptionGiftTax: Subscription;
+  subscriptionTDS: Subscription|undefined;
+  subscriptionGST: Subscription|undefined;
+  subscriptionGiftTax: Subscription|undefined;
  
   constructor(private svc: AccountService) {  }
 
@@ -45,8 +45,16 @@ export class BankComponent implements OnInit {
    }
 
   ngOnDestroy() {
-    this.subscriptionTDS.unsubscribe();
-    this.subscriptionGST.unsubscribe();
-    this.subscriptionGiftTax.unsubscribe();
+    if (this.subscriptionTDS !== undefined) {
+      this.subscriptionTDS.unsubscribe();
+    }
+
+    if (this.subscriptionGST !== undefined) {
+      this.subscriptionGST.unsubscribe();
+    }
+
+    if (this.subscriptionGiftTax !== undefined) { 
+      this.subscriptionGiftTax.unsubscribe();
+    }
   }
 }
