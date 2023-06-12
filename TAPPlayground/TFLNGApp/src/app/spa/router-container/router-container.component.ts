@@ -7,9 +7,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RouterContainerComponent implements OnInit {
 
-  constructor() { }
+  loggedInStatus:boolean|undefined;
+ 
+  links:any=[];
 
-  ngOnInit() {
+  constructor(){
+    this.links=["home","about","services", "protected"];
+  }
+  convertToBoolean(result:string):boolean{
+    let status=false;
+    if(result=="true"){
+      status=true;
+    }
+    return status;
   }
 
+  ngOnInit() {
+    console.log("Router container component ngOnint is getting invoked");
+      let strStatus:string|null=localStorage.getItem("loggedInStatus");
+      console.log( " in routerocntainer strStatus ="+strStatus);
+      if(strStatus!=null){
+        this.loggedInStatus=true;
+        //this.convertToBoolean(strStatus);
+        console.log(this.loggedInStatus);
+      }
+
+  }
 }

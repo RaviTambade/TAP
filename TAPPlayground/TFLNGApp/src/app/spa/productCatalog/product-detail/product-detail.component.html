@@ -1,11 +1,12 @@
-<p>
-  product-detail
-</p>
-<div>
-  <p>Title: Gerbera</p>
-  <p>Description: The Best Wedding Flower</p>
-  <p>Unit Price: 5 rupees</p>
-  <p>Stocks Available: 5000</p>
+<h2>This is details component</h2>
+<hr/>
+<div *ngIf="product">
+  <label>sdfsdfsdfsd</label>
+  <p>Title: {{product.title}}</p>
+  <p>Description: {{product.description}}</p>
+  <p>Unit Price:{{product.unitPrice}} rupees</p>
+  <p>Stocks Available: {{product.quantity}}</p>
+  <p>Likes: {{product.likes}}</p>
   <p>Payment Term: Minimum 50% in Advanced while booking</p>
   <p>Develivery: Delevered at Door place within one day on booking</p>
 </div>

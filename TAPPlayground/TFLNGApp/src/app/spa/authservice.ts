@@ -6,6 +6,11 @@ export class AuthService {
       //Call rest api implemented by asp.net web api controller
     if (user === 'ravi' && password === 'seed') {
       localStorage.setItem('username', user);
+      let status = localStorage.getItem("loggedInStatus");
+      if(status=="false"){
+        console.log("changing localstorage value");
+        localStorage.setItem("loggedInStatus","true");
+      }
       return true;
     }
     return false;

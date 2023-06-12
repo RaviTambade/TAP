@@ -13,6 +13,11 @@ interface Country {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent  {
+export class AppComponent implements OnInit {
   title = 'frontend';
+
+ngOnInit(): void {
+  localStorage.setItem("loggedInStatus","false");
+
+}
 }

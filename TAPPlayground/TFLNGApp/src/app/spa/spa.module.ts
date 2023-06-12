@@ -14,10 +14,11 @@ import { AuthService } from './authservice';
 import { LoggedInGuard } from './loggedinguardservice';
 import { ProductListComponent } from './productCatalog/product-list/product-list.component';
 import { ProductCreateComponent } from './productCatalog/product-create/product-create.component';
-import { ProductDetailComponent } from './productCatalog/product-detail/product-detail.component';
+import { ProductDetailComponent } from '../spa/productCatalog/product-detail/product-detail.component';
 import { ProductUpdateComponent } from './productCatalog/product-update/product-update.component';
 import { ProductDeleteComponent } from './productCatalog/product-delete/product-delete.component';
 import { ServicesComponent } from './services/services.component';
+import { ProductService } from './product.service';
 
 
 export const childRoutes:Routes=[
@@ -40,7 +41,7 @@ const routes: Routes=
       {path: 'create', component: ProductCreateComponent},
       {path: 'lists/:id', component: ProductDetailComponent},
 
-      {path: 'addtocart/:id', component: ProductDetailComponent},///Paramterized Routing
+      {path: 'details/:id', component: ProductDetailComponent},///Paramterized Routing
       {path: 'update/:id', component: ProductUpdateComponent},
       {path: 'delete/:id', component: ProductDeleteComponent}
     ];
@@ -61,13 +62,14 @@ const routes: Routes=
                  ProductDetailComponent,
                  ProductCreateComponent,
                  ProductDeleteComponent,
-                 ProductUpdateComponent
+                 ProductUpdateComponent,
+              
                 ],
-  exports:[RouterContainerComponent],
+  exports:[RouterContainerComponent ],
   imports: [
     CommonModule,
     RouterModule.forRoot(routes)
   ],
-  providers:[AuthService,LoggedInGuard]
+  providers:[ProductService,AuthService,LoggedInGuard]
 })
 export class SPAModule { }

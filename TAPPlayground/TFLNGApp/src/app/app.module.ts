@@ -24,7 +24,7 @@ import { SPAModule } from './spa/spa.module';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-   CatalogModuleModule,
+    CatalogModuleModule,
     SharedModule,
     MembershipModule,
     GraphicsModule,

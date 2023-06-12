@@ -2,10 +2,12 @@
 <hr/>
 <a routerLink="home">Home</a> | 
 <a routerLink="services">Services</a> |
-<a routerLink="about">About us</a>| 
+<a *ngIf="loggedInStatus" routerLink="about">About us</a>| 
 <a routerLink="contact">Contact</a> |
 <a routerLink="dashboard">Dashboard</a> |
-<a routerLink="protected">Protected</a> |
+<a  *ngIf="loggedInStatus"  routerLink="protected">Protected</a> |
 <a [routerLink]="['/lists']">Products</a>
 
+
+<!--- Dynamic Content View-->
 <router-outlet></router-outlet>
