@@ -21,7 +21,7 @@
             <li>Git and GitHub</li>
             <li>Git Commands </li>
             <li>Git Workflow</li>
-    
+        </ul>
     </td>
 </tr>
 
