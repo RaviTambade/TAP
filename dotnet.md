@@ -45,10 +45,10 @@
 7. Lot of Live Interactions with mentor and team throughout the Learning Process 
 
 
-<b> Boot Camp is based on Project Based Collborative Learning</b>
-1. Project-based learning (PBL) involves participants designing, developing, and constructing hands-on solutions to a problem.
-2. Project-based learning is a student-centered pedagogy that involves a dynamic classroom approach in which it is believed that students acquire a deeper knowledge through active exploration of real-world challenges and problems.
-3. Project-based learning (PBL) is another collaborative, learner-centered instructional approach where students work in groups to construct their knowledge and gain mastery of the course content.
+<b> Boot Camp is based on Project Based Collborative Learning(PBL)</b>
+1. PBL involves participants designing, developing, and constructing hands-on solutions to a problem.
+2. PBL is a student-centered pedagogy that involves a dynamic classroom approach in which it is believed that students acquire a deeper knowledge through active exploration of real-world challenges and problems.
+3. PBL is another collaborative, learner-centered instructional approach where students work in groups to construct their knowledge and gain mastery of the course content.
 
 
 ### Boot Camp Contents
