@@ -4,18 +4,16 @@
 #### Mentor: Ravi Tambade (Microsoft Certified Trainer)
 
 
-<details>
-<summary>Objectives: </summary>
-    <ul>
-        <li>Reduce participants learning curve for Dot Net Full Stack Development skill.</li>
-        <li>Apply Bootcamp learned concepts with Handon under guidance of passionate Mentor</li>
-        <li>Build Full Stack Dotnet Apps using Web Technologies</li>
-        <li>Apply Design Principles, Design Patterns and Clean Code strategy</li>
-        <li>Follow Scrum Framework, Agile methodolgy every day in bootcamp for Project Learning</li>
-        <li>Deliver & Integrate Cloud ready Web App using API(REST API), Micro Services</li>
-        <li>Build self confidence to apply for a role of Dotnet FullStack Developer IT company</li>
-    </ul>
-</details>
+
+<b>Objectives:</b>
+- Reduce participants learning curve for Dot Net Full Stack Development skill.</li>
+- Apply Bootcamp learned concepts with Handon under guidance of passionate Mentor</li>
+- Build Full Stack Dotnet Apps using Web Technologies</li>
+- Apply Design Principles, Design Patterns and Clean Code strategy</li>
+- Follow Scrum Framework, Agile methodolgy every day in bootcamp for Project Learning</li>
+- Deliver & Integrate Cloud ready Web App using API(REST API), Micro Services</li>
+
+
 
 <details>
 <summary> Duration: 15 Weeks  ( 5 Days a week Mon-Fri) (9:30 am to 4:30 pm)</summary>
