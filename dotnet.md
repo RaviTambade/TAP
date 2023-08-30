@@ -52,15 +52,19 @@
 
 
 ### Boot Camp Contents
-<details>
-<summary>1.Software Engineering</summary>
-    <ul>
-    <li>Software Development Life Cycle</li>
-    <li>Software Requirements</li>
-    <li>Software Requirements Specification</li>
-    </ul>
-</details>     
-<details>
+
+<table>
+<tr>
+ <td><details>
+    <summary>1.Software Engineering</summary>
+        <ul>
+        <li>Software Development Life Cycle</li>
+        <li>Software Requirements</li>
+        <li>Software Requirements Specification</li>
+        </ul>
+    </details>     
+ </td>
+ <td><details>
 <summary>2.Collaborative Software Development</summary>  
        <ul>
         <li> Software Development Team</li>
@@ -68,7 +72,12 @@
         <li>Git and GitHub</li>
         <li>Git Commands </li>
         <li>Git Workflow</li>
-</details>
+</details> </td>
+</tr>
+</table>
+
+
+
 <details>
 <summary>3.Agile Methodology</summary>
     <ul>
