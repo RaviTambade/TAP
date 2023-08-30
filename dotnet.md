@@ -16,8 +16,7 @@
 
 
 <b> Duration: 15 Weeks  ( 5 Days a week Mon-Fri) (9:30 am to 4:30 pm)</b>
-     - Days : 75
-        - Hours: 450</li>
+- Days : 75 (Hours: 450)
         - 150 hours Mentor Delivery  (Lecture, Demonstration)
         - 300 hours Problem Solving, Coding, Building, Testing, Deployment, DevOps, .etc
 
