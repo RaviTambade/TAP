@@ -15,37 +15,28 @@
 
 
 
-<details>
-<summary> Duration: 15 Weeks  ( 5 Days a week Mon-Fri) (9:30 am to 4:30 pm)</summary>
-     <ol>
-        <li>Days : 75</li>
-        <li>Hours: 450</li>
-        <li>150 hours Mentor Delivery  (Lecture, Demonstration)</li>
-        <li>300 hours Problem Solving, Coding, Building, Testing, Deployment, DevOps, .etc</li>
-    </ol>
-</details>
+<b> Duration: 15 Weeks  ( 5 Days a week Mon-Fri) (9:30 am to 4:30 pm)</b>
+     - Days : 75
+        - Hours: 450</li>
+        - 150 hours Mentor Delivery  (Lecture, Demonstration)
+        - 300 hours Problem Solving, Coding, Building, Testing, Deployment, DevOps, .etc
 
-<details>
-<summary>Delivery Mode:30%-70% (Online Session-Lab) </summary>
-    <ol>
-        <li>Project Based Learning. Learn by Doing. </li>
-        <li>BootCamp would follow agile Continous Learning for CI/CD culture adopted by industries.</li>
-        <li>Continous Integration/ Continous Delivery (CI/CD) pipeline</li>
-    </ol>
-</details>
 
-<details>
-<summary>Prerequisite: Bachelors in Engg, MCA</summary> 
+<b>Delivery Mode:30%-70% (Online Session-Lab)</b>
+    - Project Based Learning. Learn by Doing.
+    - Internship would follow agile Continous Learning for CI/CD culture adopted by industries.
+    - Continous Integration/ Continous Delivery (CI/CD) pipeline
+
+<b>Prerequisite: Bachelors in Engg, MCA</b>
     1.  Bachelors in Engineering (BE, BTech) 
        1. Computers or Information Technology (IT), Electronics, Electronics & Telecommunications(E&TC)
        2. Electrical or Mechanical
        3. Masters in Computer Application (MCA) . 
     2. Basic Programming skill  will be added advantage but not compulsary
     3. Tryout mindset and eager to learn
-</details>
 
-<details>
-<summary>Deliverables: Access to Transflower Portal</summary>
+
+<b>Deliverables: Access to Transflower Portal</b>
      1. Access to recorded sessions
      2. Mentor prepared notes 
      3. Concept Visualized Digrams
@@ -53,14 +44,13 @@
      5. Access to private git hub repositories
      6. Case Study oriented, solved examples
      7. Lot of Live Interactions with mentor and team throughout the Learning Process 
-</details>
 
-<details>
-<summary> Boot Camp is based on Project Based Collborative Learning </summary>
+
+<b> Boot Camp is based on Project Based Collborative Learning</b>
     1. Project-based learning (PBL) involves participants designing, developing, and constructing hands-on solutions to a problem.
     2. Project-based learning is a student-centered pedagogy that involves a dynamic classroom approach in which it is believed that students acquire a deeper knowledge through active exploration of real-world challenges and problems.
     3. Project-based learning (PBL) is another collaborative, learner-centered instructional approach where students work in groups to construct their knowledge and gain mastery of the course content.
-</details>
+
 
 ### Boot Camp Contents
 <details>
