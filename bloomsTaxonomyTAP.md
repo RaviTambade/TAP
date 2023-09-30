@@ -1,5 +1,7 @@
 # TAP believes in Bloom's Taxonomy:
 
+<img src="/images/blooms-taxonomy.webp"/ >
+
 ## H𝗼𝘄 𝗕𝗹𝗼𝗼𝗺'𝘀 𝗧𝗮𝘅𝗼𝗻𝗼𝗺𝘆 𝗖𝗮𝗻 𝗛𝗲𝗹𝗽 𝗬𝗼𝘂 𝗟𝗲𝗮𝗿𝗻 𝗦𝗼𝗳𝘁𝘄𝗮𝗿𝗲 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗺𝗲𝗻𝘁?
 
 You may have heard about Bloom's taxonomy if you work as a software developer. It is a framework that divides cognitive abilities into lower-order and higher-order levels. You can enhance your learning process and do your goals using Bloom's taxonomy.
