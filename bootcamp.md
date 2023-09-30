@@ -35,7 +35,8 @@
             <li>Git and GitHub</li>
             <li>Git Commands </li>
             <li>Git Workflow</li>
-    
+        </ul>
+
 - <b>4.	Relational Database Management Systems</b>
     <ul>
         <li>RDBMS</li>
