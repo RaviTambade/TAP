@@ -208,7 +208,7 @@
         <li>Exploring differnt Testing Frameworks Jasmine, Karma, Nunit,etc. </li>
      </ul>
 
-- <b>15.Linux Operating System</b>
+- <b>16.Linux Operating System</b>
     <ul>
         <li>Installing Linux</li>
 	    <li>Basic Linux Commands</li>
@@ -219,7 +219,7 @@
 	    <li>Shell Scripting</li>
     </ul>
 
-- <b>16. Cloud Computing</b>
+- <b>17. Cloud Computing</b>
     <ul>
         <li>Introduction to Cloud</li>
 	    <li>Using Public Cloud (AWS, Azure, Google Cloud)</li>
