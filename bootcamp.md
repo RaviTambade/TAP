@@ -6,18 +6,22 @@
 
 <table>
 <tr>
-    <td> <b>1.Software Engineering </b>
-    - Software Development Life Cycle
-    - Software Requirements
-    - Software Requirements Specification
-    </td>
-
-    <td> <b>2.Collaborative Software Development</b>
-    - Software Development Team
-    - Source Control Tools
-    - Git and GitHub
-    - Git Commands
-    - Git Workflow
+ <td> <b>1.Software Engineering </b>
+        <ul>
+        <li>Software Development Life Cycle</li>
+        <li>Software Requirements</li>
+        <li>Software Requirements Specification</li>
+        </ul>
+   
+ </td>
+ <td> <b>2.Collaborative Software Development</b>
+        <ul>
+            <li> Software Development Team</li>
+            <li>Source Control Tools </li>
+            <li>Git and GitHub</li>
+            <li>Git Commands </li>
+            <li>Git Workflow</li>
+    
     </td>
 </tr>
 
@@ -32,7 +36,26 @@
     <li>Selenium IDE </li>
     </ul>
  </td>
- <td> <b>4.Relational Database Management Systems</b>
+ <td> <b>2.Collaborative Software Development</b>
+        <ul>
+            <li> Software Development Team</li>
+            <li>Source Control Tools </li>
+            <li>Git and GitHub</li>
+            <li>Git Commands </li>
+            <li>Git Workflow</li>
+    
+    </td>
+</tr>
+
+</table>
+
+
+
+<details>
+
+</details>
+<details>
+<summary>4.	Relational Database Management Systems</summary>
     <ul>
         <li>RDBMS</li>
         <li>Database Design ER Diagrams, Data Flow Diagrams</li>
@@ -47,11 +70,7 @@
         <li>NoSQL Databases</li>
         <li>Database as a Service</li>
     </ul>
-    </td>
-</tr>
-</table>
-
-
+</details>
 <details>
 <summary>5.	Essential C# Programming</summary>
     <ul>
