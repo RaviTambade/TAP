@@ -21,11 +21,11 @@
     
 - <b>3.Agile Methodology</b>
     <ul>
-    <li>Agile Manifesto</li>
-    <li>Scrum Framework</li>
-    <li>CI/CD Pipeline</li>
-    <li>DevOps Overview</li>
-    <li>Selenium IDE </li>
+        <li>Agile Manifesto</li>
+        <li>Scrum Framework</li>
+        <li>CI/CD Pipeline</li>
+        <li>DevOps Overview</li>
+        <li>Selenium IDE </li>
     </ul>
  
  - <b>2.Collaborative Software Development</b>
