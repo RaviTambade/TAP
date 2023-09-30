@@ -28,6 +28,4 @@ Here are some tips on how you can use Bloom's Taxonomy to Learn Software Develop
 
 - 𝗘𝗻𝗰𝗼𝘂𝗿𝗮𝗴𝗲 𝗰𝗼𝗹𝗹𝗮𝗯𝗼𝗿𝗮𝘁𝗶𝗼𝗻, peer review, and mentorship to support learning and development at all cognitive levels.
 
-- As you advance, 𝗽𝘂𝘁 𝘆𝗼𝘂𝗿𝘀𝗲𝗹𝗳 𝘁𝗼 𝘁𝗵𝗲 𝘁𝗲𝘀𝘁 and climb the levels. 
-
-Be sure to include more than recalling or comprehending what you studied.
+- As you advance, 𝗽𝘂𝘁 𝘆𝗼𝘂𝗿𝘀𝗲𝗹𝗳 𝘁𝗼 𝘁𝗵𝗲 𝘁𝗲𝘀𝘁 and climb the levels. Be sure to include more than recalling or comprehending what you studied.
