@@ -4,17 +4,14 @@
 
 ### Boot Camp Contents
 
-<table>
-<tr>
- <td> <b>1.Software Engineering </b>
+- <b>1.Software Engineering </b>
         <ul>
         <li>Software Development Life Cycle</li>
         <li>Software Requirements</li>
         <li>Software Requirements Specification</li>
         </ul>
    
- </td>
- <td> <b>2.Collaborative Software Development</b>
+- <b>2.Collaborative Software Development</b>
         <ul>
             <li> Software Development Team</li>
             <li>Source Control Tools </li>
@@ -22,12 +19,7 @@
             <li>Git Commands </li>
             <li>Git Workflow</li>
     
-    </td>
-</tr>
-
-
-<tr>
- <td> <b>3.Agile Methodology</b>
+- <b>3.Agile Methodology</b>
     <ul>
     <li>Agile Manifesto</li>
     <li>Scrum Framework</li>
@@ -35,8 +27,8 @@
     <li>DevOps Overview</li>
     <li>Selenium IDE </li>
     </ul>
- </td>
- <td> <b>2.Collaborative Software Development</b>
+ 
+ - <b>2.Collaborative Software Development</b>
         <ul>
             <li> Software Development Team</li>
             <li>Source Control Tools </li>
@@ -44,18 +36,7 @@
             <li>Git Commands </li>
             <li>Git Workflow</li>
     
-    </td>
-</tr>
-
-</table>
-
-
-
-<details>
-
-</details>
-<details>
-<summary>4.	Relational Database Management Systems</summary>
+- <b>4.	Relational Database Management Systems</b>
     <ul>
         <li>RDBMS</li>
         <li>Database Design ER Diagrams, Data Flow Diagrams</li>
@@ -70,9 +51,8 @@
         <li>NoSQL Databases</li>
         <li>Database as a Service</li>
     </ul>
-</details>
-<details>
-<summary>5.	Essential C# Programming</summary>
+ 
+- <b>5.	Essential C# Programming</b>
     <ul>
         <li> DotNet Core App Development</li>
         <li>Dotnet Core Developer Enviornment </li>
@@ -84,10 +64,9 @@
         <li>File I/O, JSON Serialization</li>
         <li>Reflection, Garbage Collection</li>
     </ul>
-</details> 
 
-<details>
-<summary>6.Database Connectivity</summary>
+- 
+<b>6.Database Connectivity</b>
         <ul>
             <li>database connectivity using C#</li>
             <li>CRUD operations using mysql connector</li>
@@ -99,18 +78,16 @@
             <li>ORM Migrations</li>
             <li>Building Data Access Logic Layer </li>
         </ul>
-</details> 
-<details>
-<summary>7.	Windows App Development Dot NET Core</summary>
+
+- <b>7.	Windows App Development Dot NET Core</b>
     <ull>
         <li>Using dotnet core CLI for Windows Application Development </li>
         <li>Event Driven Architecture and Forms </li>
         <li> Using Menus, Controls in .net core windows applications</li>
         <li>Building Windows Apps </li>
     </ul>
-</details> 
-<details>
-<summary>8.	Essential Web Technologies</summary>
+
+- <b>8.	Essential Web Technologies</b>
     <ul>
         <li>Web Application Architecture</li>
         <li>Web Taxanomy & Topologies</li>
@@ -124,9 +101,8 @@
         <li>Responsive User Inteface Framework BootStrap/ Material</li>
         <li>Building Interactive Web Site</li>
     </ul>
-</details> 
-<details>
-<summary>9.	Web App Development using ASP.NET Core</summary>
+
+- <b>9.	Web App Development using ASP.NET Core</b>
     <ul>
         <li>Web Application Development using ASP.NET CORE 7.0 </li>
         <li>Using .net CLI for Web Application Development </li>
@@ -148,9 +124,8 @@
         <li>Invoking Web API cors, HTTPClient</li>
         <li>Secure REST API</li>
     </ul>
-</details> 
-<details>
-<summary>10.Node JS</summary>
+
+- <b>10.Node JS</b>
     <ul>
         <li>Rise of JavaScript as Full Stack Programming Language today</li>
         <li>Node js as V8 JavaScript Runtime Engine</li>
@@ -168,9 +143,8 @@
         <li>Invoking Web API cors, HTTPClient</li>
         <li>Secure REST API</li>
     </ul>
-</details> 
-<details>
-<summary>11.React</summary>
+
+- <b>11.React</b>
     <ul>
         <li>Simple React JS App</li>
         <li>React JS build Enviornment</li>
@@ -183,9 +157,8 @@
         <li>Data Application Architecture Redux</li>
         <li>React Testing</li>
     </ul>
-</details>   
-<details>
-<summary>12.Angular</summary>
+
+- <b>12.Angular</b>
     <ul>
         <li>Angular CLI and Single Page Application</li>
         <li>Angular UI Architecture</li>
@@ -201,9 +174,8 @@
         <li>Single Page Application using Routing</li>
         <li>Child Routes, Secure Routes, Lazy loading, PreLoading</li>
      </ul>
-     </details>   
-<details>
-<summary>13.Applying Best PractiesUsing Clean Code Strategy</summary>
+
+- <b>13.Applying Best PractiesUsing Clean Code Strategy</b>
     <ul>
         <li>Crafting Software</li>
         <li>Importance of Framework, Design Patterns, Design Principles</li>
@@ -218,9 +190,8 @@
         <li>Testable Micro services</li>
         <li></li>
      </ul>
-  </details>   
-<details>
-<summary>14.Software Testing</summary>
+
+- <b>14.Software Testing</b>
      <ul>
         <li>Why Software Testing </li>
         <li> STLC vs SDLC</li>
@@ -235,9 +206,8 @@
         <li>Test Driven Development </li>
         <li>Exploring differnt Testing Frameworks Jasmine, Karma, Nunit,etc. </li>
      </ul>
- </details>   
-<details>
-<summary>15.Linux Operating System</summary>
+
+- <b>15.Linux Operating System</b>
     <ul>
         <li>Installing Linux</li>
 	    <li>Basic Linux Commands</li>
@@ -247,18 +217,16 @@
         <li>Crone Job</li>
 	    <li>Shell Scripting</li>
     </ul>
- </details>   
-<details>
-<summary>16. Cloud Computing</summary>
+
+- <b>16. Cloud Computing</b>
     <ul>
         <li>Introduction to Cloud</li>
 	    <li>Using Public Cloud (AWS, Azure, Google Cloud)</li>
 	    <li>IT Solution Deployment to on premise, hosted environment</li>
         <li>Virtualization </li>
     </ul>
- </details>   
-<details>
-<summary>17. Containerization</summary>
+
+- <b>17. Containerization</b>
     <ul>
         <li> Virtualization vs. Containerization</li>
         <li>Docker Engine & Docker Hub</li>
@@ -269,16 +237,15 @@
     </ul>
  </details>   
 <details>
-<summary>18.CI/CD Pipeline (DevOps)</summary>
+- <b>18.CI/CD Pipeline (DevOps)</b>
     <ul>
         <li>Git Actions & Git Workflow</li>
         <li>Setting up CI/CD pipeline</li>
         <li>Jenkins</li>
         <li>Azure DevOps</li>
     </ul>
- </details>   
-<details>
-<summary>19.Data Structures and Algorithms(DSA) using C#</summary>
+
+- <b>19.Data Structures and Algorithms(DSA) using C#</b>
     <ul>
         <li>DataStructure in real life</li>
         <li>DataSrcuture in .net</li>
@@ -294,8 +261,6 @@
         <li>Graphs</li>
         <li>Problem solving using Algorithms</li>
     </ul>
-</details>
-<details>
-<summary>20.Interview Preparation</summary>
 
- </details>   
+- <b>20.Interview Preparation</b>
+
