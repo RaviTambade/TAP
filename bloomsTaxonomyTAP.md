@@ -22,12 +22,12 @@ The six levels of Bloom's Taxonomy, in order of increasing cognitive complexity,
 
 Here are some tips on how you can use Bloom's Taxonomy to Learn Software Development:
 
-- 🔹 𝗦𝗲𝘁 𝗰𝗹𝗲𝗮𝗿 𝗹𝗲𝗮𝗿𝗻𝗶𝗻𝗴 𝗼𝗯𝗷𝗲𝗰𝘁𝗶𝘃𝗲𝘀 for yourself or your team that target different cognitive levels.
+- 𝗦𝗲𝘁 𝗰𝗹𝗲𝗮𝗿 𝗹𝗲𝗮𝗿𝗻𝗶𝗻𝗴 𝗼𝗯𝗷𝗲𝗰𝘁𝗶𝘃𝗲𝘀 for yourself or your team that target different cognitive levels.
 
-- 🔹 𝗪𝗼𝗿𝗸𝗶𝗻𝗴 𝘆𝗼𝘂𝗿 𝘄𝗮𝘆 𝘂𝗽 𝗳𝗿𝗼𝗺 𝘁𝗵𝗲 𝗹𝗼𝘄𝗲𝗿 𝗹𝗲𝘃𝗲𝗹𝘀 is a good strategy. Try to avoid attempting the higher levels before you have mastered the lower levels.
+- 𝗪𝗼𝗿𝗸𝗶𝗻𝗴 𝘆𝗼𝘂𝗿 𝘄𝗮𝘆 𝘂𝗽 𝗳𝗿𝗼𝗺 𝘁𝗵𝗲 𝗹𝗼𝘄𝗲𝗿 𝗹𝗲𝘃𝗲𝗹𝘀 is a good strategy. Try to avoid attempting the higher levels before you have mastered the lower levels.
 
-- 🔹 𝗘𝗻𝗰𝗼𝘂𝗿𝗮𝗴𝗲 𝗰𝗼𝗹𝗹𝗮𝗯𝗼𝗿𝗮𝘁𝗶𝗼𝗻, peer review, and mentorship to support learning and development at all cognitive levels.
+- 𝗘𝗻𝗰𝗼𝘂𝗿𝗮𝗴𝗲 𝗰𝗼𝗹𝗹𝗮𝗯𝗼𝗿𝗮𝘁𝗶𝗼𝗻, peer review, and mentorship to support learning and development at all cognitive levels.
 
-- 🔹 As you advance, 𝗽𝘂𝘁 𝘆𝗼𝘂𝗿𝘀𝗲𝗹𝗳 𝘁𝗼 𝘁𝗵𝗲 𝘁𝗲𝘀𝘁 and climb the levels. 
+- As you advance, 𝗽𝘂𝘁 𝘆𝗼𝘂𝗿𝘀𝗲𝗹𝗳 𝘁𝗼 𝘁𝗵𝗲 𝘁𝗲𝘀𝘁 and climb the levels. 
 
 Be sure to include more than recalling or comprehending what you studied.
