@@ -67,8 +67,7 @@
         <li>Reflection, Garbage Collection</li>
     </ul>
 
-- 
-<b>7.Database Connectivity</b>
+- <b>7.Database Connectivity</b>
         <ul>
             <li>database connectivity using C#</li>
             <li>CRUD operations using mysql connector</li>
