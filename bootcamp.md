@@ -81,7 +81,7 @@
         </ul>
 
 - <b>8.	Windows App Development Dot NET Core</b>
-    <ull>
+    <ul>
         <li>Using dotnet core CLI for Windows Application Development </li>
         <li>Event Driven Architecture and Forms </li>
         <li> Using Menus, Controls in .net core windows applications</li>
