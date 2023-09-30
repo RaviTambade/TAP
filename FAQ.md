@@ -39,10 +39,7 @@ Yes! With Transflower you’ll receive life time access to our career support an
 <summary>Will Transflower guarantee I'll get a job?</summary>
 While technology  is still growing–even since the economic changes due to COVID 2020–we know that there are a lot of concerns around getting hired after a bootcamp. While we don’t offer a job guarantee, we do promise to provide the best in the business career services and coaching. Our career services team will helps candidate during bootcamp, and after bootcamp once you’ve become an alumnus. Combined with our network of employer connections in the India and beyond, and a focus on equipping you to land your dream job through, you’ll have a full set of job-landing tools at your disposal. Your continous efforts of completing hands on, mini-projects, updation of Github repositories on time along with mentor technical guidance support would help in getting job opportunity in Information Technology companies in India.
 </details>
-<details>
-<summary>I'm, completely new to coding. Where should I start?</summary>
-We recommend you start with our Free Intro to Coding Workshops. These three-hour workshops cover the basics of JavaScript and are a great first step for learning how to code. The course is created for people with little-to-no coding experience. You can also attend one of our monthly Info Sessions. Our Info Sessions give you a chance to meet Transflower mentors and alumni, review curriculum. [It is estimated that 85 million computer-programming jobs will be left unfilled by 2030](https://www.kornferry.com/insights/this-week-in-leadership/talent-crunch-future-of-work). TAP FullStck Developer bootcamps like ours help fill that gap much more quickly than colleges can. Our team will help you through the process of learning FullStack Development Coding and mentor and support team helps you to prepare for a career you’ll love.
-</details>
+
 <details>
 <summary>Which bootcamp should I take?</summary>
 Great question. We know this one can slow people down. Here are a few things you can do to help you decide. 
