@@ -29,7 +29,7 @@
         <li>Selenium IDE </li>
     </ul>
  
- - <b>2.Collaborative Software Development</b>
+ - <b>4.Collaborative Software Development</b>
         <ul>
             <li> Software Development Team</li>
             <li>Source Control Tools </li>
@@ -38,7 +38,7 @@
             <li>Git Workflow</li>
         </ul>
 
-- <b>4.	Relational Database Management Systems</b>
+- <b>5.	Relational Database Management Systems</b>
     <ul>
         <li>RDBMS</li>
         <li>Database Design ER Diagrams, Data Flow Diagrams</li>
@@ -54,7 +54,7 @@
         <li>Database as a Service</li>
     </ul>
  
-- <b>5.	Essential C# Programming</b>
+- <b>6.	Essential C# Programming</b>
     <ul>
         <li> DotNet Core App Development</li>
         <li>Dotnet Core Developer Enviornment </li>
@@ -68,7 +68,7 @@
     </ul>
 
 - 
-<b>6.Database Connectivity</b>
+<b>7.Database Connectivity</b>
         <ul>
             <li>database connectivity using C#</li>
             <li>CRUD operations using mysql connector</li>
@@ -81,7 +81,7 @@
             <li>Building Data Access Logic Layer </li>
         </ul>
 
-- <b>7.	Windows App Development Dot NET Core</b>
+- <b>8.	Windows App Development Dot NET Core</b>
     <ull>
         <li>Using dotnet core CLI for Windows Application Development </li>
         <li>Event Driven Architecture and Forms </li>
@@ -89,7 +89,7 @@
         <li>Building Windows Apps </li>
     </ul>
 
-- <b>8.	Essential Web Technologies</b>
+- <b>9.	Essential Web Technologies</b>
     <ul>
         <li>Web Application Architecture</li>
         <li>Web Taxanomy & Topologies</li>
@@ -104,7 +104,7 @@
         <li>Building Interactive Web Site</li>
     </ul>
 
-- <b>9.	Web App Development using ASP.NET Core</b>
+- <b>10.	Web App Development using ASP.NET Core</b>
     <ul>
         <li>Web Application Development using ASP.NET CORE 7.0 </li>
         <li>Using .net CLI for Web Application Development </li>
@@ -127,7 +127,7 @@
         <li>Secure REST API</li>
     </ul>
 
-- <b>10.Node JS</b>
+- <b>11.Node JS</b>
     <ul>
         <li>Rise of JavaScript as Full Stack Programming Language today</li>
         <li>Node js as V8 JavaScript Runtime Engine</li>
@@ -146,7 +146,7 @@
         <li>Secure REST API</li>
     </ul>
 
-- <b>11.React</b>
+- <b>12.React</b>
     <ul>
         <li>Simple React JS App</li>
         <li>React JS build Enviornment</li>
@@ -160,7 +160,7 @@
         <li>React Testing</li>
     </ul>
 
-- <b>12.Angular</b>
+- <b>13.Angular</b>
     <ul>
         <li>Angular CLI and Single Page Application</li>
         <li>Angular UI Architecture</li>
@@ -177,7 +177,7 @@
         <li>Child Routes, Secure Routes, Lazy loading, PreLoading</li>
      </ul>
 
-- <b>13.Applying Best PractiesUsing Clean Code Strategy</b>
+- <b>14.Applying Best PractiesUsing Clean Code Strategy</b>
     <ul>
         <li>Crafting Software</li>
         <li>Importance of Framework, Design Patterns, Design Principles</li>
@@ -193,7 +193,7 @@
         <li></li>
      </ul>
 
-- <b>14.Software Testing</b>
+- <b>15.Software Testing</b>
      <ul>
         <li>Why Software Testing </li>
         <li> STLC vs SDLC</li>
@@ -237,8 +237,7 @@
         <li>Conatiner Orchestration using Kubernetes </li>
         <li>Microservices with Kubernetes </li>
     </ul>
- </details>   
-<details>
+
 - <b>18.CI/CD Pipeline (DevOps)</b>
     <ul>
         <li>Git Actions & Git Workflow</li>
@@ -265,4 +264,3 @@
     </ul>
 
 - <b>20.Interview Preparation</b>
-
