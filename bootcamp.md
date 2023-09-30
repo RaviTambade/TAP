@@ -18,6 +18,7 @@
             <li>Git and GitHub</li>
             <li>Git Commands </li>
             <li>Git Workflow</li>
+        </ul>
     
 - <b>3.Agile Methodology</b>
     <ul>
