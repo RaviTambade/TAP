@@ -1,9 +1,5 @@
 # Abhay Navale
 
-# BCS At 21, emshpere At 22: Meet Abhay Navale Who Has His Eyes Set Elsewhere
-
-Our country is full of inspiring stories, especially about youngsters who emerge from the rural parts of India and work their way up the ladder despite coming from poor backgrounds. One such story is of Abhay Navale.
-
 ## Who Is Abhay Navale?
 <img src=""/>
 
