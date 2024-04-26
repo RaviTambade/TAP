@@ -1,7 +1,7 @@
 
-### Success Story example for an intern in a developer role:
+### Such a proud moment for all of us!  & Thank you to Transflower team for inspiring us!:
 
-**Intern: Developer Intern**
+**Intern: Developer Intern @ TAP**
 
 **Projects**: Worked on developing a new feature for Transflower's Collaborative platform solutions.
 - <a href="https://github.com/RaviTambade/TFLAssessment.git">TFLAssessment</a>
