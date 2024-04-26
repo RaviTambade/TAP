@@ -1,9 +1,9 @@
 
 # TAP(Transflower Acceleration Program) KPI's:
 KPI is not Key Performance Indicator @Transflower, but KPI means:
-- Keep people interested
-- Keep people informed
-- Keep prople inspired
+- <b>Keep people interested</b>
+- <b>Keep people informed</b>
+- <b>Keep prople inspired</b>
 
 
 ## TAP Intern Success Stories
