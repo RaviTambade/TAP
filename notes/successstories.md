@@ -33,12 +33,14 @@ These success stories highlight the valuable contributions interns can make in v
 
 **Intern: Developer Intern**
 
-**Project**: Worked on developing a new feature for Transflower's Collaborative platform solutions.
+**Projects**: Worked on developing a new feature for Transflower's Collaborative platform solutions.
+- <a href="https://github.com/RaviTambade/TFLAssessment.git">TFLAssessment</a>
+- <a href="https://github.com/RaviTambade/TFLPortal.git">TFLPortal</a>
+- <a href="https://github.com/RaviTambade/EAgroServices.git">EAgree Services</a>
+- <a href="https://github.com/RaviTambade/E-Krushi-Project.git">EKrishi Portal</a>
+- <a href="https://github.com/RaviTambade/InventoryManagement.git">Inventory Management Portal</a>
 
-
-**Professional Experience: 1.2 Years**
-
-During my 1.2 years of professional experience, I've been involved in various aspects of software development, particularly focusing on requirement gathering, design system implementation, and database design for TFLAssessment, TFLPortal, Inventory Management Systems for Manifacturing WareHouse, the EKrushi portal and EAgro Services.
+During my TAP Internship (Project Readiness Program), I've been involved in various aspects of software development, particularly focusing on requirement gathering, design system implementation, and database design for TFLAssessment, TFLPortal, Inventory Management Systems for Manifacturing WareHouse, the EKrushi portal and EAgro Services.
 
 **Requirement Gathering and Design System**
 I have extensive experience in gathering requirements from stakeholders and translating them into actionable design specifications. For the Inventory Management System, TFLPortal portal, I conducted thorough interviews and discussions with clients to understand their needs and preferences. Based on these requirements, I developed comprehensive design systems that outlined the structure, functionality, and user interface elements of the applications.
