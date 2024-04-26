@@ -81,10 +81,8 @@ Becoming a full-stack developer in the .NET ecosystem involves mastering both fr
 3. **Serverless Computing**:
    - Learn about serverless computing concepts and how to build serverless applications with Azure Functions or AWS Lambda.
 
-### Resources:
-- Online Courses: Platforms like Pluralsight, Udemy, and Coursera offer comprehensive courses on .NET development and related technologies.
-- Official Documentation: Refer to Microsoft Docs for official documentation and tutorials on .NET and ASP.NET Core.
-- Community Resources: Join .NET communities, forums, and meetups to network with other developers and learn from their experiences.
-- Open-Source Projects: Contribute to open-source .NET projects on GitHub to gain practical experience and collaborate with other developers.
+
+ YOur can get more details about Dotnet Full Stack Developer Project Readiness Program here
+ <a href="https://github.com/RaviTambade/tap/blob/main/notes/bootcamp.md">Dotnet Full Stack Project Readiness Program</a>
 
 By following this roadmap and continuously learning and practicing, you can become a proficient .NET full-stack developer capable of building modern web applications from start to finish.
