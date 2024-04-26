@@ -1,7 +1,7 @@
 
 ### Such a proud moment for all of us! & Thank you to Transflower Team for inspiring us!
 ## A great Learning Experience.
-**Intern: Developer Intern @ TAP**
+**Tranflower Intern: Developer Intern @TAP**
 
 **Projects**: Worked on developing a new feature for Transflower's Collaborative platform solutions.
 - <a href="https://github.com/RaviTambade/TFLAssessment.git">TFLAssessment</a>
