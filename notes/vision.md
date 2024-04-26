@@ -6,11 +6,3 @@ This is for sure that every one of them wants to study and like to shape their c
 
 We have an old Indian mythology and concepts, where teachers used to adopt the students for their all round developments. The concept of adoption is necessary for the Mentorship. We  adopt students for a given skills sets and sharpens their skills with its well designed program structure.
 
-
-
-
-- [TAP sucess stories](https://github.com/RaviTambade/tap/blob/main/successstories.md)
-- [TAP belives in Bloom's Taxonomy](https://github.com/RaviTambade/tap/blob/main/bloomsTaxonomyTAP.md)
-- [Dot Net FullStack Developer Roadmap](https://github.com/RaviTambade/tap/blob/main/dotnetfullstack.md)
-- [Dot Net FullStack Boot Camp](https://github.com/RaviTambade/tap/blob/main/dotnet.md)
-- [Frequently Asked Questions(FAQ)](https://github.com/RaviTambade/tap/blob/main/FAQ.md)
