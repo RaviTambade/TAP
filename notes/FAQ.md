@@ -18,7 +18,8 @@
     - There are few latest technology boot camp sheduled as Week end batches for working professionals as well as individuals who need to upkill for those technologies.
 
 - How much do bootcamp cost ?
-    - Our standard tuition fees is 30000 Rs. Your commitment to growth and education deserves to be honored.
+    - Our standard tuition fees is <b>30000 Rs. only</b>.
+    - Your commitment to growth and education deserves to be honored.
 
 - Feeling sticker shock?
     - Our admissions team is ready to help you talk through your goals, options, and questions!
