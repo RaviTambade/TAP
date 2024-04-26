@@ -25,7 +25,11 @@
     - You can schedule a 15-minute 1:1 chat with them through email request of Whats app call, message.
 
 - Cay you help me get a tech job after I graduate?</summary>
-    - Yes! With Transflower you’ll receive life time access to our career support and alumni network. You’ll start working on your job hunt, and job-ready skills on week one! We support our students from the time they learn their very first line of code until they find a career they’ll love, even after they graduate! Strong network of students, companies who learned from  our mentor would help in getting connected. Your performance , commitment  matters a lot for taking advantages of these Job hunt opportunities.
+    - Yes! With Transflower you’ll receive life time access to our career support and alumni network. 
+    - You’ll start working on your job hunt, and job-ready skills on week one! 
+    - We support our students from the time they learn their very first line of code until they find a career they’ll love, even after they graduate! 
+    - Strong network of students, companies who learned from  our mentor would help in getting connected. 
+    - Your performance , commitment  matters a lot for taking advantages of these Job hunt opportunities.
 
 - Will Transflower guarantee I'll get a job?</summary>
     - While technology  is still growing–even since the economic changes due to COVID 2020–we know that there are a lot of concerns around getting hired after a bootcamp. 
