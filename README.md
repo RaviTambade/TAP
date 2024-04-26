@@ -1,5 +1,4 @@
 # TAP (Transflower Acceleration Program)
-<hr/>
 <img src="https://github.com/RaviTambade/tap/blob/main/images/TransflowerFarm.jpg"/>
 
 TAP (Transflower Accleration Program) is a  100% live Mentor Driven Project based learning Bootcamp. 
