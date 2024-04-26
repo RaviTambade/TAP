@@ -34,4 +34,4 @@ These success stories highlight the valuable contributions interns can make in v
     <li><a href="https://www.linkedin.com/in/pragati-bangar-538083274/">Prgati Bangar</a></li>
 </ol>
 
-<a href="https://github.com/RaviTambade/tap/blob/main/notes/dotnetfullstack.md">Intern Role in TAP</a>
+<a href="https://github.com/RaviTambade/tap/blob/main/notes/internrole.md">Intern Role in TAP</a>
