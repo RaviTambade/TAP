@@ -1,8 +1,9 @@
 # Frequently Asked Questions(FAQ)
 
- 
+
 - What is TAP? 
-    - TAP stands for Transflower Acceleration Program(TAP). It an Initive towards bridging the gap between Information Technology expectaions and latest Technology Skill Development of Freshers. TAP follows Project Based Learning Approach to build skillset of participants using Online Collaborative Enviornment. Transflower beleives in "Learning is not a destination but, it is a continuous journey". More than 25 years of Learning and Teaching experience at your service through Transflower to prepare candidate for FullStack Developer Role. Tap your potential. 
+    - TAP stands for Transflower Acceleration Program(TAP). 
+    - It an Initive towards bridging the gap between Information Technology expectaions and latest Technology Skill Development of Freshers. TAP follows Project Based Learning Approach to build skillset of participants using Online Collaborative Enviornment. Transflower beleives in "Learning is not a destination but, it is a continuous journey". More than 25 years of Learning and Teaching experience at your service through Transflower to prepare candidate for FullStack Developer Role. Tap your potential. 
 
     - TAP program prepares you to be ready for work from anywhere through Learn from anyWhere. It is 100% online, taught by live Mentor via online digital tools like Teams, Zoom , Google meet,etc. We request you to spend a time to know about TAP by reading [A Conversation between Mentor and Mentee](https://ravitambade.wordpress.com/2023/02/19/a-conversion-between-mentor-and-mentee/).
 
@@ -14,17 +15,17 @@
     - Our daytime program is 14 weeks and meets daily from 9:30 am – 5:30 pm. Our after-hours program is 28 weeks and meets from 6:30 pm – 10 pm on Mondays, Wednesdays, and Thursdays. There are few latest technology boot camp sheduled as Week end batches for working professionals as well as individuals who need to upkill for those technologies.
 
 - How much do bootcamp cost ?
-    Our standard tuition fees is 30000 Rs. Your commitment to growth and education deserves to be honored.
+    - Our standard tuition fees is 30000 Rs. Your commitment to growth and education deserves to be honored.
 
 - Feeling sticker shock?
     - Our admissions team is ready to help you talk through your goals, options, and questions!
     - You can schedule a 15-minute 1:1 chat with them through email request of Whats app call, message.
 
 - Cay you help me get a tech job after I graduate?</summary>
-    Yes! With Transflower you’ll receive life time access to our career support and alumni network. You’ll start working on your job hunt, and job-ready skills on week one! We support our students from the time they learn their very first line of code until they find a career they’ll love, even after they graduate! Strong network of students, companies who learned from  our mentor would help in getting connected. Your performance , commitment  matters a lot for taking advantages of these Job hunt opportunities.
+    - Yes! With Transflower you’ll receive life time access to our career support and alumni network. You’ll start working on your job hunt, and job-ready skills on week one! We support our students from the time they learn their very first line of code until they find a career they’ll love, even after they graduate! Strong network of students, companies who learned from  our mentor would help in getting connected. Your performance , commitment  matters a lot for taking advantages of these Job hunt opportunities.
 
 - Will Transflower guarantee I'll get a job?</summary>
-    While technology  is still growing–even since the economic changes due to COVID 2020–we know that there are a lot of concerns around getting hired after a bootcamp. While we don’t offer a job guarantee, we do promise to provide the best in the business career services and coaching. Our career services team will helps candidate during bootcamp, and after bootcamp once you’ve become an alumnus. Combined with our network of employer connections in the India and beyond, and a focus on equipping you to land your dream job through, you’ll have a full set of job-landing tools at your disposal. Your continous efforts of completing hands on, mini-projects, updation of Github repositories on time along with mentor technical guidance support would help in getting job opportunity in Information Technology companies in India.
+    - While technology  is still growing–even since the economic changes due to COVID 2020–we know that there are a lot of concerns around getting hired after a bootcamp. While we don’t offer a job guarantee, we do promise to provide the best in the business career services and coaching. Our career services team will helps candidate during bootcamp, and after bootcamp once you’ve become an alumnus. Combined with our network of employer connections in the India and beyond, and a focus on equipping you to land your dream job through, you’ll have a full set of job-landing tools at your disposal. Your continous efforts of completing hands on, mini-projects, updation of Github repositories on time along with mentor technical guidance support would help in getting job opportunity in Information Technology companies in India.
 
 - Which bootcamp should I take?
     Great question. We know this one can slow people down. Here are a few things you can do to help you decide. 
@@ -34,14 +35,14 @@
 
 
 - How is after-hours different than daytime?
-    Both after-hours and daytime programs follow the same curriculum, have amazing instructors, program managers, and career coaches. The only difference is the schedule. The after-hours program is 28 weeks and meets from 6:30pm-10pm  on Monday, Wednesday, and Thursday. The daytime program is 14 weeks and meets daily from 9am-5pm.
+    - Both after-hours and daytime programs follow the same curriculum, have amazing instructors, program managers, and career coaches. The only difference is the schedule. The after-hours program is 28 weeks and meets from 6:30pm-10pm  on Monday, Wednesday, and Thursday. The daytime program is 14 weeks and meets daily from 9am-5pm.
 
 - Who's your average student?
-    Our classrooms are filled with smart, tenacious people who are excited (and a bit nervous) to embark on a new journey into tech careers. Students come from a variety of professional backgrounds — from yoga instructors, healthcare professionals, to retail sales professionals and just about everything in between. We believe tech should reflect the diversity of the real world. We celebrate all backgrounds, races, ethnicities, orientations, and gender identities. Our affinity groups are a great way to connect with other people who share your walk of life. We strive to create a online collaborative, diverse classroom and if you’ve made it this far into the FAQ, you’ll fit right in.
+    - Our classrooms are filled with smart, tenacious people who are excited (and a bit nervous) to embark on a new journey into tech careers. Students come from a variety of professional backgrounds — from yoga instructors, healthcare professionals, to retail sales professionals and just about everything in between. We believe tech should reflect the diversity of the real world. We celebrate all backgrounds, races, ethnicities, orientations, and gender identities. Our affinity groups are a great way to connect with other people who share your walk of life. We strive to create a online collaborative, diverse classroom and if you’ve made it this far into the FAQ, you’ll fit right in.
  
 - What are you looking for in a candidate?
-    Our most successful students come to us with some, but not a ton, of programming experience. Many of our students have dabbled in code through online tutorials and courses through Youtube, Codecademy or Udacity. We’re looking for students who are smart, tenacious, resourceful and hardworking. It should go without saying, but an interest in coding everyday is a must. You’ve gotta like it!
-    We want candidates that are self-motivated and committed to the Transflower Acceleration Program (TAP). There will be assignments that have to be completed at night and over weekends, so candidates should be prepared to put in the necessary work to be successful. They also need to be punctual for every class and resourceful in how they complete coursework. Learning any new skill can become frustrating, so it’s important to see this opportunity as a welcome challenge, rather than a stress-inducing problem.
+    - Our most successful students come to us with some, but not a ton, of programming experience. Many of our students have dabbled in code through online tutorials and courses through Youtube, Codecademy or Udacity. We’re looking for students who are smart, tenacious, resourceful and hardworking. It should go without saying, but an interest in coding everyday is a must. You’ve gotta like it!
+    - We want candidates that are self-motivated and committed to the Transflower Acceleration Program (TAP). There will be assignments that have to be completed at night and over weekends, so candidates should be prepared to put in the necessary work to be successful. They also need to be punctual for every class and resourceful in how they complete coursework. Learning any new skill can become frustrating, so it’s important to see this opportunity as a welcome challenge, rather than a stress-inducing problem.
 
     To qualify for our bootcamps, an individual must be 18 years or older and have their Bacholors in Engineering or MCA, MCS.
 
