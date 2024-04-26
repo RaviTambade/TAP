@@ -14,7 +14,7 @@ During my involvement in various software development projects, I focused on req
 I gathered requirements from stakeholders and translated them into actionable design specifications. For projects like the Inventory Management System and TFLPortal, I conducted interviews and discussions with clients to understand their needs and preferences, developing comprehensive design systems to outline the structure, functionality, and user interface elements.
 
 **2. Database Design using RDBMS Concepts:**
-I designed well-structured database schemas using MySQL, focusing on entity-relationship modeling, defining tables, relationships, constraints, and ensuring data integrity for projects like TFLPortal, EKrushi portal, and Inventory Management System.
+I designed well-structured database schemas using MySQL, focusing on entity-relationship modeling, defining tables, relationships, constraints, and ensuring data integrity for projects like TFLAssessment, TFLPortal, EKrushi portal, and Inventory Management System.
 
 **3. Organizing Applications using Layered Architecture:**
 I organized applications using a layered architecture approach to ensure maintainability, scalability, and separation of concerns. This facilitated modular development, independent testing of components, and better organization of presentation, business logic, and data access layers.
@@ -38,6 +38,6 @@ Throughout development, I adhered to software design principles and coding conve
 I actively participated in team collaboration activities, including code reviews, pair programming, and knowledge sharing sessions. Additionally, I coordinated with cross-functional teams to validate that developed code aligned with client requirements and business objectives.
 
 **Impact:**
-My contributions to projects like the wishlist feature for e-commerce platforms resulted in significant improvements in user engagement and conversion rates. Positive feedback and recognition from the development team and management led to future opportunities and a full-time position as a Junior Developer.
+My contributions to projects like the wishlist feature for e-Krishi platforms resulted in significant improvements in user engagement and conversion rates. Positive feedback and recognition from the development team and management led to future opportunities and a full-time position as a Junior Developer.
 
 This summary highlights my experience and contributions in software development @Transflower, emphasizing key skills in requirement gathering, design, development, and collaboration, leading to successful project outcomes and career advancement opportunities.
