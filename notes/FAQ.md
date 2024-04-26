@@ -5,7 +5,8 @@
     - TAP stands for Transflower Acceleration Program(TAP). 
     - It an Initive towards bridging the gap between Information Technology expectaions and latest Technology Skill Development of Freshers. TAP follows Project Based Learning Approach to build skillset of participants using Online Collaborative Enviornment. Transflower beleives in "Learning is not a destination but, it is a continuous journey". More than 25 years of Learning and Teaching experience at your service through Transflower to prepare candidate for FullStack Developer Role. Tap your potential. 
 
-    - TAP program prepares you to be ready for work from anywhere through Learn from anyWhere. It is 100% online, taught by live Mentor via online digital tools like Teams, Zoom , Google meet,etc. We request you to spend a time to know about TAP by reading [A Conversation between Mentor and Mentee](https://ravitambade.wordpress.com/2023/02/19/a-conversion-between-mentor-and-mentee/).
+    - TAP program prepares you to be ready for work from anywhere through Learn from anyWhere. It is 100% online, taught by live Mentor via online digital tools like Teams, Zoom , Google meet,etc. 
+    - We request you to spend a time to know about TAP by reading [A Conversation between Mentor and Mentee](https://ravitambade.wordpress.com/2023/02/19/a-conversion-between-mentor-and-mentee/).
 
 - Are your bootcamps in-person or online?
     - Our bootcamps are 100% online, taught by live instructors via zoom. Online lectures, Demonstration, Hands- on are based on Project based Activities using Scrum Framework. Participants would get expereince of Learn from Anywhere for getting ready for Work from Anywhere.
