@@ -26,7 +26,7 @@
 
 - Cay you help me get a tech job after I graduate?
     - No! We at Transflower believe in capability building and skill enhancement of fresher. 
-    - Our students have earned their title and job throgh skill building and continous learning process, we(Transflower) play a catalyst role in thier Skill building process. 
+    - Our students have earned their title and job throgh skill building and continous learning process, we(Transflower) play a catalyst role in thier Skill building process. Please have a look at <a href="https://github.com/RaviTambade/tap/blob/main/successstories.md">success stories</a>.
     - We support our students from the time they learn their very first line of code until they find a career they’ll love, even after they graduate! 
     - Strong network of students, companies who learned from  our mentor would help in getting connected. 
     - Your performance, commitment  matters a lot for taking advantages of these Job hunt opportunities.
