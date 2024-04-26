@@ -82,7 +82,8 @@ Becoming a full-stack developer in the .NET ecosystem involves mastering both fr
    - Learn about serverless computing concepts and how to build serverless applications with Azure Functions or AWS Lambda.
 
 
- YOur can get more details about Dotnet Full Stack Developer Project Readiness Program here
+ You can get more details about Dotnet Full Stack Developer Project Readiness Program here
+ <hr/>
  <a href="https://github.com/RaviTambade/tap/blob/main/notes/bootcamp.md">Dotnet Full Stack Project Readiness Program</a>
 
-By following this roadmap and continuously learning and practicing, you can become a proficient .NET full-stack developer capable of building modern web applications from start to finish.
+By following Dotnet Full Stack Roadmap and continuously learning and practicing, you can become a proficient .NET full-stack developer capable of building modern web applications from start to finish.
