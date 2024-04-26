@@ -13,7 +13,9 @@
     - This boot camp does not only build technical skill but it also develop soft skill essential for Work from Home culture. Work from Home culture have been adopted by so many companies in these three years. Participants have to be ready for Work from Home as well as Hybrid Work culture mode. Instructors have more than  10 year of experience conducting online live session (Theroy as well as Labs).
 
 - What times of day are your bootcamps?
-    - Our daytime program is 14 weeks and meets daily from 9:30 am – 5:30 pm. Our after-hours program is 28 weeks and meets from 6:30 pm – 10 pm on Mondays, Wednesdays, and Thursdays. There are few latest technology boot camp sheduled as Week end batches for working professionals as well as individuals who need to upkill for those technologies.
+    - Our daytime program is 14 weeks and meets daily from 9:30 am – 5:30 pm. 
+    - Our after-hours program is 28 weeks and meets from 6:30 pm – 10 pm on Mondays, Wednesdays, and Thursdays. 
+    - There are few latest technology boot camp sheduled as Week end batches for working professionals as well as individuals who need to upkill for those technologies.
 
 - How much do bootcamp cost ?
     - Our standard tuition fees is 30000 Rs. Your commitment to growth and education deserves to be honored.
