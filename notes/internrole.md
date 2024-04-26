@@ -1,6 +1,6 @@
 
-### Such a proud moment for all of us!  & Thank you to Transflower team for inspiring us!:
-
+### Such a proud moment for all of us! & Thank you to Transflower Team for inspiring us!
+## A great Learning Experience.
 **Intern: Developer Intern @ TAP**
 
 **Projects**: Worked on developing a new feature for Transflower's Collaborative platform solutions.
