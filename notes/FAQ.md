@@ -1,7 +1,6 @@
 # Frequently Asked Questions(FAQ)
 
-
-- What is TAP? 
+- <b>What is TAP? </b>
     - TAP stands for Transflower Acceleration Program(TAP). 
     - It an Initive towards bridging the gap between Information Technology expectaions and latest Technology Skill Development of Freshers. TAP follows Project Based Learning Approach to build skillset of participants using Online Collaborative Enviornment. Transflower beleives in "Learning is not a destination but, it is a continuous journey". More than 25 years of Learning and Teaching experience at your service through Transflower to prepare candidate for FullStack Developer Role. Tap your potential. 
 
@@ -29,7 +28,9 @@
     - Yes! With Transflower you’ll receive life time access to our career support and alumni network. You’ll start working on your job hunt, and job-ready skills on week one! We support our students from the time they learn their very first line of code until they find a career they’ll love, even after they graduate! Strong network of students, companies who learned from  our mentor would help in getting connected. Your performance , commitment  matters a lot for taking advantages of these Job hunt opportunities.
 
 - Will Transflower guarantee I'll get a job?</summary>
-    - While technology  is still growing–even since the economic changes due to COVID 2020–we know that there are a lot of concerns around getting hired after a bootcamp. While we don’t offer a job guarantee, we do promise to provide the best in the business career services and coaching. Our career services team will helps candidate during bootcamp, and after bootcamp once you’ve become an alumnus. Combined with our network of employer connections in the India and beyond, and a focus on equipping you to land your dream job through, you’ll have a full set of job-landing tools at your disposal. Your continous efforts of completing hands on, mini-projects, updation of Github repositories on time along with mentor technical guidance support would help in getting job opportunity in Information Technology companies in India.
+    - While technology  is still growing–even since the economic changes due to COVID 2020–we know that there are a lot of concerns around getting hired after a bootcamp. 
+    - While we don’t offer a job guarantee, we do promise to provide the best in the business career services and coaching. Our career services team will helps candidate during bootcamp, and after bootcamp once you’ve become an alumnus. Combined with our network of employer connections in the India and beyond, and a focus on equipping you to land your dream job through, you’ll have a full set of job-landing tools at your disposal. 
+    - Your continous efforts of completing hands on, mini-projects, updation of Github repositories on time along with mentor technical guidance support would help in getting job opportunity in Information Technology companies in India.
 
 - Which bootcamp should I take?
     - Great question. We know this one can slow people down. Here are a few things you can do to help you decide. 
@@ -60,20 +61,18 @@
 
 
 - What computer equipment do I need for bootcamp?
-    Great question! In short, you’ll need good laptop. A second monitor/TV/tablet will really help you out. You’ll need a Windows, Mac, or Linux computer. ChromeOS does not support all the software you will need. If you want to use a Linux computer, know that there will be slight differences between your software and what you see on teacher screens. Windows is the best platform for a .NET Bootcamp. You can use a Mac in a .NET Bootcamp, but you will need to install Windows on it using Apple Boot Camp
+    - Great question! In short, you’ll need good laptop. A second monitor/TV/tablet will really help you out. You’ll need a Windows, Mac, or Linux computer. ChromeOS does not support all the software you will need. If you want to use a Linux computer, know that there will be slight differences between your software and what you see on teacher screens. Windows is the best platform for a .NET Bootcamp. You can use a Mac in a .NET Bootcamp, but you will need to install Windows on it using Apple Boot Camp
 
-- Specific laptop specs
-    <b>CPU:</b> 
-    <p>Minimum: At least a dual-core 2Ghz or higher (Intel i3/i5/i7 or AMD equivalent)</p>
-    <p>Recommended: At least quad-core (4 cores) Intel i5 or i7, AMD Ryzen 5/7/9, or (Mac) M1></p>
-    <b>RAM:</b> 
-    <p>8 GB or more is ideal </p>
-    <b>Storage:</b> 
-    <p>Please make sure you have at least 15GB free space for software and projects. </p>
-    <p>A Solid State Drive (SSD) recommended for better performance.</p>
-    <b>Display: </b>
-    <p>A 12-inch screen with 1366×768 resolution will serve you well</p>
-    <p>Second Monitor: For remote bootcamps, a second screen is recommended–if you don’t have a monitor for a second screen, you could use a television or potentially a tablet. Remember it is not essential to have second monitor</p>
+- <b>Specific laptop specs<b>
+    - CPU:Minimum: At least a dual-core 2Ghz or higher (Intel i3/i5/i7 or AMD equivalent)
+    - Recommended: At least quad-core (4 cores) Intel i5 or i7, AMD Ryzen 5/7/9, or (Mac) M1
+    - RAM: 8 GB or more is ideal
+    - Storage: Please make sure you have at least 15GB free space for software and projects.A Solid State Drive (SSD) recommended for better performance.
+    - Display:
+        - A 12-inch screen with 1366×768 resolution will serve you well</p>
+        - Second Monitor: For remote bootcamps, a second screen is recommended–if you don’t have a monitor for a second screen, you could use a television or potentially a tablet. Remember it is not essential to have second monitor</p>
 
-- <b><u>How do I apply?</u></b>
-    It’s easy—start by filling out our application form. The form will be shred to your gmail id. Do send email with subject  TAP Fullstack enquiry to <b>ravi.tambade@transflower.in</b> or what app message to <b>9881735801</b>. We would send you application form link to your gmail id. Once we receive your application form submitted, the Transflower team reviews your responses and selects a limited number of candidates for a video interview. This process will ensure your honest and keen interest in TAP. Then, you’ll be notified of your admission decision.
+- How do I apply?
+    - It’s easy—start by filling out our application form. The form will be shred to your gmail id. Do send email with subject  TAP Fullstack enquiry to <b>ravi.tambade@transflower.in</b> or what app message to <b>9881735801</b>. We would send you application form link to your gmail id. Once we receive your application form submitted, the Transflower team reviews your responses and selects a limited number of candidates for a video interview. This process will ensure your honest and keen interest in TAP. Then, you’ll be notified of your admission decision.
+
+### Transflower at your service
