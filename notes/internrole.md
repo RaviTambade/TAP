@@ -4,11 +4,7 @@
 **Tranflower Intern: Developer Intern @TAP**
 
 **Projects**: Worked on developing a new feature for Transflower's Collaborative platform solutions.
-- <a href="https://github.com/RaviTambade/TFLAssessment.git">TFLAssessment</a>
-- <a href="https://github.com/RaviTambade/TFLPortal.git">TFLPortal</a>
-- <a href="https://github.com/RaviTambade/EAgroServices.git">EAgree Services</a>
-- <a href="https://github.com/RaviTambade/E-Krushi-Project.git">EKrishi Portal</a>
-- <a href="https://github.com/RaviTambade/InventoryManagement.git">Inventory Management Portal</a>
+- <a href="https://github.com/RaviTambade/TFLAssessment.git">TFLAssessment</a> ,  <a href="https://github.com/RaviTambade/TFLPortal.git">TFLPortal</a>, <a href="https://github.com/RaviTambade/EAgroServices.git">EAgree Services</a>, <a href="https://github.com/RaviTambade/E-Krushi-Project.git">EKrishi Portal</a>, <a href="https://github.com/RaviTambade/InventoryManagement.git">Inventory Management Portal</a>, etc.
 
 **Summary:**
 
