@@ -7,16 +7,7 @@ TAP (Transflower Accleration Program) is a  100% live Mentor Driven Project base
 - Personalized Mentoring Project Readiness Program for individual with Collaborative online learning culture.
 - Learn from Home like work from Home.
 
-
-
-### TAP KPI's
-KPI is not Key Performance Indicator @Transflower, but KPI means:
-- Keep people interested
-- Keep people informed
-- Keep prople inspired
-
-<a href="https://github.com/RaviTambade/tap/blob/main/successstories.md">TAP Interns Success Stories</a> 
-<a href="https://github.com/RaviTambade/tap/blob/main/successstories.md">Vision</a> 
-<a href="https://github.com/RaviTambade/tap/blob/main/notes/dotnetfullstack.md">.NET FullStack Development</a>
-
-
+#### Tap your Potential
+- <a href="https://github.com/RaviTambade/tap/blob/main/successstories.md">TAP Interns Success Stories</a> 
+- <a href="https://github.com/RaviTambade/tap/blob/main/successstories.md">Vision</a> 
+- <a href="https://github.com/RaviTambade/tap/blob/main/notes/dotnetfullstack.md">.NET FullStack Development</a>
