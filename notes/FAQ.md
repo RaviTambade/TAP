@@ -28,11 +28,10 @@
     - While technology  is still growing–even since the economic changes due to COVID 2020–we know that there are a lot of concerns around getting hired after a bootcamp. While we don’t offer a job guarantee, we do promise to provide the best in the business career services and coaching. Our career services team will helps candidate during bootcamp, and after bootcamp once you’ve become an alumnus. Combined with our network of employer connections in the India and beyond, and a focus on equipping you to land your dream job through, you’ll have a full set of job-landing tools at your disposal. Your continous efforts of completing hands on, mini-projects, updation of Github repositories on time along with mentor technical guidance support would help in getting job opportunity in Information Technology companies in India.
 
 - Which bootcamp should I take?
-    Great question. We know this one can slow people down. Here are a few things you can do to help you decide. 
-    1. Keep in mind it’s a matter of preference, there is no right or wrong. Search for jobs in web development that include "front end", "web development" "JavaScript" or "back end" or "C# .NET" or "Java" or "Python" out of the jobs you find, note which ones appeal to you the most. Some people look for employers they want to work for and note what jobs they hire for the most.
-    2. Attend one of our many events! Info sessions, coding workshops, and our other monthly events are great places for you to get to know the lay of the land.
-    3. Take a workshop! They’re taught by bootcamp graduates who once asked the same question. They make coding un-intimidating and can answer your career questions along the way.
-
+    - Great question. We know this one can slow people down. Here are a few things you can do to help you decide. 
+        1. Keep in mind it’s a matter of preference, there is no right or wrong. Search for jobs in web development that include "front end", "web development" "JavaScript" or "back end" or "C# .NET" or "Java" or "Python" out of the jobs you find, note which ones appeal to you the most. Some people look for employers they want to work for and note what jobs they hire for the most.
+        2. Attend one of our many events! Info sessions, coding workshops, and our other monthly events are great places for you to get to know the lay of the land.
+        3. Take a workshop! They’re taught by bootcamp graduates who once asked the same question. They make coding un-intimidating and can answer your career questions along the way.
 
 - How is after-hours different than daytime?
     - Both after-hours and daytime programs follow the same curriculum, have amazing instructors, program managers, and career coaches. The only difference is the schedule. The after-hours program is 28 weeks and meets from 6:30pm-10pm  on Monday, Wednesday, and Thursday. The daytime program is 14 weeks and meets daily from 9am-5pm.
