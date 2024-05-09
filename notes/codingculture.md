@@ -28,12 +28,7 @@ A strong coding culture at Transflower(TAP) typically fosters:
 A healthy coding culture plays a crucial role in driving productivity, creativity, and satisfaction among developers, ultimately leading to the successful delivery of high-quality software products.
 
 Let us have a look at  Git repositories created by Transflower and contributed by Transflower Interns
-- [TFLPortal](https://github.com/RaviTambade/TFLPortal.git)
-- [TFLAssessment](https://github.com/RaviTambade/TFLAssessment.git)
-- [EAgroServices](https://github.com/RaviTambade/EAgroServices.git)
-- [TFLAssessment](https://github.com/RaviTambade/TFLAssessment.git)
-- [Inventory Management](https://github.com/RaviTambade/InventoryManagement.git)
-- [TAPECommerce](https://github.com/RaviTambade/TAPECommerce.git)
+[TFLPortal](https://github.com/RaviTambade/TFLPortal.git), [TFLAssessment](https://github.com/RaviTambade/TFLAssessment.git), [EAgroServices](https://github.com/RaviTambade/EAgroServices.git), [TFLAssessment](https://github.com/RaviTambade/TFLAssessment.git), [Inventory Management](https://github.com/RaviTambade/InventoryManagement.git), [TAPECommerce](https://github.com/RaviTambade/TAPECommerce.git)
 
 Sharing is caring. Building a strong coding culture in a software development team requires deliberate effort and a focus on fostering collaboration, learning, and continuous improvement. Here are some steps we are following  in building a positive coding culture at Transflower Acceleration Program (TAP):
 
