@@ -2,9 +2,9 @@
 # TAP Intern's Success Stories:
 <hr/>
 At Transflower <b>KPI</b> is not Key Performance Indicator, but KPI means:
-<p><b>Keep people interested</b></p>
-<p><b>Keep people informed</b></p>
-<p><b>Keep prople inspired</b></p>
+-- Keep people interested
+-- Keep people informed
+-- Keep prople inspired
 
 Success stories of TAP interns in the field of Information Technology (IT) can vary widely depending on their roles, projects, and contributions. Here are a few  success stories of Transflower interns to illustrate the potential impact an intern can have in IT:
 
