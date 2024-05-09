@@ -1,6 +1,5 @@
 
 # TAP Intern's Success Stories:
-<hr/>
 At Transflower <b>KPI</b> is not Key Performance Indicator, but KPI means:
  <ol>
     <li>Keep people interested</li>
