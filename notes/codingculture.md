@@ -1,7 +1,9 @@
 #  Coding Culture at TAP
-A Good Developer always beleive in Value System in Software Development. Development skills are based on set of values absorbe during learning curve. Coding culture at <b>Transflower Acceleration Program (TAP) </b> refers to the set of values, practices, and norms that govern how software development is approached within an organization or community. It encompasses various aspects such as collaboration, communication, coding standards, tools, methodologies, and attitudes towards problem-solving and innovation.
 
-A strong coding culture at Transflower typically fosters:
+### Transflower Acceleration Program (TAP)
+A Good Developer always beleive in Value System in Software Development. Development skills are based on set of values absorbe during learning curve. Coding culture at <b>Transflower Acceleration Program (TAP)</b> refers to the set of values, practices, and norms that govern how software development is approached within an organization or community. It encompasses various aspects such as collaboration, communication, coding standards, tools, methodologies, and attitudes towards problem-solving and innovation.
+
+A strong coding culture at Transflower(TAP) typically fosters:
 
 1. <b>Collaboration</b>: Encouraging teamwork and open communication among developers, designers, testers, and other stakeholders.
 
