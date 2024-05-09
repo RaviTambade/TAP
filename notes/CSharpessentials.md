@@ -1,3 +1,5 @@
+# C# Essentials
+
 Learning C# programming can be broken down into several steps, starting from the basics and gradually progressing to more advanced topics. Below is a step-by-step guide to learning C# programming:
 
 ### Step 1: Getting Started

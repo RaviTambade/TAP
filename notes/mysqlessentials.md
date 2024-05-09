@@ -1,3 +1,5 @@
+# MySql Essentials
+
 Learning MySQL database programming involves understanding database concepts, SQL syntax, and interacting with MySQL databases using programming languages such as PHP, Python, or Java. Below is a step-by-step guide to learning MySQL database programming:
 
 ### Step 1: Understanding Database Concepts

@@ -1,3 +1,5 @@
+# ASP.NET Core Essentials
+
 Learning ASP.NET Core involves understanding the fundamentals of web development with ASP.NET Core, including building web applications, APIs, and services. Below is a step-by-step guide to learning ASP.NET Core:
 
 ### Step 1: Setup Development Environment

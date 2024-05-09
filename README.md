@@ -22,4 +22,5 @@ TAP (Transflower Accleration Program) is a  100% live Mentor Driven Project base
 - [TAP belives in Bloom's Taxonomy](https://github.com/RaviTambade/tap/blob/main/notes/bloomsTaxonomyTAP.md)
 - [Dot Net FullStack Developer Roadmap](https://github.com/RaviTambade/tap/blob/main/notes/dotnetfullstack.md)
 - [Dot Net FullStack Boot Camp](https://github.com/RaviTambade/tap/blob/main/notes/dotnet.md)
+- [Coding culture at TAP](https://github.com/RaviTambade/tap/blob/main/notes/codingculture.md)
 - [Frequently Asked Questions(FAQ)](https://github.com/RaviTambade/tap/blob/main/notes/FAQ.md)

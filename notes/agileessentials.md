@@ -1,3 +1,5 @@
+# Agile Methodology Essentials
+
 Implementing the Agile methodology involves a series of steps aimed at fostering collaboration, adaptability, and iterative development. Below is a step-by-step guide to implementing Agile:
 
 ### Step 1: Educate Team Members

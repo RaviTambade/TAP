@@ -1,3 +1,5 @@
+# jQuery Essentials
+
 Learning jQuery involves understanding the basics of JavaScript and then progressing to jQuery's syntax, methods, and features for simplifying client-side web development. Below is a step-by-step guide to learning jQuery:
 
 ### Step 1: Understanding JavaScript Basics
