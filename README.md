@@ -14,6 +14,7 @@ TAP (Transflower Accleration Program) is a  100% live Mentor Driven Project base
 - [Vision](https://github.com/RaviTambade/tap/blob/main/notes/vision.md)
 - [Sucess Stories](https://github.com/RaviTambade/tap/blob/main/notes/successstories.md)
 - [Coding culture at TAP](https://github.com/RaviTambade/tap/blob/main/notes/codingculture.md)
+- [Difference between Indian students and aborad students](https://github.com/RaviTambade/tap/blob/main/notes/india_abroad_learning.md)
 - [Bloom's Taxonomy](https://github.com/RaviTambade/tap/blob/main/notes/bloomsTaxonomyTAP.md)
 - [Dot Net FullStack Developer Roadmap](https://github.com/RaviTambade/tap/blob/main/notes/dotnetfullstack.md)
 - [Frequently Asked Questions(FAQ)](https://github.com/RaviTambade/tap/blob/main/notes/FAQ.md)
