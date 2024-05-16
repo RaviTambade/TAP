@@ -38,10 +38,3 @@ We at Transflower working on problem to solve last from three years. And it's he
 <a href="https://ravitambade.wordpress.com/2023/02/">4'cs for Employablility</a>
 
 learn, unlearn and relearn.
-
-
-Tap your potential.
-
-
-Transflower
-, Mentor as a Service.
