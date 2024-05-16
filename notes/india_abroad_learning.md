@@ -28,14 +28,22 @@ The difference between Indian students learning software development and their c
 Event though, there may be differences in educational approaches between Indian and abroad software learning students, both groups can benefit from focusing on practical, project-based learning, staying updated with industry trends, and actively participating in networking and open source communities.
 
 We at Transflower working on problem to solve last from three years. And it's helping to build 4'cs in students.
+
+
 - Creativity
 - Collaboration
 - Communication
 - Critical Thinking
 
 <a href="https://ravitambade.wordpress.com/2023/02/">4'cs for Employablility</a>
+
+
 Keep learning , unlearning and relearning.
+
+
 Tap your potential.
+
+
 Transflower
 Mentor as a Service
 Sharing is caring.
