@@ -29,6 +29,7 @@ These success stories highlight the valuable contributions interns can make in v
     <li><a href="https://www.linkedin.com/in/rohit-mangale-139323205/">Rohit Mangale</a></li>
     <li><a href="https://www.linkedin.com/in/akash-ajab-a3237b21b/">Akash Ajab</a></li>
     <li><a href="https://www.linkedin.com/in/pragati-bangar-538083274/">Prgati Bangar</a></li>
+    <li><a href="https://www.linkedin.com/in//">Bhupendra Walhekar</a></li>
 </ol>
 
 <a href="https://github.com/RaviTambade/tap/blob/main/notes/internrole.md">Intern Role in TAP</a>
