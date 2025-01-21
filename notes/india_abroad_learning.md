@@ -4,7 +4,7 @@ The difference between Indian students learning software development and their c
 
 **Aborad:**
 - Emphasis on project-based learning: 
-Students focus on creating real-world projects, often through participation in hackathons. They collaborate with peers, work on projects collaboratively, and learn by solving practical problems.
+<p>Students focus on creating real-world projects, often through participation in hackathons. They collaborate with peers, work on projects collaboratively, and learn by solving practical problems.</p>
 - Hands-on experience: 
 Students graduate with several completed projects, showcasing their skills in software development. They demonstrate their contributions and the impact of their projects on the market or specific industries.
 - Grading based on project ideas: 
