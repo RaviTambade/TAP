@@ -37,5 +37,5 @@ We at Transflower working on problem to solve last from three years. In todays d
 - Collaboration
 - Communication
 - Critical Thinking
-<a href="https://ravitambade.wordpress.com/2023/02/">4'cs for Employablility</a>
-learn, unlearn and relearn.
+<p><a href="https://ravitambade.wordpress.com/2023/02/">4'cs for Employablility</a> </p>
+<p>learn, unlearn and relearn.</p>
