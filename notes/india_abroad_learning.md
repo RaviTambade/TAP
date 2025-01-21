@@ -1,24 +1,29 @@
-It is a great experience of 25 years in learning and teaching IT companies,instituions,IT Finishing schools. 
+# Growth always demands change. 
 
-Growth always demands change. 
-
-Learn, unlearn and relearn.
+## Learn, unlearn and relearn.
 
 I would like to share my perspective and experience gained over years. This learning experience is helping me to keep working on Collaborative Learning at Transflower through Transflower Acceleration Program(TAP). 
 
 The difference between Indian students learning software development and their counterparts aborad is indeed significant. Love to share a breakdown based on observation, learning experience:
 
 **Aborad:**
-- Emphasis on project-based learning: Students focus on creating real-world projects, often through participation in hackathons. They collaborate with peers, work on projects collaboratively, and learn by solving practical problems.
-- Hands-on experience: Students graduate with several completed projects, showcasing their skills in software development. They demonstrate their contributions and the impact of their projects on the market or specific industries.
-- Grading based on project ideas: Evaluation criteria may include grading based on the originality and execution of project ideas. Students are encouraged to build applications, games, or websites from scratch using specific tech stacks.
-- Integration of DevOps and CI/CD: Students are expected to have knowledge of DevOps, Kubernetes, and CI/CD pipelines in addition to front-end or back-end development skills.
+- Emphasis on project-based learning: 
+Students focus on creating real-world projects, often through participation in hackathons. They collaborate with peers, work on projects collaboratively, and learn by solving practical problems.
+- Hands-on experience: 
+Students graduate with several completed projects, showcasing their skills in software development. They demonstrate their contributions and the impact of their projects on the market or specific industries.
+- Grading based on project ideas: 
+Evaluation criteria may include grading based on the originality and execution of project ideas. Students are encouraged to build applications, games, or websites from scratch using specific tech stacks.
+- Integration of DevOps and CI/CD: 
+Students are expected to have knowledge of DevOps, Kubernetes, and CI/CD pipelines in addition to front-end or back-end development skills.
 
 **India:**
 - Emphasis on theoretical learning: Students often rely on taking notes and learning from textbooks or online courses. The focus is more on understanding coding concepts rather than practical application.
-- Lack of project-based learning culture: The educational system may not prioritize project-based learning or provide opportunities for collaborative project work.
-- Limited grading based on project ideas: Few colleges grade students based on their project ideas or originality. The emphasis may be more on theoretical understanding rather than practical execution.
-- Traditional focus on DSA: While data structures and algorithms (DSA) are essential for interviews, there is debate about their relevance in real-world software development.
+- Lack of project-based learning culture: 
+The educational system may not prioritize project-based learning or provide opportunities for collaborative project work.
+- Limited grading based on project ideas: 
+Few colleges grade students based on their project ideas or originality. The emphasis may be more on theoretical understanding rather than practical execution.
+- Traditional focus on DSA: 
+While data structures and algorithms (DSA) are essential for interviews, there is debate about their relevance in real-world software development.
 
 **Overall:**
 - Importance of networking and open source contributions: Regardless of location, networking and open source contributions are valuable for showcasing skills and gaining visibility in the tech industry.
