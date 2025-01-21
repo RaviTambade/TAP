@@ -1,10 +1,6 @@
-# Growth always demands change. 
+# Indian Students vs. Abroad Students
 
-## Learn, unlearn and relearn.
-
-I would like to share my perspective and experience gained over years. This learning experience is helping me to keep working on Collaborative Learning at Transflower through Transflower Acceleration Program(TAP). 
-
-The difference between Indian students learning software development and their counterparts aborad is indeed significant. Love to share a breakdown based on observation, learning experience:
+The difference between Indian students learning software development and their counterparts aborad is indeed significant. Love to share my observation and learning experience during mentoring:
 
 **Aborad:**
 - Emphasis on project-based learning: 
