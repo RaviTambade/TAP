@@ -3,6 +3,7 @@
 ### TAP (Transflower Acceleration Program)
 - Duration: 4 Months 
 - Delivery Mode:Online/Offline blended
+- Fees: 30000 Rs.
 - Mentor:[Ravi Tambade](https://github.com/RaviTambade)
 - Continous Learning Mode: Project Based Learning Approach, Internship Program
 - Expected Educational Qualification: **BE (IT, Computers,Electrical, Mechanical, Electronics) or MCA, Msc Comp. Science with recently passed out or BE , MSc, MCA Last Semester students looking for Internship based Learning**.
