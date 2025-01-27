@@ -6,7 +6,7 @@
 - Mentor:[Ravi Tambade](https://github.com/RaviTambade)
 - Continous Learning Mode: Project Based Learning Approach, Internship Program
 - Expected Educational Qualification: **BE (IT, Computers,Electrical, Mechanical, Electronics) or MCA, Msc Comp. Science with recently passed out or BE , MSc, MCA Last Semester students looking for Internship based Learning**.
-- Pre-requiste: Selection will be based on Mentors Interaction with candidate.
+- Pre-requiste: **Selection will be based on Mentors Interaction with candidate.**
 - Track Record:Every student completed with mentor expectation, has been placed in company and enjoying work place along with Team.
 - [Sucess Stories](https://github.com/RaviTambade/tap/blob/main/notes/successstories.md)
 
