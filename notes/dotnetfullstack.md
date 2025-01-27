@@ -13,7 +13,7 @@ TAP (Transflower Acceleration Program) prepares developers to build scalable, ef
 
 This program ensures that students not only learn to develop full-stack applications but also gain a solid understanding of database programming and management, both with SQL Server and MySQL.
 
-### **Comprehensive TAP .NET FullStack Developer Roadmap**
+### **.NET FullStack Developer Roadmap**
 
 TAP program is designed to equip developers with the full set of skills necessary to build modern web applications using **.NET Core**, integrate **AI**, deploy with **Docker** and **AWS**, practice **Scrum**, and implement **CI/CD pipelines**. Additionally, it will dive deep into **Database Programming** using both **SQL Server** and **MySQL**, covering essential concepts like database design, querying, and optimization.
 
@@ -22,7 +22,7 @@ TAP program is designed to equip developers with the full set of skills necessar
 ### **1. Introduction to Full-Stack .NET Development**
 
 #### **1.1 .NET Framework Overview**
-- Introduction to **.NET Core** and **.NET 5/6/7**.
+- Introduction to **.NET Core** and **.NET 8/9**.
 - Core concepts in **C#**, **F#**, and **VB.NET** programming.
 - Building applications using **ASP.NET Core**, **Web API**, and **MVC**.
 
@@ -39,7 +39,7 @@ TAP program is designed to equip developers with the full set of skills necessar
 
 ---
 
-### **2. Database Programming with SQL Server & MySQL**
+### **2. Database Programming**
 
 #### **2.1 Introduction to Database Design**
 - **Relational Database Concepts**: Tables, relationships, primary keys, foreign keys, and normalization.
