@@ -5,6 +5,7 @@
 - Delivery Mode:Online/Offline blended
 - Mentor:[Ravi Tambade](https://github.com/RaviTambade)
 - Continous Learning Mode: Project Based Learning Approach
+- Expected Educational Qualification: **BE (IT, Computers,Electrical, Mechanical, Electronics) or MCA, MSc comp. science with recently passed out**.
 - Track Record:Every student completed with mentor expectation, has been placed in company and enjoying work place along with Team.
 - [Sucess Stories](https://github.com/RaviTambade/tap/blob/main/notes/successstories.md)
 
@@ -12,11 +13,12 @@ A Full-Stack .NET Developer is a Software Developer who is proficient in both fr
 
 Below is a roadmap outlining the skills and technologies you'll need to become a proficient .NET full-stack developer:
 
-### **TAP Overview:**
+### **TAP Full stack Software Developer Roadmap:**
 
-TAP (Transflower Acceleration Program) prepares developers to build scalable, efficient, and modern software solutions using the **.NET framework**, integrate AI, deploy applications using **AWS** and **Docker**, and implement **Scrum** and **CI/CD** practices to ensure smooth development cycles and robust software releases.
+TAP (Transflower Acceleration Program) prepares developers to build scalable, efficient, and modern software solutions using the **.NET **, integrate  **AI**, deploy applications using **AWS** and **Docker**, and implement **Scrum** and **CI/CD** practices to ensure smooth development cycles and robust software releases.
 
 This program ensures that students not only learn to develop full-stack applications but also gain a solid understanding of database programming and management, both with SQL Server and MySQL.
+
 
 TAP program is designed to equip developers with the full set of skills necessary to build modern web applications using **.NET Core**, integrate **AI**, deploy with **Docker** and **AWS**, practice **Scrum**, and implement **CI/CD pipelines**. Additionally, it will dive deep into **Database Programming** using both **SQL Server** and **MySQL**, covering essential concepts like database design, querying, and optimization.
 
