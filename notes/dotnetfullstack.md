@@ -82,6 +82,43 @@ Becoming a full-stack developer in the .NET ecosystem involves mastering both fr
    - Learn about serverless computing concepts and how to build serverless applications with Azure Functions or AWS Lambda.
 
 
+
+### 8. Prompt Engineering for Fullstack Developers:
+1. **Introduction to Prmot Engineering**:
+   - Understand microservices architecture and its implementation using .NET technologies.
+   - Learn about service discovery, communication protocols, and resilience patterns.
+
+2. **Advanced Prompt Techniques**:
+   - Gain familiarity with GraphQL and how to implement GraphQL APIs with .NET.
+
+3. **Integrating AI in FullStack Projects**:
+   - AI on the Front-End
+   - AI on the Back-End
+   - Best Practices for Optimizing  AI Calss
+
+4. **Real-Life Fullstack AI Project**:
+   - Project Brief
+   - Task Breakdown
+   - Testing and Iteration
+
+### 10. Extra Resources:
+1. **Example Prompts for Various Scenarios**:
+   - Chatbot development.
+   - AI Driven Content Generation.
+   - Code generation and suggestions.
+
+2. **Additional Reading on AI Ethics in FullStack Development**:
+   - How to handle biases in AI models.
+   - Best practices for using AI responsibly.
+
+ 
+Example Prompts for Various Scenarios:
+Chatbot development.
+AI-driven content generation.
+Code generation and suggestions.
+Additional Reading on AI Ethics in Fullstack Development:
+How to handle biases in AI models.
+Best practices for using AI responsibly.
  You can get more details about Dotnet Full Stack Developer Project Readiness Program here
  <hr/>
  <a href="https://github.com/RaviTambade/tap/blob/main/notes/bootcamp.md">Dotnet Full Stack Project Readiness Program</a>
