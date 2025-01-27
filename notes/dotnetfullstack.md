@@ -1,19 +1,22 @@
 # .NET  Full-stak Developer Roadmap
 
 ### TAP (Transflower Acceleration Program)
-#### TAP your potential
+- Duration: 4 Months 
+- Delivery Mode:Online/Offline blended
+- Mentor:[Ravi Tambade](https://github.com/RaviTambade)
+- Continous Learning Mode: Project Based Learning Approach
+- Track Record:Every student completed with mentor expectation, has been placed in company and enjoying work place along with Team.
+- [Sucess Stories](https://github.com/RaviTambade/tap/blob/main/notes/successstories.md)
 
-A Full-Stack .NET Developer is a software developer who is proficient in both front-end and back-end development, using the .NET ecosystem (primarily .NET Core, ASP.NET Core, and other related frameworks). This role involves building and maintaining complete web applications, from the user interface (UI) to the underlying databases, APIs, and server-side code.
+A Full-Stack .NET Developer is a Software Developer who is proficient in both front-end and back-end development, using the .NET ecosystem (primarily .NET Core, ASP.NET Core, and other related frameworks). This role involves building and maintaining complete web applications, from the user interface (UI) to the underlying databases, APIs, and server-side code.
 
 Below is a roadmap outlining the skills and technologies you'll need to become a proficient .NET full-stack developer:
 
-### **TAP Overview: Full-Stack .NET Development**
+### **TAP Overview:**
 
 TAP (Transflower Acceleration Program) prepares developers to build scalable, efficient, and modern software solutions using the **.NET framework**, integrate AI, deploy applications using **AWS** and **Docker**, and implement **Scrum** and **CI/CD** practices to ensure smooth development cycles and robust software releases.
 
 This program ensures that students not only learn to develop full-stack applications but also gain a solid understanding of database programming and management, both with SQL Server and MySQL.
-
-### **.NET FullStack Developer Roadmap**
 
 TAP program is designed to equip developers with the full set of skills necessary to build modern web applications using **.NET Core**, integrate **AI**, deploy with **Docker** and **AWS**, practice **Scrum**, and implement **CI/CD pipelines**. Additionally, it will dive deep into **Database Programming** using both **SQL Server** and **MySQL**, covering essential concepts like database design, querying, and optimization.
 
@@ -21,13 +24,13 @@ TAP program is designed to equip developers with the full set of skills necessar
 
 ### **1. Introduction to Full-Stack .NET Development**
 
-#### **1.1 .NET Framework Overview**
+#### **1.1 .NET  Overview**
 - Introduction to **.NET Core** and **.NET 8/9**.
-- Core concepts in **C#**, **F#**, and **VB.NET** programming.
+- Core concepts in **C#** programming.
 - Building applications using **ASP.NET Core**, **Web API**, and **MVC**.
 
 #### **1.2 Front-End Development**
-- Basics of **HTML**, **CSS**, and **JavaScript**.
+- Basics of **HTML**, **CSS**,**JavaScript**,**JavaScript**,.
 - Building modern web UIs with **React** or **Angular**.
 - Working with **Blazor** for C#-based front-end development.
 - Making asynchronous requests with **AJAX** or **Fetch API**.
