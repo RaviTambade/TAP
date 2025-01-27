@@ -7,15 +7,15 @@ A Full-Stack .NET Developer is a software developer who is proficient in both fr
 
 Below is a roadmap outlining the skills and technologies you'll need to become a proficient .NET full-stack developer:
 
-### **Program Overview: Full-Stack .NET Development with AI, Software Testing, Cloud, DevOps, and Agile Practices**
+### **TAP Overview: Full-Stack .NET Development**
 
 TAP (Transflower Acceleration Program) prepares developers to build scalable, efficient, and modern software solutions using the **.NET framework**, integrate AI, deploy applications using **AWS** and **Docker**, and implement **Scrum** and **CI/CD** practices to ensure smooth development cycles and robust software releases.
 
-Certainly! Below is the **revised Full-Stack .NET Development Training Program**, now including **Database Programming using SQL** and **MySQL Server**. This program ensures that students not only learn to develop full-stack applications but also gain a solid understanding of database programming and management, both with SQL Server and MySQL.
+This program ensures that students not only learn to develop full-stack applications but also gain a solid understanding of database programming and management, both with SQL Server and MySQL.
 
-### **Comprehensive Full-Stack .NET Development Training Program with SQL & MySQL Database Programming, AI, Cloud, DevOps, Scrum, and CI/CD**
+### **Comprehensive TAP .NET FullStack Developer Roadmap**
 
-This program is designed to equip developers with the full set of skills necessary to build modern web applications using **.NET Core**, integrate **AI**, deploy with **Docker** and **AWS**, practice **Scrum**, and implement **CI/CD pipelines**. Additionally, it will dive deep into **Database Programming** using both **SQL Server** and **MySQL**, covering essential concepts like database design, querying, and optimization.
+TAP program is designed to equip developers with the full set of skills necessary to build modern web applications using **.NET Core**, integrate **AI**, deploy with **Docker** and **AWS**, practice **Scrum**, and implement **CI/CD pipelines**. Additionally, it will dive deep into **Database Programming** using both **SQL Server** and **MySQL**, covering essential concepts like database design, querying, and optimization.
 
 ---
 
