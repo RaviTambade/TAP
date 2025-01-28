@@ -1,4 +1,4 @@
-# .NET Full-stak Developer Readiness Program
+# .NET Full-stack Developer Readiness Program
 
 ### TAP (Transflower Acceleration Program)
 - Duration: 4 Months 
