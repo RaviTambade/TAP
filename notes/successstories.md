@@ -14,7 +14,7 @@ These success stories highlight the valuable contributions interns can make in v
     <li><a href="https://www.linkedin.com/in/rahul-navale-67491273/">Rahul Navale</a></li>
     <li><a href="https://www.linkedin.com/in/chetan-awate-41a18ba2/">Chetan Awate</a></li>
     <li><a href="https://www.linkedin.com/in/pournima-awate-32942010a/">Pournima Awte</a></li>
-    <li><a href="linkedin.com/in/pramita-padhen-64aa75125/">pramita padhen</a></li>
+    <li><a href="https://www.linkedin.com/in/pramita-gore-64aa75125/">pramita padhen</a></li>
     <li><a href="https://www.linkedin.com/in/pradeep-kyata-62030b114/">Pradeep Kytha</a></li>
     <li><a href="https://www.linkedin.com/in/arati-hande-a9a7b3173/">Arati Hande</a></li>
     <li><a href="https://www.linkedin.com/in/ganesh-shinde-8406a8148/">Ganesh Shinde</a></li>
