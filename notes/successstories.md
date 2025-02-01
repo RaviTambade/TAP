@@ -31,7 +31,8 @@ These success stories highlight the valuable contributions interns can make in v
     <li><a href="https://www.linkedin.com/in/pragati-bangar-538083274/">Prgati Bangar</a></li>
     <li><a href="https://www.linkedin.com/in/bhupendra-walhekar-b61240258//">Bhupendra Walhekar</a></li>
     <li><a href="https://www.linkedin.com/in/tejas-pawale-9b3a90194//">Tejas Pawale</a></li>
-   <li><a href="https://www.linkedin.com/in/ajinkya-tambade-59770b228/">Ajinkya Tambade</a></li>
+    <li><a href="https://www.linkedin.com/in/ajinkya-tambade-59770b228/">Ajinkya Tambade</a></li>
+    <li><a href="https://www.linkedin.com/in/ritesh-chopra-987417337/">Ritesh Chopra</a></li>
  
 </ol>
 
