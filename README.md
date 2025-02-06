@@ -6,7 +6,6 @@
 - Data is queried, fetched, analyzed and visualized
 - knowledge is built
 - Intelligence is applied
-- Wisdom is gained
 
 TAP (Transflower Accleration Program) is a  100% live Mentor Driven Project based learning Bootcamp.
 
