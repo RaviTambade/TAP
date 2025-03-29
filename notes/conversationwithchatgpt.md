@@ -1,4 +1,4 @@
-Can we initiate conversation with AI tool Chatgpt ?
+# Conversation with AI tool Chatgpt !
 
 I never appeard for any interview. But It is just a learning expereince I wanted to have it. So at 5:00 am today decided to start a conversation with ChatGPT. No any planned questions or prompt.  Something we developed as Artificial brain how much is capable of understanding Human brain. It is a great surprise  even finding positive evergy as well.
 
