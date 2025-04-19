@@ -82,5 +82,3 @@ Students with 7 months of ASP.NET training but lacking in applied and industry-l
   - Working demo
   - Source code on GitHub
   - Deployment on local IIS / Docker / cloud (optional)
-
----
