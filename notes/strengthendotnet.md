@@ -63,7 +63,7 @@ Students with 7 months of ASP.NET training but lacking in applied and industry-l
 
 ### 🗓️ **Capstone Project (8 hours)**
 
-#### ** Day  9 and 10 Team-Based Capstone Project Parallel Tryouts**
+#### Day  9 and 10 Team-Based Capstone Project Parallel Tryouts
 **Project Idea: Job Application Tracker**
 - Features:
   - Candidate CRUD
