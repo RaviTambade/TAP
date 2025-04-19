@@ -1,8 +1,7 @@
-# 40-hour project-based training program
+## 🧩 **40-Hour ASP.NET Core Industry-Ready Training Plan**
 
  This program reinforces core ASP.NET development skills and team collaboration through hands-on activities and a capstone project.
 
-## 🧩 **40-Hour ASP.NET Core Industry-Ready Training Plan**
 
 ### 👨‍💻 Target Audience:
 Students with 7 months of ASP.NET training but lacking in applied and industry-level skills.
