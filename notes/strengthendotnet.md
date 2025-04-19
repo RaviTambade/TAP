@@ -8,7 +8,7 @@
 Students with 7 months of ASP.NET training but lacking in applied and industry-level skills.
 
 
-### 🗓️ **WEEK 1: Core Concepts Refresher + Setup (8 hours)**
+### 🗓️ **Core Concepts Refresher + Setup (8 hours)**
 
 #### **Day 1-2 (4 hours): C# and OOP Fundamentals Review**
 - Recap of Classes, Inheritance, Interfaces, Abstraction, and Polymorphism
@@ -21,7 +21,7 @@ Students with 7 months of ASP.NET training but lacking in applied and industry-l
 - Activity: Build a simple CRUD MVC app (e.g., Task Manager)
 
 
-### 🗓️ **WEEK 2: Data Handling with EF Core + LINQ (8 hours)**
+### 🗓️ **Data Handling with EF Core + LINQ (8 hours)**
 
 #### **Day 5-6 (4 hours): Entity Framework Core**
 - Setting up DB Context
@@ -35,7 +35,7 @@ Students with 7 months of ASP.NET training but lacking in applied and industry-l
 - Mini Challenge: Write LINQ queries to solve specific scenarios
 
 
-### 🗓️ **WEEK 3: RESTful APIs + Database Mastery (8 hours)**
+### 🗓️ **RESTful APIs + Database Mastery (8 hours)**
 
 #### **Day 9-10 (4 hours): Building RESTful APIs**
 - REST Principles
@@ -49,7 +49,7 @@ Students with 7 months of ASP.NET training but lacking in applied and industry-l
 - Activity: Write raw SQL queries and integrate with EF Core
 
 
-### 🗓️ **WEEK 4: Advanced Topics + Team Collaboration (8 hours)**
+### 🗓️ **Advanced Topics + Team Collaboration (8 hours)**
 
 #### **Day 13-14 (4 hours): Authentication + Best Practices**
 - ASP.NET Core Identity basics
@@ -65,7 +65,7 @@ Students with 7 months of ASP.NET training but lacking in applied and industry-l
 
 ### 🗓️ **WEEK 5: Capstone Project (8 hours)**
 
-#### **Days 17-20 (8 hours total): Team-Based Capstone Project**
+#### **Team-Based Capstone Project Parallel Tryouts**
 **Project Idea: Job Application Tracker**
 - Features:
   - Candidate CRUD
@@ -84,12 +84,3 @@ Students with 7 months of ASP.NET training but lacking in applied and industry-l
   - Deployment on local IIS / Docker / cloud (optional)
 
 ---
-
-## ✅ **Evaluation & Output**
-- Daily coding tasks and mini-projects
-- Weekly review and feedback
-- Capstone project evaluation by industry mentor
-- Soft skills and collaboration assessment
-
----
- 
