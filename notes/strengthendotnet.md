@@ -1,4 +1,4 @@
-## 🧩 **40-Hour ASP.NET Core Industry-Ready Training Plan**
+## ASP.NET Core Industry-Ready Training Plan
 
  This program reinforces core ASP.NET development skills and team collaboration through hands-on activities and a capstone project.
 
