@@ -3,9 +3,10 @@
 We all start somewhere. I’ve met junior devs with barely a year of experience who think deeper than seniors with ten. I’ve seen people pivot into tech later in life and outshine those who’ve been in it for decades.
 
 Here’s the truth:
-🔹 You’re worthy the moment you decide to try.
-🔹 You grow the moment you dare to aim higher than your comfort zone.
-🔹 And you win the moment you stop waiting to feel “ready” and just start moving.
+-You’re worthy the moment you decide to try.
+-You grow the moment you dare to aim higher than your comfort zone.
+-And you win the moment you stop waiting to feel “ready” and just start moving.
+
 
 If there's just **one thing** I could tell you, it's this:  
 **Aim higher than you think you’re capable of.**  
