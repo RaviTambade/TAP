@@ -9,8 +9,7 @@ Here’s the truth:
 
 
 If there's just **one thing** I could tell you, it's this:  
-**Aim higher than you think you’re capable of.**  
-Most people **underestimate themselves** and don't even try things they could absolutely succeed at. Apply to jobs you think are out of reach. Prepare for interviews you feel unqualified for. Learn that "impossible" thing. You'll surprise yourself. I mean it.
+**Aim higher than you think you’re capable of.**  Most people **underestimate themselves** and don't even try things they could absolutely succeed at. Apply to jobs you think are out of reach. Prepare for interviews you feel unqualified for. Learn that "impossible" thing. You'll surprise yourself. I mean it.
 
 ---
 
@@ -81,5 +80,4 @@ The tech world moves fast. Stay curious. Go deeper into the technologies you use
 
 ---
 
-Tap your potential.
-Mentor as a Service.
+<b>Tap your potential.</b>
