@@ -1,4 +1,4 @@
-## Data Engineering – From Raw to Intelligent Systems**
+## Data Engineering – From Raw to Intelligent Systems
 
 *“Imagine you're a chef in a kitchen full of ingredients. Now, some are neatly packed and labeled — salt, sugar, flour — while others are scattered — like raw vegetables, sauces, and spices. To cook something meaningful, what do you do? You sort, cut, mix, cook...and serve a dish! That’s exactly what happens in software too.”*
 
@@ -135,6 +135,8 @@ Each project teaches you:
 
 *"Don’t just learn technology — **transform** it into solutions. Data is the new oil, but only when refined does it become power."*
 
+Love to me your co-learner in the world of co-pilot.
 🎯 Start today. Open your IDE. Open your mind.
 Document your thoughts. Build. Share. Learn. Repeat.
 
+<p>Tap your potential</p>
