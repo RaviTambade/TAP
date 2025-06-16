@@ -1,4 +1,3 @@
-
 ## **From Desktop to the Cloud — The Real IT World**
 
 ### 🖥️ Once Upon a Time: The Era of Desktop Applications
@@ -14,8 +13,6 @@ There were two types:
 
 We wrote code in C++, used `graphics.h`, and built games and forms on Windows 95 or XP. These apps worked *alone*. They didn’t care about the Internet. But the world was about to change...
 
----
-
 ### 🌐 The Rise of the Web: Hello, Web Applications!
 
 > “Then came the Internet — a magical network where people could connect globally.”
@@ -29,8 +26,6 @@ Now, instead of running apps on *your own computer*, you could access apps throu
 These were **web applications**. They ran on **web servers**, written in languages like **Java, .NET, Python, Node.js**. You didn’t install them. You just **opened them**.
 
 > “This was the age of ‘client-server’ — the app lived on the server, and the browser was just a visitor.”
-
----
 
 ### 📱 And Then Came Mobile Apps…
 
@@ -46,7 +41,6 @@ They used:
 
 Apps like Zomato, Ola, and Instagram became daily habits — powered by **backend servers** storing **customer, order, and payment data**.
 
----
 
 ### ☁️ Enter the Cloud: Your Software, As a Service
 
@@ -69,7 +63,6 @@ The **service provider handles**:
 
 > “It’s like renting a car instead of buying it. You use it when needed and leave the maintenance to the owner.”
 
----
 
 ### 🧠 Knowledge Management Systems: The Secret of Big Tech
 
@@ -84,8 +77,6 @@ They:
 
 Your YouTube recommendations? Your Amazon cart suggestions? All powered by **business logic**, **algorithms**, and **data analytics**.
 
----
-
 ### 🛠️ Today’s Full Stack Developer: The IT Neurosurgeon
 
 You’re no longer just a coder. You are a **solution builder** — working across:
@@ -97,8 +88,6 @@ You’re no longer just a coder. You are a **solution builder** — working acro
 * **DevOps**: GitHub Actions, Jenkins, Docker
 
 > "You’re not writing everything from scratch. You’re using APIs, SDKs, services — and combining them into something powerful."
-
----
 
 ### 🔁 Service-Oriented Architecture (SOA) & Microservices
 
@@ -112,7 +101,6 @@ This is **SOA** — breaking down the app into **modular, reusable services**.
 
 And even better? **Microservices** — each service as an independent deployable unit.
 
----
 
 ### 🔐 Finally, Cloud Culture: Pay-As-You-Go World
 
@@ -127,8 +115,6 @@ Cloud billing is like electricity — **you pay only for what you use**.
 > "No upfront cost. Just build, deploy, scale."
 
 This is the future of IT — a **service-based economy**, powered by **participation, learning, and collaboration**.
-
----
 
 ### 🚀 Transfer Your Vision into Action
 
