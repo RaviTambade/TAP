@@ -1,9 +1,12 @@
+
 # *TAP Believes in Bloom’s Taxonomy – A Ladder to Software Mastery*
 
 > “Learning software development isn’t a sprint; it’s a journey through levels — from writing your first `Hello World` to designing solutions that touch millions.”
 > — *From a mentor who has walked that ladder, rung by rung*
 
 ## 🧠 What is Bloom’s Taxonomy?
+
+<img src="/images/blooms-taxonomy.webp" />
 
 Imagine you are climbing a mountain — not just any mountain, but one that takes you from **memorizing code syntax** to **designing breakthrough software products**.
 
@@ -135,4 +138,3 @@ Whether you're writing your first “if statement” or debating cloud architect
 With you on every step of the ladder,
 **Transflower**
 *Mentor at your service* 🧡
-
