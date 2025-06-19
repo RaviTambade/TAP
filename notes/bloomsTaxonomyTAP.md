@@ -6,7 +6,7 @@
 
 ## 🧠 What is Bloom’s Taxonomy?
 
-<img src="/images/blooms-taxonomy.webp" width="500" height="600" />
+<img src="/images/blooms-taxonomy.webp" width="700" height="400" />
 
 Imagine you are climbing a mountain — not just any mountain, but one that takes you from **memorizing code syntax** to **designing breakthrough software products**.
 
