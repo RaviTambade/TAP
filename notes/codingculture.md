@@ -1,4 +1,4 @@
-## 👨‍🏫 Mentor Storytelling: *Coding Culture @Transflower Acceleration Program (TAP)*
+## *Coding Culture @Transflower Acceleration Program (TAP)*
 
 > *"A fool with a tool is still a fool."* — Grady Booch
 >
