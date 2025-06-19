@@ -27,10 +27,10 @@ We **adopt learners** not just as students, but as **future professionals**, com
 
 ### 💡 What Makes TAP Different?
 
-* 🔁 **Skill-Centric Mentorship**: We don’t just train; we **adopt** skill-focused growth journeys.
-* 🏗️ **Project-Based Learning**: Our programs are rooted in **real-world applications**, not just theory.
-* 🧑‍🏫 **Mentor-Driven Success**: We walk with every student through their personal roadmap.
-* 🧩 **Bridge the Employability Gap**: We ensure your degree finds its true relevance in industry.
+* **Skill-Centric Mentorship**: We don’t just train; we **adopt** skill-focused growth journeys.
+* **Project-Based Learning**: Our programs are rooted in **real-world applications**, not just theory.
+* **Mentor-Driven Success**: We walk with every student through their personal roadmap.
+* **Bridge the Employability Gap**: We ensure your degree finds its true relevance in industry.
 
 
 ### 🌟 Our Commitment
