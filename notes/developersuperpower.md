@@ -64,5 +64,3 @@ Because being stuck means you’re on the edge of a breakthrough.
 And we — your mentors — are right here to guide you through it.
 
 Let’s code courageously. Let’s learn continuously.
-
-
