@@ -1,9 +1,8 @@
-# The Journey of  becomming a Full Stack Dot Net Developer
+# Full Stack Dot Net Developer Journey
 
 ### 🚀 Welcome to the Transflower Acceleration Program (TAP)
  
-
-> *“Beta, don’t just learn how to code. Learn how to **solve problems**, **work in a team**, and **ship real products** — that’s what makes you a developer the industry trusts.”*
+> *“Dear Learner, don’t just learn how to code. Learn how to **solve problems**, **work in a team**, and **ship real products** — that’s what makes you a developer the industry trusts.”*
 
 That’s what I tell every student who walks into our **.NET Full Stack Developer Bootcamp**.
 
@@ -49,7 +48,6 @@ You’ll master the **Agile mindset**. The industry runs on sprints, not maratho
 
 > This is where we introduce you to the rhythm of professional development.
 
-
 ## 🧠 Phase 4: Learn to Talk to Data
 
 You’ll become fluent in **SQL** and **database design**.
@@ -62,7 +60,6 @@ You’ll become fluent in **SQL** and **database design**.
 * Connected & Disconnected Data Access
 
 Why? Because full stack developers don’t just build UIs. They **architect data flows** that drive business.
-
 
 ## 💻 Phase 5: Master the .NET Core
 
@@ -83,9 +80,6 @@ You’ll build scalable, modern applications using **C# and ASP.NET Core**.
 
 You will not just *see* concepts — you'll *use* them to build real features.
 
-## 🪟 Bonus Skills: Windows & UI
-
-You’ll also explore **desktop development** using Windows Forms — because real-world projects aren’t always web-only.
 
 ## 🌍 Phase 6: Front-End Development
 
@@ -149,7 +143,7 @@ You’ll enter interviews **not just prepared — but practiced**.
 
 ## 🎓 What You’ll Leave With:
 
-✅ 5+ Full Stack Projects
+✅ 3+ Full Stack Projects
 ✅ GitHub Portfolio
 ✅ Cloud-Deployed Apps
 ✅ Confidence to ace interviews
@@ -157,7 +151,7 @@ You’ll enter interviews **not just prepared — but practiced**.
 
 ### 💬 Final Mentor Words
 
-> “Don’t just attend a bootcamp. Live it.”
+> “Don’t just attend a TAP. Live it.”
 > Here, every class is a **standup**, every project is a **sprint**, and every mistake is a **lesson**.
 
 This is not a course. It’s a **career accelerator**.
