@@ -4,7 +4,7 @@
  
 > *“Dear Learner, don’t just learn how to code. Learn how to **solve problems**, **work in a team**, and **ship real products** — that’s what makes you a developer the industry trusts.”*
 
-That’s what I tell every student who walks into our **.NET Full Stack Developer Bootcamp**.
+That’s what I tell every student who walks into our **.NET Full Stack Developer Bootcamp(4 Month duration)**.
 
 This isn’t a 20-day crash module of a coure where you memorize syntax and forget it the next day.
 This is **TAP** — where we transform curious learners into **project-ready, production-worthy professionals**.
