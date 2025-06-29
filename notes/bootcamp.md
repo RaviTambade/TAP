@@ -143,11 +143,11 @@ You’ll enter interviews **not just prepared — but practiced**.
 
 ## 🎓 What You’ll Leave With:
 
-✅ 3+ Full Stack Projects
-✅ GitHub Portfolio
-✅ Cloud-Deployed Apps
-✅ Confidence to ace interviews
-✅ Skills to build your own startup MVP if you choose
+- ✅ 3+ Full Stack Projects
+- ✅ GitHub Portfolio
+- ✅ Cloud-Deployed Apps
+- ✅ Confidence to ace interviews
+- ✅ Skills to build your own startup MVP if you choose
 
 ### 💬 Final Mentor Words
 
@@ -160,4 +160,5 @@ Welcome to **TAP** — your runway to becoming a **Dot Net Full Stack Developer.
 
 Tap your potential.
 Transflower
+Learn from a mentor who trained todays best trainers,developers and solution Architects.
 Mentor at your service
