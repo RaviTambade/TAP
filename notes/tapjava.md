@@ -4,22 +4,21 @@
 
 At Transflower Learning, we believe in structured, project-based mastery. Here’s your step-by-step journey to becoming a skilled Java Full Stack Developer:
 
----
+
 
 🟢 **Beginner Level**
-✅ Java Basics (Data Types, Loops, OOP)
-✅ JSP / Servlets Basics
-✅ SQL Queries
-✅ HTML + CSS
-✅ JavaScript Basics
-✅ JDBC Basics
-✅ Form Validations (Frontend & Backend)
-✅ REST API – GET/POST with Spring Boot Basics
-✅ Eclipse / IntelliJ IDE
-✅ Maven/Gradle Basics
-✅ Git Basics – Clone, Commit, Push
+- ✅ Java Basics (Data Types, Loops, OOP)
+- ✅ JSP / Servlets Basics
+- ✅ SQL Queries
+- ✅ HTML + CSS
+- ✅ JavaScript Basics
+- ✅ JDBC Basics
+- ✅ Form Validations (Frontend & Backend)
+- ✅ REST API – GET/POST with Spring Boot Basics
+- ✅ Eclipse / IntelliJ IDE
+- ✅ Maven/Gradle Basics
+- ✅ Git Basics – Clone, Commit, Push
 
----
 
 🔵 **Intermediate Level**
 🚀 Spring Boot RESTful APIs (CRUD Operations)
@@ -34,7 +33,6 @@ At Transflower Learning, we believe in structured, project-based mastery. Here�
 🚀 Git Branching, Pull Requests
 🚀 Deployment (Tomcat / AWS Elastic Beanstalk / Docker Basics)
 
----
 
 🔴 **Advanced Level**
 🧠 Microservices with Spring Cloud / Spring Boot
@@ -54,9 +52,4 @@ At Transflower Learning, we believe in structured, project-based mastery. Here�
 🧠 Performance Monitoring (SLF4J, Micrometer, Prometheus)
 🧠 Messaging Architecture / Distributed Systems (RabbitMQ, Kafka)
 
----
-
 ✅ Whether you’re just starting or advancing fast, every level matters. Keep growing, keep learning!
-
-📌 **Which level are you currently at?** Comment below and let’s connect with fellow Java developers!
- 
