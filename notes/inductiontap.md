@@ -1,6 +1,6 @@
 
 
-# Welcome Speech – Mentor Storytelling Style
+# Welcome Transflower Acceleration Program (TAP)
 
 Good morning all of you,
 Welcome to *Transflower Learning*.
@@ -13,7 +13,7 @@ I like to call this concept *Mentor as a Service*. Just like cloud companies off
 
 Every learner has a story. Take Ritesh from Jalandhar, for example. He joined us last December and, despite health challenges, remained connected to our program. Stories like these remind us that persistence and commitment matter more than circumstances. We hope that each of your journeys becomes inspirational for others as well.
 
-I also want to welcome our new learners today — Shara, Aishwarya, Pranav, and Shubham. Many of you came through friends, relatives, or ex-students. Regardless of how you arrived here, this program is designed to make you comfortable in learning technologies and growing step by step.
+I also want to welcome our new learners today — Sharayuyu, Aishwarya, Pranav, and Shubham. Many of you came through friends, relatives, or ex-students. Regardless of how you arrived here, this program is designed to make you comfortable in learning technologies and growing step by step.
 
 We are not here to merely give instructions. We aim to **be catalysts in your learning process**, helping you become confident, employable, and ready to showcase your talents to the right people. Think of yourselves as uncut diamonds — full of potential. Our role is to polish you so that the right employers, the right “jewellers,” can recognize your value. And in the process, as a mentor, I too learn and grow, because teaching is also a way of deepening understanding.
 
