@@ -28,13 +28,7 @@ This cycle strengthens my understanding and also helps you learn effectively. Th
 
 Let us embrace this process and elevate ourselves collectively. Welcome once again, and let’s make this learning experience meaningful, practical, and empowering!
 
- Here’s your content rewritten into a clean, flowing **mentor storytelling style** without timestamps:
-
----
-
-# Welcome and Introduction – Mentor Storytelling Style
-
-I would say it’s around the beginning of September when we officially welcome our new interns: Aishwarya, Pranav, Shubham, Ajinkya, Sridhar, Shubhagi Madam, and Rutuja.
+I would say it’s around the beginning of September when we officially welcome our new interns: Aishwarya, Pranav, Shubham, Ajinkya, Shridhar, Shubhagi Madam, and Rutuja.
 
 Let me share a little about their backgrounds. Ajinkya has just completed her MCS and was interning with a company, gaining knowledge in Java core, Java admin, and data-related programming. Sharoyu is a student who previously learned cloud technologies online and got exposure to Big Data. She also gained practical experience with Python, Django, and database programming while working with a company.
 
