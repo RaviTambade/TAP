@@ -7,8 +7,8 @@ One sunny morning, the village chief announced:
 > “Whoever can harvest their field the fastest *and* use the least number of workers (resources) will win a reward.”
 
 Now both farmers had to think carefully:
-⚙ *How will I finish the work quickly?*
-💰 *And how many workers (helpers/resources) will I need?*
+- ⚙ *How will I finish the work quickly?*
+- 💰 *And how many workers (helpers/resources) will I need?*
 
 That, my friend, is **Time and Space Complexity** in disguise.
 
