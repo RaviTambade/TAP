@@ -76,9 +76,9 @@ Let me be honest with you…
 > “You’re not just paying for a course.
 > You’re investing in your transformation.”
 
-The **TAP Fullstack Bootcamp** comes at a simple, transparent cost of **₹30,000**.
+The **TAP Fullstack Bootcamp** comes at a simple, transparent cost of **₹40,000**.
 
-Yes — **just ₹30,000**.
+Yes — **just ₹40,000**.
 
 For that amount, you’re not only getting live sessions, industry-relevant projects, and technical training — you’re becoming part of a **mentorship-driven ecosystem** that believes in **you** and your **potential**.
 
