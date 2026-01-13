@@ -1,15 +1,15 @@
 ## From Ravi 🌞 (Mentor@Transflower)
 
 
-> **“Til-Gul ghya, god god bola –
-> but remember, in Transflower,
-> skills speak louder than certificates.”**
+- **“Til-Gul ghya, god god bola –
+- but remember, in Transflower,
+- skills speak louder than certificates.”**
 
 ### Wishing you all Happy Makar Sankranti
 
-> **“Today the Sun changes its direction — from darkness towards light.
-> In the same way, your learning journey at Transflower is about changing direction:
-> from confusion to clarity, from theory to practice, from dependency to confidence.”**
+- **“Today the Sun changes its direction — from darkness towards light.
+- In the same way, your learning journey at Transflower is about changing direction:
+- from confusion to clarity, from theory to practice, from dependency to confidence.”**
 
 
 ## 🪁 Sankranti Symbolism → Transflower Learning Framework
