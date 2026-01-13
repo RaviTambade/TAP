@@ -82,7 +82,9 @@ You don’t have to do *extraordinary* things.
 
 Just do ordinary things with **extraordinary focus, love, and intention**.
 
-That’s what we try to instill through **Transflower Mentor as a Service** — not just tools and code, but **clarity**, **courage**, and a **community**.
+That’s what we try to instill through **Transflower Mentor as a Service** 
+— not just tools and code, 
+- but **clarity**, **courage**, and a **community**.
 
 🌐 Explore the path: [github.com/RaviTambade/tap](https://github.com/RaviTambade/tap)
 
