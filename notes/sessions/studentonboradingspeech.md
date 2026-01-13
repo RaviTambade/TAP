@@ -257,14 +257,14 @@ In the industry:
 
 In TAP:
 
-❌ We don’t run behind certificates
-❌ We don’t rush through tools
-❌ We don’t spoon-feed solutions
+- ❌ We don’t run behind certificates
+- ❌ We don’t rush through tools
+- ❌ We don’t spoon-feed solutions
 
-✅ We **build applications**
-✅ We **make mistakes safely**
-✅ We **think like developers**
-✅ We **work like teams in a company**
+- ✅ We **build applications**
+- ✅ We **make mistakes safely**
+- ✅ We **think like developers**
+- ✅ We **work like teams in a company**
 
 ### 🏗 One Problem. Many Platforms.
 
@@ -343,9 +343,9 @@ Let me say this clearly:
 > **Failure is not a problem in TAP.
 > Not trying is.**
 
-If your code breaks — good.
-If your logic fails — excellent.
-If you feel confused — perfect.
+- If your code breaks — good.
+- If your logic fails — excellent.
+- If you feel confused — perfect.
 
 Because **confusion means learning is happening**.
 
@@ -394,16 +394,15 @@ And that confidence… **is what companies hire.**
 
 ### 🌼 Final Message
 
-You are not here to become:
+#### You are not here to become:
 
 * A tutorial follower
 * A framework rat
 * A certificate collector
 
-You are here to become a **solution developer**.
+#### You are here to become a **solution developer**.
 
 * Let’s build. Let’s fail. Let’s grow.
-* Tap your potential.
 
-Welcome to **Transflower TAP** 🌱
-
+####  Tap your potential.
+##### Welcome to **Transflower TAP** 🌱
