@@ -402,7 +402,8 @@ You are not here to become:
 
 You are here to become a **solution developer**.
 
-Welcome to **Transflower TAP** 🌱
-Let’s build. Let’s fail. Let’s grow.
+* Let’s build. Let’s fail. Let’s grow.
+* Tap your potential.
 
+Welcome to **Transflower TAP** 🌱
 
