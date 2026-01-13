@@ -1,4 +1,5 @@
-# **The Developer’s Superpower? Knowing When to Ask**
+# **The Developer’s Superpower? 
+## Knowing When to Ask**
 
 “Listen carefully, team.
 
