@@ -132,8 +132,8 @@ Whether you're writing your first “if statement” or debating cloud architect
 
 > Bloom’s Taxonomy isn’t just a theory. It’s the *pathway to mastery*.
 
-📌 **Learn. Unlearn. Relearn.**
-🎓 **Code. Think. Build. Share.**
+- 📌 **Learn. Unlearn. Relearn.**
+- 🎓 **Code. Think. Build. Share.**
 
 With you on every step of the ladder,
 **Transflower**
