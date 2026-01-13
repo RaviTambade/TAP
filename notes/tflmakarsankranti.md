@@ -1,6 +1,5 @@
-That’s a beautiful intention, Ravi. 🌞
+## From Ravi 🌞 (Mentor@Transflower)
 
-## 🌞 Makar Sankranti & Transflower Learning Framework
 
 > **“Til-Gul ghya, god god bola –
 > but remember, in Transflower,
