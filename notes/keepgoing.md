@@ -32,9 +32,9 @@ So ask yourself often:
 
 You don’t need to read 10 blogs a day or attend every webinar. Just **stay connected** to the ecosystem.
 
-> 🧠 Follow thought leaders on X (Twitter), LinkedIn, GitHub
-> 🎥 Watch keynote sessions from events like Microsoft Build, Google I/O, or GitHub Universe
-> 📺 Subscribe to 2-3 good tech YouTube channels (you don’t need more)
+- 🧠 Follow thought leaders on X (Twitter), LinkedIn, GitHub
+- 🎥 Watch keynote sessions from events like Microsoft Build, Google I/O, or GitHub Universe
+- 📺 Subscribe to 2-3 good tech YouTube channels (you don’t need more)
 
 It’s like sunlight — you don’t need to study it, but staying under it regularly gives you energy.
 
