@@ -6,7 +6,7 @@ Let me take you back.
 
 There was a time when developers were like **code monks** — typing every line with reverence, debugging with devotion, memorizing syntax like scripture.
 
-But in 2025, things have shifted.
+But in 2026, things have shifted.
 
 Now, developers walk into their IDEs like **music conductors** — baton in hand, AI at their fingertips, guiding lines of code with intent rather than labor.
 
