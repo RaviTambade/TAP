@@ -125,8 +125,6 @@ D. Production Deployment
 
 
 
----
-
 ### 12. In the Scrum analogy of product lifecycle, **each sprint aims to:**
 
 A. Finish only frontend features
@@ -135,9 +133,6 @@ C. Improve and mature the product iteratively
 D. Perform manual testing
 
 
-
----
-
 ### 13. Why is it important for a developer to understand the product lifecycle?
 
 A. To avoid writing code
@@ -145,9 +140,6 @@ B. To see where their code fits and contributes
 C. To learn about accounting
 D. To perform backups
 
-
-
----
 
 ## 📄 **Requirement Engineering MCQs**
 
@@ -159,9 +151,6 @@ C. Color schemes and UI designs
 D. Server uptime
 
 
-
----
-
 ### 15. Which of the following is a **Non-Functional Requirement**?
 
 A. User registration with JWT
@@ -169,9 +158,6 @@ B. Ability to send messages
 C. Data encryption and scalability
 D. Create/delete room feature
 
-
-
----
 
 ### 16. What does “latency < 200ms” fall under?
 
@@ -181,9 +167,6 @@ C. Non-functional requirement
 D. Database rule
 
 
-
----
-
 ### 17. Which of the following is a valid **functional requirement**?
 
 A. Mobile responsiveness
@@ -191,9 +174,6 @@ B. Join/Leave meeting
 C. Support for 500 concurrent users
 D. Crash tolerance
 
-
-
----
 
 ## 📌 **Miscellaneous Insights MCQs**
 
@@ -205,9 +185,6 @@ C. DBA roles
 D. Technical Support
 
 
-
----
-
 ### 19. Which statement best reflects the reality of software product development?
 
 A. Developers alone build the product
@@ -216,18 +193,12 @@ C. Dev, QA, DBA, and Infra all contribute to the product's success
 D. Deployment is not important
 
 
-
----
-
 ### 20. Why is the **requirement more important than language or framework**?
 
 A. Because UI is always reusable
 B. Because knowing requirements helps tailor the solution, regardless of tools
 C. Because HTML is outdated
 D. Because backend code is always simple
-
-
-
 
 ## 🧠 **Role and Responsibility Deep Dive**
 
@@ -239,9 +210,6 @@ C. System Administrator
 D. Web API Developer
 
 
-
----
-
 ### 22. Who is responsible for managing **scalable cloud-based deployments** using AWS or Azure?
 
 A. DBA
@@ -250,8 +218,6 @@ C. Manual Tester
 D. Frontend Developer
 
 
-
----
 
 ### 23. Which of the following is typically NOT a task for a Web API Developer?
 
@@ -262,8 +228,6 @@ D. Authenticate users using JWT
 
 
 
----
-
 ### 24. A DBA working with **NoSQL databases** is most likely using:
 
 A. MySQL
@@ -273,8 +237,6 @@ D. Oracle
 
 
 
----
-
 ### 25. The best person to contact for a **database recovery after crash** is:
 
 A. Web Developer
@@ -283,8 +245,6 @@ C. DBA
 D. Automation Tester
 
 
-
----
 
 ## ⚙️ **Technical Understanding in Roles**
 
@@ -296,9 +256,6 @@ C. GitHub Copilot
 D. Postman
 
 
-
----
-
 ### 27. Which of the following roles uses **Postman or Swagger** extensively?
 
 A. Frontend Developer
@@ -307,9 +264,6 @@ C. Web API Developer
 D. Support Engineer
 
 
-
----
-
 ### 28. Which of the following is commonly used by **Support Engineers** for troubleshooting?
 
 A. React Developer Tools
@@ -317,9 +271,6 @@ B. Jenkins
 C. Remote Desktop, Log Analyzer
 D. MongoDB Compass
 
-
-
----
 
 ### 29. Which professional ensures **application runs on multiple devices and screen sizes**?
 
@@ -330,8 +281,6 @@ D. Web API Developer
 
 
 
----
-
 ### 30. What is the **main focus of a Manual Tester** in an Agile team?
 
 A. Implementing business logic
@@ -340,8 +289,6 @@ C. Verifying functionality through exploratory testing
 D. Writing frontend components
 
 
-
----
 
 ## 📋 **Requirement Engineering Focus**
 
@@ -354,8 +301,6 @@ D. Cloud-based
 
 
 
----
-
 ### 32. Which is an example of a **Security-related Non-Functional Requirement**?
 
 A. Passwords must be encrypted
@@ -363,8 +308,6 @@ B. Admin can delete a room
 C. Chat message can be sent
 D. Mobile responsive UI
 
-
----
 
 ### 33. Which requirement is **often neglected**, leading to poor production performance?
 
@@ -374,9 +317,6 @@ C. Non-functional requirement
 D. Database schema design
 
 
-
----
-
 ### 34. “Support for 500 concurrent users” is:
 
 A. UI requirement
@@ -385,7 +325,6 @@ C. Functional requirement
 D. Non-functional scalability requirement
 
 
----
 
 ### 35. Who is responsible for prioritizing features and gathering feedback?
 
@@ -394,8 +333,6 @@ B. System Admin
 C. Product Owner
 D. QA Tester
 
-
----
 
 ## 🔄 **Scrum + Iteration Awareness**
 
@@ -407,8 +344,6 @@ C. Retrospective
 D. Product Launch
 
 
----
-
 ### 37. What is the **main benefit** of delivering software in iterative sprints?
 
 A. Avoids code review
@@ -416,8 +351,6 @@ B. Keeps the product always incomplete
 C. Allows continuous improvement
 D. Reduces team size
 
-
----
 
 ### 38. During development, the developer team should regularly:
 
@@ -427,7 +360,6 @@ C. Focus only on their module
 D. Skip documentation
 
 
----
 
 ### 39. Who are the **primary end-users** in a collaborative classroom tool?
 
@@ -437,8 +369,6 @@ C. Students and Teachers
 D. QA testers
 
 ✅ **Answer:** C
-
-
 
 ### 40. What should a developer focus on **before choosing a framework**?
 
@@ -459,8 +389,6 @@ C. Verifying software quality
 D. Managing servers
 
 
----
-
 ### 42. Which role is most likely to raise issues related to **data inconsistency** in the database?
 
 A. System Admin
@@ -468,8 +396,6 @@ B. Frontend Developer
 C. DBA
 D. Manual Tester
 
-
----
 
 ### 43. Who creates **use cases and actors** in the SRS (Software Requirements Specification)?
 
@@ -479,8 +405,6 @@ C. Automation Tester
 D. Support Engineer
 
 
----
-
 ### 44. Which role is most likely to configure **CI/CD pipelines** for smooth deployments?
 
 A. Manual Tester
@@ -488,8 +412,6 @@ B. Frontend Developer
 C. DevOps or Cloud Engineer
 D. Web API Developer
 
-
----
 
 ### 45. **Canvas collaboration**, **file upload**, and **chat logs** are examples of:
 
@@ -499,8 +421,6 @@ C. Backup configurations
 D. Scrum rituals
 
 
----
-
 ### 46. Which of the following is NOT a key stakeholder for an educational communication app?
 
 A. Teacher
@@ -508,8 +428,6 @@ B. Admin
 C. Cloud Provider
 D. Student
 
-
----
 
 ### 47. What is the key output of the **Requirement Engineering phase**?
 
@@ -519,8 +437,6 @@ C. Software Requirements Specification (SRS)
 D. Product branding
 
 
----
-
 ### 48. In Agile, why do developers participate in **daily standup meetings**?
 
 A. To present design prototypes
@@ -528,8 +444,6 @@ B. To review deployment scripts
 C. To share updates, blockers, and plans
 D. To explain resume points
 
-
----
 
 ### 49. Which metric best represents a **Non-Functional Requirement**?
 
@@ -539,7 +453,6 @@ C. Message sent to user
 D. Emoji support
 
 
----
 
 ### 50. Who ensures that software is **resilient to crashes and data loss**?
 
