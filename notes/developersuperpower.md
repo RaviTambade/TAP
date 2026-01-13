@@ -4,7 +4,7 @@
 
 You may think asking for help is a weakness.
 
-But let me tell you a truth I’ve learned in 25+ years of teaching and coding:
+But let me tell you a truth I’ve learned in 28+ years of teaching and coding:
 
 > **Asking for help is a developer’s workflow — not a flaw.**
 
