@@ -6,8 +6,6 @@
 > *Knowledge is borrowed when you learn it.
 > It becomes yours when you teach it.*
 
-
-
 ## 1️⃣ TFL Core Belief (Backed by Cognitive Science)
 
 **TFL Statement**

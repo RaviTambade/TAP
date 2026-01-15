@@ -8,8 +8,6 @@ Each item includes:
 * **Priority (MoSCoW)**
 * **Epic**
 
----
-
 ## ✅ EPIC 1: Authentication & User Management
 
 ### 1. `User Registration`
@@ -22,7 +20,6 @@ Each item includes:
 
 **Priority:** Must Have
 
----
 
 ### 2. `Login with JWT`
 
@@ -34,8 +31,6 @@ Each item includes:
 
 **Priority:** Must Have
 
----
-
 ### 3. `Logout`
 
 **As** a user,
@@ -45,8 +40,6 @@ Each item includes:
 ✅ *Acceptance:* Token cleared, redirected to login.
 
 **Priority:** Must Have
-
----
 
 ### 4. `Role-Based Access (Admin/User)`
 
@@ -58,8 +51,6 @@ Each item includes:
 
 **Priority:** Must Have
 
----
-
 ### 5. `Welcome Banner`
 
 **As** a logged-in user,
@@ -67,8 +58,6 @@ Each item includes:
 **So that** I feel acknowledged.
 
 **Priority:** Should Have
-
----
 
 ## 💬 EPIC 2: Real-Time Group Chat
 
@@ -82,8 +71,6 @@ Each item includes:
 
 **Priority:** Must Have
 
----
-
 ### 7. `Emoji Support in Chat`
 
 **As** a user,
@@ -92,8 +79,6 @@ Each item includes:
 
 **Priority:** Could Have
 
----
-
 ### 8. `Typing Indicator`
 
 **As** a user,
@@ -101,8 +86,6 @@ Each item includes:
 **So that** I can anticipate a reply.
 
 **Priority:** Could Have
-
----
 
 ## 🔁 EPIC 3: Real-Time Features
 
@@ -116,8 +99,6 @@ Each item includes:
 
 **Priority:** Must Have
 
----
-
 ### 10. `Real-time Dashboard Stats`
 
 **As** an admin,
@@ -125,8 +106,6 @@ Each item includes:
 **So that** I can monitor activity in real-time.
 
 **Priority:** Should Have
-
----
 
 ## 📁 EPIC 4: File Sharing
 
@@ -140,8 +119,6 @@ Each item includes:
 
 **Priority:** Must Have
 
----
-
 ### 12. `Upload Audio/Video`
 
 **As** a user,
@@ -149,8 +126,6 @@ Each item includes:
 **So that** communication can be richer.
 
 **Priority:** Should Have
-
----
 
 ### 13. `Upload Progress Bar`
 
@@ -160,8 +135,6 @@ Each item includes:
 
 **Priority:** Should Have
 
----
-
 ### 14. `Cancel Upload`
 
 **As** a user,
@@ -169,8 +142,6 @@ Each item includes:
 **So that** I don’t waste bandwidth.
 
 **Priority:** Could Have
-
----
 
 ### 15. `Validate File Types/Sizes`
 
@@ -180,8 +151,6 @@ Each item includes:
 
 **Priority:** Must Have
 
----
-
 ### 16. `Upload Folder Limit per Room/User`
 
 **As** an admin,
@@ -189,8 +158,6 @@ Each item includes:
 **So that** we manage storage efficiently.
 
 **Priority:** Could Have
-
----
 
 ## 🎨 EPIC 5: Canvas & Collaboration
 
@@ -202,8 +169,6 @@ Each item includes:
 
 **Priority:** Should Have
 
----
-
 ### 18. `Save Canvas Snapshot (PNG)`
 
 **As** a user,
@@ -211,8 +176,6 @@ Each item includes:
 **So that** I can use it later.
 
 **Priority:** Should Have
-
----
 
 ### 19. `Auto-Save Snapshots Every 5 Minutes`
 
@@ -222,8 +185,6 @@ Each item includes:
 
 **Priority:** Could Have
 
----
-
 ### 20. `Undo Last Canvas Change`
 
 **As** a user,
@@ -231,8 +192,6 @@ Each item includes:
 **So that** I can correct mistakes.
 
 **Priority:** Should Have
-
----
 
 ### 21. `Clear/Reset Canvas`
 
@@ -242,7 +201,6 @@ Each item includes:
 
 **Priority:** Could Have
 
----
 
 ## 🛠️ EPIC 6: Admin Tools & Dashboard
 
@@ -254,7 +212,6 @@ Each item includes:
 
 **Priority:** Must Have
 
----
 
 ### 23. `Export Chat & Upload Logs`
 
@@ -264,8 +221,6 @@ Each item includes:
 
 **Priority:** Should Have
 
----
-
 ### 24. `User Management (View/Delete/Role)`
 
 **As** an admin,
@@ -274,7 +229,6 @@ Each item includes:
 
 **Priority:** Must Have
 
----
 
 ## 🧑‍🎨 EPIC 7: UI/UX Features
 
@@ -296,8 +250,6 @@ Each item includes:
 
 **Priority:** Should Have
 
----
-
 ### 27. `Use Bootstrap or Tailwind`
 
 **As** a developer,
@@ -305,8 +257,6 @@ Each item includes:
 **So that** I can develop faster and ensure responsiveness.
 
 **Priority:** Must Have
-
----
 
 ## 🔄 EPIC 8: Screen Sharing (Optional Advanced)
 
@@ -318,8 +268,6 @@ Each item includes:
 
 **Priority:** Could Have
 
----
-
 ## 📦 EPIC 9: File & Snapshot Archival
 
 ### 29. `Upload Snapshot with Naming`
@@ -330,7 +278,6 @@ Each item includes:
 
 **Priority:** Should Have
 
----
 
 ### 30. `Store Snapshots in User/Room Folders`
 
@@ -340,8 +287,6 @@ Each item includes:
 
 **Priority:** Should Have
 
----
-
 ### 31. `Zip and Export All Saved Images`
 
 **As** a user,
@@ -350,7 +295,6 @@ Each item includes:
 
 **Priority:** Could Have
 
----
 
 ## ✅ Format for Jira/Trello
 
@@ -361,6 +305,3 @@ Each story can be entered with:
 * **Priority**
 * **Labels**: `auth`, `chat`, `admin`, `realtime`, `file`, `canvas`
 * **Epic Link** (from above)
-
----
-
