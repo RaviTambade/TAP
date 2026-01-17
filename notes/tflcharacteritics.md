@@ -1,12 +1,10 @@
-# How Transflower Learning Addresses
-
 ## The Confidence Gaps in Indian Engineering Education
 
 *(Inspired by outcomes seen in global achievers like Edward Nathan Varghese)*
 
-## 1️⃣ From Syllabus Completion → Capability Formation
+### 1️⃣ From Syllabus Completion → Capability Formation
 
-### Traditional Gap
+#### Traditional Gap
 
 Indian engineering education focuses on:
 
@@ -14,7 +12,7 @@ Indian engineering education focuses on:
 * Passing exams
 * Covering portions
 
-### Transflower Learning Characteristic
+#### Transflower Learning Characteristic
 
 **Capability-first curriculum design**
 
@@ -30,7 +28,7 @@ At Transflower:
   * Architecture discussions
   * Code reviews
 
-### Result
+#### Result
 
 Learners don’t ask:
 
@@ -40,9 +38,9 @@ They ask:
 
 > “Where will I use this in real systems?”
 
-## 2️⃣ From Algorithm Chapters → Thinking Discipline
+### 2️⃣ From Algorithm Chapters → Thinking Discipline
 
-### Traditional Gap
+#### Traditional Gap
 
 * DSA taught as:
 
@@ -51,7 +49,7 @@ They ask:
   * Definitions
   * Expected answers
 
-### Transflower Learning Characteristic
+#### Transflower Learning Characteristic
 
 **Algorithms as a thinking language**
 
@@ -74,15 +72,15 @@ Learners develop:
 * Calmness with unseen problems
 * Confidence to reason aloud (interviews, design discussions)
 
-## 3️⃣ From Fixed Curriculum → Guided Flexibility
+### 3️⃣ From Fixed Curriculum → Guided Flexibility
 
-### Traditional Gap
+#### Traditional Gap
 
 * Same syllabus
 * Same pace
 * Same evaluation for all
 
-### Transflower Learning Characteristic
+#### Transflower Learning Characteristic
 
 **Mentor-guided personalization**
 
@@ -99,19 +97,19 @@ Learners develop:
   * Gaps
   * Natural inclinations
 
-### Result
+#### Result
 
 Learners stop comparing themselves with others
 and start **owning their journey**.
 
-## 4️⃣ From Faculty Authority → Mentor Partnership
+### 4️⃣ From Faculty Authority → Mentor Partnership
 
-### Traditional Gap
+#### Traditional Gap
 
 * Faculty = examiner
 * Questions = risk
 
-### Transflower Learning Characteristic
+#### Transflower Learning Characteristic
 
 **Mentors as co-thinkers**
 
@@ -129,15 +127,15 @@ Learners gain:
 * Psychological safety
 * Confidence to ask “why” and “what if”
 
-## 5️⃣ From Isolated Students → Learning Community
+### 5️⃣ From Isolated Students → Learning Community
 
-### Traditional Gap
+#### Traditional Gap
 
 * Individual marks
 * Silent classrooms
 * Competitive anxiety
 
-### Transflower Learning Characteristic
+#### Transflower Learning Characteristic
 
 **Peer-driven ecosystem**
 
@@ -149,21 +147,21 @@ Learners gain:
 * Seniors and juniors interact naturally
 * Comparison is replaced by benchmarking against **real-world expectations**
 
-### Result
+#### Result
 
 Learners grow faster because:
 
 > “Someone around me is always slightly ahead — and reachable.”
 
-## 6️⃣ From Certificate Internships → Responsibility Internships
+### 6️⃣ From Certificate Internships → Responsibility Internships
 
-### Traditional Gap
+#### Traditional Gap
 
 * Internships for namesake
 * Minimal accountability
 * No conversion mindset
 
-### Transflower Learning Characteristic
+#### Transflower Learning Characteristic
 
 **Internship-as-apprenticeship**
 
@@ -178,14 +176,14 @@ Learners grow faster because:
   * Reviews
   * Ownership
 
-### Result
+#### Result
 
 Learners enter internships already thinking like engineers —
 not trainees.
 
-## 7️⃣ From Tech Silos → System & Business Awareness
+### 7️⃣ From Tech Silos → System & Business Awareness
 
-### Traditional Gap
+#### Traditional Gap
 
 * CS isolated from:
 
@@ -193,7 +191,7 @@ not trainees.
   * Finance
   * Decision-making
 
-### Transflower Learning Characteristic
+#### Transflower Learning Characteristic
 
 **System-level thinking**
 
@@ -207,7 +205,7 @@ not trainees.
   * Tech as an enabler
   * Not an end in itself
 
-### Result
+#### Result
 
 They can converse confidently with:
 
@@ -216,14 +214,14 @@ They can converse confidently with:
 * Architects
 * Founders
 
-## 8️⃣ From Memory Evaluation → Proof of Capability
+### 8️⃣ From Memory Evaluation → Proof of Capability
 
-### Traditional Gap
+#### Traditional Gap
 
 * Written exams dominate
 * Marks ≠ confidence
 
-### Transflower Learning Characteristic
+#### Transflower Learning Characteristic
 
 **Evidence-based assessment**
 
@@ -241,15 +239,15 @@ Confidence comes from:
 
 > “I have built this. I can explain this. I can improve this.”
 
-## 9️⃣ From Student Identity → Professional Identity
+### 9️⃣ From Student Identity → Professional Identity
 
-### Traditional Gap
+#### Traditional Gap
 
 Students graduate thinking:
 
 > “I hope I get selected.”
 
-### Transflower Learning Characteristic
+#### Transflower Learning Characteristic
 
 **Identity formation**
 
@@ -261,7 +259,7 @@ By the end of the journey, learners think:
 
 This is the **core Transflower outcome**.
 
-# 🌱 Transflower Learning in One Line
+## 🌱 Transflower Learning in One Line
 
 > **We don’t finish syllabi.
 > We finish confusion — and replace it with clarity, confidence, and capability.**
