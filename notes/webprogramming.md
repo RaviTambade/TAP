@@ -231,8 +231,8 @@ Convert learning into **employable skill**.
 
 ## 🎯 Transflower Learning Philosophy Applied
 
-✔ Fundamentals over frameworks
-✔ Architecture before libraries
-✔ Confidence through clarity
-✔ Skill through projects
-✔ Industry readiness, not syllabus completion
+- ✔ Fundamentals over frameworks
+- ✔ Architecture before libraries
+- ✔ Confidence through clarity
+- ✔ Skill through projects
+- ✔ Industry readiness, not syllabus completion
