@@ -86,7 +86,7 @@ Here’s the mentor-style answer:
 
 **Transflower Solution:**
 
-* TLF defines **milestone-based learning**: beginner → intermediate → advanced.
+* TFL defines **milestone-based learning**: beginner → intermediate → advanced.
 * Each student gets **clear mapping of skills, projects, and assessment**.
 * Recognition comes from **skills demonstrated, projects completed, and mentor endorsement**.
 

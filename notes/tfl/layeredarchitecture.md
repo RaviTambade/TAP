@@ -15,7 +15,7 @@ Now let’s map each **Layered Architecture benefit** to these stages.
 
 ## 1️⃣ Separation of Concerns
 
-### → **TLF Stage: Understanding (Conceptual Clarity)**
+### → **TFL Stage: Understanding (Conceptual Clarity)**
 
 ### Mentor Insight
 
@@ -29,7 +29,7 @@ Layered architecture teaches:
 ### Mapping
 
 ```
-TLF: Understanding
+TFL: Understanding
 ------------------
 Student learns:
 - What is UI responsibility?
@@ -53,7 +53,7 @@ Student learns:
 
 ## 2️⃣ Easier Testing and Debugging
 
-### → **TLF Stage: Application (Hands-on Confidence)**
+### → **TFL Stage: Application (Hands-on Confidence)**
 
 ### Mentor Insight
 
@@ -66,7 +66,7 @@ At Transflower, students move from:
 ### Mapping
 
 ```
-TLF: Application
+TFL: Application
 ----------------
 Student practices:
 - Unit testing business logic
@@ -93,7 +93,7 @@ Check Business Layer → ❌ Issue found
 
 ## 3️⃣ Improved Scalability & Maintainability
 
-### → **TLF Stage: Integration (System Thinking)**
+### → **TFL Stage: Integration (System Thinking)**
 
 ### Mentor Insight
 
@@ -108,7 +108,7 @@ And start thinking like:
 ### Mapping
 
 ```
-TLF: Integration
+TFL: Integration
 ----------------
 Student understands:
 - Change impact analysis
@@ -135,7 +135,7 @@ Same Business Layer reused
 
 ## 4️⃣ Independent Development & Deployment
 
-### → **TLF Stage: Ownership (Professional Readiness)**
+### → **TFL Stage: Ownership (Professional Readiness)**
 
 ### Mentor Insight
 
@@ -148,7 +148,7 @@ Students learn:
 ### Mapping
 
 ```
-TLF: Ownership
+TFL: Ownership
 --------------
 Student roles:
 - UI Owner
@@ -180,7 +180,7 @@ Each team:
 
 ```
 +--------------------------------+-------------------------+----------------------+
-| Layered Architecture Benefit   | TLF Stage               | Skill Built           |
+| Layered Architecture Benefit   | TFL Stage               | Skill Built           |
 +--------------------------------+-------------------------+----------------------+
 | Separation of Concerns          | Understanding           | Concept clarity       |
 | Easier Testing & Debugging      | Application             | Problem solving       |

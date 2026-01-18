@@ -15,11 +15,11 @@ This dashboard represents a **single learner’s end-to-end journey** through th
 | Start Date          | __________                         |
 | Expected Completion | __________                         |
 
-## 🧱 2. Phase-wise Progress Tracker (TLF Aligned)
+## 🧱 2. Phase-wise Progress Tracker (TFL Aligned)
 
 ### 🟢 Phase 1: Testing Foundations
 
-| TLF Pillar       | Status | Mentor Notes                   |
+| TFL Pillar       | Status | Mentor Notes                   |
 | ---------------- | ------ | ------------------------------ |
 | Foundation (Why) | ⬜ ⬛    | Understanding of QA purpose |
 | Skill (What)     | ⬜ ⬛    | STLC, test design           |
@@ -33,7 +33,7 @@ This dashboard represents a **single learner’s end-to-end journey** through th
 
 ### 🔵 Phase 2: Product & API Testing
 
-| TLF Pillar       | Status | Mentor Notes                   |
+| TFL Pillar       | Status | Mentor Notes                   |
 | ---------------- | ------ | ------------------------------ |
 | Foundation       | ⬜ ⬛    | Business flow understanding |
 | Skill            | ⬜ ⬛    | API, SQL, Agile             |
@@ -46,7 +46,7 @@ This dashboard represents a **single learner’s end-to-end journey** through th
 
 ### 🟣 Phase 3: Automation Engineering
 
-| TLF Pillar       | Status    | Mentor Notes            |
+| TFL Pillar       | Status    | Mentor Notes            |
 | ---------------- | ------    | ----------------------- |
 | Foundation       | ⬜ ⬛    | Automation ROI thinking |
 | Skill            | ⬜ ⬛    | Selenium / Playwright   |
@@ -59,7 +59,7 @@ This dashboard represents a **single learner’s end-to-end journey** through th
 
 ### 🟠 Phase 4: QA Leadership Foundations
 
-| TLF Pillar       | Status    | Mentor Notes        |
+| TFL Pillar       | Status    | Mentor Notes        |
 | ---------------- | ------    | ------------------- |
 | Foundation       | ⬜ ⬛    | Quality ownership   |
 | Skill            | ⬜ ⬛    | Test strategy       |

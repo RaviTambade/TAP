@@ -28,7 +28,7 @@ Level 4 – Ownership       → Implements independently & explains impact
 
 ## 1️⃣ Separation of Concerns
 
-**(TLF Stage: Understanding)**
+**(TFL Stage: Understanding)**
 
 | Level                 | Observable Student Behavior                               |
 | --------------------- | --------------------------------------------------------- |
@@ -45,7 +45,7 @@ Level 4 – Ownership       → Implements independently & explains impact
 
 ## 2️⃣ Code Organization & Project Structure
 
-**(TLF Stage: Application)**
+**(TFL Stage: Application)**
 
 | Level                 | Observable Student Behavior                |
 | --------------------- | ------------------------------------------ |
@@ -62,7 +62,7 @@ Web → Application → Domain ← Infrastructure
 
 ## 3️⃣ Testing & Debugging Approach
 
-**(TLF Stage: Application)**
+**(TFL Stage: Application)**
 
 | Level                 | Observable Student Behavior                |
 | --------------------- | ------------------------------------------ |
@@ -78,7 +78,7 @@ Web → Application → Domain ← Infrastructure
 
 ## 4️⃣ Business Logic Quality
 
-**(TLF Stage: Integration)**
+**(TFL Stage: Integration)**
 
 | Level                 | Observable Student Behavior             |
 | --------------------- | --------------------------------------- |
@@ -92,7 +92,7 @@ Web → Application → Domain ← Infrastructure
 
 ## 5️⃣ Scalability & Maintainability Thinking
 
-**(TLF Stage: Integration)**
+**(TFL Stage: Integration)**
 
 | Level                 | Observable Student Behavior           |
 | --------------------- | ------------------------------------- |
@@ -108,7 +108,7 @@ Web → Application → Domain ← Infrastructure
 
 ## 6️⃣ Independent Development Readiness
 
-**(TLF Stage: Ownership)**
+**(TFL Stage: Ownership)**
 
 | Level                 | Observable Student Behavior        |
 | --------------------- | ---------------------------------- |
@@ -119,7 +119,7 @@ Web → Application → Domain ← Infrastructure
 
 ## 7️⃣ Communication & Explanation Skill
 
-**(TLF Stage: Ownership)**
+**(TFL Stage: Ownership)**
 
 | Level                 | Observable Student Behavior     |
 | --------------------- | ------------------------------- |
