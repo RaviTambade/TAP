@@ -1,7 +1,7 @@
 # 🌐 Web Programming Essentials
-**# Web Programming Essentials** and suitable for **students, freshers, and mentor-driven programs**.
-**Restructured conetnt** to match how learning should *flow* in the Transflower model: **Concept → Skill → Practice → Project → Professional Readiness**.
-### Transflower Learning Framework Edition
+- **# Web Programming Essentials** and suitable for **students, freshers, and mentor-driven programs**.
+- **Restructured conetnt** to match how learning should *flow* in the Transflower model: 
+- **Concept → Skill → Practice → Project → Professional Readiness**.
 
 ## 🧠 LEVEL 1: Awareness & Conceptual Foundation
 
