@@ -1,6 +1,6 @@
 ## The Confidence Gaps in Indian Engineering Education
 
-*(Inspired by outcomes seen in global achievers like Edward Nathan Varghese)*
+*(Inspired by outcomes seen in global achievers like <a href="https://www.moneycontrol.com/education/meet-edward-nathan-varghese-iit-hyderabad-student-who-landed-the-institute-s-highest-ever-rs-2-5-crore-package-article-13765149.html">Edward Nathan Varghese</a>*
 
 ### 1️⃣ From Syllabus Completion → Capability Formation
 

@@ -65,7 +65,7 @@ Let me share my love story:
 
 > *“Every language is a tool — choose it based on the job, not the trend.”*
 
-### 🔧 **Popular Programming Languages in 2025**
+### 🔧 **Popular Programming Languages in 2026**
 
 According to current trends:
 
@@ -98,7 +98,7 @@ From **mainframes to microservices**, from **CUI to cloud**, from **hotline supp
 
 > “Keep learning, keep exploring. Tools will change, but your curiosity is your compass.”
 
-🚀 **Welcome to TAP — The Transflower Application Platform**
-🔁 **Embrace change. Accept diversity. Grow as one.**
+#### 🚀 **Welcome to TAP — The Transflower Application Platform**
+#### 🔁 **Embrace change. Accept diversity. Grow as one.**
 
  

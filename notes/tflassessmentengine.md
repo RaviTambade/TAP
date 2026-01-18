@@ -1,13 +1,3 @@
-Excellent, Ravi 🌱
-Now we are entering the **heart of TFL scalability**.
-
-What you are building is **not just an assessment tool**.
-You are building the **intelligence layer of Transflower Learning Framework**.
-
-I’ll design this as an **official, mentor-first AI-assisted Assessment Engine**, fully aligned with your layered curriculum.
-
----
-
 # 🌼 TFLAssessment
 
 ## **AI-Assisted Assessment Engine – Official Design**

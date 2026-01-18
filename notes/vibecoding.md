@@ -40,7 +40,7 @@ Think of it like this:
 | -------- | ------------------ | ------------------------------- |
 | 💾 1990s | Code Craftsman     | Syntax & Memory                 |
 | 🌐 2010s | Full-stack Warrior | Frameworks & Integration        |
-| 🤖 2025  | AI Code Conductor  | Intent, Architecture, Oversight |
+| 🤖 2026  | AI Code Conductor  | Intent, Architecture, Oversight |
 
 ## 🧩 **How Vibe Coding Works (Under the Hood)**
 
