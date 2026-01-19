@@ -1,5 +1,3 @@
- 
-
 ## 👨‍🏫 **From Terminals to Full Stack — A Journey Through Computing**
 
 ### 🌱 “Every generation touches technology differently… but the fundamentals remain timeless.”

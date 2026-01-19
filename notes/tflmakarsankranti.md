@@ -1,6 +1,5 @@
 ## From Ravi 🌞 (Mentor@Transflower)
 
-
 #### “Til-Gul ghya, god god bola."
 - but remember, in Transflower, skills speak louder than certificates.
 

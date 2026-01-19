@@ -6,7 +6,6 @@
 
 > *"Class, tumhala ek sangto... programming language ha fakta start aahe. But the real growth happens when you understand the skeleton of the entire application — from source code to cloud deployment."*
 
----
 
 ## 🎬 Scene 1: C - The First Step, The Tough Love 🧱
 
@@ -31,7 +30,6 @@ But you know what C taught us?
 
 **Lesson:** *Low-level understanding = high-level clarity.*
 
----
 
 ## ⚙️ Scene 2: Tools of the Trade — Your Developer Arsenal 🔧
 
@@ -52,8 +50,6 @@ And from there, you meet…
 🕵️ **GitHub** for tracking your genius (and your bugs).
 
 > “Language ha ek tool aahe. But tool la run karayla proper developer lagto.”
-
----
 
 ## 🚀 Scene 3: Jump to C++ — Object-Oriented Thinking Begins 🧠
 
@@ -80,7 +76,6 @@ And OOP taught us:
 
 You now moved from **code writer** to **system designer**.
 
----
 
 ## 🌐 Scene 4: Java, C#, Python — You Became a Language Explorer 🌍
 
@@ -96,8 +91,6 @@ Welcome to:
 * **JavaScript / Node.js** → Frontend, backend, real-time web!
 
 You started speaking **multiple languages** — but more importantly, you learned to **think in different paradigms**.
-
----
 
 ## 📁 Scene 5: Project Structure — It’s More Than Just `.cs` and `.cpp` Files
 
@@ -124,7 +117,6 @@ Let me show you the **anatomy of a real project**:
 * Your **hardware** is managed by the **OS kernel**
 * Your **logs**, **APIs**, and **Docker containers** are your application’s social media — all activity is visible here 👀
 
----
 
 ## 🌈 Scene 6: Stack Based Learning — Roadmap for Real Jobs
 
@@ -142,8 +134,6 @@ Let’s clear the air.
 🔹 **Cloud** → Azure, AWS
 
 This is how you become **Project-Ready** — not just Language-Ready.
-
----
 
 ## 🤖 Scene 7: Developer Toolchain — Pune Style 💻
 
@@ -164,7 +154,6 @@ From C to Cloud, here’s what your **Pune-style Developer Toolchain** looks lik
 
 > “Ek code lihinyacha na, ek ecosystem tayar karaycha aahe.”
 
----
 
 ## 💼 Scene 8: Project-Based Learning — The Real Game
 
@@ -181,7 +170,6 @@ So when you say:
 
 Because **resume la technology lihinyacha nahi** — **GitHub repo dakhavanyacha**.
 
----
 
 ## 🧠 Final Scene: The Polyglot Developer Mindset
 

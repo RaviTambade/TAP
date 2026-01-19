@@ -5,7 +5,6 @@
 > **“Assessment is not judgment.
 > It is guidance with evidence.”**
 
----
 
 ## 1. Purpose of TFLAssessment Engine
 
@@ -17,7 +16,6 @@ The TFLAssessment Engine exists to:
 * Adapt assessments to **learner context**
 * Align tightly with **TFL curriculum layers**
 
----
 
 ## 2. Core Design Philosophy
 
@@ -39,7 +37,6 @@ The TFLAssessment Engine exists to:
 
 > *AI suggests. Mentors decide.*
 
----
 
 ## 3. Assessment Coverage Across TFL Layers
 
@@ -52,7 +49,7 @@ The TFLAssessment Engine exists to:
 | Layer 5   | Architecture     | Assess design reasoning & trade-offs     |
 | Layer 6   | Role readiness   | Role-based assessment & interview prep   |
 
----
+
 
 ## 4. High-Level Architecture
 
@@ -63,11 +60,11 @@ The TFLAssessment Engine exists to:
                      |
 ┌────────────── TFLAssessment Engine ──────────────┐
 │                                                  │
-│  Skill Taxonomy & Curriculum Graph                │
-│  Question Blueprint Engine                        │
-│  AI Generation Layer (LLM)                        │
-│  Validation & Guardrails                          │
-│  Evaluation & Analytics Engine                    │
+│  Skill Taxonomy & Curriculum Graph               │
+│  Question Blueprint Engine                       │
+│  AI Generation Layer (LLM)                       │
+│  Validation & Guardrails                         │
+│  Evaluation & Analytics Engine                   │
 │                                                  │
 └───────────────────┬──────────────────────────────┘
                     |
@@ -78,7 +75,6 @@ The TFLAssessment Engine exists to:
 
 ## 5. Core Components (Detailed)
 
----
 
 ### 🔹 1. Skill Taxonomy Engine (Foundation)
 
@@ -100,7 +96,6 @@ Outcome: Can explain scalability benefits
 
 📌 This ensures **precision in assessment**.
 
----
 
 ### 🔹 2. Question Blueprint Engine (Your Secret Weapon)
 
@@ -126,7 +121,6 @@ Outcome: Can choose correct service lifetime
 
 AI only fills the **content**, not the intent.
 
----
 
 ### 🔹 3. AI Generation Layer (LLM)
 
@@ -150,7 +144,6 @@ Constraints: No trick questions
 
 📌 This avoids hallucinations and randomness.
 
----
 
 ### 🔹 4. Validation & Guardrails (Critical)
 
@@ -166,7 +159,6 @@ No question reaches learners without validation.
 
 ❗ Mentor approval optional but recommended initially.
 
----
 
 ### 🔹 5. Evaluation Engine
 
@@ -186,7 +178,6 @@ AI assists with:
 * Pattern recognition
 * Feedback generation
 
----
 
 ### 🔹 6. Analytics & Skill Gap Engine
 
@@ -203,7 +194,6 @@ This is where **assessment becomes mentorship**.
 
 > “Student understands MVC but struggles with DI lifetimes.”
 
----
 
 ## 6. Assessment Types Supported
 
@@ -215,7 +205,6 @@ This is where **assessment becomes mentorship**.
 | Skill-gap      | Targeted reinforcement |
 | Role-readiness | Job alignment          |
 
----
 
 ## 7. Mentor Dashboard (Key Features)
 
@@ -229,7 +218,6 @@ This is where **assessment becomes mentorship**.
 
 Mentors stay **in control** at all times.
 
----
 
 ## 8. Learner Experience Flow
 
@@ -245,7 +233,7 @@ Login
 
 Feedback focuses on **learning**, not fear.
 
----
+
 
 ## 9. Technology-Agnostic Design (Practical)
 
@@ -258,7 +246,7 @@ You can implement this using:
 
 Architecture supports **incremental intelligence**.
 
----
+
 
 ## 10. MVP Roadmap (Highly Recommended)
 
@@ -281,7 +269,7 @@ Architecture supports **incremental intelligence**.
 * Role-readiness scoring
 * Continuous growth tracking
 
----
+
 
 ## 11. Why This Engine Is Perfect for Transflower
 
@@ -291,21 +279,9 @@ Architecture supports **incremental intelligence**.
 ✔ Supports AI without dependency
 ✔ Differentiates from LMS platforms
 
----
 
 ## 🌼 Final Mentor Insight
 
 > *Most platforms test what students remember.*
 > **TFLAssessment measures what learners can become.**
 
----
-
-## 🧭 Next Steps (Choose One)
-
-1️⃣ Design **data models & schemas**
-2️⃣ Create **prompt templates per TFL layer**
-3️⃣ Build **mentor dashboard wireframe**
-4️⃣ Define **assessment rubrics**
-5️⃣ Convert this into **technical architecture document**
-
-Tell me where you want to go next, Ravi 🌱

@@ -254,5 +254,3 @@ You're hired for:
 
 🎓 Welcome to the tribe of **Polyglot Engineers**.
 We don’t fear change — **we learn, adapt, and lead.**
-
-

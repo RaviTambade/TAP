@@ -1,11 +1,8 @@
-Perfect 👍
+
+# 👨‍👩‍👧‍👦 Parent Orientation Program
 Parents are **key decision-makers**, and they need *clarity, safety, and outcomes* — not technical jargon.
 
 Below is a **Parent Orientation Version** crafted in **Transflower mentor voice** — calm, trustworthy, outcome-focused.
-
----
-
-# 👨‍👩‍👧‍👦 Parent Orientation Program
 
 ## *“Understanding Your Child’s Technology Path — Before Committing Time & Money”*
 
@@ -17,7 +14,6 @@ Below is a **Parent Orientation Version** crafted in **Transflower mentor voice*
 > Help parents confidently answer one question:
 > **“Is this the right learning path for my child?”**
 
----
 
 ## 🧭 1. Opening: Setting the Right Context (10 mins)
 
@@ -34,7 +30,6 @@ We explain:
 
 💡 *Goal:* Reduce anxiety, build trust.
 
----
 
 ## 🧠 2. What is Fullstack Development? (Non-Technical Explanation)
 
@@ -52,7 +47,6 @@ We explain:
 * Languages are tools
 * **Thinking stays for life**
 
----
 
 ## 🧪 3. Why We Let Students “Try Before Choosing” (15 mins)
 
@@ -75,7 +69,7 @@ Most institutes:
 > “We don’t want your child to *survive* a course.
 > We want them to **belong** to a skill.”
 
----
+
 
 ## 🧑‍💻 4. What Your Child Will Experience (Simple View)
 
@@ -89,7 +83,6 @@ Most institutes:
 
 👉 **No exams. No marks. Only observation.**
 
----
 
 ## 🎯 5. How This Protects Your Investment (10 mins)
 
@@ -109,7 +102,7 @@ Most institutes:
 
 💡 *Parents don’t pay for guesswork.*
 
----
+
 
 ## 📈 6. What Happens After the Sampler (15 mins)
 
@@ -127,27 +120,24 @@ Parents receive:
 * Project expectations
 * Employability indicators
 
----
 
 ## 👨‍🏫 7. Role of Mentor (Trust Section)
 
 ### Mentor is NOT:
 
-❌ Just a trainer
-❌ A content reader
-❌ A certificate provider
+- ❌ Just a trainer
+- ❌ A content reader
+- ❌ A certificate provider
 
 ### Mentor IS:
 
-✔ Career guide
-✔ Reality checker
-✔ Discipline builder
-✔ Progress observer
+- ✔ Career guide
+- ✔ Reality checker
+- ✔ Discipline builder
+- ✔ Progress observer
 
 > “Your child doesn’t need more motivation.
 > They need **direction and consistency**.”
-
----
 
 ## 🧩 8. Employability Reality Check (Very Important)
 
@@ -162,7 +152,6 @@ Parents understand:
 
 > This is **career construction**, not coaching class.
 
----
 
 ## ❓ 9. Parent Q&A (15 mins)
 
@@ -175,7 +164,6 @@ We invite questions like:
 
 💬 Honest answers. No false promises.
 
----
 
 ## 🎓 10. Closing Assurance
 
@@ -191,21 +179,20 @@ Parents leave with:
 * Transparency
 * Clear next steps
 
----
 
 ## 📌 Optional Add-Ons for Parents
 
-✔ Monthly parent updates
-✔ Skill progress reports
-✔ Demo day invitations
-✔ Mentor review meetings
+- ✔ Monthly parent updates
+- ✔ Skill progress reports
+- ✔ Demo day invitations
+- ✔ Mentor review meetings
 
----
+
 
 ## 🌱 Why Parents Trust This Model
 
-✔ No pressure selling
-✔ No one-size-fits-all
-✔ Skill-first approach
-✔ Student-centric decisions
+- ✔ No pressure selling
+- ✔ No one-size-fits-all
+- ✔ Skill-first approach
+- ✔ Student-centric decisions
 

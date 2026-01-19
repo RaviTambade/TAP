@@ -1,12 +1,6 @@
-Excellent idea 👍
-A **1-Day Foundation Sampler** is *exactly* what confused students need before committing 12–16 weeks.
-
-Below is a **Transflower mentor-style, reality-based sampler** — not theory, not marketing.
-
----
-
 # 🧪 1-Day Fullstack Foundation Sampler
 
+A **1-Day Foundation Sampler** is *exactly* what confused students need before committing 12–16 weeks.
 **“Touch Every Stack Before You Choose One”**
 *(Transflower Learning Framework)*
 
@@ -14,8 +8,6 @@ Below is a **Transflower mentor-style, reality-based sampler** — not theory, n
 🎯 **Goal:**
 
 > Help students *feel* each stack — not just hear about it — and make an informed decision.
-
----
 
 ## 🧠 Sampler Design Philosophy
 
@@ -30,7 +22,7 @@ So every stack gets:
 * ✅ One real-world problem
 * ✅ One small success moment
 
----
+
 
 ## 🗓️ Day Structure Overview
 
@@ -39,14 +31,13 @@ So every stack gets:
 | 09:30 – 10:00 | Orientation: How Fullstack Really Works |
 | 10:00 – 11:00 | 🐍 Python Fullstack Sampler             |
 | 11:00 – 12:00 | 🌐 MERN Stack Sampler                   |
-| 12:00 – 13:00 | ☕ Java Fullstack Sampler                |
-| 13:00 – 14:00 | 🍴 Lunch + Reflection                   |
+| 12:00 – 13:00 | ☕ Java Fullstack Sampler               |
+| 13:00 – 14:00 | 🍴 Lunch + Reflection                    |
 | 14:00 – 15:00 | ⚙️ .NET Core Fullstack Sampler          |
 | 15:00 – 16:00 | 🧠 C++ Fullstack Sampler                |
 | 16:00 – 16:30 | Stack Comparison & Self-Assessment      |
 | 16:30 – 17:00 | Mentor Guidance + Stack Selection       |
 
----
 
 ## 🧭 09:30 – 10:00
 
@@ -61,7 +52,6 @@ So every stack gets:
 🎯 Outcome:
 Students see **one mental model** that fits all stacks.
 
----
 
 ## 🐍 10:00 – 11:00
 
@@ -98,7 +88,6 @@ Students see **one mental model** that fits all stacks.
 
 💡 *Students feel calm and confident here.*
 
----
 
 ## 🌐 11:00 – 12:00
 
@@ -128,7 +117,6 @@ Students see **one mental model** that fits all stacks.
 
 💡 *Students feel excitement and speed.*
 
----
 
 ## ☕ 12:00 – 13:00
 
@@ -158,8 +146,6 @@ Students see **one mental model** that fits all stacks.
 
 💡 *Students feel seriousness and control.*
 
----
-
 ## 🍴 13:00 – 14:00
 
 ### Lunch + Reflection Break
@@ -171,8 +157,6 @@ Students answer silently:
 * Which felt exciting?
 
 (No discussion yet.)
-
----
 
 ## ⚙️ 14:00 – 15:00
 
@@ -201,8 +185,6 @@ Students answer silently:
 
 💡 *Students feel maturity and elegance.*
 
----
-
 ## 🧠 15:00 – 16:00
 
 ## C++ Fullstack Sampler
@@ -230,23 +212,20 @@ Students answer silently:
 
 💡 *Students feel challenge and depth.*
 
----
-
 ## 📊 16:00 – 16:30
 
 ## Stack Comparison & Self-Assessment
 
 ### Student fills this table:
 
-| Stack  | Easy | Interesting | Stressful | Want to Go Deeper |
-| ------ | ---- | ----------- | --------- | ----------------- |
-| Python | ⬜    | ⬜           | ⬜         | ⬜                 |
-| MERN   | ⬜    | ⬜           | ⬜         | ⬜                 |
-| Java   | ⬜    | ⬜           | ⬜         | ⬜                 |
-| .NET   | ⬜    | ⬜           | ⬜         | ⬜                 |
-| C++    | ⬜    | ⬜           | ⬜         | ⬜                 |
+| Stack  | Easy  | Interesting | Stressful | Want to Go Deeper |
+| ------ | ----  | ----------- -| --------- | ---------------- |
+| Python | ⬜    | ⬜          | ⬜        | ⬜              |
+| MERN   | ⬜    | ⬜          | ⬜        | ⬜              |
+| Java   | ⬜    | ⬜          | ⬜        | ⬜              |
+| .NET   | ⬜    | ⬜          | ⬜        | ⬜              |
+| C++    | ⬜    | ⬜          | ⬜        | ⬜              |
 
----
 
 ## 🎓 16:30 – 17:00
 
@@ -270,13 +249,11 @@ Each student chooses:
 * 🔄 **Backup Stack**
 * 🚀 **Future Expansion Stack**
 
----
-
 ## 🧠 Why This Sampler Works
 
-✔ Removes fear
-✔ Prevents wrong commitments
-✔ Reduces dropouts
-✔ Builds trust
-✔ Saves 16 weeks of regret
+- ✔ Removes fear
+- ✔ Prevents wrong commitments
+- ✔ Reduces dropouts
+- ✔ Builds trust
+- ✔ Saves 16 weeks of regret
 

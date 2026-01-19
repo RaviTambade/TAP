@@ -4,20 +4,16 @@
 **By Ravi Tambade**
 *Mentor | Industry Trainer | Tech Educator*
 
----
 
 Many fresh graduates or aspiring developers struggle to find direction in the vast IT industry. Some aim to become coders, some dream of UI design, others want to explore AI or data science — but what’s missing is **clarity and a roadmap**.
 
 This post is for all students, especially those in **BSc (CS), BCA, B.E., Diploma**, or even those without a formal CS degree but with a passion for software development. Whether you're aiming for your **first job** or trying to switch to a **developer role**, this post will guide you through the journey from a **junior developer to project lead** — by focusing on **skills**, not just scores.
-
----
 
 ## 🧠 Mindset First: Marks Don’t Define Skills
 
 Companies today look for **industry-ready talent**, not just degrees or academic toppers. Your **skillset**, **project experience**, and **logical thinking** matter more than your percentage.
 ✅ Focus on what you **can build**, not just what you **studied**.
 
----
 
 ## 📈 Career Growth Path: What Comes After “Junior Developer”?
 
@@ -29,7 +25,6 @@ Companies today look for **industry-ready talent**, not just degrees or academic
 | **Project Lead**     | Coordinate delivery, manage team tasks                     |
 | **Delivery Manager** | Align project outcomes with business expectations          |
 
----
 
 ## 🧱 What Skills Do You Need?
 
@@ -67,7 +62,6 @@ Companies today look for **industry-ready talent**, not just degrees or academic
 * Postman, Swagger
 * Visual Studio / VS Code / IntelliJ
 
----
 
 ## 🧭 Application Architecture (Technology-Agnostic)
 
@@ -96,7 +90,6 @@ You can use this architecture with:
 * Python (Flask + SQLAlchemy)
 * Node.js (Express + Sequelize)
 
----
 
 ## ☁️ Cloud & Hosting Fundamentals
 
@@ -114,7 +107,6 @@ Understand concepts like:
 * API Gateways
 * Service Mesh
 
----
 
 ## 🧩 Project Activities to Build Real Skills
 
@@ -130,8 +122,6 @@ Understand concepts like:
 
 > 🔁 Repeat the cycle across 2–3 projects to gain true confidence.
 
----
-
 ## 📚 Choose Your Learning Path Based on Interest
 
 | Interest                 | Technologies to Learn                      |
@@ -142,8 +132,6 @@ Understand concepts like:
 | **Database Engineering** | SQL, Stored Procs, ER Models, Query Design |
 | **IoT & Systems**        | C, Sensors, Microcontrollers               |
 
----
-
 ## 👨‍🏫 Mentor’s Advice: Key Focus Areas
 
 * Learn **core programming** before jumping to frameworks.
@@ -152,8 +140,6 @@ Understand concepts like:
 * Practice **collaboration** and **project presentation**.
 * Know the difference between **UI**, **Business Logic**, and **Data Layer**.
 * Most importantly: **Think like a developer, not just a coder.**
-
----
 
 ## 💬 Final Thoughts
 
@@ -167,12 +153,11 @@ You can **start from zero** and reach the **industry level** — provided you ha
 
 Let your career be built on **skills, not shortcuts**.
 
----
 
-✅ Want a mentorship roadmap or project ideas?
-✅ Need personalized guidance on .NET, Java, Node.js, or Python?
+- ✅ Want a mentorship roadmap or project ideas?
+- ✅ Need personalized guidance on .NET, Java, Node.js, or Python?
 
-📩 **Reach out to me — let’s build your future, one project at a time.**
+📩 **Reach out to us — let’s build your future, one project at a time.**
 Tap your potential
 Mentor at your service.
 Transflower
