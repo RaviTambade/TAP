@@ -7,8 +7,6 @@
 - knowledge is built
 - Intelligence is applied
 
-#### Tap your Potential
-
 ## 📂 Transflower Learning Framework & Ecosystem
 
 Skill-First Education | Mentor-Driven | Industry-Aligned
