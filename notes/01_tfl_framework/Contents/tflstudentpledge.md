@@ -1,58 +1,40 @@
-# 🌼 THE TRANSFLOWER LEARNER PLEDGE
+## 🌱 Transflower Learner’s Pledge
 
 ### *Read it. Live it. Become it.*
 
-## I pledge to **think before I code**
-
+I pledge to **think before I code**,
 and to seek understanding, not shortcuts.
 
-## I pledge to **ask why**,
-
+I pledge to **ask why**,
 even when answers are uncomfortable.
 
-## I pledge to **treat problems as teachers**,
-
+I pledge to **treat problems as teachers**,
 and failure as feedback.
 
-## I pledge to **build before I claim**,
+I pledge to **build before I claim**,
+and prove my learning through action.
 
-and prove learning through action.
+I pledge to **respect systems**,
+knowing that every solution impacts people, business, and trust.
 
-## I pledge to **respect systems**,
+I pledge to **learn with others**,
+to share freely, review honestly, and grow together.
 
-knowing every solution affects people, business, and trust.
+I pledge to **accept mentorship with humility**,
+and to one day, mentor others with responsibility.
 
-## I pledge to **learn with others**,
+I pledge to **own my learning**,
+without blaming syllabus, teachers, tools, or circumstances.
 
-share freely, review honestly, and grow together.
+I pledge to **stay curious**,
+even after success, recognition, or mastery.
 
-## I pledge to **accept mentorship**,
+### ✍️ Commitment
 
-and one day, become a mentor myself.
+By taking this pledge, I choose the path of **discipline over shortcuts**,
+**depth over noise**, and **growth over comfort**.
 
-## I pledge to **own my learning**,
+I commit to becoming not just a professional,
+but a **thinking, responsible, and humane builder**.
 
-without blaming syllabus, teachers, or circumstances.
-
-## I pledge to **stay curious**,
-
-even after success.
-
-## I pledge to **become a professional**,
-
-not just secure a job.
-
-
-
-### 🌱 *From this day forward,*
-
-**I choose clarity over confusion,
-capability over credentials,
-and growth over comfort.**
-
-## 🌼 TRANSFLOWER LEARNING
-
-**Building Capability. Cultivating Confidence. Creating Professionals.**
-
-> *“You are not here to finish a course.
-> You are here to become someone.”*
+— *A Transflower Learner* 🌼
