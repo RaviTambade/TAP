@@ -1,4 +1,4 @@
-## **1. Relationship-Intensive Professions** ❤️
+## **1. Relationship-Intensive Professions** 
 
 Where trust, emotional intelligence, and human connection are irreplaceable.
 
@@ -20,7 +20,7 @@ Where context, uncertainty, and long-term consequences matter.
 
 **Why AI can’t replace it:** AI can suggest options, but choosing the right path often requires intuition, ethics, and lived experience.
 
-## **3. Creative Originality & Cultural Influence** 🎨🎭
+## **3. Creative Originality & Cultural Influence** 
 
 Where originality, cultural nuance, and personal vision shape the work.
 
@@ -31,8 +31,7 @@ Where originality, cultural nuance, and personal vision shape the work.
 
 **Why AI can’t replace it:** AI can remix, but groundbreaking originality comes from lived human experiences and cultural belonging.
 
-## **4. Skilled Trades & Hands-On Craftsmanship** 🔧👷‍♀️
-
+## **4. Skilled Trades & Hands-On Craftsmanship** 
 Where physical dexterity, adaptability, and local problem-solving are key.
 
 * Electricians, plumbers, carpenters
@@ -42,7 +41,7 @@ Where physical dexterity, adaptability, and local problem-solving are key.
 
 **Why AI can’t replace it:** Robots struggle with non-standard, unpredictable physical environments.
 
-## **5. Emergency & Human-Critical Response** 🚑👮‍♂️
+## **5. Emergency & Human-Critical Response** 
 
 Where quick thinking, physical action, and human presence save lives.
 
@@ -52,7 +51,7 @@ Where quick thinking, physical action, and human presence save lives.
 
 **Why AI can’t replace it:** Crisis situations require empathy, moral judgment, and improvisation under stress.
 
-## **6. Ethics, Oversight, and Human Rights** ⚖️🌍
+## **6. Ethics, Oversight, and Human Rights** 
 
 Where societal trust and fairness are at stake.
 

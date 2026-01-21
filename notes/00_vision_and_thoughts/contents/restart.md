@@ -1,6 +1,5 @@
 🌸 Restart Your Career with Confidence | A Mentorship Program for Women in Tech
 
-
 Dear Professionals,
 
 Taking a career break is not a setback — it’s simply a pause. What matters is how you restart, with confidence and clarity.
