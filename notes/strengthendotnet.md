@@ -2,7 +2,6 @@
 
  This program reinforces core ASP.NET development skills and team collaboration through hands-on activities and a capstone project.
 
-
 ### 👨‍💻 Target Audience:
 Students with 7 months of ASP.NET training but lacking in applied and industry-level skills.
 
