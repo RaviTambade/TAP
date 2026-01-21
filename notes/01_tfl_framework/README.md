@@ -6,48 +6,48 @@ These files explain the *why*, *how*, and *principles* behind Transflower’s ap
 
 ## 🌱 Core Framework & Philosophy
 
-- 📘 **[Transflower Learning Framework – Overview](tfl.md)**
-- 🧩 **[TFL Framework Structure](tflfrmwrk.md)**
-- 📜 **[TFL Manifesto](tflmanifesto.md)**
-- 🧠 **[First-Principles Thinking](tflfirstprinciple.md)**
-- 🧍 **[Human-First Learning](tflhumanfirst.md)**
-- 🔍 **[Evidence-First Thinking](tflevidencefirst.md)**
+- 📘 **[Transflower Learning Framework – Overview](./Contents/tfl.md)**
+- 🧩 **[TFL Framework Structure](./Contents/tflfrmwrk.md)**
+- 📜 **[TFL Manifesto](./Contents/tflmanifesto.md)**
+- 🧠 **[First-Principles Thinking](./Contents/tflfirstprinciple.md)**
+- 🧍 **[Human-First Learning](./Contents/tflhumanfirst.md)**
+- 🔍 **[Evidence-First Thinking](./Contents/tflevidencefirst.md)**
 
 
 ## ⚙️ Learning Engine & Operations
 
-- ⚙️ **[TFL Engine](tfl.engine.md)**
-- 🔄 **[Learning Operations (LearnOps)](tfllearnops.md)**
-- 📊 **[Assessment Engine](tflassessmentengine.md)**
+- ⚙️ **[TFL Engine](./Contents/tfl.engine.md)**
+- 🔄 **[Learning Operations (LearnOps)](./Contents/tfllearnops.md)**
+- 📊 **[Assessment Engine](./Contents/tflassessmentengine.md)**
 
 
 ## 🧠 Thinking, Mindset & Growth
 
-- 🧠 **[Thinking Models in TFL](tflthinking.md)**
-- 🏋️ **[Daily Thinking Workout](tfldailythinkingworkout.md)**
-- 🌱 **[From Seed to Flower](tflfromseedtoflwr.md)**
-- 🧭 **[TTT – Transflower Thinking Tools](tfltt.md)**
+- 🧠 **[Thinking Models in TFL](./Contents/tflthinking.md)**
+- 🏋️ **[Daily Thinking Workout](./Contents/tfldailythinkingworkout.md)**
+- 🌱 **[From Seed to Flower](./Contents/tflfromseedtoflwr.md)**
+- 🧭 **[TTT – Transflower Thinking Tools](./Contents/tfltt.md)**
 
 
 ## 🌸 Character, Culture & Values
 
-- 🌟 **[TFL Characteristics](tflcharacteritics.md)**
-- 🧱 **[Character Building](tflcharcterbuilding.md)**
-- 🧬 **[Learning Culture](tflculture.md)**
-- 🤝 **[Collaborative Classroom](tflcollaborativeclassroom.md)**
-- 🌍 **[Community Learning](tflcommunitylearning.md)**
-- 💖 **[Empathy Sphere](tflempshere.md)**
-- 🧠 **[EMS – Emotional & Mental Strength](tflems.md)**
+- 🌟 **[TFL Characteristics](./Contents/tflcharacteritics.md)**
+- 🧱 **[Character Building](./Contents/tflcharcterbuilding.md)**
+- 🧬 **[Learning Culture](./Contents/tflculture.md)**
+- 🤝 **[Collaborative Classroom](./Contents/tflcollaborativeclassroom.md)**
+- 🌍 **[Community Learning](./Contents/tflcommunitylearning.md)**
+- 💖 **[Empathy Sphere](./Contents/tflempshere.md)**
+- 🧠 **[EMS – Emotional & Mental Strength](./Contents/tflems.md)**
 
 ## 👩‍🎓 Student & Learning Commitments
 
-- ✍️ **[Student Pledge](tflstudentpledge.md)**
+- ✍️ **[Student Pledge](./Contents/tflstudentpledge.md)**
 
 
 ## 🧭 Engineering, Innovation & Career Direction
 
-- ⚖️ **[Engineering vs Innovation](tflagility.md)**
-- 🧰 **[Which Fullstack Should I Choose?](whichfullstack.md)**
+- ⚖️ **[Engineering vs Innovation](./Contents/tflagility.md)**
+- 🧰 **[Which Fullstack Should I Choose?](./Contents/whichfullstack.md)**
 
 
 ### 🌼 Reading Note
