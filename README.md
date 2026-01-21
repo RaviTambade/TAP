@@ -7,11 +7,11 @@
 - knowledge is built
 - Intelligence is applied
 
-TAP (Transflower Accleration Program) is a  100% live Mentor Driven Project based learning Bootcamp.
-
 #### Tap your Potential
 
-## 📂 Knowledge Index
+## 📂 Transflower Learning Framework & Ecosystem
+
+Skill-First Education | Mentor-Driven | Industry-Aligned
 
 - [ Transflower Vision and Thoughts](./notes/00_vision_and_thoughts)  
   Foundational vision, beliefs, first-principles thinking, and long-term perspectives on learning, technology, and human intelligence.
