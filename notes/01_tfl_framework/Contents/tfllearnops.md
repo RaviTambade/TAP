@@ -1,8 +1,8 @@
-# tfllearnops
+# TFL LearnOps ( Learning Operations)
 
 At Transflower, we do not believe in traditional batches.
 
-Instead, we believe in a **continuous pipeline**—just like CI/CD.
+Instead, we believe in a **Continuous Pipeline**—just like CI/CD.
 
 In DevOps:
 
@@ -73,5 +73,5 @@ You are not struggling with change.
 You are being trained **for change**.
 
 And that is the true objective of the
-**Transflower Learning Framework and LearnOps ecosystem**.
+**Transflower Learning Framework and LearnOps ecosystem**
 
