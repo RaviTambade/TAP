@@ -30,8 +30,8 @@ Hiring is no longer just recruitment —
 
 It’s a **pipeline failure**.
 
-Young professionals didn’t stop caring.
-They were rarely taught *how* to care deeply, reflect meaningfully, or connect effort with outcomes.
+- Young professionals didn’t stop caring.
+- They were rarely taught *how* to care deeply, reflect meaningfully, or connect effort with outcomes.
 
 That’s why Transflower does not ask:
 
@@ -70,8 +70,8 @@ Transflower Principle:
 People don’t rise to criticism.
 They rise to **standards they believe they can reach**.
 
-Mentorship ≠ micromanagement
-Mentorship = belief + guidance + feedback loops
+- Mentorship ≠ micromanagement
+- Mentorship = belief + guidance + feedback loops
 
 Transflower Principle:
 
@@ -79,8 +79,8 @@ Transflower Principle:
 
 ### 🔹 4. Motivation Follows Meaning
 
-Young hires don’t lack motivation —
-they often lack **context**.
+- Young hires don’t lack motivation —
+- they often lack **context**.
 
 Show them:
 
@@ -93,9 +93,9 @@ Transflower Principle:
 > *Purpose precedes performance.*
 
 
-This isn’t a generational problem.
-It’s not a youth problem.
-And it’s definitely not an intelligence problem.
+- This isn’t a generational problem.
+- It’s not a youth problem.
+- And it’s definitely not an intelligence problem.
 
 It’s a **learning-design problem**.
 
