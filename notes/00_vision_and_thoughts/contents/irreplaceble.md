@@ -79,6 +79,7 @@ A skill that naturally **extends** your anchor and multiplies its value.
 
 Examples:
 
+
 * A developer learning system design
 * A teacher learning curriculum design
 * An analyst learning domain knowledge
