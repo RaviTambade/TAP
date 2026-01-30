@@ -96,8 +96,8 @@ Team Members
 Artifacts
 ```
 
-👉 Learning happens **inside a project**
-👉 Students think like **contributors**, not learners
+- 👉 Learning happens **inside a project**
+- 👉 Students think like **contributors**, not learners
 
 
 ### 🟡 Layer 3: Execution Layer (HOW)
@@ -126,9 +126,9 @@ Monitoring
 Feedback
 ```
 
-👉 Students see **real consequences**
-👉 Bugs matter
-👉 Quality matters
+- 👉 Students see **real consequences**
+- 👉 Bugs matter
+- 👉 Quality matters
 
 
 
@@ -147,7 +147,6 @@ Industry-Ready Team Member
 
 > “We don’t teach languages first.
 > We teach **thinking**, and languages follow.”
-
 
 
 ## 1️⃣ You are NOT just a “Developer”
@@ -296,17 +295,12 @@ Because:
 * Without testing → no deployment
 * Without deployment → no industry readiness
 
-
-
 ## 🔑 Final Mentor Punchline
 
 > “If you want to learn a language, read a book.
 > If you want to become a **team member**, build a system.”
 
 That’s **Transflower Learning Framework** in one line.
-
-
-
 
 ### 🧠 Problem-Solving → Team Member → Developer Journey
 
@@ -392,8 +386,6 @@ That’s the **Transflower Learning Framework**.
 ### 🧠 Problem-Solving → Team Member → Developer Journey
 
 Let’s reset the story cleanly 👇
-
-
 
 Most students walk in with one clear goal:
 
@@ -488,9 +480,8 @@ You use syntax to solve problems.
 
 Let’s clean this up 👇
 **What changes across C, C++, Java, .NET, Node.js, Python?**
-👉 **NOT the SDLC**
-👉 **ONLY the artifacts**
-
+- 👉 **NOT the SDLC**
+- 👉 **ONLY the artifacts**
 
 ## 1️⃣ One Universal Truth (Anchor Statement)
 
@@ -608,8 +599,6 @@ Reality:
 
 👉 **Execution environment decides the artifact**
 
-
-
 ## 4️⃣ Transflower Core Classification (This is powerful)
 
 ### 🟦 Code Types
@@ -635,9 +624,9 @@ SOURCE CODE
 
 ```
                    ┌──────────────────────┐
-                   │     SOURCE CODE       │
-                   │ .c .cpp .java .cs     │
-                   │ .js .py               │
+                   │    SOURCE CODE       │
+                   │ .c .cpp .java .cs    │
+                   │ .js .py              │
                    └──────────┬───────────┘
                               │
                               ▼
