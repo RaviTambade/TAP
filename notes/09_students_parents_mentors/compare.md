@@ -2,8 +2,6 @@
 
 ### Mentor Talk: **Why We Should Not Compare Ourselves With Others**
 
----
-
 Dear Learner,
 
 Let me speak to you not as a teacher, but as a **mentor who has walked with hundreds of students through confusion, self-doubt, slow starts, and beautiful transformations**.
@@ -16,8 +14,6 @@ In the **Transflower Learning Framework (TFL)**, we don’t measure people by sp
 We measure **growth, clarity, consistency, and character**.
 
 Let me explain why comparison is dangerous—and what to do instead.
-
----
 
 ## 1️⃣ Different Starting Points – Different Roads
 
@@ -41,8 +37,6 @@ Now tell me—**is it fair to compare arrival times when the starting lines are 
 
 👉 Comparing outcomes without understanding context is **injustice to yourself**.
 
----
-
 ## 2️⃣ Invisible Struggles – You See the Medal, Not the Training
 
 Social media shows:
@@ -62,7 +56,6 @@ As a mentor, I’ve seen toppers cry in silence and slow learners rise steadily.
 
 👉 **Never compare your backstage with someone else’s stage performance.**
 
----
 
 ## 3️⃣ Comparison Kills Self-Confidence – Slowly and Silently
 
@@ -81,8 +74,6 @@ In TFL, confidence grows when you **acknowledge effort**, not when you chase val
 
 👉 A learner who believes in progress will always outperform a learner chasing approval.
 
----
-
 ## 4️⃣ Your Real Competition Is Your Past Self
 
 TFL philosophy is simple:
@@ -98,8 +89,6 @@ That’s it.
 That is **real growth**.
 
 👉 Compete with your old version, not with someone else’s peak moment.
-
----
 
 ## 5️⃣ чуж Timelines Create Pressure, Not Progress
 
@@ -119,8 +108,6 @@ TFL promotes:
 * **Clarity over comparison**
 * **Consistency over competition**
 
----
-
 ## 🌟 The Better Alternative (TFL Way)
 
 ### ✅ Compare Yourself With Your Past Self
@@ -133,7 +120,6 @@ TFL promotes:
 Success is **not a race**.
 It’s a **personal journey of mastery, meaning, and maturity**.
 
----
 
 ### 🌼 Mentor’s Closing Note
 
