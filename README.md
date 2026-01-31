@@ -11,80 +11,43 @@ TAP (Transflower Accleration Program) is a  100% live Mentor Driven Project base
 
 #### Tap your Potential
 
-#### 🔭 **1. Vision, Culture & Foundations**
+## 📂 Knowledge Index
 
-* [vision.md](https://github.com/RaviTambade/TAP/blob/main/notes/vision.md)
-* [openletter.md](https://github.com/RaviTambade/TAP/blob/main/notes/openletter.md)
-* [FAQ.md](https://github.com/RaviTambade/TAP/blob/main/notes/FAQ.md)
-* [keepgoing.md](https://github.com/RaviTambade/TAP/blob/main/notes/keepgoing.md)
-* [developersuperpower.md](https://github.com/RaviTambade/TAP/blob/main/notes/developersuperpower.md)
-* [codingculture.md](https://github.com/RaviTambade/TAP/blob/main/notes/codingculture.md)
-* [craftsmanshipvschatgpt.md](https://github.com/RaviTambade/TAP/blob/main/notes/conversationwithchatgpt.md)
-* [vibecoding.md](https://github.com/RaviTambade/TAP/blob/main/notes/vibecoding.md)
-* [greatsoftwaredev.md](https://github.com/RaviTambade/TAP/blob/main/notes/greatsoftwaredev.md)
-* [leadership.md](https://github.com/RaviTambade/TAP/blob/main/notes/leadership.md)
-* [technologydiversity.md](https://github.com/RaviTambade/TAP/blob/main/notes/technologydiversity.md)
-* [biggestlie.md](https://github.com/RaviTambade/TAP/blob/main/notes/biggestlie.md)
+- [00_vision_and_thoughts](./00_vision_and_thoughts)  
+  Foundational vision, beliefs, first-principles thinking, and long-term perspectives on learning, technology, and human intelligence.
 
-#### 📚 **2. Learning Models & Pedagogy**
+- [01_tfl_framework](./01_tfl_framework)  
+  Core Transflower Learning Framework documents explaining philosophy, principles, models, and mentor-driven learning structure.
 
-* [bloomsTaxonomyTAP.md](https://github.com/RaviTambade/TAP/blob/main/notes/bloomsTaxonomyTAP.md)
-* [bootcamp.md](https://github.com/RaviTambade/TAP/blob/main/notes/bootcamp.md)
-* [pbl.md](https://github.com/RaviTambade/TAP/blob/main/notes/pbl.md)
-* [stepbystep.md](https://github.com/RaviTambade/TAP/blob/main/notes/stepbystep.md)
-* [startwithsmall.md](https://github.com/RaviTambade/TAP/blob/main/notes/startwithsmall.md)
-* [roadmap.md](https://github.com/RaviTambade/TAP/blob/main/notes/roadmap.md)
+- [02_learning_methodology](./02_learning_methodology)  
+  Learning methods, thinking styles, pedagogy, practice models, reflection loops, and skill-first education approach.
 
+- [03_roadmaps_and_plans](./03_roadmaps_and_plans)  
+  Structured learning roadmaps, multi-year plans, role-based journeys, and execution timelines for students and professionals.
 
-#### 👨‍🍳 **3. Teaching Through Analogies & Narratives**
+- [04_fullstack_stacks](./04_fullstack_stacks)  
+  Full-stack technology stacks, system architecture views, backend–frontend–database integration patterns.
 
-* [cheffullstackmeal.md](https://github.com/RaviTambade/TAP/blob/main/notes/cheffullstackmeal.md)
-* [softwaretflkitchen.md](https://github.com/RaviTambade/TAP/blob/main/notes/softwaretflkitchen.md)
-* [machinecodetocloudproviders.md](https://github.com/RaviTambade/TAP/blob/main/notes/machinecodetocloudproviders.md)
-* [languagebuilding.md](https://github.com/RaviTambade/TAP/blob/main/notes/languagebuilding.md)
-* [localcodeglobalcloud.md](https://github.com/RaviTambade/TAP/blob/main/notes/localcodeglobalcloud.md)
-* [desktoptocloud.md](https://github.com/RaviTambade/TAP/blob/main/notes/desktoptocloud.md)
-* [india\_abroad\_learning.md](https://github.com/RaviTambade/TAP/blob/main/notes/india_abroad_learning.md)
+- [05_tap_programs](./05_tap_programs)  
+  Transflower Accelerator Programs (TAP): project-based, mentorship-driven, industry-aligned training initiatives.
 
-#### 💡 **4. Core Tech Essentials**
+- [06_technology_essentials](./06_technology_essentials)  
+  Core technology fundamentals: OS, networking, databases, system design, tooling, and engineering basics.
 
-#####  .NET & C# Stack
+- [07_language_and_framework_essentials](./07_language_and_framework_essentials)  
+  Programming languages and frameworks essentials with hands-on focus (C, C++, Java, .NET, Python, JS, etc.).
 
-* [CSharpessentials.md](https://github.com/RaviTambade/TAP/blob/main/notes/CSharpessentials.md)
-* [aspnetcoreessentials.md](https://github.com/RaviTambade/TAP/blob/main/notes/aspnetcoreessentials.md)
-* [dotnetfullstack.md](https://github.com/RaviTambade/TAP/blob/main/notes/dotnetfullstack.md)
-* [strengthendotnet.md](https://github.com/RaviTambade/TAP/blob/main/notes/strengthendotnet.md)
+- [08_ai_and_future](./08_ai_and_future)  
+  AI, automation, future skills, human–AI collaboration, and emerging technology perspectives.
 
-#### Web Development Essentials
+- [09_students_parents_mentors](./09_students_parents_mentors)  
+  Guidance, expectations, roles, communication, and mindset alignment for students, parents, and mentors.
 
-* [bootstrapessentials.md](https://github.com/RaviTambade/TAP/blob/main/notes/bootstrapessentials.md)
-* [jqueryessentials.md](https://github.com/RaviTambade/TAP/blob/main/notes/jqueryessentials.md)
-* [webprogramming.md](https://github.com/RaviTambade/TAP/blob/main/notes/webprogramming.md)
-* [browsing.md](https://github.com/RaviTambade/TAP/blob/main/notes/browsing.md)
+- [10_industry_and_careers](./10_industry_and_careers)  
+  Industry insights, career paths, role clarity, hiring realities, and employability-focused guidance.
 
-#### Databases & Interop
+- [11_people_and_stories](./11_people_and_stories)  
+  Real stories, journeys, reflections, mentor notes, and human experiences behind learning and growth.
 
-* [mysqlessentials.md](https://github.com/RaviTambade/TAP/blob/main/notes/mysqlessentials.md)
-* [interop.md](https://github.com/RaviTambade/TAP/blob/main/notes/interop.md)
-
-#### DevOps & Testing
-
-* [cicdessentials.md](https://github.com/RaviTambade/TAP/blob/main/notes/cicdessentials.md)
-* [softwaretestingessentials.md](https://github.com/RaviTambade/TAP/blob/main/notes/softwaretestingessentials.md)
-
-### 🚀 **5. Industry Readiness & Experience**
-
-* [industryready.md](https://github.com/RaviTambade/TAP/blob/main/notes/industryready.md)
-* [internrole.md](https://github.com/RaviTambade/TAP/blob/main/notes/internrole.md)
-* [interviewguidlines.md](https://github.com/RaviTambade/TAP/blob/main/notes/interviewguidlines.md)
-* [abhaynavale.md](https://github.com/RaviTambade/TAP/blob/main/notes/abhaynavale.md)
-* [successstories.md](https://github.com/RaviTambade/TAP/blob/main/notes/successstories.md)
-
-### 📈 **6. Reflection, Feedback, and Inspiration**
-
-* [startwithsmall.md](https://github.com/RaviTambade/TAP/blob/main/notes/startwithsmall.md)
-* [pragatibangar.md](https://github.com/RaviTambade/TAP/blob/main/notes/pragatibangar.md)
-* [stepbystep.md](https://github.com/RaviTambade/TAP/blob/main/notes/stepbystep.md)
-* [abhaynavale.md](https://github.com/RaviTambade/TAP/blob/main/notes/abhaynavale.md)
-
-Tap your potential.
+- [12_events_and_sessions](./12_events_and_sessions)  
+  Workshops, talks, live sessions, bootcamps, discussions, and recorded learning events.
