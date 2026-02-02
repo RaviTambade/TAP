@@ -2,7 +2,7 @@
 ### 🌱 From AI Skills to Agentic Capability — A Transflower Perspective
 
 
-<img src="../../../images/tflai.jpg" width="300" height="200"/>
+<img src="../../../images/tflai.jpg" width="400" height="400"/>
 
 - Everyone is talking about **AI**.
 - Some are talking about **Generative AI**.
