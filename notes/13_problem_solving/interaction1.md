@@ -43,11 +43,11 @@ Now we get:
 
 An executable file is:
 
-✔ A binary format
-✔ Stored on disk
-✔ Static (not running)
-✔ Not using memory
-✔ Not using CPU
+- ✔ A binary format
+- ✔ Stored on disk
+- ✔ Static (not running)
+- ✔ Not using memory
+- ✔ Not using CPU
 
 It is just **stored data**.
 
@@ -70,12 +70,12 @@ The OS steps in.
 
 ### Operating System Does:
 
-1️⃣ Loads file into memory
-2️⃣ Allocates RAM
-3️⃣ Assigns CPU time
-4️⃣ Creates Process ID (PID)
-5️⃣ Sets permissions
-6️⃣ Loads environment variables
+- 1️⃣ Loads file into memory
+- 2️⃣ Allocates RAM
+- 3️⃣ Assigns CPU time
+- 4️⃣ Creates Process ID (PID)
+- 5️⃣ Sets permissions
+- 6️⃣ Loads environment variables
 
 Now it becomes:
 
@@ -100,11 +100,11 @@ app.exe  → Run →  Process (PID 3456)
 
 Now it is:
 
-✔ Live
-✔ Using memory
-✔ Using CPU
-✔ Has owner
-✔ Has security rights
+- ✔ Live
+- ✔ Using memory
+- ✔ Using CPU
+- ✔ Has owner
+- ✔ Has security rights
 
 Now it is **alive**.
 
@@ -142,9 +142,9 @@ One application → One server → One OS
 
 Problem:
 
-❌ Too expensive
-❌ Too heavy
-❌ Low utilization
+- ❌ Too expensive
+- ❌ Too heavy
+- ❌ Low utilization
 
 So came:
 
@@ -164,18 +164,18 @@ Applications
 
 Each app had:
 
-✔ Its own OS
-✔ Its own memory
-✔ Its own kernel
+- ✔ Its own OS
+- ✔ Its own memory
+- ✔ Its own kernel
 
 But…
 
 Problems:
 
-❌ Heavy
-❌ Licensing cost
-❌ Slow startup
-❌ Low portability
+- ❌ Heavy
+- ❌ Licensing cost
+- ❌ Slow startup
+- ❌ Low portability
 
 
 ## 🧩 Step 5: Why Containers Were Needed
@@ -195,11 +195,11 @@ So containers were born.
 
 A **Container Image** contains:
 
-✔ Application
-✔ Executable
-✔ Libraries
-✔ Dependencies
-✔ Config files
+- ✔ Application
+- ✔ Executable
+- ✔ Libraries
+- ✔ Dependencies
+- ✔ Config files
 
 Packed together.
 
@@ -215,9 +215,9 @@ WebApp + Java + Libs + Config = Image
 
 This image is:
 
-✔ Portable
-✔ Lightweight
-✔ Reusable
+- ✔ Portable
+- ✔ Lightweight
+- ✔ Reusable
 
 Can be sent anywhere.
 
@@ -264,11 +264,11 @@ Important insight:
 
 Inside:
 
-✔ One or more processes
-✔ Isolated memory
-✔ Isolated network
-✔ Limited CPU
-✔ Limited storage
+- ✔ One or more processes
+- ✔ Isolated memory
+- ✔ Isolated network
+- ✔ Limited CPU
+- ✔ Limited storage
 
 But still uses:
 
@@ -281,11 +281,11 @@ That’s why containers are fast.
 
 When container runs:
 
-✔ It gets IP
-✔ Ports exposed
-✔ HTTPS communication
-✔ Packet encryption
-✔ Network routing
+- ✔ It gets IP
+- ✔ Ports exposed
+- ✔ HTTPS communication
+- ✔ Packet encryption
+- ✔ Network routing
 
 So your web app becomes:
 
@@ -312,11 +312,11 @@ So we use:
 
 They handle:
 
-✔ Deployment
-✔ Scaling
-✔ Load balancing
-✔ Health checks
-✔ Failover
+- ✔ Deployment
+- ✔ Scaling
+- ✔ Load balancing
+- ✔ Health checks
+- ✔ Failover
 
 Architecture:
 
