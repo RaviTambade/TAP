@@ -36,9 +36,9 @@ In TLF, we split it exactly how real systems work:
 
 These are **non-negotiable**:
 
-✅ **HTML** – Structure (Skeleton of the web page)
-✅ **CSS** – Styling (Skin & appearance)
-✅ **JavaScript** – Behavior (Brain & interaction)
+- ✅ **HTML** – Structure (Skeleton of the web page)
+- ✅ **CSS** – Styling (Skin & appearance)
+- ✅ **JavaScript** – Behavior (Brain & interaction)
 
 📌 Mentor insight:
 
@@ -98,9 +98,9 @@ In Machine Learning, the goal is **data-driven intelligence**, not UI or APIs.
 
 Why Python?
 
-✅ Simple syntax
-✅ Massive ML ecosystem
-✅ Strong community support
+- ✅ Simple syntax
+- ✅ Massive ML ecosystem
+- ✅ Strong community support
 
 Popular libraries:
 
