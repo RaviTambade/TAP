@@ -2,7 +2,7 @@
 
 **(Mentor’s Experience-Based Perspective)**
 
-> *“Beta, technology can give you answers in seconds.
+> *“Dear Student, technology can give you answers in seconds.
 > But wisdom is knowing which answer to trust,
 > when to use it,
 > and when not to use it.”*
@@ -244,7 +244,7 @@ Not just:
 
 ## 🌺 Mentor’s Closing Message to Freshers
 
-> *Beta, in this AI age,
+> *Dear Student, in this AI age,
 > writing code is easy.
 > Thinking is rare.*
 
