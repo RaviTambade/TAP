@@ -270,13 +270,3 @@ With this framework, Transflower students will:
 ✔ Reflect like leaders
 ✔ Perform like industry candidates
 
----
-
-If you want, next I can help you create:
-
-📘 **TFL Interview Handbook (Printable PDF)**
-🎥 **Mock Interview Scripts**
-🧩 **Role-Based STAR Answers (Java/.NET/Data/AI)**
-📊 **Placement Readiness Dashboard Format**
-
-Tell me which one you want, Sir.
