@@ -156,5 +156,3 @@ We commit to:
 
 > **We don’t produce job-seekers.
 > We cultivate professionals who can grow anywhere.**
-
-

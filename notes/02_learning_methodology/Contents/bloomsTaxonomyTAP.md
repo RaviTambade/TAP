@@ -121,10 +121,10 @@ You must **Learn ➝ Practice ➝ Reflect ➝ Innovate**.
 
 ### Here's how we guide you:
 
-🔸 **Set clear learning objectives** at each level
-🔸 **Start small, but start now** — finish one working project before the next tutorial
-🔸 **Encourage collaboration** — through code reviews, pair programming, and peer teaching
-🔸 **Mentorship + Feedback** — We don’t let you stay stuck. We lift you up.
+- 🔸 **Set clear learning objectives** at each level
+- 🔸 **Start small, but start now** — finish one working project before the next tutorial
+- 🔸 **Encourage collaboration** — through code reviews, pair programming, and peer teaching
+- 🔸 **Mentorship + Feedback** — We don’t let you stay stuck. We lift you up.
 
 ## 🧩 Final Thought: **Don’t Just Learn to Code — Learn to Think**
 
