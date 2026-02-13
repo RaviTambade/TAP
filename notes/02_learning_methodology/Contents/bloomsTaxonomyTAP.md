@@ -8,13 +8,9 @@
 
 <img src="/images/blooms-taxonomy.webp" width="700" height="400" />
 
-Imagine you are climbing a mountain — not just any mountain, but one that takes you from **memorizing code syntax** to **designing breakthrough software products**.
+Imagine you are climbing a mountain — not just any mountain, but one that takes you from **memorizing code syntax** to **designing breakthrough software products**. This mountain is called **Bloom’s Taxonomy** — a framework that divides thinking into **six cognitive levels**, each building on the previous.
 
-This mountain is called **Bloom’s Taxonomy** — a framework that divides thinking into **six cognitive levels**, each building on the previous.
-
-At TAP, we don’t believe in shortcuts. We believe in climbing this mountain with clarity, confidence, and curiosity.
-
-Let me walk you through each stage — with the eyes of a mentor, and the heart of a learner:
+At TAP, we don’t believe in shortcuts. We believe in climbing this mountain with clarity, confidence, and curiosity. Let me walk you through each stage — with the eyes of a mentor, and the heart of a learner:
 
 ## 🔹 Level 1: **Remembering**
 
