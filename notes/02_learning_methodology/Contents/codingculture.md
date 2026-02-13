@@ -50,13 +50,15 @@ We don’t write clever code. We write **clear** code.
 
 ### 5. 🚀 **Innovation Playground**
 
-Want to try a new library? Explore Kubernetes? Build a CLI tool?
+- Want to try a new library?
+- Explore Kubernetes? 
+- Build a CLI tool?
 Do it!
 TAP encourages safe spaces to fail, explore, and innovate.
 
 ### 6. 🌍 **Diversity & Inclusion**
 
-Our interns come from varied backgrounds—civil, mechanical, commerce. But they all speak **code** now.
+Our interns come from varied backgrounds— civil, mechanical, commerce. But they all speak **code** now.
 Different minds bring different perspectives. And that’s our biggest strength.
 
 ### 7. 🤖 **Automation Everywhere**
