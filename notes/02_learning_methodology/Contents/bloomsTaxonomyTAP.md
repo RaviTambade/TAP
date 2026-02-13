@@ -116,8 +116,9 @@ You write your own rules. You mentor juniors. You build systems from scratch.
 
 ## 🧗‍♀️ Climb the Ladder — One Rung at a Time
 
-At TAP, we coach students not to jump levels. You can’t start from “Create” before you “Understand.”
-You must **Learn ➝ Practice ➝ Reflect ➝ Innovate**.
+At TAP, we coach students not to jump levels. You can’t start from “Create” before you “Understand.” You must 
+
+#### **Learn ➝ Practice ➝ Reflect ➝ Innovate**.
 
 ### Here's how we guide you:
 
