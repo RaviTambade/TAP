@@ -1,4 +1,4 @@
-## *Coding Culture @Transflower Acceleration Program (TAP)*
+## *Coding Culture @Transflower*
 
 > *"A fool with a tool is still a fool."* — Grady Booch
 >
