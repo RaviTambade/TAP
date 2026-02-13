@@ -1,6 +1,6 @@
 # Electronics Engineer Roadmap 
 
-** Be an engineer who understands **hardware + firmware + systems + safety + deployment**
+ Be an engineer who understands **hardware + firmware + systems + safety + deployment**
 
  
 ## 🧱 **PHASE 1: Strong Foundations**
