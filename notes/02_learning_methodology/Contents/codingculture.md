@@ -27,7 +27,12 @@ Pair programming, huddles, shared terminals—every win is a team win. Now you a
 
 ### 2. 📚 **Continuous Learning**
 
-Every TAP intern is a student forever. We read, explore, break things, fix them, and share back.
+Every TAP intern is a student forever. We 
+- read
+- explore
+- break things
+- fix them, and
+- share back.
 
 > “When you stop learning, your code stops evolving.”
 
