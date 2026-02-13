@@ -189,7 +189,7 @@ Study purpose of:
 
 👉 “Industry-grade Product Prototype”
 
----
+ 
 
 # 📊 Skill Stack Mapping (Mentor View)
 
@@ -238,7 +238,7 @@ Study purpose of:
 
 # 🎓 Career Outcomes After 3 Years
 
-If followed sincerely, she can target:
+If followed sincerely, You could be:
 
 - ✔ Embedded Firmware Engineer
 - ✔ IoT Systems Engineer
