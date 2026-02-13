@@ -23,7 +23,7 @@ Let me share what truly defines our culture:
 ### 1. 🤝 **Collaboration**
 
 We believe in *learning together*. Whether it’s a bug or a breakthrough, it becomes everyone's journey.
-Pair programming, huddles, shared terminals—every win is a team win.
+Pair programming, huddles, shared terminals—every win is a team win. Now you also have cursor, Claud coding agents. 
 
 ### 2. 📚 **Continuous Learning**
 
