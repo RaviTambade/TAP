@@ -135,6 +135,6 @@ We believe:
 At **TAP**, we don’t just produce developers.
 We grow **technologists with values**, **engineers with empathy**, and **mentors in the making**.
 
-> 🎯 **Tap your Potential**
-> 🧠 **Transflower** — *Where Code Meets Character*
-> 🧑‍🏫 **Mentor as a Service**
+- 🎯 **Tap your Potential**
+- 🧠 **Transflower** — *Where Code Meets Character*
+- 🧑‍🏫 **Mentor as a Service**
