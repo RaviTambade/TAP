@@ -53,7 +53,8 @@ We don’t write clever code. We write **clear** code.
 - Want to try a new library?
 - Explore Kubernetes? 
 - Build a CLI tool?
-Do it!
+
+####  Just Do it!
 TAP encourages safe spaces to fail, explore, and innovate.
 
 ### 6. 🌍 **Diversity & Inclusion**
