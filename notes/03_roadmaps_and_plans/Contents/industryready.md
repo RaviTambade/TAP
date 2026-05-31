@@ -22,7 +22,6 @@
 - **Month 11**: Group Mini Project: File Encryption Tool
 - **Month 12**: Resume Workshop + Mock Interviews (Basics)
 
----
 
 ### Year 3: Development Layer (Month-by-Month)
 
@@ -44,7 +43,7 @@
 - **Month 23**: Group Hackathon (Problem Solving + Deployment)
 - **Month 24**: Career Mapping + Internship Guidance
 
----
+
 
 ### Year 4: Integration Layer (Month-by-Month)
 
@@ -66,7 +65,7 @@
 - **Month 35**: LinkedIn Optimization + Freelance Tips
 - **Month 36**: Showcase Day – Present Projects to Industry Panel
 
----
+
 
 Each month includes:
 

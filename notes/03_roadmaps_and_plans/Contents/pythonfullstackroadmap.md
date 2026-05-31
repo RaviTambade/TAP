@@ -1,31 +1,23 @@
-Below is a **mentor-driven 12–16 week Python Fullstack TAP (Transflower Apprenticeship Program)** mapped **directly** to everything we’ve discussed—skills, milestones, evidence, and employer trust.
-
-This is **not a course plan**.
-It is a **transformation plan**.
-
----
-
-# 🐍 Python Fullstack TAP Program
+# Python Fullstack TAP Program
 
 **(12–16 Weeks | Skill → Proof → Employability)**
 *Transflower Learning Framework*
 
----
 
-## 🧭 TAP Design Principles
+## TAP Design Principles
 
 * **Every week produces evidence**
 * **Every milestone is reviewable**
 * **Every learner builds, explains, and defends**
 * **No passive learning**
 
----
 
-## 🔰 Phase 1: Thinking Like a Python Engineer
+
+## Phase 1: Thinking Like a Python Engineer
 
 ### **Weeks 1–3 | Foundation & Confidence Reset**
 
-### 🎯 Objective
+### Objective
 
 Move students from *syntax followers* to *logical thinkers*.
 
@@ -49,17 +41,17 @@ Move students from *syntax followers* to *logical thinkers*.
 * Code readability review
 * Mentor logic feedback
 
-🧠 **Mentor checkpoint:**
+**Mentor checkpoint:**
 
 > “Can you explain your code without looking at it?”
 
----
 
-## 🧱 Phase 2: Backend Engineering Fundamentals
+
+## Phase 2: Backend Engineering Fundamentals
 
 ### **Weeks 4–6 | Flask + Django Core**
 
-### 🎯 Objective
+### Objective
 
 Understand **how web systems actually work**.
 
@@ -83,17 +75,16 @@ Understand **how web systems actually work**.
 * API endpoint reviews
 * Architecture explanation
 
-🧠 **Mentor checkpoint:**
+**Mentor checkpoint:**
 
 > “Why did you choose Flask here and Django there?”
 
----
 
-## 🔗 Phase 3: APIs, Databases & Integration
+## Phase 3: APIs, Databases & Integration
 
 ### **Weeks 7–9 | DRF + Data Ownership**
 
-### 🎯 Objective
+### Objective
 
 Make students **system integrators**, not just coders.
 
@@ -116,18 +107,16 @@ Make students **system integrators**, not just coders.
 * API maturity score
 * Database design clarity
 * DRF milestone completion
-
-🧠 **Mentor checkpoint:**
+**Mentor checkpoint:**
 
 > “If this API breaks, where will it fail first?”
 
----
 
-## 🎨 Phase 4: Frontend Integration
+## Phase 4: Frontend Integration
 
 ### **Weeks 10–11 | User Experience Awareness**
 
-### 🎯 Objective
+### Objective
 
 Teach students to **think from the user’s side**.
 
@@ -149,18 +138,16 @@ Teach students to **think from the user’s side**.
 
 * End-to-end feature demo
 * Frontend–backend flow explanation
-
-🧠 **Mentor checkpoint:**
+**Mentor checkpoint:**
 
 > “What data does the user really need here?”
 
----
 
-## 🔐 Phase 5: Security, Auth & Professional Practices
+## Phase 5: Security, Auth & Professional Practices
 
 ### **Weeks 12–13 | Responsibility Phase**
 
-### 🎯 Objective
+### Objective
 
 Shift mindset from *developer* to *professional engineer*.
 
@@ -182,20 +169,19 @@ Shift mindset from *developer* to *professional engineer*.
 
 * Security awareness score
 * Git maturity indicator
-
-🧠 **Mentor checkpoint:**
+ **Mentor checkpoint:**
 
 > “Who should NOT be able to access this feature?”
 
----
 
-## 🚀 Phase 6: Capstone + Deployment
+
+## Phase 6: Capstone + Deployment
 
 ### **Weeks 14–16 | Proof & Employer Readiness**
 
 *(Weeks 14–15 for fast learners, 16 for deep polish)*
 
-### 🎯 Objective
+### Objective
 
 Create **employer-inspectable evidence**.
 
@@ -223,26 +209,25 @@ Examples:
 * Mentor evaluation
 * Employer-ready profile
 
-🧠 **Final mentor review:**
+**Final mentor review:**
 
 > “If you join a team tomorrow—what will you own?”
 
----
 
-## 📊 TAP Outcomes (Employer View)
+
+## TAP Outcomes (Employer View)
 
 By the end of TAP, every learner has:
 
-✅ Python Fullstack skill scorecard
-✅ Live deployed system
-✅ API documentation
-✅ GitHub discipline proof
-✅ Architecture clarity
-✅ Interview confidence without memorization
+- ✅ Python Fullstack skill scorecard
+- ✅ Live deployed system
+- ✅ API documentation
+- ✅ GitHub discipline proof
+- ✅ Architecture clarity
+- ✅ Interview confidence without memorization
 
----
 
-## 🌱 Transflower Closing Truth
+## Transflower Closing Truth
 
 A 12–16 week TAP program does **what 3–4 years of confusion cannot**:
 
@@ -253,7 +238,6 @@ A 12–16 week TAP program does **what 3–4 years of confusion cannot**:
 Python Fullstack is the **vehicle**.
 Transflower TAP is the **navigation system**.
 
----
 
 ### 🔜 Next Possible Extensions
 

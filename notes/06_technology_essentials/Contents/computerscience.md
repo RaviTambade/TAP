@@ -1,6 +1,5 @@
- 
 
-## 🎙️ ** The Real Essence of Computer Science**
+## 🎙️ ** Computer Science**
 
 I'd like to welcome you to this course on *Computer Science.*
 But let me be honest — **that’s actually a terrible way to start.**

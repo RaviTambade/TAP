@@ -29,12 +29,12 @@ So every stack gets:
 | Time          | Activity                                |
 | ------------- | --------------------------------------- |
 | 09:30 – 10:00 | Orientation: How Fullstack Really Works |
-| 10:00 – 11:00 | 🐍 Python Fullstack Sampler             |
-| 11:00 – 12:00 | 🌐 MERN Stack Sampler                   |
-| 12:00 – 13:00 | ☕ Java Fullstack Sampler               |
-| 13:00 – 14:00 | 🍴 Lunch + Reflection                    |
-| 14:00 – 15:00 | ⚙️ .NET Core Fullstack Sampler          |
-| 15:00 – 16:00 | 🧠 C++ Fullstack Sampler                |
+| 10:00 – 11:00 | Python Fullstack Sampler                |
+| 11:00 – 12:00 | MERN Stack Sampler                      |
+| 12:00 – 13:00 | Java Fullstack Sampler                  |
+| 13:00 – 14:00 | Lunch + Reflection                      |
+| 14:00 – 15:00 | .NET Core Fullstack Sampler             |
+| 15:00 – 16:00 | C++ Fullstack Sampler                   |
 | 16:00 – 16:30 | Stack Comparison & Self-Assessment      |
 | 16:30 – 17:00 | Mentor Guidance + Stack Selection       |
 
