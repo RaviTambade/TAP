@@ -87,8 +87,6 @@ Memory Management
 
 Because C++ is built on top of C.
 
----
-
 # Mentor Insight
 
 Many students try to learn:
@@ -115,8 +113,6 @@ Memory
 Abstraction
 ```
 
----
-
 # Stage 2: Learn C++ Syntax Enhancements
 
 Now explore what C++ added to C.
@@ -142,8 +138,6 @@ int add(int a,int b=10)
 }
 ```
 
----
-
 # Why Important?
 
 These features make code:
@@ -160,8 +154,6 @@ More Readable
 
 This is where C++ truly begins.
 
----
-
 ## Real World Thinking
 
 In C:
@@ -175,8 +167,6 @@ In C++:
 ```text
 Student = Data + Behavior
 ```
-
----
 
 Example:
 
@@ -193,8 +183,6 @@ public:
     }
 };
 ```
-
----
 
 # Mentor Insight
 
@@ -235,8 +223,6 @@ Objects
 
 One of the most important concepts.
 
----
-
 Without Encapsulation:
 
 ```cpp
@@ -261,8 +247,6 @@ public:
 };
 ```
 
----
-
 # Mental Model
 
 ```text
@@ -274,7 +258,6 @@ Internal Logic Hidden
 
 That's encapsulation.
 
----
 
 # Stage 5: Constructors and Destructors
 
@@ -286,7 +269,6 @@ Life
 Death
 ```
 
----
 
 ## Constructor
 
@@ -299,8 +281,6 @@ Student()
 }
 ```
 
----
-
 ## Destructor
 
 Object Cleanup
@@ -312,13 +292,11 @@ Object Cleanup
 }
 ```
 
----
 
 # Mentor Insight
 
 Many memory leaks disappear when constructors and destructors are properly understood.
 
----
 
 # Stage 6: Inheritance
 
@@ -327,8 +305,6 @@ Inheritance teaches:
 ```text
 Reuse Existing Work
 ```
-
----
 
 Example:
 
@@ -354,8 +330,6 @@ class Student : public Person
 };
 ```
 
----
-
 # Real World Example
 
 ```text
@@ -368,13 +342,10 @@ Vehicle
 
 Inheritance models relationships.
 
----
 
 # Stage 7: Polymorphism
 
 The most powerful OOP concept.
-
----
 
 Example:
 
@@ -392,15 +363,11 @@ Tester
 
 may calculate salary differently.
 
----
-
 Code:
 
 ```cpp
 virtual void calculateSalary();
 ```
-
----
 
 # Mentor Insight
 
@@ -412,7 +379,6 @@ Flexible Design
 Plugin Architectures
 ```
 
----
 
 # Stage 8: Abstraction
 
@@ -420,7 +386,6 @@ You already learned abstraction conceptually.
 
 Now apply it in C++.
 
----
 
 Example:
 
@@ -446,7 +411,6 @@ Rectangle Logic
 Triangle Logic
 ```
 
----
 
 Abstraction means:
 

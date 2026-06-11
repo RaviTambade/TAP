@@ -1,5 +1,5 @@
 
-# 🚀 From Learner to Developer: A Practical Guide to Building a Career as a Full-Stack Application Developer
+# From Learner to Developer: A Practical Guide to Building a Career as a Full-Stack Application Developer
 
 **By Ravi Tambade**
 *Mentor | Industry Trainer | Tech Educator*
