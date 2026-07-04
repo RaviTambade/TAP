@@ -27,8 +27,6 @@ But today, when we look back, we don’t see geometry as “rope-stretching and 
 We see it as something much deeper — **a way to describe space, shape, and truth using logic.**
 It gave birth to mathematics, axioms, proofs — the very foundations of rational thinking.
 
- 
-
 ### 💡 **So… What Is Computer Science Really About?**
 
 We are living in the early age of computing — just like the Egyptians were in the early age of geometry.
