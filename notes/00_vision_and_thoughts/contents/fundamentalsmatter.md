@@ -1,4 +1,3 @@
-
 # **Why Fundamentals Matter More Than Ever**
 
 > **"Technology changes every year. Engineering thinking lasts a lifetime."**
