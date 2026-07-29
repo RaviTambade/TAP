@@ -1,7 +1,4 @@
-
-# 🌱 Transflower Mentor Framework
-
-# **Evaluating Student Behaviour for Employability Readiness**
+# **Evaluating Student Behaviour for TAP Readiness**
 
 > **"The classroom is a simulation of the workplace. Today's learning behaviour becomes tomorrow's professional behaviour."**
 
@@ -241,8 +238,6 @@ Based on our history, we follow **mentor-first, industry-aligned teaching**.
 We
 > ❝ Don’t judge students by marks.
 > Judge them by effort, attitude, and honesty. ❞
-
-
 
 ## 🎯 The 10 Dimensions of Employability Behaviour
 
