@@ -1,4 +1,4 @@
-# 🌱 Transflower Employability Readiness Program (TERP)
+# 🌱 Transflowers TAP Day
 
 ### **"Every day you invest in yourself is one step closer to your first job."**
 
@@ -136,4 +136,3 @@ By following this schedule consistently, every learner develops:
 ## **Transflower Motto**
 
 **Learn with Discipline. Build with Passion. Collaborate with Purpose. Interview with Confidence. Launch Your Career.** 
-
