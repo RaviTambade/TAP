@@ -9,7 +9,7 @@ Many fresh graduates or aspiring developers struggle to find direction in the va
 
 This post is for all students, especially those in **BSc (CS), BCA, B.E., Diploma**, or even those without a formal CS degree but with a passion for software development. Whether you're aiming for your **first job** or trying to switch to a **developer role**, this post will guide you through the journey from a **junior developer to project lead** — by focusing on **skills**, not just scores.
 
-## 🧠 Mindset First: Marks Don’t Define Skills
+## Mindset First: Marks Don’t Define Skills
 
 Companies today look for **industry-ready talent**, not just degrees or academic toppers. Your **skillset**, **project experience**, and **logical thinking** matter more than your percentage.
 ✅ Focus on what you **can build**, not just what you **studied**.
@@ -26,44 +26,44 @@ Companies today look for **industry-ready talent**, not just degrees or academic
 | **Delivery Manager** | Align project outcomes with business expectations          |
 
 
-## 🧱 What Skills Do You Need?
+## What Skills Do You Need?
 
-### 🧑‍🔬 Core Programming
+### Core Programming
 
 * C / C++ , Java and or  C#  or  Python or Javascript
 
 
-### 🌐 Front-End UI
+### Front-End UI
 
 * HTML, CSS, JavaScript
 * Bootstrap / Tailwind
 * React / Angular (optional)
 
-### 🗃️ Back-End & Frameworks
+###  Back-End & Frameworks
 
 * ASP.NET Core
 * Java Spring Boot
 * Node.js + Express
 
-### 🛢️ Databases
+### Databases
 
 * SQL Server / MySQL / PostgreSQL
 * Stored Procedures, Triggers, ER Models
 
-### 🧠 Logic & Algorithms
+### Logic & Algorithms
 
 * Collections (List, Stack, Queue, Linked List)
 * Graphs, Trees, Sorting, Searching
 * Business Logic implementation
 
-### 🧰 Tool Stack
+### Tool Stack
 
 * Git & GitHub
 * Postman, Swagger
 * Visual Studio / VS Code / IntelliJ
 
 
-## 🧭 Application Architecture (Technology-Agnostic)
+## Application Architecture (Technology-Agnostic)
 
 Understand the layered architecture of most real-world apps:
 
@@ -91,7 +91,7 @@ You can use this architecture with:
 * Node.js (Express + Sequelize)
 
 
-## ☁️ Cloud & Hosting Fundamentals
+## Cloud & Hosting Fundamentals
 
 Today, apps don’t just run on local machines. They live on the cloud.
 
@@ -108,7 +108,7 @@ Understand concepts like:
 * Service Mesh
 
 
-## 🧩 Project Activities to Build Real Skills
+## Project Activities to Build Real Skills
 
 | Task          | Tools                                     |
 | ------------- | ----------------------------------------- |
@@ -122,7 +122,7 @@ Understand concepts like:
 
 > 🔁 Repeat the cycle across 2–3 projects to gain true confidence.
 
-## 📚 Choose Your Learning Path Based on Interest
+## Choose Your Learning Path Based on Interest
 
 | Interest                 | Technologies to Learn                      |
 | ------------------------ | ------------------------------------------ |
@@ -132,7 +132,7 @@ Understand concepts like:
 | **Database Engineering** | SQL, Stored Procs, ER Models, Query Design |
 | **IoT & Systems**        | C, Sensors, Microcontrollers               |
 
-## 👨‍🏫 Mentor’s Advice: Key Focus Areas
+## 👨Mentor’s Advice: Key Focus Areas
 
 * Learn **core programming** before jumping to frameworks.
 * Don’t memorize — **build and debug**.
@@ -141,7 +141,7 @@ Understand concepts like:
 * Know the difference between **UI**, **Business Logic**, and **Data Layer**.
 * Most importantly: **Think like a developer, not just a coder.**
 
-## 💬 Final Thoughts
+## Final Thoughts
 
 Your **employability** depends on:
 

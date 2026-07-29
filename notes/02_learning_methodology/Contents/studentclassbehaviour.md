@@ -551,14 +551,10 @@ Excellent technical ability but hesitant to communicate.
 Strong aptitude but inconsistent effort.
 **Mentor Action:** Build discipline through measurable weekly goals.
 
- 
-
 ### 🌱 The Determined Learner
 
 Limited fundamentals but exceptional persistence.
 **Mentor Action:** Provide structured mentoring and celebrate incremental progress.
-
- 
 
 ### 🚦 The At-Risk Learner
 
