@@ -2,7 +2,7 @@
 ## **"The Potter, the Clay, and the Pressure of Becoming"**
 
 
-I remember a quiet afternoon after a long coding bootcamp session. My student, Sameer, slumped in his chair and said:
+I remember a quiet afternoon after a long coding bootcamp session. My student, Sumit, slumped in his chair and said:
 
 > *"Sir, I feel like I’m being crushed from all sides—deadlines, bugs, interviews. I’m not sure I’m cut out for this."*
 
@@ -13,7 +13,7 @@ I smiled, paused for a moment, and then began to tell him about a **potter** I o
 
 This potter would take **shapeless clay**, wet and lumpy, and place it on a spinning wheel. His hands moved with a rhythm—**pressing**, **lifting**, **pausing**. The wheel never stopped. He applied just the right **pressure** at the right **moment**.
 
-And I told Sameer:
+And I told Sumit:
 
 > *“In the hands of a skilled potter, pressure is not a threat. It’s the essential force that shapes something remarkable out of nothing.”*
 
@@ -39,21 +39,15 @@ Pressure **reveals** who we are. It:
 * Forces us to learn faster.
 * Teaches us resilience.
 
-Sameer nodded. “So, like, when I’m stuck in a coding problem or under project pressure…”
+Sumit nodded. “So, like, when I’m stuck in a coding problem or under project pressure…”
 
 I replied, “That’s the wheel turning. That’s the **clay taking shape**.”
 
 ### 🎨 Imperfection Is Where Innovation Begins
 
-Sometimes, the pot collapses.
+Sometimes, the pot collapses. Sometimes, so does your application.Sometimes, **you** will feel like starting over.But the potter doesn’t give up. He **reuses the same clay**. Shapes it again. Maybe this time, into something even better.
 
-Sometimes, so does your application.
-
-Sometimes, **you** will feel like starting over.
-
-But the potter doesn’t give up. He **reuses the same clay**. Shapes it again. Maybe this time, into something even better.
-
-> *“So, should I stop chasing perfection and just keep learning?”* Sameer asked.
+> *“So, should I stop chasing perfection and just keep learning?”* Sumit asked.
 
 “Exactly,” I said. “**Perfectionism kills momentum. Mistakes grow mastery.**”
 
@@ -66,9 +60,7 @@ Think about your journey like this:
 * Hands (mentors, deadlines, real-world challenges) press on you.
 * **Pressure molds you.**
 
-If you resist every challenge, the wheel stops, and the shape never comes.
-
-But if you embrace the pressure, **you’re shaped for something bigger** than you ever imagined.
+If you resist every challenge, the wheel stops, and the shape never comes.But if you embrace the pressure, **you’re shaped for something bigger** than you ever imagined.
 
 
 ### 💬 Final Words from the Mentor
@@ -84,4 +76,3 @@ So the next time you're under pressure, remember:
 ### 🌟 Optional Slide / Quote to End the Session:
 
 > **"Pressure is not the enemy. It’s the sculptor. You are the masterpiece."**
-
