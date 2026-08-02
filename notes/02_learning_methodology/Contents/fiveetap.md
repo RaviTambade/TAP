@@ -41,34 +41,18 @@ Education is not about memorizing syntax or passing examinations. True education
 
 ## ⚡ 4. Electrifying – Learning Creates Energy
 
-Have you noticed what happens during an exciting project discussion?
-
-Ideas flow.
-Questions arise.
-Solutions emerge.
-Teams collaborate.
-Everyone becomes energized.
-
-That is the electrifying power of collaborative learning.
-
-Innovation grows where curiosity meets teamwork.
+Have you noticed what happens during an exciting project discussion? Ideas flow. Questions arise. Solutions emerge. Teams collaborate. Everyone becomes energized. That is the electrifying power of collaborative learning. Innovation grows where curiosity meets teamwork.
 
 > **"Energy is contagious. Learn together. Build together. Grow together."**
 
 
 ## 🌍 5. Everlasting – Learning Never Ends
 
-Technology evolves every year.
-Programming languages change.
-Frameworks improve.
-Artificial Intelligence transforms industries.
-But one quality remains constant:
+Technology evolves every year. Programming languages change. Frameworks improve. Artificial Intelligence transforms industries. But one quality remains constant:
 
 **The ability to learn continuously.** .The habits you develop at Transflower—discipline, curiosity, collaboration, problem-solving, and lifelong learning—will stay with you long after your first job.
 
 > **"Employability begins with learning, but professional excellence comes from lifelong learning."**
-
- 
 
 # 🌸 The 5 Es at a Glance
 
