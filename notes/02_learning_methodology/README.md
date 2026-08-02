@@ -1,46 +1,33 @@
-## ✨ Writings & Reflections Index
+## ✨ Learning Methodology for TAP
 
-- [connect.md](./connect.md)  
-  On human connection, collaboration, and why learning and growth are never solo journeys.
+This section introduces how the Transflower Acceleration Program helps learners grow with intention, practice, and mentorship.
 
-- [developersuperpower.md](./developersuperpower.md)  
-  What truly gives developers an edge beyond tools, frameworks, and trends.
+### Core approach
+- Problem-based learning: learners solve real problems rather than only memorizing concepts.
+- Mentor-guided practice: guidance, feedback, and accountability shape progress.
+- Reflection and iteration: each step is reviewed, improved, and connected to deeper understanding.
+- Craftsmanship and habits: quality, discipline, curiosity, and ownership are treated as essential skills.
 
-- [empower.md](./empower.md)  
-  Empowerment through skills, ownership, responsibility, and self-belief.
+### Learning journey
+1. Learn the foundation.
+2. Apply it through guided practice.
+3. Reflect, improve, and build confidence.
+4. Move into real projects and industry-ready work.
 
-- [foundernote.md](./foundernote.md)  
-  A founder’s perspective on learning, building, mistakes, and long-term thinking.
+### Materials in this section
+- [bloomsTaxonomyTAP.md](./Contents/bloomsTaxonomyTAP.md)
+- [codingculture.md](./Contents/codingculture.md)
+- [craftsmanshipvschatgpt.md](./Contents/craftsmanshipvschatgpt.md)
+- [fiveetap.md](./Contents/fiveetap.md)
+- [mentoring.md](./Contents/mentoring.md)
+- [mentoringjourney.md](./Contents/mentoringjourney.md)
+- [pbl.md](./Contents/pbl.md)
+- [polygotdevelopment.md](./Contents/polygotdevelopment.md)
+- [sculpturepotmentoring.md](./Contents/sculpturepotmentoring.md)
+- [softwaretflkitchen.md](./Contents/softwaretflkitchen.md)
+- [stepbystep.md](./Contents/stepbystep.md)
+- [studentclassbehaviour.md](./Contents/studentclassbehaviour.md)
 
-- [greatsoftwaredev.md](./greatsoftwaredev.md)  
-  What separates good developers from great software engineers.
-
-- [jobremaintohuman.md](./jobremaintohuman.md)  
-  Why some roles will always remain human—no matter how advanced AI becomes.
-
-- [keepgoing.md](./keepgoing.md)  
-  A reminder about consistency, patience, and staying the course during slow progress.
-
-- [leadership.md](./leadership.md)  
-  Leadership as influence, responsibility, and service—not just authority.
-
-- [openletter.md](./openletter.md)  
-  An open letter to students, educators, and professionals navigating change.
-
-- [restart.md](./restart.md)  
-  Why restarting is not failure—sometimes it’s clarity.
-
-- [seedtobloom.md](./seedtobloom.md)  
-  The journey from planting ideas to seeing meaningful growth.
-
-- [startwithsmall.md](./startwithsmall.md)  
-  The power of small beginnings and incremental progress.
-
-- [tfloverfinishingschool.md](./tfloverfinishingschool.md)  
-  Why Transflower Learning Framework matters more than just “finishing school”.
-
-- [vibecoding.md](./vibecoding.md)  
-  Coding culture, mindset, flow, and the emotional side of development.
-
-- [vision.md](./vision.md)  
-  Long-term vision for learning, technology, and human potential.
+### Related sections
+- [Training Program](../05_tap_programs/README.md)
+- [Roadmaps and Plans](../03_roadmaps_and_plans/README.md)

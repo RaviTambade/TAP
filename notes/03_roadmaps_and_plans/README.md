@@ -1,46 +1,21 @@
-## ✨ Transflower mentor Roadmpa Recommendation
+## ✨ Roadmaps and Plans
 
-- [connect.md](./Contents/connect.md)  
-  On human connection, collaboration, and why learning and growth are never solo journeys.
+This section turns the learning methodology and TAP training experience into structured pathways.
 
-- [developersuperpower.md](./Contents/developersuperpower.md)  
-  What truly gives developers an edge beyond tools, frameworks, and trends.
+### What you will find here
+- A clear progression from beginner learning to industry readiness.
+- Milestone-based plans for long-term growth.
+- Practical roadmaps for full-stack development, job readiness, and program milestones.
 
-- [empower.md](./Contents/empower.md)  
-  Empowerment through skills, ownership, responsibility, and self-belief.
+### Key materials
+- [16weekprogram.md](./Contents/16weekprogram.md)
+- [adayintap.md](./Contents/adayintap.md)
+- [industryready.md](./Contents/industryready.md)
+- [jobreadinessfouryearplan.md](./Contents/jobreadinessfouryearplan.md)
+- [pythonfullstackroadmap.md](./Contents/pythonfullstackroadmap.md)
+- [studentdecesionguide.md](./Contents/studentdecesionguide.md)
 
-- [foundernote.md](./Contents/foundernote.md)  
-  A founder’s perspective on learning, building, mistakes, and long-term thinking.
-
-- [greatsoftwaredev.md](./Contents/greatsoftwaredev.md)  
-  What separates good developers from great software engineers.
-
-- [jobremaintohuman.md](./Contents/jobremaintohuman.md)  
-  Why some roles will always remain human—no matter how advanced AI becomes.
-
-- [keepgoing.md](./Contents/keepgoing.md)  
-  A reminder about consistency, patience, and staying the course during slow progress.
-
-- [leadership.md](./Contents/leadership.md)  
-  Leadership as influence, responsibility, and service—not just authority.
-
-- [openletter.md](./Contents/openletter.md)  
-  An open letter to students, educators, and professionals navigating change.
-
-- [restart.md](./Contents/restart.md)  
-  Why restarting is not failure—sometimes it’s clarity.
-
-- [seedtobloom.md](./Contents/seedtobloom.md)  
-  The journey from planting ideas to seeing meaningful growth.
-
-- [startwithsmall.md](./Contents/startwithsmall.md)  
-  The power of small beginnings and incremental progress.
-
-- [tfloverfinishingschool.md](./Contents/tfloverfinishingschool.md)  
-  Why Transflower Learning Framework matters more than just “finishing school”.
-
-- [vibecoding.md](./Contents/vibecoding.md)  
-  Coding culture, mindset, flow, and the emotional side of development.
-
-- [vision.md](./Contents/vision.md)  
-  Long-term vision for learning, technology, and human potential.
+### Suggested reading order
+1. Start with the [Learning Methodology](../02_learning_methodology/README.md).
+2. Follow the [Training Program](../05_tap_programs/README.md).
+3. Use these plans to guide weekly and long-term progress.
