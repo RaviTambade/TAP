@@ -2,8 +2,7 @@
 
 ## **AI-Assisted Assessment Engine – Official Design**
 
-> **“Assessment is not judgment.
-> It is guidance with evidence.”**
+> **“Assessment is not judgment. It is guidance with evidence.”**
 
 
 ## 1. Purpose of TFLAssessment Engine
@@ -37,7 +36,6 @@ The TFLAssessment Engine exists to:
 
 > *AI suggests. Mentors decide.*
 
-
 ## 3. Assessment Coverage Across TFL Layers
 
 | TFL Layer | Assessment Focus | AI Role                                  |
@@ -48,8 +46,6 @@ The TFLAssessment Engine exists to:
 | Layer 4   | Application      | Evaluate projects & code quality         |
 | Layer 5   | Architecture     | Assess design reasoning & trade-offs     |
 | Layer 6   | Role readiness   | Role-based assessment & interview prep   |
-
-
 
 ## 4. High-Level Architecture
 
@@ -70,8 +66,6 @@ The TFLAssessment Engine exists to:
                     |
               Learner Interface
 ```
-
----
 
 ## 5. Core Components (Detailed)
 
@@ -233,8 +227,6 @@ Login
 
 Feedback focuses on **learning**, not fear.
 
-
-
 ## 9. Technology-Agnostic Design (Practical)
 
 You can implement this using:
@@ -273,12 +265,11 @@ Architecture supports **incremental intelligence**.
 
 ## 11. Why This Engine Is Perfect for Transflower
 
-✔ Aligns with layered curriculum
-✔ Preserves mentor authority
-✔ Scales assessment quality
-✔ Supports AI without dependency
-✔ Differentiates from LMS platforms
-
+- ✔ Aligns with layered curriculum
+- ✔ Preserves mentor authority
+- ✔ Scales assessment quality
+- ✔ Supports AI without dependency
+- ✔ Differentiates from LMS platforms
 
 ## 🌼 Final Mentor Insight
 

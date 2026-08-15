@@ -1,13 +1,10 @@
 ## Operationalizing Learning Through the TFL Engine
 
-To translate this vision into daily reality, we must operationalize learning in a structured, measurable, and adaptive manner.
-
-This is where the **TFL Engine** truly comes into action.
+To translate this vision into daily reality, we must operationalize learning in a structured, measurable, and adaptive manner. This is where the **TFL Engine** truly comes into action.
 
 ### **Structured Learning at Multiple Time Horizons**
 
-At Transflower, learning is not random or event-based.
-It is **planned, tracked, and continuously refined** across multiple time horizons:
+At Transflower, learning is not random or event-based. It is **planned, tracked, and continuously refined** across multiple time horizons:
 
 * **Daily Learning Plans**
 * **Weekly Adaptive Plans**
@@ -25,8 +22,7 @@ Every day, when students arrive at the Transflower office, learning begins with 
 * Every completed task generates **data**
 * That data flows automatically into the system
 
-This is not manual reporting.
-This is **evidence generation by design**.
+This is not manual reporting. This is **evidence generation by design**.
 
 ### **Multi-Stakeholder Dashboards**
 
@@ -57,7 +53,4 @@ For every student, the system maintains a comprehensive profile:
 * Project execution
 * Evidence capture
 
-All of this happens in the background, continuously and systematically.
-
-The student focuses on learning.
-The system focuses on **measurement and insight**.
+All of this happens in the background, continuously and systematically. The student focuses on learning. The system focuses on **measurement and insight**.

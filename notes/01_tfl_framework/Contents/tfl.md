@@ -73,7 +73,7 @@ TFL is **layered like a flower**, with each layer building on the previous one:
 
 * Micro-tasks:
 
-  * Learn, practice, assess, reflect
+* Learn, practice, assess, reflect
 * Evidence captured automatically.
 
 ### Step 6: **Evidence Collection**
@@ -102,19 +102,18 @@ TFL is **layered like a flower**, with each layer building on the previous one:
 ## 4️⃣ TFL Core Principles
 
 1. **Action → Evidence → Signal**
-
    * Every activity generates data that feeds the system.
+
 2. **Mentor in the Loop**
-
    * Mentors act as amplifiers, guided by data.
+
 3. **Adaptive Planning**
-
    * Plans evolve continuously — not static.
+
 4. **Outcome-Driven**
-
    * Focus is **employability**, not content completion.
-5. **Predictive & Explainable**
 
+5. **Predictive & Explainable**
    * Placement probability provides **transparent, actionable insights**.
 
 ## 5️⃣ Why TFL is Different
@@ -151,11 +150,6 @@ Daily Plans → Weekly Adaptive Plans → Monthly Milestones → Quarterly Caree
 * **Student execution → Mentor guidance → System intelligence → Employer signals**
 
 > TFL is **a closed-loop system where learning becomes measurable, mentors become leverage points, and employability is the ultimate KPI**.
-
- 
-
- Absolutely! Let’s visualize the **Transflower Learning Framework (TFL)** using **ASCII diagrams**. This is perfect for mentor-friendly storytelling and showing the **flow of learning → evidence → employability → placement**.
-
 
 # 🌸 Transflower Learning Framework (TFL) — ASCII Blueprint
 
@@ -321,4 +315,3 @@ Daily Plans → Weekly Adaptive Plans → Monthly Milestones → Quarterly Caree
 
 * Every layer is interdependent
 * Mentor and system amplify **student growth**
-

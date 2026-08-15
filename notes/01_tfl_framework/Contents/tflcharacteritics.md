@@ -30,13 +30,8 @@ At Transflower:
 
 #### Result
 
-Learners don’t ask:
-
-> “Is this in exam?”
-
-They ask:
-
-> “Where will I use this in real systems?”
+- Learners don’t ask:  “Is this in exam?”
+- They ask:  “Where will I use this in real systems?”
 
 ### 2️⃣ From Algorithm Chapters → Thinking Discipline
 
@@ -99,8 +94,7 @@ Learners develop:
 
 #### Result
 
-Learners stop comparing themselves with others
-and start **owning their journey**.
+Learners stop comparing themselves with others and start **owning their journey**.
 
 ### 4️⃣ From Faculty Authority → Mentor Partnership
 
@@ -140,7 +134,6 @@ Learners gain:
 **Peer-driven ecosystem**
 
 * Learning happens through:
-
   * Group problem solving
   * Peer code reviews
   * Architecture discussions
@@ -149,9 +142,7 @@ Learners gain:
 
 #### Result
 
-Learners grow faster because:
-
-> “Someone around me is always slightly ahead — and reachable.”
+Learners grow faster because:  “Someone around me is always slightly ahead — and reachable.”
 
 ### 6️⃣ From Certificate Internships → Responsibility Internships
 
@@ -166,27 +157,24 @@ Learners grow faster because:
 **Internship-as-apprenticeship**
 
 * Learners are trained to:
-
   * Read production code
   * Ask domain questions
   * Deliver usable modules
-* Mentors simulate:
 
+* Mentors simulate:
   * Stand-ups
   * Reviews
   * Ownership
 
 #### Result
 
-Learners enter internships already thinking like engineers —
-not trainees.
+Learners enter internships already thinking like engineers —not trainees.
 
 ### 7️⃣ From Tech Silos → System & Business Awareness
 
 #### Traditional Gap
 
 * CS isolated from:
-
   * Business
   * Finance
   * Decision-making
@@ -196,12 +184,11 @@ not trainees.
 **System-level thinking**
 
 * Every project discusses:
-
   * Why this system exists
   * Who pays for it
   * What happens if it fails
-* Learners see:
 
+* Learners see:
   * Tech as an enabler
   * Not an end in itself
 
@@ -226,7 +213,6 @@ They can converse confidently with:
 **Evidence-based assessment**
 
 Learners are evaluated on:
-
 * Projects built
 * Problems solved
 * Design decisions explained
@@ -235,24 +221,19 @@ Learners are evaluated on:
 
 ### Result
 
-Confidence comes from:
-
-> “I have built this. I can explain this. I can improve this.”
+Confidence comes from: “I have built this. I can explain this. I can improve this.”
 
 ### 9️⃣ From Student Identity → Professional Identity
 
 #### Traditional Gap
 
-Students graduate thinking:
-
-> “I hope I get selected.”
+Students graduate thinking: “I hope I get selected.”
 
 #### Transflower Learning Characteristic
 
 **Identity formation**
 
 By the end of the journey, learners think:
-
 > “I can learn whatever the role demands.”
 > “I understand systems.”
 > “I can contribute from day one.”
@@ -261,5 +242,4 @@ This is the **core Transflower outcome**.
 
 ## 🌱 Transflower Learning in One Line
 
-> **We don’t finish syllabi.
-> We finish confusion — and replace it with clarity, confidence, and capability.**
+> **We don’t finish syllabi. We finish confusion — and replace it with clarity, confidence, and capability.**
