@@ -1,4 +1,4 @@
-## 🌱 Transflower TAP Learning Culture: **Culture Creates Opportunities**
+## 🌱 Transflower TAP Learning Culture
 
 When a student joins Transflower TAP, the first question should not be:  **“Which technology will I learn?”** The better question is:  **“What kind of person and professional will I become?”** Because technologies can be learned. **Culture has to be experienced.** At Transflower, we believe that **employability is not manufactured at the end of a course. It is developed every day through learning habits, behavior, contribution and responsibility.**
 
