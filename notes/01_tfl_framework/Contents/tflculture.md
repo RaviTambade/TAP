@@ -6,23 +6,20 @@ When a student joins Transflower TAP, the first question should not be:  **“Wh
 
 You often hear that companies approach institutions like **IITs and NITs**. Why? Not simply because students studied a particular syllabus. Companies recognize a **culture**. They see an environment where students have developed habits such as:
 
-* learning continuously,
-* solving problems independently,
-* working with others,
-* communicating clearly,
-* taking responsibility,
-* respecting deadlines,
-* contributing to projects,
-* accepting feedback,
-* and behaving professionally.
-
+* Learning continuously,
+* Solving problems independently,
+* Working with others,
+* Communicating clearly,
+* Taking responsibility,
+* Respecting deadlines,
+* Contributing to projects,
+* Accepting feedback,
+* And behaving professionally.
 The curriculum may tell you **what to learn**. But culture determines **how you learn, how you behave and what you become**.
 
 # What is TAP Learning Culture?
 
-TAP — **Transflower Acceleration Program** — is designed around a simple philosophy:  **Don't prepare students only for interviews. Prepare them for professional life.**
-
-A student doesn't simply attend lectures. The student enters a learning ecosystem.
+TAP — **Transflower Acceleration Program** — is designed around a simple philosophy:  **Don't prepare students only for interviews. Prepare them for professional life.**  A student doesn't simply attend lectures. The student enters a learning ecosystem.
 
 ### Learn → Practice → Struggle → Fail → Reflect → Improve → Contribute → Demonstrate
 
@@ -36,7 +33,10 @@ Character creates professional trust.**
 
 ## We don't ask only: "What do you know?"
 
-Suppose two students know React, Java, .NET or Python. One student says:  “I know React.” Another student says: “I built this application. Here is my Git history. Here is the problem I solved. Here is what failed. Here is how I fixed it. Here is what I learned.” Who would you trust? **The second student.** Because the second student has produced **evidence of learning**. That is an important part of the Transflower culture.
+Suppose two students know React, Java, .NET or Python. One student says:  **“I know React.”**  Another student says: **“I built this application. Here is my Git history. Here is the problem I solved. Here is what failed. Here is how I fixed it. Here is what I learned.”**
+Who would you trust? 
+**The second student.** Because the second student has produced **evidence of learning**. 
+That is an important part of the Transflower culture.
 
 ### **Don't just claim skills. Demonstrate them.**
 
@@ -61,21 +61,20 @@ Imagine a classroom where every student is competing only for marks. One student
 
 > **“Your classmate's success does not reduce your success.”**
 
-- Help someone debug. 
-- Explain a concept.
-- Review someone's code.
-- Pair-program.
-- Share what you discovered.
-- Present your solution.
-- Ask for feedback.
+- Help someone debug
+- Explain a concept
+- Review someone's code
+- Pair-program
+- Share what you discovered
+- Present your solution
+- Ask for feedback
 This creates something very valuable:
 
 **Collaborative professionals.** And companies desperately need people who can work with other people.
 
-
 # From dependency to independence
 
-A beginner often asks: “Sir, what is the code?” The mentor may respond: **“What have you tried?”** The student may ask again: “Sir, please give me the solution.” The mentor asks:  **“What do you think is happening?”** Slowly the student learns to investigate. Then one day: “Sir, I got an error. I investigated it. I think the problem is here. I tried two approaches. This one worked. But I don't understand why.” That student is growing. Not just technically. **Professionally.**
+A beginner often asks: **“Sir, what is the code?”**  The mentor may respond: **“What have you tried?”** The student may ask again: **“Sir, please give me the solution.”** The mentor asks:  **“What do you think is happening?”** Slowly the student learns to investigate. Then one day: **“Sir, I got an error. I investigated it. I think the problem is here. I tried two approaches. This one worked. But I don't understand why.”** That student is growing. Not just technically. **Professionally.**
  
 
 # Skills flow naturally from culture
@@ -115,20 +114,7 @@ These are the signals that create **professional trust**. And trust creates oppo
 # The real TAP journey
 
 A student may join TAP saying: **“I want a job.”** We understand that. But our goal is to take the student through a deeper journey:
-
-**Job seeker**
-↓
-**Learner**
-↓
-**Problem solver**
-↓
-**Developer**
-↓
-**Contributor**
-↓
-**Professional**
-↓
-**Responsible individual**
+**Job seeker** -> **Learner** -> **Problem solver** -> **Developer** -> **Contributor** -> **Professional** -> **Responsible-> individual** 
 
 That is the transformation we are interested in.
 
@@ -150,11 +136,11 @@ Then TAP can become more than a training program. It can become a **professional
 
 ### **We create a culture in which employability grows naturally.**
 
-**Culture creates habits.
-Habits create capability.
-Capability creates confidence.
-Confidence creates contribution.
-Contribution creates trust.
-And trust creates opportunities.**
+- Culture creates habits.
+- Habits create capability.
+- Capability creates confidence.
+- Confidence creates contribution.
+- Contribution creates trust.
+- And trust creates opportunities.
 
 > **Transflower TAP — Don't just learn technology. Learn how to become the person technology needs.**
